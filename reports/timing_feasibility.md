@@ -11,7 +11,7 @@ These counts are for timing feasibility only. They describe project-start
 cohort sizes around the policy date and must not be interpreted as a policy
 effect. No treatment/control classification and no DID regression is run here.
 
-Source commit: `81f3d38f36f84fb0fd3ee6566dfbd33ebf8ef6b8`.
+Source commit: `0336c4ed5bdc8ecec64b77a4e0f7e4caa7f88924`.
 
 ## Policy Windows
 
