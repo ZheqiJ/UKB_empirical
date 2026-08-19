@@ -1,0 +1,9 @@
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+data/applications.tsv
+data/application*.txt
+ukb_dmca_github_upload/
+ukb_dmca_github_upload.zip

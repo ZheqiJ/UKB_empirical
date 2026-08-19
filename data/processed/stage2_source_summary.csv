@@ -1,0 +1,5 @@
+source,path,rows,unique_primary_ids,duplicate_primary_ids,notes
+UKB Showcase Schema 27 approved applications,data/raw/ukb_schema27_applications.tsv,7078,7067,3,Application-level public metadata; notes can contain raw line breaks.
+UKB Showcase Schema 19 publications,data/raw/ukb_schema19_publications.tsv,14633,14633,0,Publication-level public metadata with DOI/PMID/date/citation fields.
+UKB Showcase Schema 24 publication-application links,data/raw/ukb_schema24_publication_applications.tsv,12598,12598,0,Crosswalk table; app_id links to Schema 27 and pub_id links to Schema 19.
+UKB Showcase Schema 4 returned datasets from applications,data/raw/ukb_schema4_returned_datasets.tsv,591,586,2,Application-level returned dataset metadata; application_id links to Schema 27 app_id.

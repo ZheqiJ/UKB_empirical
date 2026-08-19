@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-08-19T05:27:24+00:00",
+  "schema27_unique_applications": 7067,
+  "website_listing_rows": 6936,
+  "website_listing_unique_urls": 6936,
+  "website_listing_rows_with_start_date": 6936,
+  "website_match_status_counts": {
+    "matched": 6935,
+    "website_detail_app_id_not_in_schema27": 1
+  },
+  "schema27_app_match_status_counts": {
+    "matched_one_website_record": 6935,
+    "unmatched_schema27": 132
+  },
+  "schema27_apps_matched_to_website": 6935,
+  "schema27_apps_with_single_start_date": 6935,
+  "schema27_apps_unmatched_to_website": 132,
+  "website_unmatched_detail_results_used": true,
+  "schema27_unmatched_admin_or_service_like": 130,
+  "schema27_unmatched_other": 2,
+  "detail_validation_rows": 76,
+  "detail_validation_fetch_errors": 0,
+  "detail_validation_matched_rows": 49,
+  "detail_validation_id_mismatches": 0,
+  "detail_validation_start_date_mismatches": 0,
+  "start_year_min": "2012",
+  "start_year_max": "2026",
+  "start_year_counts": {
+    "2012": 13,
+    "2013": 26,
+    "2014": 46,
+    "2015": 152,
+    "2016": 193,
+    "2017": 159,
+    "2018": 316,
+    "2019": 492,
+    "2020": 569,
+    "2021": 546,
+    "2022": 751,
+    "2023": 742,
+    "2024": 798,
+    "2025": 1662,
+    "2026": 470
+  }
+}

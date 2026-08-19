@@ -1,0 +1,30 @@
+{
+  "created_by": "scripts/stage2_build_project_universe.py",
+  "created_at_utc": "2026-08-19T02:20:28+00:00",
+  "sources": [
+    {
+      "name": "UKB Showcase Schema 4 returned datasets from applications",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=4",
+      "local_path": "data/raw/ukb_schema4_returned_datasets.tsv"
+    },
+    {
+      "name": "UKB Showcase Schema 27 approved applications",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=27",
+      "local_path": "data/raw/ukb_schema27_applications.tsv"
+    },
+    {
+      "name": "UKB Showcase Schema 19 publications",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=19",
+      "local_path": "data/raw/ukb_schema19_publications.tsv"
+    },
+    {
+      "name": "UKB Showcase Schema 24 publication-application links",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=24",
+      "local_path": "data/raw/ukb_schema24_publication_applications.tsv"
+    }
+  ],
+  "notes": [
+    "These are public UK Biobank Showcase metadata files.",
+    "Schema 27 notes contain raw line breaks; the parser joins continuation lines into notes."
+  ]
+}

@@ -1,0 +1,297 @@
+# Remote execution entrypoint for UKB DMCA and public metadata builds.
+name: UKB Remote Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_scope:
+        description: Pipeline section to run.
+        required: true
+        default: all
+        type: choice
+        options:
+          - tests
+          - stage2
+          - stage2_5
+          - dmca
+          - all
+      commit_outputs:
+        description: Commit generated outputs back to the triggering branch.
+        required: true
+        default: true
+        type: boolean
+      refresh_stage2_sources:
+        description: Re-download public UKB Showcase schema files before Stage 2.
+        required: true
+        default: false
+        type: boolean
+      website_listing_url:
+        description: Optional URL for data/raw/ukb_projects_website_listing.csv.
+        required: false
+        type: string
+      applications_url:
+        description: Optional URL for the UKB approved applications TSV.
+        required: false
+        type: string
+      scan_all_markdown:
+        description: Scan every github/dmca Markdown body instead of relying on tree plus code search.
+        required: false
+        default: false
+        type: boolean
+      wayback_limit:
+        description: Internet Archive CDX captures per repository. Use 0 to disable.
+        required: false
+        default: "0"
+        type: string
+      schema19_url:
+        description: Optional URL for UKB Schema 19 publication metadata CSV/TSV.
+        required: false
+        type: string
+      schema24_url:
+        description: Optional URL for UKB Schema 24 publication-application mapping CSV/TSV.
+        required: false
+        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/ukb-dmca-pipeline.yml
+      - scripts/**
+      - tests/**
+      - data/raw/**
+      - data/processed/**
+      - data/public_metadata_seeds.*
+      - README.md
+      - MATCHING_METHODOLOGY.md
+      - Makefile
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: ukb-remote-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || 'dmca' }}
+  COMMIT_OUTPUTS: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_outputs || github.event_name != 'workflow_dispatch' }}
+  REFRESH_STAGE2_SOURCES: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_stage2_sources || false }}
+  WEBSITE_LISTING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.website_listing_url || '' }}
+  APPLICATIONS_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.applications_url || '' }}
+  SCAN_ALL_MARKDOWN: ${{ github.event_name == 'workflow_dispatch' && inputs.scan_all_markdown || false }}
+  WAYBACK_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.wayback_limit || '0' }}
+  SCHEMA19_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.schema19_url || '' }}
+  SCHEMA24_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.schema24_url || '' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Show run configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "RUN_SCOPE=${RUN_SCOPE}"
+          echo "COMMIT_OUTPUTS=${COMMIT_OUTPUTS}"
+          echo "REFRESH_STAGE2_SOURCES=${REFRESH_STAGE2_SOURCES}"
+          echo "SCAN_ALL_MARKDOWN=${SCAN_ALL_MARKDOWN}"
+          echo "WAYBACK_LIMIT=${WAYBACK_LIMIT}"
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests
+
+      - name: Prepare Stage 2 public metadata inputs
+        if: env.RUN_SCOPE == 'stage2' || env.RUN_SCOPE == 'stage2_5' || env.RUN_SCOPE == 'all'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/raw
+
+          download_if_needed() {
+            local url="$1"
+            local path="$2"
+            if [ "${REFRESH_STAGE2_SOURCES}" = "true" ] || [ ! -s "${path}" ]; then
+              echo "Downloading ${path}"
+              curl -L --fail --retry 3 --retry-delay 10 "${url}" -o "${path}"
+            else
+              echo "Using existing ${path}"
+            fi
+            test -s "${path}"
+          }
+
+          download_if_needed "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=4" "data/raw/ukb_schema4_returned_datasets.tsv"
+          download_if_needed "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=19" "data/raw/ukb_schema19_publications.tsv"
+          download_if_needed "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=24" "data/raw/ukb_schema24_publication_applications.tsv"
+          download_if_needed "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=27" "data/raw/ukb_schema27_applications.tsv"
+
+          if [ -n "${WEBSITE_LISTING_URL}" ] && { [ "${REFRESH_STAGE2_SOURCES}" = "true" ] || [ ! -s data/raw/ukb_projects_website_listing.csv ]; }; then
+            echo "Downloading data/raw/ukb_projects_website_listing.csv"
+            curl -L --fail --retry 3 --retry-delay 10 "${WEBSITE_LISTING_URL}" -o data/raw/ukb_projects_website_listing.csv
+          fi
+
+      - name: Build Stage 2 public project universe
+        if: env.RUN_SCOPE == 'stage2' || env.RUN_SCOPE == 'stage2_5' || env.RUN_SCOPE == 'all'
+        run: python3 scripts/stage2_build_project_universe.py
+
+      - name: Build Stage 2.5 project start dates
+        if: env.RUN_SCOPE == 'stage2_5' || env.RUN_SCOPE == 'all'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -s data/raw/ukb_projects_website_listing.csv ]; then
+            echo "Missing data/raw/ukb_projects_website_listing.csv. Commit it to the repo or provide website_listing_url when manually dispatching the workflow." >&2
+            exit 1
+          fi
+          python3 scripts/stage2_5_match_project_start_dates.py
+
+      - name: Prepare application input
+        if: env.RUN_SCOPE == 'dmca' || env.RUN_SCOPE == 'all'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          valid_app_file() {
+            python3 - "$1" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          p = Path(sys.argv[1])
+          if not p.exists():
+              raise SystemExit(1)
+          text = p.read_text(encoding="utf-8-sig", errors="replace")
+          lines = [line for line in text.splitlines() if line.strip()]
+          if not lines or "app_id" not in lines[0].lower():
+              raise SystemExit(1)
+          if not re.search(r"(?m)^\d+\t", text):
+              raise SystemExit(1)
+          PY
+          }
+
+          APP_INPUT=""
+          for candidate in data/applications.tsv data/application.tsv data/application*.txt data/raw/ukb_schema27_applications.tsv; do
+            if [ -e "${candidate}" ] && valid_app_file "${candidate}"; then
+              APP_INPUT="${candidate}"
+              break
+            fi
+          done
+
+          if [ -n "${APP_INPUT}" ]; then
+            echo "Using ${APP_INPUT}"
+            if [ "${APP_INPUT}" != "data/applications.tsv" ]; then
+              cp "${APP_INPUT}" data/applications.tsv
+            fi
+          elif [ -n "${APPLICATIONS_URL}" ]; then
+            curl -L --fail --retry 3 --retry-delay 10 "${APPLICATIONS_URL}" -o data/applications.tsv
+            valid_app_file data/applications.tsv || {
+              echo "Downloaded applications_url but it is not a valid UKB applications TSV." >&2
+              exit 1
+            }
+          else
+            echo "Missing valid application input. Add data/applications.tsv, data/application.tsv, data/application*.txt, or data/raw/ukb_schema27_applications.tsv with app_id/title/pi/institution/notes rows, or provide workflow_dispatch applications_url." >&2
+            exit 1
+          fi
+
+      - name: Prepare optional publication schemas
+        if: env.RUN_SCOPE == 'dmca' || env.RUN_SCOPE == 'all'
+        shell: bash
+        run: |
+          set -euo pipefail
+          SCHEMA19=""
+          SCHEMA24=""
+          for candidate in data/raw/ukb_schema19_publications.tsv data/schema19.tsv data/schema19.csv data/schema_19.tsv data/schema_19.csv data/schema19* data/schema_19*; do
+            if [ -f "${candidate}" ]; then
+              SCHEMA19="${candidate}"
+              break
+            fi
+          done
+          for candidate in data/raw/ukb_schema24_publication_applications.tsv data/schema24.tsv data/schema24.csv data/schema_24.tsv data/schema_24.csv data/schema24* data/schema_24*; do
+            if [ -f "${candidate}" ]; then
+              SCHEMA24="${candidate}"
+              break
+            fi
+          done
+          if [ -z "${SCHEMA19}" ] && [ -n "${SCHEMA19_URL}" ]; then
+            curl -L --fail --retry 3 --retry-delay 10 "${SCHEMA19_URL}" -o data/schema19.tsv
+            SCHEMA19="data/schema19.tsv"
+          fi
+          if [ -z "${SCHEMA24}" ] && [ -n "${SCHEMA24_URL}" ]; then
+            curl -L --fail --retry 3 --retry-delay 10 "${SCHEMA24_URL}" -o data/schema24.tsv
+            SCHEMA24="data/schema24.tsv"
+          fi
+          echo "SCHEMA19=${SCHEMA19}" >> "${GITHUB_ENV}"
+          echo "SCHEMA24=${SCHEMA24}" >> "${GITHUB_ENV}"
+
+      - name: Build DMCA outputs
+        if: env.RUN_SCOPE == 'dmca' || env.RUN_SCOPE == 'all'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          SCAN_ARGS=()
+          SCHEMA_ARGS=()
+          FIXED_NOTICE_ARGS=()
+          if [ "${SCAN_ALL_MARKDOWN}" = "true" ]; then
+            SCAN_ARGS+=(--scan-all-markdown)
+          fi
+          if [ -n "${SCHEMA19:-}" ] && [ -n "${SCHEMA24:-}" ]; then
+            SCHEMA_ARGS+=(--schema19 "${SCHEMA19}" --schema24 "${SCHEMA24}")
+          fi
+          if [ -f ukb_dmca_notices.csv ]; then
+            FIXED_NOTICE_ARGS+=(--fixed-notices-csv ukb_dmca_notices.csv)
+          fi
+          python3 scripts/ukb_dmca_public_metadata_runner.py \
+            --applications data/applications.tsv \
+            --output-dir . \
+            --cache-dir .cache/ukb_dmca \
+            --wayback-limit "${WAYBACK_LIMIT}" \
+            "${SCHEMA_ARGS[@]}" \
+            "${FIXED_NOTICE_ARGS[@]}" \
+            "${SCAN_ARGS[@]}"
+
+      - name: Upload generated outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ukb-remote-pipeline-${{ env.RUN_SCOPE }}-${{ github.run_id }}
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            ukb_dmca_*.csv
+            evidence/**
+            data/processed/**
+            data/raw/stage2_source_manifest.json
+            reports/**
+            README.md
+            MATCHING_METHODOLOGY.md
+
+      - name: Commit generated outputs
+        if: env.COMMIT_OUTPUTS == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for path in README.md MATCHING_METHODOLOGY.md evidence data/processed reports data/raw/stage2_source_manifest.json; do
+            if [ -e "${path}" ]; then
+              git add -A -- "${path}"
+            fi
+          done
+          if compgen -G "ukb_dmca_*.csv" > /dev/null; then
+            git add ukb_dmca_*.csv
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No generated output changes to commit."
+            exit 0
+          fi
+          git commit -m "Generate UKB remote pipeline outputs (${RUN_SCOPE})"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
