@@ -1,0 +1,48 @@
+{
+  "generated_at_utc": "2026-08-19T09:36:11+00:00",
+  "monthly_count_years": [
+    2023,
+    2025
+  ],
+  "policy_date": "2024-07-05",
+  "source_commit": "81f3d38f36f84fb0fd3ee6566dfbd33ebf8ef6b8",
+  "source_file": "data/processed/stage2_5_app_start_dates.csv",
+  "source_file_sha256": "7f795fee313ff36e0a41f6a35b15348e258786c30de61680bd531b13b147d1d1",
+  "unmatched_schema27_audit_records": 132,
+  "window_counts": [
+    {
+      "after_end_inclusive": "2024-10-05",
+      "after_projects": 39,
+      "after_start_inclusive": "2024-07-05",
+      "before_end_inclusive": "2024-07-04",
+      "before_projects": 101,
+      "before_start_inclusive": "2024-04-05",
+      "policy_date": "2024-07-05",
+      "policy_date_counted_with": "after",
+      "window_months": 3
+    },
+    {
+      "after_end_inclusive": "2025-01-05",
+      "after_projects": 481,
+      "after_start_inclusive": "2024-07-05",
+      "before_end_inclusive": "2024-07-04",
+      "before_projects": 307,
+      "before_start_inclusive": "2024-01-05",
+      "policy_date": "2024-07-05",
+      "policy_date_counted_with": "after",
+      "window_months": 6
+    },
+    {
+      "after_end_inclusive": "2025-07-05",
+      "after_projects": 1292,
+      "after_start_inclusive": "2024-07-05",
+      "before_end_inclusive": "2024-07-04",
+      "before_projects": 682,
+      "before_start_inclusive": "2023-07-05",
+      "policy_date": "2024-07-05",
+      "policy_date_counted_with": "after",
+      "window_months": 12
+    }
+  ],
+  "working_universe_projects": 6935
+}

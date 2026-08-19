@@ -1,0 +1,4 @@
+window_months,policy_date,before_start_inclusive,before_end_inclusive,before_projects,after_start_inclusive,after_end_inclusive,after_projects,policy_date_counted_with
+3,2024-07-05,2024-04-05,2024-07-04,101,2024-07-05,2024-10-05,39,after
+6,2024-07-05,2024-01-05,2024-07-04,307,2024-07-05,2025-01-05,481,after
+12,2024-07-05,2023-07-05,2024-07-04,682,2024-07-05,2025-07-05,1292,after
