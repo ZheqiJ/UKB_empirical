@@ -1,0 +1,148 @@
+{
+  "any_already_rap_modality_candidate_projects": 225,
+  "broader_pure_already_rap_candidate_projects": 42,
+  "classification_counts": [
+    {
+      "classification": "ALREADY_RAP_BOUND",
+      "high_confidence": 41,
+      "low_confidence": 0,
+      "medium_confidence": 1,
+      "projects": 42
+    },
+    {
+      "classification": "NEWLY_RAP_BOUND",
+      "high_confidence": 4674,
+      "low_confidence": 0,
+      "medium_confidence": 887,
+      "projects": 5561
+    },
+    {
+      "classification": "MIXED",
+      "high_confidence": 182,
+      "low_confidence": 0,
+      "medium_confidence": 1,
+      "projects": 183
+    },
+    {
+      "classification": "UNCLEAR",
+      "high_confidence": 0,
+      "low_confidence": 1149,
+      "medium_confidence": 0,
+      "projects": 1149
+    }
+  ],
+  "classification_counts_by_policy_period": [
+    {
+      "after_policy_projects": 12,
+      "before_policy_projects": 30,
+      "classification": "ALREADY_RAP_BOUND",
+      "policy_date_counted_with": "after_policy",
+      "total_projects": 42
+    },
+    {
+      "after_policy_projects": 2215,
+      "before_policy_projects": 3346,
+      "classification": "NEWLY_RAP_BOUND",
+      "policy_date_counted_with": "after_policy",
+      "total_projects": 5561
+    },
+    {
+      "after_policy_projects": 106,
+      "before_policy_projects": 77,
+      "classification": "MIXED",
+      "policy_date_counted_with": "after_policy",
+      "total_projects": 183
+    },
+    {
+      "after_policy_projects": 270,
+      "before_policy_projects": 879,
+      "classification": "UNCLEAR",
+      "policy_date_counted_with": "after_policy",
+      "total_projects": 1149
+    }
+  ],
+  "classification_stage": "stage3_provisional_rap_exposure_classification_only",
+  "did_regressions_run": false,
+  "excluded_unmatched_schema27_records": 132,
+  "generated_at_utc": "2026-08-19T13:17:33+00:00",
+  "manual_review_recommended_projects": 2421,
+  "master_project_file": "data/processed/stage2_master_projects.csv",
+  "master_project_file_sha256": "3d6e7550a60fff0d0d3fa8722fa8bcde82fce800adb480c3a274e9bc685580dc",
+  "missing_master_rows": 0,
+  "missing_website_rows": 0,
+  "official_access_matrix": [
+    {
+      "classification_role": "Explicit WGS dependence is already-RAP-bound evidence.",
+      "modality_family": "Whole genome sequencing (WGS)",
+      "official_basis": "UKB's RAP transition notice says genomic sequence data were already accessible only through UKB-RAP; WGS Showcase documents the late-2021 200k and late-2023 500k WGS releases.",
+      "pre_july_2024_access_route": "already_rap_only",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/community/posts/19996604847133-Changing-the-way-UK-Biobank-data-is-made-available-to-researchers-around-the-world; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=180; https://community.ukbiobank.ac.uk/hc/en-gb/articles/25118589261213-500k-Whole-Genome-Sequencing-General-FAQs"
+    },
+    {
+      "classification_role": "Explicit WES/exome sequencing dependence is already-RAP-bound evidence.",
+      "modality_family": "Whole exome sequencing (WES)",
+      "official_basis": "UKB's RAP transition notice says genomic sequence data were already RAP-only; the Exome sequences Showcase category says WES fields are accessed in situ via UKB-RAP.",
+      "pre_july_2024_access_route": "already_rap_only",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/community/posts/19996604847133-Changing-the-way-UK-Biobank-data-is-made-available-to-researchers-around-the-world; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=170"
+    },
+    {
+      "classification_role": "Explicit OMOP dependence is treated as medium-confidence RAP-only evidence.",
+      "modality_family": "OMOP Common Data Model transformation",
+      "official_basis": "UKB's July 2023 release list describes the OMOP release as available on RAP.",
+      "pre_july_2024_access_route": "already_rap_only",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases"
+    },
+    {
+      "classification_role": "Specific array/imputation/GWAS language is newly-RAP-bound evidence, not already-RAP-bound evidence.",
+      "modality_family": "Genotyping array, imputation, GWAS, PRS, HLA, CNV",
+      "official_basis": "UKB genotype/imputation documentation describes gfetch/resource downloads of array calls, imputation BGENs, haplotypes, HLA and CNV data before the RAP-by-default transition.",
+      "pre_july_2024_access_route": "legacy_download_or_local_access",
+      "source_urls": "https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=263; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=100319; https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/ukbgene_instruct.html"
+    },
+    {
+      "classification_role": "Imaging-only dependence is newly-RAP-bound evidence.",
+      "modality_family": "Imaging and image-derived phenotypes",
+      "official_basis": "UKB release history lists repeated imaging releases and the imaging guidance documents MRI, DXA, ultrasound, OCT, DICOM, NIFTI and IDPs. WGS/WES, not imaging, are singled out as pre-policy RAP-only.",
+      "pre_july_2024_access_route": "legacy_download_or_local_access",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases; https://community.ukbiobank.ac.uk/hc/en-gb/articles/24618819821981-Imaging-Data"
+    },
+    {
+      "classification_role": "Linked-record-only dependence is newly-RAP-bound evidence.",
+      "modality_family": "Linked health records",
+      "official_basis": "UKB hospital inpatient documentation says record-level tables were accessed through the online Data Portal via a project's Download page; release history lists primary care, death, cancer, COVID-19 and HES updates through the Data Portal.",
+      "pre_july_2024_access_route": "legacy_data_portal_or_download_route",
+      "source_urls": "https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=2000; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=2006; https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases"
+    },
+    {
+      "classification_role": "Specific questionnaire/assessment/environmental terms are newly-RAP-bound evidence.",
+      "modality_family": "Questionnaires, assessment-centre fields, wearables, environmental data",
+      "official_basis": "UKB's release history states baseline data were first available in 2012 and subsequent questionnaire, assessment, accelerometry and environmental releases were made available for download.",
+      "pre_july_2024_access_route": "legacy_download_or_local_access",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases"
+    },
+    {
+      "classification_role": "Specific assay/biomarker/proteomics terms are newly-RAP-bound evidence.",
+      "modality_family": "Biochemistry, biomarkers, NMR metabolomics, Olink proteomics",
+      "official_basis": "UKB release history lists biochemistry, metabolomics and Olink proteomics releases. Showcase proteomics documentation says Olink NPX data are made available in the Data Portal; NMR metabolomics is a tabular biomarker category.",
+      "pre_july_2024_access_route": "legacy_download_or_data_portal_route",
+      "source_urls": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=1839; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=220"
+    },
+    {
+      "classification_role": "Generic genetic/genomic/gene/variant terms are recorded as ambiguity signals and do not by themselves imply WGS/WES or already-RAP exposure.",
+      "modality_family": "Generic genetic/genomic language",
+      "official_basis": "UKB documentation distinguishes array/imputation genetic data from genomic sequence data; this stage therefore requires specific WGS/WES terms for already-RAP-bound classification.",
+      "pre_july_2024_access_route": "ambiguous_from_project_text",
+      "source_urls": "https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=263; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=170; https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=180"
+    }
+  ],
+  "outcome_analysis_run": false,
+  "policy_date": "2024-07-05",
+  "source_commit": "055a799ef296cd2891d25aa710cdb022017c6d09",
+  "strict_already_rap_control_projects": 28,
+  "strict_sequence_context_date": "2021-11-01",
+  "website_listing_file": "data/raw/ukb_projects_website_listing.csv",
+  "website_listing_file_sha256": "84e70a7bf31eedac9caf35cecfb87e182702ffed452438ded2bca7ee1a99961a",
+  "working_universe_file": "data/processed/timing_working_research_project_universe.csv",
+  "working_universe_file_sha256": "0333eda01275573cda1798790886fcce71b570d2cedb3dcc3d24987ff5f13699",
+  "working_universe_projects": 6935
+}

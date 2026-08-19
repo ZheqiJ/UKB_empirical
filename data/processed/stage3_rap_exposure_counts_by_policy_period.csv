@@ -1,0 +1,5 @@
+classification,before_policy_projects,after_policy_projects,total_projects,policy_date_counted_with
+ALREADY_RAP_BOUND,30,12,42,after_policy
+NEWLY_RAP_BOUND,3346,2215,5561,after_policy
+MIXED,77,106,183,after_policy
+UNCLEAR,879,270,1149,after_policy
