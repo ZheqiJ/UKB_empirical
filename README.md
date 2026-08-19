@@ -164,3 +164,19 @@ notice and repository discovery are now close to the external tracker counts.
 Application matching now enriches each lineage with public README, DOI, PubMed,
 and Crossref evidence where available, but still avoids treating third-party
 uploads as proof of conduct by a UKB application team.
+
+## Current Result Summary
+
+- UKB DMCA notices: 0
+- Unique repository URLs: 0
+- Unique repository owners: 0
+- Deduplicated repository lineages: 0
+- Confirmed: 0
+- Probable: 0
+- Ambiguous: 0
+- Unresolved: 0
+- Unique-application match ratio: 0
+- Unique applications linked: 0
+- Application input used: `data/applications.tsv`
+
+See `evidence/logs/result_summary.json` for remaining cases and role counts.
