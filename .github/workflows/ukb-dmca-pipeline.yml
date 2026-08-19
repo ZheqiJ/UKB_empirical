@@ -239,14 +239,35 @@ jobs:
           SCAN_ARGS=()
           SCHEMA_ARGS=()
           FIXED_NOTICE_ARGS=()
+          csv_has_data_rows() {
+            python3 - "$1" <<'PY'
+          import csv
+          import sys
+          from pathlib import Path
+
+          path = Path(sys.argv[1])
+          if not path.exists():
+              raise SystemExit(1)
+          with path.open("r", encoding="utf-8-sig", errors="replace", newline="") as handle:
+              reader = csv.reader(handle)
+              if next(reader, None) is None:
+                  raise SystemExit(1)
+              for row in reader:
+                  if any(cell.strip() for cell in row):
+                      raise SystemExit(0)
+          raise SystemExit(1)
+          PY
+          }
           if [ "${SCAN_ALL_MARKDOWN}" = "true" ]; then
             SCAN_ARGS+=(--scan-all-markdown)
           fi
           if [ -n "${SCHEMA19:-}" ] && [ -n "${SCHEMA24:-}" ]; then
             SCHEMA_ARGS+=(--schema19 "${SCHEMA19}" --schema24 "${SCHEMA24}")
           fi
-          if [ -f ukb_dmca_notices.csv ]; then
+          if [ -f ukb_dmca_notices.csv ] && csv_has_data_rows ukb_dmca_notices.csv; then
             FIXED_NOTICE_ARGS+=(--fixed-notices-csv ukb_dmca_notices.csv)
+          elif [ -f ukb_dmca_notices.csv ]; then
+            echo "Ignoring header-only ukb_dmca_notices.csv; scanning github/dmca instead."
           fi
           python3 scripts/ukb_dmca_public_metadata_runner.py \
             --applications data/applications.tsv \
