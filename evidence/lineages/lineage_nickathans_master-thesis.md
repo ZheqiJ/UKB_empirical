@@ -1,0 +1,215 @@
+# lineage_nickathans_master-thesis
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: nickathans/master-thesis
+- repo_urls: https://github.com/nickathans/master-thesis
+- notice_ids: 2026-03-23-uk-biobank-2
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 04789702319801d91a860f57fe6ca873a5700b10; e320c589c23dc790a85a808c5e7e9682c39985eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/nickathans/master-thesis
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: patients.csv
+- target_ref: 04789702319801d91a860f57fe6ca873a5700b10
+- target_commit_sha: 04789702319801d91a860f57fe6ca873a5700b10
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-2.md; https://github.com/nickathans/master-thesis/blob/04789702319801d91a860f57fe6ca873a5700b10/patients.csv; https://github.com/nickathans/master-thesis
+
+### https://github.com/nickathans/master-thesis
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ECG_MRI_Reconstruction_Training.ipynb
+- target_ref: 04789702319801d91a860f57fe6ca873a5700b10
+- target_commit_sha: 04789702319801d91a860f57fe6ca873a5700b10
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-2.md; https://github.com/nickathans/master-thesis/blob/04789702319801d91a860f57fe6ca873a5700b10/ECG_MRI_Reconstruction_Training.ipynb; https://github.com/nickathans/master-thesis
+
+### https://github.com/nickathans/master-thesis
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ECG_MRI_Evaluation.ipynb
+- target_ref: e320c589c23dc790a85a808c5e7e9682c39985eb
+- target_commit_sha: e320c589c23dc790a85a808c5e7e9682c39985eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-2.md; https://github.com/nickathans/master-thesis/blob/e320c589c23dc790a85a808c5e7e9682c39985eb/ECG_MRI_Evaluation.ipynb; https://github.com/nickathans/master-thesis
+
+### https://github.com/nickathans/master-thesis
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ECG_Autoencoder.ipynb
+- target_ref: 04789702319801d91a860f57fe6ca873a5700b10
+- target_commit_sha: 04789702319801d91a860f57fe6ca873a5700b10
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-2.md; https://github.com/nickathans/master-thesis/blob/04789702319801d91a860f57fe6ca873a5700b10/ECG_Autoencoder.ipynb; https://github.com/nickathans/master-thesis
+
+### https://github.com/nickathans/master-thesis
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: MRI_Autoencoder.ipynb
+- target_ref: e320c589c23dc790a85a808c5e7e9682c39985eb
+- target_commit_sha: e320c589c23dc790a85a808c5e7e9682c39985eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-2.md; https://github.com/nickathans/master-thesis/blob/e320c589c23dc790a85a808c5e7e9682c39985eb/MRI_Autoencoder.ipynb; https://github.com/nickathans/master-thesis
+
+## Application Candidates
+- rank 1: app_id=383384; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Self-supervised masked autoencoder for fMRI data; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "repo_path_tokens": ["autoencoder", "mri"]}`
+- rank 2: app_id=62249; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Evaluation of Sleep and Health; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["evaluation"]}`
+- rank 3: app_id=77959; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Diffusion MRI reference brain atlas of healthy patients; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "repo_path_tokens": ["mri", "patients"]}`
+- rank 4: app_id=56145; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Thromboembolic and bleeding complications in cancer patients; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["patients"]}`
+- rank 5: app_id=959222; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-organ health of cancer patients and survivors; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "repo_path_tokens": ["patients"]}`
+- rank 6: app_id=100203; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Data-driven fast and high-quality MRI; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "repo_path_tokens": ["mri"]}`
+- rank 7: app_id=102655; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Evaluation of rare and common variants in common cancers; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["evaluation"]}`
+- rank 8: app_id=164589; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Training foundation models for the brain; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "repo_path_tokens": ["training"]}`
+- rank 9: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 10: app_id=41471; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Evaluation of how mechanotransduction contributes to human health and disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["evaluation"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 383384
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

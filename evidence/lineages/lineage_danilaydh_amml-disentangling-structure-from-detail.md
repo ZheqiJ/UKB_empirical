@@ -1,0 +1,185 @@
+# lineage_danilaydh_amml-disentangling-structure-from-detail
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: danilayDH/AMML-Disentangling-Structure-from-Detail
+- repo_urls: https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+- notice_ids: 2026-04-01-uk-biobank-5
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 2269c046fdd87d343a9effe4faf72663ba670a24; e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0; c3453b40fe3e38cb528b07449736a66470d991ed
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: src/ukbb_small.csv
+- target_ref: 2269c046fdd87d343a9effe4faf72663ba670a24
+- target_commit_sha: 2269c046fdd87d343a9effe4faf72663ba670a24
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-5.md; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail/blob/2269c046fdd87d343a9effe4faf72663ba670a24/src/ukbb_small.csv; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+
+### https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: src/adni.csv
+- target_ref: e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0
+- target_commit_sha: e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-5.md; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail/blob/e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0/src/adni.csv; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+
+### https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: src/adni_small.csv
+- target_ref: e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0
+- target_commit_sha: e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-5.md; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail/blob/e6b4e4b8ec7f00bfc1119ad698a7cef0303a6af0/src/adni_small.csv; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+
+### https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: src/ukbb.csv
+- target_ref: c3453b40fe3e38cb528b07449736a66470d991ed
+- target_commit_sha: c3453b40fe3e38cb528b07449736a66470d991ed
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-5.md; https://raw.githubusercontent.com/danilayDH/AMML-Disentangling-Structure-from-Detail/c3453b40fe3e38cb528b07449736a66470d991ed/src/ukbb.csv; https://github.com/danilayDH/AMML-Disentangling-Structure-from-Detail
+
+## Application Candidates
+- rank 1: app_id=182419; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Imaging Cardiovascular Aging in the UKBB; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbb"]}`
+- rank 2: app_id=27960; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Population structure in the UK Biobank samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 3: app_id=14649; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Finding and characterizing latent genetic sub-structure; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 4: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 5: app_id=811724; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exploring the Genetic Basis of Obesity and Cardiac Structure; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 6: app_id=84541; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The impact of population structure on biomedical outcomes in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 7: app_id=87031; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Influence of cardiovascular risk on brain structure and function; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 8: app_id=104017; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Brain structure and connectivity - links to metabolic health and diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 9: app_id=127971; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Inflammation and Brain Structure in Alzheimer's disease and Other Neurodegenerative Disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["structure"]}`
+- rank 10: app_id=34763; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic analyses of age-of-onset in cerebral small vessel disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["small"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 182419
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

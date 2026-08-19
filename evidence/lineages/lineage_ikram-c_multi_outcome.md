@@ -1,0 +1,215 @@
+# lineage_ikram-c_multi_outcome
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: Ikram-c/multi_outcome
+- repo_urls: https://github.com/Ikram-c/multi_outcome
+- notice_ids: 2026-04-10-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e; a4c6a01f06aab1890b6363700976cc0dad85877b; f2587e9e0ce9a27c05333fd67c562458ef3efcc2; fceb80e110e5688ce02f994de024e5bdb7acdee9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/Ikram-c/multi_outcome
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_process/mapped_data.csv
+- target_ref: 6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e
+- target_commit_sha: 6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank.md; https://raw.githubusercontent.com/Ikram-c/multi_outcome/6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e/data_process/mapped_data.csv; https://github.com/Ikram-c/multi_outcome
+
+### https://github.com/Ikram-c/multi_outcome
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: backend/temp/ukb_8_outcomes_data.csv
+- target_ref: a4c6a01f06aab1890b6363700976cc0dad85877b
+- target_commit_sha: a4c6a01f06aab1890b6363700976cc0dad85877b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank.md; https://raw.githubusercontent.com/Ikram-c/multi_outcome/a4c6a01f06aab1890b6363700976cc0dad85877b/backend/temp/ukb_8_outcomes_data.csv; https://github.com/Ikram-c/multi_outcome
+
+### https://github.com/Ikram-c/multi_outcome
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: backend/myApp/ukb_8_outcomes_data.csv
+- target_ref: f2587e9e0ce9a27c05333fd67c562458ef3efcc2
+- target_commit_sha: f2587e9e0ce9a27c05333fd67c562458ef3efcc2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank.md; https://raw.githubusercontent.com/Ikram-c/multi_outcome/f2587e9e0ce9a27c05333fd67c562458ef3efcc2/backend/myApp/ukb_8_outcomes_data.csv; https://github.com/Ikram-c/multi_outcome
+
+### https://github.com/Ikram-c/multi_outcome
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_process/ukb_8outcomes_data.csv
+- target_ref: fceb80e110e5688ce02f994de024e5bdb7acdee9
+- target_commit_sha: fceb80e110e5688ce02f994de024e5bdb7acdee9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank.md; https://raw.githubusercontent.com/Ikram-c/multi_outcome/fceb80e110e5688ce02f994de024e5bdb7acdee9/data_process/ukb_8outcomes_data.csv; https://github.com/Ikram-c/multi_outcome
+
+### https://github.com/Ikram-c/multi_outcome
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_process/IntrOutcData_varName_mannual.csv
+- target_ref: 6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e
+- target_commit_sha: 6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank.md; https://raw.githubusercontent.com/Ikram-c/multi_outcome/6bf35e4e3cd7d5d7530dd15e5d928a2d58633c2e/data_process/IntrOutcData_varName_mannual.csv; https://github.com/Ikram-c/multi_outcome
+
+## Application Candidates
+- rank 1: app_id=1079350; score=11.2; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Determinants of women's health and cancer outcomes: a multi-omics study in the UK Biobank; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["multi", "outcomes"]}`
+- rank 2: app_id=1150622; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Biological and process determinants of perioperative outcome; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcome", "process"]}`
+- rank 3: app_id=151418; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genomic and multi-modal prediction of disease risk, trajectory, and outcome; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["multi", "outcome"]}`
+- rank 4: app_id=106345; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The contribution of proteomics to multi-morbidity.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["multi"]}`
+- rank 5: app_id=1163821; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multimodal profiling of infectious disease risk and outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcomes"]}`
+- rank 6: app_id=1274399; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Diet, Metabolism, and Tumour Genetics in Cancer Outcomes: A UK Biobank Study; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcomes"]}`
+- rank 7: app_id=15666; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The Effects of Education on Health-related Outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcomes"]}`
+- rank 8: app_id=18177; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-trait GWAS analyses in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["multi"]}`
+- rank 9: app_id=22276; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic heterogeneity in morphological, behavioral and health outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcomes"]}`
+- rank 10: app_id=276802; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Association of genetic variations and respiratory disease with outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["outcomes"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 1079350
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

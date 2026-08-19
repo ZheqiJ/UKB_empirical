@@ -1,0 +1,189 @@
+# lineage_lab-smile_retinapd
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: lab-smile/RetinaPD
+- repo_urls: https://github.com/lab-smile/RetinaPD
+- notice_ids: 2025-12-08-uk-biobank-6
+- final_match_grade: ambiguous
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 7cd9699e0eca60b539270a3fcbe6ef0d7c1d85f1; 6b449daf69eb0a0dbcb7241a348adf04aaca294e; 2439718471b9022c75b4b494e999c2f303406982; 913a01fd19985b1b630a932e4981f26b7dd426dc
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: Deep learning predicts prevalent and incident Parkinson's disease from UK Biobank fundus imaging.
+- doi: 10.1038/s41598-024-54251-1
+- pubmed_id: 38351326
+- paper_authors: Tran C, Shen K, Liu K, Ashok A, Ramirez-Zamora A, Chen J, Li Y, Fang R.
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/lab-smile/RetinaPD
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: csv/subject_images_ids.xlsx
+- target_ref: 7cd9699e0eca60b539270a3fcbe6ef0d7c1d85f1
+- target_commit_sha: 7cd9699e0eca60b539270a3fcbe6ef0d7c1d85f1
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2021-02-06T21:23:09Z
+- github_pushed_at: 2026-05-08T14:13:26Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: SMILE lab
+- repo_owner_public_company: University of Florida
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/7cd9699e0eca60b539270a3fcbe6ef0d7c1d85f1/csv/subject_images_ids.xlsx; https://github.com/lab-smile/RetinaPD; https://europepmc.org/article/MED/38351326
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/7cd9699e0eca60b539270a3fcbe6ef0d7c1d85f1/csv/subject_images_ids.xlsx; https://github.com/lab-smile/RetinaPD; https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://europepmc.org/article/MED/38351326
+- public_metadata_excerpts: This project is a SMILE Lab work for a paper entitled "Deep Learning Predicts Prevalent and Incident Parkinson's Disease From UK Biobank Fundus Imaging" in submission for publication. This work is supported by the National Science Foundation under Grant No. (NSF 2123809).; DOI 10.1038/s41598-024-54251-1 | PMID 38351326
+
+### https://github.com/lab-smile/RetinaPD
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: RetinaPD_Project_Code.ipynb
+- target_ref: 6b449daf69eb0a0dbcb7241a348adf04aaca294e
+- target_commit_sha: 6b449daf69eb0a0dbcb7241a348adf04aaca294e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2021-02-06T21:23:09Z
+- github_pushed_at: 2026-05-08T14:13:26Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: SMILE lab
+- repo_owner_public_company: University of Florida
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/6b449daf69eb0a0dbcb7241a348adf04aaca294e/RetinaPD_Project_Code.ipynb; https://github.com/lab-smile/RetinaPD; https://europepmc.org/article/MED/38351326
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/6b449daf69eb0a0dbcb7241a348adf04aaca294e/RetinaPD_Project_Code.ipynb; https://github.com/lab-smile/RetinaPD; https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://europepmc.org/article/MED/38351326
+- public_metadata_excerpts: This project is a SMILE Lab work for a paper entitled "Deep Learning Predicts Prevalent and Incident Parkinson's Disease From UK Biobank Fundus Imaging" in submission for publication. This work is supported by the National Science Foundation under Grant No. (NSF 2123809).; DOI 10.1038/s41598-024-54251-1 | PMID 38351326
+
+### https://github.com/lab-smile/RetinaPD
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: code/CSV_Population_Characteristics.ipynb
+- target_ref: 2439718471b9022c75b4b494e999c2f303406982
+- target_commit_sha: 2439718471b9022c75b4b494e999c2f303406982
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2021-02-06T21:23:09Z
+- github_pushed_at: 2026-05-08T14:13:26Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: SMILE lab
+- repo_owner_public_company: University of Florida
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/2439718471b9022c75b4b494e999c2f303406982/code/CSV_Population_Characteristics.ipynb; https://github.com/lab-smile/RetinaPD; https://europepmc.org/article/MED/38351326
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/2439718471b9022c75b4b494e999c2f303406982/code/CSV_Population_Characteristics.ipynb; https://github.com/lab-smile/RetinaPD; https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://europepmc.org/article/MED/38351326
+- public_metadata_excerpts: This project is a SMILE Lab work for a paper entitled "Deep Learning Predicts Prevalent and Incident Parkinson's Disease From UK Biobank Fundus Imaging" in submission for publication. This work is supported by the National Science Foundation under Grant No. (NSF 2123809).; DOI 10.1038/s41598-024-54251-1 | PMID 38351326
+
+### https://github.com/lab-smile/RetinaPD
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: CSV_Population_Characteristics.ipynb
+- target_ref: 913a01fd19985b1b630a932e4981f26b7dd426dc
+- target_commit_sha: 913a01fd19985b1b630a932e4981f26b7dd426dc
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2021-02-06T21:23:09Z
+- github_pushed_at: 2026-05-08T14:13:26Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: SMILE lab
+- repo_owner_public_company: University of Florida
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/913a01fd19985b1b630a932e4981f26b7dd426dc/CSV_Population_Characteristics.ipynb; https://github.com/lab-smile/RetinaPD; https://europepmc.org/article/MED/38351326
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-6.md; https://github.com/lab-smile/RetinaPD/blob/913a01fd19985b1b630a932e4981f26b7dd426dc/CSV_Population_Characteristics.ipynb; https://github.com/lab-smile/RetinaPD; https://github.com/lab-smile/RetinaPD/blob/main/README.md; https://europepmc.org/article/MED/38351326
+- public_metadata_excerpts: This project is a SMILE Lab work for a paper entitled "Deep Learning Predicts Prevalent and Incident Parkinson's Disease From UK Biobank Fundus Imaging" in submission for publication. This work is supported by the National Science Foundation under Grant No. (NSF 2123809).; DOI 10.1038/s41598-024-54251-1 | PMID 38351326
+
+## Application Candidates
+- rank 1: app_id=67263; score=85.83; grade=ambiguous; evidence_class=B; components=application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; repo_path_similarity; title=Weakly-supervised Deep Learning for the Improvement of Cardiovascular Disease (CVD) Prediction using Retinal Fundus Images; reason=Two or more candidate applications have similar evidence scores.
+  - score_details: `{"application_notes_tokens": ["cannot", "deep", "evaluation", "explore", "images", "learning", "methods", "non", "purpose", "retina", "there", "traditional", "uses", "will"], "application_title_topic_tokens": ["deep", "fundus", "learning"], "data_types": ["hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Professor Patrick Then", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["deep", "for", "fundus", "images", "learning"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile", "repo_path_tokens": ["images"]}`
+- rank 2: app_id=37539; score=78.6; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Building an Online Resource for Global Investigation and Validation of Trans-ethnic PheWAS Results; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["all", "create", "for", "including", "online", "our", "resources", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Dr Bingshan Li", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["for", "online", "results"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 3: app_id=31615; score=77.0; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; repo_owner_to_paper_author; title=Genetic factors as a biological link between food intake and cognition; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["characteristics", "collected", "environment", "for", "how", "linear", "models", "our", "regression", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Professor Markus N\ufffdthen", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 4: app_id=60928; score=77.0; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; repo_owner_to_paper_author; title=Angioedema: Investigation of genetic and environmental risk factors; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["all", "for", "general", "including", "non", "our", "population", "remaining", "results", "still", "type", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Professor Markus N\ufffdthen", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 5: app_id=63454; score=76.4; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Understand the relationship between diet, lifestyle and gene-environment interactions and healthy aging; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["environment", "for", "multiple", "our", "population", "will"], "data_types": ["genotype"], "evidence_class": "B", "institution_tokens": ["science", "university"], "paper_author_to_application_pi": "Dr Liangkai Chen", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["environment", "understand"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 6: app_id=62811; score=74.6; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; repo_owner_to_paper_author; title=Lifestyle, metabolic/inflammatory profile, genetics and neurological diseases among participants in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["characteristics", "for", "how", "models", "parkinson", "still", "understand", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Dr Li-Hua Chen", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 7: app_id=82002; score=74.49; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Machine learning approaches using large-scale multi-omics to create comprehensive views of chronic diseases and long-term effects of coronavirus disease 2019 (COVID-19); reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["classification", "for", "learning", "machine", "methods", "models", "our", "will"], "application_title_topic_tokens": ["learning"], "data_types": ["hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["lab"], "paper_author_to_application_pi": "Dr Chen Li", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["create", "learning", "machine"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 8: app_id=71550; score=74.45; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Study on the mechanism of the impact of the interaction between genes with the environment and lifestyle habits on the onset of chronic diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["environment", "explore", "for", "general", "non", "one", "our", "population", "purpose", "results", "will"], "data_types": ["genotype"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Dr Dongze Li", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["environment"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 9: app_id=63121; score=74.2; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_author_to_application_pi; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Understanding the genetic and environmental risk factors and genotype-environment interaction in cardiovascular diseases for precision medicine; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["environment", "for", "sensitivity", "types", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["university"], "paper_author_to_application_pi": "Dr Sen Li", "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["environment", "for"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+- rank 10: app_id=96326; score=73.82; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_identifier; readme_title_topic; repo_owner_to_paper_author; title=Deep Learning models for predicting phenotypic quantitative traits  from high density genotyping data; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["deep", "first", "for", "learning", "linear", "machine", "methods", "model", "models", "non", "our", "step", "then", "train", "will"], "application_title_topic_tokens": ["deep", "learning"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["environment", "for", "national"], "paper_identifiers": {"doi": "10.1038/s41598-024-54251-1", "pubmed_id": "38351326"}, "readme_title_tokens": ["deep", "for", "learning", "models"], "repo_owner_to_paper_author": "SMILE lab\nlab-smile"}`
+
+## Application Enrichment Audit
+- final_match_grade: confirmed
+- candidate_app_id: 48388
+- evidence_class: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN
+- evidence_components: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; exact_publication_identifier
+- crosswalk_pub_ids: 8744
+- crosswalk_app_ids: 48388
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Unique repository-linked DOI/PMID maps through UKB Schema 19/24 to one application.

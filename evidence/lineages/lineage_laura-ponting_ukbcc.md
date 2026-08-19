@@ -1,0 +1,189 @@
+# lineage_laura-ponting_ukbcc
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: laura-ponting/ukbcc
+- repo_urls: https://github.com/laura-ponting/ukbcc
+- notice_ids: 2025-11-25-uk-biobank-4
+- final_match_grade: ambiguous
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 187f01d6423fc8b45ab9511a529067fd21665e27
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: our paper
+- doi: 10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810
+- pubmed_id: 
+- paper_authors: Isabell Kiral, Nathalie Willems, Benjamin Goudey
+- citation_metadata_files: 
+- metadata_publication_links: https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukbcc/
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/laura-ponting/ukbcc
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: prototype_notebooks/prototyping stats.ipynb
+- target_ref: 187f01d6423fc8b45ab9511a529067fd21665e27
+- target_commit_sha: 187f01d6423fc8b45ab9511a529067fd21665e27
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukbcc/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-25-uk-biobank-4.md; https://github.com/laura-ponting/ukbcc/blob/187f01d6423fc8b45ab9511a529067fd21665e27/prototype_notebooks/prototyping%20stats.ipynb; https://github.com/laura-ponting/ukbcc; https://pypi.org/project/ukbcc/; https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- public_metadata_excerpts: 5. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice. | 4. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice.--> | There is more detailed information in [our paper](https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1). | 2. Navigate to your Project by clicking the "Project" button on the left-hand side of the page | **NB**: The web-based interface is built using Plotly Dash, which uses Flask in order to serve the web application. The Flask library uses the default werkzeug development server, which has not been tested for security or performance. Consequently, you will see the following warning when running this command in the command line: | "Warning: This is a development server. Do not use app.run_server | bioRxiv 2020.07.12.199810; doi: https://doi.org/10.1101/2020.07.12.199810
+
+### https://github.com/laura-ponting/ukbcc
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: prototype_notebooks/prototyping.ipynb
+- target_ref: 187f01d6423fc8b45ab9511a529067fd21665e27
+- target_commit_sha: 187f01d6423fc8b45ab9511a529067fd21665e27
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukbcc/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-25-uk-biobank-4.md; https://github.com/laura-ponting/ukbcc/blob/187f01d6423fc8b45ab9511a529067fd21665e27/prototype_notebooks/prototyping.ipynb; https://github.com/laura-ponting/ukbcc; https://pypi.org/project/ukbcc/; https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- public_metadata_excerpts: 5. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice. | 4. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice.--> | There is more detailed information in [our paper](https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1). | 2. Navigate to your Project by clicking the "Project" button on the left-hand side of the page | **NB**: The web-based interface is built using Plotly Dash, which uses Flask in order to serve the web application. The Flask library uses the default werkzeug development server, which has not been tested for security or performance. Consequently, you will see the following warning when running this command in the command line: | "Warning: This is a development server. Do not use app.run_server | bioRxiv 2020.07.12.199810; doi: https://doi.org/10.1101/2020.07.12.199810
+
+### https://github.com/laura-ponting/ukbcc
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ukbcc/tests/conftest.py
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukbcc/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-25-uk-biobank-4.md; https://github.com/laura-ponting/ukbcc/blob/master/ukbcc/tests/conftest.py; https://github.com/laura-ponting/ukbcc; https://pypi.org/project/ukbcc/; https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- public_metadata_excerpts: 5. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice. | 4. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice.--> | There is more detailed information in [our paper](https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1). | 2. Navigate to your Project by clicking the "Project" button on the left-hand side of the page | **NB**: The web-based interface is built using Plotly Dash, which uses Flask in order to serve the web application. The Flask library uses the default werkzeug development server, which has not been tested for security or performance. Consequently, you will see the following warning when running this command in the command line: | "Warning: This is a development server. Do not use app.run_server | bioRxiv 2020.07.12.199810; doi: https://doi.org/10.1101/2020.07.12.199810
+
+### https://github.com/laura-ponting/ukbcc
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tests.py
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukbcc/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-25-uk-biobank-4.md; https://github.com/laura-ponting/ukbcc/blob/master/tests.py; https://github.com/laura-ponting/ukbcc; https://pypi.org/project/ukbcc/; https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1; https://doi.org/10.1101/2020.07.12.199810
+- public_metadata_excerpts: 5. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice. | 4. during installation of `ukbcc`, a credentials.conf file will be created if it doens't exist already. Enter correct credentials (application ID, user name, and password) to access UKBB or use file as a template to create your own in the location of choice.--> | There is more detailed information in [our paper](https://www.biorxiv.org/content/10.1101/2020.07.12.199810v1). | 2. Navigate to your Project by clicking the "Project" button on the left-hand side of the page | **NB**: The web-based interface is built using Plotly Dash, which uses Flask in order to serve the web application. The Flask library uses the default werkzeug development server, which has not been tested for security or performance. Consequently, you will see the following warning when running this command in the command line: | "Warning: This is a development server. Do not use app.run_server | bioRxiv 2020.07.12.199810; doi: https://doi.org/10.1101/2020.07.12.199810
+
+## Application Candidates
+- rank 1: app_id=51064; score=62.67; grade=ambiguous; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Understanding the relationship between genomics, eye imaging, and neurodegeneration; reason=Two or more candidate applications have similar evidence scores.
+  - score_details: `{"application_notes_tokens": ["associated", "available", "clinical", "conditions", "enabling", "for", "further", "genomics", "given", "glaucoma", "here", "how", "individuals", "large", "link", "main", "make", "may", "modelling", "our"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Benjamin Goudey", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["genomics"]}`
+- rank 2: app_id=57189; score=61.78; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Establishing causal relations for circulating factors to cardiometabolic and neurodegenerative diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["associated", "complex", "contributing", "development", "for", "further", "general", "here", "how", "individuals", "information", "large", "may", "our", "provide", "serve", "some", "such", "these", "use"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Tao Long", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["for"]}`
+- rank 3: app_id=73507; score=60.57; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Integrated analysis and validation of complex brain-related genetic and genomic studies; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["additional", "clinical", "complex", "descriptions", "detailed", "existing", "for", "individuals", "its", "large", "like", "need", "our", "requires", "run", "use", "want", "will"], "data_types": ["genotype"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Patrick May", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["complex", "integrated"]}`
+- rank 4: app_id=67263; score=58.67; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Weakly-supervised Deep Learning for the Improvement of Cardiovascular Disease (CVD) Prediction using Retinal Fundus Images; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["because", "directly", "images", "its", "main", "part", "performance", "such", "take", "there", "these", "uses", "value", "which", "will"], "data_types": ["hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Professor Patrick Then", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["for", "images"]}`
+- rank 5: app_id=11425; score=56.0; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; title=The Social Science Genetic Association Consortium; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["all", "associated", "available", "contribute", "directly", "environment", "example", "following", "for", "how", "interaction", "large", "our", "relevant", "use", "used", "very", "will", "would"], "data_types": ["genotype"], "evidence_class": "B", "paper_author_to_application_pi": "Professor Daniel Benjamin", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}}`
+- rank 6: app_id=45289; score=56.0; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=The location of the human seasonal clock; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["called", "example", "for", "images", "known", "location", "make", "other", "our", "see", "such", "use", "used", "ways", "where", "which", "will"], "evidence_class": "B", "paper_author_to_application_pi": "Mr Alon Bar", "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["location"]}`
+- rank 7: app_id=59456; score=53.33; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_identifier; readme_title_topic; title=Using UK Biobank data to support the Novartis drug discovery and development pipeline; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["additional", "available", "choices", "clinical", "conditions", "current", "currently", "development", "for", "information", "long", "make", "need", "our", "relevant", "then", "there", "these", "time", "use"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["bio", "for"], "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["development", "pipeline"]}`
+- rank 8: app_id=85457; score=51.56; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_identifier; readme_title_topic; title=Linking genomic determinants of child development to predictors of ageing and multi-morbidities.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["associated", "development", "for", "generated", "how", "individuals", "information", "known", "like", "link", "may", "our", "such", "then", "there", "these", "want", "will", "working"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["development", "for"], "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["development", "linking"]}`
+- rank 9: app_id=51830; score=51.2; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_identifier; readme_title_topic; title=Identifying genetic factors for brain ageing; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["associated", "available", "different", "for", "how", "individuals", "interact", "more", "note", "our", "represent", "run", "structure", "such", "systems", "there", "these", "use", "used", "which"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["development", "for"], "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["for"]}`
+- rank 10: app_id=46631; score=51.0; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; paper_identifier; readme_title_topic; title=Gestational Diabetes and subsequent Type 2 Diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["already", "any", "certain", "conditions", "developed", "during", "example", "for", "further", "information", "may", "our", "some", "subsequent", "these", "true", "type", "use", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "institution_tokens": ["bar"], "paper_identifiers": {"doi": "10.1101/2020.07.12.199810v1; 10.1101/2020.07.12.199810", "pubmed_id": ""}, "readme_title_tokens": ["subsequent", "type"]}`
+
+## Application Enrichment Audit
+- final_match_grade: ambiguous
+- candidate_app_id: 51064
+- evidence_class: B
+- evidence_components: application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Two or more candidate applications have similar evidence scores.

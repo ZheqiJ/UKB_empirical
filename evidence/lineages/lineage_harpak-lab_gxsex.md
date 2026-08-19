@@ -1,0 +1,1213 @@
+# lineage_harpak-lab_gxsex
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: harpak-lab/GxSex
+- repo_urls: https://github.com/harpak-lab/GxSex
+- notice_ids: 2026-03-31-uk-biobank-4
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3; 91cfcd71d03089eff059bbb513abdfa0caaf2f20; 0c411d8b74b9921b33de82e7344d50a0c8c66dfe; 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_waist_circ.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_waist_circ.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_hip_circ.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_hip_circ.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_waist_to_hip.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_waist_to_hip.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_height.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_height.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_weight.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_weight.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_bmi.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_bmi.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_wth_bmi_adj.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_wth_bmi_adj.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_arm_fatfree_mass_R.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_arm_fatfree_mass_R.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_arm_fatfree_mass_L.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_arm_fatfree_mass_L.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_whole_body_fat_mass.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_whole_body_fat_mass.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/covariates.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/covariates.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_RBC_count.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_RBC_count.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_eosinophil_perc.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_eosinophil_perc.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_lymphocyte_perc.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_lymphocyte_perc.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_creatinine.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_creatinine.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_urea.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_urea.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_urate.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_urate.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_diastolicBP_auto.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_diastolicBP_auto.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_pulse_rate.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_pulse_rate.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_systolicBP_auto.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_systolicBP_auto.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_IGF1.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_IGF1.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_HbA1c.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_HbA1c.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_albumin.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_albumin.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_calcium.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_calcium.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_protein_total.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_protein_total.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_SHBG.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_SHBG.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_testosterone.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_testosterone.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/pheno_FVC_best.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/pheno_FVC_best.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Phenotypes/sex_ids.txt
+- target_ref: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- target_commit_sha: 02f6cfef28b065fcbafb19731c051f7dbcb3d5c3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/02f6cfef28b065fcbafb19731c051f7dbcb3d5c3/Phenotypes/sex_ids.txt; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Final_scripts/Intermediate
+- target_ref: 91cfcd71d03089eff059bbb513abdfa0caaf2f20
+- target_commit_sha: 91cfcd71d03089eff059bbb513abdfa0caaf2f20
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/91cfcd71d03089eff059bbb513abdfa0caaf2f20/Final_scripts/Intermediate; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/FVC_best/female_mash_FVC_best.1.profile
+- target_ref: 0c411d8b74b9921b33de82e7344d50a0c8c66dfe
+- target_commit_sha: 0c411d8b74b9921b33de82e7344d50a0c8c66dfe
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/0c411d8b74b9921b33de82e7344d50a0c8c66dfe/GWAS_Results/FVC_best/female_mash_FVC_best.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/FVC_best/male_mash_FVC_best.1.profile
+- target_ref: 0c411d8b74b9921b33de82e7344d50a0c8c66dfe
+- target_commit_sha: 0c411d8b74b9921b33de82e7344d50a0c8c66dfe
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/0c411d8b74b9921b33de82e7344d50a0c8c66dfe/GWAS_Results/FVC_best/male_mash_FVC_best.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/arm_fatfree_mass_R/female_mash_arm_fatfree_mass_R.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/arm_fatfree_mass_R/female_mash_arm_fatfree_mass_R.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/bmi/female_mash_bmi.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/bmi/female_mash_bmi.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/creatinine/female_mash_creatinine.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/creatinine/female_mash_creatinine.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/creatinine/male_additive_creatinine.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/creatinine/male_additive_creatinine.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/creatinine/male_mash_creatinine.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/creatinine/male_mash_creatinine.1.profile; https://github.com/harpak-lab/GxSex
+
+### https://github.com/harpak-lab/GxSex
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GWAS_Results/diastolicBP_auto/female_mash_diastolicBP_auto.1.profile
+- target_ref: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- target_commit_sha: 3bd6831a85cb9dc12094c7fd66e1edd59db18fea
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-31-uk-biobank-4.md; https://raw.githubusercontent.com/harpak-lab/GxSex/3bd6831a85cb9dc12094c7fd66e1edd59db18fea/GWAS_Results/diastolicBP_auto/female_mash_diastolicBP_auto.1.profile; https://github.com/harpak-lab/GxSex
+
+## Application Candidates
+- rank 1: app_id=9072; score=12.57; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=The Genetics of anthropometric traits ? Height, weight, BMI and waist circumference; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["bmi", "height", "waist", "weight"]}`
+- rank 2: app_id=654669; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Plasma protein profile of diabetic or cancer patients.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["profile", "protein"]}`
+- rank 3: app_id=66377; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The Association of Sex Hormones with Stroke: Results from the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["results", "sex"]}`
+- rank 4: app_id=1006787; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Investigating sex differences in aging using plasma proteomics in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["proteomics", "sex"]}`
+- rank 5: app_id=1078394; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Development of Whole-Body Segmentation Tools and Imaging Biomarkers; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["body", "whole"]}`
+- rank 6: app_id=238831; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Modifiable predictors of total hip and knee arthroplasty; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["hip", "total"]}`
+- rank 7: app_id=30544; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Diet, body fat and brain health: a multi-organ imaging study in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["body", "fat"]}`
+- rank 8: app_id=42009; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic study of complex phenotypes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotypes"]}`
+- rank 9: app_id=43332; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Latent phenotypes of impulsivity; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotypes"]}`
+- rank 10: app_id=48335; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Whole-Genome Genetic Risk Factors; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "gwas"], "evidence_class": "C", "repo_path_tokens": ["whole"]}`
+
+## Application Enrichment Audit
+- final_match_grade: confirmed
+- candidate_app_id: 61666
+- evidence_class: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_components: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; exact_publication_identifier; public_metadata_seed; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- crosswalk_pub_ids: 7877
+- crosswalk_app_ids: 61666
+- public_metadata_seed_rows: 1
+- public_metadata_seed_urls: https://www.sciencedirect.com/science/article/pii/S2666979X23000630; https://pubmed.ncbi.nlm.nih.gov/37228747/; https://biobank.ndph.ox.ac.uk/ukb/pub.cgi?id=7877; https://github.com/harpak-lab/amplification_gxsex; https://doi.org/10.1016/j.xgen.2023.100297
+- match_reason: Unique repository-linked DOI/PMID maps through UKB Schema 19/24 to one application.
+
+## Public Metadata Seed Audit
+- seed_rows: 1
+- candidate_app_id: 61666
+- evidence_class: B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_components: public_metadata_seed; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_urls: https://www.sciencedirect.com/science/article/pii/S2666979X23000630; https://pubmed.ncbi.nlm.nih.gov/37228747/; https://biobank.ndph.ox.ac.uk/ukb/pub.cgi?id=7877; https://github.com/harpak-lab/amplification_gxsex; https://doi.org/10.1016/j.xgen.2023.100297
+- match_reason: Public metadata seed records strong but non-deterministic repository-publication-application evidence.

@@ -167,16 +167,16 @@ uploads as proof of conduct by a UKB application team.
 
 ## Current Result Summary
 
-- UKB DMCA notices: 0
-- Unique repository URLs: 0
-- Unique repository owners: 0
-- Deduplicated repository lineages: 0
-- Confirmed: 0
+- UKB DMCA notices: 110
+- Unique repository URLs: 193
+- Unique repository owners: 170
+- Deduplicated repository lineages: 193
+- Confirmed: 2
 - Probable: 0
-- Ambiguous: 0
-- Unresolved: 0
-- Unique-application match ratio: 0
-- Unique applications linked: 0
+- Ambiguous: 18
+- Unresolved: 173
+- Unique-application match ratio: 0.0104
+- Unique applications linked: 2
 - Application input used: `data/applications.tsv`
 
 See `evidence/logs/result_summary.json` for remaining cases and role counts.

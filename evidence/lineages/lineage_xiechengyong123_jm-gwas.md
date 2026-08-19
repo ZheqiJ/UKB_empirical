@@ -1,0 +1,215 @@
+# lineage_xiechengyong123_jm-gwas
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: xiechengyong123/JM-GWAS
+- repo_urls: https://github.com/xiechengyong123/JM-GWAS
+- notice_ids: 2025-11-13-uk-biobank-8
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 0ea4467cbc376db71be7d13cd8fe7aae0de0f6f3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/xiechengyong123/JM-GWAS
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_DATA/VitaminD_PRS_geneGC.txt.gz
+- target_ref: 0ea4467cbc376db71be7d13cd8fe7aae0de0f6f3
+- target_commit_sha: 0ea4467cbc376db71be7d13cd8fe7aae0de0f6f3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-uk-biobank-8.md; https://github.com/xiechengyong123/JM-GWAS/blob/0ea4467cbc376db71be7d13cd8fe7aae0de0f6f3/0_DATA/VitaminD_PRS_geneGC.txt.gz; https://github.com/xiechengyong123/JM-GWAS
+
+### https://github.com/xiechengyong123/JM-GWAS
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_DATA/PRS_with_PC.txt.gz
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-uk-biobank-8.md; https://github.com/xiechengyong123/JM-GWAS/blob/master/0_DATA/PRS_with_PC.txt.gz; https://github.com/xiechengyong123/JM-GWAS
+
+### https://github.com/xiechengyong123/JM-GWAS
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_DATA/PRS_with_diseases.txt.gz
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-uk-biobank-8.md; https://github.com/xiechengyong123/JM-GWAS/blob/master/0_DATA/PRS_with_diseases.txt.gz; https://github.com/xiechengyong123/JM-GWAS
+
+### https://github.com/xiechengyong123/JM-GWAS
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_DATA/pheno.txt.gz
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-uk-biobank-8.md; https://github.com/xiechengyong123/JM-GWAS/blob/master/0_DATA/pheno.txt.gz; https://github.com/xiechengyong123/JM-GWAS
+
+### https://github.com/xiechengyong123/JM-GWAS
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_DATA/VitaminD_PRS_with_GPS.txt.gz
+- target_ref: master
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-uk-biobank-8.md; https://github.com/xiechengyong123/JM-GWAS/blob/master/0_DATA/VitaminD_PRS_with_GPS.txt.gz; https://github.com/xiechengyong123/JM-GWAS
+
+## Application Candidates
+- rank 1: app_id=10214; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Vitamin D, genetics, and the risk of schizophrenia; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["vitamin"]}`
+- rank 2: app_id=103608; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Determinants of eye diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 3: app_id=53061; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genotype-Phenotype analysis of genetic kidney and liver diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 4: app_id=53639; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetics of the comorbidities of cardiometabolic diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 5: app_id=78563; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Gene-Environment Interactions of complex diseases based on big data analysis; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "gene"]}`
+- rank 6: app_id=100359; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Comprehensive gene-environment interaction analysis in chronic diseases and cancers; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "gene"]}`
+- rank 7: app_id=1061562; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genome-Wide Association Study (GWAS)-Based Research on Gene-Behavior Associations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gene", "gwas"]}`
+- rank 8: app_id=101336; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Clonal hematopoiesis and inflammatory diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 9: app_id=1203422; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Molecular and genetic analysis of unilateral renal diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 10: app_id=15479; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic architecture of immune diseases and allergies; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 10214
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

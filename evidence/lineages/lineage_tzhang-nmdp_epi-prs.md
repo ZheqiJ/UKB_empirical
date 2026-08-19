@@ -1,0 +1,305 @@
+# lineage_tzhang-nmdp_epi-prs
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: tzhang-nmdp/Epi-PRS
+- repo_urls: https://github.com/tzhang-nmdp/Epi-PRS
+- notice_ids: 2025-12-08-uk-biobank-4
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: breast/breast_test_case_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/breast/breast_test_case_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: breast/breast_test_control_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/breast/breast_test_control_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: breast/breast_train_case_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/breast/breast_train_case_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: breast/breast_train_control_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/breast/breast_train_control_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: diabetes/diabetes_test_case_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/diabetes/diabetes_test_case_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: diabetes/diabetes_test_control_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/diabetes/diabetes_test_control_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: diabetes/diabetes_train_case_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/diabetes/diabetes_train_case_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+### https://github.com/tzhang-nmdp/Epi-PRS
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: diabetes/diabetes_train_control_id.txt
+- target_ref: e9493d5ac61e4dee3a8189731bc870ba91139426
+- target_commit_sha: e9493d5ac61e4dee3a8189731bc870ba91139426
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-4.md; https://github.com/tzhang-nmdp/Epi-PRS/blob/e9493d5ac61e4dee3a8189731bc870ba91139426/diabetes/diabetes_train_control_id.txt; https://github.com/tzhang-nmdp/Epi-PRS
+
+## Application Candidates
+- rank 1: app_id=61031; score=11.2; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Asthma-a test case for precision; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["case", "test"]}`
+- rank 2: app_id=63653; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Case-control analyses in neuropsychiatric disorders; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["case", "control"]}`
+- rank 3: app_id=214427; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Hematopoiesis in type 1 diabetes.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+- rank 4: app_id=26981; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetics of gestational diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+- rank 5: app_id=761; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Risk of type 2 Diabetes and development of disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+- rank 6: app_id=28721; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Pre-eclampsia and cardiovascular risk: a case-control study of genes and cardiac function; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["case", "control"]}`
+- rank 7: app_id=29169; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Using UK biobank as a replication cohort in Case/Control GWAS for hidradenitis superativa (HS) risk loci; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["case", "control"]}`
+- rank 8: app_id=46631; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Gestational Diabetes and subsequent Type 2 Diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+- rank 9: app_id=65805; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic factors on Type 2 diabetes and hypertension; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+- rank 10: app_id=65912; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Stratification-based genetic analyses of type 2 diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diabetes"]}`
+
+## Application Enrichment Audit
+- final_match_grade: confirmed
+- candidate_app_id: 29256
+- evidence_class: A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN
+- evidence_components: A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; exact_publication_identifier
+- crosswalk_pub_ids: 5930
+- crosswalk_app_ids: 29256
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Unique repository-linked DOI/PMID maps through UKB Schema 19/24 to one application.

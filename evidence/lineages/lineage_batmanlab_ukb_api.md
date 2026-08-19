@@ -1,0 +1,437 @@
+# lineage_batmanlab_ukb_api
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: batmanlab/ukb_api
+- repo_urls: https://github.com/batmanlab/ukb_api
+- notice_ids: 2025-12-15-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: a8408dae96c4f9c5184ec270574deab57fc08854; 68362000ee42cb6c30946d213a87f9f325b4bae1; 8fd484d5a6c745a9663848e1809feb6a946f4d3f; b1fa8e6fefff2b55c61ea86a5c0b5462c202054a; b2c510defdbe505edffe86f31f3c03a572b791eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: static_resources/UKB_fs_folder_paths_march_2022.csv
+- target_ref: a8408dae96c4f9c5184ec270574deab57fc08854
+- target_commit_sha: a8408dae96c4f9c5184ec270574deab57fc08854
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/a8408dae96c4f9c5184ec270574deab57fc08854/static_resources/UKB_fs_folder_paths_march_2022.csv; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: static_resources/ukb_brain_imaging_metadata.csv
+- target_ref: a8408dae96c4f9c5184ec270574deab57fc08854
+- target_commit_sha: a8408dae96c4f9c5184ec270574deab57fc08854
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/a8408dae96c4f9c5184ec270574deab57fc08854/static_resources/ukb_brain_imaging_metadata.csv; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/ukbaccessrepo_demo.ipynb
+- target_ref: 68362000ee42cb6c30946d213a87f9f325b4bae1
+- target_commit_sha: 68362000ee42cb6c30946d213a87f9f325b4bae1
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/68362000ee42cb6c30946d213a87f9f325b4bae1/notebooks/ukbaccessrepo_demo.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/data_refresh_eda_ukb.ipynb
+- target_ref: 68362000ee42cb6c30946d213a87f9f325b4bae1
+- target_commit_sha: 68362000ee42cb6c30946d213a87f9f325b4bae1
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/68362000ee42cb6c30946d213a87f9f325b4bae1/notebooks/data_refresh_eda_ukb.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/ukb_metadata_EDA.ipynb
+- target_ref: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- target_commit_sha: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/8fd484d5a6c745a9663848e1809feb6a946f4d3f/notebooks/ukb_metadata_EDA.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/EDA_ADNI1_Freesurfer6_UKB_Harmonization.ipynb
+- target_ref: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- target_commit_sha: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/b1fa8e6fefff2b55c61ea86a5c0b5462c202054a/notebooks/EDA_ADNI1_Freesurfer6_UKB_Harmonization.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/UKB_FS6_vs_FS7.ipynb
+- target_ref: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- target_commit_sha: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/b1fa8e6fefff2b55c61ea86a5c0b5462c202054a/notebooks/UKB_FS6_vs_FS7.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/UKBRepo_demo.ipynb
+- target_ref: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- target_commit_sha: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/8fd484d5a6c745a9663848e1809feb6a946f4d3f/notebooks/UKBRepo_demo.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/ukb_repo_devlopment_notebook.ipynb
+- target_ref: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- target_commit_sha: 8fd484d5a6c745a9663848e1809feb6a946f4d3f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/8fd484d5a6c745a9663848e1809feb6a946f4d3f/notebooks/ukb_repo_devlopment_notebook.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/EDA_harmonization_UKB_ADNI.ipynb
+- target_ref: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- target_commit_sha: b1fa8e6fefff2b55c61ea86a5c0b5462c202054a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/b1fa8e6fefff2b55c61ea86a5c0b5462c202054a/notebooks/EDA_harmonization_UKB_ADNI.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/.ipynb_checkpoints/ukb_monai_demo-checkpoint.ipynb
+- target_ref: b2c510defdbe505edffe86f31f3c03a572b791eb
+- target_commit_sha: b2c510defdbe505edffe86f31f3c03a572b791eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/b2c510defdbe505edffe86f31f3c03a572b791eb/notebooks/.ipynb_checkpoints/ukb_monai_demo-checkpoint.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+### https://github.com/batmanlab/ukb_api
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/ukb_monai_demo.ipynb
+- target_ref: b2c510defdbe505edffe86f31f3c03a572b791eb
+- target_commit_sha: b2c510defdbe505edffe86f31f3c03a572b791eb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/ukb-api/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-15-uk-biobank.md; https://github.com/batmanlab/ukb_api/blob/b2c510defdbe505edffe86f31f3c03a572b791eb/notebooks/ukb_monai_demo.ipynb; https://github.com/batmanlab/ukb_api; https://pypi.org/project/ukb-api/
+- public_metadata_excerpts: Additionally this repository also houses the notebook files related to this project showcasing exploratory data analysis done on multiple categories.The modules are currently designed to give access to the necessary data through the use of maximum of three-four lines of code.
+
+## Application Candidates
+- rank 1: app_id=16066; score=39.8; grade=unresolved; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; repo_path_similarity; title=Genetics of brain asymmetry and language-related disorders; reason=Evidence is too generic to assign an application.
+  - score_details: `{"application_notes_tokens": ["all", "done", "for", "how", "network", "related", "similar", "use", "who", "will"], "data_types": ["genotype", "hospital_episode_statistics", "imaging"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["related"], "repo_path_tokens": ["brain"]}`
+- rank 2: app_id=32341; score=39.47; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=UK Biobank Smoking-related Cancer Project; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["documentation", "for", "related", "smoking", "those", "use", "which", "who", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["related", "smoking"]}`
+- rank 3: app_id=51830; score=38.6; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; repo_path_similarity; title=Identifying genetic factors for brain ageing; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["different", "for", "help", "how", "related", "unique", "use", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics", "imaging"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["for"], "repo_path_tokens": ["brain"]}`
+- rank 4: app_id=1140414; score=37.91; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Longitude Prize on ALS: Leveraging artificial intelligence to discover and validate therapeutic targets for ALS; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["access", "but", "designed", "for", "help", "how", "its", "large", "limited", "provide", "related", "relevant", "three", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics", "imaging"], "evidence_class": "C", "institution_tokens": ["works"], "readme_title_tokens": ["for", "leveraging"]}`
+- rank 5: app_id=177151; score=37.71; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Identification and comparison of plasma common and distinct metabolites for cardiovascular diseases and related lifestyles; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["currently", "for", "help", "knowledge", "leveraging", "provide", "related", "tool", "will"], "data_types": ["hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["control", "for"], "readme_title_tokens": ["for", "related"]}`
+- rank 6: app_id=1290541; score=37.67; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Comparative proteogenomics of neurodegenerative disease for precision medicine; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["for", "help", "how", "large", "multiple", "related", "relevant", "use", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["for"]}`
+- rank 7: app_id=171264; score=37.67; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; repo_path_similarity; title=Cognitive traits and brain mechanisms across insomnia-related mental health complaints.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["different", "even", "for", "get", "help", "how", "part", "related", "three", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["related"], "repo_path_tokens": ["brain"]}`
+- rank 8: app_id=43384; score=37.29; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Identification of cardiac structure via MRI for 3D printing; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["access", "build", "but", "for", "images", "necessary", "part", "provide", "relevant", "those", "users", "where", "which", "will"], "data_types": ["hospital_episode_statistics", "imaging"], "evidence_class": "C", "institution_tokens": ["limited"], "readme_title_tokens": ["for"]}`
+- rank 9: app_id=77717; score=37.29; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Learning disease characteristics from multi-modal data for precision medicine; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["field", "for", "large", "main", "make", "multiple", "similar", "single", "smoking", "three", "unique"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["for"]}`
+- rank 10: app_id=37489; score=37.0; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Risk and protective factors for MRI markers of cerebral small vessel disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["access", "build", "but", "different", "for", "get", "help", "list", "related", "will"], "data_types": ["genotype", "imaging"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["for"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 16066
+- evidence_class: C
+- evidence_components: application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

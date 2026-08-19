@@ -1,0 +1,365 @@
+# lineage_samyak1729_ukbbprodromalpd
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: samyak1729/ukbbprodromalpd
+- repo_urls: https://github.com/samyak1729/ukbbprodromalpd
+- notice_ids: 2025-10-02-uk-biobank-3
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 9581ee8254d82ede6f4e49aa6a396017db21f0aa; 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/Medication.ipynb
+- target_ref: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- target_commit_sha: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/9581ee8254d82ede6f4e49aa6a396017db21f0aa/analyses/1_download_preprocess/Medication.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: make_figures/Fig7_TimetoDiagnosis.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/make_figures/Fig7_TimetoDiagnosis.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/Medication.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/analyses/1_download_preprocess/Medication.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/6_ProdromalSymptoms.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/analyses/1_download_preprocess/6_ProdromalSymptoms.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/6_ProdromalSymptoms.ipynb
+- target_ref: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- target_commit_sha: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/9581ee8254d82ede6f4e49aa6a396017db21f0aa/analyses/1_download_preprocess/6_ProdromalSymptoms.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/5_Accelerometer_ExtractFeatures.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/analyses/1_download_preprocess/5_Accelerometer_ExtractFeatures.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/5_Incidence_Prevalence/PrevalenceIncidence.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/analyses/5_Incidence_Prevalence/PrevalenceIncidence.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/1_download_preprocess/3_CurateDatasets.ipynb
+- target_ref: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- target_commit_sha: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/9581ee8254d82ede6f4e49aa6a396017db21f0aa/analyses/1_download_preprocess/3_CurateDatasets.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/additional_analyses/Berg2015formula.ipynb
+- target_ref: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- target_commit_sha: 09f3edc4e244a0b01bc997bcc8108a64301605d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/09f3edc4e244a0b01bc997bcc8108a64301605d0/analyses/additional_analyses/Berg2015formula.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+### https://github.com/samyak1729/ukbbprodromalpd
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: analyses/additional_analyses/Berg2015formula.ipynb
+- target_ref: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- target_commit_sha: 9581ee8254d82ede6f4e49aa6a396017db21f0aa
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-3.md; https://github.com/samyak1729/ukbbprodromalpd/blob/9581ee8254d82ede6f4e49aa6a396017db21f0aa/analyses/additional_analyses/Berg2015formula.ipynb; https://github.com/samyak1729/ukbbprodromalpd
+
+## Application Candidates
+- rank 1: app_id=176723; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=FOODGENICS: Food and Genetics in UK Cancer Incidence; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["incidence"]}`
+- rank 2: app_id=17806; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Motion-based diagnosis and characterisation of heart disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diagnosis"]}`
+- rank 3: app_id=18177; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-trait GWAS analyses in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+- rank 4: app_id=44290; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Prioritizing drug targets through genetic analyses; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+- rank 5: app_id=62709; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic variation in incidence and outcome of cancer and infectious disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["incidence"]}`
+- rank 6: app_id=65912; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Stratification-based genetic analyses of type 2 diabetes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+- rank 7: app_id=84368; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genotype-Phenotype analyses of metabolic and inflammatory diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+- rank 8: app_id=95506; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Defining a signature of prodromal Parkinson's disease in the UK Biobank cohort; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["prodromal"]}`
+- rank 9: app_id=95599; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Analyses of IL12B in complex genetic diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+- rank 10: app_id=11138; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genomic and evolutionary analyses of common disease in a large cohort; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["analyses"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 176723
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

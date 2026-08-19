@@ -1,0 +1,395 @@
+# lineage_laura-riedel_im
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: laura-riedel/IM
+- repo_urls: https://github.com/laura-riedel/IM
+- notice_ids: 2026-03-23-uk-biobank-3
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 7c61e3b44a59559cc37282409905bc16365965fa; b3353463acbfc4d836bcb88bd8c44ccf5ead4829; 2617d291b4e3cb7212416684c7c22389fbb398f0; ff6460175fb74d01a3f789480296c0b2df79d803; c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9; f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357; 27b68640e2683b75251890d17ae102f1479a9ce2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/ICA25/LearningRates1DCNN/10e-4/data_info/overview.csv
+- target_ref: 7c61e3b44a59559cc37282409905bc16365965fa
+- target_commit_sha: 7c61e3b44a59559cc37282409905bc16365965fa
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/7c61e3b44a59559cc37282409905bc16365965fa/tracking/ICA25/LearningRates1DCNN/10e-4/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ica_locations.csv
+- target_ref: b3353463acbfc4d836bcb88bd8c44ccf5ead4829
+- target_commit_sha: b3353463acbfc4d836bcb88bd8c44ccf5ead4829
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/b3353463acbfc4d836bcb88bd8c44ccf5ead4829/data/ica_locations.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/ICA25/TimeTest/gpu/data_info/overview.csv
+- target_ref: 2617d291b4e3cb7212416684c7c22389fbb398f0
+- target_commit_sha: 2617d291b4e3cb7212416684c7c22389fbb398f0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/2617d291b4e3cb7212416684c7c22389fbb398f0/tracking/ICA25/TimeTest/gpu/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/ICA25/TimeTest/cpu/data_info/overview.csv
+- target_ref: 2617d291b4e3cb7212416684c7c22389fbb398f0
+- target_commit_sha: 2617d291b4e3cb7212416684c7c22389fbb398f0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/2617d291b4e3cb7212416684c7c22389fbb398f0/tracking/ICA25/TimeTest/cpu/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/data_predictions_overview_IM.csv
+- target_ref: ff6460175fb74d01a3f789480296c0b2df79d803
+- target_commit_sha: ff6460175fb74d01a3f789480296c0b2df79d803
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/ff6460175fb74d01a3f789480296c0b2df79d803/data/data_predictions_overview_IM.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/ICA25/KernelSize1DCNN/10/data_info/overview.csv
+- target_ref: c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9
+- target_commit_sha: c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9/tracking/ICA25/KernelSize1DCNN/10/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/FinalModels/ICA25_gc/data_info/overview.csv
+- target_ref: f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357
+- target_commit_sha: f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357/tracking/FinalModels/ICA25_gc/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/FinalModels/ICA100_gc/data_info/overview.csv
+- target_ref: f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357
+- target_commit_sha: f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/f3be7dbe0f771aa9ec7aa51d06bfe8e4a24b0357/tracking/FinalModels/ICA100_gc/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/reproducibility/1/data_info/overview.csv
+- target_ref: 27b68640e2683b75251890d17ae102f1479a9ce2
+- target_commit_sha: 27b68640e2683b75251890d17ae102f1479a9ce2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/27b68640e2683b75251890d17ae102f1479a9ce2/tracking/reproducibility/1/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/reproducibility/2/data_info/overview.csv
+- target_ref: 27b68640e2683b75251890d17ae102f1479a9ce2
+- target_commit_sha: 27b68640e2683b75251890d17ae102f1479a9ce2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/27b68640e2683b75251890d17ae102f1479a9ce2/tracking/reproducibility/2/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+### https://github.com/laura-riedel/IM
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: tracking/ICA25/KernelSize1DCNN/3/data_info/overview.csv
+- target_ref: c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9
+- target_commit_sha: c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-23-uk-biobank-3.md; https://github.com/laura-riedel/IM/blob/c2461c7d94f3b7f02b4e38c5ed49f9a6a20332b9/tracking/ICA25/KernelSize1DCNN/3/data_info/overview.csv; https://github.com/laura-riedel/IM
+
+## Application Candidates
+- rank 1: app_id=100773; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Generative brain models in health and disease; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 2: app_id=1064514; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Explanatory epidemiological models from genotype to phenotype; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 3: app_id=31224; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Explanatory epidemiological models from genotype to phenotype; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 4: app_id=41664; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Machine learning from complex and genetic data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["learning"]}`
+- rank 5: app_id=54124; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Learning models for predicting lab values from genetic data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["learning", "models"]}`
+- rank 6: app_id=308132; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Transferability of Statistical and Machine Learning Models in Brain Imaging Genetic Association; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["learning", "models"]}`
+- rank 7: app_id=50658; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-modal machine learning risk models for cardiovascular disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["learning", "models"]}`
+- rank 8: app_id=14762; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Mortality Prediction through Machine Learning; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["learning"]}`
+- rank 9: app_id=21942; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Integrated models of complex traits in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 10: app_id=31269; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genomic feature prediction models; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 100773
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

@@ -1,0 +1,365 @@
+# lineage_chengluomilk_metabolomicscommondiseases
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: chengluomilk/MetabolomicsCommonDiseases
+- repo_urls: https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- notice_ids: 2025-10-02-uk-biobank-2; 2025-10-02-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 1_preparation/1_collect_logh_and_fit_coxph.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-2.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/1_preparation/1_collect_logh_and_fit_coxph.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplFigure_APOE4_Dementia_2_fit_coxph.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-2.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplFigure_APOE4_Dementia_2_fit_coxph.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplFigure_SHAP_4_Individuals.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-2.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplFigure_SHAP_4_Individuals.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplTable_CorrelationMatrix_NMRPANEL.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-2.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplTable_CorrelationMatrix_NMRPANEL.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplFigure_SHAP_3_Areas.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank-2.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplFigure_SHAP_3_Areas.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: main/1_preparation/1_collect_logh_and_fit_coxph.ipynb
+- target_ref: 
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/main/1_preparation/1_collect_logh_and_fit_coxph.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: main/2_analysis/SupplFigure_APOE4_Dementia_2_fit_coxph.ipynb
+- target_ref: 
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/main/2_analysis/SupplFigure_APOE4_Dementia_2_fit_coxph.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: main/2_analysis/SupplFigure_SHAP_4_Individuals.ipynb
+- target_ref: 
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/main/2_analysis/SupplFigure_SHAP_4_Individuals.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplTable_CorrelationMatrix_NMRPANEL.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplTable_CorrelationMatrix_NMRPANEL.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+### https://github.com/chengluomilk/MetabolomicsCommonDiseases
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 2_analysis/SupplFigure_SHAP_3_Areas.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-02-uk-biobank.md; https://github.com/chengluomilk/MetabolomicsCommonDiseases/blob/main/2_analysis/SupplFigure_SHAP_3_Areas.ipynb; https://github.com/chengluomilk/MetabolomicsCommonDiseases
+
+## Application Candidates
+- rank 1: app_id=197617; score=11.2; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Common and rare genetic variations in autoimmune diseases; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["common", "diseases"]}`
+- rank 2: app_id=103608; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Determinants of eye diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+- rank 3: app_id=107083; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep phenotyping for common and rare diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "metabolomics"], "evidence_class": "C", "repo_path_tokens": ["common", "diseases"]}`
+- rank 4: app_id=109607; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Assessment and prediction of early neurodegenerative diseases and dementia; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["dementia", "diseases"]}`
+- rank 5: app_id=181082; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Sarcopenia and the Risk of Incident Dementia; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["dementia"]}`
+- rank 6: app_id=19416; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=A genome-wide and Pheno-wide association study of common diseases on 900,000 individuals from US and UK.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["common", "diseases", "individuals"]}`
+- rank 7: app_id=33975; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Risk Stratification in Dementia; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["dementia"]}`
+- rank 8: app_id=34684; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multimorbidity and dementia: an observational cohort study using the UK Biobank.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["dementia"]}`
+- rank 9: app_id=40055; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Dementia risk in South Asians: data from the UK; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["dementia"]}`
+- rank 10: app_id=53639; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetics of the comorbidities of cardiometabolic diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 197617
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

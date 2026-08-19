@@ -1,0 +1,1415 @@
+# lineage_smiles2011hyc_biomarkers
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: smiles2011hyc/biomarkers
+- repo_urls: https://github.com/smiles2011hyc/biomarkers
+- notice_ids: 2025-08-22-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Alanine_aminotransferase.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Alanine_aminotransferase.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Albumin.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Albumin.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Alkaline_phosphatase.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Alkaline_phosphatase.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Apolipoprotein_A.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Apolipoprotein_A.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Apolipoprotein_B.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Apolipoprotein_B.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Apolipoprotein_B_adjstatins.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Apolipoprotein_B_adjstatins.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Aspartate_aminotransferase.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Aspartate_aminotransferase.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_AST_ALT_ratio.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_AST_ALT_ratio.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_C_reactive_protein.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_C_reactive_protein.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Calcium.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Calcium.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Cholesterol.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Cholesterol.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Cholesterol_adjstatins.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Cholesterol_adjstatins.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Creatinine.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Creatinine.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Creatinine_in_urine.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Creatinine_in_urine.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Cystatin_C.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Cystatin_C.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Direct_bilirubin.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Direct_bilirubin.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_eGFR.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_eGFR.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Fasting_glucose.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Fasting_glucose.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Gamma_glutamyltransferase.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Gamma_glutamyltransferase.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Glucose.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Glucose.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Glycated_haemoglobin_HbA1c.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Glycated_haemoglobin_HbA1c.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_HbA1c.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_HbA1c.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_HDL.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_HDL.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_HDL_cholesterol.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_HDL_cholesterol.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_IGF_1.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_IGF_1.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_LDL.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_LDL.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_LDL_adjstatins.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_LDL_adjstatins.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_LDL_direct.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_LDL_direct.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_LDL_direct_adjstatins.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_LDL_direct_adjstatins.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Lipoprotein_A.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Lipoprotein_A.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Microalbumin_in_urine.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Microalbumin_in_urine.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Non_albumin_protein.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Non_albumin_protein.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Oestradiol.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Oestradiol.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Phosphate.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Phosphate.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Potassium_in_urine.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Potassium_in_urine.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Rheumatoid_factor.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Rheumatoid_factor.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_SHBG.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_SHBG.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Sodium_in_urine.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Sodium_in_urine.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Testosterone.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Testosterone.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Total_bilirubin.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Total_bilirubin.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Total_protein.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Total_protein.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Triglycerides.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Triglycerides.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Urate.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Urate.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Urea.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Urea.hh; https://github.com/smiles2011hyc/biomarkers
+
+### https://github.com/smiles2011hyc/biomarkers
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: clumping/clumped/GLOBAL_Vitamin_D.hh
+- target_ref: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- target_commit_sha: 1c0da07a271784cdcb890e5a7e4a97f03547e82b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-22-uk-biobank.md; https://github.com/smiles2011hyc/biomarkers/blob/1c0da07a271784cdcb890e5a7e4a97f03547e82b/clumping/clumped/GLOBAL_Vitamin_D.hh; https://github.com/smiles2011hyc/biomarkers
+
+## Application Candidates
+- rank 1: app_id=181095; score=12.0; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Exploring Parkinson's Disease Biomarkers Through UK Biobank Proteomics; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["biomarkers", "proteomics"]}`
+- rank 2: app_id=100584; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Lipoprotein(a) and Cardiovascular Disease Risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["lipoprotein"]}`
+- rank 3: app_id=10214; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Vitamin D, genetics, and the risk of schizophrenia; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["vitamin"]}`
+- rank 4: app_id=90143; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=USING GENETICS, PROTEOMICS AND METABOLOMICS IN THE STUDY OF CARDIOMETABOLIC DISEASE; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["proteomics"]}`
+- rank 5: app_id=69067; score=10.4; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Chronic pain, C-reactive protein, Vitamin D, psychosocial & lifestyle factors and medical comorbidities - a study using UK Biobank data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["protein", "reactive", "vitamin"]}`
+- rank 6: app_id=1146999; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Blood-based biomarkers, proteomics and genetics to predict and understand hematologic malignancies in UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["biomarkers", "proteomics"]}`
+- rank 7: app_id=477103; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Identification of predictive risk Biomarkers for Chronic Non-communicable disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["biomarkers", "non"]}`
+- rank 8: app_id=491942; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Identification and Validation of  Biomarkers for Nonalcoholic Steatohepatitis  Using Proteomics; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["biomarkers", "proteomics"]}`
+- rank 9: app_id=531727; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Identification of robust protein biomarkers for early cancer detection; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "proteomics"], "evidence_class": "C", "repo_path_tokens": ["biomarkers", "protein"]}`
+- rank 10: app_id=62283; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Assessment of vitamin D and calcium on the risk of sarcoidosis by Mendelian Randomization approach; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["calcium", "vitamin"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 181095
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

@@ -1,0 +1,665 @@
+# lineage_mariaratnasamy_ukb_bmi
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: mariaratnasamy/ukb_bmi
+- repo_urls: https://github.com/mariaratnasamy/ukb_bmi
+- notice_ids: 2025-12-10-uk-biobank-2
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: b69dfa08556e82c70734b251e3669b9ecd8e18d5; 6f440e451a92e9db350a5e86dfc55446c011c697; 4750979c4d911e2216bffbf3ac9d947a532ccb3a; d7342157a31cf32e395be0522febe68da2327fdb; 35f15e453db515a78b456e8bbb6fc4a62e5e703a; 693ad41276ef5f9395dfe58f64c1a6778fc2bc9b; 6e0e9621ad614537f31899f9932942354bb70414; 34b2309bb2f42c8dcdc2c25bdb18bf866e98f7ee; 91d62e56382ba4ab89e8af1b2564b74f95decfae; fdee2d048cbe4fbe2c79ef3472f6c12efb1435c6; 3793d491edc1735d4fee60c566521bc203237664; 78fc8ea58b62a16bbe46388a0a10362a936f583c; 8f267ffc72d80dfeb4ec7948c279ad0c475b66c4; 9ec2b8473191511c36189245ccf5a4c328c12cfb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 1_parse_data/annotate_vcf/slurm/files/13_smap.txt
+- target_ref: b69dfa08556e82c70734b251e3669b9ecd8e18d5
+- target_commit_sha: b69dfa08556e82c70734b251e3669b9ecd8e18d5
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/b69dfa08556e82c70734b251e3669b9ecd8e18d5/1_parse_data/annotate_vcf/slurm/files/13_smap.txt; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_download/ukb_vcf/src/ukbhelpers/ukb48799.enc_ukb
+- target_ref: 6f440e451a92e9db350a5e86dfc55446c011c697
+- target_commit_sha: 6f440e451a92e9db350a5e86dfc55446c011c697
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/6f440e451a92e9db350a5e86dfc55446c011c697/0_data_download/ukb_vcf/src/ukbhelpers/ukb48799.enc_ukb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_download/ukb_vcf/src/ukbhelpers/encoding.ukb
+- target_ref: 6f440e451a92e9db350a5e86dfc55446c011c697
+- target_commit_sha: 6f440e451a92e9db350a5e86dfc55446c011c697
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/6f440e451a92e9db350a5e86dfc55446c011c697/0_data_download/ukb_vcf/src/ukbhelpers/encoding.ukb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: 4750979c4d911e2216bffbf3ac9d947a532ccb3a
+- target_commit_sha: 4750979c4d911e2216bffbf3ac9d947a532ccb3a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/4750979c4d911e2216bffbf3ac9d947a532ccb3a/4_characterization/white_british/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/post_menopause/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: d7342157a31cf32e395be0522febe68da2327fdb
+- target_commit_sha: d7342157a31cf32e395be0522febe68da2327fdb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/d7342157a31cf32e395be0522febe68da2327fdb/4_characterization/post_menopause/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/pre_menopause/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: d7342157a31cf32e395be0522febe68da2327fdb
+- target_commit_sha: d7342157a31cf32e395be0522febe68da2327fdb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/d7342157a31cf32e395be0522febe68da2327fdb/4_characterization/pre_menopause/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/protective/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: d7342157a31cf32e395be0522febe68da2327fdb
+- target_commit_sha: d7342157a31cf32e395be0522febe68da2327fdb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/d7342157a31cf32e395be0522febe68da2327fdb/4_characterization/protective/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british_female/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: d7342157a31cf32e395be0522febe68da2327fdb
+- target_commit_sha: d7342157a31cf32e395be0522febe68da2327fdb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/d7342157a31cf32e395be0522febe68da2327fdb/4_characterization/white_british_female/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british_male/notebooks/5_overlap_lifestyle_regressed.ipynb
+- target_ref: d7342157a31cf32e395be0522febe68da2327fdb
+- target_commit_sha: d7342157a31cf32e395be0522febe68da2327fdb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/d7342157a31cf32e395be0522febe68da2327fdb/4_characterization/white_british_male/notebooks/5_overlap_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british/notebooks/5_overlapped_lifestyle_regressed.ipynb
+- target_ref: 35f15e453db515a78b456e8bbb6fc4a62e5e703a
+- target_commit_sha: 35f15e453db515a78b456e8bbb6fc4a62e5e703a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/35f15e453db515a78b456e8bbb6fc4a62e5e703a/4_characterization/white_british/notebooks/5_overlapped_lifestyle_regressed.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_preparation_and_download/genotype/notebooks/genotype_burden.ipynb
+- target_ref: 693ad41276ef5f9395dfe58f64c1a6778fc2bc9b
+- target_commit_sha: 693ad41276ef5f9395dfe58f64c1a6778fc2bc9b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/693ad41276ef5f9395dfe58f64c1a6778fc2bc9b/0_data_preparation_and_download/genotype/notebooks/genotype_burden.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/obesity_related_diseases/notebooks/3_check_intersections_with_obesity_risk.ipynb
+- target_ref: 6e0e9621ad614537f31899f9932942354bb70414
+- target_commit_sha: 6e0e9621ad614537f31899f9932942354bb70414
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/6e0e9621ad614537f31899f9932942354bb70414/4_characterization/obesity_related_diseases/notebooks/3_check_intersections_with_obesity_risk.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british/notebooks/9_combo_in_bmi_deciles.ipynb
+- target_ref: 34b2309bb2f42c8dcdc2c25bdb18bf866e98f7ee
+- target_commit_sha: 34b2309bb2f42c8dcdc2c25bdb18bf866e98f7ee
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/34b2309bb2f42c8dcdc2c25bdb18bf866e98f7ee/4_characterization/white_british/notebooks/9_combo_in_bmi_deciles.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_preparation_and_download/phenotype/notebooks/bmi_plot.ipynb
+- target_ref: 91d62e56382ba4ab89e8af1b2564b74f95decfae
+- target_commit_sha: 91d62e56382ba4ab89e8af1b2564b74f95decfae
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/91d62e56382ba4ab89e8af1b2564b74f95decfae/0_data_preparation_and_download/phenotype/notebooks/bmi_plot.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 4_characterization/white_british/notebooks/0_effect_sizes_comparison.ipynb
+- target_ref: fdee2d048cbe4fbe2c79ef3472f6c12efb1435c6
+- target_commit_sha: fdee2d048cbe4fbe2c79ef3472f6c12efb1435c6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/fdee2d048cbe4fbe2c79ef3472f6c12efb1435c6/4_characterization/white_british/notebooks/0_effect_sizes_comparison.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_preparation_and_download/phenotype/src/dnanexus_notebooks/BMI.ipynb
+- target_ref: 3793d491edc1735d4fee60c566521bc203237664
+- target_commit_sha: 3793d491edc1735d4fee60c566521bc203237664
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/3793d491edc1735d4fee60c566521bc203237664/0_data_preparation_and_download/phenotype/src/dnanexus_notebooks/BMI.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_preparation_and_download/icd_codes/src/dnanexus_notebooks/ICD10.ipynb
+- target_ref: 78fc8ea58b62a16bbe46388a0a10362a936f583c
+- target_commit_sha: 78fc8ea58b62a16bbe46388a0a10362a936f583c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/78fc8ea58b62a16bbe46388a0a10362a936f583c/0_data_preparation_and_download/icd_codes/src/dnanexus_notebooks/ICD10.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_preparation_and_download/lifestyle_factors/src/dnanexus_notebooks/Lifestyle_factors.ipynb
+- target_ref: 8f267ffc72d80dfeb4ec7948c279ad0c475b66c4
+- target_commit_sha: 8f267ffc72d80dfeb4ec7948c279ad0c475b66c4
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/8f267ffc72d80dfeb4ec7948c279ad0c475b66c4/0_data_preparation_and_download/lifestyle_factors/src/dnanexus_notebooks/Lifestyle_factors.ipynb; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_download/ukb_field_info/src/0_download_fields_info.py
+- target_ref: 9ec2b8473191511c36189245ccf5a4c328c12cfb
+- target_commit_sha: 9ec2b8473191511c36189245ccf5a4c328c12cfb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/9ec2b8473191511c36189245ccf5a4c328c12cfb/0_data_download/ukb_field_info/src/0_download_fields_info.py; https://github.com/mariaratnasamy/ukb_bmi
+
+### https://github.com/mariaratnasamy/ukb_bmi
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 0_data_download/ukb_field/src/0_download_fields_info.py
+- target_ref: 6f440e451a92e9db350a5e86dfc55446c011c697
+- target_commit_sha: 6f440e451a92e9db350a5e86dfc55446c011c697
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-10-uk-biobank-2.md; https://github.com/mariaratnasamy/ukb_bmi/blob/6f440e451a92e9db350a5e86dfc55446c011c697/0_data_download/ukb_field/src/0_download_fields_info.py; https://github.com/mariaratnasamy/ukb_bmi
+
+## Application Candidates
+- rank 1: app_id=47618; score=13.33; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Lifestyle and genetic factors and bladder cancer risk; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["factors", "lifestyle"]}`
+- rank 2: app_id=40415; score=12.8; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Burden of variants in obesity-related genes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden", "obesity", "related"]}`
+- rank 3: app_id=1038754; score=12.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exploring Risk and Protective Factors for Ocular Diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "factors", "protective"]}`
+- rank 4: app_id=15697; score=12.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Lifestyle risk factors in association with dementia risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["factors", "lifestyle"]}`
+- rank 5: app_id=60239; score=12.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=To investigate the risk factors in the circadian rhythm-related diseases using the UK biobank data.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "ehr"], "evidence_class": "C", "repo_path_tokens": ["diseases", "factors", "related"]}`
+- rank 6: app_id=69972; score=12.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Risk and prognosis of estrogen-related diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "related"]}`
+- rank 7: app_id=752310; score=12.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The Impact of Lifestyle and Environmental Factors on Ocular Diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "factors", "lifestyle"]}`
+- rank 8: app_id=254674; score=11.56; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Effect of lifestyle, non-lifestyle factors, and genetic drive on the incidence and mortality of digestive diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "effect", "factors", "lifestyle"]}`
+- rank 9: app_id=68400; score=11.56; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Towards a mechanistic understanding of lifestyle factors in common age-related diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["diseases", "factors", "lifestyle", "related"]}`
+- rank 10: app_id=10074; score=11.43; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Investigation of the genetic burden of eczema and the genetic overlap between eczema and related conditions; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden", "overlap", "related"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 47618
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

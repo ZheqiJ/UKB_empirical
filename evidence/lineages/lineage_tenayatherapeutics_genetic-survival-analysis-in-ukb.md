@@ -1,0 +1,600 @@
+# lineage_tenayatherapeutics_genetic-survival-analysis-in-ukb
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_urls: https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- notice_ids: 2025-10-15-uk-biobank-8; 2025-10-20-uk-biobank
+- final_match_grade: ambiguous
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6; f9212dc1690f9b2226b98c3bdc2bdcdb7fd20828
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: Combining genetic proxies of drug targets and time-to-event analyses from longitudinal observational data to identify target patient populations.; Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease.
+- doi: 10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x
+- pubmed_id: 40335923; 40841801
+- paper_authors: Zhang L, Kulkarni P, Farshidfar F, Tingley W, Hoey T, Wang W, Priest JR, Figarska SM.; Hao X, Wang Z, Feng Y, Li M, Hao C, Liang Y, Zuo C, Yang X, Ma D, Wang Y, Li S, Qi S, Sun Y, Mao C, Sun S, Xu Y, Shi C.
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Survival_UKB_scripts/Dosage_Extraction_UKB.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Survival_UKB_scripts/Dosage_Extraction_UKB.ipynb; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Survival_UKB_scripts/Surv_Paper_Pheno.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Survival_UKB_scripts/Surv_Paper_Pheno.ipynb; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_CV_outcome.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_CV_outcome.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_dosage.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_dosage.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_pheno_with_AF_rehospitalization.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_pheno_with_AF_rehospitalization.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_dosage.txt
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_dosage.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_before.txt
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_before.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_CV_outcome
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-15-uk-biobank-8.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_CV_outcome; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Survival_UKB_scripts/Dosage_Extraction.ipynb
+- target_ref: f9212dc1690f9b2226b98c3bdc2bdcdb7fd20828
+- target_commit_sha: f9212dc1690f9b2226b98c3bdc2bdcdb7fd20828
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/f9212dc1690f9b2226b98c3bdc2bdcdb7fd20828/Survival_UKB_scripts/Dosage_Extraction.ipynb; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Survival_UKB_scripts/Dosage_Extraction_UKB.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Survival_UKB_scripts/Dosage_Extraction_UKB.ipynb; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Survival_UKB_scripts/Surv_Paper_Pheno.ipynb
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Survival_UKB_scripts/Surv_Paper_Pheno.ipynb; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_CV_outcome.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_CV_outcome.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_dosage.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_dosage.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_pheno_with_AF_rehospitalization.txt
+- target_ref: main
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/main/Example/example_pheno_with_AF_rehospitalization.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_dosage.txt
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_dosage.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_before.txt
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_before.txt; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+### https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: Example/example_CV_outcome
+- target_ref: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- target_commit_sha: 57d4098d69bab490fb8e88a9ceef3d28793316f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-20-uk-biobank.md; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB/blob/57d4098d69bab490fb8e88a9ceef3d28793316f6/Example/example_CV_outcome; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://europepmc.org/article/MED/40335923; https://europepmc.org/article/MED/40841801
+- public_metadata_excerpts: DOI 10.1186/s12872-025-04753-1 | PMID 40335923 | DOI 10.1038/s41531-025-01104-x | PMID 40841801
+
+## Application Candidates
+- rank 1: app_id=56859; score=80.22; grade=ambiguous; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Understanding the genetics of complex diseases/traits to identify potential drug targets and patient stratification markers; reason=Two or more candidate applications have similar evidence scores.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "between", "drug", "drugs", "identify", "patient", "targets"], "application_notes_tokens": ["analyses", "between", "drug", "drugs", "identify", "patient", "targets"], "application_title_topic_tokens": ["drug", "identify", "patient", "targets"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Lin Li", "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["drug", "identify", "patient", "targets"]}`
+- rank 2: app_id=104980; score=77.89; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Using UK Biobank data to support discovery research and drug development at Chugai; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "association", "between", "drug", "identify", "longitudinal", "patient", "populations", "target", "targets"], "application_notes_tokens": ["analyses", "association", "between", "drug", "identify", "longitudinal", "patient", "populations", "target", "targets"], "application_title_topic_tokens": ["drug"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "normalized_publication_title": ["Combining genetic proxies of drug targets and time-to-event analyses from longitudinal observational data to identify target patient populations."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["drug"]}`
+- rank 3: app_id=44290; score=71.7; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_identifier; readme_title_topic; title=Prioritizing drug targets through genetic analyses; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "drug", "drugs", "identify", "patient", "populations", "targets"], "application_notes_tokens": ["analyses", "drug", "drugs", "identify", "patient", "populations"], "application_title_topic_tokens": ["analyses", "drug", "targets"], "data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["analyses", "drug", "targets"]}`
+- rank 4: app_id=57266; score=71.34; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=A Genome-Wide Association Study of Tinnitus to Identify Genes of Interest and Potential Therapeutic Targets; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["association", "between", "drug", "identify", "targets"], "application_notes_tokens": ["between", "drug", "identify", "targets"], "application_title_topic_tokens": ["association", "identify", "targets"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Jian Zuo", "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["association", "identify", "targets"]}`
+- rank 5: app_id=106223; score=71.11; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=An integrated biopsychosocial approach to identify shared mechanisms underlying major psychiatric and neurodegenerative disorders; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "anxiety", "association", "between", "disorder", "drug", "identify", "parkinson", "targets"], "application_notes_tokens": ["analyses", "anxiety", "association", "between", "disorder", "drug", "identify", "parkinson", "targets"], "application_title_topic_tokens": ["identify"], "data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "B", "normalized_publication_title": ["Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["identify"]}`
+- rank 6: app_id=16577; score=69.78; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Investigations of the genetic overlap between internalising psychiatric disorders and co-morbid physical health disorders.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["anxiety", "association", "between", "disorder", "drugs", "identify", "patient", "target"], "application_notes_tokens": ["anxiety", "association", "between", "disorder", "drugs", "identify", "patient", "target"], "application_title_topic_tokens": ["between"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "normalized_publication_title": ["Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["between"]}`
+- rank 7: app_id=60434; score=69.03; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; title=Machine learning prediction of common disease risks and disease network construction using multi-source data; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["association", "between", "identify", "incident", "patient", "populations", "target", "time"], "application_notes_tokens": ["association", "between", "identify", "incident", "patient", "populations", "target", "time"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Lu Zhang", "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}}`
+- rank 8: app_id=903785; score=68.11; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=The genetic architecture and multi-omics characteristics of the association between precision nutrition interventions and brain disorders; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["anxiety", "association", "between", "disorder", "identify", "parkinson", "populations"], "application_notes_tokens": ["anxiety", "between", "disorder", "identify", "parkinson", "populations"], "application_title_topic_tokens": ["association", "between"], "data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "B", "normalized_publication_title": ["Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["association", "between"]}`
+- rank 9: app_id=1012028; score=67.66; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; title=Integrating Multimodal Exposures for Risk Stratification: Identifying Key Modifiable Determinants and Developing Predictive Models in Neuropsychiatric Disorders; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["anxiety", "association", "combining", "disorder", "event", "identify", "incident", "parkinson", "time"], "application_notes_tokens": ["anxiety", "association", "combining", "disorder", "event", "identify", "incident", "parkinson", "time"], "data_types": ["genotype", "phenotype"], "evidence_class": "B", "normalized_publication_title": ["Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}}`
+- rank 10: app_id=692259; score=67.24; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Exploring the association between neuropsychiatric diseases and cardiovascular diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["anxiety", "association", "between", "disorder", "parkinson", "populations"], "application_notes_tokens": ["anxiety", "between", "disorder", "parkinson", "populations"], "application_title_topic_tokens": ["association", "between"], "data_types": ["genotype"], "evidence_class": "B", "normalized_publication_title": ["Association between anxiety disorder, anxiolytic drugs, and risk of incident Parkinson's disease."], "paper_identifiers": {"doi": "10.1186/s12872-025-04753-1; 10.1038/s41531-025-01104-x", "pubmed_id": "40335923; 40841801"}, "readme_title_tokens": ["association", "between"]}`
+
+## Application Enrichment Audit
+- final_match_grade: ambiguous
+- candidate_app_id: 84103
+- evidence_class: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; A1_DIRECT_APP_ID
+- evidence_components: A2_DOI_UKB_CROSSWALK; A3_PMID_UKB_CROSSWALK; A4_EXACT_REPO_PUBLICATION_APPLICATION_CHAIN; exact_publication_identifier; public_metadata_seed; A1_DIRECT_APP_ID
+- crosswalk_pub_ids: 15421; 19709
+- crosswalk_app_ids: 104811; 84103
+- public_metadata_seed_rows: 1
+- public_metadata_seed_urls: https://link.springer.com/article/10.1186/s12872-025-04753-1; https://pubmed.ncbi.nlm.nih.gov/40335923/; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://doi.org/10.1186/s12872-025-04753-1
+- match_reason: Repository-linked DOI/PMID maps through UKB Schema 19/24 to multiple applications.
+
+## Public Metadata Seed Audit
+- seed_rows: 1
+- candidate_app_id: 84103
+- evidence_class: A1_DIRECT_APP_ID
+- evidence_components: public_metadata_seed; A1_DIRECT_APP_ID; direct_application_id
+- evidence_urls: https://link.springer.com/article/10.1186/s12872-025-04753-1; https://pubmed.ncbi.nlm.nih.gov/40335923/; https://github.com/tenayatherapeutics/Genetic-Survival-Analysis-in-UKB; https://doi.org/10.1186/s12872-025-04753-1
+- match_reason: Public metadata seed records a unique repository-publication-application evidence chain.

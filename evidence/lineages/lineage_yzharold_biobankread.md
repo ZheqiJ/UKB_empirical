@@ -1,0 +1,515 @@
+# lineage_yzharold_biobankread
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: yzharold/BiobankRead
+- repo_urls: https://github.com/yzharold/BiobankRead
+- notice_ids: 2025-07-18-ukbiobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 5093ff460740e1a998439a4d7287de3904798dc7; b6b919af62b41671957ec02d1cb883d6e81f9c0c; 9f9569d678f6951bbcd9275ca864f0965b867207; 32b4450c732fc6c8f566f089469dea5c7b4f1d31; 4b039b1f420006ce21e545170f1242dcb11e396b; d358b68ae7c68dfdd2c0f00a5a2b42edab29c30f; 316087423db1b9d070ebb75386c9bb804d4e5147; a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb; fd988508f364c44dd1ac9531607504409bd4298a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: CVD_10035.csv
+- target_ref: 5093ff460740e1a998439a4d7287de3904798dc7
+- target_commit_sha: 5093ff460740e1a998439a4d7287de3904798dc7
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/5093ff460740e1a998439a4d7287de3904798dc7/CVD_10035.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test.csv
+- target_ref: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- target_commit_sha: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/b6b919af62b41671957ec02d1cb883d6e81f9c0c/test.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test.csv
+- target_ref: 9f9569d678f6951bbcd9275ca864f0965b867207
+- target_commit_sha: 9f9569d678f6951bbcd9275ca864f0965b867207
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/9f9569d678f6951bbcd9275ca864f0965b867207/test.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test.csv
+- target_ref: 32b4450c732fc6c8f566f089469dea5c7b4f1d31
+- target_commit_sha: 32b4450c732fc6c8f566f089469dea5c7b4f1d31
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/32b4450c732fc6c8f566f089469dea5c7b4f1d31/test.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test.csv
+- target_ref: 4b039b1f420006ce21e545170f1242dcb11e396b
+- target_commit_sha: 4b039b1f420006ce21e545170f1242dcb11e396b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/4b039b1f420006ce21e545170f1242dcb11e396b/test.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test.csv
+- target_ref: d358b68ae7c68dfdd2c0f00a5a2b42edab29c30f
+- target_commit_sha: d358b68ae7c68dfdd2c0f00a5a2b42edab29c30f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/d358b68ae7c68dfdd2c0f00a5a2b42edab29c30f/test.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: test_hpc.csv
+- target_ref: 316087423db1b9d070ebb75386c9bb804d4e5147
+- target_commit_sha: 316087423db1b9d070ebb75386c9bb804d4e5147
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/316087423db1b9d070ebb75386c9bb804d4e5147/test_hpc.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnew.csv
+- target_ref: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- target_commit_sha: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/b6b919af62b41671957ec02d1cb883d6e81f9c0c/testnew.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewDEATH.csv
+- target_ref: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- target_commit_sha: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/b6b919af62b41671957ec02d1cb883d6e81f9c0c/testnewDEATH.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewVARpartial.csv
+- target_ref: a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb
+- target_commit_sha: a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb/testnewVARpartial.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewVARpartial_HES.csv
+- target_ref: fd988508f364c44dd1ac9531607504409bd4298a
+- target_commit_sha: fd988508f364c44dd1ac9531607504409bd4298a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/fd988508f364c44dd1ac9531607504409bd4298a/testnewVARpartial_HES.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewVARpartial_SR.csv
+- target_ref: fd988508f364c44dd1ac9531607504409bd4298a
+- target_commit_sha: fd988508f364c44dd1ac9531607504409bd4298a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/fd988508f364c44dd1ac9531607504409bd4298a/testnewVARpartial_SR.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewVARpartial_death.csv
+- target_ref: fd988508f364c44dd1ac9531607504409bd4298a
+- target_commit_sha: fd988508f364c44dd1ac9531607504409bd4298a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/fd988508f364c44dd1ac9531607504409bd4298a/testnewVARpartial_death.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testnewVARpartial_deaths.csv
+- target_ref: a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb
+- target_commit_sha: a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/a1307b9e70ed8bceda4c1cc2f4bd344645dab8fb/testnewVARpartial_deaths.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+### https://github.com/yzharold/BiobankRead
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: testorigDEATH.csv
+- target_ref: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- target_commit_sha: b6b919af62b41671957ec02d1cb883d6e81f9c0c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: pypi
+- package_metadata_urls: https://pypi.org/project/BiobankRead/
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/07/2025-07-18-ukbiobank.md; https://github.com/yzharold/BiobankRead/blob/b6b919af62b41671957ec02d1cb883d6e81f9c0c/testorigDEATH.csv; https://github.com/yzharold/BiobankRead; https://pypi.org/project/BiobankRead/
+
+## Application Candidates
+- rank 1: app_id=50071; score=41.2; grade=unresolved; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; title=Vegan, vegetarian and omnivore dietary patterns - their impact on the metabolic profiles, body composition and   cardiovascular health:  A nutri-genetic exploration; reason=Evidence is too generic to assign an application.
+  - score_details: `{"application_notes_tokens": ["ukbiobank"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "paper_author_to_application_pi": "Dr Deborah Schneider-Luftman"}`
+- rank 2: app_id=48008; score=24.53; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Hormone processing in health and disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["processing"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["processing"]}`
+- rank 3: app_id=85092; score=23.2; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Genetics, Fatty acids and Health Outcomes in the UKBiobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["ukbiobank"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["ukbiobank"]}`
+- rank 4: app_id=1057239; score=23.0; grade=candidate; evidence_class=C; components=commit_author_to_paper_author; data_type; institution_match; title=Integrative Multi-Cohort Cancer Risk Prediction Using UK Biobank and Complementary Prospective Cohorts; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["pre"]}`
+- rank 5: app_id=9174; score=22.4; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Genetic Exploration of PreEclampsia and Gestational Hypertension in UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["pre"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["pre"]}`
+- rank 6: app_id=28721; score=21.2; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Pre-eclampsia and cardiovascular risk: a case-control study of genes and cardiac function; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["pre"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["pre"]}`
+- rank 7: app_id=491285; score=21.2; grade=candidate; evidence_class=C; components=commit_author_to_paper_author; data_type; readme_title_topic; title=Identifying Novel Drug Targets Using Genetic Data from UKBiobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["ukbiobank"]}`
+- rank 8: app_id=61031; score=20.8; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; repo_path_similarity; title=Asthma-a test case for precision; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["unknown"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["test"]}`
+- rank 9: app_id=55681; score=20.67; grade=candidate; evidence_class=C; components=commit_author_to_paper_author; data_type; readme_title_topic; title=Analysis of variants with low minor allele frequency in the UKBiobank cohort; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["ukbiobank"]}`
+- rank 10: app_id=991561; score=20.65; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Multimodal Deep Phenotyping of Pre-Illness Profiles for Prediction and Subtyping of Critical Illness Outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["pre"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["pre"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 50071
+- evidence_class: C
+- evidence_components: application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

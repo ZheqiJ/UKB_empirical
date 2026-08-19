@@ -1,0 +1,313 @@
+# lineage_petergerlach1_gogogpcr
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: petergerlach1/gogoGPCR
+- repo_urls: https://github.com/petergerlach1/gogoGPCR
+- notice_ids: 2025-12-08-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: c9df069580c277fe60d2bf67c9532201f056b887; c2cb03d8ca76cd454688782f468867e170a7d798; 0b3457853125a88ecb11bc1763c63ea7c8879aab; a3ba973a555acb8d23d5594be1969a105e9f324b; daf3eb012558a373ff3e3534278c6be9786e8588; a06d7f313cba51625b28ef71e2e575180f5342f6; 173114a4ef37b99bca5010892053bbf904b43c22; 8113a4e453f6fe6958e58eaab0258606d3630ba2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/0_import_matrixtable.ipynb
+- target_ref: c9df069580c277fe60d2bf67c9532201f056b887
+- target_commit_sha: c9df069580c277fe60d2bf67c9532201f056b887
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/c9df069580c277fe60d2bf67c9532201f056b887/notebooks/0_import_matrixtable.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/0_burden_files.ipynb
+- target_ref: c2cb03d8ca76cd454688782f468867e170a7d798
+- target_commit_sha: c2cb03d8ca76cd454688782f468867e170a7d798
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/c2cb03d8ca76cd454688782f468867e170a7d798/notebooks/0_burden_files.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/1_burden_files.ipynb
+- target_ref: 0b3457853125a88ecb11bc1763c63ea7c8879aab
+- target_commit_sha: 0b3457853125a88ecb11bc1763c63ea7c8879aab
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/0b3457853125a88ecb11bc1763c63ea7c8879aab/notebooks/1_burden_files.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/withdrawn_samples.csv
+- target_ref: a3ba973a555acb8d23d5594be1969a105e9f324b
+- target_commit_sha: a3ba973a555acb8d23d5594be1969a105e9f324b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/a3ba973a555acb8d23d5594be1969a105e9f324b/data/withdrawn_samples.csv; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/04_fix_phesant_output.ipynb
+- target_ref: daf3eb012558a373ff3e3534278c6be9786e8588
+- target_commit_sha: daf3eb012558a373ff3e3534278c6be9786e8588
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/daf3eb012558a373ff3e3534278c6be9786e8588/notebooks/04_fix_phesant_output.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/02_covariates.ipynb
+- target_ref: a06d7f313cba51625b28ef71e2e575180f5342f6
+- target_commit_sha: a06d7f313cba51625b28ef71e2e575180f5342f6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/a06d7f313cba51625b28ef71e2e575180f5342f6/notebooks/02_covariates.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/01_sample_hard_filter.ipynb
+- target_ref: 173114a4ef37b99bca5010892053bbf904b43c22
+- target_commit_sha: 173114a4ef37b99bca5010892053bbf904b43c22
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/173114a4ef37b99bca5010892053bbf904b43c22/notebooks/01_sample_hard_filter.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+### https://github.com/petergerlach1/gogoGPCR
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/1_sample_hard_filter.ipynb
+- target_ref: 8113a4e453f6fe6958e58eaab0258606d3630ba2
+- target_commit_sha: 8113a4e453f6fe6958e58eaab0258606d3630ba2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank.md; https://github.com/petergerlach1/gogoGPCR/blob/8113a4e453f6fe6958e58eaab0258606d3630ba2/notebooks/1_sample_hard_filter.ipynb; https://github.com/petergerlach1/gogoGPCR
+
+## Application Candidates
+- rank 1: app_id=74629; score=11.2; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Gene burden and variant frequency analysis using UK Biobank samples; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden", "samples"]}`
+- rank 2: app_id=27960; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Population structure in the UK Biobank samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 3: app_id=28659; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Fine-scale ancestry in the UK Biobank samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 4: app_id=97117; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Impact of covariates on brain imaging biomarkers; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "covariates"], "evidence_class": "C", "repo_path_tokens": ["covariates"]}`
+- rank 5: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 6: app_id=40415; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Burden of variants in obesity-related genes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden"]}`
+- rank 7: app_id=228302; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The hidden population: Quantifying the burden of rare genetic diseases in the UK; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden"]}`
+- rank 8: app_id=24299; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=COPD follow up ? access to genotype and phenotype information and DNA samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 9: app_id=96168; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exploring the impact of mutational burden on molecular traits and cancer risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden"]}`
+- rank 10: app_id=10074; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Investigation of the genetic burden of eczema and the genetic overlap between eczema and related conditions; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["burden"]}`
+
+## Application Enrichment Audit
+- final_match_grade: confirmed
+- candidate_app_id: 55955
+- evidence_class: A2_DOI_UKB_CROSSWALK; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_components: data_type; repo_path_similarity; A2_DOI_UKB_CROSSWALK; exact_publication_identifier; public_metadata_seed; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- crosswalk_pub_ids: 11863
+- crosswalk_app_ids: 55955
+- public_metadata_seed_rows: 1
+- public_metadata_seed_urls: https://www.nature.com/articles/s42255-024-01061-4; https://pmc.ncbi.nlm.nih.gov/articles/PMC11272584/; https://github.com/HauserGroup/gogoGPCR; https://doi.org/10.1038/s42255-024-01061-4
+- match_reason: Unique repository-linked DOI/PMID maps through UKB Schema 19/24 to one application.
+
+## Public Metadata Seed Audit
+- seed_rows: 1
+- candidate_app_id: 55955
+- evidence_class: B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_components: public_metadata_seed; B1_AUTHOR_LAB_PROJECT_NAME_TOPIC_CONSISTENCY
+- evidence_urls: https://www.nature.com/articles/s42255-024-01061-4; https://pmc.ncbi.nlm.nih.gov/articles/PMC11272584/; https://github.com/HauserGroup/gogoGPCR; https://doi.org/10.1038/s42255-024-01061-4
+- match_reason: Public metadata seed records strong but non-deterministic repository-publication-application evidence.

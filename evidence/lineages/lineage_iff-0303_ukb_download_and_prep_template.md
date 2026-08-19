@@ -1,0 +1,215 @@
+# lineage_iff-0303_ukb_download_and_prep_template
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: IFF-0303/ukb_download_and_prep_template
+- repo_urls: https://github.com/IFF-0303/ukb_download_and_prep_template
+- notice_ids: 2025-11-04-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 846d7af61368e112d6a9b929e777a3f53094f168; d578363811a5fa1f9b8227857b5aad36835a0e19; 9842d21710c6bed01b59c0e9822f51cce4e33124; 17b001a98ff621d5609a7974095fdcbaec221773
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/IFF-0303/ukb_download_and_prep_template
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: README.md
+- target_ref: 846d7af61368e112d6a9b929e777a3f53094f168
+- target_commit_sha: 846d7af61368e112d6a9b929e777a3f53094f168
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/846d7af61368e112d6a9b929e777a3f53094f168/README.md; https://github.com/IFF-0303/ukb_download_and_prep_template
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/846d7af61368e112d6a9b929e777a3f53094f168/README.md; https://github.com/IFF-0303/ukb_download_and_prep_template
+
+### https://github.com/IFF-0303/ukb_download_and_prep_template
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/core.rst
+- target_ref: d578363811a5fa1f9b8227857b5aad36835a0e19
+- target_commit_sha: d578363811a5fa1f9b8227857b5aad36835a0e19
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/d578363811a5fa1f9b8227857b5aad36835a0e19/docs/core.rst; https://github.com/IFF-0303/ukb_download_and_prep_template
+
+### https://github.com/IFF-0303/ukb_download_and_prep_template
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/relabel.rst
+- target_ref: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- target_commit_sha: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/relabel.rst; https://github.com/IFF-0303/ukb_download_and_prep_template
+
+### https://github.com/IFF-0303/ukb_download_and_prep_template
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/_build/html/_sources/relabel.rst.txt
+- target_ref: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- target_commit_sha: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/_build/html/_sources/relabel.rst.txt; https://github.com/IFF-0303/ukb_download_and_prep_template
+
+### https://github.com/IFF-0303/ukb_download_and_prep_template
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/_build/html/_sources/core.rst.txt
+- target_ref: 17b001a98ff621d5609a7974095fdcbaec221773
+- target_commit_sha: 17b001a98ff621d5609a7974095fdcbaec221773
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/IFF-0303/ukb_download_and_prep_template/blob/17b001a98ff621d5609a7974095fdcbaec221773/docs/_build/html/_sources/core.rst.txt; https://github.com/IFF-0303/ukb_download_and_prep_template
+
+## Application Candidates
+- rank 1: app_id=21988; score=9.6; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 2: app_id=106460; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=AT1R as the core bond between AML and CVD; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["core"]}`
+- rank 3: app_id=53775; score=8.73; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Leveraging the power of Big Data to build more accurate models of neuro-anatomical and genetic variation: applications in neurodevelopmental research; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["build"]}`
+- rank 4: app_id=1000805; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Using big data to investigate the non-coding genome and its role in human disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 5: app_id=1001139; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Development and validation of a risk prediction model for heart failure hospitalization at 1-, 3-, and 5-year horizons using routinely collected data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 6: app_id=1001461; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Characterization of cross-trait genetic and environmental architectures using rare and common variants; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 7: app_id=100235; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Comparing variant distributions and Polygenic Risk Score between the UK Biobank and South Asian cohorts; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 8: app_id=100242; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Investigating genetic causal correlations of food allergy with human common diseases in UK Biobank cohort; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 9: app_id=1002450; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Development and External Validation of the DRABackground: HeterozygouGON Risk Score: A Novel 10-Year Cardiovascular Risk Prediction Model for Patients with Heterozygous Familial Hypercholesterolemia; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+- rank 10: app_id=100261; score=8.0; grade=candidate; evidence_class=C; components=data_type; title=Uncovering the genetic basis of reproductive health and its links to general health; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C"}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 21988
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

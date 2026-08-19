@@ -1,0 +1,275 @@
+# lineage_shicheng-guo_prs_height_admixed_populations
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_urls: https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- notice_ids: 2025-08-11-ukbiobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 19585ef9c3b14e8c58f12312176b905a7eca8b65; bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec; e09bd3872f8d536a6245bdaf9396acedad52c76f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: PCA_and_GWAS/UKB_AFR.bas.evec
+- target_ref: 19585ef9c3b14e8c58f12312176b905a7eca8b65
+- target_commit_sha: 19585ef9c3b14e8c58f12312176b905a7eca8b65
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/19585ef9c3b14e8c58f12312176b905a7eca8b65/PCA_and_GWAS/UKB_AFR.bas.evec; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: PCA_and_GWAS/panel_file2.txt
+- target_ref: 19585ef9c3b14e8c58f12312176b905a7eca8b65
+- target_commit_sha: 19585ef9c3b14e8c58f12312176b905a7eca8b65
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/19585ef9c3b14e8c58f12312176b905a7eca8b65/PCA_and_GWAS/panel_file2.txt; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: strat_prs/scripts/.RDataTmp
+- target_ref: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- target_commit_sha: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec/strat_prs/scripts/.RDataTmp; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: strat_prs/scripts/.RDataTmp1
+- target_ref: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- target_commit_sha: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec/strat_prs/scripts/.RDataTmp1; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: strat_prs/scripts/.RDataTmp2
+- target_ref: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- target_commit_sha: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec/strat_prs/scripts/.RDataTmp2; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: strat_prs/scripts/.RData
+- target_ref: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- target_commit_sha: bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/bba2c5e61e8f0ba47d36dcef6dce66a7fea1d5ec/strat_prs/scripts/.RData; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+### https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: sib_betas/JHS/scripts/.RData
+- target_ref: e09bd3872f8d536a6245bdaf9396acedad52c76f
+- target_commit_sha: e09bd3872f8d536a6245bdaf9396acedad52c76f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations/blob/e09bd3872f8d536a6245bdaf9396acedad52c76f/sib_betas/JHS/scripts/.RData; https://github.com/Shicheng-Guo/PRS_Height_Admixed_Populations
+
+## Application Candidates
+- rank 1: app_id=837784; score=12.0; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Polygenic risk score in admixed populations; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "gwas"], "evidence_class": "C", "repo_path_tokens": ["admixed", "populations"]}`
+- rank 2: app_id=21413; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Phasing human populations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["populations"]}`
+- rank 3: app_id=90934; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Pharmacogenomics in diverse populations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["populations"]}`
+- rank 4: app_id=95179; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Advancing Genomics for Diverse and Admixed Populations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["admixed", "populations"]}`
+- rank 5: app_id=17847; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=GWAS for risk for sports injuries; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gwas"]}`
+- rank 6: app_id=18177; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-trait GWAS analyses in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gwas"]}`
+- rank 7: app_id=32677; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Methods for massive GWAS; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gwas"]}`
+- rank 8: app_id=33923; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic risk prediction and variance in diverse populations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["populations"]}`
+- rank 9: app_id=42195; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=GWAS Meta-Analysis of T2D and Prostate Cancer; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gwas"]}`
+- rank 10: app_id=4372; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=GWAS on assoiations for hypertension; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics", "gwas"], "evidence_class": "C", "repo_path_tokens": ["gwas"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 837784
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

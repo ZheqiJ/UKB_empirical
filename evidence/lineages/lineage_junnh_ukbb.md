@@ -1,0 +1,245 @@
+# lineage_junnh_ukbb
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: Junnh/UKBB
+- repo_urls: https://github.com/Junnh/UKBB
+- notice_ids: 2025-12-08-uk-biobank-2
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 451f1c2e5bd601434e1c9da8650b00b157146645; b2b09701496d68a521fef00b067569c15410508a; aa59838557dea4c2bd3b76ceb9457777675ac4bc; df3838355fca6a5e8c35550a55e8e87154cbd714; 8a8f7aaa2915f6057cbd752bbc8531bda1c29eda; 6de0602dd24396b589da8e56d09d2b9dad9d5fb3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: gp_preprocessing.py
+- target_ref: 451f1c2e5bd601434e1c9da8650b00b157146645
+- target_commit_sha: 451f1c2e5bd601434e1c9da8650b00b157146645
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/451f1c2e5bd601434e1c9da8650b00b157146645/gp_preprocessing.py; https://github.com/Junnh/UKBB
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: gp_preprocessing (1
+- target_ref: b2b09701496d68a521fef00b067569c15410508a
+- target_commit_sha: b2b09701496d68a521fef00b067569c15410508a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/b2b09701496d68a521fef00b067569c15410508a/gp_preprocessing%20(1; https://github.com/Junnh/UKBB
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: gp_clinical_preprocessing.py
+- target_ref: aa59838557dea4c2bd3b76ceb9457777675ac4bc
+- target_commit_sha: aa59838557dea4c2bd3b76ceb9457777675ac4bc
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/aa59838557dea4c2bd3b76ceb9457777675ac4bc/gp_clinical_preprocessing.py; https://github.com/Junnh/UKBB
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: make_col_server_allcomp.py
+- target_ref: df3838355fca6a5e8c35550a55e8e87154cbd714
+- target_commit_sha: df3838355fca6a5e8c35550a55e8e87154cbd714
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/df3838355fca6a5e8c35550a55e8e87154cbd714/make_col_server_allcomp.py; https://github.com/Junnh/UKBB
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: make_col_allcomp.py
+- target_ref: 8a8f7aaa2915f6057cbd752bbc8531bda1c29eda
+- target_commit_sha: 8a8f7aaa2915f6057cbd752bbc8531bda1c29eda
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/8a8f7aaa2915f6057cbd752bbc8531bda1c29eda/make_col_allcomp.py; https://github.com/Junnh/UKBB
+
+### https://github.com/Junnh/UKBB
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: make_col.py
+- target_ref: 6de0602dd24396b589da8e56d09d2b9dad9d5fb3
+- target_commit_sha: 6de0602dd24396b589da8e56d09d2b9dad9d5fb3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-08-uk-biobank-2.md; https://github.com/Junnh/UKBB/blob/6de0602dd24396b589da8e56d09d2b9dad9d5fb3/make_col.py; https://github.com/Junnh/UKBB
+
+## Application Candidates
+- rank 1: app_id=182419; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Imaging Cardiovascular Aging in the UKBB; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbb"]}`
+- rank 2: app_id=92363; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Clinical and molecular heterogeneity of Kennedy's disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 3: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 4: app_id=611093; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Improving Disease Prediction with Polygenic Risk Scores & Clinical Data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 5: app_id=641439; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Unraveling Rheumatic Immune Diseases Using UKB Data: From Genetics to Clinical Applications; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 6: app_id=77596; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Investigating genomic effects on clinical outcomes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 7: app_id=1147329; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multimodal analysis of cardiovascular risk and vascular remodelling using UK Biobank clinical, biochemical and genetic data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 8: app_id=240801; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exploring Uveitis Risk Factors: Clinical, Genetic, and Causal Associations; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 9: app_id=32133; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Integration of multi-organ imaging phenotypes, clinical phenotypes, and genomic data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+- rank 10: app_id=338173; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Precision medicine: novel methodologies in genomics, imaging, and clinical data analysis; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clinical"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 182419
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

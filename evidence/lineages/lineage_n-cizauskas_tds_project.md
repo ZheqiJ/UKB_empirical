@@ -1,0 +1,245 @@
+# lineage_n-cizauskas_tds_project
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: N-cizauskas/TDS_Project
+- repo_urls: https://github.com/N-cizauskas/TDS_Project
+- notice_ids: 2026-04-10-uk-biobank-4
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: extraction_and_recoding/outputs/ukb_extracted.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_extracted.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_extracted.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: extraction_and_recoding/outputs/ukb_final.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_final.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_final.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: extraction_and_recoding/outputs/ukb_recoded.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_recoded.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/extraction_and_recoding/outputs/ukb_recoded.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: outcome_definition/Outputs/output_final.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_final.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_final.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: outcome_definition/Outputs/output_hes.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_hes.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_hes.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+### https://github.com/N-cizauskas/TDS_Project
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: outcome_definition/Outputs/output_registries.rds
+- target_ref: 38a5c9564a1076d492411c0241a83fd587070200
+- target_commit_sha: 38a5c9564a1076d492411c0241a83fd587070200
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2023-01-20T12:44:39Z
+- github_pushed_at: 2026-04-10T20:11:11Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: Nicole Cizauskas
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/N-cizauskas/TDS_Project/blob/main/README.md; https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_registries.rds; https://github.com/N-cizauskas/TDS_Project
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-10-uk-biobank-4.md; https://github.com/N-cizauskas/TDS_Project/blob/38a5c9564a1076d492411c0241a83fd587070200/outcome_definition/Outputs/output_registries.rds; https://github.com/N-cizauskas/TDS_Project; https://github.com/N-cizauskas/TDS_Project/blob/main/README.md
+
+## Application Candidates
+- rank 1: app_id=491612; score=37.93; grade=unresolved; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Identification of Disease-Specific Biomarkers for FET Biosensor Application via Machine Learning on Biobank Data; reason=Evidence is too generic to assign an application.
+  - score_details: `{"application_notes_tokens": ["cancers", "for", "learning", "machine", "non", "sensitive", "sensitivity", "supporting"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["science"], "readme_title_tokens": ["for", "learning", "machine"]}`
+- rank 2: app_id=843724; score=37.93; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=A Study on Risk Factors and Genetic Susceptibility of Skin Diseases and comorbidities or Cancers Based on UK Biobank Data; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["factors", "for", "learning", "machine", "present", "prevalent", "regression", "supporting"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["cancers", "factors"]}`
+- rank 3: app_id=1224312; score=37.27; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Explainable Multi-Modal Deep Learning for Risk Stratification of Female Hormone-Related Cancers in UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["breast", "cancers", "factors", "female", "for", "hormone", "incident", "learning", "machine", "models", "non", "ovarian", "stratified", "supporting"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["cancers", "female", "for", "hormone", "learning"]}`
+- rank 4: app_id=53331; score=36.87; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Predicting antidepressant non-remission in late-life depression as a function of neurodegenerative and cerebrovascular comorbidities, using genomic machine-learning models; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["factors", "for", "learning", "machine", "models", "non", "part", "present"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["learning", "machine", "models", "non"]}`
+- rank 5: app_id=1084623; score=36.73; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Precision Prediction of Alzheimer's Risk in Women: LeveragingFemale-Specific Variables and Machine Learning for Risk Reduction; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["factors", "female", "for", "hormone", "learning", "machine", "models"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["female", "for", "learning", "machine"]}`
+- rank 6: app_id=91074; score=35.8; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Investigating the genetic and non-genetic risk factors for cardiovascular diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["factors", "for", "importance", "non"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["science"], "readme_title_tokens": ["factors", "for", "non"]}`
+- rank 7: app_id=28126; score=35.66; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Validating risk prediction models for common hormonal cancers; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["breast", "cancers", "factors", "for", "group", "hormone", "models", "ovarian", "prostate"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["cancers", "for", "models"]}`
+- rank 8: app_id=53308; score=35.6; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Predictive Models for Cardio-Metabolic Disease: a Machine Learning Approach; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["decision", "ensemble", "factors", "for", "importance", "learning", "machine", "models"], "data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["for", "learning", "machine", "models"]}`
+- rank 9: app_id=5791; score=35.6; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; readme_title_topic; title=Development and validation of risk prediction model for breast and ovarian cancers; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["breast", "cancers", "factors", "female", "for", "models", "non", "ovarian"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "readme_title_tokens": ["breast", "cancers", "for", "ovarian"]}`
+- rank 10: app_id=67095; score=35.6; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Gene discovery for cardiomyopathies; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["factors", "for", "group"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for", "science"], "readme_title_tokens": ["for"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 491612
+- evidence_class: C
+- evidence_components: application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

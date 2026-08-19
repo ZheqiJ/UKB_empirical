@@ -1,0 +1,215 @@
+# lineage_okoropaulc_test_exposome_aging_ukb
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: okoropaulc/test_exposome_aging_ukb
+- repo_urls: https://github.com/okoropaulc/test_exposome_aging_ukb
+- notice_ids: 2025-11-13-ukbiobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: db5c05e6e271ec4ac01aa7737aec34b6b9c6877b; 32ce0e30165cdf9cc840fb5b1d007eed46a0e070; 0834d982e28d994f428b7d58bc19bc18a143848b; 0b9e4c00c8af6055e6e6b823c6e40f869a8ca3d3; 63da85f6e3f5648791c5bb80617b1ac53ac9d9c8
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/okoropaulc/test_exposome_aging_ukb
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: scripts/02-UKB_data_recoding.Rmd
+- target_ref: db5c05e6e271ec4ac01aa7737aec34b6b9c6877b
+- target_commit_sha: db5c05e6e271ec4ac01aa7737aec34b6b9c6877b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-ukbiobank.md; https://github.com/okoropaulc/test_exposome_aging_ukb/blob/db5c05e6e271ec4ac01aa7737aec34b6b9c6877b/scripts/02-UKB_data_recoding.Rmd; https://github.com/okoropaulc/test_exposome_aging_ukb
+
+### https://github.com/okoropaulc/test_exposome_aging_ukb
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 05-missing-data-imputation.Rmd
+- target_ref: 32ce0e30165cdf9cc840fb5b1d007eed46a0e070
+- target_commit_sha: 32ce0e30165cdf9cc840fb5b1d007eed46a0e070
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-ukbiobank.md; https://github.com/okoropaulc/test_exposome_aging_ukb/blob/32ce0e30165cdf9cc840fb5b1d007eed46a0e070/05-missing-data-imputation.Rmd; https://github.com/okoropaulc/test_exposome_aging_ukb
+
+### https://github.com/okoropaulc/test_exposome_aging_ukb
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 02-data-recoding.Rmd
+- target_ref: 0834d982e28d994f428b7d58bc19bc18a143848b
+- target_commit_sha: 0834d982e28d994f428b7d58bc19bc18a143848b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-ukbiobank.md; https://github.com/okoropaulc/test_exposome_aging_ukb/blob/0834d982e28d994f428b7d58bc19bc18a143848b/02-data-recoding.Rmd; https://github.com/okoropaulc/test_exposome_aging_ukb
+
+### https://github.com/okoropaulc/test_exposome_aging_ukb
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 02-data-recoding.Rmd
+- target_ref: 0b9e4c00c8af6055e6e6b823c6e40f869a8ca3d3
+- target_commit_sha: 0b9e4c00c8af6055e6e6b823c6e40f869a8ca3d3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-ukbiobank.md; https://github.com/okoropaulc/test_exposome_aging_ukb/blob/0b9e4c00c8af6055e6e6b823c6e40f869a8ca3d3/02-data-recoding.Rmd; https://github.com/okoropaulc/test_exposome_aging_ukb
+
+### https://github.com/okoropaulc/test_exposome_aging_ukb
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: scripts/04-ACM-data-imputation.Rmd
+- target_ref: 63da85f6e3f5648791c5bb80617b1ac53ac9d9c8
+- target_commit_sha: 63da85f6e3f5648791c5bb80617b1ac53ac9d9c8
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-13-ukbiobank.md; https://github.com/okoropaulc/test_exposome_aging_ukb/blob/63da85f6e3f5648791c5bb80617b1ac53ac9d9c8/scripts/04-ACM-data-imputation.Rmd; https://github.com/okoropaulc/test_exposome_aging_ukb
+
+## Application Candidates
+- rank 1: app_id=103990; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic architecture of healthy aging; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 2: app_id=17346; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Study of aging, genes, and environment; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 3: app_id=182419; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Imaging Cardiovascular Aging in the UKBB; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 4: app_id=533098; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Unraveling the Genetic Architecture of Aging; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 5: app_id=124348; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exposome, Disease Trajectories and Multimorbidity Networks; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["exposome"]}`
+- rank 6: app_id=55337; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Understanding Alzheimer's Disease in the Context of the Aging; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 7: app_id=875732; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic and Molecular Determinants of Immune Aging and Disease Risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 8: app_id=1037112; score=9.78; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The Exposome, Genetics, and Aging: A Multi-omics Study of Cardiovascular Disease and Related Chronic Disorders Etiology; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging", "exposome"]}`
+- rank 9: app_id=1055001; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exploration of Brain Aging Using Multi-modal Data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 10: app_id=144915; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Microvascular dysfunction and aging-related phenotypes; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 103990
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

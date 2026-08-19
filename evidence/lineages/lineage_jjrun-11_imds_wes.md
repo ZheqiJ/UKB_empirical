@@ -1,0 +1,403 @@
+# lineage_jjrun-11_imds_wes
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: jjrun-11/IMDs_WES
+- repo_urls: https://github.com/jjrun-11/IMDs_WES
+- notice_ids: 2025-12-01-uk-biobank-2
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: b5c5f22385240a447dae8d0baf0fdb986e50541d; 88c851e9b48f198cea156c505109c628ea0f15f1; 4569154fd8536efa13e3c0d92cfb2195fd2572c9; 705ebe6d34fea3ec769b9b0084a8f90f922b0512; 1fc8786e8a99499106f809247aa4c7ae499c4ede; f214e38c7526854348ed69a33e30f97d5d0960e6; c8d24849d3c95588f591371e90d98876f22f88f5; 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf; 7327cc7176c03a9143132df3e57f0c30a7d96084; 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc_example.kin0
+- target_ref: b5c5f22385240a447dae8d0baf0fdb986e50541d
+- target_commit_sha: b5c5f22385240a447dae8d0baf0fdb986e50541d
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/b5c5f22385240a447dae8d0baf0fdb986e50541d/QC/Step4/ukb_wes_chr_all_king_sample_qc_example.kin0; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc.kin0
+- target_ref: 88c851e9b48f198cea156c505109c628ea0f15f1
+- target_commit_sha: 88c851e9b48f198cea156c505109c628ea0f15f1
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/88c851e9b48f198cea156c505109c628ea0f15f1/QC/Step4/ukb_wes_chr_all_king_sample_qc.kin0; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/ukb_wes_chr11_sample_qc_example.scount
+- target_ref: 4569154fd8536efa13e3c0d92cfb2195fd2572c9
+- target_commit_sha: 4569154fd8536efa13e3c0d92cfb2195fd2572c9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/4569154fd8536efa13e3c0d92cfb2195fd2572c9/QC/Step3/ukb_wes_chr11_sample_qc_example.scount; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/king_example.con
+- target_ref: 705ebe6d34fea3ec769b9b0084a8f90f922b0512
+- target_commit_sha: 705ebe6d34fea3ec769b9b0084a8f90f922b0512
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/705ebe6d34fea3ec769b9b0084a8f90f922b0512/QC/Step4/king_example.con; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/non_retracted_and_sex_qc_filtered_example.txt
+- target_ref: 1fc8786e8a99499106f809247aa4c7ae499c4ede
+- target_commit_sha: 1fc8786e8a99499106f809247aa4c7ae499c4ede
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/1fc8786e8a99499106f809247aa4c7ae499c4ede/QC/Step3/non_retracted_and_sex_qc_filtered_example.txt; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Stepnon_retracted_and_sex_qc_filtered_example.txt
+- target_ref: f214e38c7526854348ed69a33e30f97d5d0960e6
+- target_commit_sha: f214e38c7526854348ed69a33e30f97d5d0960e6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/f214e38c7526854348ed69a33e30f97d5d0960e6/QC/Stepnon_retracted_and_sex_qc_filtered_example.txt; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/head
+- target_ref: c8d24849d3c95588f591371e90d98876f22f88f5
+- target_commit_sha: c8d24849d3c95588f591371e90d98876f22f88f5
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/c8d24849d3c95588f591371e90d98876f22f88f5/QC/Step3/head; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc_final_unrelated_example.eigenval
+- target_ref: 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf
+- target_commit_sha: 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf/QC/Step4/ukb_wes_chr_all_king_sample_qc_final_unrelated_example.eigenval; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/sample_qc_final_keep_example.txt
+- target_ref: 7327cc7176c03a9143132df3e57f0c30a7d96084
+- target_commit_sha: 7327cc7176c03a9143132df3e57f0c30a7d96084
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/7327cc7176c03a9143132df3e57f0c30a7d96084/QC/Step3/sample_qc_final_keep_example.txt; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: PostAnalysis/conditional.R
+- target_ref: 5923d751916249d87435632333be6cb4d7002956
+- target_commit_sha: 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/PostAnalysis/conditional.R; https://github.com/jjrun-11/IMDs_WES
+
+### https://github.com/jjrun-11/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/QC_Step3.bash
+- target_ref: 5923d751916249d87435632333be6cb4d7002956
+- target_commit_sha: 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/QC/QC_Step3.bash; https://github.com/jjrun-11/IMDs_WES
+
+## Application Candidates
+- rank 1: app_id=75946; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Sex, Gender and Brain Health; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["sex"]}`
+- rank 2: app_id=103053; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic and non-genetic predictors of vascular dysfunction; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non"]}`
+- rank 3: app_id=77050; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Defining the genetic and non-genetic determinants of fibrosis; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non"]}`
+- rank 4: app_id=78635; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic and non-genetic determinants of complex diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non"]}`
+- rank 5: app_id=83942; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Investigating the genetic and non-genetic causes of surgical disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non"]}`
+- rank 6: app_id=59528; score=9.78; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Profiling information provided by the genetic and non-genetic components of risk of common diseases from a sample to a population.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non", "sample"]}`
+- rank 7: app_id=1273151; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Sex hormones levels in morbidity and mortality in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["sex"]}`
+- rank 8: app_id=190984; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Research on the Genetic and Non-Genetic Factors of Spinal Cord Injuries.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["non"]}`
+- rank 9: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 10: app_id=29755; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The contribution of PAR1 and PAR2 on the sex chromosomes to disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["sex"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 75946
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.
+
+## Public Metadata Seed Audit
+- seed_rows: 1
+- candidate_app_id: 19542
+- evidence_class: B2_PROJECT_FAMILY_NAME_PROPAGATION; B3_EXACT_TARGET_CONTENT_FINGERPRINT_PROPAGATION
+- evidence_components: public_metadata_seed; B2_PROJECT_FAMILY_NAME_PROPAGATION; B3_EXACT_TARGET_CONTENT_FINGERPRINT_PROPAGATION
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/jjrun-11/IMDs_WES/blob/b5c5f22385240a447dae8d0baf0fdb986e50541d/QC/Step4/ukb_wes_chr_all_king_sample_qc_example.kin0; https://github.com/jjrun-11/IMDs_WES; https://github.com/jjrun-11/IMDs_WES/blob/88c851e9b48f198cea156c505109c628ea0f15f1/QC/Step4/ukb_wes_chr_all_king_sample_qc.kin0; https://github.com/jjrun-11/IMDs_WES/blob/4569154fd8536efa13e3c0d92cfb2195fd2572c9/QC/Step3/ukb_wes_chr11_sample_qc_example.scount; https://github.com/jjrun-11/IMDs_WES/blob/705ebe6d34fea3ec769b9b0084a8f90f922b0512/QC/Step4/king_example.con; https://github.com/jjrun-11/IMDs_WES/blob/1fc8786e8a99499106f809247aa4c7ae499c4ede/QC/Step3/non_retracted_and_sex_qc_filtered_example.txt; https://github.com/jjrun-11/IMDs_WES/blob/f214e38c7526854348ed69a33e30f97d5d0960e6/QC/Stepnon_retracted_and_sex_qc_filtered_example.txt; https://github.com/jjrun-11/IMDs_WES/blob/c8d24849d3c95588f591371e90d98876f22f88f5/QC/Step3/head; https://github.com/jjrun-11/IMDs_WES/blob/7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf/QC/Step4/ukb_wes_chr_all_king_sample_qc_final_unrelated_example.eigenval; https://github.com/jjrun-11/IMDs_WES/blob/7327cc7176c03a9143132df3e57f0c30a7d96084/QC/Step3/sample_qc_final_keep_example.txt; https://github.com/jjrun-11/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/PostAnalysis/conditional.R; https://github.com/jjrun-11/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/QC/QC_Step3.bash; https://www.nature.com/articles/s41467-024-49782-0; https://pubmed.ncbi.nlm.nih.gov/39009607/; https://zenodo.org/records/11307851; https://github.com/Sirius-Yang/IMDs_WES; https://doi.org/10.1038/s41467-024-49782-0
+- match_reason: Public metadata seed records strong but non-deterministic repository-publication-application evidence.

@@ -1,0 +1,365 @@
+# lineage_nebrunai_prs-dash-boxplot-app
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: NeBruNAI/PRS-dash-boxplot-app
+- repo_urls: https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- notice_ids: 2026-03-27-uk-biobank-4
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 165390e4028569a79b1fcda72bf43dffa55adf1e; 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/PCA_and_phenotype.tsv
+- target_ref: 165390e4028569a79b1fcda72bf43dffa55adf1e
+- target_commit_sha: 165390e4028569a79b1fcda72bf43dffa55adf1e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/165390e4028569a79b1fcda72bf43dffa55adf1e/data/PCA_and_phenotype.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_a3_kinship.tsv
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_a3_kinship.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_a1_kinship.tsv
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_a1_kinship.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: export_masked_samples_id.txt
+- target_ref: 165390e4028569a79b1fcda72bf43dffa55adf1e
+- target_commit_sha: 165390e4028569a79b1fcda72bf43dffa55adf1e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/165390e4028569a79b1fcda72bf43dffa55adf1e/export_masked_samples_id.txt; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_a0_kinship.tsv
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_a0_kinship.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_a2_kinship.tsv
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_a2_kinship.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_a4_kinship.tsv
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_a4_kinship.tsv; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: kinship_UKBiobank_p220011.zip
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/kinship_UKBiobank_p220011.zip; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p220011_kinship_ids.zip
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p220011_kinship_ids.zip; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+### https://github.com/NeBruNAI/PRS-dash-boxplot-app
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: p22011_kinship.zip
+- target_ref: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- target_commit_sha: 3863afaf0a87cc94d1476dad3aa6108283cfc1ad
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-4.md; https://github.com/NeBruNAI/PRS-dash-boxplot-app/blob/3863afaf0a87cc94d1476dad3aa6108283cfc1ad/p22011_kinship.zip; https://github.com/NeBruNAI/PRS-dash-boxplot-app
+
+## Application Candidates
+- rank 1: app_id=27960; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Population structure in the UK Biobank samples; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 2: app_id=28659; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Fine-scale ancestry in the UK Biobank samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 3: app_id=85092; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetics, Fatty acids and Health Outcomes in the UKBiobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbiobank"]}`
+- rank 4: app_id=14292; score=9.78; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=PCA based selection scans and detection of polygenic selection signals in very large samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["pca", "samples"]}`
+- rank 5: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 6: app_id=491285; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Identifying Novel Drug Targets Using Genetic Data from UKBiobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbiobank"]}`
+- rank 7: app_id=74629; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Gene burden and variant frequency analysis using UK Biobank samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 8: app_id=753669; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Systemic GenAI models from peripheral samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 9: app_id=24299; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=COPD follow up ? access to genotype and phenotype information and DNA samples; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["samples"]}`
+- rank 10: app_id=55681; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Analysis of variants with low minor allele frequency in the UKBiobank cohort; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbiobank"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 27960
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

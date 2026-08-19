@@ -1,0 +1,665 @@
+# lineage_hoffman2_ukbphenotyping
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: hoffman2/ukbPhenotyping
+- repo_urls: https://github.com/hoffman2/ukbPhenotyping
+- notice_ids: 2025-12-01-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: de6556b4515e9222c438699946b8115741c7065c; 3b811bbb2562e87bfd51b7dd19e2286347dd89b7; 0e9ff651fcb24108990060136823f957d7300305; e0c2f760a27422de94a3463432ac4ce7522c50bf; f062c5a91d07716b8b37dd405e9cdc901104783e; 4f74bbd33cc85d0de96a5280b9173e967363051f; ce6582219861a7933af241b924da71c51d1a9887; 0716665233c58e4f5ed6943151152449a7daff1a; c7f777cfe6240ebb1c7ce44a8334fbe15da494e7; 1ce5213d17cda6dfd20ebb460c12892e5e3fdf16; 0d21e1bc5973edf78d4f072a9d4453fb463a5254; 668b3e88555ae9b617a1cbba3ab502966ea151d3; 74eb7681e80155254d9da5a5e7455f727989924f; 9e5ea1be0be71db79ef453ccb23644c37e5cb3c4; 9155703ba4c274030f58e59d97b2a07b31590853; a64dbced223c0194a4f739bd096c6c7515cc69fc; 392f1fa53bc2b0660b515ca263717069c5b3cd7c; ee1cc5f2d3c740f58f7fed926ec016adf291696f; caee128ecc3e5a3fa45f4f3a8ef84ecf7da1a77f; 877a47e4813a8e3795f8782dd1fe70050df9e2d7
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: workingCode_phenotyping_v5.R
+- target_ref: de6556b4515e9222c438699946b8115741c7065c
+- target_commit_sha: de6556b4515e9222c438699946b8115741c7065c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/de6556b4515e9222c438699946b8115741c7065c/workingCode_phenotyping_v5.R; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: workingPhenotype_v%
+- target_ref: 3b811bbb2562e87bfd51b7dd19e2286347dd89b7
+- target_commit_sha: 3b811bbb2562e87bfd51b7dd19e2286347dd89b7
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/3b811bbb2562e87bfd51b7dd19e2286347dd89b7/workingPhenotype_v%25; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: workingPhenotype_v5
+- target_ref: 0e9ff651fcb24108990060136823f957d7300305
+- target_commit_sha: 0e9ff651fcb24108990060136823f957d7300305
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/0e9ff651fcb24108990060136823f957d7300305/workingPhenotype_v5; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v6
+- target_ref: e0c2f760a27422de94a3463432ac4ce7522c50bf
+- target_commit_sha: e0c2f760a27422de94a3463432ac4ce7522c50bf
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/e0c2f760a27422de94a3463432ac4ce7522c50bf/working_code_v6; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_final
+- target_ref: f062c5a91d07716b8b37dd405e9cdc901104783e
+- target_commit_sha: f062c5a91d07716b8b37dd405e9cdc901104783e
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/f062c5a91d07716b8b37dd405e9cdc901104783e/working_code_final; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v5
+- target_ref: 4f74bbd33cc85d0de96a5280b9173e967363051f
+- target_commit_sha: 4f74bbd33cc85d0de96a5280b9173e967363051f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/4f74bbd33cc85d0de96a5280b9173e967363051f/working_code_v5; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v1
+- target_ref: ce6582219861a7933af241b924da71c51d1a9887
+- target_commit_sha: ce6582219861a7933af241b924da71c51d1a9887
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/ce6582219861a7933af241b924da71c51d1a9887/working_code_v1; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.9
+- target_ref: 0716665233c58e4f5ed6943151152449a7daff1a
+- target_commit_sha: 0716665233c58e4f5ed6943151152449a7daff1a
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/0716665233c58e4f5ed6943151152449a7daff1a/working_code_v0.9; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: workingCode_phenotyping_v0.01
+- target_ref: c7f777cfe6240ebb1c7ce44a8334fbe15da494e7
+- target_commit_sha: c7f777cfe6240ebb1c7ce44a8334fbe15da494e7
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/c7f777cfe6240ebb1c7ce44a8334fbe15da494e7/workingCode_phenotyping_v0.01; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: workingCode_phenotyping_v3.R
+- target_ref: 1ce5213d17cda6dfd20ebb460c12892e5e3fdf16
+- target_commit_sha: 1ce5213d17cda6dfd20ebb460c12892e5e3fdf16
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/1ce5213d17cda6dfd20ebb460c12892e5e3fdf16/workingCode_phenotyping_v3.R; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.08
+- target_ref: 0d21e1bc5973edf78d4f072a9d4453fb463a5254
+- target_commit_sha: 0d21e1bc5973edf78d4f072a9d4453fb463a5254
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/0d21e1bc5973edf78d4f072a9d4453fb463a5254/working_code_v0.08; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.07
+- target_ref: 668b3e88555ae9b617a1cbba3ab502966ea151d3
+- target_commit_sha: 668b3e88555ae9b617a1cbba3ab502966ea151d3
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/668b3e88555ae9b617a1cbba3ab502966ea151d3/working_code_v0.07; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.06
+- target_ref: 74eb7681e80155254d9da5a5e7455f727989924f
+- target_commit_sha: 74eb7681e80155254d9da5a5e7455f727989924f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/74eb7681e80155254d9da5a5e7455f727989924f/working_code_v0.06; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.05
+- target_ref: 9e5ea1be0be71db79ef453ccb23644c37e5cb3c4
+- target_commit_sha: 9e5ea1be0be71db79ef453ccb23644c37e5cb3c4
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/9e5ea1be0be71db79ef453ccb23644c37e5cb3c4/working_code_v0.05; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.04
+- target_ref: 9155703ba4c274030f58e59d97b2a07b31590853
+- target_commit_sha: 9155703ba4c274030f58e59d97b2a07b31590853
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/9155703ba4c274030f58e59d97b2a07b31590853/working_code_v0.04; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.03
+- target_ref: a64dbced223c0194a4f739bd096c6c7515cc69fc
+- target_commit_sha: a64dbced223c0194a4f739bd096c6c7515cc69fc
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/a64dbced223c0194a4f739bd096c6c7515cc69fc/working_code_v0.03; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_v0.02
+- target_ref: 392f1fa53bc2b0660b515ca263717069c5b3cd7c
+- target_commit_sha: 392f1fa53bc2b0660b515ca263717069c5b3cd7c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/392f1fa53bc2b0660b515ca263717069c5b3cd7c/working_code_v0.02; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: working_code_update
+- target_ref: ee1cc5f2d3c740f58f7fed926ec016adf291696f
+- target_commit_sha: ee1cc5f2d3c740f58f7fed926ec016adf291696f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/ee1cc5f2d3c740f58f7fed926ec016adf291696f/working_code_update; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: phenotyping_v3
+- target_ref: caee128ecc3e5a3fa45f4f3a8ef84ecf7da1a77f
+- target_commit_sha: caee128ecc3e5a3fa45f4f3a8ef84ecf7da1a77f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/caee128ecc3e5a3fa45f4f3a8ef84ecf7da1a77f/phenotyping_v3; https://github.com/hoffman2/ukbPhenotyping
+
+### https://github.com/hoffman2/ukbPhenotyping
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: hesCodeTabulation.R
+- target_ref: 877a47e4813a8e3795f8782dd1fe70050df9e2d7
+- target_commit_sha: 877a47e4813a8e3795f8782dd1fe70050df9e2d7
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank.md; https://github.com/hoffman2/ukbPhenotyping/blob/877a47e4813a8e3795f8782dd1fe70050df9e2d7/hesCodeTabulation.R; https://github.com/hoffman2/ukbPhenotyping
+
+## Application Candidates
+- rank 1: app_id=40876; score=10.0; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Deep and Frequent Phenotyping Study (2018); reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 2: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 3: app_id=398221; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep phenotyping of UGT human knockouts; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 4: app_id=66440; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Radiogenomic phenotyping of Overactive Bladder Syndrome; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 5: app_id=107083; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep phenotyping for common and rare diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 6: app_id=17379; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Phenotyping Airways Dysfunction in the General Population: A UK Biobank Evaluation; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 7: app_id=30397; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Sub-phenotyping for prediction and genetic association testing; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 8: app_id=53246; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep Phenotyping of Major Depressive Disorder in Adults; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 9: app_id=58244; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Gender-specific multi-modal phenotyping of hypertensive disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+- rank 10: app_id=117308; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deciphering recurrent surgical ENT diseases through genetics and deep phenotyping; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["phenotyping"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 40876
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

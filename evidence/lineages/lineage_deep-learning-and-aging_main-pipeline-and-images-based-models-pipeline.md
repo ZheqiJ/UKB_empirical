@@ -1,0 +1,305 @@
+# lineage_deep-learning-and-aging_main-pipeline-and-images-based-models-pipeline
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline; Deep-Learning-and-Aging/Main-pipeline-and-Images-based-models-pipeline
+- repo_urls: https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline; https://github.com/Deep-Learning-and-Aging/Main-pipeline-and-Images-based-models-pipeline
+- notice_ids: 2026-03-25-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c; 7279463f1b044a59ad2f46452a910f43159ae476; b3aca1f7198d345b9a71aed33ae04c1a5cb00eac
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 
+- target_ref: 
+- target_commit_sha: 
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_test_0.csv
+- target_ref: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- target_commit_sha: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/13c306ec2dba70c4eeb6382cb1af24bd189bb36c/data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_test_0.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_train_4.csv
+- target_ref: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- target_commit_sha: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/13c306ec2dba70c4eeb6382cb1af24bd189bb36c/data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_train_4.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_val_9.csv
+- target_ref: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- target_commit_sha: 13c306ec2dba70c4eeb6382cb1af24bd189bb36c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/13c306ec2dba70c4eeb6382cb1af24bd189bb36c/data/MI03A_Predictions_generate/short_Predictions_instances_Age_Abdomen_Pancreas_Contrast_InceptionResNetV2_1_1024_Adam_0.0001_0.1_0.5_1.0_val_9.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_test_2.csv
+- target_ref: 7279463f1b044a59ad2f46452a910f43159ae476
+- target_commit_sha: 7279463f1b044a59ad2f46452a910f43159ae476
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/7279463f1b044a59ad2f46452a910f43159ae476/data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_test_2.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_train_0.csv
+- target_ref: 7279463f1b044a59ad2f46452a910f43159ae476
+- target_commit_sha: 7279463f1b044a59ad2f46452a910f43159ae476
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/7279463f1b044a59ad2f46452a910f43159ae476/data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_train_0.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_val_0.csv
+- target_ref: 7279463f1b044a59ad2f46452a910f43159ae476
+- target_commit_sha: 7279463f1b044a59ad2f46452a910f43159ae476
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline/blob/7279463f1b044a59ad2f46452a910f43159ae476/data/FoldsAugmented/fake_data-features_Heart_20208_Augmented_Age_val_0.csv; https://github.com/deep-learning-and-aging/main-pipeline-and-images-based-models-pipeline
+
+### https://github.com/Deep-Learning-and-Aging/Main-pipeline-and-Images-based-models-pipeline
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: bash/backupworking.err
+- target_ref: b3aca1f7198d345b9a71aed33ae04c1a5cb00eac
+- target_commit_sha: b3aca1f7198d345b9a71aed33ae04c1a5cb00eac
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-25-uk-biobank.md; https://github.com/Deep-Learning-and-Aging/Main-pipeline-and-Images-based-models-pipeline/blob/b3aca1f7198d345b9a71aed33ae04c1a5cb00eac/bash/backupworking.err; https://github.com/Deep-Learning-and-Aging/Main-pipeline-and-Images-based-models-pipeline
+
+## Application Candidates
+- rank 1: app_id=52887; score=12.0; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Leveraging medical images and deep learning to characterize biological age; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["age", "deep", "images", "learning"]}`
+- rank 2: app_id=27081; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep learning prediction of complex traits; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["deep", "learning"]}`
+- rank 3: app_id=33751; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Applying Deep Learning to Understand Disease-Genotype Relationships; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["deep", "learning"]}`
+- rank 4: app_id=75310; score=11.2; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep-learning-based application of imaging genomics in brain diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["deep", "learning"]}`
+- rank 5: app_id=101900; score=11.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep Learning based systemic disease screening at the population level using retinal images; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["deep", "images", "learning"]}`
+- rank 6: app_id=87802; score=11.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Assessment of frailty and biological age using multi-modal deep learning; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["age", "deep", "learning"]}`
+- rank 7: app_id=100773; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Generative brain models in health and disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 8: app_id=103990; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic architecture of healthy aging; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+- rank 9: app_id=1064514; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Explanatory epidemiological models from genotype to phenotype; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["models"]}`
+- rank 10: app_id=17346; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Study of aging, genes, and environment; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["aging"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 52887
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

@@ -1,0 +1,215 @@
+# lineage_lenamax2355_ukb_download_and_prep_template
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: lenamax2355/ukb_download_and_prep_template
+- repo_urls: https://github.com/lenamax2355/ukb_download_and_prep_template
+- notice_ids: 2025-11-04-uk-biobank
+- final_match_grade: ambiguous
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 0dc1a3d4bfcc4b6e6ad15f700574ef5be0f15c6d; d578363811a5fa1f9b8227857b5aad36835a0e19; 17b001a98ff621d5609a7974095fdcbaec221773; 9842d21710c6bed01b59c0e9822f51cce4e33124
+- targeted_commit_author_date: 2020-09-04T16:12:43Z
+- targeted_commit_committer_date: 2020-09-04T16:12:43Z
+- earliest_observed_offending_file_commit_date: 2020-09-03T16:03:55Z
+- earliest_observed_offending_file_commit_sha: 2ab4b7fef292a26c684319e2f325193ac24933aa
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/lenamax2355/ukb_download_and_prep_template
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: README.md
+- target_ref: 0dc1a3d4bfcc4b6e6ad15f700574ef5be0f15c6d
+- target_commit_sha: 0dc1a3d4bfcc4b6e6ad15f700574ef5be0f15c6d
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2022-05-29T09:36:29Z
+- github_pushed_at: 2022-05-20T15:02:45Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/0dc1a3d4bfcc4b6e6ad15f700574ef5be0f15c6d/README.md; https://github.com/lenamax2355/ukb_download_and_prep_template
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/0dc1a3d4bfcc4b6e6ad15f700574ef5be0f15c6d/README.md; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md
+
+### https://github.com/lenamax2355/ukb_download_and_prep_template
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/core.rst
+- target_ref: d578363811a5fa1f9b8227857b5aad36835a0e19
+- target_commit_sha: d578363811a5fa1f9b8227857b5aad36835a0e19
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2022-05-29T09:36:29Z
+- github_pushed_at: 2022-05-20T15:02:45Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/d578363811a5fa1f9b8227857b5aad36835a0e19/docs/core.rst; https://github.com/lenamax2355/ukb_download_and_prep_template
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/d578363811a5fa1f9b8227857b5aad36835a0e19/docs/core.rst; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md
+
+### https://github.com/lenamax2355/ukb_download_and_prep_template
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/_build/html/_sources/core.rst.txt
+- target_ref: 17b001a98ff621d5609a7974095fdcbaec221773
+- target_commit_sha: 17b001a98ff621d5609a7974095fdcbaec221773
+- targeted_commit_author_date: 2020-09-04T16:12:43Z
+- targeted_commit_committer_date: 2020-09-04T16:12:43Z
+- earliest_observed_offending_file_commit_date: 2020-09-03T16:03:55Z
+- github_created_at: 2022-05-29T09:36:29Z
+- github_pushed_at: 2022-05-20T15:02:45Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/17b001a98ff621d5609a7974095fdcbaec221773/docs/_build/html/_sources/core.rst.txt; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/commit/17b001a98ff621d5609a7974095fdcbaec221773; https://github.com/lenamax2355/ukb_download_and_prep_template/commit/2ab4b7fef292a26c684319e2f325193ac24933aa
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/17b001a98ff621d5609a7974095fdcbaec221773/docs/_build/html/_sources/core.rst.txt; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/lenamax2355/ukb_download_and_prep_template/commit/17b001a98ff621d5609a7974095fdcbaec221773; https://github.com/lenamax2355/ukb_download_and_prep_template/commit/2ab4b7fef292a26c684319e2f325193ac24933aa
+
+### https://github.com/lenamax2355/ukb_download_and_prep_template
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/relabel.rst
+- target_ref: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- target_commit_sha: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2022-05-29T09:36:29Z
+- github_pushed_at: 2022-05-20T15:02:45Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/relabel.rst; https://github.com/lenamax2355/ukb_download_and_prep_template
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/relabel.rst; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md
+
+### https://github.com/lenamax2355/ukb_download_and_prep_template
+- repo_status: live
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: docs/_build/html/_sources/relabel.rst.txt
+- target_ref: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- target_commit_sha: 9842d21710c6bed01b59c0e9822f51cce4e33124
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 2022-05-29T09:36:29Z
+- github_pushed_at: 2022-05-20T15:02:45Z
+- github_fork: false
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md; https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/_build/html/_sources/relabel.rst.txt; https://github.com/lenamax2355/ukb_download_and_prep_template
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/11/2025-11-04-uk-biobank.md; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/9842d21710c6bed01b59c0e9822f51cce4e33124/docs/_build/html/_sources/relabel.rst.txt; https://github.com/lenamax2355/ukb_download_and_prep_template; https://github.com/lenamax2355/ukb_download_and_prep_template/blob/main/README.md
+
+## Application Candidates
+- rank 1: app_id=54520; score=52.0; grade=ambiguous; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; title=Constructing risk scores of longevity, dementia, and related disorders; reason=Two or more candidate applications have similar evidence scores.
+  - score_details: `{"application_notes_tokens": ["activity", "development", "diseases", "field", "for", "groups", "here", "how", "important", "last", "made", "major", "need", "particular", "run", "some", "these", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "paper_author_to_application_pi": "Dr Bruno Bonnech\ufffdre"}`
+- rank 2: app_id=73507; score=48.0; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; title=Integrated analysis and validation of complex brain-related genetic and genomic studies; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["common", "descriptions", "detailed", "diseases", "existing", "for", "like", "need", "requires", "run", "use", "want", "will"], "data_types": ["genotype"], "evidence_class": "C", "paper_author_to_application_pi": "Dr Patrick May"}`
+- rank 3: app_id=67263; score=44.53; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; readme_title_topic; title=Weakly-supervised Deep Learning for the Improvement of Cardiovascular Disease (CVD) Prediction using Retinal Fundus Images; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["changes", "directly", "new", "these", "which", "will"], "data_types": ["hospital_episode_statistics"], "evidence_class": "C", "paper_author_to_application_pi": "Professor Patrick Then", "readme_title_tokens": ["for"]}`
+- rank 4: app_id=51830; score=43.2; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Identifying genetic factors for brain ageing; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["available", "changes", "diseases", "for", "how", "important", "run", "these", "use", "used", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["development", "for"], "readme_title_tokens": ["for"]}`
+- rank 5: app_id=105731; score=41.78; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=An Integrative Approach to Predict Mental Health Outcomes: The Contribution of Genetics, Brain Architecture, and Behavior; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["all", "available", "define", "field", "for", "how", "last", "like", "might", "outcomes", "then", "these", "used", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["development", "for"], "readme_title_tokens": ["outcomes"]}`
+- rank 6: app_id=85457; score=41.78; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Linking genomic determinants of child development to predictors of ageing and multi-morbidities.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["development", "diseases", "for", "how", "like", "may", "next", "outcomes", "then", "these", "want", "will", "working"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["development", "for"], "readme_title_tokens": ["development"]}`
+- rank 7: app_id=65592; score=41.67; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; repo_path_similarity; title=Multi-omics polygenic architecture of common diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["common", "diseases", "for", "how", "may", "next", "particular", "these", "used", "when", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["for"], "readme_title_tokens": ["common", "diseases"], "repo_path_tokens": ["common"]}`
+- rank 8: app_id=1061558; score=41.33; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=Risk and Prognostic Factors in Neurodegenerative Diseases: A Systematic Research Integrating Multimodal Imaging, Multi-Omics, Lifestyle, and Environmental Exposures; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["diseases", "for", "how", "major", "may", "monitoring", "outcomes", "used", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["diseases", "for"], "readme_title_tokens": ["diseases"]}`
+- rank 9: app_id=843724; score=40.27; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; readme_title_topic; title=A Study on Risk Factors and Genetic Susceptibility of Skin Diseases and comorbidities or Cancers Based on UK Biobank Data; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["development", "diseases", "for", "how", "outcomes", "prevalent", "these", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["diseases", "for"], "readme_title_tokens": ["diseases"]}`
+- rank 10: app_id=82056; score=40.0; grade=candidate; evidence_class=C; components=application_notes_topic_overlap; commit_author_to_paper_author; data_type; institution_match; title=Elucidating the genetic basis of both normal and abnormal brain structure; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["available", "development", "for", "how", "important", "like", "new", "these", "which", "will"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "institution_tokens": ["diseases", "for"]}`
+
+## Application Enrichment Audit
+- final_match_grade: ambiguous
+- candidate_app_id: 54520
+- evidence_class: C
+- evidence_components: application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Two or more candidate applications have similar evidence scores.

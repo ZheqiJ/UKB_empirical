@@ -1,0 +1,815 @@
+# lineage_ajpag_ukb-brain-symptoms-clustering
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: ajpag/ukb-brain-symptoms-clustering
+- repo_urls: https://github.com/ajpag/ukb-brain-symptoms-clustering
+- notice_ids: 2025-10-07-uk-biobank
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c; 9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f; a093666c6b07a4da5b2249bfac508d6dc43b3fbb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/3.3_binary_model.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/3.3_binary_model.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_brain/1.20_data_col_filter_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_brain/1.20_data_col_filter_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_kwanbocols/Biobank_data_analysis_predict.ipynb
+- target_ref: 9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f
+- target_commit_sha: 9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f/ml_kwanbocols/Biobank_data_analysis_predict.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/3.2_multi_model.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/3.2_multi_model.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.20_data_col_filter_whole-Copy1.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.20_data_col_filter_whole-Copy1.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.21_data_correlation_filter_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.21_data_correlation_filter_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_andcol/1.2_data_col_filter_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_andcol/1.2_data_col_filter_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.1_data_col_filter_patch_test.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.1_data_col_filter_patch_test.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_andcol/1.1_data_col_filter_patch_test.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_andcol/1.1_data_col_filter_patch_test.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.40_data_1yr_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.40_data_1yr_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.41_data_correlation_1yr_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.41_data_correlation_1yr_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 5_data_cleaning_comp/1.2_data_1yr_whole.ipynb
+- target_ref: a093666c6b07a4da5b2249bfac508d6dc43b3fbb
+- target_commit_sha: a093666c6b07a4da5b2249bfac508d6dc43b3fbb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/a093666c6b07a4da5b2249bfac508d6dc43b3fbb/5_data_cleaning_comp/1.2_data_1yr_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/3.1_clus_model_grid.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/3.1_clus_model_grid.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/2.4_EDA_correlation_1yr.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/2.4_EDA_correlation_1yr.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_kwanbocols/Biobank_data_analysis_clustering.ipynb
+- target_ref: 9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f
+- target_commit_sha: 9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/9a7cc1a7ea7df77a210ccc6167a01cf47bd3de4f/ml_kwanbocols/Biobank_data_analysis_clustering.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_andcol/1.3_data_6mo_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_andcol/1.3_data_6mo_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_javicol/1.3_data_6mo_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_javicol/1.3_data_6mo_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_andcol/1.4_data_1yr_whole.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_andcol/1.4_data_1yr_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data_cleaning_brain/1.1_data_col_filter_patch_test.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/data_cleaning_brain/1.1_data_col_filter_patch_test.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/2.3_EDA_and_clean_1yr.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/2.3_EDA_and_clean_1yr.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_javicols/2.2_EDA_6mo.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_javicols/2.2_EDA_6mo.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_andcols/2.2_EDA_6mo.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_andcols/2.2_EDA_6mo.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: 5_data_cleaning_comp/1.1_data_col_filter_whole.ipynb
+- target_ref: a093666c6b07a4da5b2249bfac508d6dc43b3fbb
+- target_commit_sha: a093666c6b07a4da5b2249bfac508d6dc43b3fbb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/a093666c6b07a4da5b2249bfac508d6dc43b3fbb/5_data_cleaning_comp/1.1_data_col_filter_whole.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_andcols/3.1_baseline_model.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_andcols/3.1_baseline_model.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+### https://github.com/ajpag/ukb-brain-symptoms-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: ml_andcols/2.3_EDA_1yr.ipynb
+- target_ref: 1ccf51fd7b853704b73db661426f5c56b991174c
+- target_commit_sha: 1ccf51fd7b853704b73db661426f5c56b991174c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/10/2025-10-07-uk-biobank.md; https://github.com/ajpag/ukb-brain-symptoms-clustering/blob/1ccf51fd7b853704b73db661426f5c56b991174c/ml_andcols/2.3_EDA_1yr.ipynb; https://github.com/ajpag/ukb-brain-symptoms-clustering
+
+## Application Candidates
+- rank 1: app_id=1055001; score=11.2; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Exploration of Brain Aging Using Multi-modal Data; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain", "multi"]}`
+- rank 2: app_id=100773; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Generative brain models in health and disease; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain"]}`
+- rank 3: app_id=30544; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Diet, body fat and brain health: a multi-organ imaging study in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain", "multi"]}`
+- rank 4: app_id=51518; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Segmented Analysis of Whole Genomes.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["whole"]}`
+- rank 5: app_id=75946; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Sex, Gender and Brain Health; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain"]}`
+- rank 6: app_id=946023; score=10.67; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=A foundation model for brain-eye connection; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain", "model"]}`
+- rank 7: app_id=1155585; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Brain Aging, Neurodegeneration, and Multi-Cancer Risk: A Multi-Omics and Imaging Study of Systemic Aging Pathways; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain", "multi"]}`
+- rank 8: app_id=282742; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Integrating Multi-omics to Predict and Understand Ovarian Aging; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["multi", "predict"]}`
+- rank 9: app_id=37212; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Deep Learning Model to Predict Physiological Ageing Rate; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["model", "predict"]}`
+- rank 10: app_id=82382; score=10.29; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multi-modal genomic analyses of brain function and connectivity; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["brain", "multi"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 1055001
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

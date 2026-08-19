@@ -1,0 +1,414 @@
+# lineage_sirius-yang_imds_wes
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: Sirius-Yang/IMDs_WES
+- repo_urls: https://github.com/Sirius-Yang/IMDs_WES
+- notice_ids: 2025-12-01-uk-biobank-2
+- final_match_grade: ambiguous
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: b5c5f22385240a447dae8d0baf0fdb986e50541d; 88c851e9b48f198cea156c505109c628ea0f15f1; 4569154fd8536efa13e3c0d92cfb2195fd2572c9; 705ebe6d34fea3ec769b9b0084a8f90f922b0512; 1fc8786e8a99499106f809247aa4c7ae499c4ede; f214e38c7526854348ed69a33e30f97d5d0960e6; c8d24849d3c95588f591371e90d98876f22f88f5; 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf; 7327cc7176c03a9143132df3e57f0c30a7d96084; 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: Large-scale whole-exome sequencing analyses identified protein-coding variants associated with immune-mediated diseases in 350,770 adults.
+- doi: 10.1038/s41467-024-49782-0
+- pubmed_id: 39009607
+- paper_authors: Yang L, Ou YN, Wu BS, Liu WS, Deng YT, He XY, Chen YL, Kang J, Fei CJ, Zhu Y, Tan L, Dong Q, Feng J, Cheng W, Yu JT.
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc_example.kin0
+- target_ref: b5c5f22385240a447dae8d0baf0fdb986e50541d
+- target_commit_sha: b5c5f22385240a447dae8d0baf0fdb986e50541d
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/b5c5f22385240a447dae8d0baf0fdb986e50541d/QC/Step4/ukb_wes_chr_all_king_sample_qc_example.kin0; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc.kin0
+- target_ref: 88c851e9b48f198cea156c505109c628ea0f15f1
+- target_commit_sha: 88c851e9b48f198cea156c505109c628ea0f15f1
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/88c851e9b48f198cea156c505109c628ea0f15f1/QC/Step4/ukb_wes_chr_all_king_sample_qc.kin0; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/ukb_wes_chr11_sample_qc_example.scount
+- target_ref: 4569154fd8536efa13e3c0d92cfb2195fd2572c9
+- target_commit_sha: 4569154fd8536efa13e3c0d92cfb2195fd2572c9
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/4569154fd8536efa13e3c0d92cfb2195fd2572c9/QC/Step3/ukb_wes_chr11_sample_qc_example.scount; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/king_example.con
+- target_ref: 705ebe6d34fea3ec769b9b0084a8f90f922b0512
+- target_commit_sha: 705ebe6d34fea3ec769b9b0084a8f90f922b0512
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/705ebe6d34fea3ec769b9b0084a8f90f922b0512/QC/Step4/king_example.con; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/non_retracted_and_sex_qc_filtered_example.txt
+- target_ref: 1fc8786e8a99499106f809247aa4c7ae499c4ede
+- target_commit_sha: 1fc8786e8a99499106f809247aa4c7ae499c4ede
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/1fc8786e8a99499106f809247aa4c7ae499c4ede/QC/Step3/non_retracted_and_sex_qc_filtered_example.txt; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Stepnon_retracted_and_sex_qc_filtered_example.txt
+- target_ref: f214e38c7526854348ed69a33e30f97d5d0960e6
+- target_commit_sha: f214e38c7526854348ed69a33e30f97d5d0960e6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/f214e38c7526854348ed69a33e30f97d5d0960e6/QC/Stepnon_retracted_and_sex_qc_filtered_example.txt; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/head
+- target_ref: c8d24849d3c95588f591371e90d98876f22f88f5
+- target_commit_sha: c8d24849d3c95588f591371e90d98876f22f88f5
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/c8d24849d3c95588f591371e90d98876f22f88f5/QC/Step3/head; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step4/ukb_wes_chr_all_king_sample_qc_final_unrelated_example.eigenval
+- target_ref: 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf
+- target_commit_sha: 7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/7a2acb497cfe1232ef8c5fe03a8e16b291b9cdbf/QC/Step4/ukb_wes_chr_all_king_sample_qc_final_unrelated_example.eigenval; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/Step3/sample_qc_final_keep_example.txt
+- target_ref: 7327cc7176c03a9143132df3e57f0c30a7d96084
+- target_commit_sha: 7327cc7176c03a9143132df3e57f0c30a7d96084
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/7327cc7176c03a9143132df3e57f0c30a7d96084/QC/Step3/sample_qc_final_keep_example.txt; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: PostAnalysis/conditional.R
+- target_ref: 5923d751916249d87435632333be6cb4d7002956
+- target_commit_sha: 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/PostAnalysis/conditional.R; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+### https://github.com/Sirius-Yang/IMDs_WES
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: QC/QC_Step3.bash
+- target_ref: 5923d751916249d87435632333be6cb4d7002956
+- target_commit_sha: 5923d751916249d87435632333be6cb4d7002956
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2025/12/2025-12-01-uk-biobank-2.md; https://github.com/Sirius-Yang/IMDs_WES/blob/5923d751916249d87435632333be6cb4d7002956/QC/QC_Step3.bash; https://github.com/Sirius-Yang/IMDs_WES; https://europepmc.org/article/MED/39009607
+- public_metadata_excerpts: DOI 10.1038/s41467-024-49782-0 | PMID 39009607
+
+## Application Candidates
+- rank 1: app_id=71870; score=94.55; grade=ambiguous; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Large scale association analyses of UK Biobank data; reason=Evidence is suggestive but lacks enough independent support for a unique probable match.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "associated", "coding", "diseases", "exome", "large", "protein", "scale", "sequencing", "variants"], "application_notes_tokens": ["associated", "coding", "diseases", "exome", "protein", "sequencing", "variants"], "application_title_topic_tokens": ["analyses", "large", "scale"], "data_types": ["genotype"], "evidence_class": "B", "normalized_publication_title": ["Large-scale whole-exome sequencing analyses identified protein-coding variants associated with immune-mediated diseases in 350,770 adults."], "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["analyses", "large", "scale"]}`
+- rank 2: app_id=1203422; score=83.15; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Molecular and genetic analysis of unilateral renal diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["associated", "coding", "diseases", "exome", "large", "mediated", "scale", "sequencing", "variants", "whole"], "application_notes_tokens": ["associated", "coding", "diseases", "exome", "large", "mediated", "scale", "sequencing", "variants", "whole"], "application_title_topic_tokens": ["diseases"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "normalized_publication_title": ["Large-scale whole-exome sequencing analyses identified protein-coding variants associated with immune-mediated diseases in 350,770 adults."], "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["diseases"]}`
+- rank 3: app_id=100014; score=79.15; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; normalized_publication_title; paper_identifier; readme_title_topic; title=Whole-genome sequencing studies for disease-related and imaging phenotypes using UKBB data.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "associated", "coding", "diseases", "identified", "large", "scale", "sequencing", "variants", "whole"], "application_notes_tokens": ["analyses", "associated", "coding", "diseases", "identified", "large", "scale", "sequencing", "variants", "whole"], "application_title_topic_tokens": ["sequencing", "whole"], "data_types": ["genotype"], "evidence_class": "B", "normalized_publication_title": ["Large-scale whole-exome sequencing analyses identified protein-coding variants associated with immune-mediated diseases in 350,770 adults."], "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["sequencing", "whole"]}`
+- rank 4: app_id=85253; score=69.15; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Genome-wide analysis of mechanosensitive channels in cardiometabolic diseases.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "diseases", "exome", "variants", "whole"], "application_notes_tokens": ["analyses", "diseases", "exome", "variants", "whole"], "application_title_topic_tokens": ["diseases"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Chew Weng Cheng", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["diseases"]}`
+- rank 5: app_id=74025; score=68.92; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_identifier; readme_title_topic; title=Pan-cancer analysis of whole-exome germline variants; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["coding", "exome", "large", "protein", "scale", "sequencing", "variants", "whole"], "application_notes_tokens": ["coding", "large", "protein", "scale", "sequencing"], "application_title_topic_tokens": ["exome", "variants", "whole"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["exome", "variants", "whole"]}`
+- rank 6: app_id=93379; score=67.98; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_identifier; readme_title_topic; repo_path_similarity; title=Identifying non-coding regulatory variants associated with mature B cell neoplasms and B cell mediated autoimmune diseases.; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["associated", "coding", "diseases", "identified", "immune", "large", "mediated", "sequencing", "variants"], "application_notes_tokens": ["associated", "coding", "diseases", "identified", "immune", "large", "sequencing", "variants"], "application_title_topic_tokens": ["associated", "coding", "diseases", "mediated", "variants"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["associated", "coding", "diseases", "mediated", "variants"], "repo_path_tokens": ["non"]}`
+- rank 7: app_id=95599; score=65.75; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_identifier; readme_title_topic; title=Analyses of IL12B in complex genetic diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["analyses", "associated", "diseases", "identified", "immune", "protein", "variants"], "application_notes_tokens": ["analyses", "associated", "diseases", "identified", "immune", "protein", "variants"], "application_title_topic_tokens": ["analyses", "diseases"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["analyses", "diseases"]}`
+- rank 8: app_id=72821; score=64.65; grade=candidate; evidence_class=B; components=application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; readme_title_topic; title=Protein Protein Interaction Networks Systematically Derived from Large Scale Human Genetic Data; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_notes_tokens": ["analyses", "large"], "application_title_topic_tokens": ["large", "protein", "scale"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr William Chen", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["large", "protein", "scale"]}`
+- rank 9: app_id=276785; score=63.62; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; application_title_topic_overlap; commit_author_to_paper_author; data_type; paper_identifier; readme_title_topic; title=Genetic basis of inflammatory immune mediated diseases; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["associated", "diseases", "immune", "mediated", "variants"], "application_notes_tokens": ["associated", "diseases", "immune", "mediated", "variants"], "application_title_topic_tokens": ["diseases", "immune", "mediated"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "readme_title_tokens": ["diseases", "immune", "mediated"]}`
+- rank 10: app_id=56902; score=63.39; grade=candidate; evidence_class=B; components=application_note_paper_title; application_notes_topic_overlap; commit_author_to_paper_author; data_type; paper_author_to_application_pi; paper_identifier; repo_path_similarity; title=The associations between metals status and the risk of health-related outcomes and all-cause mortality: a Mendelian randomization-phenome-wide association study; reason=Alternative candidate retained for audit.
+  - score_details: `{"application_note_paper_title_tokens": ["associated", "diseases", "immune", "variants", "whole"], "application_notes_tokens": ["associated", "diseases", "immune", "variants", "whole"], "data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "B", "paper_author_to_application_pi": "Dr Xiaobo Yang", "paper_identifiers": {"doi": "10.1038/s41467-024-49782-0", "pubmed_id": "39009607"}, "repo_path_tokens": ["all"]}`
+
+## Application Enrichment Audit
+- final_match_grade: confirmed
+- candidate_app_id: 19542
+- evidence_class: A1_DIRECT_APP_ID
+- evidence_components: public_metadata_seed; A1_DIRECT_APP_ID; exact_publication_identifier
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 1
+- public_metadata_seed_urls: https://www.nature.com/articles/s41467-024-49782-0; https://pubmed.ncbi.nlm.nih.gov/39009607/; https://zenodo.org/records/11307851; https://github.com/Sirius-Yang/IMDs_WES; https://doi.org/10.1038/s41467-024-49782-0
+- match_reason: Public metadata seed records a unique repository-publication-application evidence chain.
+
+## Public Metadata Seed Audit
+- seed_rows: 1
+- candidate_app_id: 19542
+- evidence_class: A1_DIRECT_APP_ID
+- evidence_components: public_metadata_seed; A1_DIRECT_APP_ID; direct_application_id
+- evidence_urls: https://www.nature.com/articles/s41467-024-49782-0; https://pubmed.ncbi.nlm.nih.gov/39009607/; https://zenodo.org/records/11307851; https://github.com/Sirius-Yang/IMDs_WES; https://doi.org/10.1038/s41467-024-49782-0
+- match_reason: Public metadata seed records a unique repository-publication-application evidence chain.

@@ -1,0 +1,245 @@
+# lineage_postincredible_ukbb
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: postincredible/ukbb
+- repo_urls: https://github.com/postincredible/ukbb
+- notice_ids: 2026-03-27-uk-biobank-2
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_ukbb_disT2D_indicator.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_ukbb_disT2D_indicator.ipynb; https://github.com/postincredible/ukbb
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_HES_add_visits_count.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_HES_add_visits_count.ipynb; https://github.com/postincredible/ukbb
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_ukbb_disRA_indicator.ipynb.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_ukbb_disRA_indicator.ipynb.ipynb; https://github.com/postincredible/ukbb
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_HES_disRA.ipynb.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_HES_disRA.ipynb.ipynb; https://github.com/postincredible/ukbb
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_HES_2nd_ICD_long_to_wide.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_HES_2nd_ICD_long_to_wide.ipynb; https://github.com/postincredible/ukbb
+
+### https://github.com/postincredible/ukbb
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: cleaned_HES_disT2D.ipynb
+- target_ref: 0f62a4eef5aa39676617fe360a58188156a10379
+- target_commit_sha: 0f62a4eef5aa39676617fe360a58188156a10379
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-2.md; https://github.com/postincredible/ukbb/blob/0f62a4eef5aa39676617fe360a58188156a10379/cleaned_HES_disT2D.ipynb; https://github.com/postincredible/ukbb
+
+## Application Candidates
+- rank 1: app_id=182419; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Imaging Cardiovascular Aging in the UKBB; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["ukbb"]}`
+- rank 2: app_id=106206; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Using EHR data to enhance the analysis of multi-modal data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["hospital_episode_statistics", "ehr"], "evidence_class": "C", "repo_path_tokens": ["ehr"]}`
+- rank 3: app_id=41672; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Phenome environment wide interaction study; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["wide"]}`
+- rank 4: app_id=42195; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=GWAS Meta-Analysis of T2D and Prostate Cancer; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["t2d"]}`
+- rank 5: app_id=44606; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Identifying long runs of homozygosity in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["long"]}`
+- rank 6: app_id=51174; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Phenome-wide study of blood groups in the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["wide"]}`
+- rank 7: app_id=72298; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=A Genome-wide association study of resilience; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["wide"]}`
+- rank 8: app_id=103198; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Long-term Effects of Pregnancy on Maternal Health; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["long"]}`
+- rank 9: app_id=106418; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The long-term clinical outcomes of sepsis; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["long"]}`
+- rank 10: app_id=17731; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=A phenome-wide association study of copy number variation; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["wide"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 182419
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

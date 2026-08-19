@@ -1,0 +1,575 @@
+# lineage_kremerml_mltc-clustering
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: KremerML/MLTC-clustering
+- repo_urls: https://github.com/KremerML/MLTC-clustering
+- notice_ids: 2026-04-01-uk-biobank-3
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282; 5a53b1acd04bdbc9b7f85103d4bfcaaaeead0be2; c0a452e2cf2742f4ad22f386546cabe7ae560f78; 41ad4c6c814946894b573b2f621958dbed874ceb; 3e7f7a9db40cba4213726222df706cd1c582d194
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_binary_mm2.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_binary_mm2.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_unweighted_counts_mm2.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_unweighted_counts_mm2.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_weighted_counts_mm2.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_weighted_counts_mm2.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_binary_dedup_mm2.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_binary_dedup_mm2.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_unweighted_counts_dedup_mm2.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_unweighted_counts_dedup_mm2.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_binary_mm4.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_binary_mm4.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_unweighted_counts_mm4.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_unweighted_counts_mm4.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_weighted_counts_mm4.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_weighted_counts_mm4.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_binary_dedup_mm4.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_binary_dedup_mm4.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: data/ltc_matrices/ltc_matrix_unweighted_counts_dedup_mm4.tsv
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://raw.githubusercontent.com/KremerML/MLTC-clustering/d7091b42865bda39871f9b9996623de2fb32a282/data/ltc_matrices/ltc_matrix_unweighted_counts_dedup_mm4.tsv; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/.ipynb_checkpoints/Binary LTC LDA topics-checkpoint.ipynb
+- target_ref: 5a53b1acd04bdbc9b7f85103d4bfcaaaeead0be2
+- target_commit_sha: 5a53b1acd04bdbc9b7f85103d4bfcaaaeead0be2
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/5a53b1acd04bdbc9b7f85103d4bfcaaaeead0be2/notebooks/.ipynb_checkpoints/Binary%20LTC%20LDA%20topics-checkpoint.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/LDA.ipynb
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/d7091b42865bda39871f9b9996623de2fb32a282/notebooks/LDA.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/.ipynb_checkpoints/Bin-LTC Multicore LDA with t-SNE-checkpoint.ipynb
+- target_ref: c0a452e2cf2742f4ad22f386546cabe7ae560f78
+- target_commit_sha: c0a452e2cf2742f4ad22f386546cabe7ae560f78
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/c0a452e2cf2742f4ad22f386546cabe7ae560f78/notebooks/.ipynb_checkpoints/Bin-LTC%20Multicore%20LDA%20with%20t-SNE-checkpoint.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/Bin-LTC Multicore LDA with t-SNE.ipynb
+- target_ref: 41ad4c6c814946894b573b2f621958dbed874ceb
+- target_commit_sha: 41ad4c6c814946894b573b2f621958dbed874ceb
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/41ad4c6c814946894b573b2f621958dbed874ceb/notebooks/Bin-LTC%20Multicore%20LDA%20with%20t-SNE.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/All events LDA dominant topics with temporal dimension-Copy1.ipynb
+- target_ref: 3e7f7a9db40cba4213726222df706cd1c582d194
+- target_commit_sha: 3e7f7a9db40cba4213726222df706cd1c582d194
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/3e7f7a9db40cba4213726222df706cd1c582d194/notebooks/All%20events%20LDA%20dominant%20topics%20with%20temporal%20dimension-Copy1.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/.ipynb_checkpoints/All events LDA dominant topics with temporal dimension-Copy1-checkpoint.ipynb
+- target_ref: 3e7f7a9db40cba4213726222df706cd1c582d194
+- target_commit_sha: 3e7f7a9db40cba4213726222df706cd1c582d194
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/3e7f7a9db40cba4213726222df706cd1c582d194/notebooks/.ipynb_checkpoints/All%20events%20LDA%20dominant%20topics%20with%20temporal%20dimension-Copy1-checkpoint.ipynb; https://github.com/KremerML/MLTC-clustering
+
+### https://github.com/KremerML/MLTC-clustering
+- repo_status: http_451
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: notebooks/Binary LTC LDA topics.ipynb
+- target_ref: d7091b42865bda39871f9b9996623de2fb32a282
+- target_commit_sha: d7091b42865bda39871f9b9996623de2fb32a282
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/04/2026-04-01-uk-biobank-3.md; https://github.com/KremerML/MLTC-clustering/blob/d7091b42865bda39871f9b9996623de2fb32a282/notebooks/Binary%20LTC%20LDA%20topics.ipynb; https://github.com/KremerML/MLTC-clustering
+
+## Application Candidates
+- rank 1: app_id=15181; score=10.67; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Alzheimer?s Disease and Immune Events; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["events"]}`
+- rank 2: app_id=1215961; score=10.0; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Genetic Clustering of Inflammatory and Autoimmune Disorders; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clustering"]}`
+- rank 3: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 4: app_id=61744; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Study of white blood cell counts in relation to cancer risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["counts"]}`
+- rank 5: app_id=7089; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Exome Sequencing of All Premature Coronary Artery Disease Participants in UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["all"]}`
+- rank 6: app_id=74297; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Clarification of causes of multifactorial diseases by phenotypic clustering using UK Biobank data; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["clustering"]}`
+- rank 7: app_id=948339; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Spatial and Temporal Patterns of Chronic Kidney Disease in the UK: Evidence from the UK Biobank; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["temporal"]}`
+- rank 8: app_id=699845; score=9.23; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Serum proteomic profiles predict onset and severity of immune- related adverse events from immune checkpoint inhibitor therapy; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["checkpoint", "events"]}`
+- rank 9: app_id=1124889; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Systematic Analysis of Viral Integration Events in the Human Pan-Genome; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["events"]}`
+- rank 10: app_id=23203; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Epidemiological and genetic prediction of major morbidity and all-cause mortality; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["all"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 15181
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.

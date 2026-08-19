@@ -1,0 +1,755 @@
+# lineage_michaelguo1204_uthesis
+
+A match means only that public evidence links a UKB application to this DMCA-targeted repository lineage. It does not establish wrongdoing by the PI, institution, or application team.
+
+- source_repo: michaelGuo1204/UThesis
+- repo_urls: https://github.com/michaelGuo1204/UThesis
+- notice_ids: 2026-03-27-uk-biobank-3
+- final_match_grade: unresolved
+- lineage_link_method: self_repository
+- lineage_confidence: medium
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b; 40fe3ebe66165482c4355c6935bf722b529989db; 42d07f81104a3d6ac3be8ae2b2c3922d86a92b33; 8236316e1b6953bd0515b03b92ed3281eb9d1b4c; b3900894830bcd8a7e94c98103d0f8cc0d0f2589; af54b1c08dc13a8873bb72cd3568ca155c2c4e2d; 1cb12024bf82702d0a36fb184b581196da75bdaf; cda15d50d73073edf727293a4dce9d82e5aed0d0; 5f456b0a327a2359f1e13a7a6e39dfb5657e5aa6; 10f2494981c34206fa35a71f6afcbd3e2a3b8218
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- earliest_observed_offending_file_commit_sha: 
+- paper_title: 
+- doi: 
+- pubmed_id: 
+- paper_authors: 
+- citation_metadata_files: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- crosswalk_application_count: 
+- crosswalk_identifier_type: 
+
+## Repository Evidence
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/DVT_UKB_R10.geno.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/DVT_UKB_R10.geno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/DVT_UKB_R5.geno.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/DVT_UKB_R5.geno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/DVT_UKB_R2.geno.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/DVT_UKB_R2.geno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/fs2.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/fs2.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/DVT_UKB_R1.geno.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/DVT_UKB_R1.geno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/fs1.csv
+- target_ref: 15702582aea7873a1ed02d00bbe72373afc6215b
+- target_commit_sha: 15702582aea7873a1ed02d00bbe72373afc6215b
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/15702582aea7873a1ed02d00bbe72373afc6215b/GNN/Data/fs1.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/bDataset.csv
+- target_ref: 40fe3ebe66165482c4355c6935bf722b529989db
+- target_commit_sha: 40fe3ebe66165482c4355c6935bf722b529989db
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/40fe3ebe66165482c4355c6935bf722b529989db/GNN/Data/bDataset.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/EADataset.csv
+- target_ref: 42d07f81104a3d6ac3be8ae2b2c3922d86a92b33
+- target_commit_sha: 42d07f81104a3d6ac3be8ae2b2c3922d86a92b33
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/42d07f81104a3d6ac3be8ae2b2c3922d86a92b33/GNN/Data/EADataset.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/beDataset_n.csv
+- target_ref: 8236316e1b6953bd0515b03b92ed3281eb9d1b4c
+- target_commit_sha: 8236316e1b6953bd0515b03b92ed3281eb9d1b4c
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/8236316e1b6953bd0515b03b92ed3281eb9d1b4c/GNN/Data/beDataset_n.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Combined.csv
+- target_ref: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- target_commit_sha: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/b3900894830bcd8a7e94c98103d0f8cc0d0f2589/GNN/Data/Combined.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Phenos.csv
+- target_ref: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- target_commit_sha: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/b3900894830bcd8a7e94c98103d0f8cc0d0f2589/GNN/Data/Phenos.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Phenos_without nan.csv
+- target_ref: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- target_commit_sha: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/b3900894830bcd8a7e94c98103d0f8cc0d0f2589/GNN/Data/Phenos_without%20nan.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/ReducedPheno.csv
+- target_ref: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- target_commit_sha: b3900894830bcd8a7e94c98103d0f8cc0d0f2589
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/b3900894830bcd8a7e94c98103d0f8cc0d0f2589/GNN/Data/ReducedPheno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Enlarged combined.csv
+- target_ref: af54b1c08dc13a8873bb72cd3568ca155c2c4e2d
+- target_commit_sha: af54b1c08dc13a8873bb72cd3568ca155c2c4e2d
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/af54b1c08dc13a8873bb72cd3568ca155c2c4e2d/GNN/Data/Enlarged%20combined.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/fs.csv
+- target_ref: 1cb12024bf82702d0a36fb184b581196da75bdaf
+- target_commit_sha: 1cb12024bf82702d0a36fb184b581196da75bdaf
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/1cb12024bf82702d0a36fb184b581196da75bdaf/GNN/Data/fs.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/fs100.csv
+- target_ref: 1cb12024bf82702d0a36fb184b581196da75bdaf
+- target_commit_sha: 1cb12024bf82702d0a36fb184b581196da75bdaf
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/1cb12024bf82702d0a36fb184b581196da75bdaf/GNN/Data/fs100.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/beDataset.csv
+- target_ref: 42d07f81104a3d6ac3be8ae2b2c3922d86a92b33
+- target_commit_sha: 42d07f81104a3d6ac3be8ae2b2c3922d86a92b33
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/42d07f81104a3d6ac3be8ae2b2c3922d86a92b33/GNN/Data/beDataset.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Label.csv
+- target_ref: 40fe3ebe66165482c4355c6935bf722b529989db
+- target_commit_sha: 40fe3ebe66165482c4355c6935bf722b529989db
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/40fe3ebe66165482c4355c6935bf722b529989db/GNN/Data/Label.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Support/positive.csv
+- target_ref: 40fe3ebe66165482c4355c6935bf722b529989db
+- target_commit_sha: 40fe3ebe66165482c4355c6935bf722b529989db
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/40fe3ebe66165482c4355c6935bf722b529989db/GNN/Data/Support/positive.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Geno.csv
+- target_ref: 40fe3ebe66165482c4355c6935bf722b529989db
+- target_commit_sha: 40fe3ebe66165482c4355c6935bf722b529989db
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/40fe3ebe66165482c4355c6935bf722b529989db/GNN/Data/Geno.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/Data/Labels.csv
+- target_ref: cda15d50d73073edf727293a4dce9d82e5aed0d0
+- target_commit_sha: cda15d50d73073edf727293a4dce9d82e5aed0d0
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/cda15d50d73073edf727293a4dce9d82e5aed0d0/GNN/Data/Labels.csv; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: EM/VEM/snp.json
+- target_ref: 5f456b0a327a2359f1e13a7a6e39dfb5657e5aa6
+- target_commit_sha: 5f456b0a327a2359f1e13a7a6e39dfb5657e5aa6
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: 
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/5f456b0a327a2359f1e13a7a6e39dfb5657e5aa6/EM/VEM/snp.json; https://github.com/michaelGuo1204/UThesis
+
+### https://github.com/michaelGuo1204/UThesis
+- repo_status: not_found_or_removed
+- repo_role: unknown
+- parent_or_source_repo: 
+- offending_file_path: GNN/result/SVCFS Baseline/README.html
+- target_ref: 10f2494981c34206fa35a71f6afcbd3e2a3b8218
+- target_commit_sha: 10f2494981c34206fa35a71f6afcbd3e2a3b8218
+- targeted_commit_author_date: 
+- targeted_commit_committer_date: 
+- earliest_observed_offending_file_commit_date: 
+- github_created_at: 
+- github_pushed_at: 
+- github_fork: 
+- github_parent: 
+- github_source: 
+- repo_owner_public_name: 
+- repo_owner_public_company: 
+- citation_metadata_files: 
+- repository_readme_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/10f2494981c34206fa35a71f6afcbd3e2a3b8218/GNN/result/SVCFS%20Baseline/README.html; https://github.com/michaelGuo1204/UThesis
+- citation_metadata_urls: 
+- metadata_publication_links: 
+- package_metadata_sources: 
+- package_metadata_urls: 
+- wayback_first_capture: 
+- wayback_capture_count: 0
+- wayback_readme_first_capture: 
+- wayback_readme_capture_count: 
+- wayback_readme_urls: 
+- evidence_urls: https://github.com/github/dmca/blob/master/2026/03/2026-03-27-uk-biobank-3.md; https://github.com/michaelGuo1204/UThesis/blob/10f2494981c34206fa35a71f6afcbd3e2a3b8218/GNN/result/SVCFS%20Baseline/README.html; https://github.com/michaelGuo1204/UThesis
+
+## Application Candidates
+- rank 1: app_id=104980; score=9.6; grade=unresolved; evidence_class=C; components=data_type; repo_path_similarity; title=Using UK Biobank data to support discovery research and drug development at Chugai; reason=Evidence is too generic to assign an application.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["support"]}`
+- rank 2: app_id=21988; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=The project of Quantum Pharmacutical company (q-pharm.com); reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["com"]}`
+- rank 3: app_id=28807; score=9.6; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Use of UK Biobank genetic data to support drug discovery and development; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["support"]}`
+- rank 4: app_id=59456; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Using UK Biobank data to support the Novartis drug discovery and development pipeline; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["support"]}`
+- rank 5: app_id=61020; score=9.33; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Phenotypic Consequences of Strong Positive Selective Sweeps; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype"], "evidence_class": "C", "repo_path_tokens": ["positive"]}`
+- rank 6: app_id=135228; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Multimodal AI for Cardiovascular Risk Prediction and Clinical Decision Support; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["support"]}`
+- rank 7: app_id=240789; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=An investigation of phenotypes associated with the SNP rs118174674 affecting LOXHD1.; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["snp"]}`
+- rank 8: app_id=32683; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Combined effect of the genetic and lifestyle determinants of metabolic syndrome on cardiometabolic risk; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["combined"]}`
+- rank 9: app_id=45624; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Combined impact of genetic variants that physically interact in the 3D genome on disease susceptibility; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["combined"]}`
+- rank 10: app_id=45994; score=9.14; grade=candidate; evidence_class=C; components=data_type; repo_path_similarity; title=Using UK Biobank data to support the Novo Nordisk drug discovery and development pipeline; reason=Alternative candidate retained for audit.
+  - score_details: `{"data_types": ["genotype", "phenotype", "hospital_episode_statistics"], "evidence_class": "C", "repo_path_tokens": ["support"]}`
+
+## Application Enrichment Audit
+- final_match_grade: unresolved
+- candidate_app_id: 104980
+- evidence_class: C
+- evidence_components: data_type; repo_path_similarity
+- crosswalk_pub_ids: 
+- crosswalk_app_ids: 
+- public_metadata_seed_rows: 0
+- public_metadata_seed_urls: 
+- match_reason: Evidence is too generic to assign an application.
