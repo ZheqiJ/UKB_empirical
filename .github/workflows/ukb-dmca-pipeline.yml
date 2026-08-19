@@ -11,6 +11,7 @@ on:
         type: choice
         options:
           - tests
+          - stage3_classification
           - timing
           - stage2
           - stage2_5
@@ -76,7 +77,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
   COMMIT_OUTPUTS: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_outputs || github.event_name != 'workflow_dispatch' }}
   REFRESH_STAGE2_SOURCES: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_stage2_sources || false }}
   WEBSITE_LISTING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.website_listing_url || '' }}
@@ -158,6 +159,10 @@ jobs:
       - name: Build timing feasibility outputs
         if: env.RUN_SCOPE == 'timing'
         run: python3 scripts/timing_feasibility.py --source-commit "${GITHUB_SHA}"
+
+      - name: Build Stage 3 RAP exposure classification outputs
+        if: env.RUN_SCOPE == 'stage3_classification'
+        run: python3 scripts/stage3_classify_rap_exposure.py --source-commit "${GITHUB_SHA}"
 
       - name: Prepare application input
         if: env.RUN_SCOPE == 'dmca' || env.RUN_SCOPE == 'all'
