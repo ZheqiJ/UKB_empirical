@@ -1,0 +1,297 @@
+{
+  "cumulative_control_candidate_projects": 438,
+  "did_regressions_run": false,
+  "evidence_dictionary_terms": 25,
+  "fixed_c0_projects": 42,
+  "generated_at_utc": "2026-08-20T04:03:35+00:00",
+  "layer_counts": [
+    {
+      "cumulative_after_policy": 12,
+      "cumulative_before_policy": 30,
+      "cumulative_projects": 42,
+      "cumulative_within_12m_after": 6,
+      "cumulative_within_12m_before": 5,
+      "cumulative_within_6m_after": 3,
+      "cumulative_within_6m_before": 2,
+      "layer": "C0",
+      "new_after_policy": 12,
+      "new_before_policy": 30,
+      "new_evidence_types": "current_conservative_classifier=42",
+      "new_from_previous_classification": "ALREADY_RAP_BOUND=42",
+      "new_projects": 42,
+      "new_within_12m_after": 6,
+      "new_within_12m_before": 5,
+      "new_within_6m_after": 3,
+      "new_within_6m_before": 2
+    },
+    {
+      "cumulative_after_policy": 125,
+      "cumulative_before_policy": 112,
+      "cumulative_projects": 237,
+      "cumulative_within_12m_after": 60,
+      "cumulative_within_12m_before": 14,
+      "cumulative_within_6m_after": 23,
+      "cumulative_within_6m_before": 7,
+      "layer": "C1",
+      "new_after_policy": 113,
+      "new_before_policy": 82,
+      "new_evidence_types": "explicit_sequence_data_wording=195",
+      "new_from_previous_classification": "MIXED=179; NEWLY_RAP_BOUND=13; UNCLEAR=3",
+      "new_projects": 195,
+      "new_within_12m_after": 54,
+      "new_within_12m_before": 9,
+      "new_within_6m_after": 20,
+      "new_within_6m_before": 5
+    },
+    {
+      "cumulative_after_policy": 125,
+      "cumulative_before_policy": 112,
+      "cumulative_projects": 237,
+      "cumulative_within_12m_after": 60,
+      "cumulative_within_12m_before": 14,
+      "cumulative_within_6m_after": 23,
+      "cumulative_within_6m_before": 7,
+      "layer": "C2",
+      "new_after_policy": 0,
+      "new_before_policy": 0,
+      "new_evidence_types": "",
+      "new_from_previous_classification": "",
+      "new_projects": 0,
+      "new_within_12m_after": 0,
+      "new_within_12m_before": 0,
+      "new_within_6m_after": 0,
+      "new_within_6m_before": 0
+    },
+    {
+      "cumulative_after_policy": 137,
+      "cumulative_before_policy": 130,
+      "cumulative_projects": 267,
+      "cumulative_within_12m_after": 64,
+      "cumulative_within_12m_before": 15,
+      "cumulative_within_6m_after": 23,
+      "cumulative_within_6m_before": 7,
+      "layer": "C3",
+      "new_after_policy": 12,
+      "new_before_policy": 18,
+      "new_evidence_types": "broader_contextual_sequence_evidence=30",
+      "new_from_previous_classification": "NEWLY_RAP_BOUND=23; UNCLEAR=7",
+      "new_projects": 30,
+      "new_within_12m_after": 4,
+      "new_within_12m_before": 1,
+      "new_within_6m_after": 0,
+      "new_within_6m_before": 0
+    },
+    {
+      "cumulative_after_policy": 138,
+      "cumulative_before_policy": 130,
+      "cumulative_projects": 268,
+      "cumulative_within_12m_after": 64,
+      "cumulative_within_12m_before": 15,
+      "cumulative_within_6m_after": 23,
+      "cumulative_within_6m_before": 7,
+      "layer": "C4",
+      "new_after_policy": 1,
+      "new_before_policy": 0,
+      "new_evidence_types": "other_pre_policy_rap_only_product=1",
+      "new_from_previous_classification": "MIXED=1",
+      "new_projects": 1,
+      "new_within_12m_after": 0,
+      "new_within_12m_before": 0,
+      "new_within_6m_after": 0,
+      "new_within_6m_before": 0
+    },
+    {
+      "cumulative_after_policy": 138,
+      "cumulative_before_policy": 131,
+      "cumulative_projects": 269,
+      "cumulative_within_12m_after": 64,
+      "cumulative_within_12m_before": 15,
+      "cumulative_within_6m_after": 23,
+      "cumulative_within_6m_before": 7,
+      "layer": "C5",
+      "new_after_policy": 0,
+      "new_before_policy": 1,
+      "new_evidence_types": "direct_pre_policy_rap_use_evidence=1",
+      "new_from_previous_classification": "NEWLY_RAP_BOUND=1",
+      "new_projects": 1,
+      "new_within_12m_after": 0,
+      "new_within_12m_before": 0,
+      "new_within_6m_after": 0,
+      "new_within_6m_before": 0
+    },
+    {
+      "cumulative_after_policy": 141,
+      "cumulative_before_policy": 297,
+      "cumulative_projects": 438,
+      "cumulative_within_12m_after": 67,
+      "cumulative_within_12m_before": 25,
+      "cumulative_within_6m_after": 25,
+      "cumulative_within_6m_before": 11,
+      "layer": "C6",
+      "new_after_policy": 3,
+      "new_before_policy": 166,
+      "new_evidence_types": "broader_contextual_sequence_evidence=27; explicit_sequence_data_wording=141; other_pre_policy_rap_only_product=1",
+      "new_from_previous_classification": "NEWLY_RAP_BOUND=135; UNCLEAR=34",
+      "new_projects": 169,
+      "new_within_12m_after": 3,
+      "new_within_12m_before": 10,
+      "new_within_6m_after": 2,
+      "new_within_6m_before": 4
+    }
+  ],
+  "manual_review_candidate_projects": 379,
+  "outcome_analysis_run": false,
+  "policy_date": "2024-07-05",
+  "previous_class_counts": [
+    {
+      "layer": "C0",
+      "new_projects": 42,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C0",
+      "new_projects": 0,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C0",
+      "new_projects": 0,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C0",
+      "new_projects": 0,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C1",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C1",
+      "new_projects": 13,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C1",
+      "new_projects": 179,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C1",
+      "new_projects": 3,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C2",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C2",
+      "new_projects": 0,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C2",
+      "new_projects": 0,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C2",
+      "new_projects": 0,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C3",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C3",
+      "new_projects": 23,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C3",
+      "new_projects": 0,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C3",
+      "new_projects": 7,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C4",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C4",
+      "new_projects": 0,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C4",
+      "new_projects": 1,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C4",
+      "new_projects": 0,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C5",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C5",
+      "new_projects": 1,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C5",
+      "new_projects": 0,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C5",
+      "new_projects": 0,
+      "previous_classification": "UNCLEAR"
+    },
+    {
+      "layer": "C6",
+      "new_projects": 0,
+      "previous_classification": "ALREADY_RAP_BOUND"
+    },
+    {
+      "layer": "C6",
+      "new_projects": 135,
+      "previous_classification": "NEWLY_RAP_BOUND"
+    },
+    {
+      "layer": "C6",
+      "new_projects": 0,
+      "previous_classification": "MIXED"
+    },
+    {
+      "layer": "C6",
+      "new_projects": 34,
+      "previous_classification": "UNCLEAR"
+    }
+  ],
+  "publication_linked_app_ids": 2497,
+  "schema19_file": "data/raw/ukb_schema19_publications.tsv",
+  "schema19_file_sha256": "8da223abd5acf86a5971999057f4fb4e0eed146c061396e90e3a211b4bc46ee7",
+  "schema24_file": "data/raw/ukb_schema24_publication_applications.tsv",
+  "schema24_file_sha256": "0698b18dbebca1adc1df6472165fec2556498fc98ff9aefbf2100818b692483f",
+  "source_commit": "651b16d06071b73df93e240aef701a072549b7cd",
+  "stage": "stage3_control_expansion_frontier_only",
+  "stage3_classification_file": "data/processed/stage3_project_rap_exposure_classification.csv",
+  "stage3_classification_file_sha256": "432cbfbe9c7dca9085cb7ba52a5f2b25bf16cfe90774fc8631fbd3be7980e420",
+  "working_universe_projects": 6935
+}

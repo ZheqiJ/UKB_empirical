@@ -1,0 +1,8 @@
+layer,new_projects,cumulative_projects,new_before_policy,new_after_policy,cumulative_before_policy,cumulative_after_policy,new_within_6m_before,new_within_6m_after,new_within_12m_before,new_within_12m_after,cumulative_within_6m_before,cumulative_within_6m_after,cumulative_within_12m_before,cumulative_within_12m_after,new_from_previous_classification,new_evidence_types
+C0,42,42,30,12,30,12,2,3,5,6,2,3,5,6,ALREADY_RAP_BOUND=42,current_conservative_classifier=42
+C1,195,237,82,113,112,125,5,20,9,54,7,23,14,60,MIXED=179; NEWLY_RAP_BOUND=13; UNCLEAR=3,explicit_sequence_data_wording=195
+C2,0,237,0,0,112,125,0,0,0,0,7,23,14,60,,
+C3,30,267,18,12,130,137,0,0,1,4,7,23,15,64,NEWLY_RAP_BOUND=23; UNCLEAR=7,broader_contextual_sequence_evidence=30
+C4,1,268,0,1,130,138,0,0,0,0,7,23,15,64,MIXED=1,other_pre_policy_rap_only_product=1
+C5,1,269,1,0,131,138,0,0,0,0,7,23,15,64,NEWLY_RAP_BOUND=1,direct_pre_policy_rap_use_evidence=1
+C6,169,438,166,3,297,141,4,2,10,3,11,25,25,67,NEWLY_RAP_BOUND=135; UNCLEAR=34,broader_contextual_sequence_evidence=27; explicit_sequence_data_wording=141; other_pre_policy_rap_only_product=1
