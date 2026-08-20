@@ -11,6 +11,7 @@ on:
         type: choice
         options:
           - tests
+          - fast_design_regression
           - stage3_control_expansion
           - stage3_classification
           - timing
@@ -78,7 +79,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[fast-design-regression]') && 'fast_design_regression' || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
   COMMIT_OUTPUTS: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_outputs || github.event_name != 'workflow_dispatch' }}
   REFRESH_STAGE2_SOURCES: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_stage2_sources || false }}
   WEBSITE_LISTING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.website_listing_url || '' }}
@@ -168,6 +169,10 @@ jobs:
       - name: Build Stage 3 control expansion frontier outputs
         if: env.RUN_SCOPE == 'stage3_control_expansion'
         run: python3 scripts/stage3_control_expansion.py --source-commit "${GITHUB_SHA}"
+
+      - name: Build Stage 4/5 fast design and regression outputs
+        if: env.RUN_SCOPE == 'fast_design_regression'
+        run: python3 scripts/stage4_5_fast_design_regression.py --source-commit "${GITHUB_SHA}"
 
       - name: Prepare application input
         if: env.RUN_SCOPE == 'dmca' || env.RUN_SCOPE == 'all'
