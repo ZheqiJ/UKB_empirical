@@ -1,0 +1,9 @@
+frequency,control_definition,outcome,model,tested_coefficients,reference_period,statistic_chi2,df,p_value,verdict,warning
+quarter,CONTROL_C0,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,16.166159,7,0.023641,WARNING,
+quarter,CONTROL_C0,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,15.265943,7,0.032738,WARNING,
+quarter,CONTROL_C01,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,12.776543,7,0.077744,PASS,
+quarter,CONTROL_C01,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,14.771565,7,0.039042,WARNING,
+quarter,CONTROL_C03,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,13.681310,7,0.057149,PASS,
+quarter,CONTROL_C03,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,12.237506,7,0.093014,PASS,
+quarter,CONTROL_C05,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,12.747026,7,0.078517,PASS,
+quarter,CONTROL_C05,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,9.785065,7,0.201084,PASS,
