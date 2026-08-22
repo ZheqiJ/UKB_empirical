@@ -6,7 +6,7 @@
   ],
   "policy_date": "2024-07-05",
   "source_commit": "0336c4ed5bdc8ecec64b77a4e0f7e4caa7f88924",
-  "source_file": "data/processed/stage2_5_app_start_dates.csv",
+  "source_file": "data/intermediate/start_date_matching/stage2_5_app_start_dates.csv",
   "source_file_sha256": "7f795fee313ff36e0a41f6a35b15348e258786c30de61680bd531b13b147d1d1",
   "unmatched_schema27_audit_records": 132,
   "window_counts": [

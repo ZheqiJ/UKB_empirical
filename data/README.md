@@ -1,5 +1,13 @@
 # Input Data
 
+Data are organized by research use:
+
+- `raw/`: source snapshots used by remote workflows.
+- `analysis/`: main regression and analysis datasets. Start here for current
+  empirical results.
+- `intermediate/`: construction, matching, classification, timing, and fast
+  checkpoint outputs kept for audit and reproducibility.
+
 Place the UK Biobank approved applications TSV here only if you want a
 repo-local input copy.
 

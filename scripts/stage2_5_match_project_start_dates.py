@@ -2,7 +2,7 @@
 """Match UK Biobank website project start dates to Schema 27 applications.
 
 Input:
-- data/processed/stage2_master_projects.csv
+- data/intermediate/stage2_universe/stage2_master_projects.csv
 - data/raw/ukb_projects_website_listing.csv
 
 The website listing does not expose Application ID directly. It exposes project
@@ -27,21 +27,22 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MASTER = ROOT / "data" / "processed" / "stage2_master_projects.csv"
+START_DATE_DIR = ROOT / "data" / "intermediate" / "start_date_matching"
+MASTER = ROOT / "data" / "intermediate" / "stage2_universe" / "stage2_master_projects.csv"
 WEBSITE_LISTING = ROOT / "data" / "raw" / "ukb_projects_website_listing.csv"
 UNMATCHED_DETAIL_RESULTS = (
-    ROOT / "data" / "processed" / "stage2_5_website_unmatched_detail_results.csv"
+    START_DATE_DIR / "stage2_5_website_unmatched_detail_results.csv"
 )
 
-OUT_APP_DATES = ROOT / "data" / "processed" / "stage2_5_app_start_dates.csv"
-OUT_WEBSITE_MATCHES = ROOT / "data" / "processed" / "stage2_5_website_listing_matches.csv"
-OUT_WEBSITE_UNMATCHED = ROOT / "data" / "processed" / "stage2_5_website_unmatched.csv"
-OUT_SCHEMA_UNMATCHED = ROOT / "data" / "processed" / "stage2_5_schema27_unmatched.csv"
-OUT_YEAR_COUNTS = ROOT / "data" / "processed" / "stage2_5_start_year_counts.csv"
-OUT_SUMMARY = ROOT / "data" / "processed" / "stage2_5_start_date_summary.json"
-DETAIL_VALIDATION_PLAN = ROOT / "data" / "processed" / "stage2_5_detail_validation_plan.csv"
+OUT_APP_DATES = START_DATE_DIR / "stage2_5_app_start_dates.csv"
+OUT_WEBSITE_MATCHES = START_DATE_DIR / "stage2_5_website_listing_matches.csv"
+OUT_WEBSITE_UNMATCHED = START_DATE_DIR / "stage2_5_website_unmatched.csv"
+OUT_SCHEMA_UNMATCHED = START_DATE_DIR / "stage2_5_schema27_unmatched.csv"
+OUT_YEAR_COUNTS = START_DATE_DIR / "stage2_5_start_year_counts.csv"
+OUT_SUMMARY = START_DATE_DIR / "stage2_5_start_date_summary.json"
+DETAIL_VALIDATION_PLAN = START_DATE_DIR / "stage2_5_detail_validation_plan.csv"
 DETAIL_VALIDATION_RESULTS = (
-    ROOT / "data" / "processed" / "stage2_5_detail_validation_results.csv"
+    START_DATE_DIR / "stage2_5_detail_validation_results.csv"
 )
 REPORT = ROOT / "reports" / "stage2_5_start_dates.md"
 

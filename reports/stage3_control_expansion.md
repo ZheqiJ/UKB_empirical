@@ -132,9 +132,9 @@ Source commit: `651b16d06071b73df93e240aef701a072549b7cd`.
 
 ## Outputs
 
-- `data/processed/stage3_control_expansion_project_review.csv`
-- `data/processed/stage3_control_expansion_evidence_dictionary.csv`
-- `data/processed/stage3_control_expansion_layer_counts.csv`
-- `data/processed/stage3_control_expansion_new_by_previous_classification.csv`
-- `data/processed/stage3_control_expansion_examples.csv`
-- `data/processed/stage3_control_expansion_summary.json`
+- `data/intermediate/control_expansion/stage3_control_expansion_project_review.csv`
+- `data/intermediate/control_expansion/stage3_control_expansion_evidence_dictionary.csv`
+- `data/intermediate/control_expansion/stage3_control_expansion_layer_counts.csv`
+- `data/intermediate/control_expansion/stage3_control_expansion_new_by_previous_classification.csv`
+- `data/intermediate/control_expansion/stage3_control_expansion_examples.csv`
+- `data/intermediate/control_expansion/stage3_control_expansion_summary.json`

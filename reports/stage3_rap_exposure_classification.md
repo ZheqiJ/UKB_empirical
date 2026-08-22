@@ -153,10 +153,10 @@ without WGS/WES, physical-sample language, or pre-2021 sequencing contexts.
 
 ## Outputs
 
-- `data/processed/stage3_project_rap_exposure_classification.csv`
-- `data/processed/stage3_rap_exposure_counts.csv`
-- `data/processed/stage3_rap_exposure_counts_by_policy_period.csv`
-- `data/processed/stage3_rap_exposure_modality_counts.csv`
-- `data/processed/stage3_rap_exposure_examples.csv`
-- `data/processed/stage3_modality_access_matrix.csv`
-- `data/processed/stage3_rap_exposure_summary.json`
+- `data/intermediate/rap_classification/stage3_project_rap_exposure_classification.csv`
+- `data/intermediate/rap_classification/stage3_rap_exposure_counts.csv`
+- `data/intermediate/rap_classification/stage3_rap_exposure_counts_by_policy_period.csv`
+- `data/intermediate/rap_classification/stage3_rap_exposure_modality_counts.csv`
+- `data/intermediate/rap_classification/stage3_rap_exposure_examples.csv`
+- `data/intermediate/rap_classification/stage3_modality_access_matrix.csv`
+- `data/intermediate/rap_classification/stage3_rap_exposure_summary.json`

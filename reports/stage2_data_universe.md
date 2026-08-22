@@ -23,12 +23,12 @@ not contain participant-level UK Biobank data.
 
 ## Produced Files
 
-- `data/processed/stage2_master_projects.csv`
-- `data/processed/stage2_source_summary.csv`
-- `data/processed/stage2_variable_coverage.csv`
-- `data/processed/stage2_linkage_summary.csv`
-- `data/processed/stage2_schema27_duplicate_app_ids.csv`
-- `data/processed/stage2_schema4_unmatched_returned_datasets.csv`
-- `data/processed/stage2_publication_year_counts.csv`
-- `data/processed/stage2_application_publication_count_distribution.csv`
+- `data/intermediate/stage2_universe/stage2_master_projects.csv`
+- `data/intermediate/stage2_universe/stage2_source_summary.csv`
+- `data/intermediate/stage2_universe/stage2_variable_coverage.csv`
+- `data/intermediate/stage2_universe/stage2_linkage_summary.csv`
+- `data/intermediate/stage2_universe/stage2_schema27_duplicate_app_ids.csv`
+- `data/intermediate/stage2_universe/stage2_schema4_unmatched_returned_datasets.csv`
+- `data/intermediate/stage2_universe/stage2_publication_year_counts.csv`
+- `data/intermediate/stage2_universe/stage2_application_publication_count_distribution.csv`
 - `data/raw/stage2_source_manifest.json`

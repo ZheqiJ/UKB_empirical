@@ -30,12 +30,14 @@ publication outcomes**.
 
 Key reports:
 
-- `reports/stage6_design1_supervisor_memo.md`: concise supervisor-facing memo.
-- `reports/stage6_panel_results.md`: full Design 1 quarterly result report.
-- `reports/stage6_empirical_design_review.md`: implementation and empirical
+- `reports/supervisor/design1_quarterly_publication_supervisor_memo.md`: concise
+  supervisor-facing memo.
+- `reports/design1_quarterly_publication_results.md`: full Design 1 quarterly
+  result report.
+- `reports/design1_empirical_design_review.md`: implementation and empirical
   diagnostic review.
-- `data/processed/stage6_panel_regression_results.csv`: Design 1 regression
-  table.
+- `data/analysis/design1_quarterly_publication/design1_regression_results.csv`:
+  Design 1 regression table.
 
 Generated reports and data are stored in git on `main`; local copies can be
 deleted and restored from GitHub when needed.
@@ -46,9 +48,15 @@ deleted and restored from GitHub when needed.
   provisional RAP exposure classification, publication panels, and DMCA matching.
 - `tests/`: unit tests for the pipeline components.
 - `data/raw/`: public input snapshots used by the remote workflow.
-- `data/processed/`: generated stage outputs.
+- `data/analysis/`: main analysis datasets and regression outputs used for the
+  current empirical designs.
+- `data/intermediate/`: construction, audit, timing, classification, and fast
+  checkpoint outputs retained for reproducibility but not treated as the main
+  regression tables.
 - `figures/`: generated figures.
 - `reports/`: generated reports and empirical memos.
+- `reports/supervisor/`: short supervisor-facing memos with design names rather
+  than pipeline-stage names.
 - `ukb_dmca/`: DMCA-specific notices, lineage evidence, matching outputs, and
   the DMCA methodology notes.
 
@@ -61,7 +69,7 @@ Open the `UKB Remote Pipeline` workflow in GitHub Actions and choose a
 - `stage3_classification`: provisional RAP exposure classification.
 - `stage3_control_expansion`: control-candidate expansion frontier.
 - `fast_design_regression`: earlier fast publication/DMCA checkpoint.
-- `stage6_quarterly_panel_regression`: Design 1 quarterly publication DID.
+- `design1_quarterly_publication`: Design 1 quarterly publication DID.
 - `dmca`: UKB-DMCA repository lineage and application matching.
 - `all`: public project universe, start-date matching, and DMCA pipeline.
 

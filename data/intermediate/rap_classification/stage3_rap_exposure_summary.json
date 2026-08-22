@@ -66,7 +66,7 @@
   "excluded_unmatched_schema27_records": 132,
   "generated_at_utc": "2026-08-19T13:17:33+00:00",
   "manual_review_recommended_projects": 2421,
-  "master_project_file": "data/processed/stage2_master_projects.csv",
+  "master_project_file": "data/intermediate/stage2_universe/stage2_master_projects.csv",
   "master_project_file_sha256": "3d6e7550a60fff0d0d3fa8722fa8bcde82fce800adb480c3a274e9bc685580dc",
   "missing_master_rows": 0,
   "missing_website_rows": 0,
@@ -142,7 +142,7 @@
   "strict_sequence_context_date": "2021-11-01",
   "website_listing_file": "data/raw/ukb_projects_website_listing.csv",
   "website_listing_file_sha256": "84e70a7bf31eedac9caf35cecfb87e182702ffed452438ded2bca7ee1a99961a",
-  "working_universe_file": "data/processed/timing_working_research_project_universe.csv",
+  "working_universe_file": "data/intermediate/timing_feasibility/timing_working_research_project_universe.csv",
   "working_universe_file_sha256": "0333eda01275573cda1798790886fcce71b570d2cedb3dcc3d24987ff5f13699",
   "working_universe_projects": 6935
 }

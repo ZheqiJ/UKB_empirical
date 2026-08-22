@@ -15,7 +15,9 @@ from xml.sax.saxutils import escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "data" / "processed" / "stage2_5_app_start_dates.csv"
+DEFAULT_INPUT = (
+    ROOT / "data" / "intermediate" / "start_date_matching" / "stage2_5_app_start_dates.csv"
+)
 DEFAULT_OUTPUT_DIR = ROOT
 POLICY_DATE = date(2024, 7, 5)
 START_YEAR = 2023
@@ -180,13 +182,14 @@ def window_count_rows(start_dates: list[date]) -> list[dict[str, object]]:
 
 
 def output_paths(output_dir: Path) -> TimingPaths:
+    processed = output_dir / "data" / "intermediate" / "timing_feasibility"
     return TimingPaths(
-        working_universe=output_dir / "data" / "processed" / "timing_working_research_project_universe.csv",
-        unmatched_audit=output_dir / "data" / "processed" / "timing_unmatched_schema27_audit.csv",
-        monthly_counts=output_dir / "data" / "processed" / "timing_monthly_project_starts_2023_2025.csv",
-        quarterly_counts=output_dir / "data" / "processed" / "timing_quarterly_project_starts_2023_2025.csv",
-        window_counts=output_dir / "data" / "processed" / "timing_policy_window_counts.csv",
-        summary_json=output_dir / "data" / "processed" / "timing_feasibility_summary.json",
+        working_universe=processed / "timing_working_research_project_universe.csv",
+        unmatched_audit=processed / "timing_unmatched_schema27_audit.csv",
+        monthly_counts=processed / "timing_monthly_project_starts_2023_2025.csv",
+        quarterly_counts=processed / "timing_quarterly_project_starts_2023_2025.csv",
+        window_counts=processed / "timing_policy_window_counts.csv",
+        summary_json=processed / "timing_feasibility_summary.json",
         report=output_dir / "reports" / "timing_feasibility.md",
         figure=output_dir / "figures" / "timing_project_starts_monthly_2023_2025.svg",
     )

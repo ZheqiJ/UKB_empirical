@@ -21,9 +21,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_WORKING_UNIVERSE = (
-    ROOT / "data" / "processed" / "timing_working_research_project_universe.csv"
+    ROOT
+    / "data"
+    / "intermediate"
+    / "timing_feasibility"
+    / "timing_working_research_project_universe.csv"
 )
-DEFAULT_MASTER = ROOT / "data" / "processed" / "stage2_master_projects.csv"
+DEFAULT_MASTER = ROOT / "data" / "intermediate" / "stage2_universe" / "stage2_master_projects.csv"
 DEFAULT_WEBSITE_LISTING = ROOT / "data" / "raw" / "ukb_projects_website_listing.csv"
 DEFAULT_OUTPUT_DIR = ROOT
 POLICY_DATE = date(2024, 7, 5)
@@ -499,20 +503,15 @@ def parse_iso_date(value: str) -> date:
 
 
 def output_paths(output_dir: Path) -> Stage3Paths:
+    processed = output_dir / "data" / "intermediate" / "rap_classification"
     return Stage3Paths(
-        project_classification=(
-            output_dir / "data" / "processed" / "stage3_project_rap_exposure_classification.csv"
-        ),
-        class_counts=output_dir / "data" / "processed" / "stage3_rap_exposure_counts.csv",
-        period_counts=(
-            output_dir / "data" / "processed" / "stage3_rap_exposure_counts_by_policy_period.csv"
-        ),
-        modality_counts=(
-            output_dir / "data" / "processed" / "stage3_rap_exposure_modality_counts.csv"
-        ),
-        examples=output_dir / "data" / "processed" / "stage3_rap_exposure_examples.csv",
-        access_matrix=output_dir / "data" / "processed" / "stage3_modality_access_matrix.csv",
-        summary_json=output_dir / "data" / "processed" / "stage3_rap_exposure_summary.json",
+        project_classification=processed / "stage3_project_rap_exposure_classification.csv",
+        class_counts=processed / "stage3_rap_exposure_counts.csv",
+        period_counts=processed / "stage3_rap_exposure_counts_by_policy_period.csv",
+        modality_counts=processed / "stage3_rap_exposure_modality_counts.csv",
+        examples=processed / "stage3_rap_exposure_examples.csv",
+        access_matrix=processed / "stage3_modality_access_matrix.csv",
+        summary_json=processed / "stage3_rap_exposure_summary.json",
         report=output_dir / "reports" / "stage3_rap_exposure_classification.md",
     )
 

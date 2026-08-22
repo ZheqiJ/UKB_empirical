@@ -145,14 +145,14 @@ control definition.
 
 ## Output Files
 
-- `data/processed/stage4_fast_application_outcomes.csv`
-- `data/processed/stage4_fast_publication_events.csv`
-- `data/processed/stage4_fast_publication_period_panel.csv`
-- `data/processed/stage4_fast_dmca_crosswalk.csv`
-- `data/processed/stage4_fast_dmca_unmatched_apps.csv`
-- `data/processed/stage5_fast_regression_results.csv`
-- `data/processed/stage5_fast_group_means.csv`
-- `data/processed/stage5_fast_dmca_2x2.csv`
+- `data/analysis/design1_quarterly_publication/project_outcomes_input.csv`
+- `data/intermediate/fast_pipeline/stage4_fast_publication_events.csv`
+- `data/intermediate/fast_pipeline/stage4_fast_publication_period_panel.csv`
+- `data/intermediate/fast_pipeline/stage4_fast_dmca_crosswalk.csv`
+- `data/intermediate/fast_pipeline/stage4_fast_dmca_unmatched_apps.csv`
+- `data/intermediate/fast_pipeline/stage5_fast_regression_results.csv`
+- `data/intermediate/fast_pipeline/stage5_fast_group_means.csv`
+- `data/intermediate/fast_pipeline/stage5_fast_dmca_2x2.csv`
 - `figures/stage5_publication_did.png`
 - `figures/stage5_publication_cohort.png`
 - `figures/stage5_dmca_rates.png`

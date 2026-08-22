@@ -1,4 +1,4 @@
-# Stage 6 Quarterly Panel Publication Results
+# Design 1 Quarterly Publication Results
 
 Source commit: `8465974b8998161d795e553a08dd737aa4b3e83a`
 Policy date: `2024-07-05`

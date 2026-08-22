@@ -32,9 +32,15 @@ P2_ENTRY_PRE_END = date(2024, 7, 4)
 P2_ENTRY_POST_START = date(2024, 7, 5)
 P2_ENTRY_POST_END = date(2025, 7, 4)
 
-DEFAULT_TIMING_METADATA = ROOT / "data" / "processed" / "timing_working_research_project_universe.csv"
-DEFAULT_STAGE3 = ROOT / "data" / "processed" / "stage3_project_rap_exposure_classification.csv"
-DEFAULT_CONTROL_EXPANSION = ROOT / "data" / "processed" / "stage3_control_expansion_project_review.csv"
+DEFAULT_TIMING_METADATA = (
+    ROOT / "data" / "intermediate" / "timing_feasibility" / "timing_working_research_project_universe.csv"
+)
+DEFAULT_STAGE3 = (
+    ROOT / "data" / "intermediate" / "rap_classification" / "stage3_project_rap_exposure_classification.csv"
+)
+DEFAULT_CONTROL_EXPANSION = (
+    ROOT / "data" / "intermediate" / "control_expansion" / "stage3_control_expansion_project_review.csv"
+)
 DEFAULT_SCHEMA19 = ROOT / "data" / "raw" / "ukb_schema19_publications.tsv"
 DEFAULT_SCHEMA24 = ROOT / "data" / "raw" / "ukb_schema24_publication_applications.tsv"
 DEFAULT_DMCA_MANUAL_REVIEW = ROOT / "ukb_dmca" / "ukb_dmca_manual_review.csv"
@@ -117,11 +123,12 @@ class FastPaths:
 
 
 def output_paths(output_dir: Path) -> FastPaths:
-    processed = output_dir / "data" / "processed"
+    analysis = output_dir / "data" / "analysis" / "design1_quarterly_publication"
+    processed = output_dir / "data" / "intermediate" / "fast_pipeline"
     reports = output_dir / "reports"
     figures = output_dir / "figures"
     return FastPaths(
-        application_outcomes=processed / "stage4_fast_application_outcomes.csv",
+        application_outcomes=analysis / "project_outcomes_input.csv",
         publication_events=processed / "stage4_fast_publication_events.csv",
         publication_period_panel=processed / "stage4_fast_publication_period_panel.csv",
         dmca_crosswalk=processed / "stage4_fast_dmca_crosswalk.csv",
@@ -1159,14 +1166,14 @@ def build_report(
         "",
         "## Output Files",
         "",
-        "- `data/processed/stage4_fast_application_outcomes.csv`",
-        "- `data/processed/stage4_fast_publication_events.csv`",
-        "- `data/processed/stage4_fast_publication_period_panel.csv`",
-        "- `data/processed/stage4_fast_dmca_crosswalk.csv`",
-        "- `data/processed/stage4_fast_dmca_unmatched_apps.csv`",
-        "- `data/processed/stage5_fast_regression_results.csv`",
-        "- `data/processed/stage5_fast_group_means.csv`",
-        "- `data/processed/stage5_fast_dmca_2x2.csv`",
+        "- `data/analysis/design1_quarterly_publication/project_outcomes_input.csv`",
+        "- `data/intermediate/fast_pipeline/stage4_fast_publication_events.csv`",
+        "- `data/intermediate/fast_pipeline/stage4_fast_publication_period_panel.csv`",
+        "- `data/intermediate/fast_pipeline/stage4_fast_dmca_crosswalk.csv`",
+        "- `data/intermediate/fast_pipeline/stage4_fast_dmca_unmatched_apps.csv`",
+        "- `data/intermediate/fast_pipeline/stage5_fast_regression_results.csv`",
+        "- `data/intermediate/fast_pipeline/stage5_fast_group_means.csv`",
+        "- `data/intermediate/fast_pipeline/stage5_fast_dmca_2x2.csv`",
         "- `figures/stage5_publication_did.png`",
         "- `figures/stage5_publication_cohort.png`",
         "- `figures/stage5_dmca_rates.png`",

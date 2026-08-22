@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build Stage 6 quarterly publication panel design and exploratory regressions.
+"""Build Design 1 quarterly publication panel and exploratory regressions.
 
-Stage 6 preserves the fast Stage 4/5 checkpoint. It moves the publication
+Design 1 preserves the fast Stage 4/5 checkpoint. It moves the publication
 analysis to a risk-set application-quarter panel while keeping treatment/control
 definitions provisional. Monthly helpers are retained for the next robustness
 design, but the default remote scope intentionally runs the quarterly design
@@ -35,7 +35,9 @@ REFERENCE_QUARTER = "2024Q2"
 TRANSITION_MONTH = "2024-07"
 MONTHLY_STABLE_POST_START = "2024-08"
 
-DEFAULT_APP_OUTCOMES = ROOT / "data" / "processed" / "stage4_fast_application_outcomes.csv"
+DEFAULT_APP_OUTCOMES = (
+    ROOT / "data" / "analysis" / "design1_quarterly_publication" / "project_outcomes_input.csv"
+)
 DEFAULT_SCHEMA19 = ROOT / "data" / "raw" / "ukb_schema19_publications.tsv"
 DEFAULT_SCHEMA24 = ROOT / "data" / "raw" / "ukb_schema24_publication_applications.tsv"
 DEFAULT_OUTPUT_DIR = ROOT
@@ -82,29 +84,29 @@ class Stage6Paths:
 
 
 def output_paths(output_dir: Path) -> Stage6Paths:
-    processed = output_dir / "data" / "processed"
+    processed = output_dir / "data" / "analysis" / "design1_quarterly_publication"
     reports = output_dir / "reports"
     figures = output_dir / "figures"
     return Stage6Paths(
-        quarter_panel=processed / "stage6_application_quarter_panel.csv",
-        month_panel=processed / "stage6_application_month_panel.csv",
-        risk_diagnostics=processed / "stage6_panel_risk_set_diagnostics.csv",
-        regression_results=processed / "stage6_panel_regression_results.csv",
-        event_study_results=processed / "stage6_event_study_results.csv",
-        pretrend_tests=processed / "stage6_pretrend_tests.csv",
-        control_sensitivity=processed / "stage6_control_sensitivity.csv",
-        timing_audit=processed / "stage6_publication_timing_audit.csv",
-        summary_json=processed / "stage6_panel_summary.json",
-        panel_report=reports / "stage6_panel_results.md",
-        review_report=reports / "stage6_empirical_design_review.md",
-        quarterly_raw_count=figures / "stage6_quarterly_raw_publication_count.png",
-        quarterly_raw_any=figures / "stage6_quarterly_raw_any_publication.png",
-        quarterly_event_count=figures / "stage6_quarterly_event_study_count.png",
-        quarterly_event_any=figures / "stage6_quarterly_event_study_any.png",
-        monthly_timing_count=figures / "stage6_monthly_timing_count.png",
-        monthly_timing_any=figures / "stage6_monthly_timing_any.png",
-        at_risk_sample_size=figures / "stage6_at_risk_sample_size.png",
-        project_age_by_group=figures / "stage6_project_age_by_group.png",
+        quarter_panel=processed / "design1_quarterly_publication_panel.csv",
+        month_panel=processed / "design1_monthly_publication_panel.csv",
+        risk_diagnostics=processed / "design1_risk_set_diagnostics.csv",
+        regression_results=processed / "design1_regression_results.csv",
+        event_study_results=processed / "design1_event_study_results.csv",
+        pretrend_tests=processed / "design1_pretrend_tests.csv",
+        control_sensitivity=processed / "design1_control_sensitivity.csv",
+        timing_audit=processed / "design1_publication_timing_audit.csv",
+        summary_json=processed / "design1_summary.json",
+        panel_report=reports / "design1_quarterly_publication_results.md",
+        review_report=reports / "design1_empirical_design_review.md",
+        quarterly_raw_count=figures / "design1_quarterly_raw_publication_count.png",
+        quarterly_raw_any=figures / "design1_quarterly_raw_any_publication.png",
+        quarterly_event_count=figures / "design1_quarterly_event_study_count.png",
+        quarterly_event_any=figures / "design1_quarterly_event_study_any.png",
+        monthly_timing_count=figures / "design1_monthly_timing_count.png",
+        monthly_timing_any=figures / "design1_monthly_timing_any.png",
+        at_risk_sample_size=figures / "design1_at_risk_sample_size.png",
+        project_age_by_group=figures / "design1_project_age_by_group.png",
     )
 
 
@@ -1561,7 +1563,7 @@ def build_reports(
     post_summaries = [row for row in diagnostics_rows if row.get("record_type") == "post_window_summary" and row.get("control_definition") == "CONTROL_C05"]
 
     report = [
-        "# Stage 6 Quarterly Panel Publication Results",
+        "# Design 1 Quarterly Publication Results",
         "",
         f"Source commit: `{source_commit or 'not recorded'}`",
         f"Policy date: `{POLICY_DATE.isoformat()}`",
@@ -1667,7 +1669,7 @@ def build_reports(
     r2 = verdicts["pretrend"]
     r3 = verdicts["final"]
     review = [
-        "# Stage 6 Empirical Design Review",
+        "# Design 1 Empirical Design Review",
         "",
         "This report records implementation-generated empirical diagnostics in the",
         "same PASS / WARNING / FAIL structure used by the independent review agent.",

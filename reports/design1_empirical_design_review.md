@@ -1,4 +1,4 @@
-# Stage 6 Empirical Design Review
+# Design 1 Empirical Design Review
 
 This report records implementation-generated empirical diagnostics in the
 same PASS / WARNING / FAIL structure used by the independent review agent.

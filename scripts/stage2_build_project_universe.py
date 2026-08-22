@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
-PROCESSED = ROOT / "data" / "processed"
+PROCESSED = ROOT / "data" / "intermediate" / "stage2_universe"
 REPORTS = ROOT / "reports"
 
 SCHEMA27 = RAW / "ukb_schema27_applications.tsv"

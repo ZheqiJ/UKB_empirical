@@ -24,7 +24,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POLICY_DATE = date(2024, 7, 5)
 DEFAULT_STAGE3_CLASSIFICATION = (
-    ROOT / "data" / "processed" / "stage3_project_rap_exposure_classification.csv"
+    ROOT
+    / "data"
+    / "intermediate"
+    / "rap_classification"
+    / "stage3_project_rap_exposure_classification.csv"
 )
 DEFAULT_SCHEMA19 = ROOT / "data" / "raw" / "ukb_schema19_publications.tsv"
 DEFAULT_SCHEMA24 = ROOT / "data" / "raw" / "ukb_schema24_publication_applications.tsv"
@@ -553,22 +557,14 @@ def add_months(value: date, months: int) -> date:
 
 
 def output_paths(output_dir: Path) -> ExpansionPaths:
+    processed = output_dir / "data" / "intermediate" / "control_expansion"
     return ExpansionPaths(
-        project_review=(
-            output_dir / "data" / "processed" / "stage3_control_expansion_project_review.csv"
-        ),
-        evidence_dictionary=(
-            output_dir / "data" / "processed" / "stage3_control_expansion_evidence_dictionary.csv"
-        ),
-        layer_counts=output_dir / "data" / "processed" / "stage3_control_expansion_layer_counts.csv",
-        previous_class_counts=(
-            output_dir
-            / "data"
-            / "processed"
-            / "stage3_control_expansion_new_by_previous_classification.csv"
-        ),
-        examples=output_dir / "data" / "processed" / "stage3_control_expansion_examples.csv",
-        summary_json=output_dir / "data" / "processed" / "stage3_control_expansion_summary.json",
+        project_review=processed / "stage3_control_expansion_project_review.csv",
+        evidence_dictionary=processed / "stage3_control_expansion_evidence_dictionary.csv",
+        layer_counts=processed / "stage3_control_expansion_layer_counts.csv",
+        previous_class_counts=processed / "stage3_control_expansion_new_by_previous_classification.csv",
+        examples=processed / "stage3_control_expansion_examples.csv",
+        summary_json=processed / "stage3_control_expansion_summary.json",
         report=output_dir / "reports" / "stage3_control_expansion.md",
     )
 
@@ -737,7 +733,7 @@ def review_row(
     review_flag, review_reason = manual_review(layer, evidence, previous_classification)
     if layer == "C0":
         evidence_type = "current_conservative_classifier"
-        evidence_source = "data/processed/stage3_project_rap_exposure_classification.csv"
+        evidence_source = "data/intermediate/rap_classification/stage3_project_rap_exposure_classification.csv"
         source_excerpt = row.get("source_text_evidence", "")
         product = row.get("already_rap_modalities", "")
         matched_expression = row.get("already_rap_modalities", "")

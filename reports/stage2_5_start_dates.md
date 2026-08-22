@@ -50,12 +50,12 @@ Goal: recover `app_id -> start_date` from the UK Biobank Existing projects websi
 
 ## Produced Files
 
-- `data/processed/stage2_5_app_start_dates.csv`
-- `data/processed/stage2_5_website_listing_matches.csv`
-- `data/processed/stage2_5_website_unmatched.csv`
-- `data/processed/stage2_5_schema27_unmatched.csv`
-- `data/processed/stage2_5_start_year_counts.csv`
-- `data/processed/stage2_5_start_date_summary.json`
-- `data/processed/stage2_5_website_unmatched_detail_results.csv`
-- `data/processed/stage2_5_detail_validation_plan.csv`
-- `data/processed/stage2_5_detail_validation_results.csv`
+- `data/intermediate/start_date_matching/stage2_5_app_start_dates.csv`
+- `data/intermediate/start_date_matching/stage2_5_website_listing_matches.csv`
+- `data/intermediate/start_date_matching/stage2_5_website_unmatched.csv`
+- `data/intermediate/start_date_matching/stage2_5_schema27_unmatched.csv`
+- `data/intermediate/start_date_matching/stage2_5_start_year_counts.csv`
+- `data/intermediate/start_date_matching/stage2_5_start_date_summary.json`
+- `data/intermediate/start_date_matching/stage2_5_website_unmatched_detail_results.csv`
+- `data/intermediate/start_date_matching/stage2_5_detail_validation_plan.csv`
+- `data/intermediate/start_date_matching/stage2_5_detail_validation_results.csv`
