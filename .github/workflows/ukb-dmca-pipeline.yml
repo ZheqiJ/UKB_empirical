@@ -61,6 +61,7 @@ on:
       - main
     paths:
       - .github/workflows/ukb-dmca-pipeline.yml
+      - ukb_dmca/**
       - scripts/**
       - tests/**
       - data/raw/**
@@ -68,7 +69,6 @@ on:
       - data/public_metadata_seeds.*
       - figures/**
       - README.md
-      - MATCHING_METHODOLOGY.md
       - Makefile
 
 permissions:
@@ -80,7 +80,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[stage6-quarterly-panel]') && 'stage6_quarterly_panel_regression' || contains(github.event.head_commit.message, '[fast-design-regression]') && 'fast_design_regression' || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[tests]') && 'tests' || contains(github.event.head_commit.message, '[stage6-quarterly-panel]') && 'stage6_quarterly_panel_regression' || contains(github.event.head_commit.message, '[fast-design-regression]') && 'fast_design_regression' || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
   COMMIT_OUTPUTS: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_outputs || github.event_name != 'workflow_dispatch' }}
   REFRESH_STAGE2_SOURCES: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_stage2_sources || false }}
   WEBSITE_LISTING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.website_listing_url || '' }}
@@ -291,14 +291,14 @@ jobs:
           if [ -n "${SCHEMA19:-}" ] && [ -n "${SCHEMA24:-}" ]; then
             SCHEMA_ARGS+=(--schema19 "${SCHEMA19}" --schema24 "${SCHEMA24}")
           fi
-          if [ -f ukb_dmca_notices.csv ] && csv_has_data_rows ukb_dmca_notices.csv; then
-            FIXED_NOTICE_ARGS+=(--fixed-notices-csv ukb_dmca_notices.csv)
-          elif [ -f ukb_dmca_notices.csv ]; then
-            echo "Ignoring header-only ukb_dmca_notices.csv; scanning github/dmca instead."
+          if [ -f ukb_dmca/ukb_dmca_notices.csv ] && csv_has_data_rows ukb_dmca/ukb_dmca_notices.csv; then
+            FIXED_NOTICE_ARGS+=(--fixed-notices-csv ukb_dmca/ukb_dmca_notices.csv)
+          elif [ -f ukb_dmca/ukb_dmca_notices.csv ]; then
+            echo "Ignoring header-only ukb_dmca/ukb_dmca_notices.csv; scanning github/dmca instead."
           fi
           python3 scripts/ukb_dmca_public_metadata_runner.py \
             --applications data/applications.tsv \
-            --output-dir . \
+            --output-dir ukb_dmca \
             --cache-dir .cache/ukb_dmca \
             --wayback-limit "${WAYBACK_LIMIT}" \
             "${SCHEMA_ARGS[@]}" \
@@ -312,14 +312,12 @@ jobs:
           retention-days: 30
           if-no-files-found: ignore
           path: |
-            ukb_dmca_*.csv
-            evidence/**
+            ukb_dmca/**
             data/processed/**
             data/raw/stage2_source_manifest.json
             figures/**
             reports/**
             README.md
-            MATCHING_METHODOLOGY.md
 
       - name: Commit generated outputs
         if: env.COMMIT_OUTPUTS == 'true'
@@ -329,14 +327,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for path in README.md MATCHING_METHODOLOGY.md evidence data/processed figures reports data/raw/stage2_source_manifest.json; do
+          for path in README.md ukb_dmca data/processed figures reports data/raw/stage2_source_manifest.json; do
             if [ -e "${path}" ]; then
               git add -A -- "${path}"
             fi
           done
-          if compgen -G "ukb_dmca_*.csv" > /dev/null; then
-            git add ukb_dmca_*.csv
-          fi
 
           if git diff --cached --quiet; then
             echo "No generated output changes to commit."

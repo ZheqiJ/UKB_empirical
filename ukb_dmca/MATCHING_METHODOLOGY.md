@@ -133,10 +133,10 @@ Generic words such as `cancer`, `genetic`, `imaging`, `risk`, `disease`, `UKB`, 
 
 ## Audit Outputs
 
-- `ukb_dmca_application_candidates.csv` preserves all retained candidates and scores.
-- `ukb_dmca_application_match_evidence.csv` stores one row per lineage x candidate application x evidence component.
-- `evidence/lineages/*.md` records public repository metadata, README/citation/package/Wayback sources, public metadata seed rows when present, target commit metadata, publication IDs, crosswalk details, and candidate reasons.
-- `evidence/logs/result_summary.json` reports method contribution counts, including direct app ID, DOI crosswalk, PMID crosswalk, public metadata seed usage, B2/B3 propagation usage, probable, ambiguous, unresolved, and unique applications linked.
+- `ukb_dmca/ukb_dmca_application_candidates.csv` preserves all retained candidates and scores.
+- `ukb_dmca/ukb_dmca_application_match_evidence.csv` stores one row per lineage x candidate application x evidence component.
+- `ukb_dmca/evidence/lineages/*.md` records public repository metadata, README/CITATION/package/Wayback sources, public metadata seed rows when present, target commit metadata, publication IDs, crosswalk details, and candidate reasons.
+- `ukb_dmca/evidence/logs/result_summary.json` reports method contribution counts, including direct app ID, DOI crosswalk, PMID crosswalk, public metadata seed usage, B2/B3 propagation usage, probable, ambiguous, unresolved, and unique applications linked.
 
 ## Current Limitations
 

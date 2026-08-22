@@ -50,7 +50,7 @@ def install() -> None:
 
 def postprocess_outputs(raw_argv: list[str]) -> None:
     _ORIG_POSTPROCESS_OUTPUTS(raw_argv)
-    out = Path(runner._arg_value(raw_argv, "--output-dir") or ".")
+    out = Path(runner._arg_value(raw_argv, "--output-dir") or "ukb_dmca")
     apps_path = Path(runner._arg_value(raw_argv, "--applications") or "data/applications.tsv")
     seed_overlay.apply_public_metadata_seeds(out, apps_path)
     summary_path = out / "evidence/logs/result_summary.json"

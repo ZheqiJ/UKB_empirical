@@ -724,7 +724,7 @@ def _public_metadata_seed_candidate(lineage: dict[str, str], app: dict[str, str]
 
 
 def postprocess_outputs(raw_argv: list[str]) -> None:
-    out = Path(_arg_value(raw_argv, "--output-dir") or ".")
+    out = Path(_arg_value(raw_argv, "--output-dir") or "ukb_dmca")
     apps_path = _arg_value(raw_argv, "--applications") or "/mnt/data/application (1)(1).txt"
     schema19 = _arg_value(raw_argv, "--schema19")
     schema24 = _arg_value(raw_argv, "--schema24")

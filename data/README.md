@@ -12,7 +12,9 @@ The pipeline defaults to:
 You can point to another copy without changing the repository:
 
 ```bash
-python3 scripts/ukb_dmca_pipeline.py --applications "/path/to/applications.tsv"
+python3 scripts/ukb_dmca_pipeline.py \
+  --applications "/path/to/applications.tsv" \
+  --output-dir ukb_dmca
 ```
 
 The expected fields are `app_id`, `title`, `pi`, `institution`, and `notes`.

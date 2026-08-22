@@ -37,7 +37,7 @@ DEFAULT_STAGE3 = ROOT / "data" / "processed" / "stage3_project_rap_exposure_clas
 DEFAULT_CONTROL_EXPANSION = ROOT / "data" / "processed" / "stage3_control_expansion_project_review.csv"
 DEFAULT_SCHEMA19 = ROOT / "data" / "raw" / "ukb_schema19_publications.tsv"
 DEFAULT_SCHEMA24 = ROOT / "data" / "raw" / "ukb_schema24_publication_applications.tsv"
-DEFAULT_DMCA_MANUAL_REVIEW = ROOT / "ukb_dmca_manual_review.csv"
+DEFAULT_DMCA_MANUAL_REVIEW = ROOT / "ukb_dmca" / "ukb_dmca_manual_review.csv"
 DEFAULT_OUTPUT_DIR = ROOT
 
 STRICT_21 = {

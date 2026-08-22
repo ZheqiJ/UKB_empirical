@@ -844,7 +844,7 @@ def apply_public_metadata_seeds(output_dir: Path, applications: Path) -> dict[st
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", default=".")
+    parser.add_argument("--output-dir", default="ukb_dmca")
     parser.add_argument("--applications", default="data/applications.tsv")
     args = parser.parse_args(argv)
     apply_public_metadata_seeds(Path(args.output_dir), Path(args.applications))

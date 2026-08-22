@@ -1,7 +1,7 @@
 .PHONY: run test clean
 
 APPLICATIONS ?= /mnt/data/application\ \(1\)\(1\).txt
-OUTPUT_DIR ?= .
+OUTPUT_DIR ?= ukb_dmca
 CACHE_DIR ?= .cache/ukb_dmca
 
 run:
@@ -12,4 +12,3 @@ test:
 
 clean:
 	rm -rf .cache/ukb_dmca
-
