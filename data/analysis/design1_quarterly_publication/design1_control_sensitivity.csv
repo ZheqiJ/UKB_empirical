@@ -7,3 +7,5 @@ CONTROL_C03,publication_count,3325,130,0.015205,0.024773,0.539373,0.025797,0.024
 CONTROL_C03,any_publication,3325,130,-0.004772,0.012242,0.696669,0.001043,0.011710,0.093014,PASS,do_not_choose_control_definition_by_significance
 CONTROL_C05,publication_count,3324,131,0.015375,0.024577,0.531591,0.025244,0.024148,0.078517,PASS,do_not_choose_control_definition_by_significance
 CONTROL_C05,any_publication,3324,131,-0.002373,0.012360,0.847738,0.003050,0.011772,0.201084,PASS,do_not_choose_control_definition_by_significance
+CONTROL_C06,publication_count,3191,297,-0.021212,0.024120,0.379170,-0.033611,0.023250,0.069571,PASS,do_not_choose_control_definition_by_significance
+CONTROL_C06,any_publication,3191,297,-0.015964,0.012111,0.187458,-0.024450,0.011560,0.156107,PASS,do_not_choose_control_definition_by_significance

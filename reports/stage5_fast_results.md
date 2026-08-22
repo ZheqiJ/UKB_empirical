@@ -1,11 +1,11 @@
 # Stage 5 Fast Exploratory Results
 
-Source commit: `a2ae98666d6bf9c50ecbd02bc0bed1e022c03f57`
+Source commit: `88292d3-plus-c06`
 Policy date: `2024-07-05`
 
 This fast run is provisional. It preserves the existing Stage 3 measurement,
-uses C0-C5 as broad control-candidate sensitivity definitions, excludes C6
-from main controls, and does not finalize treatment/control status.
+uses C0-C6 as broad control-candidate sensitivity definitions, and does
+not finalize treatment/control status.
 
 DMCA outcomes mean an application is linked by evidence to a DMCA-targeted
 repository lineage. They are not findings of unlawful conduct or policy
@@ -24,7 +24,8 @@ violation.
 | control_c01_projects | 237 |
 | control_c03_projects | 267 |
 | control_c05_projects | 269 |
-| c6_preserved_flag_projects | 169 |
+| control_c06_projects | 438 |
+| c06_added_projects | 169 |
 | dmca_strict_21_merged | 21 |
 | dmca_main_27_merged | 27 |
 | dmca_broad_48_merged | 48 |
@@ -43,6 +44,7 @@ control definition.
 | CONTROL_C01 | 5548 | 42 | 13 | 179 | 3 | 4 | 1146 | 0 |
 | CONTROL_C03 | 5525 | 42 | 36 | 179 | 10 | 4 | 1139 | 0 |
 | CONTROL_C05 | 5524 | 42 | 37 | 180 | 10 | 3 | 1139 | 0 |
+| CONTROL_C06 | 5389 | 42 | 172 | 180 | 44 | 3 | 1105 | 0 |
 
 ## P1 Publication DID Means
 
@@ -56,6 +58,8 @@ control definition.
 | CONTROL_C03 | any_publication | 3327 | 130 | 0.275924 | 0.340547 | 0.207692 | 0.346154 | -0.073839 |
 | CONTROL_C05 | publication_count | 3326 | 131 | 0.855683 | 1.214071 | 0.954198 | 1.129771 | 0.182816 |
 | CONTROL_C05 | any_publication | 3326 | 131 | 0.275707 | 0.340349 | 0.213740 | 0.351145 | -0.072762 |
+| CONTROL_C06 | publication_count | 3193 | 297 | 0.715315 | 1.064203 | 2.582492 | 3.070707 | -0.139327 |
+| CONTROL_C06 | any_publication | 3193 | 297 | 0.254933 | 0.321015 | 0.515152 | 0.606061 | -0.024827 |
 
 ## P1 Publication DID Regressions
 
@@ -69,6 +73,8 @@ control definition.
 | CONTROL_C03 | any_publication_delta_24m | 3457 | -0.073839 | 0.041395 | 0.074459 |  |
 | CONTROL_C05 | publication_count_delta_24m | 3457 | 0.182816 | 0.176490 | 0.300276 |  |
 | CONTROL_C05 | any_publication_delta_24m | 3457 | -0.072762 | 0.041108 | 0.076725 |  |
+| CONTROL_C06 | publication_count_delta_24m | 3490 | -0.139327 | 0.199940 | 0.485899 |  |
+| CONTROL_C06 | any_publication_delta_24m | 3490 | -0.024827 | 0.032701 | 0.447724 |  |
 
 ## P2 Entry Cohort Means
 
@@ -99,6 +105,8 @@ control definition.
 | P2_project_entry_cohort_group_interaction | CONTROL_C03 | any_publication_12m | post_policy_start_x_provisional_treated | 1634 | 0.018119 | 0.072751 | 0.803313 |  |
 | P2_project_entry_cohort_group_interaction | CONTROL_C05 | publication_12m | post_policy_start_x_provisional_treated | 1634 | -0.016754 | 0.081816 | 0.837746 |  |
 | P2_project_entry_cohort_group_interaction | CONTROL_C05 | any_publication_12m | post_policy_start_x_provisional_treated | 1634 | 0.018119 | 0.072751 | 0.803313 |  |
+| P2_project_entry_cohort_group_interaction | CONTROL_C06 | publication_12m | post_policy_start_x_provisional_treated | 1636 | -0.120523 | 0.078487 | 0.124639 |  |
+| P2_project_entry_cohort_group_interaction | CONTROL_C06 | any_publication_12m | post_policy_start_x_provisional_treated | 1636 | -0.053636 | 0.056212 | 0.339995 |  |
 
 ## DMCA 2x2 Tables
 
@@ -116,6 +124,9 @@ control definition.
 | CONTROL_C05 | dmca_strict_21 | 13 | 3326 | 1 | 131 | 0.003909 | 0.007634 | 0.418341 |  |
 | CONTROL_C05 | dmca_main_27 | 19 | 3326 | 1 | 131 | 0.005713 | 0.007634 | 0.539199 |  |
 | CONTROL_C05 | dmca_broad_48 | 34 | 3326 | 1 | 131 | 0.010222 | 0.007634 | 1.000000 |  |
+| CONTROL_C06 | dmca_strict_21 | 10 | 3193 | 4 | 297 | 0.003132 | 0.013468 | 0.025935 |  |
+| CONTROL_C06 | dmca_main_27 | 15 | 3193 | 5 | 297 | 0.004698 | 0.016835 | 0.023023 |  |
+| CONTROL_C06 | dmca_broad_48 | 28 | 3193 | 7 | 297 | 0.008769 | 0.023569 | 0.025355 |  |
 
 ## DMCA LPM Regressions
 
@@ -133,6 +144,9 @@ control definition.
 | CONTROL_C05 | dmca_strict_21 | 3457 | -0.003573 | 0.007768 | 0.645512 |  |
 | CONTROL_C05 | dmca_main_27 | 3457 | -0.001872 | 0.007784 | 0.809915 |  |
 | CONTROL_C05 | dmca_broad_48 | 3457 | 0.002091 | 0.007880 | 0.790706 |  |
+| CONTROL_C06 | dmca_strict_21 | 3490 | -0.009471 | 0.006899 | 0.169845 |  |
+| CONTROL_C06 | dmca_main_27 | 3490 | -0.010960 | 0.007660 | 0.152499 |  |
+| CONTROL_C06 | dmca_broad_48 | 3490 | -0.012364 | 0.008999 | 0.169480 |  |
 
 ## DMCA Lineage Count Secondary Regressions
 
@@ -142,6 +156,7 @@ control definition.
 | CONTROL_C01 | dmca_lineage_count | 3452 | 0.005602 | 0.010266 | 0.585259 |  |
 | CONTROL_C03 | dmca_lineage_count | 3457 | 0.008542 | 0.009290 | 0.357862 |  |
 | CONTROL_C05 | dmca_lineage_count | 3457 | 0.008843 | 0.009245 | 0.338793 |  |
+| CONTROL_C06 | dmca_lineage_count | 3490 | -0.042697 | 0.035076 | 0.223504 |  |
 
 ## Output Files
 
@@ -159,8 +174,7 @@ control definition.
 
 ## Limitations To Revisit
 
-- C0-C5 are provisional broad controls, not final causal controls.
-- C6 is preserved in flags but excluded from main fast-run controls.
+- C0-C6 are provisional broad controls, not final causal controls.
 - P2 is a project-entry before/after cohort design, not a DID.
 - DMCA regressions are rare-outcome exploratory associations, not a
   conventional pre/post policy DID.

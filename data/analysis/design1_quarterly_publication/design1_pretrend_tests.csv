@@ -7,3 +7,5 @@ quarter,CONTROL_C03,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,e
 quarter,CONTROL_C03,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,12.237506,7,0.093014,PASS,
 quarter,CONTROL_C05,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,12.747026,7,0.078517,PASS,
 quarter,CONTROL_C05,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,9.785065,7,0.201084,PASS,
+quarter,CONTROL_C06,publication_count,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,13.105858,7,0.069571,PASS,
+quarter,CONTROL_C06,any_publication,event_study_app_fe_quarter_fe_age_bin_fe,event_time_-8_to_-2,2024Q2,10.619330,7,0.156107,PASS,

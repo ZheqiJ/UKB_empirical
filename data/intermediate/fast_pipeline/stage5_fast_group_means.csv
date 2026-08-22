@@ -7,6 +7,8 @@ CONTROL_C03,,130,1.107692,0.930769,P1_existing_project_policy_did,0.181358,,post
 CONTROL_C03,,130,0.346154,0.207692,P1_existing_project_policy_did,-0.073839,,post_policy_start_projects_excluded,any_publication,,,,,,3327,0.340547,0.275924
 CONTROL_C05,,131,1.129771,0.954198,P1_existing_project_policy_did,0.182816,,post_policy_start_projects_excluded,publication_count,,,,,,3326,1.214071,0.855683
 CONTROL_C05,,131,0.351145,0.213740,P1_existing_project_policy_did,-0.072762,,post_policy_start_projects_excluded,any_publication,,,,,,3326,0.340349,0.275707
+CONTROL_C06,,297,3.070707,2.582492,P1_existing_project_policy_did,-0.139327,,post_policy_start_projects_excluded,publication_count,,,,,,3193,1.064203,0.715315
+CONTROL_C06,,297,0.606061,0.515152,P1_existing_project_policy_did,-0.024827,,post_policy_start_projects_excluded,any_publication,,,,,,3193,0.321015,0.254933
 all_projects,,,,,P2_project_entry_cohort_6m,,0.001918,not_did_sufficient_followup_required,publication_6m,0.022446,1292,0.020528,682,,,,
 all_projects,,,,,P2_project_entry_cohort_6m,,0.000981,not_did_sufficient_followup_required,any_publication_6m,0.018576,1292,0.017595,682,,,,
 all_projects,,,,,P2_project_entry_cohort_12m,,-0.001895,not_did_sufficient_followup_required,publication_12m,0.116873,1292,0.118768,682,,,,
@@ -25,3 +27,6 @@ CONTROL_C03,0.007692,130,,,DMCA_application_level_rare_outcome,,0.002527,explora
 CONTROL_C05,0.007634,131,,,DMCA_application_level_rare_outcome,,-0.003725,exploratory_association_not_policy_did,dmca_strict_21,,,,,0.003909,3326,,
 CONTROL_C05,0.007634,131,,,DMCA_application_level_rare_outcome,,-0.001921,exploratory_association_not_policy_did,dmca_main_27,,,,,0.005713,3326,,
 CONTROL_C05,0.007634,131,,,DMCA_application_level_rare_outcome,,0.002589,exploratory_association_not_policy_did,dmca_broad_48,,,,,0.010222,3326,,
+CONTROL_C06,0.013468,297,,,DMCA_application_level_rare_outcome,,-0.010336,exploratory_association_not_policy_did,dmca_strict_21,,,,,0.003132,3193,,
+CONTROL_C06,0.016835,297,,,DMCA_application_level_rare_outcome,,-0.012137,exploratory_association_not_policy_did,dmca_main_27,,,,,0.004698,3193,,
+CONTROL_C06,0.023569,297,,,DMCA_application_level_rare_outcome,,-0.014800,exploratory_association_not_policy_did,dmca_broad_48,,,,,0.008769,3193,,

@@ -4,7 +4,15 @@
 
 We now have a working quarterly incumbent-project DID and event-study pipeline for the 5 July 2024 UK Biobank RAP transition. The question is whether publication output changed differentially after the policy for projects provisionally classified as newly RAP-bound, relative to already-RAP-bound or already-RAP-bound-like incumbent controls.
 
-This is an **incumbent-project design**, not a project-entry design. Using the fixed universe of 6,935 matched UK Biobank projects, we construct an application-quarter post-entry risk-set panel from 2022Q3 to 2026Q2. Under the broad C05 provisional treatment/control definition, the incumbent DID estimation sample contains 3,324 treated projects and 131 control projects.
+This is an **incumbent-project design**, not a project-entry design. Using the fixed universe of 6,935 matched UK Biobank projects, we construct an application-quarter post-entry risk-set panel from 2022Q3 to 2026Q2. The panel begins only after each recorded project start date, so pre-start quarters are not coded as zero-output observations.
+
+Control definitions are cumulative sensitivity checks:
+
+| Definition | Incumbent treated | Incumbent controls | Interpretation |
+|---|---:|---:|---|
+| C03 | 3,325 | 130 | Narrower already-RAP-bound-like controls |
+| C05 | 3,324 | 131 | Previous broad working specification |
+| C06 | 3,191 | 297 | New broadest specification including C6 candidates |
 
 The baseline specification is:
 
@@ -14,9 +22,7 @@ Y_iq = beta * Treated_i * Post_q + project FE_i + quarter FE_q + error_iq
 
 where `Y_iq` is either quarterly publication count or an indicator for any publication. Standard errors are clustered by application. A lifecycle-adjusted diagnostic specification adds project-age-bin fixed effects.
 
-Important interpretation: the panel begins only after each recorded project start date. This prevents pre-start quarters from being coded as zero-output observations. It does **not** imply that every project remains actively using UK Biobank data in every subsequent quarter; this is an ITT-like exposure design, not a verified active-user design.
-
-## 2. What We Fixed Since the Earlier Fast Run
+## 2. Data Checks
 
 Data construction passes the main checks:
 
@@ -31,9 +37,9 @@ Data construction passes the main checks:
 | Events after 2026Q2 complete window | 168, audited and excluded |
 | Pre-start panel rows | 0 |
 
-## 3. Main Result
+## 3. Main Results
 
-The preferred working summary is C05, because it gives the largest provisional control sample while preserving the cumulative C0-C5 evidence hierarchy. I would show C03 as a close robustness check and put C0/C01 in the appendix.
+The C06 addition is informative but should be presented as a broad sensitivity check, not as a mechanically better control group. It nearly doubles the incumbent control count relative to C05, but it also pulls in many overlap/unclear projects and changes baseline comparability.
 
 Main estimates:
 
@@ -41,16 +47,16 @@ Main estimates:
 |---|---:|---:|
 | C05 Q0: app FE + quarter FE | 0.015 (0.025), p = 0.532 | -0.002 (0.012), p = 0.848 |
 | C05 Q1: plus project-age-bin FE | 0.025 (0.024), p = 0.296 | 0.003 (0.012), p = 0.796 |
-| C05, drop 2024Q3 transition quarter | 0.018 (0.022), p = 0.425 | 0.001 (0.013), p = 0.958 |
-| C05, drop first partial at-risk quarter | 0.011 (0.025), p = 0.665 | -0.005 (0.013), p = 0.666 |
-| C05, exclude top 1% high-output apps | -0.002 (0.015), p = 0.882 | -- |
+| C06 Q0: app FE + quarter FE | -0.021 (0.024), p = 0.379 | -0.016 (0.012), p = 0.187 |
+| C06 Q1: plus project-age-bin FE | -0.034 (0.023), p = 0.148 | -0.024 (0.012), p = 0.034 |
+| C06, drop 2024Q3 transition quarter | -0.013 (0.025), p = 0.584 | -0.014 (0.013), p = 0.286 |
+| C06, drop first partial at-risk quarter | -0.021 (0.024), p = 0.373 | -0.017 (0.012), p = 0.168 |
+| C06, exclude top 1% high-output apps | -0.019 (0.018), p = 0.293 | -- |
 | C03 Q0: app FE + quarter FE | 0.015 (0.025), p = 0.539 | -0.005 (0.012), p = 0.697 |
 
-Economic magnitude should be interpreted relative to the pre-policy quarterly baseline. In C05, treated projects averaged 0.122 publications per pre-policy project-quarter and 8.45% had any publication; control projects averaged 0.134 publications and 6.99% had any publication. The C05 count estimate of 0.015 publications per project-quarter is about 12.6% of the treated pre-policy mean, but it is imprecise and not robust to excluding the upper tail of high-output projects. The any-publication estimate is about -0.24 percentage points relative to an 8.45% treated pre-policy baseline.
+Economic magnitude should be interpreted relative to pre-policy quarterly baselines. In C06, treated projects averaged 0.103 publications per pre-policy project-quarter and 7.38% had any publication. C06 controls averaged 0.347 publications and 20.0% had any publication. This large baseline gap is a warning that C06 improves sample size but may worsen comparability.
 
-The positive full-sample mean-count estimate is sensitive to the upper tail of the publication distribution: excluding the top 1% of high-output applications reduces the estimate from 0.015 to approximately zero. This does not imply that these projects are invalid observations; it shows that the average-count result is not broadly robust across the outcome distribution.
-
-Bottom line: there is currently no robust or precisely estimated differential publication response in the quarterly incumbent design.
+Bottom line: adding C06 does not create a clean strong result. It produces more negative point estimates, including one age-adjusted any-publication estimate with p = 0.034, but the result is not stable across timing choices and the broader control group is compositionally less clean. The safest supervisor-facing conclusion remains that the quarterly pipeline runs, but publication effects are exploratory and not yet causally persuasive.
 
 ## 4. Identification Diagnostics
 
@@ -62,42 +68,42 @@ The implementation/data checkpoint passes, but identification remains a warning.
 | C01 | 0.0777 | 0.0390 | Mixed across outcomes |
 | C03 | 0.0571 | 0.0930 | Not rejected at 5%, but borderline |
 | C05 | 0.0785 | 0.2011 | Not rejected; count test remains borderline |
+| C06 | 0.0696 | 0.1561 | Not rejected; broader but less clean controls |
 
-Failure to reject a joint pretrend test is not proof of parallel trends, especially with only 130-131 controls in the broader control definitions. C05 is therefore a useful working specification, not a final validated control group. The remaining concerns are: small/provisional controls, incomplete information on actual RAP migration or active use, publication lag, and upper-tail sensitivity in count outcomes.
+Failure to reject a joint pretrend test is not proof of parallel trends. C06 is useful because it shows what happens when we expand the control pool aggressively, but it also reveals that the expanded controls have much higher pre-policy publication intensity. That makes C06 a diagnostic and robustness specification, not a final preferred treatment/control definition.
 
 ## 5. What We Learn and Recommended Next Step
 
-What we learn from Design 1:
+What we learn from Design 1 after adding C06:
 
-1. The quarterly publication DID pipeline now runs end to end and is reproducible through GitHub Actions.
-2. The earlier coarse before/after publication signal does not appear as a strong quarterly pattern.
-3. C03 and C05 give similar point estimates, which is reassuring for current control-definition sensitivity.
-4. The count estimate is sensitive to high-output applications, so mean-count OLS should not be over-interpreted.
-5. Current data support an exploratory ITT-like policy-exposure design, not a verified active-RAP-use design.
+1. The quarterly publication DID pipeline now runs end to end with C0, C01, C03, C05, and C06 definitions.
+2. C06 increases the incumbent control group from 131 to 297, reducing the most obvious sample-size criticism.
+3. C06 changes the sign of the point estimates, which means control-definition measurement remains a first-order issue.
+4. The C06 controls are much more publication-intensive before the policy, so the broader control group may not be more credible despite being larger.
+5. The overall evidence still does not support a strong causal claim about publication output.
 
 Suggested supervisor headline:
 
-> We now have a working quarterly incumbent-project DID and event-study pipeline. The first results do not show a robust differential change in publication output after the RAP transition; the remaining identification concerns are the small/provisional control group, incomplete information on actual policy exposure, and publication timing.
+> We added a broader C06 control definition to the quarterly incumbent DID. It increases controls from 131 to 297 and produces more negative publication estimates, but the expanded controls have much higher pre-policy publication rates. The result is useful as a robustness and measurement diagnostic, not yet as a clean causal estimate.
 
 Recommended next step:
 
-1. Run **Design 2: monthly timing robustness** to check whether quarterly aggregation hides short-run timing patterns, pre-policy drift, or delayed separation.
-2. Add compact balance/common-support diagnostics: project start quarter, project age, institution, pre-policy publication count, and pre-policy any-publication.
-3. If comparability looks poor, then run a matched or weighted quarterly DID. Matching/weighting should be diagnostic-triggered rather than the immediate next default.
-4. If results become sensitive to C03/C05 definitions or common-support restrictions, return to treatment/control measurement.
-5. Keep DMCA as a separate auxiliary design because the application-notice linkage is sparse and not naturally suited to the same quarterly publication DID.
-
-Later robustness, if the design becomes central to the paper, should include event-study confidence intervals, PPML as the main count-model robustness, and possibly Honest DiD-style sensitivity for borderline pretrends. Winsorized or trimmed outcomes should remain sensitivity checks rather than the primary result.
+1. Add compact balance/common-support diagnostics for C05 versus C06: project start quarter, project age, institution, pre-policy publication count, and pre-policy any-publication.
+2. Run Design 2 monthly timing robustness to see whether C06's negative estimates are driven by a narrow timing window.
+3. If C06 remains important, run a matched or weighted quarterly DID using pre-policy publication and start-timing covariates.
+4. Keep DMCA as a separate auxiliary design because the application-notice linkage is sparse and not naturally suited to the same quarterly publication DID.
 
 ## Appendix: Full Control Sensitivity
 
-| Control definition | Outcome | Q0 estimate | SE | p-value | Q1 estimate |
-|---|---|---:|---:|---:|---:|
-| C0 | Publication count | 0.0896 | 0.0862 | 0.299 | 0.1096 |
-| C0 | Any publication | -0.0073 | 0.0179 | 0.685 | 0.0056 |
-| C01 | Publication count | 0.0065 | 0.0280 | 0.816 | 0.0232 |
-| C01 | Any publication | -0.0123 | 0.0132 | 0.349 | -0.0027 |
-| C03 | Publication count | 0.0152 | 0.0248 | 0.539 | 0.0258 |
-| C03 | Any publication | -0.0048 | 0.0122 | 0.697 | 0.0010 |
-| C05 | Publication count | 0.0154 | 0.0246 | 0.532 | 0.0252 |
-| C05 | Any publication | -0.0024 | 0.0124 | 0.848 | 0.0031 |
+| Control definition | Outcome | Q0 estimate | SE | p-value | Q1 estimate | Pretrend p-value |
+|---|---|---:|---:|---:|---:|---:|
+| C0 | Publication count | 0.0896 | 0.0862 | 0.299 | 0.1096 | 0.0236 |
+| C0 | Any publication | -0.0073 | 0.0179 | 0.685 | 0.0056 | 0.0327 |
+| C01 | Publication count | 0.0065 | 0.0280 | 0.816 | 0.0232 | 0.0777 |
+| C01 | Any publication | -0.0123 | 0.0132 | 0.349 | -0.0027 | 0.0390 |
+| C03 | Publication count | 0.0152 | 0.0248 | 0.539 | 0.0258 | 0.0571 |
+| C03 | Any publication | -0.0048 | 0.0122 | 0.697 | 0.0010 | 0.0930 |
+| C05 | Publication count | 0.0154 | 0.0246 | 0.532 | 0.0252 | 0.0785 |
+| C05 | Any publication | -0.0024 | 0.0124 | 0.848 | 0.0031 | 0.2011 |
+| C06 | Publication count | -0.0212 | 0.0241 | 0.379 | -0.0336 | 0.0696 |
+| C06 | Any publication | -0.0160 | 0.0121 | 0.187 | -0.0245 | 0.1561 |

@@ -3,7 +3,7 @@
 
 This is intentionally a quick, reproducible empirical pass. It does not refine
 Stage 3 measurement. It uses the fixed 6,935 matched application universe,
-existing Stage 3 classifications, C0-C5 provisional control candidates, UKB
+existing Stage 3 classifications, C0-C6 provisional control candidates, UKB
 publication metadata, and a frozen curated DMCA application list.
 """
 
@@ -102,7 +102,9 @@ CONTROL_DEFS = {
     "CONTROL_C01": {"C0", "C1"},
     "CONTROL_C03": {"C0", "C1", "C2", "C3"},
     "CONTROL_C05": {"C0", "C1", "C2", "C3", "C4", "C5"},
+    "CONTROL_C06": {"C0", "C1", "C2", "C3", "C4", "C5", "C6"},
 }
+PRIMARY_CONTROL_DEF = "CONTROL_C06"
 
 
 @dataclass(frozen=True)
@@ -152,7 +154,7 @@ def read_csv(path: Path, delimiter: str = ",") -> list[dict[str, str]]:
 def write_csv(path: Path, rows: list[dict[str, object]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -956,9 +958,9 @@ def write_bar_png(path: Path, values: list[float], colors: list[tuple[int, int, 
 
 
 def build_figures(paths: FastPaths, group_means: list[dict[str, object]], dmca_tables: list[dict[str, object]]) -> None:
-    p1_c05 = [row for row in group_means if row.get("design") == "P1_existing_project_policy_did" and row.get("control_definition") == "CONTROL_C05" and row.get("outcome") == "publication_count"]
-    if p1_c05:
-        row = p1_c05[0]
+    p1_primary = [row for row in group_means if row.get("design") == "P1_existing_project_policy_did" and row.get("control_definition") == PRIMARY_CONTROL_DEF and row.get("outcome") == "publication_count"]
+    if p1_primary:
+        row = p1_primary[0]
         values = [
             float(row.get("treated_pre_mean") or 0),
             float(row.get("treated_post_mean") or 0),
@@ -977,10 +979,10 @@ def build_figures(paths: FastPaths, group_means: list[dict[str, object]], dmca_t
         values = [0.0, 0.0]
     write_bar_png(paths.publication_cohort_figure, values, [(22, 163, 74), (220, 38, 38)])
 
-    dmca_c05 = [row for row in dmca_tables if row.get("control_definition") == "CONTROL_C05"]
+    dmca_primary = [row for row in dmca_tables if row.get("control_definition") == PRIMARY_CONTROL_DEF]
     values = []
     for outcome in ("dmca_strict_21", "dmca_main_27", "dmca_broad_48"):
-        row = next((item for item in dmca_c05 if item.get("outcome") == outcome), None)
+        row = next((item for item in dmca_primary if item.get("outcome") == outcome), None)
         if row:
             values.extend([float(row.get("treated_event_rate") or 0), float(row.get("control_event_rate") or 0)])
     write_bar_png(paths.dmca_rates_figure, values or [0.0], [(147, 51, 234), (107, 33, 168), (20, 184, 166), (15, 118, 110)])
@@ -1038,8 +1040,8 @@ def build_report(
         f"Policy date: `{POLICY_DATE.isoformat()}`",
         "",
         "This fast run is provisional. It preserves the existing Stage 3 measurement,",
-        "uses C0-C5 as broad control-candidate sensitivity definitions, excludes C6",
-        "from main controls, and does not finalize treatment/control status.",
+        "uses C0-C6 as broad control-candidate sensitivity definitions, and does",
+        "not finalize treatment/control status.",
         "",
         "DMCA outcomes mean an application is linked by evidence to a DMCA-targeted",
         "repository lineage. They are not findings of unlawful conduct or policy",
@@ -1066,7 +1068,8 @@ def build_report(
                     "control_c01_projects",
                     "control_c03_projects",
                     "control_c05_projects",
-                    "c6_preserved_flag_projects",
+                    "control_c06_projects",
+                    "c06_added_projects",
                 }
             ],
             ["metric", "value"],
@@ -1180,8 +1183,7 @@ def build_report(
         "",
         "## Limitations To Revisit",
         "",
-        "- C0-C5 are provisional broad controls, not final causal controls.",
-        "- C6 is preserved in flags but excluded from main fast-run controls.",
+        "- C0-C6 are provisional broad controls, not final causal controls.",
         "- P2 is a project-entry before/after cohort design, not a DID.",
         "- DMCA regressions are rare-outcome exploratory associations, not a",
         "  conventional pre/post policy DID.",
@@ -1239,6 +1241,7 @@ def build_fast_outputs(
         "regression_group_CONTROL_C01",
         "regression_group_CONTROL_C03",
         "regression_group_CONTROL_C05",
+        "regression_group_CONTROL_C06",
         "pub_pre24",
         "pub_post24",
         "any_pub_pre24",
@@ -1306,6 +1309,7 @@ def build_fast_outputs(
             "regression_group_CONTROL_C01",
             "regression_group_CONTROL_C03",
             "regression_group_CONTROL_C05",
+            "regression_group_CONTROL_C06",
         ],
     )
     write_csv(
@@ -1376,7 +1380,8 @@ def build_fast_outputs(
         "control_c01_projects": sum(safe_int(row["cumulative_control_C01"]) for row in app_rows),
         "control_c03_projects": sum(safe_int(row["cumulative_control_C03"]) for row in app_rows),
         "control_c05_projects": sum(safe_int(row["cumulative_control_C05"]) for row in app_rows),
-        "c6_preserved_flag_projects": sum(safe_int(row["cumulative_control_C06"]) for row in app_rows)
+        "control_c06_projects": sum(safe_int(row["cumulative_control_C06"]) for row in app_rows),
+        "c06_added_projects": sum(safe_int(row["cumulative_control_C06"]) for row in app_rows)
         - sum(safe_int(row["cumulative_control_C05"]) for row in app_rows),
         "dmca_strict_21_merged": sum(1 for row in dmca_crosswalk if row["dmca_strict_21"] and row["merged_to_working_universe"]),
         "dmca_main_27_merged": sum(1 for row in dmca_crosswalk if row["dmca_main_27"] and row["merged_to_working_universe"]),

@@ -1,6 +1,6 @@
 # Design 1 Quarterly Publication Results
 
-Source commit: `8465974b8998161d795e553a08dd737aa4b3e83a`
+Source commit: `88292d3-plus-c06`
 Policy date: `2024-07-05`
 
 ## Empirical Objective
@@ -20,7 +20,7 @@ test and not a project-entry design.
 
 | metric | value |
 | --- | --- |
-| source_commit | 8465974b8998161d795e553a08dd737aa4b3e83a |
+| source_commit | 88292d3-plus-c06 |
 | design_scope | quarterly |
 | working_universe_projects | 6935 |
 | quarter_panel_rows | 75973 |
@@ -41,7 +41,7 @@ test and not a project-entry design.
 | publication_before_project_start_events | 24 |
 | events_after_main_complete_panel_window | 168 |
 | top_1pct_high_output_apps | 72 |
-| heterogeneity_triggered_count_positive_any_nonpositive | True |
+| heterogeneity_triggered_count_positive_any_nonpositive | False |
 | CONTROL_C0_incumbent_apps | 3374 |
 | CONTROL_C0_treated_apps | 3344 |
 | CONTROL_C0_control_apps | 30 |
@@ -54,6 +54,9 @@ test and not a project-entry design.
 | CONTROL_C05_incumbent_apps | 3455 |
 | CONTROL_C05_treated_apps | 3324 |
 | CONTROL_C05_control_apps | 131 |
+| CONTROL_C06_incumbent_apps | 3488 |
+| CONTROL_C06_treated_apps | 3191 |
+| CONTROL_C06_control_apps | 297 |
 
 ## Main Quarterly DID Q0
 
@@ -67,6 +70,8 @@ test and not a project-entry design.
 | CONTROL_C03 | any_publication | 3455 | 3325 | 130 | -0.004772 | 0.012242 | 0.696669 | -0.028766 | 0.019222 |
 | CONTROL_C05 | publication_count | 3455 | 3324 | 131 | 0.015375 | 0.024577 | 0.531591 | -0.032796 | 0.063545 |
 | CONTROL_C05 | any_publication | 3455 | 3324 | 131 | -0.002373 | 0.012360 | 0.847738 | -0.026599 | 0.021852 |
+| CONTROL_C06 | publication_count | 3488 | 3191 | 297 | -0.021212 | 0.024120 | 0.379170 | -0.068488 | 0.026064 |
+| CONTROL_C06 | any_publication | 3488 | 3191 | 297 | -0.015964 | 0.012111 | 0.187458 | -0.039701 | 0.007774 |
 
 ## Project-Age Adjusted Q1
 
@@ -80,6 +85,8 @@ test and not a project-entry design.
 | CONTROL_C03 | any_publication | 3455 | 0.001043 | 0.011710 | 0.929060 | age bins: q0,q1,q2,q3,q4_7,q8_11,q12_15,q16_23,q24_35,q36_47,q48_plus |
 | CONTROL_C05 | publication_count | 3455 | 0.025244 | 0.024148 | 0.295834 | age bins: q0,q1,q2,q3,q4_7,q8_11,q12_15,q16_23,q24_35,q36_47,q48_plus |
 | CONTROL_C05 | any_publication | 3455 | 0.003050 | 0.011772 | 0.795560 | age bins: q0,q1,q2,q3,q4_7,q8_11,q12_15,q16_23,q24_35,q36_47,q48_plus |
+| CONTROL_C06 | publication_count | 3488 | -0.033611 | 0.023250 | 0.148276 | age bins: q0,q1,q2,q3,q4_7,q8_11,q12_15,q16_23,q24_35,q36_47,q48_plus |
+| CONTROL_C06 | any_publication | 3488 | -0.024450 | 0.011560 | 0.034426 | age bins: q0,q1,q2,q3,q4_7,q8_11,q12_15,q16_23,q24_35,q36_47,q48_plus |
 
 ## Event-Study Joint Pretrend Tests
 
@@ -93,6 +100,8 @@ test and not a project-entry design.
 | CONTROL_C03 | any_publication | 12.237506 | 7 | 0.093014 | PASS |  |
 | CONTROL_C05 | publication_count | 12.747026 | 7 | 0.078517 | PASS |  |
 | CONTROL_C05 | any_publication | 9.785065 | 7 | 0.201084 | PASS |  |
+| CONTROL_C06 | publication_count | 13.105858 | 7 | 0.069571 | PASS |  |
+| CONTROL_C06 | any_publication | 10.619330 | 7 | 0.156107 | PASS |  |
 
 ## Transition Quarter Robustness
 
@@ -106,17 +115,19 @@ test and not a project-entry design.
 | CONTROL_C03 | any_publication | -0.001387 | 0.013043 | 0.915330 | drops 2024Q3 transition quarter; post starts 2024Q4 |
 | CONTROL_C05 | publication_count | 0.017940 | 0.022496 | 0.425180 | drops 2024Q3 transition quarter; post starts 2024Q4 |
 | CONTROL_C05 | any_publication | 0.000691 | 0.013092 | 0.957920 | drops 2024Q3 transition quarter; post starts 2024Q4 |
+| CONTROL_C06 | publication_count | -0.013453 | 0.024599 | 0.584452 | drops 2024Q3 transition quarter; post starts 2024Q4 |
+| CONTROL_C06 | any_publication | -0.013560 | 0.012711 | 0.286041 | drops 2024Q3 transition quarter; post starts 2024Q4 |
 
-## Post Window Summaries For CONTROL_C05
+## Post Window Summaries For CONTROL_C06
 
 | period | metric | value | treated_n | control_n | note |
 | --- | --- | --- | --- | --- | --- |
-| short_run_2024Q3_Q4 | publication_count | -0.008588 | 3324 | 131 | raw_post_window_difference |
-| short_run_2024Q3_Q4 | any_publication | -0.005412 | 3324 | 131 | raw_post_window_difference |
-| medium_run_2025Q1_Q4 | publication_count | 0.027034 | 3324 | 131 | raw_post_window_difference |
-| medium_run_2025Q1_Q4 | any_publication | 0.021391 | 3324 | 131 | raw_post_window_difference |
-| later_post_2026Q1_Q2 | publication_count | -0.001461 | 3324 | 131 | raw_post_window_difference |
-| later_post_2026Q1_Q2 | any_publication | 0.025688 | 3324 | 131 | raw_post_window_difference |
+| short_run_2024Q3_Q4 | publication_count | -0.263351 | 3191 | 297 | raw_post_window_difference |
+| short_run_2024Q3_Q4 | any_publication | -0.136556 | 3191 | 297 | raw_post_window_difference |
+| medium_run_2025Q1_Q4 | publication_count | -0.249647 | 3191 | 297 | raw_post_window_difference |
+| medium_run_2025Q1_Q4 | any_publication | -0.138619 | 3191 | 297 | raw_post_window_difference |
+| later_post_2026Q1_Q2 | publication_count | -0.245597 | 3191 | 297 | raw_post_window_difference |
+| later_post_2026Q1_Q2 | any_publication | -0.125777 | 3191 | 297 | raw_post_window_difference |
 
 ## Drop First Partial Quarter
 
@@ -130,6 +141,8 @@ test and not a project-entry design.
 | CONTROL_C03 | any_publication | -0.007945 | 0.012525 | 0.525865 | drops first partial at-risk quarter |
 | CONTROL_C05 | publication_count | 0.011006 | 0.025404 | 0.664851 | drops first partial at-risk quarter |
 | CONTROL_C05 | any_publication | -0.005467 | 0.012645 | 0.665514 | drops first partial at-risk quarter |
+| CONTROL_C06 | publication_count | -0.021353 | 0.023977 | 0.373165 | drops first partial at-risk quarter |
+| CONTROL_C06 | any_publication | -0.016660 | 0.012095 | 0.168407 | drops first partial at-risk quarter |
 
 ## Count Outlier Robustness
 
@@ -139,15 +152,11 @@ test and not a project-entry design.
 | CONTROL_C01 | publication_count | -0.014089 | 0.016044 | 0.379848 | excluded_top_1pct_apps=72 |
 | CONTROL_C03 | publication_count | -0.002539 | 0.015220 | 0.867530 | excluded_top_1pct_apps=72 |
 | CONTROL_C05 | publication_count | -0.002238 | 0.015104 | 0.882183 | excluded_top_1pct_apps=72 |
+| CONTROL_C06 | publication_count | -0.018662 | 0.017764 | 0.293443 | excluded_top_1pct_apps=72 |
 
 ## Pre-Policy Productivity Strata
 
-| control_definition | outcome | n_apps | n_treated_apps | n_control_apps | estimate | clustered_se | p_value | note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CONTROL_C05 | publication_count | 2518 | 2414 | 104 | 0.014228 | 0.010575 | 0.178489 | stratum=no_pre_policy_publication; stratum_defined_with_pre_policy_publications_only |
-| CONTROL_C05 | any_publication | 2518 | 2414 | 104 | 0.004848 | 0.009803 | 0.620937 | stratum=no_pre_policy_publication; stratum_defined_with_pre_policy_publications_only |
-| CONTROL_C05 | publication_count | 937 | 910 | 27 | 0.052825 | 0.100848 | 0.600410 | stratum=positive_pre_policy_publication; stratum_defined_with_pre_policy_publications_only |
-| CONTROL_C05 | any_publication | 937 | 910 | 27 | 0.004813 | 0.040213 | 0.904733 | stratum=positive_pre_policy_publication; stratum_defined_with_pre_policy_publications_only |
+Not triggered.
 
 ## Monthly Robustness
 
@@ -165,10 +174,12 @@ Not run in Design 1. Monthly timing robustness is intentionally held for the nex
 | CONTROL_C03 | any_publication | 3325 | 130 | -0.004772 | 0.012242 | 0.001043 | 0.093014 | PASS |
 | CONTROL_C05 | publication_count | 3324 | 131 | 0.015375 | 0.024577 | 0.025244 | 0.078517 | PASS |
 | CONTROL_C05 | any_publication | 3324 | 131 | -0.002373 | 0.012360 | 0.003050 | 0.201084 | PASS |
+| CONTROL_C06 | publication_count | 3191 | 297 | -0.021212 | 0.024120 | -0.033611 | 0.069571 | PASS |
+| CONTROL_C06 | any_publication | 3191 | 297 | -0.015964 | 0.012111 | -0.024450 | 0.156107 | PASS |
 
 ## Interpretation Guardrails
 
-- C0-C5 are provisional controls, not final clean controls.
+- C0-C6 are provisional controls, not final clean controls.
 - Post-policy entrants are not used for incumbent DID identification.
 - Pre-project periods are absent from the risk set, not coded as zero.
 - Publication is lagged; 2024Q3 effects should be interpreted cautiously.

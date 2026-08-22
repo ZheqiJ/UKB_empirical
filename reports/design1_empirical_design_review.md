@@ -34,7 +34,7 @@ sequential checkpoint.
 ## 4. Treatment/Control Definitions
 
 **WARNING.** Treatment/control status remains provisional. C0 is high
-precision but very small; C01/C03/C05 improve precision but mix evidence
+precision but very small; C01/C03/C05/C06 improve precision but mix evidence
 quality and include overlap labels from original Stage 3 classes.
 
 ## 5. Data Sufficiency
@@ -69,7 +69,7 @@ C0.
 
 ## 10. Control-Definition Robustness
 
-**PASS.** C01/C03/C05 are compared without
+**WARNING.** C01/C03/C05/C06 are compared without
 selecting based on significance. Sign instability implies measurement is
 the bottleneck.
 
@@ -89,7 +89,7 @@ are small.
 ## 13. Decision Tree
 
 - CASE 1: If pretrends are acceptable and coefficients are stable across
-  C01/C03/C05, quarterly incumbent DID remains the preferred main design.
+  C01/C03/C05/C06, quarterly incumbent DID remains the preferred main design.
 - CASE 2: If full risk-set pretrends are poor but balanced incumbents improve
   them, use balanced-incumbent DID as stronger and keep full risk set secondary.
 - CASE 3: If pretrends remain poor, do not make causal claims; pursue
@@ -101,7 +101,7 @@ are small.
   extensive margins using pre-policy productivity strata only.
 - CASE 8: If top 1% projects drive count effects, weaken average-effect
   interpretation and use outlier/count robustness.
-- CASE 9: If signs change across C01/C03/C05, return to Stage 3 measurement.
+- CASE 9: If signs change across C01/C03/C05/C06, return to Stage 3 measurement.
 
 ## 14. Final Reviewer Verdict
 

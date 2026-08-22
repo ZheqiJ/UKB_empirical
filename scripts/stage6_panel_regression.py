@@ -47,8 +47,11 @@ CONTROL_DEFS = {
     "CONTROL_C01": {"C0", "C1"},
     "CONTROL_C03": {"C0", "C1", "C2", "C3"},
     "CONTROL_C05": {"C0", "C1", "C2", "C3", "C4", "C5"},
+    "CONTROL_C06": {"C0", "C1", "C2", "C3", "C4", "C5", "C6"},
 }
-CONTROL_DEF_ORDER = ["CONTROL_C0", "CONTROL_C01", "CONTROL_C03", "CONTROL_C05"]
+CONTROL_DEF_ORDER = ["CONTROL_C0", "CONTROL_C01", "CONTROL_C03", "CONTROL_C05", "CONTROL_C06"]
+PRIMARY_CONTROL_DEF = "CONTROL_C06"
+CONTROL_ROBUSTNESS_DEFS = ("CONTROL_C01", "CONTROL_C03", "CONTROL_C05", "CONTROL_C06")
 OUTCOMES = ["publication_count", "any_publication"]
 
 
@@ -118,7 +121,7 @@ def read_csv(path: Path, delimiter: str = ",") -> list[dict[str, str]]:
 def write_csv(path: Path, rows: list[dict[str, object]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -1261,7 +1264,7 @@ def build_regressions(
 
     if include_monthly and month_panel is not None:
         monthly_ks = [*range(-24, -1), *range(0, 24)]
-        definition = "CONTROL_C05"
+        definition = PRIMARY_CONTROL_DEF
         month_eligible = eligible_apps(month_panel, definition, post_col="post_policy_primary")
         primary_month = sample_panel(month_panel, definition, month_eligible, drop_transition_month=True)
         for outcome in OUTCOMES:
@@ -1308,12 +1311,12 @@ def build_regressions(
                 }
             )
 
-    # Pre-policy productivity heterogeneity for broad C0-C5 if count positive and any non-positive.
-    c05_count = main_estimates.get(("CONTROL_C05", "publication_count", "Q0"), 0)
-    c05_any = main_estimates.get(("CONTROL_C05", "any_publication", "Q0"), 0)
-    heterogeneity_triggered = c05_count > 0 and c05_any <= 0
+    # Pre-policy productivity heterogeneity for the broadest current control candidate.
+    primary_count = main_estimates.get((PRIMARY_CONTROL_DEF, "publication_count", "Q0"), 0)
+    primary_any = main_estimates.get((PRIMARY_CONTROL_DEF, "any_publication", "Q0"), 0)
+    heterogeneity_triggered = primary_count > 0 and primary_any <= 0
     if heterogeneity_triggered:
-        definition = "CONTROL_C05"
+        definition = PRIMARY_CONTROL_DEF
         eligible = eligible_apps(quarter_panel, definition)
         pre_counts: dict[str, int] = defaultdict(int)
         for row in quarter_panel:
@@ -1436,7 +1439,7 @@ def build_figures(
     event_rows: list[dict[str, object]],
     include_monthly: bool = False,
 ) -> None:
-    definition = "CONTROL_C05"
+    definition = PRIMARY_CONTROL_DEF
     draw_line_chart(
         paths.quarterly_raw_count,
         [
@@ -1499,18 +1502,18 @@ def verdict_from_results(
     regression_rows: list[dict[str, object]],
 ) -> dict[str, str]:
     pretrend_warnings = sum(1 for row in pretrends if row.get("verdict") == "WARNING")
-    c05_count = next((row for row in sensitivity if row["control_definition"] == "CONTROL_C05" and row["outcome"] == "publication_count"), {})
-    c05_any = next((row for row in sensitivity if row["control_definition"] == "CONTROL_C05" and row["outcome"] == "any_publication"), {})
+    primary_count = next((row for row in sensitivity if row["control_definition"] == PRIMARY_CONTROL_DEF and row["outcome"] == "publication_count"), {})
+    primary_any = next((row for row in sensitivity if row["control_definition"] == PRIMARY_CONTROL_DEF and row["outcome"] == "any_publication"), {})
     lifecycle_warning = "WARNING"
     try:
-        q0 = float(c05_count.get("q0_estimate") or 0)
-        q1 = float(c05_count.get("q1_age_adjusted_estimate") or 0)
+        q0 = float(primary_count.get("q0_estimate") or 0)
+        q1 = float(primary_count.get("q1_age_adjusted_estimate") or 0)
         if abs(q0 - q1) <= max(0.05, abs(q0) * 0.25):
             lifecycle_warning = "PASS"
     except ValueError:
         pass
     sign_values = []
-    for definition in ("CONTROL_C01", "CONTROL_C03", "CONTROL_C05"):
+    for definition in CONTROL_ROBUSTNESS_DEFS:
         row = next((r for r in sensitivity if r["control_definition"] == definition and r["outcome"] == "publication_count"), {})
         try:
             sign_values.append(math.copysign(1, float(row.get("q0_estimate") or 0)))
@@ -1525,8 +1528,8 @@ def verdict_from_results(
         "lifecycle": lifecycle_warning,
         "control_robustness": control_verdict,
         "final": final,
-        "c05_count_estimate": str(c05_count.get("q0_estimate", "")),
-        "c05_any_estimate": str(c05_any.get("q0_estimate", "")),
+        "primary_count_estimate": str(primary_count.get("q0_estimate", "")),
+        "primary_any_estimate": str(primary_any.get("q0_estimate", "")),
     }
 
 
@@ -1560,7 +1563,7 @@ def build_reports(
         if include_monthly
         else "Not run in Design 1. Monthly timing robustness is intentionally held for the next sequential design."
     )
-    post_summaries = [row for row in diagnostics_rows if row.get("record_type") == "post_window_summary" and row.get("control_definition") == "CONTROL_C05"]
+    post_summaries = [row for row in diagnostics_rows if row.get("record_type") == "post_window_summary" and row.get("control_definition") == PRIMARY_CONTROL_DEF]
 
     report = [
         "# Design 1 Quarterly Publication Results",
@@ -1616,7 +1619,7 @@ def build_reports(
             ["control_definition", "outcome", "estimate", "clustered_se", "p_value", "note"],
         ),
         "",
-        "## Post Window Summaries For CONTROL_C05",
+        f"## Post Window Summaries For {PRIMARY_CONTROL_DEF}",
         "",
         markdown_table(post_summaries, ["period", "metric", "value", "treated_n", "control_n", "note"]),
         "",
@@ -1656,7 +1659,7 @@ def build_reports(
         "",
         "## Interpretation Guardrails",
         "",
-        "- C0-C5 are provisional controls, not final clean controls.",
+        "- C0-C6 are provisional controls, not final clean controls.",
         "- Post-policy entrants are not used for incumbent DID identification.",
         "- Pre-project periods are absent from the risk set, not coded as zero.",
         "- Publication is lagged; 2024Q3 effects should be interpreted cautiously.",
@@ -1724,7 +1727,7 @@ def build_reports(
         "## 4. Treatment/Control Definitions",
         "",
         "**WARNING.** Treatment/control status remains provisional. C0 is high",
-        "precision but very small; C01/C03/C05 improve precision but mix evidence",
+        "precision but very small; C01/C03/C05/C06 improve precision but mix evidence",
         "quality and include overlap labels from original Stage 3 classes.",
         "",
         "## 5. Data Sufficiency",
@@ -1759,7 +1762,7 @@ def build_reports(
         "",
         "## 10. Control-Definition Robustness",
         "",
-        f"**{verdicts['control_robustness']}.** C01/C03/C05 are compared without",
+        f"**{verdicts['control_robustness']}.** C01/C03/C05/C06 are compared without",
         "selecting based on significance. Sign instability implies measurement is",
         "the bottleneck.",
         "",
@@ -1779,7 +1782,7 @@ def build_reports(
         "## 13. Decision Tree",
         "",
         "- CASE 1: If pretrends are acceptable and coefficients are stable across",
-        "  C01/C03/C05, quarterly incumbent DID remains the preferred main design.",
+        "  C01/C03/C05/C06, quarterly incumbent DID remains the preferred main design.",
         "- CASE 2: If full risk-set pretrends are poor but balanced incumbents improve",
         "  them, use balanced-incumbent DID as stronger and keep full risk set secondary.",
         "- CASE 3: If pretrends remain poor, do not make causal claims; pursue",
@@ -1791,7 +1794,7 @@ def build_reports(
         "  extensive margins using pre-policy productivity strata only.",
         "- CASE 8: If top 1% projects drive count effects, weaken average-effect",
         "  interpretation and use outlier/count robustness.",
-        "- CASE 9: If signs change across C01/C03/C05, return to Stage 3 measurement.",
+        "- CASE 9: If signs change across C01/C03/C05/C06, return to Stage 3 measurement.",
         "",
         "## 14. Final Reviewer Verdict",
         "",
@@ -1883,7 +1886,8 @@ def build_stage6_outputs(
         "stable_post_q4", "transition_quarter", "event_time_quarter",
         "original_stage3_classification", "control_layer", "regression_group_CONTROL_C0",
         "regression_group_CONTROL_C01", "regression_group_CONTROL_C03",
-        "regression_group_CONTROL_C05", "institution", "pi", "schema27_title",
+        "regression_group_CONTROL_C05", "regression_group_CONTROL_C06",
+        "institution", "pi", "schema27_title",
     ])
     if month_panel is not None:
         write_csv(paths.month_panel, month_panel, [
@@ -1894,6 +1898,7 @@ def build_stage6_outputs(
             "event_time_month", "original_stage3_classification", "control_layer",
             "regression_group_CONTROL_C0", "regression_group_CONTROL_C01",
             "regression_group_CONTROL_C03", "regression_group_CONTROL_C05",
+            "regression_group_CONTROL_C06",
             "institution", "pi", "schema27_title",
         ])
     write_csv(paths.risk_diagnostics, risk_rows, [

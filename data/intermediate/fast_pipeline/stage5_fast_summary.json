@@ -1,8 +1,9 @@
 {
-  "c6_preserved_flag_projects": 169,
+  "c06_added_projects": 169,
   "control_c01_projects": 237,
   "control_c03_projects": 267,
   "control_c05_projects": 269,
+  "control_c06_projects": 438,
   "control_c0_projects": 42,
   "control_layer_counts": {
     "C0": 42,
@@ -29,7 +30,7 @@
   "policy_date": "2024-07-05",
   "publication_events": 12592,
   "publication_observation_end": "2026-07-16",
-  "source_commit": "a2ae98666d6bf9c50ecbd02bc0bed1e022c03f57",
+  "source_commit": "88292d3-plus-c06",
   "timing_metadata_source": "data/intermediate/timing_feasibility/timing_working_research_project_universe.csv",
   "working_universe_projects": 6935
 }
