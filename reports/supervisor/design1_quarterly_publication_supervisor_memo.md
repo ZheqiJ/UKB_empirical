@@ -18,14 +18,6 @@ Important interpretation: the panel begins only after each recorded project star
 
 ## 2. What We Fixed Since the Earlier Fast Run
 
-The current design improves on the initial 24-month before/after pipeline in five ways:
-
-- It uses a quarterly risk-set panel rather than two coarse pre/post windows.
-- Project quarters before recorded project start are excluded, not coded as zero.
-- Publication timing is audited using exact Schema 19 dates and Schema 24 application-publication links.
-- The main window excludes incomplete 2026Q3 observations and ends at 2026Q2.
-- The design now reports app FE + quarter FE DID, lifecycle adjustment, transition-quarter robustness, first-partial-quarter robustness, top-output sensitivity, and formal event-study pretrend tests.
-
 Data construction passes the main checks:
 
 | Item | Value |
