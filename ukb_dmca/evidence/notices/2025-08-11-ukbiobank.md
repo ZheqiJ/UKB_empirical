@@ -2,7 +2,7 @@
 
 - notice_path: 2025/08/2025-08-11-ukbiobank.md
 - notice_url: https://github.com/github/dmca/blob/master/2025/08/2025-08-11-ukbiobank.md
-- fetched_at_utc: 2026-08-19T09:01:08+00:00
+- fetched_at_utc: 
 
 ## Public Notice Text
 

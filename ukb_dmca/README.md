@@ -179,4 +179,4 @@ uploads as proof of conduct by a UKB application team.
 - Unique applications linked: 2
 - Application input used: `data/applications.tsv`
 
-See `ukb_dmca/evidence/logs/result_summary.json` for remaining cases and role counts.
+See `evidence/logs/result_summary.json` for remaining cases and role counts.
