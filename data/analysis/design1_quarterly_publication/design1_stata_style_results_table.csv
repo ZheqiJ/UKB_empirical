@@ -1,0 +1,9 @@
+panel,column,design,outcome,outcome_label,control_definition,control_label,coefficient,clustered_se,p_value,stars,n_obs,n_apps,n_treated_apps,n_control_apps,application_fe,calendar_quarter_fe,project_age_bin_fe,cluster,pretrend_p_value
+Panel A. Q0: Application FE + calendar-quarter FE,1,Q0_quarterly_incumbent_did,publication_count,Publication count,CONTROL_C05,C05,0.015375,0.024577,0.531591,,51515,3455,3324,131,Yes,Yes,No,application,0.078517
+Panel A. Q0: Application FE + calendar-quarter FE,2,Q0_quarterly_incumbent_did,publication_count,Publication count,CONTROL_C06,C06,-0.021212,0.024120,0.379170,,52034,3488,3191,297,Yes,Yes,No,application,0.069571
+Panel A. Q0: Application FE + calendar-quarter FE,3,Q0_quarterly_incumbent_did,any_publication,Any publication,CONTROL_C05,C05,-0.002373,0.012360,0.847738,,51515,3455,3324,131,Yes,Yes,No,application,0.201084
+Panel A. Q0: Application FE + calendar-quarter FE,4,Q0_quarterly_incumbent_did,any_publication,Any publication,CONTROL_C06,C06,-0.015964,0.012111,0.187458,,52034,3488,3191,297,Yes,Yes,No,application,0.156107
+Panel B. Q1: Q0 + project-age-bin FE,5,Q1_quarterly_incumbent_did_age_adjusted,publication_count,Publication count,CONTROL_C05,C05,0.025244,0.024148,0.295834,,51515,3455,3324,131,Yes,Yes,Yes,application,0.078517
+Panel B. Q1: Q0 + project-age-bin FE,6,Q1_quarterly_incumbent_did_age_adjusted,publication_count,Publication count,CONTROL_C06,C06,-0.033611,0.023250,0.148276,,52034,3488,3191,297,Yes,Yes,Yes,application,0.069571
+Panel B. Q1: Q0 + project-age-bin FE,7,Q1_quarterly_incumbent_did_age_adjusted,any_publication,Any publication,CONTROL_C05,C05,0.003050,0.011772,0.795560,,51515,3455,3324,131,Yes,Yes,Yes,application,0.201084
+Panel B. Q1: Q0 + project-age-bin FE,8,Q1_quarterly_incumbent_did_age_adjusted,any_publication,Any publication,CONTROL_C06,C06,-0.024450,0.011560,0.034426,**,52034,3488,3191,297,Yes,Yes,Yes,application,0.156107
