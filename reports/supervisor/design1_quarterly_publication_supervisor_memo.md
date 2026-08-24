@@ -85,9 +85,6 @@ What we learn from Design 1 after adding C06:
 4. The C06 controls are much more publication-intensive before the policy, so the broader control group may not be more credible despite being larger.
 5. The overall evidence still does not support a strong causal claim about publication output.
 
-Suggested supervisor headline:
-
-> We added a broader C06 control definition to the quarterly incumbent DID. It increases controls from 131 to 297 and produces more negative publication estimates, but the expanded controls have much higher pre-policy publication rates. The result is useful as a robustness and measurement diagnostic, not yet as a clean causal estimate.
 
 Recommended next step:
 
