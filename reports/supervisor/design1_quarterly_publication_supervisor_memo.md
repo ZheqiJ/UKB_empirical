@@ -84,13 +84,141 @@ What we learn from Design 1 after adding C06:
 5. The overall evidence still does not support a strong causal claim about publication output.
 
 
-Recommended next step:
+## 6. Recommended Next Steps
 
-1. Add compact balance/common-support diagnostics for C05 versus C06: project start quarter, project age, institution, pre-policy publication count, and pre-policy any-publication.
-2. Run Design 2 monthly timing robustness to see whether C06's negative estimates are driven by a narrow timing window.
-3. If C06 remains important, run a matched or weighted quarterly DID using pre-policy publication and start-timing covariates.
-4. Keep DMCA as a separate auxiliary design because the application-notice linkage is sparse and not naturally suited to the same quarterly publication DID.
+The next stage should temporarily center on **C05 as the preferred working control definition**, while retaining C06 as a robustness and measurement diagnostic.
 
+The rationale is not that C05 should be made statistically significant. Rather, C05 is currently the cleaner broad control definition: C03 and C05 produce very similar estimates, whereas adding C06 substantially changes the sign of the estimates and introduces a group of controls with much higher pre-policy publication intensity. The immediate question is therefore:
+
+> Does the weak C05 result reflect a coarse baseline specification, project lifecycle and publication timing, limited precision, or remaining treatment/control measurement problems?
+
+C06 should remain in the analysis as an informative sensitivity check, but it should not replace C05 as the main working specification unless its additional controls can be shown to have adequate pre-policy comparability and measurement validity.
+
+### Design 2: C05 Balance and Adjusted Quarterly DID
+
+The first priority is to diagnose comparability within the C05 sample before moving to a different time frequency.
+
+Start with a compact treated-versus-control balance and common-support assessment using only pre-policy characteristics:
+
+- project start quarter;
+- project age at the policy date;
+- institution or broader institution/country group;
+- pre-policy publication count;
+- pre-policy any-publication indicator;
+- available pre-policy modality/topic classifications.
+
+Then estimate a sequence of quarterly DID specifications.
+
+**Q0: Baseline**
+
+**Q1: Project lifecycle adjustment**
+
+Add project-age-bin fixed effects.
+
+**Q2: Start-cohort-specific time shocks**
+
+Allow projects from different start cohorts to follow different common calendar-time paths, for example through start-cohort-by-quarter fixed effects.
+
+**Q3: Pre-policy productivity-specific time shocks**
+
+Define productivity groups using only pre-policy publication information and allow these groups to have different calendar-time paths.
+
+**Q4: Research-area or institutional time shocks**
+
+Where cell sizes permit, allow broad institution/country groups or pre-policy topic/modality groups to experience different calendar-time shocks.
+
+These specifications should be added sequentially rather than simultaneously. Report how the C05 estimate changes in magnitude, sign, precision, and pretrend behavior across a pre-specified set of economically defensible specifications.
+
+### Design 3: Publication-Lag and Delayed-Effect Analysis
+
+Publication is a lagged research outcome, so a July 2024 policy change may not plausibly affect published papers immediately.
+
+Rather than redefining the policy date itself, use dynamic or delayed-effect specifications that separately examine:
+
+- 2024Q3-Q4 as the immediate transition period;
+- 2025Q1-Q2;
+- 2025Q3-Q4;
+- 2026Q1-Q2;
+- specifications that exclude the early post-policy period and estimate effects only over later post-policy windows;
+- cumulative publication output over fixed post-policy horizons.
+
+The key question is whether the near-zero average DID masks a delayed response that emerges only after a plausible publication-production lag.
+
+A delayed effect should be interpreted more seriously only if it appears over multiple adjacent periods rather than in a single quarter.
+
+### Design 4: Publication Outcome-Model Robustness
+
+Publication count is highly skewed and the current OLS estimate is sensitive to high-output projects. The count outcome should therefore be examined using several pre-specified representations:
+
+- any publication;
+- raw publication count;
+- \(\log(1+\text{publication count})\);
+- PPML / Poisson fixed-effects specifications where feasible;
+- full-sample versus top-1%-excluded estimates;
+- winsorization;
+- citation
+
+The objective is to determine whether the substantive conclusion depends on the upper tail or on the linear OLS functional form.
+
+No observation should be removed merely because it is highly productive; trimming and winsorization are robustness exercises rather than preferred estimators.
+
+### Design 5: Matched or Weighted C05 DID
+
+Matching or weighting should be used only if Design 2 reveals meaningful lack of common support or systematic treated-control imbalance.
+
+Candidate pre-treatment variables include:
+
+- project start quarter;
+- pre-policy publication count;
+- pre-policy any-publication;
+- project age at the policy date;
+- institution/country group;
+- pre-policy modality/topic tags.
+
+Because project start quarter and project age at the policy date contain nearly the same timing information, they should not be mechanically treated as independent matching dimensions.
+
+Before estimating a weighted DID, report:
+
+1. overlap/common-support plots;
+2. balance before and after weighting;
+3. effective control sample size;
+4. weight concentration and extreme weights.
+
+If overlap is poor, trimming or a narrower comparable incumbent sample may be more credible than aggressive weighting.
+
+### Design 6: Theory-Guided Heterogeneity
+
+Heterogeneity analysis should remain mechanism-driven rather than exploratory subgroup search.
+
+Candidate groups include:
+
+- more recent incumbent projects;
+- projects with no pre-policy publications;
+- projects with positive pre-policy productivity;
+- high data-intensity modalities;
+- genetics, imaging, proteomics, and EHR-related projects separately where treatment measurement is credible.
+
+All subgroup definitions must be based on pre-policy characteristics.
+
+The objective is to test mechanisms suggested by the theory, not to search for subgroups that generate statistical significance.
+
+
+### Immediate Priority
+
+The immediate next step is therefore **Design 2: a C05-focused balance and adjusted quarterly DID analysis**.
+
+The goal is to establish whether the near-zero C05 estimate is robust to economically motivated adjustments for lifecycle, cohort composition, pre-policy productivity, and research-area/institutional shocks.
+
+Only after understanding those diagnostics should we decide whether the next empirical bottleneck is:
+
+1. publication timing and lag;
+2. functional-form/outlier sensitivity;
+3. lack of common support requiring matching or weighting; or
+4. treatment/control measurement requiring further refinement.
+
+Monthly timing remains useful, but it is no longer the immediate next design. It can be added later as a higher-frequency timing robustness once the C05 quarterly specification and comparability diagnostics are better understood.
+
+DMCA remains a separate auxiliary outcome design because the current application-notice linkage is sparse and does not naturally support the same quarterly incumbent DID structure.
 ## Appendix: Full Control Sensitivity
 
 | Control definition | Outcome | Q0 estimate | SE | p-value | Q1 estimate | Pretrend p-value |
