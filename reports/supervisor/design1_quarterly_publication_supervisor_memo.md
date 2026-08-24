@@ -14,13 +14,19 @@ Control definitions are cumulative sensitivity checks:
 | C05 | 3,324 | 131 | Previous broad working specification |
 | C06 | 3,191 | 297 | New broadest specification including C6 candidates |
 
-The baseline specification is:
+The baseline (Q0) specification is:
 
 ```text
 Y_iq = beta * Treated_i * Post_q + project FE_i + quarter FE_q + error_iq
 ```
 
 where `Y_iq` is either quarterly publication count or an indicator for any publication. Standard errors are clustered by application. A lifecycle-adjusted diagnostic specification adds project-age-bin fixed effects.
+
+(Q1)Project-age-adjusted DID:
+
+```text
+Y_iq = beta * Treated_i * Post_q + project FE_i + quarter FE_q + project-age FE_iq + error_iq
+```
 
 ## 2. Data Checks
 
@@ -36,6 +42,8 @@ Data construction passes the main checks:
 ## 3. Main Results
 
 The C06 addition is informative but should be presented as a broad sensitivity check, not as a mechanically better control group. It nearly doubles the incumbent control count relative to C05, but it also pulls in many overlap/unclear projects and changes baseline comparability.
+
+
 
 Main estimates:
 
