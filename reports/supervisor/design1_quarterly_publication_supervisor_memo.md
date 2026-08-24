@@ -53,8 +53,6 @@ Main estimates:
 | C05 Q1: plus project-age-bin FE | 0.025 (0.024), p = 0.296 | 0.003 (0.012), p = 0.796 |
 | C06 Q0: app FE + quarter FE | -0.021 (0.024), p = 0.379 | -0.016 (0.012), p = 0.187 |
 | C06 Q1: plus project-age-bin FE | -0.034 (0.023), p = 0.148 | -0.024 (0.012), p = 0.034 |
-| C06, drop first partial at-risk quarter | -0.021 (0.024), p = 0.373 | -0.017 (0.012), p = 0.168 |
-| C06, exclude top 1% high-output apps | -0.019 (0.018), p = 0.293 | -- |
 | C03 Q0: app FE + quarter FE | 0.015 (0.025), p = 0.539 | -0.005 (0.012), p = 0.697 |
 
 Economic magnitude should be interpreted relative to pre-policy quarterly baselines. In C06, treated projects averaged 0.103 publications per pre-policy project-quarter and 7.38% had any publication. C06 controls averaged 0.347 publications and 20.0% had any publication. This large baseline gap is a warning that C06 improves sample size but may worsen comparability.
