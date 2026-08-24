@@ -32,10 +32,6 @@ Data construction passes the main checks:
 | Application-quarter rows | 75,973 |
 | Main window | 2022Q3-2026Q2 |
 | Publication events in complete quarter panel | 12,400 |
-| Duplicate application-publication pairs | 0 |
-| Publication events before project start | 24, audited and excluded |
-| Events after 2026Q2 complete window | 168, audited and excluded |
-| Pre-start panel rows | 0 |
 
 ## 3. Main Results
 
