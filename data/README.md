@@ -3,10 +3,13 @@
 Data are organized by research use:
 
 - `raw/`: source snapshots used by remote workflows.
-- `analysis/`: main regression and analysis datasets. Start here for current
-  empirical results.
-- `intermediate/`: construction, matching, classification, timing, and fast
-  checkpoint outputs kept for audit and reproducibility.
+- `intermediate/`: shared construction, matching, classification, timing, and
+  audit outputs kept for reproducibility.
+
+Analysis-specific outputs live under `analyses/`:
+
+- `analyses/interrupted_time_series/`: active descriptive ITS package.
+- `analyses/did_archive/`: archived DID-era outputs retained for provenance.
 
 Place the UK Biobank approved applications TSV here only if you want a
 repo-local input copy.

@@ -11,6 +11,7 @@ on:
         type: choice
         options:
           - tests
+          - interrupted_time_series
           - design1_quarterly_publication
           - fast_design_regression
           - stage3_control_expansion
@@ -64,6 +65,7 @@ on:
       - ukb_dmca/**
       - scripts/**
       - tests/**
+      - analyses/**
       - data/raw/**
       - data/analysis/**
       - data/intermediate/**
@@ -81,7 +83,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[tests]') && 'tests' || contains(github.event.head_commit.message, '[design1-quarterly-publication]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[design1]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[stage6-quarterly-panel]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[fast-design-regression]') && 'fast_design_regression' || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.run_scope || contains(github.event.head_commit.message, '[tests]') && 'tests' || contains(github.event.head_commit.message, '[interrupted-time-series]') && 'interrupted_time_series' || contains(github.event.head_commit.message, '[its]') && 'interrupted_time_series' || contains(github.event.head_commit.message, '[design1-quarterly-publication]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[design1]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[stage6-quarterly-panel]') && 'design1_quarterly_publication' || contains(github.event.head_commit.message, '[fast-design-regression]') && 'fast_design_regression' || contains(github.event.head_commit.message, '[stage3-control-expansion]') && 'stage3_control_expansion' || contains(github.event.head_commit.message, '[stage3-classification]') && 'stage3_classification' || contains(github.event.head_commit.message, '[timing]') && 'timing' || 'dmca' }}
   COMMIT_OUTPUTS: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_outputs || github.event_name != 'workflow_dispatch' }}
   REFRESH_STAGE2_SOURCES: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_stage2_sources || false }}
   WEBSITE_LISTING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.website_listing_url || '' }}
@@ -171,6 +173,10 @@ jobs:
       - name: Build Stage 3 control expansion frontier outputs
         if: env.RUN_SCOPE == 'stage3_control_expansion'
         run: python3 scripts/stage3_control_expansion.py --source-commit "${GITHUB_SHA}"
+
+      - name: Build interrupted time-series feasibility package
+        if: env.RUN_SCOPE == 'interrupted_time_series'
+        run: python3 analyses/interrupted_time_series/scripts/build_its_feasibility.py
 
       - name: Build Stage 4/5 fast design and regression outputs
         if: env.RUN_SCOPE == 'fast_design_regression'
@@ -314,6 +320,7 @@ jobs:
           if-no-files-found: ignore
           path: |
             ukb_dmca/**
+            analyses/**
             data/analysis/**
             data/intermediate/**
             data/raw/stage2_source_manifest.json
@@ -329,7 +336,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for path in README.md ukb_dmca data/analysis data/intermediate figures reports data/raw/stage2_source_manifest.json; do
+          for path in README.md ukb_dmca analyses data/analysis data/intermediate figures reports data/raw/stage2_source_manifest.json; do
             if [ -e "${path}" ]; then
               git add -A -- "${path}"
             fi

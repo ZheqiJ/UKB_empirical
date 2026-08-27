@@ -1,0 +1,95 @@
+{
+  "april_2026_platform_shock_date": "2026-04-01",
+  "c05_group_projects": {
+    "legacy_exposure_proxy": {
+      "any_pre_2024_publication_rate_percent": "27.57",
+      "mean_pre_2024_publications": "0.856",
+      "median_project_age_years_at_transition": "3.417",
+      "projects": 3326
+    },
+    "rap_intensive_comparison": {
+      "any_pre_2024_publication_rate_percent": "21.37",
+      "mean_pre_2024_publications": "0.954",
+      "median_project_age_years_at_transition": "2.917",
+      "projects": 131
+    }
+  },
+  "c05_quarterly_rows": 32,
+  "calendar_2023_monthly_start_max": 80,
+  "calendar_2023_monthly_start_mean": 61.83,
+  "calendar_2023_monthly_start_min": 37,
+  "feasibility_ratings": {
+    "aggregate_incumbent_publications": "HIGH",
+    "comparative_exposure_proxy_its": "MEDIUM",
+    "institution_country_patterns": "LOW_MEDIUM",
+    "modality_heterogeneity": "MEDIUM",
+    "project_entry_starts": "HIGH",
+    "recent_vs_mature_projects": "MEDIUM",
+    "returned_data_timing": "LOW"
+  },
+  "incumbent_publication_quarters": {
+    "2024Q2": {
+      "any_publication_rate_percent": "8.36",
+      "at_risk_incumbent_projects": 4329,
+      "publication_app_links": 519
+    },
+    "2024Q3": {
+      "any_publication_rate_percent": "8.24",
+      "at_risk_incumbent_projects": 4332,
+      "publication_app_links": 539
+    },
+    "2024Q4": {
+      "any_publication_rate_percent": "8.36",
+      "at_risk_incumbent_projects": 4332,
+      "publication_app_links": 507
+    },
+    "2025Q1": {
+      "any_publication_rate_percent": "9.76",
+      "at_risk_incumbent_projects": 4332,
+      "publication_app_links": 629
+    },
+    "2026Q2": {
+      "any_publication_rate_percent": "9.37",
+      "at_risk_incumbent_projects": 4332,
+      "publication_app_links": 588
+    }
+  },
+  "known_2024_start_pattern": {
+    "2024-04": 72,
+    "2024-05": 33,
+    "2024-06": 10,
+    "2024-07": 3,
+    "2024-08": 0,
+    "2024-09": 1,
+    "2024-10": 208
+  },
+  "modality_project_counts": {
+    "ehr_linked_records": 115,
+    "genetics_sequence": 4894,
+    "imaging": 574,
+    "other_or_unclear": 389,
+    "proteomics_metabolomics_biomarkers": 350,
+    "questionnaire_environment_lifestyle": 613
+  },
+  "policy_transition_date": "2024-07-05",
+  "project_start_quarter_pattern": {
+    "2024Q2": 115,
+    "2024Q3": 4,
+    "2024Q4": 470
+  },
+  "publication_audit": {
+    "app_not_in_matched_timing_universe": 6,
+    "exact_publication_app_links": 12568,
+    "multi_application_publication_ids": 541,
+    "publication_before_project_start": 24
+  },
+  "returned_data_feasibility": {
+    "candidate_fact": "Returned datasets timing",
+    "date_like_fields": "",
+    "feasibility": "LOW",
+    "fields": "application_id; archive_id; availability; notes; personal; title",
+    "notes": "Schema 4 gives returned-data titles/application IDs but no usable timing field in the local public extract.",
+    "rows": 591
+  },
+  "source_access_date": "2026-08-27"
+}

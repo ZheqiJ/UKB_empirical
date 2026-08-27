@@ -1,0 +1,2 @@
+candidate_fact,rows,fields,date_like_fields,feasibility,notes
+Returned datasets timing,591,application_id; archive_id; availability; notes; personal; title,,LOW,Schema 4 gives returned-data titles/application IDs but no usable timing field in the local public extract.

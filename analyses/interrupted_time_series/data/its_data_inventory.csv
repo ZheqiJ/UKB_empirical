@@ -1,0 +1,8 @@
+data_source,path,rows,role,measurement_issue
+Matched UKB project starts,data/intermediate/timing_feasibility/timing_working_research_project_universe.csv,6935,Shared source for project-entry ITS and denominators.,Excludes unmatched Schema 27 records retained in Stage 2.5 audit.
+Stage 3 RAP exposure proxies,data/intermediate/rap_classification/stage3_project_rap_exposure_classification.csv,6935,Descriptive legacy-exposure and RAP-intensive proxy construction.,Proxy classifications are not observed treatment status.
+Archived Design 1 app outcomes,analyses/did_archive/data/analysis/design1_quarterly_publication/project_outcomes_input.csv,6935,C03/C05/C06 group labels and pre-policy baseline fields.,Historical DID terms are relabelled descriptively in ITS outputs.
+Archived Design 1 quarterly panel,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_quarterly_publication_panel.csv,75973,Quarterly incumbent publication trajectories.,Project activity/expiry status is not observed.
+Schema 19 publications,data/raw/ukb_schema19_publications.tsv,14633,Exact publication dates and publication metadata.,Non-exact app-publication dates skipped: 0.
+Schema 24 publication-application links,data/raw/ukb_schema24_publication_applications.tsv,12598,Application-publication linkage.,Multi-application publication IDs observed: 541.
+Schema 4 returned datasets,data/raw/ukb_schema4_returned_datasets.tsv,591,Candidate output metadata.,No usable timing field in the local public extract.

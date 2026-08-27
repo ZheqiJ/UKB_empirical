@@ -1,64 +1,54 @@
 # UKB_empirical
 
-This repository contains the empirical pipeline for studying the July 2024 UK
-Biobank Research Analysis Platform (RAP) transition. The project currently
-focuses on whether the policy changed downstream scientific output for existing
-UK Biobank research projects, with publication outcomes as the primary working
-outcome and DMCA-linked repository notices kept as a separate auxiliary outcome
-family.
+This repository contains public-metadata empirical work on the July 2024 UK
+Biobank Research Analysis Platform (RAP) transition. The active main logic is now
+descriptive interrupted time-series and stylized-facts work, not a causal DID
+claim.
 
-The repository is intentionally audit-first: each stage writes reproducible
-processed data, reports, and figures through GitHub Actions so large pipeline
-runs do not depend on local memory.
+The repository is audit-first: source snapshots, intermediate construction
+tables, analysis outputs, reports, and figures are kept in git so remote runs can
+be reproduced without relying on local memory.
 
 ## Current Empirical Status
 
-The current completed design is **Design 1: quarterly incumbent-project DID for
-publication outcomes**.
+The active package is **interrupted time-series and stylized facts**:
 
-- Working project universe: 6,935 matched UK Biobank projects with unique start
-  dates.
-- Quarterly panel: application-quarter risk-set panel from 2022Q3 to 2026Q2.
-- Policy date: 5 July 2024.
-- Main outcome family: publication count and any publication.
-- Main current specification: application fixed effects plus calendar-quarter
-  fixed effects, clustered by application.
-- Current interpretation: the pipeline runs end to end, but the first quarterly
-  publication results do not show a robust or precisely estimated post-RAP
-  differential change. Remaining concerns are the small/provisional control
-  group, incomplete actual-exposure information, and publication timing.
+- `analyses/interrupted_time_series/`: active descriptive feasibility package.
+- `analyses/interrupted_time_series/scripts/build_its_feasibility.py`:
+  reproducible builder for the ITS data, reports, and figures.
+- `analyses/interrupted_time_series/reports/preliminary_feasibility_report.md`:
+  current supervisor-facing feasibility report.
+- `analyses/interrupted_time_series/design/`: proposed specifications and
+  candidate stylized facts.
 
-Key reports:
+The old quarterly DID work is preserved as an archive:
 
-- `reports/supervisor/design1_quarterly_publication_supervisor_memo.md`: concise
-  supervisor-facing memo.
-- `reports/design1_quarterly_publication_results.md`: full Design 1 quarterly
-  result report.
-- `reports/design1_empirical_design_review.md`: implementation and empirical
-  diagnostic review.
-- `data/analysis/design1_quarterly_publication/design1_regression_results.csv`:
-  Design 1 regression table.
+- `analyses/did_archive/`: historical DID-style exploratory outputs and scripts.
+- `analyses/did_archive/manifest.csv`: old-to-new path mapping.
+- `scripts/stage4_5_fast_design_regression.py`,
+  `scripts/stage6_panel_regression.py`, and `scripts/design1_stata_table.py`:
+  compatibility wrappers that call the archived implementations.
 
-Generated reports and data are stored in git on `main`; local copies can be
-deleted and restored from GitHub when needed.
+The archived DID estimates should be treated as diagnostics only. The public
+data do not observe actual project-level RAP migration, active/expired project
+status, refresh requests, or actual RAP use, so the main causal interpretation
+has been set aside.
 
 ## Repository Layout
 
-- `scripts/`: pipeline scripts for public UKB project construction, timing,
-  provisional RAP exposure classification, publication panels, and DMCA matching.
+- `scripts/`: shared pipeline scripts plus compatibility wrappers for archived
+  DID scripts.
 - `tests/`: unit tests for the pipeline components.
 - `data/raw/`: public input snapshots used by the remote workflow.
-- `data/analysis/`: main analysis datasets and regression outputs used for the
-  current empirical designs.
-- `data/intermediate/`: construction, audit, timing, classification, and fast
-  checkpoint outputs retained for reproducibility but not treated as the main
-  regression tables.
-- `figures/`: generated figures.
-- `reports/`: generated reports and empirical memos.
-- `reports/supervisor/`: short supervisor-facing memos with design names rather
-  than pipeline-stage names.
-- `ukb_dmca/`: DMCA-specific notices, lineage evidence, matching outputs, and
-  the DMCA methodology notes.
+- `data/intermediate/`: shared construction, audit, timing, and classification
+  outputs retained for reproducibility.
+- `analyses/interrupted_time_series/`: current main descriptive ITS package.
+- `analyses/did_archive/`: archived DID-era files kept for provenance.
+- `reports/supervisor/`: frozen supervisor-facing memos retained unchanged.
+- `ukb_dmca/`: frozen DMCA-specific notices, lineage evidence, matching outputs,
+  and methodology notes.
+
+Participant-level UK Biobank data must never be stored in this repository.
 
 ## Remote Execution
 
@@ -68,8 +58,9 @@ Open the `UKB Remote Pipeline` workflow in GitHub Actions and choose a
 - `timing`: timing-feasibility counts around the policy date.
 - `stage3_classification`: provisional RAP exposure classification.
 - `stage3_control_expansion`: control-candidate expansion frontier.
-- `fast_design_regression`: earlier fast publication/DMCA checkpoint.
-- `design1_quarterly_publication`: Design 1 quarterly publication DID.
+- `interrupted_time_series`: active descriptive ITS feasibility package.
+- `fast_design_regression`: archived fast publication/DMCA checkpoint.
+- `design1_quarterly_publication`: archived Design 1 quarterly publication DID.
 - `dmca`: UKB-DMCA repository lineage and application matching.
 - `all`: public project universe, start-date matching, and DMCA pipeline.
 
@@ -90,10 +81,10 @@ application, PI, institution, or repository owner acted unlawfully.
 
 Proceed sequentially:
 
-1. Run **Design 2: monthly timing robustness** for the publication outcome.
-2. Add balance/common-support diagnostics for start timing, project age,
-   institution, and pre-policy publication productivity.
-3. Use matched or weighted DID only if those diagnostics reveal substantial
-   comparability problems.
-4. Keep DMCA as a separate auxiliary design rather than folding it into the
-   publication panel.
+1. Start with the project-entry interruption/restart plot and monthly segmented
+   count ITS.
+2. Add aggregate incumbent publication trajectories with delayed post-transition
+   windows.
+3. Use C05/C03/C06 only as descriptive exposure-proxy sensitivity checks.
+4. Keep DMCA as a separate auxiliary module rather than folding it into the
+   publication ITS package.
