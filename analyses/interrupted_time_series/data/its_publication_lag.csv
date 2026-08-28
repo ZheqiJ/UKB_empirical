@@ -1,0 +1,6 @@
+lag_bin,min_lag_months,max_lag_months,publication_app_links,share_percent,median_lag_months_all_events
+0_6_months,0,6,144,1.15,41.000
+7_12_months,7,12,508,4.04,41.000
+13_24_months,13,24,1977,15.73,41.000
+25_48_months,25,48,4874,38.78,41.000
+49_plus_months,49,,5065,40.30,41.000

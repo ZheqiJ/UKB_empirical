@@ -1,15 +1,15 @@
-# Analysis Data
+# Archived DID Analysis Data
 
-This folder contains the datasets and result tables used directly for the main
-empirical designs.
+This folder contains the datasets and result tables used directly by the
+historical DID archive.
 
-Current main design:
+Archived Design 1:
 
 - `design1_quarterly_publication/project_outcomes_input.csv`: project-level
   Design 1 input from the fast publication/DMCA checkpoint.
 - `design1_quarterly_publication/design1_quarterly_publication_panel.csv`:
   application-quarter regression panel.
-- `design1_quarterly_publication/design1_regression_results.csv`: main DID
+- `design1_quarterly_publication/design1_regression_results.csv`: historical DID
   regression table.
 - `design1_quarterly_publication/design1_event_study_results.csv`: event-study
   coefficients.
@@ -19,4 +19,3 @@ Current main design:
   definition sensitivity.
 - `design1_quarterly_publication/design1_summary.json`: machine-readable run
   summary.
-

@@ -160,17 +160,17 @@ control definition.
 
 ## Output Files
 
-- `data/analysis/design1_quarterly_publication/project_outcomes_input.csv`
-- `data/intermediate/fast_pipeline/stage4_fast_publication_events.csv`
-- `data/intermediate/fast_pipeline/stage4_fast_publication_period_panel.csv`
-- `data/intermediate/fast_pipeline/stage4_fast_dmca_crosswalk.csv`
-- `data/intermediate/fast_pipeline/stage4_fast_dmca_unmatched_apps.csv`
-- `data/intermediate/fast_pipeline/stage5_fast_regression_results.csv`
-- `data/intermediate/fast_pipeline/stage5_fast_group_means.csv`
-- `data/intermediate/fast_pipeline/stage5_fast_dmca_2x2.csv`
-- `figures/stage5_publication_did.png`
-- `figures/stage5_publication_cohort.png`
-- `figures/stage5_dmca_rates.png`
+- `analyses/did_archive/data/analysis/design1_quarterly_publication/project_outcomes_input.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage4_fast_publication_events.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage4_fast_publication_period_panel.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage4_fast_dmca_crosswalk.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage4_fast_dmca_unmatched_apps.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage5_fast_regression_results.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage5_fast_group_means.csv`
+- `analyses/did_archive/data/intermediate/fast_pipeline/stage5_fast_dmca_2x2.csv`
+- `analyses/did_archive/figures/stage5_publication_did.png`
+- `analyses/did_archive/figures/stage5_publication_cohort.png`
+- `analyses/did_archive/figures/stage5_dmca_rates.png`
 
 ## Limitations To Revisit
 

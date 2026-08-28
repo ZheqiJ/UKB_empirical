@@ -1,0 +1,36 @@
+old_path,new_path,file_role,shared_or_did_specific,notes
+data/analysis/README.md,analyses/did_archive/data/analysis/README.md,analysis-data navigation,did_specific,README moved with archived DID analysis outputs
+data/analysis/design1_quarterly_publication/project_outcomes_input.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/project_outcomes_input.csv,Design 1 project-level input,did_specific,Seeded by the fast publication/DMCA checkpoint
+data/analysis/design1_quarterly_publication/design1_quarterly_publication_panel.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_quarterly_publication_panel.csv,quarterly application risk-set panel,did_specific,Archived DID regression panel
+data/analysis/design1_quarterly_publication/design1_regression_results.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_regression_results.csv,regression output,did_specific,Historical DID estimates
+data/analysis/design1_quarterly_publication/design1_event_study_results.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_event_study_results.csv,event-time output,did_specific,Historical dynamic diagnostic
+data/analysis/design1_quarterly_publication/design1_pretrend_tests.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_pretrend_tests.csv,pretrend diagnostic,did_specific,Historical diagnostic only
+data/analysis/design1_quarterly_publication/design1_control_sensitivity.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_control_sensitivity.csv,control-definition sensitivity,did_specific,C0-C6 sensitivity output
+data/analysis/design1_quarterly_publication/design1_publication_timing_audit.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_publication_timing_audit.csv,publication timing audit,did_specific,Preserves exact-date and linkage audit
+data/analysis/design1_quarterly_publication/design1_risk_set_diagnostics.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_risk_set_diagnostics.csv,risk-set diagnostic,did_specific,Documents at-risk project-quarter construction
+data/analysis/design1_quarterly_publication/design1_stata_style_results_table.csv,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_stata_style_results_table.csv,compact regression table,did_specific,CSV version of supervisor-style table
+data/analysis/design1_quarterly_publication/design1_summary.json,analyses/did_archive/data/analysis/design1_quarterly_publication/design1_summary.json,machine-readable run summary,did_specific,Historical reproducibility metadata
+data/intermediate/fast_pipeline/,analyses/did_archive/data/intermediate/fast_pipeline/,fast Stage 4/5 checkpoint outputs,did_specific,Earlier exploratory publication/DMCA checkpoint
+figures/design1_at_risk_sample_size.png,analyses/did_archive/figures/design1_at_risk_sample_size.png,Design 1 figure,did_specific,Archived figure
+figures/design1_project_age_by_group.png,analyses/did_archive/figures/design1_project_age_by_group.png,Design 1 figure,did_specific,Archived figure
+figures/design1_quarterly_event_study_any.png,analyses/did_archive/figures/design1_quarterly_event_study_any.png,Design 1 figure,did_specific,Archived figure
+figures/design1_quarterly_event_study_count.png,analyses/did_archive/figures/design1_quarterly_event_study_count.png,Design 1 figure,did_specific,Archived figure
+figures/design1_quarterly_raw_any_publication.png,analyses/did_archive/figures/design1_quarterly_raw_any_publication.png,Design 1 figure,did_specific,Archived figure
+figures/design1_quarterly_raw_publication_count.png,analyses/did_archive/figures/design1_quarterly_raw_publication_count.png,Design 1 figure,did_specific,Archived figure
+figures/stage5_publication_cohort.png,analyses/did_archive/figures/stage5_publication_cohort.png,fast checkpoint figure,did_specific,Archived figure
+figures/stage5_publication_did.png,analyses/did_archive/figures/stage5_publication_did.png,fast checkpoint figure,did_specific,Archived figure
+figures/stage5_dmca_rates.png,analyses/did_archive/figures/stage5_dmca_rates.png,fast checkpoint figure,did_specific,Archived figure
+reports/design1_empirical_design_review.md,analyses/did_archive/reports/design1_empirical_design_review.md,Design 1 review report,did_specific,Archived DID design review
+reports/design1_quarterly_publication_results.md,analyses/did_archive/reports/design1_quarterly_publication_results.md,Design 1 result report,did_specific,Archived DID results
+reports/stage5_fast_results.md,analyses/did_archive/reports/stage5_fast_results.md,fast checkpoint report,did_specific,Archived exploratory checkpoint
+scripts/design1_stata_table.py,analyses/did_archive/scripts/design1_stata_table.py,table builder,did_specific,Root wrapper preserved for compatibility
+scripts/stage4_5_fast_design_regression.py,analyses/did_archive/scripts/stage4_5_fast_design_regression.py,fast checkpoint builder,did_specific,Root wrapper preserved for compatibility
+scripts/stage6_panel_regression.py,analyses/did_archive/scripts/stage6_panel_regression.py,quarterly DID builder,did_specific,Root wrapper preserved for compatibility
+data/raw/,data/raw/,public source data,shared,Left in shared root data
+data/intermediate/stage2_universe/,data/intermediate/stage2_universe/,project universe construction outputs,shared,Used by both archive context and ITS feasibility
+data/intermediate/start_date_matching/,data/intermediate/start_date_matching/,project start-date matching outputs,shared,Used by ITS project-entry analysis
+data/intermediate/timing_feasibility/,data/intermediate/timing_feasibility/,timing feasibility outputs,shared,Used by ITS project-entry analysis
+data/intermediate/rap_classification/,data/intermediate/rap_classification/,legacy/RAP exposure proxy classifications,shared,Used descriptively in ITS
+data/intermediate/control_expansion/,data/intermediate/control_expansion/,C0-C6 control-candidate construction,shared,Retained as shared exposure-proxy metadata
+ukb_dmca/,ukb_dmca/,DMCA module,frozen_shared,Left untouched by this reorganization
+reports/supervisor/,reports/supervisor/,supervisor memos,frozen_shared,Left untouched by this reorganization

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360">
+<rect width="100%" height="100%" fill="white"/>
+<text x="64" y="24" font-family="Arial" font-size="16" font-weight="700">C05 Descriptive Group Trajectories</text>
+<line x1="64" y1="304" x2="860" y2="304" stroke="#333"/>
+<line x1="64" y1="36" x2="64" y2="304" stroke="#333"/>
+<line x1="60" y1="304.00" x2="64" y2="304.00" stroke="#333"/>
+<text x="56" y="307.00" text-anchor="end" font-family="Arial" font-size="10">4.8</text>
+<line x1="60" y1="250.40" x2="64" y2="250.40" stroke="#333"/>
+<text x="56" y="253.40" text-anchor="end" font-family="Arial" font-size="10">6.0</text>
+<line x1="60" y1="196.80" x2="64" y2="196.80" stroke="#333"/>
+<text x="56" y="199.80" text-anchor="end" font-family="Arial" font-size="10">7.3</text>
+<line x1="60" y1="143.20" x2="64" y2="143.20" stroke="#333"/>
+<text x="56" y="146.20" text-anchor="end" font-family="Arial" font-size="10">8.5</text>
+<line x1="60" y1="89.60" x2="64" y2="89.60" stroke="#333"/>
+<text x="56" y="92.60" text-anchor="end" font-family="Arial" font-size="10">9.8</text>
+<line x1="60" y1="36.00" x2="64" y2="36.00" stroke="#333"/>
+<text x="56" y="39.00" text-anchor="end" font-family="Arial" font-size="10">11.0</text>
+<text x="170.13" y="336" font-family="Arial" font-size="10" transform="rotate(45 170.13,336)">2023Q1</text>
+<text x="382.40" y="336" font-family="Arial" font-size="10" transform="rotate(45 382.40,336)">2024Q1</text>
+<text x="488.53" y="336" font-family="Arial" font-size="10" transform="rotate(45 488.53,336)">2024Q3</text>
+<text x="594.67" y="336" font-family="Arial" font-size="10" transform="rotate(45 594.67,336)">2025Q1</text>
+<text x="806.93" y="336" font-family="Arial" font-size="10" transform="rotate(45 806.93,336)">2026Q1</text>
+<text x="860.00" y="336" font-family="Arial" font-size="10" transform="rotate(45 860.00,336)">2026Q2</text>
+<path d="M 64.00 139.91 L 117.07 137.31 L 170.13 106.14 L 223.20 157.23 L 276.27 152.90 L 329.33 180.61 L 382.40 168.92 L 435.47 121.29 L 488.53 149.00 L 541.60 166.32 L 594.67 125.62 L 647.73 143.37 L 700.80 137.31 L 753.87 134.28 L 806.93 129.09 L 860.00 174.55" fill="none" stroke="#1b9e77" stroke-width="2.4"/>
+<circle cx="64.00" cy="139.91" r="3" fill="#1b9e77"/>
+<circle cx="117.07" cy="137.31" r="3" fill="#1b9e77"/>
+<circle cx="170.13" cy="106.14" r="3" fill="#1b9e77"/>
+<circle cx="223.20" cy="157.23" r="3" fill="#1b9e77"/>
+<circle cx="276.27" cy="152.90" r="3" fill="#1b9e77"/>
+<circle cx="329.33" cy="180.61" r="3" fill="#1b9e77"/>
+<circle cx="382.40" cy="168.92" r="3" fill="#1b9e77"/>
+<circle cx="435.47" cy="121.29" r="3" fill="#1b9e77"/>
+<circle cx="488.53" cy="149.00" r="3" fill="#1b9e77"/>
+<circle cx="541.60" cy="166.32" r="3" fill="#1b9e77"/>
+<circle cx="594.67" cy="125.62" r="3" fill="#1b9e77"/>
+<circle cx="647.73" cy="143.37" r="3" fill="#1b9e77"/>
+<circle cx="700.80" cy="137.31" r="3" fill="#1b9e77"/>
+<circle cx="753.87" cy="134.28" r="3" fill="#1b9e77"/>
+<circle cx="806.93" cy="129.09" r="3" fill="#1b9e77"/>
+<circle cx="860.00" cy="174.55" r="3" fill="#1b9e77"/>
+<rect x="878" y="44" width="12" height="12" fill="#1b9e77"/>
+<text x="896" y="54" font-family="Arial" font-size="11">legacy_exposure_proxy</text>
+<path d="M 64.00 36.00 L 117.07 304.00 L 170.13 271.53 L 223.20 251.18 L 276.27 297.51 L 329.33 197.93 L 382.40 134.28 L 435.47 181.91 L 488.53 115.66 L 541.60 174.98 L 594.67 288.41 L 647.73 199.66 L 700.80 198.79 L 753.87 258.54 L 806.93 283.65 L 860.00 287.11" fill="none" stroke="#d95f02" stroke-width="2.4"/>
+<circle cx="64.00" cy="36.00" r="3" fill="#d95f02"/>
+<circle cx="117.07" cy="304.00" r="3" fill="#d95f02"/>
+<circle cx="170.13" cy="271.53" r="3" fill="#d95f02"/>
+<circle cx="223.20" cy="251.18" r="3" fill="#d95f02"/>
+<circle cx="276.27" cy="297.51" r="3" fill="#d95f02"/>
+<circle cx="329.33" cy="197.93" r="3" fill="#d95f02"/>
+<circle cx="382.40" cy="134.28" r="3" fill="#d95f02"/>
+<circle cx="435.47" cy="181.91" r="3" fill="#d95f02"/>
+<circle cx="488.53" cy="115.66" r="3" fill="#d95f02"/>
+<circle cx="541.60" cy="174.98" r="3" fill="#d95f02"/>
+<circle cx="594.67" cy="288.41" r="3" fill="#d95f02"/>
+<circle cx="647.73" cy="199.66" r="3" fill="#d95f02"/>
+<circle cx="700.80" cy="198.79" r="3" fill="#d95f02"/>
+<circle cx="753.87" cy="258.54" r="3" fill="#d95f02"/>
+<circle cx="806.93" cy="283.65" r="3" fill="#d95f02"/>
+<circle cx="860.00" cy="287.11" r="3" fill="#d95f02"/>
+<rect x="878" y="64" width="12" height="12" fill="#d95f02"/>
+<text x="896" y="74" font-family="Arial" font-size="11">rap_intensive_comparison</text>
+<line x1="488.53" y1="36" x2="488.53" y2="304" stroke="#555" stroke-dasharray="4 4"/>
+<text x="492.53" y="48" font-family="Arial" font-size="10" fill="#555">Jul 2024</text>
+<line x1="860.00" y1="36" x2="860.00" y2="304" stroke="#555" stroke-dasharray="4 4"/>
+<text x="864.00" y="48" font-family="Arial" font-size="10" fill="#555">Apr 2026</text>
+<text x="64" y="342" font-family="Arial" font-size="11" fill="#555">Legacy-exposure and RAP-intensive labels are descriptive proxies, not treatment/control status.</text>
+</svg>
