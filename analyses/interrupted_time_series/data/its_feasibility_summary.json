@@ -1,15 +1,15 @@
 {
-  "april_2026_platform_shock_date": "2026-04-01",
+  "april_2026_institutional_platform_shock_date": "2026-04-01",
   "c05_group_projects": {
     "legacy_exposure_proxy": {
-      "any_pre_2024_publication_rate_percent": "27.57",
-      "mean_pre_2024_publications": "0.856",
+      "any_pretransition_24m_publication_rate_percent": "27.57",
+      "mean_pretransition_24m_publications": "0.856",
       "median_project_age_years_at_transition": "3.417",
       "projects": 3326
     },
     "rap_intensive_comparison": {
-      "any_pre_2024_publication_rate_percent": "21.37",
-      "mean_pre_2024_publications": "0.954",
+      "any_pretransition_24m_publication_rate_percent": "21.37",
+      "mean_pretransition_24m_publications": "0.954",
       "median_project_age_years_at_transition": "2.917",
       "projects": 131
     }
@@ -18,6 +18,11 @@
   "calendar_2023_monthly_start_max": 80,
   "calendar_2023_monthly_start_mean": 61.83,
   "calendar_2023_monthly_start_min": 37,
+  "comparative_audit": {
+    "comparative_rows": 96,
+    "post_transition_entrants_excluded": 11524
+  },
+  "comparative_reconciliation_checks_passed": true,
   "feasibility_ratings": {
     "aggregate_incumbent_publications": "HIGH",
     "comparative_exposure_proxy_its": "MEDIUM",
@@ -30,28 +35,38 @@
   "incumbent_publication_quarters": {
     "2024Q2": {
       "any_publication_rate_percent": "8.36",
-      "at_risk_incumbent_projects": 4329,
-      "publication_app_links": 519
+      "fractional_publication_count": "506.000",
+      "post_start_incumbent_projects": 4329,
+      "publication_app_links": 519,
+      "unique_publication_ids": 506
     },
     "2024Q3": {
       "any_publication_rate_percent": "8.24",
-      "at_risk_incumbent_projects": 4332,
-      "publication_app_links": 539
+      "fractional_publication_count": "511.000",
+      "post_start_incumbent_projects": 4332,
+      "publication_app_links": 539,
+      "unique_publication_ids": 511
     },
     "2024Q4": {
       "any_publication_rate_percent": "8.36",
-      "at_risk_incumbent_projects": 4332,
-      "publication_app_links": 507
+      "fractional_publication_count": "484.000",
+      "post_start_incumbent_projects": 4332,
+      "publication_app_links": 507,
+      "unique_publication_ids": 484
     },
     "2025Q1": {
       "any_publication_rate_percent": "9.76",
-      "at_risk_incumbent_projects": 4332,
-      "publication_app_links": 629
+      "fractional_publication_count": "601.500",
+      "post_start_incumbent_projects": 4332,
+      "publication_app_links": 629,
+      "unique_publication_ids": 602
     },
     "2026Q2": {
       "any_publication_rate_percent": "9.37",
-      "at_risk_incumbent_projects": 4332,
-      "publication_app_links": 588
+      "fractional_publication_count": "566.667",
+      "post_start_incumbent_projects": 4332,
+      "publication_app_links": 588,
+      "unique_publication_ids": 569
     }
   },
   "known_2024_start_pattern": {
@@ -63,13 +78,17 @@
     "2024-09": 1,
     "2024-10": 208
   },
+  "modality_overlap_summary": {
+    "projects": 6935,
+    "projects_with_multiple_modality_flags": 6050
+  },
   "modality_project_counts": {
-    "ehr_linked_records": 115,
-    "genetics_sequence": 4894,
-    "imaging": 574,
-    "other_or_unclear": 389,
-    "proteomics_metabolomics_biomarkers": 350,
-    "questionnaire_environment_lifestyle": 613
+    "ehr_linked_records": 5071,
+    "genetics_sequence": 5020,
+    "imaging": 1903,
+    "other_or_unclear": 112,
+    "proteomics_metabolomics_biomarkers": 2258,
+    "questionnaire_environment_lifestyle": 4334
   },
   "policy_transition_date": "2024-07-05",
   "project_start_quarter_pattern": {
@@ -79,9 +98,43 @@
   },
   "publication_audit": {
     "app_not_in_matched_timing_universe": 6,
+    "app_publication_links_attached_to_multi_application_publication_ids": 1150,
     "exact_publication_app_links": 12568,
+    "exact_unique_publication_ids": 11959,
     "multi_application_publication_ids": 541,
     "publication_before_project_start": 24
+  },
+  "publication_measure_sensitivity_selected_quarters": {
+    "2024Q2": {
+      "fractional_publication_count": "506.000",
+      "publication_app_links": 519,
+      "unique_publication_ids": 506
+    },
+    "2024Q3": {
+      "fractional_publication_count": "511.000",
+      "publication_app_links": 539,
+      "unique_publication_ids": 511
+    },
+    "2024Q4": {
+      "fractional_publication_count": "484.000",
+      "publication_app_links": 507,
+      "unique_publication_ids": 484
+    },
+    "2025Q1": {
+      "fractional_publication_count": "601.500",
+      "publication_app_links": 629,
+      "unique_publication_ids": 602
+    },
+    "2026Q2": {
+      "fractional_publication_count": "566.667",
+      "publication_app_links": 588,
+      "unique_publication_ids": 569
+    }
+  },
+  "recent_publication_completeness_summary": {
+    "latest_clean_application_publication_link_date": "2026-07-16",
+    "latest_schema19_exact_publication_date": "2026-07-16",
+    "right_edge_interpretation": "Do not interpret 2026Q2 as a platform effect until bibliographic completeness is externally validated."
   },
   "returned_data_feasibility": {
     "candidate_fact": "Returned datasets timing",

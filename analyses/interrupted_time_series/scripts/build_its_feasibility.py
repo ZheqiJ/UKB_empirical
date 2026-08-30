@@ -108,17 +108,22 @@ class BuildOutputs:
     comparative_quarterly: Path
     group_composition: Path
     modality_counts: Path
+    modality_overlap: Path
     age_band_quarterly: Path
     publication_lag: Path
+    publication_measure_sensitivity: Path
+    recent_publication_completeness: Path
     returned_data_feasibility: Path
     institution_counts: Path
     institutional_dates: Path
     data_inventory: Path
+    reconciliation_checks: Path
     summary_json: Path
     readme: Path
     stylized_inventory: Path
     design_proposal: Path
     feasibility_report: Path
+    data_construction_audit: Path
     starts_figure: Path
     incumbent_figure: Path
     comparative_figure: Path
@@ -133,17 +138,22 @@ def output_paths() -> BuildOutputs:
         comparative_quarterly=DATA_DIR / "its_comparative_quarterly.csv",
         group_composition=DATA_DIR / "its_group_composition.csv",
         modality_counts=DATA_DIR / "its_modality_project_counts.csv",
+        modality_overlap=DATA_DIR / "its_modality_overlap.csv",
         age_band_quarterly=DATA_DIR / "its_age_band_quarterly.csv",
         publication_lag=DATA_DIR / "its_publication_lag.csv",
+        publication_measure_sensitivity=DATA_DIR / "its_publication_measure_sensitivity.csv",
+        recent_publication_completeness=DATA_DIR / "its_recent_publication_completeness.csv",
         returned_data_feasibility=DATA_DIR / "its_returned_data_feasibility.csv",
         institution_counts=DATA_DIR / "its_top_institutions.csv",
         institutional_dates=DATA_DIR / "its_institutional_dates.csv",
         data_inventory=DATA_DIR / "its_data_inventory.csv",
+        reconciliation_checks=DATA_DIR / "its_reconciliation_checks.csv",
         summary_json=DATA_DIR / "its_feasibility_summary.json",
         readme=PACKAGE / "README.md",
         stylized_inventory=DESIGN_DIR / "stylized_facts_inventory.md",
         design_proposal=DESIGN_DIR / "its_design_proposal.md",
         feasibility_report=REPORT_DIR / "preliminary_feasibility_report.md",
+        data_construction_audit=REPORT_DIR / "its_data_construction_audit.md",
         starts_figure=FIGURE_DIR / "its_project_starts_monthly.svg",
         incumbent_figure=FIGURE_DIR / "its_incumbent_publications_quarterly.svg",
         comparative_figure=FIGURE_DIR / "its_c05_group_quarterly_any_publication.svg",
@@ -277,28 +287,64 @@ def markdown_table(rows: list[dict[str, object]], fields: list[str]) -> str:
     return "\n".join([header, sep, *body])
 
 
-def broad_modality(row: dict[str, str]) -> str:
-    text = " ".join(
+MODALITY_RULES = [
+    (
+        "genetics_sequence",
+        ["WGS", "WES", "EXOME", "GENOTYPING", "GENETIC", "SEQUENCE", "PRS", "GWAS", "VARIANT"],
+    ),
+    ("imaging", ["IMAGING", "MRI", "RETINAL", "FUNDUS", "OCT", "DXA"]),
+    ("ehr_linked_records", ["LINKED_HEALTH_RECORDS", "EHR", "HES", "GP", "HOSPITAL", "CANCER_REGISTRY"]),
+    ("proteomics_metabolomics_biomarkers", ["PROTEOM", "METABOLOM", "BIOMARKER", "NMR", "OLINK"]),
+    (
+        "questionnaire_environment_lifestyle",
+        ["QUESTIONNAIRE", "ENVIRONMENT", "LIFESTYLE", "PHYSICAL", "ASSESSMENT", "WEARABLE"],
+    ),
+]
+MODALITY_FLAGS = [name for name, _ in MODALITY_RULES] + ["other_or_unclear"]
+
+
+def modality_text(row: dict[str, str]) -> str:
+    return " ".join(
         [
             row.get("stage3_already_rap_modalities", ""),
             row.get("stage3_legacy_route_modalities", ""),
             row.get("already_rap_modalities", ""),
             row.get("legacy_route_modalities", ""),
             row.get("ambiguous_modality_signals", ""),
+            row.get("matched_terms", ""),
             row.get("schema27_title", ""),
+            row.get("schema27_notes", ""),
         ]
     ).upper()
-    if any(term in text for term in ["WGS", "WES", "EXOME", "GENOTYPING", "GENETIC", "SEQUENCE", "PRS", "GWAS"]):
-        return "genetics_sequence"
-    if any(term in text for term in ["IMAGING", "MRI", "RETINAL", "FUNDUS", "OCT", "DXA"]):
-        return "imaging"
-    if any(term in text for term in ["LINKED_HEALTH_RECORDS", "EHR", "HES", "GP", "HOSPITAL", "CANCER_REGISTRY"]):
-        return "ehr_linked_records"
-    if any(term in text for term in ["PROTEOM", "METABOLOM", "BIOMARKER", "NMR"]):
-        return "proteomics_metabolomics_biomarkers"
-    if any(term in text for term in ["QUESTIONNAIRE", "ENVIRONMENT", "LIFESTYLE", "PHYSICAL", "ASSESSMENT"]):
-        return "questionnaire_environment_lifestyle"
+
+
+def modality_flags(row: dict[str, str]) -> dict[str, int]:
+    text = modality_text(row)
+    flags = {name: int(any(term in text for term in terms)) for name, terms in MODALITY_RULES}
+    flags["other_or_unclear"] = int(not any(flags.values()))
+    return flags
+
+
+def primary_modality(row: dict[str, str]) -> str:
+    flags = modality_flags(row)
+    for name in MODALITY_FLAGS:
+        if flags[name]:
+            return name
     return "other_or_unclear"
+
+
+def modality_composition(rows: list[dict[str, str]]) -> str:
+    counts = Counter()
+    for row in rows:
+        flags = modality_flags(row)
+        for name in MODALITY_FLAGS:
+            if flags[name]:
+                counts[name] += 1
+    return "; ".join(f"{name}={counts[name]}" for name in MODALITY_FLAGS if counts[name])
+
+
+def modality_flag_count(row: dict[str, str]) -> int:
+    return sum(modality_flags(row).values())
 
 
 def age_band_at_policy(start: date | None) -> str:
@@ -339,7 +385,9 @@ def load_inputs() -> dict[str, object]:
             merged.update(stage3[app_id])
         if app_id in app_outcomes:
             merged.update(app_outcomes[app_id])
-        merged["broad_modality"] = broad_modality(merged)
+        merged["primary_modality"] = primary_modality(merged)
+        for modality, value in modality_flags(merged).items():
+            merged[f"modality_{modality}"] = str(value)
         apps[app_id] = merged
 
     return {
@@ -370,7 +418,7 @@ def build_project_start_series(apps: dict[str, dict[str, str]]) -> tuple[list[di
                 "post_transition_month": int(month >= date(2024, 7, 1)),
                 "transition_pause_window_jul_sep_2024": int(date(2024, 7, 1) <= month <= date(2024, 9, 1)),
                 "october_2024_restart": int(label == "2024-10"),
-                "april_2026_platform_shock_or_after": int(month >= date(2026, 4, 1)),
+                "april_2026_institutional_platform_shock_or_after": int(month >= date(2026, 4, 1)),
             }
         )
 
@@ -385,7 +433,7 @@ def build_project_start_series(apps: dict[str, dict[str, str]]) -> tuple[list[di
                 "new_projects": quarterly_counts[label],
                 "post_transition_quarter": int(quarter >= date(2024, 7, 1)),
                 "transition_quarter_2024q3": int(label == "2024Q3"),
-                "april_2026_platform_shock_or_after": int(quarter >= date(2026, 4, 1)),
+                "april_2026_institutional_platform_shock_or_after": int(quarter >= date(2026, 4, 1)),
             }
         )
     return monthly_rows, quarterly_rows
@@ -437,14 +485,35 @@ def build_publication_events(
                 "publication_date": pub_date.isoformat(),
                 "publication_month": month_label(pub_date),
                 "publication_quarter": quarter_label(pub_date),
+                "publication_week": f"{pub_date.isocalendar().year}-W{pub_date.isocalendar().week:02d}",
                 "project_start_date": start.isoformat(),
                 "lag_months_since_project_start": months_between(start, pub_date),
                 "title": pub.get("title", ""),
             }
         )
+    pub_multiplicity = Counter(str(event["pub_id"]) for event in events)
+    for event in events:
+        event["publication_fractional_count"] = 1 / pub_multiplicity[str(event["pub_id"])]
     audit["exact_publication_app_links"] = len(events)
+    audit["exact_unique_publication_ids"] = len(pub_multiplicity)
     audit["multi_application_publication_ids"] = sum(1 for values in pub_to_apps.values() if len(values) > 1)
+    audit["app_publication_links_attached_to_multi_application_publication_ids"] = sum(
+        len(values) for values in pub_to_apps.values() if len(values) > 1
+    )
     return events, dict(audit)
+
+
+def publication_measures(events: list[dict[str, object]]) -> dict[str, object]:
+    app_links = len(events)
+    unique_publications = len({str(event["pub_id"]) for event in events})
+    fractional = sum(safe_float(event.get("publication_fractional_count")) for event in events)
+    any_apps = {str(event["app_id"]) for event in events}
+    return {
+        "publication_app_links": app_links,
+        "unique_publication_ids": unique_publications,
+        "fractional_publication_count": f"{fractional:.3f}",
+        "apps_with_any_publication": len(any_apps),
+    }
 
 
 def build_incumbent_publication_series(
@@ -467,21 +536,33 @@ def build_incumbent_publication_series(
     for month in month_range(date(2022, 7, 1), date(2026, 6, 1)):
         label = month_label(month)
         end = month_end(month)
-        at_risk = [app_id for app_id in incumbents if start_by_app[app_id] and start_by_app[app_id] <= end]
+        post_start_incumbents = [app_id for app_id in incumbents if start_by_app[app_id] and start_by_app[app_id] <= end]
         linked_events = monthly_events[label]
-        any_apps = {event["app_id"] for event in linked_events}
+        measures = publication_measures(linked_events)
         monthly_rows.append(
             {
                 "month": label,
                 "month_start": month.isoformat(),
-                "at_risk_incumbent_projects": len(at_risk),
-                "publication_app_links": len(linked_events),
-                "apps_with_any_publication": len(any_apps),
-                "publications_per_100_at_risk_projects": pct(len(linked_events), len(at_risk)),
-                "any_publication_rate_percent": pct(len(any_apps), len(at_risk)),
+                "post_start_incumbent_projects": len(post_start_incumbents),
+                "publication_app_links": measures["publication_app_links"],
+                "unique_publication_ids": measures["unique_publication_ids"],
+                "fractional_publication_count": measures["fractional_publication_count"],
+                "apps_with_any_publication": measures["apps_with_any_publication"],
+                "app_links_per_100_post_start_incumbents": pct(
+                    safe_float(measures["publication_app_links"]), len(post_start_incumbents)
+                ),
+                "unique_publications_per_100_post_start_incumbents": pct(
+                    safe_float(measures["unique_publication_ids"]), len(post_start_incumbents)
+                ),
+                "fractional_publications_per_100_post_start_incumbents": pct(
+                    safe_float(measures["fractional_publication_count"]), len(post_start_incumbents)
+                ),
+                "any_publication_rate_percent": pct(
+                    safe_float(measures["apps_with_any_publication"]), len(post_start_incumbents)
+                ),
                 "post_transition": int(month >= date(2024, 7, 1)),
                 "transition_pause_window_jul_sep_2024": int(date(2024, 7, 1) <= month <= date(2024, 9, 1)),
-                "april_2026_platform_shock_or_after": int(month >= date(2026, 4, 1)),
+                "april_2026_institutional_platform_shock_or_after": int(month >= date(2026, 4, 1)),
             }
         )
 
@@ -489,43 +570,70 @@ def build_incumbent_publication_series(
     for quarter in quarter_range(date(2022, 7, 1), date(2026, 6, 1)):
         label = quarter_label(quarter)
         end = quarter_end(quarter)
-        at_risk = [app_id for app_id in incumbents if start_by_app[app_id] and start_by_app[app_id] <= end]
+        post_start_incumbents = [app_id for app_id in incumbents if start_by_app[app_id] and start_by_app[app_id] <= end]
         linked_events = quarterly_events[label]
-        any_apps = {event["app_id"] for event in linked_events}
+        measures = publication_measures(linked_events)
         quarterly_rows.append(
             {
                 "quarter": label,
                 "quarter_start": quarter.isoformat(),
                 "quarter_end": end.isoformat(),
-                "at_risk_incumbent_projects": len(at_risk),
-                "publication_app_links": len(linked_events),
-                "apps_with_any_publication": len(any_apps),
-                "publications_per_100_at_risk_projects": pct(len(linked_events), len(at_risk)),
-                "any_publication_rate_percent": pct(len(any_apps), len(at_risk)),
+                "post_start_incumbent_projects": len(post_start_incumbents),
+                "publication_app_links": measures["publication_app_links"],
+                "unique_publication_ids": measures["unique_publication_ids"],
+                "fractional_publication_count": measures["fractional_publication_count"],
+                "apps_with_any_publication": measures["apps_with_any_publication"],
+                "app_links_per_100_post_start_incumbents": pct(
+                    safe_float(measures["publication_app_links"]), len(post_start_incumbents)
+                ),
+                "unique_publications_per_100_post_start_incumbents": pct(
+                    safe_float(measures["unique_publication_ids"]), len(post_start_incumbents)
+                ),
+                "fractional_publications_per_100_post_start_incumbents": pct(
+                    safe_float(measures["fractional_publication_count"]), len(post_start_incumbents)
+                ),
+                "any_publication_rate_percent": pct(
+                    safe_float(measures["apps_with_any_publication"]), len(post_start_incumbents)
+                ),
                 "post_transition": int(quarter >= date(2024, 7, 1)),
                 "transition_quarter_2024q3": int(label == "2024Q3"),
-                "april_2026_platform_shock_or_after": int(quarter >= date(2026, 4, 1)),
+                "april_2026_institutional_platform_shock_or_after": int(quarter >= date(2026, 4, 1)),
             }
         )
     return monthly_rows, quarterly_rows
 
 
-def build_comparative_quarterly(panel: list[dict[str, str]]) -> list[dict[str, object]]:
+def build_comparative_quarterly(
+    panel: list[dict[str, str]],
+) -> tuple[list[dict[str, object]], dict[tuple[str, str], set[str]], dict[str, int]]:
     grouped: dict[tuple[str, str, str], dict[str, float]] = defaultdict(lambda: defaultdict(float))
     apps_by_cell: dict[tuple[str, str, str], set[str]] = defaultdict(set)
+    apps_by_group: dict[tuple[str, str], set[str]] = defaultdict(set)
+    audit = Counter()
     for row in panel:
         quarter = row.get("quarter", "")
+        app_id = row.get("app_id", "")
+        start = parse_date(row.get("project_start_date"))
+        if not start:
+            audit["missing_project_start_date"] += 1
+            continue
+        if start >= POLICY_DATE:
+            audit["post_transition_entrants_excluded"] += 1
+            continue
         if not quarter:
+            audit["missing_quarter"] += 1
             continue
         for control_def in CONTROL_DEFS:
             label = group_label(row.get(f"regression_group_{control_def}", ""))
             if label == "excluded":
                 continue
+            assert start < POLICY_DATE
             key = (control_def, label, quarter)
             grouped[key]["publication_count"] += safe_int(row.get("publication_count"))
             grouped[key]["any_publication_sum"] += safe_int(row.get("any_publication"))
             grouped[key]["project_periods"] += 1
-            apps_by_cell[key].add(row.get("app_id", ""))
+            apps_by_cell[key].add(app_id)
+            apps_by_group[(control_def, label)].add(app_id)
     rows = []
     for key in sorted(grouped):
         control_def, label, quarter = key
@@ -543,10 +651,11 @@ def build_comparative_quarterly(panel: list[dict[str, str]]) -> list[dict[str, o
                 "publication_count_per_100_project_periods": pct(values["publication_count"], periods),
                 "post_transition": int(quarter >= "2024Q3"),
                 "transition_quarter_2024q3": int(quarter == "2024Q3"),
-                "april_2026_platform_shock_or_after": int(quarter >= "2026Q2"),
+                "april_2026_institutional_platform_shock_or_after": int(quarter >= "2026Q2"),
             }
         )
-    return rows
+    audit["comparative_rows"] = len(rows)
+    return rows, apps_by_group, dict(audit)
 
 
 def build_age_band_quarterly(
@@ -584,18 +693,39 @@ def build_age_band_quarterly(
     return rows
 
 
+def incumbent_group_rows(
+    app_outcomes: dict[str, dict[str, str]],
+    control_def: str,
+    label: str,
+) -> list[dict[str, str]]:
+    selected = []
+    for row in app_outcomes.values():
+        start = parse_date(row.get("project_start_date"))
+        if group_label(row.get(f"regression_group_{control_def}", "")) != label:
+            continue
+        if safe_int(row.get("p1_existing_project_sample")) != 1:
+            continue
+        if not start or start >= POLICY_DATE:
+            continue
+        selected.append(row)
+    return selected
+
+
+def incumbent_group_app_ids(
+    app_outcomes: dict[str, dict[str, str]],
+    control_def: str,
+    label: str,
+) -> set[str]:
+    return {row.get("app_id", "") for row in incumbent_group_rows(app_outcomes, control_def, label)}
+
+
 def build_group_composition(app_outcomes: dict[str, dict[str, str]]) -> list[dict[str, object]]:
     rows = []
     for control_def in CONTROL_DEFS:
         for label in ["legacy_exposure_proxy", "rap_intensive_comparison"]:
-            selected = [
-                row
-                for row in app_outcomes.values()
-                if group_label(row.get(f"regression_group_{control_def}", "")) == label
-                and safe_int(row.get("p1_existing_project_sample")) == 1
-            ]
+            selected = incumbent_group_rows(app_outcomes, control_def, label)
             class_counts = Counter(row.get("original_stage3_classification", "") for row in selected)
-            modality_counts = Counter(broad_modality(row) for row in selected)
+            primary_counts = Counter(primary_modality(row) for row in selected)
             ages = []
             for row in selected:
                 start = parse_date(row.get("project_start_date"))
@@ -608,46 +738,83 @@ def build_group_composition(app_outcomes: dict[str, dict[str, str]]) -> list[dic
                     "exposure_proxy_definition": control_def,
                     "comparison_group": label,
                     "projects": len(selected),
-                    "mean_pre_2024_publications": mean(pre_counts),
-                    "any_pre_2024_publication_rate_percent": pct(sum(any_pre), len(any_pre)),
+                    "mean_pretransition_24m_publications": mean(pre_counts),
+                    "any_pretransition_24m_publication_rate_percent": pct(sum(any_pre), len(any_pre)),
                     "median_project_age_years_at_transition": median(ages),
                     "original_class_composition": "; ".join(f"{k}={v}" for k, v in sorted(class_counts.items()) if k),
-                    "broad_modality_composition": "; ".join(f"{k}={v}" for k, v in sorted(modality_counts.items())),
+                    "primary_modality_composition": "; ".join(
+                        f"{k}={v}" for k, v in sorted(primary_counts.items())
+                    ),
+                    "modality_flag_composition_overlapping": modality_composition(selected),
                 }
             )
     return rows
 
 
 def build_modality_counts(apps: dict[str, dict[str, str]], app_outcomes: dict[str, dict[str, str]]) -> list[dict[str, object]]:
-    by_modality: dict[str, list[dict[str, str]]] = defaultdict(list)
-    for row in apps.values():
-        by_modality[broad_modality(row)].append(row)
     rows = []
-    for modality, selected in sorted(by_modality.items()):
+    for modality in MODALITY_FLAGS:
+        selected = [row for row in apps.values() if modality_flags(row)[modality]]
         starts = [parse_date(row.get("start_date") or row.get("project_start_date")) for row in selected]
         starts = [value for value in starts if value]
         incumbent = [value for value in starts if value < POLICY_DATE]
         post = [value for value in starts if value >= POLICY_DATE]
-        c05_legacy = 0
-        c05_rap = 0
+        row_out = {
+            "modality_flag": modality,
+            "projects_with_flag": len(selected),
+            "incumbent_projects_before_2024_07_05": len(incumbent),
+            "post_transition_start_projects": len(post),
+            "first_start": min(starts).isoformat() if starts else "",
+            "last_start": max(starts).isoformat() if starts else "",
+        }
+        for control_def in CONTROL_DEFS:
+            for label in ["legacy_exposure_proxy", "rap_intensive_comparison"]:
+                count = 0
+                for selected_row in selected:
+                    app_row = app_outcomes.get(selected_row.get("app_id", ""), {})
+                    start = parse_date(app_row.get("project_start_date"))
+                    if (
+                        start
+                        and start < POLICY_DATE
+                        and safe_int(app_row.get("p1_existing_project_sample")) == 1
+                        and group_label(app_row.get(f"regression_group_{control_def}", "")) == label
+                    ):
+                        count += 1
+                row_out[f"{control_def}_{label}_incumbent_projects_with_flag"] = count
+        rows.append(row_out)
+    return rows
+
+
+def build_modality_overlap(
+    apps: dict[str, dict[str, str]],
+    app_outcomes: dict[str, dict[str, str]],
+) -> list[dict[str, object]]:
+    rows = []
+
+    def row_for(label: str, selected: list[dict[str, str]], control_def: str = "") -> dict[str, object]:
+        flag_counts = {name: 0 for name in MODALITY_FLAGS}
+        multi = 0
         for row in selected:
-            app_row = app_outcomes.get(row.get("app_id", ""), {})
-            if app_row.get("regression_group_CONTROL_C05") == "treated":
-                c05_legacy += 1
-            if app_row.get("regression_group_CONTROL_C05") == "control":
-                c05_rap += 1
-        rows.append(
-            {
-                "broad_modality": modality,
-                "projects": len(selected),
-                "incumbent_projects_before_2024_07_05": len(incumbent),
-                "post_transition_start_projects": len(post),
-                "c05_legacy_exposure_proxy_projects": c05_legacy,
-                "c05_rap_intensive_comparison_projects": c05_rap,
-                "first_start": min(starts).isoformat() if starts else "",
-                "last_start": max(starts).isoformat() if starts else "",
-            }
-        )
+            flags = modality_flags(row)
+            multi += int(sum(flags.values()) > 1)
+            for name, value in flags.items():
+                flag_counts[name] += value
+        return {
+            "exposure_proxy_definition": control_def or "ALL",
+            "comparison_group": label,
+            "projects": len(selected),
+            "projects_with_any_modality_flag": len(selected),
+            "projects_with_multiple_modality_flags": multi,
+            **{f"{name}_projects": flag_counts[name] for name in MODALITY_FLAGS},
+            "classification_note": "Categories overlap; other_or_unclear is assigned only when no specific flag is detected.",
+        }
+
+    rows.append(row_for("all_projects", list(apps.values())))
+    for control_def in CONTROL_DEFS:
+        for label in ["legacy_exposure_proxy", "rap_intensive_comparison"]:
+            ids = incumbent_group_app_ids(app_outcomes, control_def, label)
+            selected = [apps[app_id] for app_id in sorted(ids) if app_id in apps]
+            rows.append(row_for(label, selected, control_def))
     return rows
 
 
@@ -681,6 +848,178 @@ def build_publication_lag(events: list[dict[str, object]]) -> list[dict[str, obj
                 "median_lag_months_all_events": median([float(value) for value in lag_values]),
             }
         )
+    return rows
+
+
+def build_publication_measure_sensitivity(incumbent_quarterly: list[dict[str, object]]) -> list[dict[str, object]]:
+    rows = []
+    for row in incumbent_quarterly:
+        app_links = safe_float(row.get("publication_app_links"))
+        unique = safe_float(row.get("unique_publication_ids"))
+        fractional = safe_float(row.get("fractional_publication_count"))
+        rows.append(
+            {
+                "quarter": row.get("quarter", ""),
+                "publication_app_links": int(app_links),
+                "unique_publication_ids": int(unique),
+                "fractional_publication_count": f"{fractional:.3f}",
+                "app_links_minus_unique_ids": int(app_links - unique),
+                "app_links_minus_fractional_count": f"{app_links - fractional:.3f}",
+                "unique_id_reduction_percent_vs_app_links": pct(app_links - unique, app_links),
+                "fractional_reduction_percent_vs_app_links": pct(app_links - fractional, app_links),
+                "note": "Differences reflect publications linked to multiple UKB applications.",
+            }
+        )
+    return rows
+
+
+def build_recent_publication_completeness(
+    events: list[dict[str, object]],
+    schema19: dict[str, dict[str, str]],
+) -> list[dict[str, object]]:
+    event_dates = [parse_date(event.get("publication_date")) for event in events]
+    event_dates = [value for value in event_dates if value]
+    schema_dates = [parse_date(row.get("date_pub")) for row in schema19.values()]
+    schema_dates = [value for value in schema_dates if value]
+    latest_event = max(event_dates) if event_dates else None
+    latest_schema = max(schema_dates) if schema_dates else None
+    rows = [
+        {
+            "grain": "summary",
+            "period": "latest_clean_application_publication_link",
+            "period_start": latest_event.isoformat() if latest_event else "",
+            "period_end": latest_event.isoformat() if latest_event else "",
+            "publication_app_links": "",
+            "unique_publication_ids": "",
+            "fractional_publication_count": "",
+            "apps_with_any_publication": "",
+            "note": "Latest exact publication date after matching to the project-start universe and removing pre-start links.",
+        },
+        {
+            "grain": "summary",
+            "period": "latest_schema19_exact_publication",
+            "period_start": latest_schema.isoformat() if latest_schema else "",
+            "period_end": latest_schema.isoformat() if latest_schema else "",
+            "publication_app_links": "",
+            "unique_publication_ids": "",
+            "fractional_publication_count": "",
+            "apps_with_any_publication": "",
+            "note": "Latest exact publication date in the local public UKB Schema 19 snapshot.",
+        },
+    ]
+    if not latest_event:
+        return rows
+
+    monthly_events: dict[str, list[dict[str, object]]] = defaultdict(list)
+    weekly_events: dict[str, list[dict[str, object]]] = defaultdict(list)
+    for event in events:
+        event_date = parse_date(event.get("publication_date"))
+        if not event_date:
+            continue
+        monthly_events[str(event["publication_month"])].append(event)
+        weekly_events[str(event["publication_week"])].append(event)
+
+    for month in month_range(add_months(latest_event, -11), latest_event):
+        label = month_label(month)
+        measures = publication_measures(monthly_events[label])
+        rows.append(
+            {
+                "grain": "month",
+                "period": label,
+                "period_start": month.isoformat(),
+                "period_end": month_end(month).isoformat(),
+                **measures,
+                "note": "Right edge may be incomplete until external bibliographic completeness is validated.",
+            }
+        )
+
+    week_start = latest_event - timedelta(days=latest_event.weekday())
+    for offset in range(11, -1, -1):
+        start = week_start - timedelta(days=7 * offset)
+        end = start + timedelta(days=6)
+        label = f"{start.isocalendar().year}-W{start.isocalendar().week:02d}"
+        measures = publication_measures(weekly_events[label])
+        rows.append(
+            {
+                "grain": "week",
+                "period": label,
+                "period_start": start.isoformat(),
+                "period_end": end.isoformat(),
+                **measures,
+                "note": "Right edge may be incomplete until external bibliographic completeness is validated.",
+            }
+        )
+    return rows
+
+
+def build_reconciliation_checks(
+    app_outcomes: dict[str, dict[str, str]],
+    comparative_app_sets: dict[tuple[str, str], set[str]],
+    group_composition: list[dict[str, object]],
+    modality_overlap: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    group_projects = {
+        (str(row["exposure_proxy_definition"]), str(row["comparison_group"])): safe_int(row.get("projects"))
+        for row in group_composition
+    }
+    modality_projects = {
+        (str(row["exposure_proxy_definition"]), str(row["comparison_group"])): safe_int(
+            row.get("projects_with_any_modality_flag")
+        )
+        for row in modality_overlap
+    }
+    rows = []
+    for control_def in CONTROL_DEFS:
+        for label in ["legacy_exposure_proxy", "rap_intensive_comparison"]:
+            expected = incumbent_group_app_ids(app_outcomes, control_def, label)
+            observed = comparative_app_sets.get((control_def, label), set())
+            missing = sorted(expected - observed)
+            extra = sorted(observed - expected)
+            status = "PASS" if not missing and not extra else "FAIL"
+            rows.append(
+                {
+                    "check_name": "comparative_incumbent_app_set",
+                    "exposure_proxy_definition": control_def,
+                    "comparison_group": label,
+                    "expected_projects": len(expected),
+                    "observed_projects": len(observed),
+                    "missing_in_comparative": len(missing),
+                    "extra_in_comparative": len(extra),
+                    "status": status,
+                    "note": "Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.",
+                }
+            )
+            group_count = group_projects.get((control_def, label), -1)
+            rows.append(
+                {
+                    "check_name": "group_composition_incumbent_count",
+                    "exposure_proxy_definition": control_def,
+                    "comparison_group": label,
+                    "expected_projects": len(expected),
+                    "observed_projects": group_count,
+                    "missing_in_comparative": "",
+                    "extra_in_comparative": "",
+                    "status": "PASS" if group_count == len(expected) else "FAIL",
+                    "note": "Group composition table must use the same incumbent definition.",
+                }
+            )
+            modality_count = modality_projects.get((control_def, label), -1)
+            rows.append(
+                {
+                    "check_name": "modality_overlap_incumbent_count",
+                    "exposure_proxy_definition": control_def,
+                    "comparison_group": label,
+                    "expected_projects": len(expected),
+                    "observed_projects": modality_count,
+                    "missing_in_comparative": "",
+                    "extra_in_comparative": "",
+                    "status": "PASS" if modality_count == len(expected) else "FAIL",
+                    "note": "Every group project must receive at least one modality flag, including other_or_unclear.",
+                }
+            )
+    failed = [row for row in rows if row["status"] != "PASS"]
+    if failed:
+        raise AssertionError(f"ITS data-construction reconciliation failed: {failed[:3]}")
     return rows
 
 
@@ -743,7 +1082,7 @@ def build_data_inventory(inputs: dict[str, object], audit: dict[str, int]) -> li
             "data_source": "Archived Design 1 app outcomes",
             "path": str(APP_OUTCOMES.relative_to(ROOT)),
             "rows": len(inputs["app_outcomes"]),
-            "role": "C03/C05/C06 group labels and pre-policy baseline fields.",
+            "role": "C03/C05/C06 group labels and pre-transition 24-month baseline fields.",
             "measurement_issue": "Historical DID terms are relabelled descriptively in ITS outputs.",
         },
         {
@@ -909,6 +1248,11 @@ def summarize(
     comparative: list[dict[str, object]],
     group_composition: list[dict[str, object]],
     modality_counts: list[dict[str, object]],
+    modality_overlap: list[dict[str, object]],
+    publication_measure_sensitivity: list[dict[str, object]],
+    recent_publication_completeness: list[dict[str, object]],
+    reconciliation_checks: list[dict[str, object]],
+    comparative_audit: dict[str, int],
     publication_audit: dict[str, int],
     returned_feasibility: list[dict[str, object]],
 ) -> dict[str, object]:
@@ -923,10 +1267,35 @@ def summarize(
         for row in group_composition
         if row["exposure_proxy_definition"] == "CONTROL_C05"
     }
+    selected_quarters = {"2024Q2", "2024Q3", "2024Q4", "2025Q1", "2026Q2"}
+    latest_clean = next(
+        (
+            row
+            for row in recent_publication_completeness
+            if row["period"] == "latest_clean_application_publication_link"
+        ),
+        {},
+    )
+    latest_schema = next(
+        (
+            row
+            for row in recent_publication_completeness
+            if row["period"] == "latest_schema19_exact_publication"
+        ),
+        {},
+    )
+    all_modality = next(
+        (
+            row
+            for row in modality_overlap
+            if row["exposure_proxy_definition"] == "ALL" and row["comparison_group"] == "all_projects"
+        ),
+        {},
+    )
     return {
         "source_access_date": ACCESS_DATE,
         "policy_transition_date": POLICY_DATE.isoformat(),
-        "april_2026_platform_shock_date": APRIL_2026_SHOCK.isoformat(),
+        "april_2026_institutional_platform_shock_date": APRIL_2026_SHOCK.isoformat(),
         "known_2024_start_pattern": {
             "2024-04": month_counts.get("2024-04", 0),
             "2024-05": month_counts.get("2024-05", 0),
@@ -947,23 +1316,49 @@ def summarize(
         "incumbent_publication_quarters": {
             key: {
                 "publication_app_links": safe_int(row.get("publication_app_links")),
+                "unique_publication_ids": safe_int(row.get("unique_publication_ids")),
+                "fractional_publication_count": row.get("fractional_publication_count", ""),
                 "any_publication_rate_percent": row.get("any_publication_rate_percent", ""),
-                "at_risk_incumbent_projects": safe_int(row.get("at_risk_incumbent_projects")),
+                "post_start_incumbent_projects": safe_int(row.get("post_start_incumbent_projects")),
             }
             for key, row in inc_by_q.items()
-            if key in {"2024Q2", "2024Q3", "2024Q4", "2025Q1", "2026Q2"}
+            if key in selected_quarters
         },
         "c05_group_projects": {
             key: {
                 "projects": safe_int(row.get("projects")),
-                "mean_pre_2024_publications": row.get("mean_pre_2024_publications"),
-                "any_pre_2024_publication_rate_percent": row.get("any_pre_2024_publication_rate_percent"),
+                "mean_pretransition_24m_publications": row.get("mean_pretransition_24m_publications"),
+                "any_pretransition_24m_publication_rate_percent": row.get(
+                    "any_pretransition_24m_publication_rate_percent"
+                ),
                 "median_project_age_years_at_transition": row.get("median_project_age_years_at_transition"),
             }
             for key, row in c05_groups.items()
         },
         "c05_quarterly_rows": len(c05),
-        "modality_project_counts": {row["broad_modality"]: safe_int(row["projects"]) for row in modality_counts},
+        "modality_project_counts": {row["modality_flag"]: safe_int(row["projects_with_flag"]) for row in modality_counts},
+        "modality_overlap_summary": {
+            "projects": safe_int(all_modality.get("projects")),
+            "projects_with_multiple_modality_flags": safe_int(
+                all_modality.get("projects_with_multiple_modality_flags")
+            ),
+        },
+        "publication_measure_sensitivity_selected_quarters": {
+            str(row["quarter"]): {
+                "publication_app_links": safe_int(row.get("publication_app_links")),
+                "unique_publication_ids": safe_int(row.get("unique_publication_ids")),
+                "fractional_publication_count": row.get("fractional_publication_count", ""),
+            }
+            for row in publication_measure_sensitivity
+            if row["quarter"] in selected_quarters
+        },
+        "recent_publication_completeness_summary": {
+            "latest_clean_application_publication_link_date": latest_clean.get("period_start", ""),
+            "latest_schema19_exact_publication_date": latest_schema.get("period_start", ""),
+            "right_edge_interpretation": "Do not interpret 2026Q2 as a platform effect until bibliographic completeness is externally validated.",
+        },
+        "comparative_audit": comparative_audit,
+        "comparative_reconciliation_checks_passed": all(row["status"] == "PASS" for row in reconciliation_checks),
         "publication_audit": publication_audit,
         "returned_data_feasibility": returned_feasibility[0] if returned_feasibility else {},
         "feasibility_ratings": {
@@ -978,6 +1373,90 @@ def summarize(
     }
 
 
+def build_data_construction_audit(
+    summary: dict[str, object],
+    comparative_audit: dict[str, int],
+    reconciliation_checks: list[dict[str, object]],
+    publication_measure_sensitivity: list[dict[str, object]],
+    recent_publication_completeness: list[dict[str, object]],
+) -> str:
+    c05 = summary["c05_group_projects"]
+    latest_clean = summary["recent_publication_completeness_summary"][
+        "latest_clean_application_publication_link_date"
+    ]
+    latest_schema = summary["recent_publication_completeness_summary"][
+        "latest_schema19_exact_publication_date"
+    ]
+    selected_sensitivity = [
+        row
+        for row in publication_measure_sensitivity
+        if row["quarter"] in {"2024Q2", "2024Q3", "2024Q4", "2025Q1", "2026Q2"}
+    ]
+    recent_tail = [row for row in recent_publication_completeness if row["grain"] == "month"][-6:]
+    checks_passed = all(row["status"] == "PASS" for row in reconciliation_checks)
+    official_sources = [
+        {
+            "Source": "Participant withdrawals on UKB-RAP",
+            "URL": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/34853452782621-Participant-withdrawals-on-UKB-RAP",
+            "Use": "Verifies 1 April 2026 withdrawal-enforcement/platform-governance marker.",
+        },
+        {
+            "Source": "Project not enabled for UKB-RAP",
+            "URL": "https://community.ukbiobank.ac.uk/hc/en-gb/articles/22784123882909-Why-does-it-say-that-my-project-is-not-enabled-for-UKB-RAP",
+            "Use": "Verifies 31 March 2026 Code Repository training-module requirement.",
+        },
+    ]
+    return f"""# ITS Data Construction Audit
+
+## Purpose
+
+This audit records data-construction fixes made before moving from feasibility tables to empirical regressions. The package remains descriptive: the July 2024 date is an institutional transition marker, not an observed project-level treatment date.
+
+## Corrections Applied
+
+- Comparative quarterly panels now exclude post-transition entrants. Rows are retained only when `project_start_date < 2024-07-05`.
+- C03/C05/C06 comparison groups use the same `group_label()` logic everywhere, so `control_overlap_original_*` labels are counted as RAP-intensive comparison projects.
+- Modality classification is multi-label. Projects can count in multiple modality flags; `other_or_unclear` is used only when no specific flag is detected.
+- The old one-hot broad-modality field is retained only as `primary_modality` for convenience.
+- Pre-transition baseline fields are now named `mean_pretransition_24m_publications` and `any_pretransition_24m_publication_rate_percent`.
+- Denominators are named `post_start_incumbent_projects`; they are not active-project counts.
+- Publication outcomes now report app-publication links, unique publication IDs, and fractional publication counts. Any-publication rates remain a separate extensive-margin measure.
+
+## Reconciliation Results
+
+All reconciliation checks passed: {checks_passed}.
+
+Post-transition entrant panel rows excluded from comparative series: {comparative_audit.get('post_transition_entrants_excluded', 0)}.
+
+C05 incumbent sample after corrections:
+
+- Legacy-exposure proxy projects: {c05.get('legacy_exposure_proxy', {}).get('projects', '')}
+- RAP-intensive comparison projects: {c05.get('rap_intensive_comparison', {}).get('projects', '')}
+
+{markdown_table(reconciliation_checks, ["check_name", "exposure_proxy_definition", "comparison_group", "expected_projects", "observed_projects", "status", "note"])}
+
+## Publication Multiplicity Sensitivity
+
+{markdown_table(selected_sensitivity, ["quarter", "publication_app_links", "unique_publication_ids", "fractional_publication_count", "app_links_minus_unique_ids", "fractional_reduction_percent_vs_app_links"])}
+
+## Recent Publication Completeness
+
+Latest exact publication date in cleaned application-publication links: {latest_clean}.
+
+Latest exact publication date in local Schema 19 snapshot: {latest_schema}.
+
+The right edge remains a completeness risk. Do not interpret a 2026Q2 movement as a platform effect until external bibliographic completeness is validated.
+
+{markdown_table(recent_tail, ["grain", "period", "period_start", "period_end", "publication_app_links", "unique_publication_ids", "fractional_publication_count", "apps_with_any_publication"])}
+
+## April 2026 Institutional Marker
+
+No official full RAP shutdown was verified. The neutral variable name is `april_2026_institutional_platform_shock_or_after`.
+
+{markdown_table(official_sources, ["Source", "URL", "Use"])}
+"""
+
+
 def build_readme(paths: BuildOutputs) -> str:
     return f"""# Interrupted Time-Series And Stylized-Facts Analysis
 
@@ -988,6 +1467,7 @@ The objective is descriptive rather than causal: to document temporal and cross-
 - `design/stylized_facts_inventory.md`: broad inventory of candidate facts, data coverage, limitations, and priority.
 - `design/its_design_proposal.md`: technical proposal for aggregate, comparative, and event-time descriptive ITS designs.
 - `reports/preliminary_feasibility_report.md`: supervisor-facing feasibility report.
+- `reports/its_data_construction_audit.md`: pre-regression audit for incumbent samples, modalities, publication multiplicity, and right-edge completeness.
 - `data/`: generated feasibility tables from shared public UKB metadata and archived DID panel outputs.
 - `figures/`: preliminary raw figures used to assess candidate stylized facts.
 - `scripts/build_its_feasibility.py`: reproducible builder for this package.
@@ -1036,7 +1516,7 @@ def build_stylized_inventory(summary: dict[str, object]) -> str:
             "Available time coverage": "Exact publication dates through 2026Q2 in local panel",
             "Missingness / measurement issues": "Publication lag; exact-date-only restriction; active status unavailable.",
             "Group/exposure proxy if applicable": "None for aggregate.",
-            "Key transition dates": "2024Q3 transition; 2026Q2 platform shock period",
+            "Key transition dates": "2024Q3 transition; 2026Q2 institutional-platform marker",
             "Important concurrent shocks/confounds": "Publication production lags; data releases in late 2023 and 2025.",
             "Proposed raw figure": "Quarterly incumbent publication app-link line",
             "Proposed descriptive regression, if any": "Segmented quarterly ITS with separate immediate and delayed post windows.",
@@ -1077,7 +1557,7 @@ def build_stylized_inventory(summary: dict[str, object]) -> str:
             "Available time coverage": "2022Q3-2026Q2",
             "Missingness / measurement issues": "Age does not reveal active/expired project status.",
             "Group/exposure proxy if applicable": "Recent <2 years, 2-5 years, 5+ years at 2024-07-05.",
-            "Key transition dates": "2024Q3; 2026Q2 robustness period",
+            "Key transition dates": "2024Q3; 2026Q2 institutional-platform robustness period",
             "Important concurrent shocks/confounds": "Lifecycle, cohort composition, publication lag.",
             "Proposed raw figure": "Age-band quarterly trajectories",
             "Proposed descriptive regression, if any": "Age-band comparative ITS or age-bin adjusted aggregate ITS.",
@@ -1109,30 +1589,30 @@ def build_stylized_inventory(summary: dict[str, object]) -> str:
         },
         {
             "Candidate fact / research question": "Are trajectories heterogeneous across data modalities?",
-            "Outcome": "Starts and publications by broad modality",
+            "Outcome": "Starts and publications by multi-label modality flags",
             "Unit of observation": "Project or project-period",
             "Frequency": "Month/quarter",
             "Sample": "Projects with text-based modality proxy",
             "Data source(s)": "Stage 3 modality flags and project text",
             "Available time coverage": "Project starts 2012-2026; panel 2022Q3-2026Q2",
             "Missingness / measurement issues": "Text classification quality varies; categories overlap.",
-            "Group/exposure proxy if applicable": "Genetics, imaging, EHR, omics/biomarkers, questionnaire/environment, other.",
+            "Group/exposure proxy if applicable": "Overlapping flags: genetics, imaging, EHR, omics/biomarkers, questionnaire/environment, other.",
             "Key transition dates": "Late 2023 WGS, 2024Q3, 2026Q2",
             "Important concurrent shocks/confounds": "WGS/WES release, proteomics/imaging releases.",
-            "Proposed raw figure": "Small multiples by broad modality",
+            "Proposed raw figure": "Small multiples by multi-label modality flag",
             "Proposed descriptive regression, if any": "Modality-specific descriptive ITS only if cells are large.",
             "What empirical pattern would be informative": "Different timing for data-intensive versus low-intensity modalities.",
             "What the pattern CANNOT establish": "Cannot separate modality demand from RAP exposure cleanly.",
             "Possible relevance to the CURRENT theoretical model": "Disciplines heterogeneity by data-intensity.",
             "Feasibility rating": "MEDIUM",
-            "Priority recommendation": "Use only broad, populated categories.",
+            "Priority recommendation": "Use only populated flags and report overlap.",
         },
         {
             "Candidate fact / research question": "Did project-age composition change mechanically over time?",
-            "Outcome": "At-risk projects by age band",
+            "Outcome": "Post-start incumbent projects by age band",
             "Unit of observation": "Project-quarter",
             "Frequency": "Quarter",
-            "Sample": "At-risk panel rows",
+            "Sample": "Post-start incumbent panel rows",
             "Data source(s)": "Matched starts; archived panel",
             "Available time coverage": "2022Q3-2026Q2",
             "Missingness / measurement issues": "No active/expired project status.",
@@ -1264,7 +1744,7 @@ Linear models should report HAC/Newey-West uncertainty. Count-model robustness c
 
 Unit: project-month or project-quarter. Sample: projects started before 2024-07-05. Outcomes:
 
-- publication app-links per at-risk project-period;
+- publication app-links per post-start incumbent project-period;
 - any-publication rate;
 - raw publication count.
 
@@ -1273,7 +1753,7 @@ Suggested descriptive windows:
 - immediate transition: 2024Q3-Q4;
 - early lag: 2025Q1-Q2;
 - mid lag: 2025Q3-Q4;
-- platform-governance/shutdown robustness period: 2026Q2 separately.
+- April 2026 institutional-platform robustness marker: 2026Q2 separately.
 
 Publication lag is central. Do not redefine 2025 as the policy date; use delayed windows to describe timing.
 
@@ -1302,7 +1782,7 @@ Retain event-time plots only as descriptive dynamic trajectories around 2024Q3. 
 - `PostTransition_t`: periods beginning 2024Q3 or later for quarterly models, July 2024 or later for monthly models.
 - `JulSep2024_t`: July, August, and September 2024 administrative pause window.
 - `Oct2024Restart_t`: October 2024 batch restart.
-- `April2026Shock_t`: 2026Q2 or April 2026 onward, reported separately or excluded from the main post-transition window.
+- `April2026InstitutionalPlatformShock_t`: 2026Q2 or April 2026 onward, reported separately or excluded from the main post-transition window.
 
 ## Robustness Strategy
 
@@ -1310,7 +1790,7 @@ Retain event-time plots only as descriptive dynamic trajectories around 2024Q3. 
 2. Report aggregate starts before comparative publication designs.
 3. Use C03/C05/C06 as prespecified exposure-proxy sensitivity, not as a p-value search.
 4. Separate extensive and intensive publication margins.
-5. Add project-age and broad-modality diagnostics before interpreting group differences.
+5. Add project-age and multi-label modality diagnostics before interpreting group differences.
 6. End the main window before April 2026 where appropriate and report 2026Q2 separately.
 
 ## Current Feasibility Ratings
@@ -1385,14 +1865,20 @@ def build_feasibility_report(summary: dict[str, object], paths: BuildOutputs) ->
             paths.comparative_quarterly,
             paths.group_composition,
             paths.modality_counts,
+            paths.modality_overlap,
             paths.age_band_quarterly,
             paths.publication_lag,
+            paths.publication_measure_sensitivity,
+            paths.recent_publication_completeness,
             paths.returned_data_feasibility,
             paths.institution_counts,
             paths.institutional_dates,
+            paths.data_inventory,
+            paths.reconciliation_checks,
             paths.starts_figure,
             paths.incumbent_figure,
             paths.comparative_figure,
+            paths.data_construction_audit,
         ]
     ]
     return f"""# Preliminary ITS Feasibility Report
@@ -1403,7 +1889,7 @@ The new objective is descriptive. We document temporal and cross-project pattern
 
 ## 2. Why The Previous Causal DID Interpretation Was Set Aside
 
-The public data do not observe actual project-level RAP migration dates, refresh requests, active/expired project status, or actual RAP use. Existing C0-C6 classifications are useful legacy-exposure proxies, but they do not create a clean untreated counterfactual. Publication is also a lagged downstream outcome, and April 2026 is a distinct platform-governance shock.
+The public data do not observe actual project-level RAP migration dates, refresh requests, active/expired project status, or actual RAP use. Existing C0-C6 classifications are useful legacy-exposure proxies, but they do not create a clean untreated counterfactual. Publication is also a lagged downstream outcome, and April 2026 is a distinct institutional-platform marker rather than a verified full RAP shutdown.
 
 ## 3. Repository/Data Inventory
 
@@ -1414,7 +1900,9 @@ The reorganized package uses shared source data in `data/raw` and `data/intermed
 - Project starts show a very sharp 2024 transition-window pattern: April {starts['2024-04']}, May {starts['2024-05']}, June {starts['2024-06']}, July {starts['2024-07']}, August {starts['2024-08']}, September {starts['2024-09']}, October {starts['2024-10']}.
 - Quarterly starts move from 2024Q2={quarters['2024Q2']} to 2024Q3={quarters['2024Q3']} to 2024Q4={quarters['2024Q4']}.
 - Aggregate incumbent publications are feasible with exact Schema 19 dates; key quarters currently include {json.dumps(publication_quarters, sort_keys=True)}.
+- Publication timing outputs now separate app-publication links, unique publication IDs, fractional publication counts, and any-publication rates.
 - C05 has {c05.get('legacy_exposure_proxy', {}).get('projects', '')} legacy-exposure proxy projects and {c05.get('rap_intensive_comparison', {}).get('projects', '')} RAP-intensive comparison projects in the incumbent sample.
+- Comparative incumbent-sample reconciliation passed: {summary.get('comparative_reconciliation_checks_passed')}.
 - Returned-dataset timing is not feasible from the local Schema 4 extract.
 
 ## 5. Strongest Patterns Currently Visible
@@ -1468,7 +1956,7 @@ Coefficients are descriptive level/slope changes or differential trajectories.
 
 ## 11. Time Windows And Transition Coding
 
-The main transition marker is 2024-07-05. Monthly entry models should separately code July-September 2024 and October 2024. Quarterly publication models should mark 2024Q3 and report 2026Q2 separately because April 2026 changes the platform-governance regime.
+The main transition marker is 2024-07-05. Monthly entry models should separately code July-September 2024 and October 2024. Quarterly publication models should mark 2024Q3 and report 2026Q2 separately because April 2026 changes the institutional-platform governance regime.
 
 ## 12. Concurrent Institutional Shocks
 
@@ -1476,7 +1964,7 @@ The main transition marker is 2024-07-05. Monthly entry models should separately
 
 ## 13. Data Limitations
 
-The public data lack project active/expired status, observed RAP migration, refresh requests, project-level RAP use, and participant-level information. Publication dates are exact only for a subset; year-only dates are excluded from timing series. Multi-application publication links are audited and retained as app-publication links.
+The public data lack project active/expired status, observed RAP migration, refresh requests, project-level RAP use, and participant-level information. Publication dates are exact only for a subset; year-only dates are excluded from timing series. Multi-application publication links are audited with app-link, unique-ID, and fractional-count measures. The latest quarters remain vulnerable to bibliographic right-edge incompleteness.
 
 ## 14. What Can And Cannot Be Interpreted
 
@@ -1510,11 +1998,20 @@ def run() -> dict[str, object]:
     monthly_starts, quarterly_starts = build_project_start_series(apps)
     events, publication_audit = build_publication_events(apps, inputs["schema19"], inputs["schema24"])
     incumbent_monthly, incumbent_quarterly = build_incumbent_publication_series(apps, events)
-    comparative_quarterly = build_comparative_quarterly(inputs["panel"])
+    comparative_quarterly, comparative_app_sets, comparative_audit = build_comparative_quarterly(inputs["panel"])
     group_composition = build_group_composition(inputs["app_outcomes"])
     modality_counts = build_modality_counts(apps, inputs["app_outcomes"])
+    modality_overlap = build_modality_overlap(apps, inputs["app_outcomes"])
+    reconciliation_checks = build_reconciliation_checks(
+        inputs["app_outcomes"],
+        comparative_app_sets,
+        group_composition,
+        modality_overlap,
+    )
     age_band_quarterly = build_age_band_quarterly(inputs["panel"], apps)
     publication_lag = build_publication_lag(events)
+    publication_measure_sensitivity = build_publication_measure_sensitivity(incumbent_quarterly)
+    recent_publication_completeness = build_recent_publication_completeness(events, inputs["schema19"])
     returned_feasibility = build_returned_data_feasibility(inputs["returned"])
     institution_counts = build_institution_counts(apps)
     data_inventory = build_data_inventory(inputs, publication_audit)
@@ -1527,12 +2024,24 @@ def run() -> dict[str, object]:
     write_table(paths.comparative_quarterly, comparative_quarterly, list(comparative_quarterly[0].keys()))
     write_table(paths.group_composition, group_composition, list(group_composition[0].keys()))
     write_table(paths.modality_counts, modality_counts, list(modality_counts[0].keys()))
+    write_table(paths.modality_overlap, modality_overlap, list(modality_overlap[0].keys()))
     write_table(paths.age_band_quarterly, age_band_quarterly, list(age_band_quarterly[0].keys()))
     write_table(paths.publication_lag, publication_lag, list(publication_lag[0].keys()))
+    write_table(
+        paths.publication_measure_sensitivity,
+        publication_measure_sensitivity,
+        list(publication_measure_sensitivity[0].keys()),
+    )
+    write_table(
+        paths.recent_publication_completeness,
+        recent_publication_completeness,
+        list(recent_publication_completeness[0].keys()),
+    )
     write_table(paths.returned_data_feasibility, returned_feasibility, list(returned_feasibility[0].keys()))
     write_table(paths.institution_counts, institution_counts, list(institution_counts[0].keys()))
     write_table(paths.institutional_dates, institutional_dates, list(institutional_dates[0].keys()))
     write_table(paths.data_inventory, data_inventory, list(data_inventory[0].keys()))
+    write_table(paths.reconciliation_checks, reconciliation_checks, list(reconciliation_checks[0].keys()))
     build_figures(paths, monthly_starts, incumbent_quarterly, comparative_quarterly)
 
     summary = summarize(
@@ -1542,6 +2051,11 @@ def run() -> dict[str, object]:
         comparative=comparative_quarterly,
         group_composition=group_composition,
         modality_counts=modality_counts,
+        modality_overlap=modality_overlap,
+        publication_measure_sensitivity=publication_measure_sensitivity,
+        recent_publication_completeness=recent_publication_completeness,
+        reconciliation_checks=reconciliation_checks,
+        comparative_audit=comparative_audit,
         publication_audit=publication_audit,
         returned_feasibility=returned_feasibility,
     )
@@ -1550,6 +2064,16 @@ def run() -> dict[str, object]:
     write_text(paths.stylized_inventory, build_stylized_inventory(summary))
     write_text(paths.design_proposal, build_design_proposal(summary))
     write_text(paths.feasibility_report, build_feasibility_report(summary, paths))
+    write_text(
+        paths.data_construction_audit,
+        build_data_construction_audit(
+            summary,
+            comparative_audit,
+            reconciliation_checks,
+            publication_measure_sensitivity,
+            recent_publication_completeness,
+        ),
+    )
     return summary
 
 

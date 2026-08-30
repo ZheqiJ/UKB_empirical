@@ -29,7 +29,7 @@ Linear models should report HAC/Newey-West uncertainty. Count-model robustness c
 
 Unit: project-month or project-quarter. Sample: projects started before 2024-07-05. Outcomes:
 
-- publication app-links per at-risk project-period;
+- publication app-links per post-start incumbent project-period;
 - any-publication rate;
 - raw publication count.
 
@@ -38,7 +38,7 @@ Suggested descriptive windows:
 - immediate transition: 2024Q3-Q4;
 - early lag: 2025Q1-Q2;
 - mid lag: 2025Q3-Q4;
-- platform-governance/shutdown robustness period: 2026Q2 separately.
+- April 2026 institutional-platform robustness marker: 2026Q2 separately.
 
 Publication lag is central. Do not redefine 2025 as the policy date; use delayed windows to describe timing.
 
@@ -67,7 +67,7 @@ Retain event-time plots only as descriptive dynamic trajectories around 2024Q3. 
 - `PostTransition_t`: periods beginning 2024Q3 or later for quarterly models, July 2024 or later for monthly models.
 - `JulSep2024_t`: July, August, and September 2024 administrative pause window.
 - `Oct2024Restart_t`: October 2024 batch restart.
-- `April2026Shock_t`: 2026Q2 or April 2026 onward, reported separately or excluded from the main post-transition window.
+- `April2026InstitutionalPlatformShock_t`: 2026Q2 or April 2026 onward, reported separately or excluded from the main post-transition window.
 
 ## Robustness Strategy
 
@@ -75,7 +75,7 @@ Retain event-time plots only as descriptive dynamic trajectories around 2024Q3. 
 2. Report aggregate starts before comparative publication designs.
 3. Use C03/C05/C06 as prespecified exposure-proxy sensitivity, not as a p-value search.
 4. Separate extensive and intensive publication margins.
-5. Add project-age and broad-modality diagnostics before interpreting group differences.
+5. Add project-age and multi-label modality diagnostics before interpreting group differences.
 6. End the main window before April 2026 where appropriate and report 2026Q2 separately.
 
 ## Current Feasibility Ratings

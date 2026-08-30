@@ -7,6 +7,7 @@ The objective is descriptive rather than causal: to document temporal and cross-
 - `design/stylized_facts_inventory.md`: broad inventory of candidate facts, data coverage, limitations, and priority.
 - `design/its_design_proposal.md`: technical proposal for aggregate, comparative, and event-time descriptive ITS designs.
 - `reports/preliminary_feasibility_report.md`: supervisor-facing feasibility report.
+- `reports/its_data_construction_audit.md`: pre-regression audit for incumbent samples, modalities, publication multiplicity, and right-edge completeness.
 - `data/`: generated feasibility tables from shared public UKB metadata and archived DID panel outputs.
 - `figures/`: preliminary raw figures used to assess candidate stylized facts.
 - `scripts/build_its_feasibility.py`: reproducible builder for this package.
