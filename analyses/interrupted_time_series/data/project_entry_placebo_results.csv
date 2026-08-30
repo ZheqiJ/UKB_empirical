@@ -1,0 +1,5 @@
+placebo_breakpoint,sample_window,model,term,estimate,std_error,ci_low,ci_high,interpretation
+2022-07,2019-01 to 2024-06 only,Linear segmented ITS placebo,PostPlaceboJuly,24.113,7.835,8.757,39.469,"Contextual placebo, not an identification test"
+2022-07,2019-01 to 2024-06 only,Linear segmented ITS placebo,TimeAfterPlaceboJuly,-1.224,0.524,-2.251,-0.197,"Contextual placebo, not an identification test"
+2023-07,2019-01 to 2024-06 only,Linear segmented ITS placebo,PostPlaceboJuly,18.973,11.144,-2.870,40.816,"Contextual placebo, not an identification test"
+2023-07,2019-01 to 2024-06 only,Linear segmented ITS placebo,TimeAfterPlaceboJuly,-4.043,1.281,-6.554,-1.533,"Contextual placebo, not an identification test"

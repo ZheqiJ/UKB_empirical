@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="520" viewBox="0 0 1060 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="530.0" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">Cumulative Observed-Minus-Expected Recorded Starts</text>
+<rect x="82.0" y="50" width="442.8" height="408" fill="#d9e6ee" opacity="0.45"/>
+<line x1="82" y1="458.0" x2="1026" y2="458.0" stroke="#dedede"/>
+<text x="72" y="462.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">-271</text>
+<line x1="82" y1="356.0" x2="1026" y2="356.0" stroke="#dedede"/>
+<text x="72" y="360.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">66</text>
+<line x1="82" y1="254.0" x2="1026" y2="254.0" stroke="#dedede"/>
+<text x="72" y="258.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">403</text>
+<line x1="82" y1="152.0" x2="1026" y2="152.0" stroke="#dedede"/>
+<text x="72" y="156.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">741</text>
+<line x1="82" y1="50.0" x2="1026" y2="50.0" stroke="#dedede"/>
+<text x="72" y="54.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">1078</text>
+<line x1="-249.7" y1="50" x2="-249.7" y2="458" stroke="#eeeeee"/>
+<text x="-249.7" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2024</text>
+<line x1="417.3" y1="50" x2="417.3" y2="458" stroke="#eeeeee"/>
+<text x="417.3" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2025</text>
+<line x1="82" y1="376.1" x2="1026" y2="376.1" stroke="#777" stroke-dasharray="4 4"/>
+<line x1="82.0" y1="50" x2="82.0" y2="458" stroke="#111" stroke-width="2.2"/>
+<polyline fill="none" stroke="#24536b" stroke-width="2.4" points="82.0,393.5 138.5,410.8 195.0,429.9 249.7,384.1 306.2,357.9 360.8,340.2 417.3,331.7 473.8,318.0 524.8,312.0 581.3,277.3 636.0,258.4 692.5,228.2 747.2,189.9 803.7,173.0 860.2,143.7 914.8,122.4 971.3,93.4 1026.0,78.1"/>
+<text x="18" y="254.0" transform="rotate(-90 18 254.0)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Cumulative gap</text>
+<text x="82" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333">Solid line: official July 2024 institutional breakpoint. Shading: documented transition/onboarding context.</text>
+</svg>

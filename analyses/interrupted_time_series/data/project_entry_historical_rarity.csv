@@ -1,0 +1,4 @@
+diagnostic,rolling_window_months,observed_2024_total,pre_transition_windows,minimum_pre_transition_rolling_total,median_pre_transition_rolling_total,windows_at_or_below_observed,empirical_percentile,rank_low_is_more_unusual
+1-month Jul-Sep minimum,1,0,66,5,51.000,0,0.0000,0
+2-month May-Jun total,2,43,65,43,105.000,1,0.0154,1
+3-month Jul-Sep total,3,4,64,74,164.000,0,0.0000,0
