@@ -52,7 +52,13 @@ Primary linear ITS with Newey-West HAC inference:
 
 The p-values are two-sided large-sample values based on the HAC standard errors. They are included for reporting convenience, but the paper interpretation should emphasize the descriptive magnitudes, fitted-path deviations, and uncertainty intervals rather than stars.
 
-The primary linear level-change estimate is slightly negative but very imprecise. The slope-change estimate is positive, matching the later higher project-start trajectory. In economic terms, the model does not precisely estimate an immediate July-level shift, but it does estimate a steeper post-transition recorded-start trajectory; by December 2025, the slope-change component alone is about 107.6 starts per month above a parallel continuation of the pre-transition slope.
+### How To Read The ITS Coefficients
+
+`PostJuly2024` is the model's immediate level-change parameter at the institutional breakpoint. In the primary linear specification it is -1.091 recorded starts per month, with p = 0.9706 and a 95% CI from -59.129 to 56.947. Economically, this means the segmented-regression line does not estimate a precise one-time downward jump exactly at July 2024 after allowing for the pre-existing trend, post-transition slope change, and month-of-year fixed effects. This coefficient should not be used as the main estimate of the July-September interruption, because the observed trough is spread across several months and the rebound arrives quickly afterward.
+
+`TimeAfterJuly2024` is the change in slope after the July 2024 breakpoint. In the primary linear specification it is 5.977 additional recorded starts per month, with p = 0.0260 and a 95% CI from 0.713 to 11.241. Economically, each additional post-transition month is fitted as roughly 6.0 more project starts above what would be implied by simply extending the pre-transition slope. By December 2025, the slope-change component alone is about 107.6 starts per month above a parallel continuation of the pre-transition slope.
+
+The coefficient table therefore tells a specific story: the immediate July level parameter is not informative on its own, while the post-July slope parameter captures the higher 2025 trajectory. The interruption itself is better summarized with the observed-versus-expected gap estimates below, because those directly compare observed monthly starts with a pre-transition trend-and-seasonality benchmark.
 
 Poisson QMLE robustness gives an immediate level-shift rate ratio of 1.10 (p = 0.8003) and a monthly post-transition slope rate ratio of 1.05 (p = 0.1035). Because Pearson dispersion is high in the count model, the Poisson estimates are best read as robustness for the direction and broad magnitude, not as the only uncertainty calculation.
 
@@ -60,11 +66,17 @@ Poisson QMLE robustness gives an immediate level-shift rate ratio of 1.10 (p = 0
 
 Using only pre-transition observations in the primary window, I fit a trend plus month-of-year seasonality model and forecast the fitted historical benchmark after July 2024. This is a descriptive benchmark, not a causal untreated potential outcome.
 
-July-September 2024 recorded starts are -177.8 projects below the fitted historical path. The broader July 2024-March 2025 transition/onboarding context is 211.8 projects relative to the fitted path. October 2024 alone is 151.3 projects above the fitted path.
+July-September 2024 recorded starts are -177.8 projects below the fitted historical path. This is the clearest economic magnitude for the interruption: relative to what the pre-transition trend-and-seasonality model would have predicted, the public series records about 178 fewer project starts during the three-month trough.
+
+October 2024 alone is 151.3 projects above the fitted path. This means the October rebound offsets most, but not all, of the July-September shortfall by itself. After October, the cumulative gap remains slightly negative; it turns positive only after November 2024 is included.
+
+The broader July 2024-March 2025 transition/onboarding context is 211.8 projects relative to the fitted path. This positive value is important: it means the transition-context period is not simply a sustained deficit. Instead, the early trough is followed by enough rebound and elevated starts to put the cumulative July 2024-March 2025 total above the fitted historical benchmark.
 
 ## 9. Cumulative Gap And Recovery
 
-The cumulative observed-minus-expected gap reaches a minimum of -177.8 projects and recovers in 2024-11. By 2025-12, the cumulative gap is 984.6 projects.
+The cumulative observed-minus-expected gap reaches a minimum of -177.8 projects after September 2024 and recovers in 2024-11. By 2025-12, the cumulative gap is 984.6 projects.
+
+Economically, this supports the classification `temporary interruption followed by higher-than-historical entry`: there is a severe short-run deficit, but it is recovered quickly, and the subsequent 2025 project-start trajectory cumulates far above the fitted pre-transition benchmark. This should be described as a recorded-start trajectory, not as evidence that RAP causally increased applications.
 
 ## 10. Historical Rarity
 

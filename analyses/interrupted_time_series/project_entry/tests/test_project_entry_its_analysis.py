@@ -49,6 +49,14 @@ class ProjectEntryITSAnalysisTests(unittest.TestCase):
         ][0]
         self.assertEqual(primary["p_value"], "0.0260")
 
+    def test_report_explains_p_values_and_economic_magnitudes(self):
+        report = self.analysis.Outputs().results_report.read_text()
+        self.assertIn("How To Read The ITS Coefficients", report)
+        self.assertIn("with p = 0.9706", report)
+        self.assertIn("with p = 0.0260", report)
+        self.assertIn("clearest economic magnitude for the interruption", report)
+        self.assertIn("temporary interruption followed by higher-than-historical entry", report)
+
 
 if __name__ == "__main__":
     unittest.main()

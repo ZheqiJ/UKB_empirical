@@ -71,6 +71,14 @@ Historical rarity:
 | Minimum pre-transition rolling 3-month total, 2019-01 to 2024-06 | 74 starts |
 | Pre-transition 3-month windows at or below July-September 2024 | 0 of 64 |
 
+## How To Explain The Regression Table
+
+For a supervisor report, do not describe `PostJuly2024` as the size of the interruption. It is the immediate level-change coefficient exactly at the July 2024 breakpoint. In the primary linear model it is -1.091 with p = 0.9706, so the model does not estimate a statistically or economically precise one-month level shift once trend, post-July slope change, and seasonality are controlled for.
+
+The more informative ITS coefficient is `TimeAfterJuly2024`. In the primary linear model it is 5.977 with p = 0.0260, meaning the fitted post-transition trajectory increases by about 6 additional recorded starts per month relative to the pre-transition slope. By December 2025, that slope-change component is about 108 starts per month above a parallel continuation of the pre-transition path.
+
+The economic size of the interruption should come from the fitted-path deviations rather than from the immediate level-change coefficient: July-September 2024 is about 178 starts below the historical trend-and-seasonality benchmark, October 2024 is about 151 starts above it, the cumulative gap recovers in November 2024, and by December 2025 the cumulative gap is about 985 starts above the fitted historical path.
+
 ## How To Interpret The Finding
 
 Use this interpretation:
