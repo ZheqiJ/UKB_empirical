@@ -1,0 +1,17 @@
+quarter,publication_app_links,unique_publication_ids,fractional_publication_count,app_links_minus_unique_ids,app_links_minus_fractional_count,unique_id_reduction_percent_vs_app_links,fractional_reduction_percent_vs_app_links,note
+2022Q3,358,334,334.000,24,24.000,6.70,6.70,Differences reflect publications linked to multiple UKB applications.
+2022Q4,365,349,349.000,16,16.000,4.38,4.38,Differences reflect publications linked to multiple UKB applications.
+2023Q1,435,412,412.000,23,23.000,5.29,5.29,Differences reflect publications linked to multiple UKB applications.
+2023Q2,416,396,396.000,20,20.000,4.81,4.81,Differences reflect publications linked to multiple UKB applications.
+2023Q3,419,401,401.000,18,18.000,4.30,4.30,Differences reflect publications linked to multiple UKB applications.
+2023Q4,431,395,395.000,36,36.000,8.35,8.35,Differences reflect publications linked to multiple UKB applications.
+2024Q1,464,447,447.000,17,17.000,3.66,3.66,Differences reflect publications linked to multiple UKB applications.
+2024Q2,519,506,506.000,13,13.000,2.50,2.50,Differences reflect publications linked to multiple UKB applications.
+2024Q3,539,511,511.000,28,28.000,5.19,5.19,Differences reflect publications linked to multiple UKB applications.
+2024Q4,507,484,484.000,23,23.000,4.54,4.54,Differences reflect publications linked to multiple UKB applications.
+2025Q1,629,602,601.500,27,27.500,4.29,4.37,Differences reflect publications linked to multiple UKB applications.
+2025Q2,623,603,601.500,20,21.500,3.21,3.45,Differences reflect publications linked to multiple UKB applications.
+2025Q3,749,728,724.300,21,24.700,2.80,3.30,Differences reflect publications linked to multiple UKB applications.
+2025Q4,709,689,686.500,20,22.500,2.82,3.17,Differences reflect publications linked to multiple UKB applications.
+2026Q1,733,714,711.000,19,22.000,2.59,3.00,Differences reflect publications linked to multiple UKB applications.
+2026Q2,588,569,566.667,19,21.333,3.23,3.63,Differences reflect publications linked to multiple UKB applications.

@@ -1,0 +1,8 @@
+exposure_proxy_definition,comparison_group,projects,projects_with_any_modality_flag,projects_with_multiple_modality_flags,genetics_sequence_projects,imaging_projects,ehr_linked_records_projects,proteomics_metabolomics_biomarkers_projects,questionnaire_environment_lifestyle_projects,other_or_unclear_projects,classification_note
+ALL,all_projects,6935,6935,6050,5020,1903,5071,2258,4334,112,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C03,legacy_exposure_proxy,3327,3327,3016,2424,938,2373,861,2333,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C03,rap_intensive_comparison,130,130,110,129,21,98,25,45,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C05,legacy_exposure_proxy,3326,3326,3015,2423,938,2373,861,2332,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C05,rap_intensive_comparison,131,131,111,130,21,98,25,46,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C06,legacy_exposure_proxy,3193,3193,2885,2294,916,2263,832,2244,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.
+CONTROL_C06,rap_intensive_comparison,297,297,270,291,45,236,54,140,0,Categories overlap; other_or_unclear is assigned only when no specific flag is detected.

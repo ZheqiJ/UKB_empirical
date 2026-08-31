@@ -1,0 +1,4 @@
+window,start_month,end_month,n_months,pre_transition_months,post_transition_months,pre_mean,post_mean,pre_min,pre_max,selected_role,selection_basis
+2019-2025,2019-01,2025-12,84,66,18,51.879,118.667,5,94,PRIMARY,Balances modern project-entry volume with enough pre-transition observations for trend and month-of-year seasonality; chosen before inspecting model significance.
+2021-2025,2021-01,2025-12,60,42,18,56.262,118.667,10,94,ROBUSTNESS,Prespecified shorter modern-window robustness check.
+2022-2025,2022-01,2025-12,48,30,18,60.567,118.667,10,94,ROBUSTNESS,Prespecified shorter modern-window robustness check.

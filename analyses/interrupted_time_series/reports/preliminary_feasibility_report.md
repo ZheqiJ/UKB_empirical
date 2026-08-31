@@ -6,7 +6,7 @@ The new objective is descriptive. We document temporal and cross-project pattern
 
 ## 2. Why The Previous Causal DID Interpretation Was Set Aside
 
-The public data do not observe actual project-level RAP migration dates, refresh requests, active/expired project status, or actual RAP use. Existing C0-C6 classifications are useful legacy-exposure proxies, but they do not create a clean untreated counterfactual. Publication is also a lagged downstream outcome, and April 2026 is a distinct platform-governance shock.
+The public data do not observe actual project-level RAP migration dates, refresh requests, active/expired project status, or actual RAP use. Existing C0-C6 classifications are useful legacy-exposure proxies, but they do not create a clean untreated counterfactual. Publication is also a lagged downstream outcome, and April 2026 is a distinct institutional-platform marker rather than a verified full RAP shutdown.
 
 ## 3. Repository/Data Inventory
 
@@ -16,8 +16,10 @@ The reorganized package uses shared source data in `data/raw` and `data/intermed
 
 - Project starts show a very sharp 2024 transition-window pattern: April 72, May 33, June 10, July 3, August 0, September 1, October 208.
 - Quarterly starts move from 2024Q2=115 to 2024Q3=4 to 2024Q4=470.
-- Aggregate incumbent publications are feasible with exact Schema 19 dates; key quarters currently include {"2024Q2": {"any_publication_rate_percent": "8.36", "at_risk_incumbent_projects": 4329, "publication_app_links": 519}, "2024Q3": {"any_publication_rate_percent": "8.24", "at_risk_incumbent_projects": 4332, "publication_app_links": 539}, "2024Q4": {"any_publication_rate_percent": "8.36", "at_risk_incumbent_projects": 4332, "publication_app_links": 507}, "2025Q1": {"any_publication_rate_percent": "9.76", "at_risk_incumbent_projects": 4332, "publication_app_links": 629}, "2026Q2": {"any_publication_rate_percent": "9.37", "at_risk_incumbent_projects": 4332, "publication_app_links": 588}}.
+- Aggregate incumbent publications are feasible with exact Schema 19 dates; key quarters currently include {"2024Q2": {"any_publication_rate_percent": "8.36", "fractional_publication_count": "506.000", "post_start_incumbent_projects": 4329, "publication_app_links": 519, "unique_publication_ids": 506}, "2024Q3": {"any_publication_rate_percent": "8.24", "fractional_publication_count": "511.000", "post_start_incumbent_projects": 4332, "publication_app_links": 539, "unique_publication_ids": 511}, "2024Q4": {"any_publication_rate_percent": "8.36", "fractional_publication_count": "484.000", "post_start_incumbent_projects": 4332, "publication_app_links": 507, "unique_publication_ids": 484}, "2025Q1": {"any_publication_rate_percent": "9.76", "fractional_publication_count": "601.500", "post_start_incumbent_projects": 4332, "publication_app_links": 629, "unique_publication_ids": 602}, "2026Q2": {"any_publication_rate_percent": "9.37", "fractional_publication_count": "566.667", "post_start_incumbent_projects": 4332, "publication_app_links": 588, "unique_publication_ids": 569}}.
+- Publication timing outputs now separate app-publication links, unique publication IDs, fractional publication counts, and any-publication rates.
 - C05 has 3326 legacy-exposure proxy projects and 131 RAP-intensive comparison projects in the incumbent sample.
+- Comparative incumbent-sample reconciliation passed: True.
 - Returned-dataset timing is not feasible from the local Schema 4 extract.
 
 ## 5. Strongest Patterns Currently Visible
@@ -71,7 +73,7 @@ Coefficients are descriptive level/slope changes or differential trajectories.
 
 ## 11. Time Windows And Transition Coding
 
-The main transition marker is 2024-07-05. Monthly entry models should separately code July-September 2024 and October 2024. Quarterly publication models should mark 2024Q3 and report 2026Q2 separately because April 2026 changes the platform-governance regime.
+The main transition marker is 2024-07-05. Monthly entry models should separately code July-September 2024 and October 2024. Quarterly publication models should mark 2024Q3 and report 2026Q2 separately because April 2026 changes the institutional-platform governance regime.
 
 ## 12. Concurrent Institutional Shocks
 
@@ -87,7 +89,7 @@ The main transition marker is 2024-07-05. Monthly entry models should separately
 
 ## 13. Data Limitations
 
-The public data lack project active/expired status, observed RAP migration, refresh requests, project-level RAP use, and participant-level information. Publication dates are exact only for a subset; year-only dates are excluded from timing series. Multi-application publication links are audited and retained as app-publication links.
+The public data lack project active/expired status, observed RAP migration, refresh requests, project-level RAP use, and participant-level information. Publication dates are exact only for a subset; year-only dates are excluded from timing series. Multi-application publication links are audited with app-link, unique-ID, and fractional-count measures. The latest quarters remain vulnerable to bibliographic right-edge incompleteness.
 
 ## 14. What Can And Cannot Be Interpreted
 
@@ -106,14 +108,20 @@ Start with raw project-entry plots and a compact segmented count ITS. Then show 
 - `analyses/interrupted_time_series/data/its_comparative_quarterly.csv`
 - `analyses/interrupted_time_series/data/its_group_composition.csv`
 - `analyses/interrupted_time_series/data/its_modality_project_counts.csv`
+- `analyses/interrupted_time_series/data/its_modality_overlap.csv`
 - `analyses/interrupted_time_series/data/its_age_band_quarterly.csv`
 - `analyses/interrupted_time_series/data/its_publication_lag.csv`
+- `analyses/interrupted_time_series/data/its_publication_measure_sensitivity.csv`
+- `analyses/interrupted_time_series/data/its_recent_publication_completeness.csv`
 - `analyses/interrupted_time_series/data/its_returned_data_feasibility.csv`
 - `analyses/interrupted_time_series/data/its_top_institutions.csv`
 - `analyses/interrupted_time_series/data/its_institutional_dates.csv`
+- `analyses/interrupted_time_series/data/its_data_inventory.csv`
+- `analyses/interrupted_time_series/data/its_reconciliation_checks.csv`
 - `analyses/interrupted_time_series/figures/its_project_starts_monthly.svg`
 - `analyses/interrupted_time_series/figures/its_incumbent_publications_quarterly.svg`
 - `analyses/interrupted_time_series/figures/its_c05_group_quarterly_any_publication.svg`
+- `analyses/interrupted_time_series/reports/its_data_construction_audit.md`
 
 ## 17. Questions That Require Supervisor Approval
 

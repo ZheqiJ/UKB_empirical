@@ -1,0 +1,19 @@
+check_name,exposure_proxy_definition,comparison_group,expected_projects,observed_projects,missing_in_comparative,extra_in_comparative,status,note
+comparative_incumbent_app_set,CONTROL_C03,legacy_exposure_proxy,3327,3327,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C03,legacy_exposure_proxy,3327,3327,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C03,legacy_exposure_proxy,3327,3327,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."
+comparative_incumbent_app_set,CONTROL_C03,rap_intensive_comparison,130,130,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C03,rap_intensive_comparison,130,130,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C03,rap_intensive_comparison,130,130,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."
+comparative_incumbent_app_set,CONTROL_C05,legacy_exposure_proxy,3326,3326,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C05,legacy_exposure_proxy,3326,3326,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C05,legacy_exposure_proxy,3326,3326,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."
+comparative_incumbent_app_set,CONTROL_C05,rap_intensive_comparison,131,131,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C05,rap_intensive_comparison,131,131,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C05,rap_intensive_comparison,131,131,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."
+comparative_incumbent_app_set,CONTROL_C06,legacy_exposure_proxy,3193,3193,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C06,legacy_exposure_proxy,3193,3193,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C06,legacy_exposure_proxy,3193,3193,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."
+comparative_incumbent_app_set,CONTROL_C06,rap_intensive_comparison,297,297,0,0,PASS,Comparative quarterly rows must contain only pre-2024-07-05 incumbent projects.
+group_composition_incumbent_count,CONTROL_C06,rap_intensive_comparison,297,297,,,PASS,Group composition table must use the same incumbent definition.
+modality_overlap_incumbent_count,CONTROL_C06,rap_intensive_comparison,297,297,,,PASS,"Every group project must receive at least one modality flag, including other_or_unclear."

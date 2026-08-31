@@ -1,0 +1,13 @@
+model,window,n_months,seasonality,inference,term,estimate,std_error,ci_low,ci_high,economic_interpretation
+Linear segmented ITS,2019-2025,84,month-of-year FE,OLS Newey-West HAC lag 3,PostJuly2024,-1.091,29.611,-59.129,56.947,descriptive level change in monthly recorded project starts
+Linear segmented ITS,2019-2025,84,month-of-year FE,OLS Newey-West HAC lag 3,TimeAfterJuly2024,5.977,2.686,0.713,11.241,descriptive post-transition slope change per month
+Poisson QMLE segmented ITS,2019-2025,84,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 12.04,PostJuly2024,0.091,0.359,-0.614,0.795,"approximate multiplicative level change in recorded monthly starts: 9.5% [-45.9%, 121.6%]"
+Poisson QMLE segmented ITS,2019-2025,84,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 12.04,TimeAfterJuly2024,0.051,0.032,-0.010,0.113,"approximate monthly multiplicative slope change: 5.3% [-1.0%, 12.0%]"
+Linear segmented ITS,2021-2025,60,month-of-year FE,OLS Newey-West HAC lag 3,PostJuly2024,0.918,27.216,-52.426,54.262,descriptive level change in monthly recorded project starts
+Linear segmented ITS,2021-2025,60,month-of-year FE,OLS Newey-West HAC lag 3,TimeAfterJuly2024,5.900,2.698,0.611,11.188,descriptive post-transition slope change per month
+Poisson QMLE segmented ITS,2021-2025,60,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 15.82,PostJuly2024,0.133,0.326,-0.506,0.771,"approximate multiplicative level change in recorded monthly starts: 14.2% [-39.7%, 116.2%]"
+Poisson QMLE segmented ITS,2021-2025,60,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 15.82,TimeAfterJuly2024,0.050,0.032,-0.012,0.112,"approximate monthly multiplicative slope change: 5.1% [-1.2%, 11.9%]"
+Linear segmented ITS,2022-2025,48,month-of-year FE,OLS Newey-West HAC lag 3,PostJuly2024,6.399,26.947,-46.418,59.215,descriptive level change in monthly recorded project starts
+Linear segmented ITS,2022-2025,48,month-of-year FE,OLS Newey-West HAC lag 3,TimeAfterJuly2024,6.394,2.812,0.883,11.904,descriptive post-transition slope change per month
+Poisson QMLE segmented ITS,2022-2025,48,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 18.09,PostJuly2024,0.232,0.320,-0.395,0.860,"approximate multiplicative level change in recorded monthly starts: 26.2% [-32.6%, 136.3%]"
+Poisson QMLE segmented ITS,2022-2025,48,month-of-year FE,Poisson QMLE Newey-West HAC lag 3; Pearson dispersion 18.09,TimeAfterJuly2024,0.058,0.033,-0.007,0.122,"approximate monthly multiplicative slope change: 5.9% [-0.7%, 13.0%]"
