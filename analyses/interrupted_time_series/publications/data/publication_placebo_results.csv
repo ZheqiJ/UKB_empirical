@@ -1,0 +1,7 @@
+model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Pre-transition placebo July 2021,2019-06_to_2021,fractional_publications_per_100_post_start_incumbents,66,,,PostJuly2024,-0.0579,0.2164,0.7890,-0.4821,0.3662,contextual diagnostic using only pre-July-2024 observations
+Pre-transition placebo July 2021,2019-06_to_2021,fractional_publications_per_100_post_start_incumbents,66,,,TimeAfterJuly2024,-0.0138,0.0129,0.2863,-0.0391,0.0116,contextual diagnostic using only pre-July-2024 observations
+Pre-transition placebo July 2022,2019-06_to_2022,fractional_publications_per_100_post_start_incumbents,66,,,PostJuly2024,0.2762,0.1399,0.0484,0.0019,0.5504,contextual diagnostic using only pre-July-2024 observations
+Pre-transition placebo July 2022,2019-06_to_2022,fractional_publications_per_100_post_start_incumbents,66,,,TimeAfterJuly2024,-0.0246,0.0108,0.0220,-0.0457,-0.0035,contextual diagnostic using only pre-July-2024 observations
+Pre-transition placebo July 2023,2019-06_to_2023,fractional_publications_per_100_post_start_incumbents,66,,,PostJuly2024,-0.3500,0.1848,0.0583,-0.7122,0.0123,contextual diagnostic using only pre-July-2024 observations
+Pre-transition placebo July 2023,2019-06_to_2023,fractional_publications_per_100_post_start_incumbents,66,,,TimeAfterJuly2024,0.0065,0.0257,0.8002,-0.0439,0.0569,contextual diagnostic using only pre-July-2024 observations

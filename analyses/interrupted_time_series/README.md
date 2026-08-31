@@ -13,6 +13,13 @@ For the completed project-entry stylized fact, start here:
 3. `project_entry/figures/project_entry_figure1_three_panel.svg`
 4. `project_entry/data/project_entry_its_results_table.csv`
 
+For the publication-output stylized fact, start here:
+
+1. `publications/reports/publication_reading_guide.md`
+2. `publications/reports/publication_measurement_note.md`
+3. `publications/reports/publication_its_results.md`
+4. `publications/figures/publication_figure_main_three_panel.svg`
+
 ## Folder Map
 
 - `shared/`: common ITS design, institutional timeline material, and
@@ -20,7 +27,7 @@ For the completed project-entry stylized fact, start here:
 - `project_entry/`: completed project-entry stylized fact using recorded public
   UKB project Start dates.
 - `publications/`: incumbent publication trajectories and publication-lag
-  diagnostics for later ITS work.
+  diagnostics, now organized as a reproducible publication-output ITS module.
 - `comparative_exposure/`: C03/C05/C06 descriptive comparison-group and
   exposure-proxy diagnostics.
 - `returned_data/`: returned-dataset feasibility material for a possible future
@@ -34,7 +41,8 @@ descriptive trajectories anchored to externally documented institutional dates.
 ```bash
 python3 analyses/interrupted_time_series/shared/build_its_feasibility.py
 python3 analyses/interrupted_time_series/project_entry/scripts/project_entry_its_analysis.py
+python3 analyses/interrupted_time_series/publications/scripts/publication_its_analysis.py
 ```
 
 `make its` runs the shared ITS feasibility builder. `make test` runs the
-repository tests and the project-entry module tests.
+repository tests plus the project-entry and publication module tests.

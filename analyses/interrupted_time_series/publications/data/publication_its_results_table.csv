@@ -1,0 +1,15 @@
+model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Linear segmented ITS HAC(3),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1969,0.2155,-0.6299,0.1421,descriptive immediate July 2024 level change
+Linear segmented ITS HAC(3),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0169,0.0000,0.0719,0.1383,descriptive post-July 2024 monthly slope change
+Linear segmented ITS HAC(3),2020-2025,fractional_publications_per_100_post_start_incumbents,72,54,18,PostJuly2024,-0.3106,0.1939,0.1091,-0.6906,0.0694,descriptive immediate July 2024 level change
+Linear segmented ITS HAC(3),2020-2025,fractional_publications_per_100_post_start_incumbents,72,54,18,TimeAfterJuly2024,0.1048,0.0145,0.0000,0.0763,0.1333,descriptive post-July 2024 monthly slope change
+Linear segmented ITS HAC(3),2021-2025,fractional_publications_per_100_post_start_incumbents,60,42,18,PostJuly2024,-0.1263,0.1801,0.4833,-0.4793,0.2267,descriptive immediate July 2024 level change
+Linear segmented ITS HAC(3),2021-2025,fractional_publications_per_100_post_start_incumbents,60,42,18,TimeAfterJuly2024,0.1155,0.0156,0.0000,0.0848,0.1461,descriptive post-July 2024 monthly slope change
+Linear segmented ITS HAC(3),2022-07-2025,fractional_publications_per_100_post_start_incumbents,42,24,18,PostJuly2024,-0.1379,0.2031,0.4970,-0.5360,0.2601,descriptive immediate July 2024 level change
+Linear segmented ITS HAC(3),2022-07-2025,fractional_publications_per_100_post_start_incumbents,42,24,18,TimeAfterJuly2024,0.1261,0.0142,0.0000,0.0982,0.1540,descriptive post-July 2024 monthly slope change
+Measurement sensitivity HAC(3),2019-2025,any_publication_rate_percent,84,66,18,PostJuly2024,-0.1439,0.1515,0.3421,-0.4408,0.1530,secondary or measurement-sensitivity outcome
+Measurement sensitivity HAC(3),2019-2025,any_publication_rate_percent,84,66,18,TimeAfterJuly2024,0.0885,0.0130,0.0000,0.0631,0.1139,secondary or measurement-sensitivity outcome
+Measurement sensitivity HAC(3),2019-2025,app_links_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.1641,0.2188,0.4533,-0.5930,0.2648,secondary or measurement-sensitivity outcome
+Measurement sensitivity HAC(3),2019-2025,app_links_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1033,0.0180,0.0000,0.0681,0.1385,secondary or measurement-sensitivity outcome
+Measurement sensitivity HAC(3),2019-2025,unique_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1969,0.2155,-0.6299,0.1421,secondary or measurement-sensitivity outcome
+Measurement sensitivity HAC(3),2019-2025,unique_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0169,0.0000,0.0719,0.1383,secondary or measurement-sensitivity outcome

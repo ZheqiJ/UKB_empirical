@@ -1,0 +1,13 @@
+diagnostic,lag,acf,pacf,durbin_watson_primary_model,ljung_box_q,ljung_box_p_value,interpretation
+residual_acf_pacf,1,0.1027,0.1030,1.7624,0.9188,0.3400,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,2,0.0249,0.0197,1.7624,0.9734,0.6205,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,3,0.0559,0.0532,1.7624,1.2524,0.7441,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,4,-0.0701,-0.0903,1.7624,1.6962,0.7938,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,5,-0.0726,-0.0620,1.7624,2.1784,0.8255,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,6,0.0160,0.0338,1.7624,2.2020,0.9003,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,7,0.0095,0.0184,1.7624,2.2104,0.9466,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,8,0.0408,0.0467,1.7624,2.3689,0.9667,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,9,0.1567,0.1541,1.7624,4.7329,0.8577,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,10,-0.1221,-0.2161,1.7624,6.1877,0.8003,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,11,-0.1054,-0.1034,1.7624,7.2878,0.7764,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"
+residual_acf_pacf,12,-0.1854,-0.2082,1.7624,10.7364,0.5523,"serial-correlation diagnostic after trend, July terms, and month-of-year fixed effects"

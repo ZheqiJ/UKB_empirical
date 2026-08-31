@@ -1,0 +1,3 @@
+model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Fixed cohort HAC(3),2022-07-2025,fractional_publications_per_100_fixed_cohort,42,24,18,PostJuly2024,-0.4015,0.1858,0.0307,-0.7656,-0.0374,membership fixed to projects started before 2022-07-01
+Fixed cohort HAC(3),2022-07-2025,fractional_publications_per_100_fixed_cohort,42,24,18,TimeAfterJuly2024,0.0274,0.0141,0.0516,-0.0002,0.0550,membership fixed to projects started before 2022-07-01
