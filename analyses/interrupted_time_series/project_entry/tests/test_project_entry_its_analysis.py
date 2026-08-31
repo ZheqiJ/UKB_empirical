@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "analyses" / "interrupted_time_series" / "scripts" / "project_entry_its_analysis.py"
+ROOT = Path(__file__).resolve().parents[4]
+SCRIPT = ROOT / "analyses" / "interrupted_time_series" / "project_entry" / "scripts" / "project_entry_its_analysis.py"
 
 
 def load_module():

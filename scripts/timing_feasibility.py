@@ -190,8 +190,18 @@ def output_paths(output_dir: Path) -> TimingPaths:
         quarterly_counts=processed / "timing_quarterly_project_starts_2023_2025.csv",
         window_counts=processed / "timing_policy_window_counts.csv",
         summary_json=processed / "timing_feasibility_summary.json",
-        report=output_dir / "reports" / "timing_feasibility.md",
-        figure=output_dir / "figures" / "timing_project_starts_monthly_2023_2025.svg",
+        report=output_dir
+        / "analyses"
+        / "interrupted_time_series"
+        / "project_entry"
+        / "reports"
+        / "timing_feasibility.md",
+        figure=output_dir
+        / "analyses"
+        / "interrupted_time_series"
+        / "project_entry"
+        / "figures"
+        / "timing_project_starts_monthly_2023_2025.svg",
     )
 
 

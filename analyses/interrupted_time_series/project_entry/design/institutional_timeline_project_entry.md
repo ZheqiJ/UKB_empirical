@@ -94,7 +94,7 @@ Use `recorded UK Biobank project starts`, `publicly recorded project starts`, or
 | July-September 2024 | Observed trough in recorded starts. Fact: repository data show July = 3, August = 0, September = 1. Interpretation: overlaps the broader documented transition but is not a documented project-entry pause. | Project-start data | Local generated data | Outcome series only | Recorded starts | Descriptive anomaly | Exploratory only | LOW | NOT_SUITABLE_FOR_ITS |
 | October 2024 | Observed rebound in recorded starts. Fact: repository data show October = 208. Interpretation: not documented as official restart or batch processing in reviewed sources. | Project-start data | Local generated data | Outcome series only | Recorded starts | Descriptive anomaly | Exploratory only | LOW | NOT_SUITABLE_FOR_ITS |
 
-Machine-readable version: `analyses/interrupted_time_series/data/project_entry_institutional_timeline.csv`.
+Machine-readable version: `analyses/interrupted_time_series/project_entry/data/project_entry_institutional_timeline.csv`.
 
 ## Observed-Data Labels
 

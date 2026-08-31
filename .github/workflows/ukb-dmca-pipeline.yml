@@ -116,7 +116,7 @@ jobs:
           echo "WAYBACK_LIMIT=${WAYBACK_LIMIT}"
 
       - name: Run tests
-        run: python3 -m unittest discover -s tests
+        run: make test
 
       - name: Prepare Stage 2 public metadata inputs
         if: env.RUN_SCOPE == 'stage2' || env.RUN_SCOPE == 'stage2_5' || env.RUN_SCOPE == 'all'
@@ -176,7 +176,7 @@ jobs:
 
       - name: Build interrupted time-series feasibility package
         if: env.RUN_SCOPE == 'interrupted_time_series'
-        run: python3 analyses/interrupted_time_series/scripts/build_its_feasibility.py
+        run: python3 analyses/interrupted_time_series/shared/build_its_feasibility.py
 
       - name: Build Stage 4/5 fast design and regression outputs
         if: env.RUN_SCOPE == 'fast_design_regression'

@@ -101,27 +101,27 @@ Start with raw project-entry plots and a compact segmented count ITS. Then show 
 
 ## 16. Files/Figures/Tables Created
 
-- `analyses/interrupted_time_series/data/its_project_starts_monthly.csv`
-- `analyses/interrupted_time_series/data/its_project_starts_quarterly.csv`
-- `analyses/interrupted_time_series/data/its_incumbent_publications_monthly.csv`
-- `analyses/interrupted_time_series/data/its_incumbent_publications_quarterly.csv`
-- `analyses/interrupted_time_series/data/its_comparative_quarterly.csv`
-- `analyses/interrupted_time_series/data/its_group_composition.csv`
-- `analyses/interrupted_time_series/data/its_modality_project_counts.csv`
-- `analyses/interrupted_time_series/data/its_modality_overlap.csv`
-- `analyses/interrupted_time_series/data/its_age_band_quarterly.csv`
-- `analyses/interrupted_time_series/data/its_publication_lag.csv`
-- `analyses/interrupted_time_series/data/its_publication_measure_sensitivity.csv`
-- `analyses/interrupted_time_series/data/its_recent_publication_completeness.csv`
-- `analyses/interrupted_time_series/data/its_returned_data_feasibility.csv`
-- `analyses/interrupted_time_series/data/its_top_institutions.csv`
-- `analyses/interrupted_time_series/data/its_institutional_dates.csv`
-- `analyses/interrupted_time_series/data/its_data_inventory.csv`
-- `analyses/interrupted_time_series/data/its_reconciliation_checks.csv`
-- `analyses/interrupted_time_series/figures/its_project_starts_monthly.svg`
-- `analyses/interrupted_time_series/figures/its_incumbent_publications_quarterly.svg`
-- `analyses/interrupted_time_series/figures/its_c05_group_quarterly_any_publication.svg`
-- `analyses/interrupted_time_series/reports/its_data_construction_audit.md`
+- `analyses/interrupted_time_series/project_entry/data/its_project_starts_monthly.csv`
+- `analyses/interrupted_time_series/project_entry/data/its_project_starts_quarterly.csv`
+- `analyses/interrupted_time_series/publications/data/its_incumbent_publications_monthly.csv`
+- `analyses/interrupted_time_series/publications/data/its_incumbent_publications_quarterly.csv`
+- `analyses/interrupted_time_series/comparative_exposure/data/its_comparative_quarterly.csv`
+- `analyses/interrupted_time_series/comparative_exposure/data/its_group_composition.csv`
+- `analyses/interrupted_time_series/comparative_exposure/data/its_modality_project_counts.csv`
+- `analyses/interrupted_time_series/comparative_exposure/data/its_modality_overlap.csv`
+- `analyses/interrupted_time_series/publications/data/its_age_band_quarterly.csv`
+- `analyses/interrupted_time_series/publications/data/its_publication_lag.csv`
+- `analyses/interrupted_time_series/publications/data/its_publication_measure_sensitivity.csv`
+- `analyses/interrupted_time_series/publications/data/its_recent_publication_completeness.csv`
+- `analyses/interrupted_time_series/returned_data/data/its_returned_data_feasibility.csv`
+- `analyses/interrupted_time_series/project_entry/data/its_top_institutions.csv`
+- `analyses/interrupted_time_series/shared/institutional_timeline/its_institutional_dates.csv`
+- `analyses/interrupted_time_series/shared/data_audit/its_data_inventory.csv`
+- `analyses/interrupted_time_series/shared/data_audit/its_reconciliation_checks.csv`
+- `analyses/interrupted_time_series/project_entry/figures/its_project_starts_monthly.svg`
+- `analyses/interrupted_time_series/publications/figures/its_incumbent_publications_quarterly.svg`
+- `analyses/interrupted_time_series/comparative_exposure/figures/its_c05_group_quarterly_any_publication.svg`
+- `analyses/interrupted_time_series/shared/data_audit/its_data_construction_audit.md`
 
 ## 17. Questions That Require Supervisor Approval
 
@@ -134,8 +134,8 @@ Start with raw project-entry plots and a compact segmented count ITS. Then show 
 
 | Priority | Stylized fact | Data | Figure | Descriptive model | Main limitation | Recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Administrative-looking project-entry pause and restart | Matched starts | figures/its_project_starts_monthly.svg | Monthly segmented count ITS | Cannot attribute to RAP rather than administrative timing | Show first |
-| 2 | Aggregate incumbent publication trajectory | Schema 19/24 + starts | figures/its_incumbent_publications_quarterly.svg | Quarterly ITS with delayed windows | Publication lag and no active status | Show second |
-| 3 | C05 legacy-proxy vs RAP-intensive differential trajectory | Archived panel + Stage 3 proxies | figures/its_c05_group_quarterly_any_publication.svg | Comparative ITS | Proxy groups are compositionally different | Use after composition table |
+| 1 | Administrative-looking project-entry pause and restart | Matched starts | project_entry/figures/its_project_starts_monthly.svg | Monthly segmented count ITS | Cannot attribute to RAP rather than administrative timing | Show first |
+| 2 | Aggregate incumbent publication trajectory | Schema 19/24 + starts | publications/figures/its_incumbent_publications_quarterly.svg | Quarterly ITS with delayed windows | Publication lag and no active status | Show second |
+| 3 | C05 legacy-proxy vs RAP-intensive differential trajectory | Archived panel + Stage 3 proxies | comparative_exposure/figures/its_c05_group_quarterly_any_publication.svg | Comparative ITS | Proxy groups are compositionally different | Use after composition table |
 | 4 | Recent vs mature project trajectories | Starts + archived panel | To add after review | Age-band comparative ITS | Age is not activity status | Medium priority diagnostic |
 | 5 | Returned data timing | Schema 4 | None | None | No timing field in local extract | Mark infeasible |
