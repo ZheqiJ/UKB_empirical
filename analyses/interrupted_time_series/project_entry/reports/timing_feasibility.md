@@ -89,4 +89,4 @@ The policy date itself is counted with the after-policy side.
 - `data/intermediate/timing_feasibility/timing_quarterly_project_starts_2023_2025.csv`
 - `data/intermediate/timing_feasibility/timing_policy_window_counts.csv`
 - `data/intermediate/timing_feasibility/timing_feasibility_summary.json`
-- `figures/timing_project_starts_monthly_2023_2025.svg`
+- `../figures/timing_project_starts_monthly_2023_2025.svg`

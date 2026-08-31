@@ -565,7 +565,12 @@ def output_paths(output_dir: Path) -> ExpansionPaths:
         previous_class_counts=processed / "stage3_control_expansion_new_by_previous_classification.csv",
         examples=processed / "stage3_control_expansion_examples.csv",
         summary_json=processed / "stage3_control_expansion_summary.json",
-        report=output_dir / "reports" / "stage3_control_expansion.md",
+        report=output_dir
+        / "analyses"
+        / "interrupted_time_series"
+        / "comparative_exposure"
+        / "reports"
+        / "stage3_control_expansion.md",
     )
 
 

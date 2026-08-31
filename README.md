@@ -9,17 +9,35 @@ The repository is audit-first: source snapshots, intermediate construction
 tables, analysis outputs, reports, and figures are kept in git so remote runs can
 be reproduced without relying on local memory.
 
+## Start Here
+
+If you only want the current paper-ready result, read the project-entry package
+in this order:
+
+1. `analyses/interrupted_time_series/project_entry/reports/project_entry_reading_guide.md`
+2. `analyses/interrupted_time_series/project_entry/reports/project_entry_its_results.md`
+3. `analyses/interrupted_time_series/project_entry/figures/project_entry_figure1_three_panel.svg`
+4. `analyses/interrupted_time_series/project_entry/data/project_entry_its_results_table.csv`
+
+The short version: recorded UK Biobank project starts show a sharp
+July-September 2024 interruption around the July 2024 RAP-based access
+transition, followed by recovery in November 2024 and a 2025 trajectory above
+the fitted pre-transition path. This is descriptive; it should not be written as
+"RAP reduced applications."
+
 ## Current Empirical Status
 
 The active package is **interrupted time-series and stylized facts**:
 
 - `analyses/interrupted_time_series/`: active descriptive feasibility package.
-- `analyses/interrupted_time_series/scripts/build_its_feasibility.py`:
+- `analyses/interrupted_time_series/project_entry/reports/project_entry_reading_guide.md`:
+  read-first guide for the current project-entry results.
+- `analyses/interrupted_time_series/project_entry/reports/project_entry_its_results.md`:
+  paper-ready project-entry results and interpretation.
+- `analyses/interrupted_time_series/shared/build_its_feasibility.py`:
   reproducible builder for the ITS data, reports, and figures.
-- `analyses/interrupted_time_series/reports/preliminary_feasibility_report.md`:
-  current supervisor-facing feasibility report.
-- `analyses/interrupted_time_series/design/`: proposed specifications and
-  candidate stylized facts.
+- `analyses/interrupted_time_series/shared/`: common design, institutional
+  chronology, and data-audit material.
 
 The old quarterly DID work is preserved as an archive:
 
@@ -36,8 +54,8 @@ has been set aside.
 
 ## Repository Layout
 
-- `scripts/`: shared pipeline scripts plus compatibility wrappers for archived
-  DID scripts.
+- `scripts/`: repository-wide public-metadata pipeline scripts plus
+  compatibility wrappers for archived DID scripts.
 - `tests/`: unit tests for the pipeline components.
 - `data/raw/`: public input snapshots used by the remote workflow.
 - `data/intermediate/`: shared construction, audit, timing, and classification
@@ -81,7 +99,7 @@ application, PI, institution, or repository owner acted unlawfully.
 
 Proceed sequentially:
 
-1. Start with the project-entry interruption/restart plot and monthly segmented
+1. Start with the project-entry interruption/rebound plot and monthly segmented
    count ITS.
 2. Add aggregate incumbent publication trajectories with delayed post-transition
    windows.

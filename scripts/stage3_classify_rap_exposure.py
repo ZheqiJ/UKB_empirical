@@ -512,7 +512,12 @@ def output_paths(output_dir: Path) -> Stage3Paths:
         examples=processed / "stage3_rap_exposure_examples.csv",
         access_matrix=processed / "stage3_modality_access_matrix.csv",
         summary_json=processed / "stage3_rap_exposure_summary.json",
-        report=output_dir / "reports" / "stage3_rap_exposure_classification.md",
+        report=output_dir
+        / "analyses"
+        / "interrupted_time_series"
+        / "comparative_exposure"
+        / "reports"
+        / "stage3_rap_exposure_classification.md",
     )
 
 

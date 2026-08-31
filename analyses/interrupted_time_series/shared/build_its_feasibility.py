@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PACKAGE = Path(__file__).resolve().parents[1]
+ITS_ROOT = Path(__file__).resolve().parents[1]
 DID_ARCHIVE = ROOT / "analyses" / "did_archive"
 
 POLICY_DATE = date(2024, 7, 5)
@@ -46,10 +46,11 @@ SCHEMA19 = ROOT / "data" / "raw" / "ukb_schema19_publications.tsv"
 SCHEMA24 = ROOT / "data" / "raw" / "ukb_schema24_publication_applications.tsv"
 SCHEMA4 = ROOT / "data" / "raw" / "ukb_schema4_returned_datasets.tsv"
 
-DATA_DIR = PACKAGE / "data"
-FIGURE_DIR = PACKAGE / "figures"
-DESIGN_DIR = PACKAGE / "design"
-REPORT_DIR = PACKAGE / "reports"
+SHARED_DIR = ITS_ROOT / "shared"
+PROJECT_ENTRY_DIR = ITS_ROOT / "project_entry"
+PUBLICATIONS_DIR = ITS_ROOT / "publications"
+COMPARATIVE_DIR = ITS_ROOT / "comparative_exposure"
+RETURNED_DATA_DIR = ITS_ROOT / "returned_data"
 
 CONTROL_DEFS = ["CONTROL_C03", "CONTROL_C05", "CONTROL_C06"]
 
@@ -131,32 +132,32 @@ class BuildOutputs:
 
 def output_paths() -> BuildOutputs:
     return BuildOutputs(
-        project_starts_monthly=DATA_DIR / "its_project_starts_monthly.csv",
-        project_starts_quarterly=DATA_DIR / "its_project_starts_quarterly.csv",
-        incumbent_publications_monthly=DATA_DIR / "its_incumbent_publications_monthly.csv",
-        incumbent_publications_quarterly=DATA_DIR / "its_incumbent_publications_quarterly.csv",
-        comparative_quarterly=DATA_DIR / "its_comparative_quarterly.csv",
-        group_composition=DATA_DIR / "its_group_composition.csv",
-        modality_counts=DATA_DIR / "its_modality_project_counts.csv",
-        modality_overlap=DATA_DIR / "its_modality_overlap.csv",
-        age_band_quarterly=DATA_DIR / "its_age_band_quarterly.csv",
-        publication_lag=DATA_DIR / "its_publication_lag.csv",
-        publication_measure_sensitivity=DATA_DIR / "its_publication_measure_sensitivity.csv",
-        recent_publication_completeness=DATA_DIR / "its_recent_publication_completeness.csv",
-        returned_data_feasibility=DATA_DIR / "its_returned_data_feasibility.csv",
-        institution_counts=DATA_DIR / "its_top_institutions.csv",
-        institutional_dates=DATA_DIR / "its_institutional_dates.csv",
-        data_inventory=DATA_DIR / "its_data_inventory.csv",
-        reconciliation_checks=DATA_DIR / "its_reconciliation_checks.csv",
-        summary_json=DATA_DIR / "its_feasibility_summary.json",
-        readme=PACKAGE / "README.md",
-        stylized_inventory=DESIGN_DIR / "stylized_facts_inventory.md",
-        design_proposal=DESIGN_DIR / "its_design_proposal.md",
-        feasibility_report=REPORT_DIR / "preliminary_feasibility_report.md",
-        data_construction_audit=REPORT_DIR / "its_data_construction_audit.md",
-        starts_figure=FIGURE_DIR / "its_project_starts_monthly.svg",
-        incumbent_figure=FIGURE_DIR / "its_incumbent_publications_quarterly.svg",
-        comparative_figure=FIGURE_DIR / "its_c05_group_quarterly_any_publication.svg",
+        project_starts_monthly=PROJECT_ENTRY_DIR / "data" / "its_project_starts_monthly.csv",
+        project_starts_quarterly=PROJECT_ENTRY_DIR / "data" / "its_project_starts_quarterly.csv",
+        incumbent_publications_monthly=PUBLICATIONS_DIR / "data" / "its_incumbent_publications_monthly.csv",
+        incumbent_publications_quarterly=PUBLICATIONS_DIR / "data" / "its_incumbent_publications_quarterly.csv",
+        comparative_quarterly=COMPARATIVE_DIR / "data" / "its_comparative_quarterly.csv",
+        group_composition=COMPARATIVE_DIR / "data" / "its_group_composition.csv",
+        modality_counts=COMPARATIVE_DIR / "data" / "its_modality_project_counts.csv",
+        modality_overlap=COMPARATIVE_DIR / "data" / "its_modality_overlap.csv",
+        age_band_quarterly=PUBLICATIONS_DIR / "data" / "its_age_band_quarterly.csv",
+        publication_lag=PUBLICATIONS_DIR / "data" / "its_publication_lag.csv",
+        publication_measure_sensitivity=PUBLICATIONS_DIR / "data" / "its_publication_measure_sensitivity.csv",
+        recent_publication_completeness=PUBLICATIONS_DIR / "data" / "its_recent_publication_completeness.csv",
+        returned_data_feasibility=RETURNED_DATA_DIR / "data" / "its_returned_data_feasibility.csv",
+        institution_counts=PROJECT_ENTRY_DIR / "data" / "its_top_institutions.csv",
+        institutional_dates=SHARED_DIR / "institutional_timeline" / "its_institutional_dates.csv",
+        data_inventory=SHARED_DIR / "data_audit" / "its_data_inventory.csv",
+        reconciliation_checks=SHARED_DIR / "data_audit" / "its_reconciliation_checks.csv",
+        summary_json=SHARED_DIR / "data_audit" / "its_feasibility_summary.json",
+        readme=ITS_ROOT / "README.md",
+        stylized_inventory=SHARED_DIR / "design" / "stylized_facts_inventory.md",
+        design_proposal=SHARED_DIR / "design" / "its_design_proposal.md",
+        feasibility_report=SHARED_DIR / "data_audit" / "preliminary_feasibility_report.md",
+        data_construction_audit=SHARED_DIR / "data_audit" / "its_data_construction_audit.md",
+        starts_figure=PROJECT_ENTRY_DIR / "figures" / "its_project_starts_monthly.svg",
+        incumbent_figure=PUBLICATIONS_DIR / "figures" / "its_incumbent_publications_quarterly.svg",
+        comparative_figure=COMPARATIVE_DIR / "figures" / "its_c05_group_quarterly_any_publication.svg",
     )
 
 
@@ -1458,27 +1459,46 @@ No official full RAP shutdown was verified. The neutral variable name is `april_
 
 
 def build_readme(paths: BuildOutputs) -> str:
-    return f"""# Interrupted Time-Series And Stylized-Facts Analysis
+    return f"""# Interrupted Time-Series Analysis
 
-The objective is descriptive rather than causal: to document temporal and cross-project patterns surrounding the July 2024 UK Biobank RAP transition and use robust stylized facts to motivate and discipline the analytical model.
+This is the active descriptive empirical strategy for the UK Biobank RAP
+transition work. The folder is organized by outcome/module rather than keeping
+all ITS data, figures, and reports in one flat directory.
 
-## Contents
+## Read First
 
-- `design/stylized_facts_inventory.md`: broad inventory of candidate facts, data coverage, limitations, and priority.
-- `design/its_design_proposal.md`: technical proposal for aggregate, comparative, and event-time descriptive ITS designs.
-- `reports/preliminary_feasibility_report.md`: supervisor-facing feasibility report.
-- `reports/its_data_construction_audit.md`: pre-regression audit for incumbent samples, modalities, publication multiplicity, and right-edge completeness.
-- `data/`: generated feasibility tables from shared public UKB metadata and archived DID panel outputs.
-- `figures/`: preliminary raw figures used to assess candidate stylized facts.
-- `scripts/build_its_feasibility.py`: reproducible builder for this package.
+For the completed project-entry stylized fact, start here:
+
+1. `project_entry/reports/project_entry_reading_guide.md`
+2. `project_entry/reports/project_entry_its_results.md`
+3. `project_entry/figures/project_entry_figure1_three_panel.svg`
+4. `project_entry/data/project_entry_its_results_table.csv`
+
+## Folder Map
+
+- `shared/`: common ITS design, institutional timeline material, and
+  cross-module data-audit outputs.
+- `project_entry/`: completed project-entry stylized fact using recorded public
+  UKB project Start dates.
+- `publications/`: incumbent publication trajectories and publication-lag
+  diagnostics for later ITS work.
+- `comparative_exposure/`: C03/C05/C06 descriptive comparison-group and
+  exposure-proxy diagnostics.
+- `returned_data/`: returned-dataset feasibility material for a possible future
+  outcome.
+
+None of these modules are automatically causal designs. They should be read as
+descriptive trajectories anchored to externally documented institutional dates.
 
 ## Run
 
 ```bash
-python3 analyses/interrupted_time_series/scripts/build_its_feasibility.py
+python3 analyses/interrupted_time_series/shared/build_its_feasibility.py
+python3 analyses/interrupted_time_series/project_entry/scripts/project_entry_its_analysis.py
 ```
 
-The package does not use participant-level UK Biobank data and does not use DMCA outcomes.
+`make its` runs the shared ITS feasibility builder. `make test` runs the
+repository tests and the project-entry module tests.
 """
 
 
@@ -1809,7 +1829,7 @@ def build_feasibility_report(summary: dict[str, object], paths: BuildOutputs) ->
             "Priority": "1",
             "Stylized fact": "Administrative-looking project-entry pause and restart",
             "Data": "Matched starts",
-            "Figure": str(paths.starts_figure.relative_to(PACKAGE)),
+            "Figure": str(paths.starts_figure.relative_to(ITS_ROOT)),
             "Descriptive model": "Monthly segmented count ITS",
             "Main limitation": "Cannot attribute to RAP rather than administrative timing",
             "Recommendation": "Show first",
@@ -1818,7 +1838,7 @@ def build_feasibility_report(summary: dict[str, object], paths: BuildOutputs) ->
             "Priority": "2",
             "Stylized fact": "Aggregate incumbent publication trajectory",
             "Data": "Schema 19/24 + starts",
-            "Figure": str(paths.incumbent_figure.relative_to(PACKAGE)),
+            "Figure": str(paths.incumbent_figure.relative_to(ITS_ROOT)),
             "Descriptive model": "Quarterly ITS with delayed windows",
             "Main limitation": "Publication lag and no active status",
             "Recommendation": "Show second",
@@ -1827,7 +1847,7 @@ def build_feasibility_report(summary: dict[str, object], paths: BuildOutputs) ->
             "Priority": "3",
             "Stylized fact": "C05 legacy-proxy vs RAP-intensive differential trajectory",
             "Data": "Archived panel + Stage 3 proxies",
-            "Figure": str(paths.comparative_figure.relative_to(PACKAGE)),
+            "Figure": str(paths.comparative_figure.relative_to(ITS_ROOT)),
             "Descriptive model": "Comparative ITS",
             "Main limitation": "Proxy groups are compositionally different",
             "Recommendation": "Use after composition table",

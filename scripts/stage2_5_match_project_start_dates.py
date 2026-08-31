@@ -44,7 +44,14 @@ DETAIL_VALIDATION_PLAN = START_DATE_DIR / "stage2_5_detail_validation_plan.csv"
 DETAIL_VALIDATION_RESULTS = (
     START_DATE_DIR / "stage2_5_detail_validation_results.csv"
 )
-REPORT = ROOT / "reports" / "stage2_5_start_dates.md"
+REPORT = (
+    ROOT
+    / "analyses"
+    / "interrupted_time_series"
+    / "project_entry"
+    / "reports"
+    / "stage2_5_start_dates.md"
+)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:

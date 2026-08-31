@@ -12,7 +12,7 @@ institutional evidence
 -> segmented ITS
 ```
 
-This is a structured institutional chronology, not formal qualitative open/axial coding. The institutional periods below are derived only from the evidence in `analyses/interrupted_time_series/design/institutional_timeline_project_entry.md`.
+This is a structured institutional chronology, not formal qualitative open/axial coding. The institutional periods below are derived only from the evidence in `analyses/interrupted_time_series/project_entry/design/institutional_timeline_project_entry.md`.
 
 ## A. System-Evolution Periods
 
@@ -30,7 +30,7 @@ Do not force separate May-June, July-September, or October 2024 institutional pe
 
 Figure created:
 
-`analyses/interrupted_time_series/figures/project_entry_institutional_timeline_raw_starts.svg`
+`analyses/interrupted_time_series/project_entry/figures/project_entry_institutional_timeline_raw_starts.svg`
 
 The figure uses distinct conventions:
 
@@ -38,7 +38,7 @@ The figure uses distinct conventions:
 - Shaded region: externally supported transition/onboarding context from July 2024 through March 2025.
 - Red outlined point annotations: outcome-defined unusual months, with no independent institutional status.
 
-Descriptive table from `analyses/interrupted_time_series/data/its_project_starts_monthly.csv`:
+Descriptive table from `analyses/interrupted_time_series/project_entry/data/its_project_starts_monthly.csv`:
 
 | Institutional period | Months | Mean starts | Median | Min | Max |
 | --- | ---: | ---: | ---: | ---: | ---: |
