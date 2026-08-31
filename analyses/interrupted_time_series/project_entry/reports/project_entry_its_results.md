@@ -62,6 +62,59 @@ The coefficient table therefore tells a specific story: the immediate July level
 
 Poisson QMLE robustness gives an immediate level-shift rate ratio of 1.10 (p = 0.8003) and a monthly post-transition slope rate ratio of 1.05 (p = 0.1035). Because Pearson dispersion is high in the count model, the Poisson estimates are best read as robustness for the direction and broad magnitude, not as the only uncertainty calculation.
 
+### Stata-Style Output For Reporting
+
+The following block is a Stata-style presentation of the same generated estimates. It is designed for supervisor reporting and is also saved as `project_entry_stata_style_its_output.txt`.
+
+```text
+Project-entry segmented ITS, primary linear model
+Outcome: monthly recorded UK Biobank project starts
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: OLS with Newey-West HAC standard errors
+
+------------------------------------------------------------------------------
+ recorded_starts   | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+-------------------+----------------------------------------------------------
+PostJuly2024       |      -1.091     29.611   -0.04    0.971     -59.129      56.947
+TimeAfterJuly2024  |       5.977      2.686    2.23    0.026       0.713      11.241
+ Month FE          |         Yes
+------------------------------------------------------------------------------
+
+Project-entry segmented ITS, Poisson QMLE robustness
+Outcome: monthly recorded UK Biobank project starts
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: Poisson QMLE with HAC standard errors; Pearson dispersion = 12.04
+
+----------------------------------------------------------------------------------------
+ recorded_starts   | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]       IRR
+-------------------+--------------------------------------------------------------------
+PostJuly2024       |       0.091      0.359    0.25    0.800      -0.614       0.795      1.10
+TimeAfterJuly2024  |       0.051      0.032    1.59    0.103      -0.010       0.113      1.05
+ Month FE          |         Yes
+----------------------------------------------------------------------------------------
+
+Alternative-window robustness, same breakpoint and seasonal controls
+------------------------------------------------------------------------------
+ Model      Window    Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+------------------------------------------------------------------------------
+Linear     2021-2025 PostJuly2024           0.918     27.216    0.973    -52.426     54.262
+Linear     2021-2025 TimeAfterJuly2024      5.900      2.698    0.029      0.611     11.188
+Poisson    2021-2025 PostJuly2024           0.133      0.326    0.684     -0.506      0.771
+Poisson    2021-2025 TimeAfterJuly2024      0.050      0.032    0.111     -0.012      0.112
+Linear     2022-2025 PostJuly2024           6.399     26.947    0.812    -46.418     59.215
+Linear     2022-2025 TimeAfterJuly2024      6.394      2.812    0.023      0.883     11.904
+Poisson    2022-2025 PostJuly2024           0.232      0.320    0.468     -0.395      0.860
+Poisson    2022-2025 TimeAfterJuly2024      0.058      0.033    0.079     -0.007      0.122
+------------------------------------------------------------------------------
+
+Notes:
+1. This is Stata-style formatting of the repository's generated Python ITS estimates, not a separate Stata execution log.
+2. P-values are two-sided large-sample values computed from the displayed coefficient and HAC standard error.
+3. For the Poisson QMLE block, IRR is exp(coefficient).
+```
+
 ## 8. Observed-Versus-Expected Path
 
 Using only pre-transition observations in the primary window, I fit a trend plus month-of-year seasonality model and forecast the fitted historical benchmark after July 2024. This is a descriptive benchmark, not a causal untreated potential outcome.
@@ -119,6 +172,7 @@ Candidate paper-ready statements:
 - `data/project_entry_institution_concentration.csv`
 - `data/project_entry_estimation_window_audit.csv`
 - `data/project_entry_its_results_table.csv`
+- `reports/project_entry_stata_style_its_output.txt`
 - `data/project_entry_observed_vs_expected.csv`
 - `data/project_entry_cumulative_gap.csv`
 - `data/project_entry_historical_rarity.csv`

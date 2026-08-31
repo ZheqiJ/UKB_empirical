@@ -30,6 +30,10 @@ Recorded UK Biobank project starts show a sharp July-September 2024 interruption
 
    Use this as the compact model table. The main rows are the 2019-2025 linear segmented ITS and Poisson QMLE rows. The table now includes p-values and detailed economic interpretations.
 
+5. `reports/project_entry_stata_style_its_output.txt`
+
+   Use this when you need a Stata-looking regression output block for a supervisor report. It contains the same generated estimates as the compact table, formatted with coefficients, standard errors, z-statistics, `P>|z|`, confidence intervals, and Poisson IRRs.
+
 ## Main Numbers
 
 Primary window: 2019-01 to 2025-12.
@@ -148,6 +152,10 @@ Three-panel project-entry figure for the paper.
 `data/project_entry_its_results_table.csv`
 
 Compact model table: primary linear ITS, alternative windows, and Poisson robustness.
+
+`reports/project_entry_stata_style_its_output.txt`
+
+Stata-style output for reporting: primary linear ITS, primary Poisson QMLE robustness, and alternative-window robustness in a monospaced regression-output format.
 
 ### Key Diagnostics
 

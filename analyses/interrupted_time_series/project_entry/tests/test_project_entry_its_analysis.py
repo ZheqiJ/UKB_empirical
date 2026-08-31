@@ -57,6 +57,19 @@ class ProjectEntryITSAnalysisTests(unittest.TestCase):
         self.assertIn("clearest economic magnitude for the interruption", report)
         self.assertIn("temporary interruption followed by higher-than-historical entry", report)
 
+    def test_stata_style_output_is_report_ready(self):
+        output_path = self.analysis.Outputs().stata_style_output
+        output = output_path.read_text()
+        self.assertIn("Project-entry segmented ITS, primary linear model", output)
+        self.assertIn("Number of obs = 84", output)
+        self.assertIn("Newey-West lag = 3", output)
+        self.assertIn("P>|z|", output)
+        self.assertIn("Poisson QMLE robustness", output)
+        self.assertIn("IRR", output)
+        report = self.analysis.Outputs().results_report.read_text()
+        self.assertIn("Stata-Style Output For Reporting", report)
+        self.assertIn("project_entry_stata_style_its_output.txt", report)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -34,6 +34,7 @@ TRANSITION_CONTEXT_END = date(2025, 3, 1)
 class Outputs:
     measurement_note: Path = REPORT_DIR / "project_entry_measurement_note.md"
     results_report: Path = REPORT_DIR / "project_entry_its_results.md"
+    stata_style_output: Path = REPORT_DIR / "project_entry_stata_style_its_output.txt"
     daily_2024: Path = DATA_DIR / "project_entry_daily_starts_2024.csv"
     institution_concentration: Path = DATA_DIR / "project_entry_institution_concentration.csv"
     window_audit: Path = DATA_DIR / "project_entry_estimation_window_audit.csv"
@@ -897,6 +898,97 @@ These diagnostics support use of the public start-date series as a recorded proj
     write_text(out.measurement_note, note)
 
 
+def stata_style_its_output(model_rows: list[dict[str, object]]) -> str:
+    def row(model: str, window: str, term: str) -> dict[str, object]:
+        return next(r for r in model_rows if r["model"] == model and r["window"] == window and r["term"] == term)
+
+    def z_stat(r: dict[str, object]) -> float:
+        return float(r["estimate"]) / float(r["std_error"])
+
+    def linear_line(label: str, r: dict[str, object]) -> str:
+        return (
+            f"{label:<18} |"
+            f"{float(r['estimate']):>12.3f}"
+            f"{float(r['std_error']):>11.3f}"
+            f"{z_stat(r):>8.2f}"
+            f"{float(r['p_value']):>9.3f}"
+            f"{float(r['ci_low']):>12.3f}"
+            f"{float(r['ci_high']):>12.3f}"
+        )
+
+    def poisson_line(label: str, r: dict[str, object]) -> str:
+        return (
+            f"{label:<18} |"
+            f"{float(r['estimate']):>12.3f}"
+            f"{float(r['std_error']):>11.3f}"
+            f"{z_stat(r):>8.2f}"
+            f"{float(r['p_value']):>9.3f}"
+            f"{float(r['ci_low']):>12.3f}"
+            f"{float(r['ci_high']):>12.3f}"
+            f"{math.exp(float(r['estimate'])):>10.2f}"
+        )
+
+    def robustness_line(model_label: str, window: str, term: str, r: dict[str, object]) -> str:
+        return (
+            f"{model_label:<10} {window:<9} {term:<19}"
+            f"{float(r['estimate']):>9.3f}"
+            f"{float(r['std_error']):>11.3f}"
+            f"{float(r['p_value']):>9.3f}"
+            f"{float(r['ci_low']):>11.3f}"
+            f"{float(r['ci_high']):>11.3f}"
+        )
+
+    lin_level = row("Linear segmented ITS", "2019-2025", "PostJuly2024")
+    lin_slope = row("Linear segmented ITS", "2019-2025", "TimeAfterJuly2024")
+    poi_level = row("Poisson QMLE segmented ITS", "2019-2025", "PostJuly2024")
+    poi_slope = row("Poisson QMLE segmented ITS", "2019-2025", "TimeAfterJuly2024")
+    robustness_rows = []
+    for window in ["2021-2025", "2022-2025"]:
+        for model_name, model_label in [("Linear segmented ITS", "Linear"), ("Poisson QMLE segmented ITS", "Poisson")]:
+            for term in ["PostJuly2024", "TimeAfterJuly2024"]:
+                robustness_rows.append(robustness_line(model_label, window, term, row(model_name, window, term)))
+
+    return f"""Project-entry segmented ITS, primary linear model
+Outcome: monthly recorded UK Biobank project starts
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: OLS with Newey-West HAC standard errors
+
+------------------------------------------------------------------------------
+ recorded_starts   | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+-------------------+----------------------------------------------------------
+{linear_line('PostJuly2024', lin_level)}
+{linear_line('TimeAfterJuly2024', lin_slope)}
+ Month FE          |         Yes
+------------------------------------------------------------------------------
+
+Project-entry segmented ITS, Poisson QMLE robustness
+Outcome: monthly recorded UK Biobank project starts
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: Poisson QMLE with HAC standard errors; Pearson dispersion = 12.04
+
+----------------------------------------------------------------------------------------
+ recorded_starts   | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]       IRR
+-------------------+--------------------------------------------------------------------
+{poisson_line('PostJuly2024', poi_level)}
+{poisson_line('TimeAfterJuly2024', poi_slope)}
+ Month FE          |         Yes
+----------------------------------------------------------------------------------------
+
+Alternative-window robustness, same breakpoint and seasonal controls
+------------------------------------------------------------------------------
+ Model      Window    Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+------------------------------------------------------------------------------
+{chr(10).join(robustness_rows)}
+------------------------------------------------------------------------------
+
+Notes:
+1. This is Stata-style formatting of the repository's generated Python ITS estimates, not a separate Stata execution log.
+2. P-values are two-sided large-sample values computed from the displayed coefficient and HAC standard error.
+3. For the Poisson QMLE block, IRR is exp(coefficient)."""
+
+
 def results_report(
     outputs: Outputs,
     window_rows: list[dict[str, object]],
@@ -918,6 +1010,8 @@ def results_report(
     rarity_3 = next(r for r in rarity_rows if r["diagnostic"] == "3-month Jul-Sep total")
     recovery = expected_metrics["recovery_month"] or "not recovered by 2025-12"
     category = "C. Temporary interruption followed by higher-than-historical entry" if expected_metrics["final_cumulative_gap"] > 0 and expected_metrics["minimum_cumulative_gap"] < 0 else "D. No robustly unusual transition pattern"
+    stata_output = stata_style_its_output(model_rows)
+    write_text(outputs.stata_style_output, stata_output)
     report = f"""# Project-Entry ITS Results
 
 ## 1. Outcome Definition And Measurement
@@ -982,6 +1076,14 @@ The coefficient table therefore tells a specific story: the immediate July level
 
 Poisson QMLE robustness gives an immediate level-shift rate ratio of {math.exp(float(plevel['estimate'])):.2f} (p = {plevel['p_value']}) and a monthly post-transition slope rate ratio of {math.exp(float(pslope['estimate'])):.2f} (p = {pslope['p_value']}). Because Pearson dispersion is high in the count model, the Poisson estimates are best read as robustness for the direction and broad magnitude, not as the only uncertainty calculation.
 
+### Stata-Style Output For Reporting
+
+The following block is a Stata-style presentation of the same generated estimates. It is designed for supervisor reporting and is also saved as `project_entry_stata_style_its_output.txt`.
+
+```text
+{stata_output}
+```
+
 ## 8. Observed-Versus-Expected Path
 
 Using only pre-transition observations in the primary window, I fit a trend plus month-of-year seasonality model and forecast the fitted historical benchmark after July 2024. This is a descriptive benchmark, not a causal untreated potential outcome.
@@ -1039,6 +1141,7 @@ Candidate paper-ready statements:
 - `data/project_entry_institution_concentration.csv`
 - `data/project_entry_estimation_window_audit.csv`
 - `data/project_entry_its_results_table.csv`
+- `reports/project_entry_stata_style_its_output.txt`
 - `data/project_entry_observed_vs_expected.csv`
 - `data/project_entry_cumulative_gap.csv`
 - `data/project_entry_historical_rarity.csv`
