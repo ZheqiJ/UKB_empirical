@@ -45,12 +45,16 @@ Y_t = beta_0
 
 Primary linear ITS with Newey-West HAC inference:
 
-| Term | Estimate | SE | 95% CI | Interpretation |
-| --- | ---: | ---: | ---: | --- |
-| PostJuly2024 | -1.091 | 29.611 | [-59.129, 56.947] | descriptive level change |
-| TimeAfterJuly2024 | 5.977 | 2.686 | [0.713, 11.241] | descriptive post-transition slope change |
+| Term | Estimate | SE | p-value | 95% CI | Economic interpretation |
+| --- | ---: | ---: | ---: | ---: | --- |
+| PostJuly2024 | -1.091 | 29.611 | 0.9706 | [-59.129, 56.947] | At the July 2024 breakpoint, the fitted series shifts by about 1.1 recorded starts per month; the interval is wide, so this is not a precise stand-alone estimate of the interruption. |
+| TimeAfterJuly2024 | 5.977 | 2.686 | 0.0260 | [0.713, 11.241] | After July 2024, the fitted monthly trajectory increases by about 6.0 additional starts per month relative to the pre-transition slope. |
 
-The primary linear level-change estimate is slightly negative but very imprecise. The slope-change estimate is positive, matching the later higher project-start trajectory.
+The p-values are two-sided large-sample values based on the HAC standard errors. They are included for reporting convenience, but the paper interpretation should emphasize the descriptive magnitudes, fitted-path deviations, and uncertainty intervals rather than stars.
+
+The primary linear level-change estimate is slightly negative but very imprecise. The slope-change estimate is positive, matching the later higher project-start trajectory. In economic terms, the model does not precisely estimate an immediate July-level shift, but it does estimate a steeper post-transition recorded-start trajectory; by December 2025, the slope-change component alone is about 107.6 starts per month above a parallel continuation of the pre-transition slope.
+
+Poisson QMLE robustness gives an immediate level-shift rate ratio of 1.10 (p = 0.8003) and a monthly post-transition slope rate ratio of 1.05 (p = 0.1035). Because Pearson dispersion is high in the count model, the Poisson estimates are best read as robustness for the direction and broad magnitude, not as the only uncertainty calculation.
 
 ## 8. Observed-Versus-Expected Path
 

@@ -37,6 +37,18 @@ class ProjectEntryITSAnalysisTests(unittest.TestCase):
         self.assertEqual(X[july][post_idx], 1.0)
         self.assertEqual(X[july][time_after_idx], 1.0)
 
+    def test_results_table_includes_p_values(self):
+        rows = self.analysis.read_csv(self.analysis.Outputs().results_table)
+        self.assertIn("p_value", rows[0])
+        primary = [
+            row
+            for row in rows
+            if row["model"] == "Linear segmented ITS"
+            and row["window"] == "2019-2025"
+            and row["term"] == "TimeAfterJuly2024"
+        ][0]
+        self.assertEqual(primary["p_value"], "0.0260")
+
 
 if __name__ == "__main__":
     unittest.main()

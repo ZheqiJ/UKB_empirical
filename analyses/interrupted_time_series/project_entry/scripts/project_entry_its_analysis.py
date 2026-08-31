@@ -108,6 +108,53 @@ def fmt(value: float, digits: int = 3) -> str:
     return f"{value:.{digits}f}"
 
 
+def two_sided_normal_pvalue(estimate: float, se: float) -> float:
+    if se <= 0:
+        return math.nan
+    return math.erfc(abs(estimate / se) / math.sqrt(2.0))
+
+
+def linear_interpretation(term: str, beta: float, se: float, post_months: int) -> str:
+    ci_low = beta - 1.96 * se
+    ci_high = beta + 1.96 * se
+    if term == "PostJuly2024":
+        direction = "fewer" if beta < 0 else "more"
+        return (
+            f"At the July 2024 breakpoint, the fitted series shifts by {abs(beta):.1f} "
+            f"{direction} recorded starts per month, conditional on linear trend and month-of-year FE "
+            f"(95% CI {ci_low:.1f} to {ci_high:.1f}); the interval is wide, so this is not a precise "
+            "stand-alone estimate of the interruption."
+        )
+    direction = "higher" if beta > 0 else "lower"
+    final_month_change = beta * post_months
+    return (
+        f"After July 2024, the monthly trajectory changes by {beta:.1f} starts per month relative "
+        f"to the pre-transition slope (95% CI {ci_low:.1f} to {ci_high:.1f}). By the final month of "
+        f"the window, this implies a fitted slope component {final_month_change:.1f} starts per month "
+        f"{direction} than a parallel continuation of the pre-transition slope."
+    )
+
+
+def poisson_interpretation(term: str, beta: float, se: float, post_months: int) -> str:
+    ci_low = beta - 1.96 * se
+    ci_high = beta + 1.96 * se
+    pct = math.exp(beta) - 1.0
+    pct_low = math.exp(ci_low) - 1.0
+    pct_high = math.exp(ci_high) - 1.0
+    if term == "PostJuly2024":
+        return (
+            f"Poisson QMLE translates the immediate level shift into a rate ratio of {math.exp(beta):.2f}, "
+            f"or {pct * 100:.1f}% relative to the fitted pre-transition rate "
+            f"(95% CI {pct_low * 100:.1f}% to {pct_high * 100:.1f}%)."
+        )
+    final_ratio = math.exp(beta * post_months)
+    return (
+        f"Poisson QMLE translates the slope change into about {pct * 100:.1f}% per post-transition month "
+        f"(95% CI {pct_low * 100:.1f}% to {pct_high * 100:.1f}%). Over {post_months} post-transition "
+        f"months, the slope component compounds to a rate ratio of {final_ratio:.2f}."
+    )
+
+
 def mat_transpose(a: list[list[float]]) -> list[list[float]]:
     return [list(col) for col in zip(*a)]
 
@@ -452,6 +499,7 @@ def run_segmented_models(counts: dict[date, int], out: Outputs) -> tuple[list[di
     saved = {}
     for label, start in [("2019-2025", date(2019, 1, 1)), ("2021-2025", date(2021, 1, 1)), ("2022-2025", date(2022, 1, 1))]:
         months = month_range(start, PRIMARY_END)
+        post_months = sum(1 for mo in months if mo >= BREAK_MONTH)
         y = [float(counts[m]) for m in months]
         X, names = design_rows(months)
         lag = max(1, int(math.floor(4 * (len(y) / 100.0) ** (2.0 / 9.0))))
@@ -473,9 +521,10 @@ def run_segmented_models(counts: dict[date, int], out: Outputs) -> tuple[list[di
                     "term": term,
                     "estimate": fmt(beta, 3),
                     "std_error": fmt(se, 3),
+                    "p_value": fmt(two_sided_normal_pvalue(beta, se), 4),
                     "ci_low": fmt(beta - 1.96 * se, 3),
                     "ci_high": fmt(beta + 1.96 * se, 3),
-                    "economic_interpretation": interpretation,
+                    "economic_interpretation": linear_interpretation(term, beta, se, post_months),
                 }
             )
         pfit = poisson_qmle(X, y, hac_lag=lag)
@@ -499,12 +548,13 @@ def run_segmented_models(counts: dict[date, int], out: Outputs) -> tuple[list[di
                     "term": term,
                     "estimate": fmt(beta, 3),
                     "std_error": fmt(se, 3),
+                    "p_value": fmt(two_sided_normal_pvalue(beta, se), 4),
                     "ci_low": fmt(beta - 1.96 * se, 3),
                     "ci_high": fmt(beta + 1.96 * se, 3),
-                    "economic_interpretation": f"{interpretation}: {pct*100:.1f}% [{lo*100:.1f}%, {hi*100:.1f}%]",
+                    "economic_interpretation": poisson_interpretation(term, beta, se, post_months),
                 }
             )
-    write_csv(out.results_table, rows, ["model", "window", "n_months", "seasonality", "inference", "term", "estimate", "std_error", "ci_low", "ci_high", "economic_interpretation"])
+    write_csv(out.results_table, rows, ["model", "window", "n_months", "seasonality", "inference", "term", "estimate", "std_error", "p_value", "ci_low", "ci_high", "economic_interpretation"])
     return rows, saved
 
 
@@ -915,12 +965,16 @@ Y_t = beta_0
 
 Primary linear ITS with Newey-West HAC inference:
 
-| Term | Estimate | SE | 95% CI | Interpretation |
-| --- | ---: | ---: | ---: | --- |
-| PostJuly2024 | {level['estimate']} | {level['std_error']} | [{level['ci_low']}, {level['ci_high']}] | descriptive level change |
-| TimeAfterJuly2024 | {slope['estimate']} | {slope['std_error']} | [{slope['ci_low']}, {slope['ci_high']}] | descriptive post-transition slope change |
+| Term | Estimate | SE | p-value | 95% CI | Economic interpretation |
+| --- | ---: | ---: | ---: | ---: | --- |
+| PostJuly2024 | {level['estimate']} | {level['std_error']} | {level['p_value']} | [{level['ci_low']}, {level['ci_high']}] | At the July 2024 breakpoint, the fitted series shifts by about {abs(float(level['estimate'])):.1f} recorded starts per month; the interval is wide, so this is not a precise stand-alone estimate of the interruption. |
+| TimeAfterJuly2024 | {slope['estimate']} | {slope['std_error']} | {slope['p_value']} | [{slope['ci_low']}, {slope['ci_high']}] | After July 2024, the fitted monthly trajectory increases by about {float(slope['estimate']):.1f} additional starts per month relative to the pre-transition slope. |
 
-The primary linear level-change estimate is slightly negative but very imprecise. The slope-change estimate is positive, matching the later higher project-start trajectory.
+The p-values are two-sided large-sample values based on the HAC standard errors. They are included for reporting convenience, but the paper interpretation should emphasize the descriptive magnitudes, fitted-path deviations, and uncertainty intervals rather than stars.
+
+The primary linear level-change estimate is slightly negative but very imprecise. The slope-change estimate is positive, matching the later higher project-start trajectory. In economic terms, the model does not precisely estimate an immediate July-level shift, but it does estimate a steeper post-transition recorded-start trajectory; by December 2025, the slope-change component alone is about {float(slope['estimate']) * 18:.1f} starts per month above a parallel continuation of the pre-transition slope.
+
+Poisson QMLE robustness gives an immediate level-shift rate ratio of {math.exp(float(plevel['estimate'])):.2f} (p = {plevel['p_value']}) and a monthly post-transition slope rate ratio of {math.exp(float(pslope['estimate'])):.2f} (p = {pslope['p_value']}). Because Pearson dispersion is high in the count model, the Poisson estimates are best read as robustness for the direction and broad magnitude, not as the only uncertainty calculation.
 
 ## 8. Observed-Versus-Expected Path
 

@@ -28,7 +28,7 @@ Recorded UK Biobank project starts show a sharp July-September 2024 interruption
 
 4. `data/project_entry_its_results_table.csv`
 
-   Use this as the compact model table. The main rows are the 2019-2025 linear segmented ITS and Poisson QMLE rows.
+   Use this as the compact model table. The main rows are the 2019-2025 linear segmented ITS and Poisson QMLE rows. The table now includes p-values and detailed economic interpretations.
 
 ## Main Numbers
 
@@ -42,10 +42,17 @@ Primary breakpoint: July 2024, based on the official 5 July 2024 RAP-based acces
 
 Primary linear ITS:
 
-| Term | Estimate | 95% CI | Plain-language reading |
-| --- | ---: | ---: | --- |
-| `PostJuly2024` | -1.091 | [-59.129, 56.947] | Immediate descriptive level change is imprecise; do not emphasize it alone. |
-| `TimeAfterJuly2024` | 5.977 | [0.713, 11.241] | Post-transition monthly trajectory is higher/steeper than the pre-transition path. |
+| Term | Estimate | p-value | 95% CI | Plain-language reading |
+| --- | ---: | ---: | ---: | --- |
+| `PostJuly2024` | -1.091 | 0.9706 | [-59.129, 56.947] | Immediate descriptive level change is very imprecise; do not emphasize it alone. |
+| `TimeAfterJuly2024` | 5.977 | 0.0260 | [0.713, 11.241] | Post-transition monthly trajectory is about 6.0 starts/month steeper than the pre-transition path. |
+
+Poisson QMLE robustness:
+
+| Term | Estimate | p-value | 95% CI | Plain-language reading |
+| --- | ---: | ---: | ---: | --- |
+| `PostJuly2024` | 0.091 | 0.8003 | [-0.614, 0.795] | Immediate rate-ratio shift is about 1.10, but very imprecise. |
+| `TimeAfterJuly2024` | 0.051 | 0.1035 | [-0.010, 0.113] | Monthly post-transition rate ratio is about 1.05; read as robustness because count overdispersion is high. |
 
 Fitted-path deviations:
 
