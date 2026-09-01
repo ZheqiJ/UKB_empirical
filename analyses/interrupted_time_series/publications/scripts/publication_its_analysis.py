@@ -47,6 +47,7 @@ class Outputs:
     reading_guide: Path = REPORT_DIR / "publication_reading_guide.md"
     measurement_note: Path = REPORT_DIR / "publication_measurement_note.md"
     results_report: Path = REPORT_DIR / "publication_its_results.md"
+    stata_style_output: Path = REPORT_DIR / "publication_stata_style_results.txt"
 
     clean_events: Path = DATA_DIR / "publication_clean_event_links.csv"
     system_monthly: Path = DATA_DIR / "publication_system_total_monthly.csv"
@@ -295,7 +296,7 @@ def design_rows(months: list[date], break_month: date = BREAK_MONTH) -> tuple[li
     X = []
     for idx, mo in enumerate(months, start=1):
         post = 1.0 if mo >= break_month else 0.0
-        time_after = float((mo.year - break_month.year) * 12 + mo.month - break_month.month + 1) if post else 0.0
+        time_after = float(max((mo.year - break_month.year) * 12 + mo.month - break_month.month, 0))
         X.append([1.0, float(idx), post, time_after] + [1.0 if mo.month == m else 0.0 for m in range(2, 13)])
     return X, names
 
@@ -599,7 +600,7 @@ def model_output_row(model: str, outcome: str, n: int, pre: int, post: int, term
 
 
 def run_primary_its(system_rows: list[dict[str, object]], out: Outputs) -> tuple[list[dict[str, object]], dict[str, object]]:
-    months, y = primary_rows(system_rows, "fractional_publication_count")
+    months, y = primary_rows(system_rows, "unique_publication_ids")
     X, names = design_rows(months)
     fit = ols(X, y, hac_lag=PRIMARY_HAC_LAG)
     pre = sum(1 for m in months if m < BREAK_MONTH)
@@ -608,11 +609,11 @@ def run_primary_its(system_rows: list[dict[str, object]], out: Outputs) -> tuple
     for term in ["Time", "PostJuly2024", "TimeAfterJuly2024"]:
         idx = names.index(term)
         notes = {
-            "Time": "pre-transition monthly trend in total fractional publication output",
+            "Time": "pre-transition monthly trend in total unique publication output",
             "PostJuly2024": "descriptive immediate calendar-time level change at July 2024; not an immediate RAP productivity effect",
             "TimeAfterJuly2024": "descriptive post-July 2024 monthly slope change in total output",
         }[term]
-        rows.append(model_output_row("Primary total-output ITS, linear HAC(3)", "fractional_publication_count", len(months), pre, post, term, fit["beta"][idx], fit["se"][idx], notes))
+        rows.append(model_output_row("Primary total-output ITS, linear HAC(3)", "unique_publication_ids", len(months), pre, post, term, fit["beta"][idx], fit["se"][idx], notes))
     write_csv(out.its_results, rows, list(rows[0].keys()))
     return rows, {"months": months, "y": y, "X": X, "names": names, "fit": fit}
 
@@ -640,7 +641,7 @@ def hac_lag_sensitivity(primary: dict[str, object], out: Outputs) -> list[dict[s
         fit = ols(X, y, hac_lag=lag)
         for term in ["Time", "PostJuly2024", "TimeAfterJuly2024"]:
             idx = names.index(term)
-            rows.append(model_output_row(f"Primary total-output ITS, linear HAC({lag})", "fractional_publication_count", len(months), 66, 18, term, fit["beta"][idx], fit["se"][idx], "HAC lag sensitivity; OLS point estimates should be invariant"))
+            rows.append(model_output_row(f"Primary total-output ITS, linear HAC({lag})", "unique_publication_ids", len(months), 66, 18, term, fit["beta"][idx], fit["se"][idx], "HAC lag sensitivity; OLS point estimates should be invariant"))
     write_csv(out.hac_sensitivity, rows, list(rows[0].keys()))
     return rows
 
@@ -666,7 +667,7 @@ def ar1_robustness(primary: dict[str, object], out: Outputs) -> list[dict[str, o
     rows = []
     for term in ["Time", "PostJuly2024", "TimeAfterJuly2024"]:
         idx = names.index(term)
-        rows.append(model_output_row("Primary total-output ITS, Prais-Winsten AR(1)", "fractional_publication_count", len(y), 66, 18, term, fit["beta"][idx], fit["se"][idx], f"estimated rho = {fit['rho']:.3f}"))
+        rows.append(model_output_row("Primary total-output ITS, Prais-Winsten AR(1)", "unique_publication_ids", len(y), 66, 18, term, fit["beta"][idx], fit["se"][idx], f"estimated rho = {fit['rho']:.3f}"))
     write_csv(out.ar1_results, rows, list(rows[0].keys()))
     return rows
 
@@ -781,7 +782,7 @@ def fixed_followup_outputs(projects: dict[str, dict[str, object]], events: list[
         for age in range(0, 61):
             eligible = [app_id for app_id, p in cohort_projects.items() if add_months_exact(p["start_date"], age) <= CENSOR_DATE]
             had = [app_id for app_id in eligible if app_id in first_age and first_age[app_id] <= age]
-            timing.append({"project_cohort": cohort, "project_age_months": age, "projects_with_complete_followup_to_age": len(eligible), "projects_with_first_publication_by_age": len(had), "cumulative_first_publication_probability_percent": fmt(100.0 * len(had) / len(eligible) if eligible else math.nan, 3), "censor_date": CENSOR_DATE.isoformat()})
+            timing.append({"project_cohort": cohort, "project_age_months": age, "projects_with_complete_followup_to_age": len(eligible), "projects_with_first_publication_by_age": len(had), "share_with_first_publication_by_age_among_projects_observable_to_age_percent": fmt(100.0 * len(had) / len(eligible) if eligible else math.nan, 3), "censor_date": CENSOR_DATE.isoformat()})
     write_csv(out.first_pub_timing, timing, list(timing[0].keys()))
     return project_rows, summary, timing
 
@@ -869,7 +870,7 @@ def write_audits_and_summaries(audit: dict[str, object], system_rows: list[dict[
     write_csv(out.outcome_audit, audit_rows, ["metric", "value"])
 
     outcome_rows = [
-        {"y_family": "Y1 total monthly publications", "unit_of_observation": "calendar month", "numerator": "fractional_publication_count", "denominator": "none", "time_index": "calendar month", "pre_post_definition": "month before/after July 2024", "primary_question": "system-level scientific output", "feasibility_status": "primary feasible", "followup_limitation": "publication lag complicates immediate interpretation"},
+        {"y_family": "Y1 total monthly publications", "unit_of_observation": "calendar month", "numerator": "unique_publication_ids", "denominator": "none", "time_index": "calendar month", "pre_post_definition": "month before/after July 2024", "primary_question": "system-level scientific output", "feasibility_status": "primary feasible", "followup_limitation": "aggregate fractional count equals unique publication count by construction; publication lag complicates immediate interpretation"},
         {"y_family": "Y2 incumbent-pool publication intensity", "unit_of_observation": "calendar month", "numerator": "fractional publication credit linked to pre-transition incumbents", "denominator": "post-start incumbent projects observable by month end", "time_index": "calendar month", "pre_post_definition": "month before/after July 2024", "primary_question": "supplementary decomposition of dynamic incumbent pool", "feasibility_status": "supplementary feasible", "followup_limitation": "changing denominator and project-age composition"},
         {"y_family": "Y3 fixed-cohort publication intensity", "unit_of_observation": "calendar month x fixed cohort", "numerator": "fractional publication credit from fixed cohort", "denominator": "fixed cohort size", "time_index": "calendar month", "pre_post_definition": "month before/after July 2024", "primary_question": "stable-membership publication intensity", "feasibility_status": "robustness feasible", "followup_limitation": "older-cohort composition differs from new project pipeline"},
         {"y_family": "Y4 project-age lifecycle output", "unit_of_observation": "project age month or age band", "numerator": "fractional publication credit at age", "denominator": "projects with complete follow-up to age", "time_index": "months since project start", "pre_post_definition": "not a calendar pre/post object", "primary_question": "publication productivity by project age", "feasibility_status": "feasible", "followup_limitation": "right-censoring handled by age-specific risk sets"},
@@ -1002,21 +1003,114 @@ def svg_bar_chart(path: Path, title: str, rows: list[dict[str, object]]) -> None
 def make_figures(system_rows: list[dict[str, object]], measure_rows: list[dict[str, object]], age_rows: list[dict[str, object]], pipeline_rows: list[dict[str, object]], timing_rows: list[dict[str, object]], fixed_rows: list[dict[str, object]], incumbent_rows: list[dict[str, object]], lag_rows: list[dict[str, object]], ac_rows: list[dict[str, object]], out: Outputs) -> None:
     primary_system = [r for r in system_rows if PRIMARY_START <= parse_date(str(r["month_start"])) <= PRIMARY_END]
     months = [parse_date(str(r["month_start"])) for r in primary_system]
-    frac = [float(r["fractional_publication_count"]) for r in primary_system]
-    smooth = moving_average(frac, 3)
-    svg_time_chart(out.total_monthly_figure, "Total Monthly UKB-Linked Publication Output", [(m, v, "observed") for m, v in zip(months, frac)] + [(m, v, "rolling3") for m, v in zip(months, smooth)], "Fractional publication count", PRIMARY_START, PRIMARY_END)
+    unique = [float(r["unique_publication_ids"]) for r in primary_system]
+    smooth = moving_average(unique, 3)
+    svg_time_chart(out.total_monthly_figure, "Total Monthly Unique UKB-Linked Publications", [(m, v, "observed") for m, v in zip(months, unique)] + [(m, v, "rolling3") for m, v in zip(months, smooth)], "Unique publications", PRIMARY_START, PRIMARY_END)
     svg_time_chart(out.measure_comparison_figure, "Publication Measurement Comparison", [(parse_date(str(r["period_start"])), float(r["publication_app_links"]), "app_links") for r in measure_rows if PRIMARY_START <= parse_date(str(r["period_start"])) <= PRIMARY_END] + [(parse_date(str(r["period_start"])), float(r["unique_publication_ids"]), "unique") for r in measure_rows if PRIMARY_START <= parse_date(str(r["period_start"])) <= PRIMARY_END] + [(parse_date(str(r["period_start"])), float(r["fractional_publication_count"]), "fractional") for r in measure_rows if PRIMARY_START <= parse_date(str(r["period_start"])) <= PRIMARY_END], "Monthly count", PRIMARY_START, PRIMARY_END)
     age_plot = [r for r in age_rows if int(r["project_age_months"]) <= 96]
     svg_xy_chart(out.project_age_figure, "Publication Output By Project Age", [(float(r["project_age_months"]), float(r["publications_per_100_projects_at_risk"]), "profile") for r in age_plot], "Project age in months", "Fractional publications per 100 at-risk projects")
     svg_time_chart(out.pipeline_expected_figure, "Observed Versus Pipeline-Expected Publication Output", [(parse_date(str(r["month_start"])), float(r["actual_fractional_publication_count"]), "observed") for r in pipeline_rows] + [(parse_date(str(r["month_start"])), float(r["pipeline_expected_fractional_publication_count"]), "expected") for r in pipeline_rows], "Fractional publication count", PRIMARY_START, PRIMARY_END)
     svg_time_chart(out.pipeline_gap_figure, "Pipeline Gap: Actual Minus Historical Pipeline Expected", [(parse_date(str(r["month_start"])), float(r["pipeline_gap_actual_minus_expected"]), "gap") for r in pipeline_rows], "Actual minus expected", PRIMARY_START, PRIMARY_END)
-    timing_plot = [r for r in timing_rows if int(r["project_age_months"]) <= 12 and r["cumulative_first_publication_probability_percent"]]
-    svg_xy_chart(out.cohort_followup_figure, "First Publication Timing By Project Cohort", [(float(r["project_age_months"]), float(r["cumulative_first_publication_probability_percent"]), str(r["project_cohort"])) for r in timing_plot], "Project age in months", "Cumulative probability of first publication (%)")
+    timing_plot = [r for r in timing_rows if int(r["project_age_months"]) <= 12 and r["share_with_first_publication_by_age_among_projects_observable_to_age_percent"]]
+    svg_xy_chart(out.cohort_followup_figure, "First Publication Share By Project Cohort", [(float(r["project_age_months"]), float(r["share_with_first_publication_by_age_among_projects_observable_to_age_percent"]), str(r["project_cohort"])) for r in timing_plot], "Project age in months", "Share with first publication by age (%)")
     svg_time_chart(out.fixed_cohort_figure, "Fixed-Cohort Publication Intensity", [(parse_date(str(r["month_start"])), float(r["fractional_publications_per_100_fixed_cohort"]), str(r["cohort_cutoff"])) for r in fixed_rows], "Fractional publications per 100 fixed-cohort projects", date(2021, 7, 1), PRIMARY_END)
     svg_time_chart(out.incumbent_figure, "Supplementary Incumbent-Pool Publication Intensity", [(parse_date(str(r["month_start"])), float(r["fractional_publications_per_100_post_start_incumbents"]), "incumbent") for r in incumbent_rows if PRIMARY_START <= parse_date(str(r["month_start"])) <= PRIMARY_END], "Fractional publications per 100 dynamic incumbents", PRIMARY_START, PRIMARY_END)
     svg_bar_chart(out.lag_figure, "Project-Start To Publication Lag Distribution", lag_rows)
     svg_xy_chart(out.acf_figure, "Primary Total-Output ITS Residual ACF", [(float(r["lag"]), float(r["acf"]), "acf") for r in ac_rows], "Lag", "ACF")
     svg_xy_chart(out.pacf_figure, "Primary Total-Output ITS Residual PACF", [(float(r["lag"]), float(r["pacf"]), "pacf") for r in ac_rows], "Lag", "PACF")
+
+
+def stata_style_results(
+    its_rows: list[dict[str, object]],
+    sens_its: list[dict[str, object]],
+    hac_rows: list[dict[str, object]],
+    ar1_rows: list[dict[str, object]],
+    poisson_rows: list[dict[str, object]],
+) -> str:
+    def z_stat(row: dict[str, object]) -> float:
+        return float(row["estimate"]) / float(row["std_error"])
+
+    def reg_line(name: str, row: dict[str, object], irr: bool = False) -> str:
+        base = (
+            f"{name:<20} |"
+            f"{float(row['estimate']):>12.4f}"
+            f"{float(row['std_error']):>11.4f}"
+            f"{z_stat(row):>8.2f}"
+            f"{float(row['p_value']):>9.4f}"
+            f"{float(row['ci_low']):>12.4f}"
+            f"{float(row['ci_high']):>12.4f}"
+        )
+        if irr:
+            base += f"{math.exp(float(row['estimate'])):>10.3f}"
+        return base
+
+    primary = {r["term"]: r for r in its_rows}
+    ar1 = {r["term"]: r for r in ar1_rows}
+    poisson = {r["term"]: r for r in poisson_rows}
+    sens_lines = [
+        f"{r['outcome']:<36} {r['term']:<19} {float(r['estimate']):>10.4f} {float(r['std_error']):>10.4f} {float(r['p_value']):>8.4f} {float(r['ci_low']):>10.4f} {float(r['ci_high']):>10.4f}"
+        for r in sens_its
+        if r["term"] in {"PostJuly2024", "TimeAfterJuly2024"}
+    ]
+    hac_lines = [
+        f"{r['model'].replace('Primary total-output ITS, linear ', ''):<8} {r['term']:<19} {float(r['estimate']):>10.4f} {float(r['std_error']):>10.4f} {float(r['p_value']):>8.4f} {float(r['ci_low']):>10.4f} {float(r['ci_high']):>10.4f}"
+        for r in hac_rows
+        if r["term"] in {"PostJuly2024", "TimeAfterJuly2024"}
+    ]
+    return f"""Publication total-output segmented ITS, primary model
+Outcome: monthly number of unique UKB-linked publications
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: OLS with Newey-West HAC standard errors
+
+------------------------------------------------------------------------------
+ unique_publications | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+{reg_line('Time', primary['Time'])}
+{reg_line('PostJuly2024', primary['PostJuly2024'])}
+{reg_line('TimeAfterJuly2024', primary['TimeAfterJuly2024'])}
+ Month FE            |         Yes
+------------------------------------------------------------------------------
+
+Aggregate-output measurement sensitivity, same ITS specification
+-----------------------------------------------------------------------------------------------
+ Outcome                              Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+-----------------------------------------------------------------------------------------------
+{chr(10).join(sens_lines)}
+-----------------------------------------------------------------------------------------------
+
+Newey-West HAC lag sensitivity, primary total-output outcome
+--------------------------------------------------------------------------------
+ HAC lag  Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+--------------------------------------------------------------------------------
+{chr(10).join(hac_lines)}
+--------------------------------------------------------------------------------
+
+Prais-Winsten AR(1) robustness
+Estimated rho: {ar1['Time']['notes'].replace('estimated rho = ', '')}
+------------------------------------------------------------------------------
+ unique_publications | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+{reg_line('Time', ar1['Time'])}
+{reg_line('PostJuly2024', ar1['PostJuly2024'])}
+{reg_line('TimeAfterJuly2024', ar1['TimeAfterJuly2024'])}
+------------------------------------------------------------------------------
+
+Poisson QMLE count robustness
+Outcome: monthly unique publication IDs
+Inference: Poisson QMLE with HAC standard errors
+----------------------------------------------------------------------------------------
+ unique_pub_ids      | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]       IRR
+---------------------+------------------------------------------------------------------
+{reg_line('Time', poisson['Time'], irr=True)}
+{reg_line('PostJuly2024', poisson['PostJuly2024'], irr=True)}
+{reg_line('TimeAfterJuly2024', poisson['TimeAfterJuly2024'], irr=True)}
+----------------------------------------------------------------------------------------
+
+Notes:
+1. This is Stata-style formatting of the repository's generated Python estimates, not a separate Stata execution log.
+2. The primary publication outcome is system-level unique publication output, not publication output per incumbent project.
+3. Coefficients are descriptive calendar-time changes and should not be interpreted as causal RAP treatment effects."""
 
 
 def docs(out: Outputs, audit: dict[str, object], lag_rows: list[dict[str, object]], system_rows: list[dict[str, object]], its_rows: list[dict[str, object]], sens_its: list[dict[str, object]], ac_rows: list[dict[str, object]], hac_rows: list[dict[str, object]], ar1_rows: list[dict[str, object]], poisson_rows: list[dict[str, object]], cohort_summary: list[dict[str, object]], fixed_results: list[dict[str, object]], pipeline_metrics: dict[str, float]) -> None:
@@ -1025,11 +1119,11 @@ def docs(out: Outputs, audit: dict[str, object], lag_rows: list[dict[str, object
     poisson = {r["term"]: r for r in poisson_rows}
     pre = [r for r in system_rows if PRIMARY_START <= parse_date(str(r["month_start"])) < BREAK_MONTH]
     post = [r for r in system_rows if BREAK_MONTH <= parse_date(str(r["month_start"])) <= PRIMARY_END]
-    pre_mean = sum(float(r["fractional_publication_count"]) for r in pre) / len(pre)
-    post_mean = sum(float(r["fractional_publication_count"]) for r in post) / len(post)
+    pre_mean = sum(float(r["unique_publication_ids"]) for r in pre) / len(pre)
+    post_mean = sum(float(r["unique_publication_ids"]) for r in post) / len(post)
     jul_sep = [r for r in post if r["jul_sep_2024_window"] == 1]
-    jul_sep_mean = sum(float(r["fractional_publication_count"]) for r in jul_sep) / len(jul_sep)
-    mean_2025 = sum(float(r["fractional_publication_count"]) for r in post[6:18]) / 12
+    jul_sep_mean = sum(float(r["unique_publication_ids"]) for r in jul_sep) / len(jul_sep)
+    mean_2025 = sum(float(r["unique_publication_ids"]) for r in post[6:18]) / 12
     multi_share = 100.0 * audit["publication_ids_linked_to_multiple_valid_applications"] / audit["cleaned_unique_publication_ids"]
     lb = {int(r["lag"]): r for r in ac_rows}
     post12 = next(r for r in cohort_summary if r["project_cohort"] == "post_rap_project_start" and r["followup_horizon_months"] == 12)
@@ -1038,14 +1132,16 @@ def docs(out: Outputs, audit: dict[str, object], lag_rows: list[dict[str, object
     post24 = next(r for r in cohort_summary if r["project_cohort"] == "post_rap_project_start" and r["followup_horizon_months"] == 24)
     fixed_main = next(r for r in fixed_results if "2022-07-01" in r["outcome"] and r["term"] == "TimeAfterJuly2024")
     system_class = "C. gradual increase"
-    productivity_class = "D. higher early productivity at the feasible 12-month horizon; 18/24-month post-RAP follow-up is insufficient"
-    timing_class = "D. faster at the feasible 12-month horizon; mature timing remains insufficiently observed"
+    productivity_class = "suggestive higher early 12-month output in the observable early post-transition cohort; mature productivity remains infeasible"
+    timing_class = "suggestive higher 12-month first-publication incidence in the observable early post-transition cohort; mature timing remains infeasible"
     if pipeline_metrics["calendar_2025_gap"] > 0 and pipeline_metrics["final_cumulative_gap"] > 0:
         pipeline_class = "C. above historical pipeline expectation"
     elif pipeline_metrics["calendar_2025_gap"] > 0 and pipeline_metrics["final_cumulative_gap"] <= 0:
         pipeline_class = "D. mixed"
     else:
         pipeline_class = "A. below historical pipeline expectation"
+    stata_output = stata_style_results(its_rows, sens_its, hac_rows, ar1_rows, poisson_rows)
+    write_text(out.stata_style_output, stata_output)
 
     write_text(out.readme, """# Publication-Output Module
 
@@ -1059,7 +1155,7 @@ Start with:
 4. `figures/publication_total_monthly.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 
-The primary publication outcome is total monthly `fractional_publication_count`, not publications per incumbent project.
+The primary publication outcome is the monthly number of unique UKB-linked publications, `unique_publication_ids`, not publications per incumbent project.
 """)
 
     write_text(out.design, """# Publication ITS Design
@@ -1068,7 +1164,7 @@ The publication analysis separates system-level output, project-level productivi
 
 | Candidate Y | Definition | Research Question | Main Limitations | How Limitations Are Addressed |
 | --- | --- | --- | --- | --- |
-| Y1 Total monthly publications | Monthly total `fractional_publication_count` | Did system-level UKB-linked publication flow change around July 2024? | Publication response is lagged; total output mixes entry and productivity. | Treat as descriptive calendar-time ITS; report lag and pipeline diagnostics. |
+| Y1 Total monthly publications | Monthly `unique_publication_ids`; aggregate `fractional_publication_count` is identical by construction | Did system-level UKB-linked publication flow change around July 2024? | Publication response is lagged; total output mixes entry and productivity. | Treat as descriptive calendar-time ITS; report lag and pipeline diagnostics. |
 | Y2 Publications per dynamic incumbent pool | 100 x fractional publications linked to pre-transition incumbents / post-start incumbents | How does incumbent-pool intensity evolve? | Denominator grows before July 2024 and age composition changes. | Demoted to supplementary decomposition. |
 | Y3 Fixed-cohort publication intensity | 100 x cohort publications / fixed cohort size | Does a stable pre-transition cohort show similar movement? | Older cohorts are not representative of all system output. | Prespecified cutoffs, no selection by significance. |
 | Y4 Project-age-standardized publication rate | Publication output by project age month or age band | How strongly does output vary over the project lifecycle? | Right-censoring at long ages for recent cohorts. | Age-specific risk sets with complete follow-up. |
@@ -1087,7 +1183,7 @@ Alternative outcomes are Y1 measurement variants and Y2/Y3 rate definitions. Y4-
 
 Publication date is the exact `date_pub` in public Schema19. An application-publication link is one row in Schema24 joining `app_id` to `pub_id`. A unique publication is a distinct `pub_id`.
 
-Fractional publication credit gives each cleaned application-publication link weight `1 / number of cleaned valid application links for that publication`. The fractional weights for one publication sum to one, so total fractional monthly output avoids full multi-application double counting.
+Fractional publication credit gives each cleaned application-publication link weight `1 / number of cleaned valid application links for that publication`. The fractional weights for one publication sum to one. At the aggregate system-month level, `fractional_publication_count` equals `unique_publication_ids` by construction; fractional credit remains useful for project-level attribution.
 
 Project start date is the public UKB project `Start date`. Project age is the exact month difference between publication date and project start date. Incumbent means project start date before 2024-07-05. Fixed cohort means a prespecified set of projects started before a cutoff such as 2022-07-01.
 
@@ -1129,19 +1225,19 @@ The analysis starts from {audit['total_schema19_publications']:,} Schema19 publi
 
 ## 4. Candidate Outcome Hierarchy
 
-Y1 total monthly fractional publication output is primary. Y2 incumbent-pool intensity is supplementary. Y3 fixed cohorts, Y4 project-age profiles, Y5/Y6 fixed follow-up, Y7 time to first publication, Y8 project-month panel, and Y9 pipeline gaps diagnose mechanisms and limitations.
+Y1 monthly unique UKB-linked publication output is primary. At the aggregate system level, fractional publication count equals unique publication count by construction. Y2 incumbent-pool intensity is supplementary. Y3 fixed cohorts, Y4 project-age profiles, Y5/Y6 fixed follow-up, Y7 time to first publication, Y8 project-month panel, and Y9 pipeline gaps diagnose mechanisms and limitations.
 
 ## 5. Primary Outcome: Total Monthly Publication Flow
 
-The primary outcome is monthly total `fractional_publication_count`, with no incumbent denominator. This is closest to the theoretical question about the total number of scientific outcomes and allows project entry to be part of the system-level mechanism.
+The primary outcome is the monthly number of unique UKB-linked publications, `unique_publication_ids`, with no incumbent denominator. The aggregate `fractional_publication_count` is kept in the data but is identical to unique publications at the system-month level. `publication_app_links` is the genuine alternative aggregate measure because it counts project-publication links rather than unique scientific outputs.
 
 ## 6. Raw Calendar-Time Pattern
 
-In the 2019-01 to 2025-12 primary window, mean monthly total fractional output is {pre_mean:.2f} before July 2024 and {post_mean:.2f} after July 2024. July-September 2024 averages {jul_sep_mean:.2f}, while calendar 2025 averages {mean_2025:.2f}. The raw total-output series does not show a sharp immediate collapse around July 2024; 2025 is higher.
+In the 2019-01 to 2025-12 primary window, mean monthly unique publication output is {pre_mean:.2f} before July 2024 and {post_mean:.2f} after July 2024. July-September 2024 averages {jul_sep_mean:.2f}, while calendar 2025 averages {mean_2025:.2f}. The raw total-output series does not show a sharp immediate collapse around July 2024; 2025 is higher.
 
 ## 7. Primary Segmented ITS
 
-The primary model is a monthly linear segmented ITS with month-of-year fixed effects and Newey-West HAC lag 3. There are 84 months: 66 pre-transition and 18 post-transition.
+The primary model is a monthly linear segmented ITS with month-of-year fixed effects and Newey-West HAC lag 3. There are 84 months: 66 pre-transition and 18 post-transition. `TimeAfterJuly2024` is coded 0 in July 2024 and 1 in August 2024, so `PostJuly2024` directly represents the fitted July level shift.
 
 | Term | Estimate | SE | p-value | 95% CI | Economic reading |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -1150,6 +1246,14 @@ The primary model is a monthly linear segmented ITS with month-of-year fixed eff
 | TimeAfterJuly2024 | {primary['TimeAfterJuly2024']['estimate']} | {primary['TimeAfterJuly2024']['std_error']} | {primary['TimeAfterJuly2024']['p_value']} | [{primary['TimeAfterJuly2024']['ci_low']}, {primary['TimeAfterJuly2024']['ci_high']}] | post-July monthly slope change in total output |
 
 Because publication response is lagged, `PostJuly2024` should not be interpreted as an immediate RAP productivity response.
+
+### Stata-Style Output For Reporting
+
+The following block is a Stata-style presentation of the generated publication regressions. It is also saved as `reports/publication_stata_style_results.txt`.
+
+```text
+{stata_output}
+```
 
 ## 8. Autocorrelation And HAC Inference
 
@@ -1175,15 +1279,15 @@ Fixed cohorts are constructed using prespecified cutoffs 2021-07-01, 2022-01-01,
 
 ## 13. Fixed-Follow-Up Project Productivity
 
-At 12 months, eligible pre-RAP projects number {pre12['eligible_projects']} and eligible post-RAP projects number {post12['eligible_projects']}. Mean Pub12 is {pre12['mean_fractional_publications']} for pre-RAP starts and {post12['mean_fractional_publications']} for post-RAP starts; AnyPub12 is {pre12['any_publication_rate_percent']}% versus {post12['any_publication_rate_percent']}%. Post-RAP 18- and 24-month outcomes are {post18['followup_limitation']} and {post24['followup_limitation']} under the {CENSOR_DATE.isoformat()} censor date.
+At 12 months, eligible pre-RAP projects number {pre12['eligible_projects']} and eligible post-RAP projects number {post12['eligible_projects']} out of {post12['total_projects_in_cohort']} total post-RAP projects. The observable post-RAP 12-month sample is concentrated in the earliest transition-era start cohorts and is not representative of the full post-RAP project universe. Mean Pub12 is {pre12['mean_fractional_publications']} for pre-RAP starts and {post12['mean_fractional_publications']} for post-RAP starts; AnyPub12 is {pre12['any_publication_rate_percent']}% versus {post12['any_publication_rate_percent']}%. Post-RAP 18- and 24-month outcomes are {post18['followup_limitation']} and {post24['followup_limitation']} under the {CENSOR_DATE.isoformat()} censor date.
 
 ## 14. Time To First Publication
 
-Time-to-first-publication outputs use age-specific complete-follow-up denominators. They support only early post-RAP comparisons; mature publication timing for RAP-era projects is not yet observable.
+Time-to-first-publication outputs use age-specific complete-follow-up denominators and report the share with first publication by age among projects observable to that age. This is not a Kaplan-Meier estimate or a true cumulative-incidence curve because the risk set changes across ages. The main figure is restricted to ages 0-12 months for the post-RAP cohort.
 
 ## 15. Pipeline-Adjusted Expected Publication Output
 
-The pipeline benchmark estimates the historical project-age publication profile using only calendar months before July 2024, then applies that profile to the evolving project pipeline. Calendar 2025 actual output is {pipeline_metrics['calendar_2025_gap']:.2f} fractional publications above the pipeline benchmark, with mean actual/expected ratio {pipeline_metrics['mean_2025_ratio']:.3f}; however, the cumulative July 2024-December 2025 pipeline gap is {pipeline_metrics['final_cumulative_gap']:.2f}, because late 2024 is below the pipeline benchmark. This is a historical benchmark, not a causal counterfactual.
+The pipeline benchmark estimates the historical project-age publication profile using only calendar months before July 2024, then applies that profile to the evolving project pipeline. Calendar 2025 actual output is {pipeline_metrics['calendar_2025_gap']:.2f} publications above the pipeline benchmark, with mean actual/expected ratio {pipeline_metrics['mean_2025_ratio']:.3f}; however, the cumulative July 2024-December 2025 pipeline gap is {pipeline_metrics['final_cumulative_gap']:.2f}, because late 2024 is below the pipeline benchmark. This is a historical age-profile benchmark conditional on the realized project-entry pipeline, not a causal counterfactual. It does not fully absorb secular calendar-time growth in publication productivity, and because it conditions on realized post-transition project entry it does not capture the total effect of any policy-induced change in project entry.
 
 ## 16. Right-Edge Completeness
 
@@ -1212,6 +1316,7 @@ The evidence cannot establish that RAP caused publications to increase or decrea
 ## Main Outputs
 
 - Main ITS table: `data/publication_its_results_table.csv`
+- Stata-style regression output: `reports/publication_stata_style_results.txt`
 - Outcome hierarchy: `data/publication_outcome_summary.csv`
 - System monthly series: `data/publication_system_total_monthly.csv`
 - Project cohort summary: `data/publication_project_cohort_summary.csv`
@@ -1230,10 +1335,11 @@ The publication analysis separates total system-level publication output, projec
 4. `figures/publication_project_age_profile.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 6. `data/publication_its_results_table.csv`
+7. `reports/publication_stata_style_results.txt`
 
 ## Main Numbers
 
-- Primary Y: total monthly `fractional_publication_count`.
+- Primary Y: monthly `unique_publication_ids`; aggregate `fractional_publication_count` equals this by construction.
 - Window: 2019-01 to 2025-12.
 - Observations: 84 total, 66 pre-July-2024, 18 post-July-2024.
 - Raw mean monthly output: {pre_mean:.2f} pre, {post_mean:.2f} post.
@@ -1254,6 +1360,7 @@ The publication analysis separates total system-level publication output, projec
 ## Main Tables
 
 - `data/publication_its_results_table.csv`
+- `reports/publication_stata_style_results.txt`
 - `data/publication_outcome_summary.csv`
 - `data/publication_project_cohort_summary.csv`
 

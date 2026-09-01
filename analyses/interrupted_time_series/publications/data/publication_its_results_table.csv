@@ -1,4 +1,4 @@
 model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
-"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0753,0.0000,1.9384,2.2337,pre-transition monthly trend in total fractional publication output
-"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-9.4554,8.2418,0.2513,-25.6092,6.6984,descriptive immediate calendar-time level change at July 2024; not an immediate RAP productivity effect
-"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.7125,0.0000,2.9366,5.7294,descriptive post-July 2024 monthly slope change in total output
+"Primary total-output ITS, linear HAC(3)",unique_publication_ids,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0753,0.0000,1.9384,2.2337,pre-transition monthly trend in total unique publication output
+"Primary total-output ITS, linear HAC(3)",unique_publication_ids,2019-01_to_2025-12,84,66,18,PostJuly2024,-5.1224,7.6605,0.5037,-20.1369,9.8921,descriptive immediate calendar-time level change at July 2024; not an immediate RAP productivity effect
+"Primary total-output ITS, linear HAC(3)",unique_publication_ids,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.7125,0.0000,2.9366,5.7294,descriptive post-July 2024 monthly slope change in total output

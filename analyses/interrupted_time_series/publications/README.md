@@ -10,4 +10,4 @@ Start with:
 4. `figures/publication_total_monthly.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 
-The primary publication outcome is total monthly `fractional_publication_count`, not publications per incumbent project.
+The primary publication outcome is the monthly number of unique UKB-linked publications, `unique_publication_ids`, not publications per incumbent project.

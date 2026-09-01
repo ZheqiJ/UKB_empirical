@@ -10,15 +10,16 @@ The publication analysis separates total system-level publication output, projec
 4. `figures/publication_project_age_profile.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 6. `data/publication_its_results_table.csv`
+7. `reports/publication_stata_style_results.txt`
 
 ## Main Numbers
 
-- Primary Y: total monthly `fractional_publication_count`.
+- Primary Y: monthly `unique_publication_ids`; aggregate `fractional_publication_count` equals this by construction.
 - Window: 2019-01 to 2025-12.
 - Observations: 84 total, 66 pre-July-2024, 18 post-July-2024.
 - Raw mean monthly output: 89.65 pre, 208.06 post.
 - Primary pre-trend: 2.0861 (SE 0.0753).
-- Primary level change: -9.4554 (SE 8.2418, 95% CI [-25.6092, 6.6984]).
+- Primary level change: -5.1224 (SE 7.6605, 95% CI [-20.1369, 9.8921]).
 - Primary slope change: 4.3330 (SE 0.7125, 95% CI [2.9366, 5.7294]).
 - Pipeline 2025 gap: 117.68; cumulative July 2024-December 2025 gap: -13.74; mean 2025 actual/expected ratio: 1.043.
 - Publication lag: median 41.000 months from project start to publication.
@@ -34,6 +35,7 @@ The publication analysis separates total system-level publication output, projec
 ## Main Tables
 
 - `data/publication_its_results_table.csv`
+- `reports/publication_stata_style_results.txt`
 - `data/publication_outcome_summary.csv`
 - `data/publication_project_cohort_summary.csv`
 
@@ -59,6 +61,6 @@ The publication analysis separates total system-level publication output, projec
 
 ## Interpretation
 
-System output: C. gradual increase. Project productivity: D. higher early productivity at the feasible 12-month horizon; 18/24-month post-RAP follow-up is insufficient. Publication timing: D. faster at the feasible 12-month horizon; mature timing remains insufficiently observed. Pipeline-adjusted output: D. mixed.
+System output: C. gradual increase. Project productivity: suggestive higher early 12-month output in the observable early post-transition cohort; mature productivity remains infeasible. Publication timing: suggestive higher 12-month first-publication incidence in the observable early post-transition cohort; mature timing remains infeasible. Pipeline-adjusted output: D. mixed.
 
 Use descriptive language: post-transition publication trajectory, system-level publication output, RAP-era project cohort, historical project-age publication profile, and pipeline-adjusted historical benchmark.

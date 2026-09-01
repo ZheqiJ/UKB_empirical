@@ -4,7 +4,7 @@ The publication analysis separates system-level output, project-level productivi
 
 | Candidate Y | Definition | Research Question | Main Limitations | How Limitations Are Addressed |
 | --- | --- | --- | --- | --- |
-| Y1 Total monthly publications | Monthly total `fractional_publication_count` | Did system-level UKB-linked publication flow change around July 2024? | Publication response is lagged; total output mixes entry and productivity. | Treat as descriptive calendar-time ITS; report lag and pipeline diagnostics. |
+| Y1 Total monthly publications | Monthly `unique_publication_ids`; aggregate `fractional_publication_count` is identical by construction | Did system-level UKB-linked publication flow change around July 2024? | Publication response is lagged; total output mixes entry and productivity. | Treat as descriptive calendar-time ITS; report lag and pipeline diagnostics. |
 | Y2 Publications per dynamic incumbent pool | 100 x fractional publications linked to pre-transition incumbents / post-start incumbents | How does incumbent-pool intensity evolve? | Denominator grows before July 2024 and age composition changes. | Demoted to supplementary decomposition. |
 | Y3 Fixed-cohort publication intensity | 100 x cohort publications / fixed cohort size | Does a stable pre-transition cohort show similar movement? | Older cohorts are not representative of all system output. | Prespecified cutoffs, no selection by significance. |
 | Y4 Project-age-standardized publication rate | Publication output by project age month or age band | How strongly does output vary over the project lifecycle? | Right-censoring at long ages for recent cohorts. | Age-specific risk sets with complete follow-up. |
