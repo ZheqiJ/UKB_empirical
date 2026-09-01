@@ -44,6 +44,15 @@ class PublicationITSAnalysisTests(unittest.TestCase):
             self.assertEqual(int(row["publication_app_links"]), observed["links"])
             self.assertEqual(int(row["unique_publication_ids"]), len(observed["pubs"]))
             self.assertAlmostEqual(float(row["fractional_publication_count"]), observed["frac"], places=2)
+            self.assertAlmostEqual(float(row["fractional_publication_count"]), float(row["unique_publication_ids"]), places=2)
+
+    def test_july_2024_level_shift_coding(self):
+        months = [self.analysis.date(2024, 6, 1), self.analysis.date(2024, 7, 1), self.analysis.date(2024, 8, 1)]
+        x, names = self.analysis.design_rows(months)
+        post = names.index("PostJuly2024")
+        time_after = names.index("TimeAfterJuly2024")
+        self.assertEqual([row[post] for row in x], [0.0, 1.0, 1.0])
+        self.assertEqual([row[time_after] for row in x], [0.0, 0.0, 1.0])
 
     def test_calendar_and_project_cohort_indicators_are_distinct(self):
         system = self.analysis.read_csv(self.analysis.Outputs().system_monthly)
@@ -88,15 +97,26 @@ class PublicationITSAnalysisTests(unittest.TestCase):
 
     def test_report_uses_revised_hierarchy_and_cautions(self):
         report = self.analysis.Outputs().results_report.read_text()
-        self.assertIn("Y1 total monthly fractional publication output is primary", report)
-        self.assertIn("monthly total `fractional_publication_count`, with no incumbent denominator", report)
+        self.assertIn("Y1 monthly unique UKB-linked publication output is primary", report)
+        self.assertIn("aggregate `fractional_publication_count` is kept in the data but is identical to unique publications", report)
+        self.assertIn("`PostJuly2024` directly represents the fitted July level shift", report)
         self.assertIn("not RAP-to-publication lag", report)
         self.assertIn("cannot establish that RAP caused publications", report)
         self.assertIn("Total publication growth is not the same object as project-level productivity growth", report)
+        self.assertIn("historical age-profile benchmark conditional on the realized project-entry pipeline", report)
+
+    def test_time_to_first_output_is_age_specific_share(self):
+        timing = self.analysis.read_csv(self.analysis.Outputs().first_pub_timing)
+        self.assertIn("share_with_first_publication_by_age_among_projects_observable_to_age_percent", timing[0])
+        old_metric = "cumulative_first_publication_" + "probability_percent"
+        self.assertNotIn(old_metric, timing[0])
+        report = self.analysis.Outputs().results_report.read_text()
+        self.assertIn("not a Kaplan-Meier estimate or a true cumulative-incidence curve", report)
 
     def test_stata_style_output_is_report_ready(self):
         output = self.analysis.Outputs().stata_style_output.read_text()
         self.assertIn("Publication total-output segmented ITS, primary model", output)
+        self.assertIn("Outcome: monthly number of unique UKB-linked publications", output)
         self.assertIn("Number of obs = 84", output)
         self.assertIn("P>|z|", output)
         self.assertIn("Aggregate-output measurement sensitivity", output)

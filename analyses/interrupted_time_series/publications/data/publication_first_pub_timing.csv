@@ -1,4 +1,4 @@
-project_cohort,project_age_months,projects_with_complete_followup_to_age,projects_with_first_publication_by_age,cumulative_first_publication_probability_percent,censor_date
+project_cohort,project_age_months,projects_with_complete_followup_to_age,projects_with_first_publication_by_age,share_with_first_publication_by_age_among_projects_observable_to_age_percent,censor_date
 pre_rap_project_start,0,4332,3,0.069,2025-12-31
 pre_rap_project_start,1,4332,6,0.139,2025-12-31
 pre_rap_project_start,2,4332,12,0.277,2025-12-31
