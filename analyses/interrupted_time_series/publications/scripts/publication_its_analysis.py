@@ -47,6 +47,7 @@ class Outputs:
     reading_guide: Path = REPORT_DIR / "publication_reading_guide.md"
     measurement_note: Path = REPORT_DIR / "publication_measurement_note.md"
     results_report: Path = REPORT_DIR / "publication_its_results.md"
+    stata_style_output: Path = REPORT_DIR / "publication_stata_style_results.txt"
 
     clean_events: Path = DATA_DIR / "publication_clean_event_links.csv"
     system_monthly: Path = DATA_DIR / "publication_system_total_monthly.csv"
@@ -1019,6 +1020,99 @@ def make_figures(system_rows: list[dict[str, object]], measure_rows: list[dict[s
     svg_xy_chart(out.pacf_figure, "Primary Total-Output ITS Residual PACF", [(float(r["lag"]), float(r["pacf"]), "pacf") for r in ac_rows], "Lag", "PACF")
 
 
+def stata_style_results(
+    its_rows: list[dict[str, object]],
+    sens_its: list[dict[str, object]],
+    hac_rows: list[dict[str, object]],
+    ar1_rows: list[dict[str, object]],
+    poisson_rows: list[dict[str, object]],
+) -> str:
+    def z_stat(row: dict[str, object]) -> float:
+        return float(row["estimate"]) / float(row["std_error"])
+
+    def reg_line(name: str, row: dict[str, object], irr: bool = False) -> str:
+        base = (
+            f"{name:<20} |"
+            f"{float(row['estimate']):>12.4f}"
+            f"{float(row['std_error']):>11.4f}"
+            f"{z_stat(row):>8.2f}"
+            f"{float(row['p_value']):>9.4f}"
+            f"{float(row['ci_low']):>12.4f}"
+            f"{float(row['ci_high']):>12.4f}"
+        )
+        if irr:
+            base += f"{math.exp(float(row['estimate'])):>10.3f}"
+        return base
+
+    primary = {r["term"]: r for r in its_rows}
+    ar1 = {r["term"]: r for r in ar1_rows}
+    poisson = {r["term"]: r for r in poisson_rows}
+    sens_lines = [
+        f"{r['outcome']:<36} {r['term']:<19} {float(r['estimate']):>10.4f} {float(r['std_error']):>10.4f} {float(r['p_value']):>8.4f} {float(r['ci_low']):>10.4f} {float(r['ci_high']):>10.4f}"
+        for r in sens_its
+        if r["term"] in {"PostJuly2024", "TimeAfterJuly2024"}
+    ]
+    hac_lines = [
+        f"{r['model'].replace('Primary total-output ITS, linear ', ''):<8} {r['term']:<19} {float(r['estimate']):>10.4f} {float(r['std_error']):>10.4f} {float(r['p_value']):>8.4f} {float(r['ci_low']):>10.4f} {float(r['ci_high']):>10.4f}"
+        for r in hac_rows
+        if r["term"] in {"PostJuly2024", "TimeAfterJuly2024"}
+    ]
+    return f"""Publication total-output segmented ITS, primary model
+Outcome: monthly total fractional publication count
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: OLS with Newey-West HAC standard errors
+
+------------------------------------------------------------------------------
+ fractional_count    | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+{reg_line('Time', primary['Time'])}
+{reg_line('PostJuly2024', primary['PostJuly2024'])}
+{reg_line('TimeAfterJuly2024', primary['TimeAfterJuly2024'])}
+ Month FE            |         Yes
+------------------------------------------------------------------------------
+
+Aggregate-output measurement sensitivity, same ITS specification
+-----------------------------------------------------------------------------------------------
+ Outcome                              Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+-----------------------------------------------------------------------------------------------
+{chr(10).join(sens_lines)}
+-----------------------------------------------------------------------------------------------
+
+Newey-West HAC lag sensitivity, primary total-output outcome
+--------------------------------------------------------------------------------
+ HAC lag  Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+--------------------------------------------------------------------------------
+{chr(10).join(hac_lines)}
+--------------------------------------------------------------------------------
+
+Prais-Winsten AR(1) robustness
+Estimated rho: {ar1['Time']['notes'].replace('estimated rho = ', '')}
+------------------------------------------------------------------------------
+ fractional_count    | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+{reg_line('Time', ar1['Time'])}
+{reg_line('PostJuly2024', ar1['PostJuly2024'])}
+{reg_line('TimeAfterJuly2024', ar1['TimeAfterJuly2024'])}
+------------------------------------------------------------------------------
+
+Poisson QMLE count robustness
+Outcome: monthly unique publication IDs
+Inference: Poisson QMLE with HAC standard errors
+----------------------------------------------------------------------------------------
+ unique_pub_ids      | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]       IRR
+---------------------+------------------------------------------------------------------
+{reg_line('Time', poisson['Time'], irr=True)}
+{reg_line('PostJuly2024', poisson['PostJuly2024'], irr=True)}
+{reg_line('TimeAfterJuly2024', poisson['TimeAfterJuly2024'], irr=True)}
+----------------------------------------------------------------------------------------
+
+Notes:
+1. This is Stata-style formatting of the repository's generated Python estimates, not a separate Stata execution log.
+2. The primary publication outcome is system-level total fractional output, not publication output per incumbent project.
+3. Coefficients are descriptive calendar-time changes and should not be interpreted as causal RAP treatment effects."""
+
+
 def docs(out: Outputs, audit: dict[str, object], lag_rows: list[dict[str, object]], system_rows: list[dict[str, object]], its_rows: list[dict[str, object]], sens_its: list[dict[str, object]], ac_rows: list[dict[str, object]], hac_rows: list[dict[str, object]], ar1_rows: list[dict[str, object]], poisson_rows: list[dict[str, object]], cohort_summary: list[dict[str, object]], fixed_results: list[dict[str, object]], pipeline_metrics: dict[str, float]) -> None:
     primary = {r["term"]: r for r in its_rows}
     ar1 = {r["term"]: r for r in ar1_rows}
@@ -1046,6 +1140,8 @@ def docs(out: Outputs, audit: dict[str, object], lag_rows: list[dict[str, object
         pipeline_class = "D. mixed"
     else:
         pipeline_class = "A. below historical pipeline expectation"
+    stata_output = stata_style_results(its_rows, sens_its, hac_rows, ar1_rows, poisson_rows)
+    write_text(out.stata_style_output, stata_output)
 
     write_text(out.readme, """# Publication-Output Module
 
@@ -1151,6 +1247,14 @@ The primary model is a monthly linear segmented ITS with month-of-year fixed eff
 
 Because publication response is lagged, `PostJuly2024` should not be interpreted as an immediate RAP productivity response.
 
+### Stata-Style Output For Reporting
+
+The following block is a Stata-style presentation of the generated publication regressions. It is also saved as `reports/publication_stata_style_results.txt`.
+
+```text
+{stata_output}
+```
+
 ## 8. Autocorrelation And HAC Inference
 
 After trend, July terms, and month fixed effects, Durbin-Watson is {lb[1]['durbin_watson_primary_model']}. Ljung-Box p-values are {lb[1]['ljung_box_p_value']} at lag 1, {lb[3]['ljung_box_p_value']} at lag 3, {lb[6]['ljung_box_p_value']} at lag 6, and {lb[12]['ljung_box_p_value']} at lag 12. These diagnostics are reported descriptively, not as pass/fail tests.
@@ -1212,6 +1316,7 @@ The evidence cannot establish that RAP caused publications to increase or decrea
 ## Main Outputs
 
 - Main ITS table: `data/publication_its_results_table.csv`
+- Stata-style regression output: `reports/publication_stata_style_results.txt`
 - Outcome hierarchy: `data/publication_outcome_summary.csv`
 - System monthly series: `data/publication_system_total_monthly.csv`
 - Project cohort summary: `data/publication_project_cohort_summary.csv`
@@ -1230,6 +1335,7 @@ The publication analysis separates total system-level publication output, projec
 4. `figures/publication_project_age_profile.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 6. `data/publication_its_results_table.csv`
+7. `reports/publication_stata_style_results.txt`
 
 ## Main Numbers
 
@@ -1254,6 +1360,7 @@ The publication analysis separates total system-level publication output, projec
 ## Main Tables
 
 - `data/publication_its_results_table.csv`
+- `reports/publication_stata_style_results.txt`
 - `data/publication_outcome_summary.csv`
 - `data/publication_project_cohort_summary.csv`
 

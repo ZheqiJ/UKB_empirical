@@ -94,6 +94,19 @@ class PublicationITSAnalysisTests(unittest.TestCase):
         self.assertIn("cannot establish that RAP caused publications", report)
         self.assertIn("Total publication growth is not the same object as project-level productivity growth", report)
 
+    def test_stata_style_output_is_report_ready(self):
+        output = self.analysis.Outputs().stata_style_output.read_text()
+        self.assertIn("Publication total-output segmented ITS, primary model", output)
+        self.assertIn("Number of obs = 84", output)
+        self.assertIn("P>|z|", output)
+        self.assertIn("Aggregate-output measurement sensitivity", output)
+        self.assertIn("Newey-West HAC lag sensitivity", output)
+        self.assertIn("Prais-Winsten AR(1)", output)
+        self.assertIn("Poisson QMLE count robustness", output)
+        report = self.analysis.Outputs().results_report.read_text()
+        self.assertIn("Stata-Style Output For Reporting", report)
+        self.assertIn("publication_stata_style_results.txt", report)
+
 
 if __name__ == "__main__":
     unittest.main()

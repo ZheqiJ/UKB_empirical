@@ -36,6 +36,79 @@ The primary model is a monthly linear segmented ITS with month-of-year fixed eff
 
 Because publication response is lagged, `PostJuly2024` should not be interpreted as an immediate RAP productivity response.
 
+### Stata-Style Output For Reporting
+
+The following block is a Stata-style presentation of the generated publication regressions. It is also saved as `reports/publication_stata_style_results.txt`.
+
+```text
+Publication total-output segmented ITS, primary model
+Outcome: monthly total fractional publication count
+Sample: 2019-01 to 2025-12                 Number of obs = 84
+Seasonality: month-of-year fixed effects  Newey-West lag = 3
+Inference: OLS with Newey-West HAC standard errors
+
+------------------------------------------------------------------------------
+ fractional_count    | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+Time                 |      2.0861     0.0753   27.70   0.0000      1.9384      2.2337
+PostJuly2024         |     -9.4554     8.2418   -1.15   0.2513    -25.6092      6.6984
+TimeAfterJuly2024    |      4.3330     0.7125    6.08   0.0000      2.9366      5.7294
+ Month FE            |         Yes
+------------------------------------------------------------------------------
+
+Aggregate-output measurement sensitivity, same ITS specification
+-----------------------------------------------------------------------------------------------
+ Outcome                              Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+-----------------------------------------------------------------------------------------------
+publication_app_links                PostJuly2024           -8.2700     9.2763   0.3727   -26.4516     9.9116
+publication_app_links                TimeAfterJuly2024       4.2856     0.7722   0.0000     2.7721     5.7992
+unique_publication_ids               PostJuly2024           -9.4554     8.2418   0.2513   -25.6092     6.6984
+unique_publication_ids               TimeAfterJuly2024       4.3330     0.7125   0.0000     2.9366     5.7294
+fractional_publication_count         PostJuly2024           -9.4554     8.2418   0.2513   -25.6092     6.6984
+fractional_publication_count         TimeAfterJuly2024       4.3330     0.7125   0.0000     2.9366     5.7294
+-----------------------------------------------------------------------------------------------
+
+Newey-West HAC lag sensitivity, primary total-output outcome
+--------------------------------------------------------------------------------
+ HAC lag  Term                    Coef.  Std. err.    P>|z|     CI low    CI high
+--------------------------------------------------------------------------------
+HAC(1)   PostJuly2024           -9.4554     8.6308   0.2733   -26.3717     7.4609
+HAC(1)   TimeAfterJuly2024       4.3330     0.7328   0.0000     2.8967     5.7693
+HAC(3)   PostJuly2024           -9.4554     8.2418   0.2513   -25.6092     6.6984
+HAC(3)   TimeAfterJuly2024       4.3330     0.7125   0.0000     2.9366     5.7294
+HAC(6)   PostJuly2024           -9.4554     6.7695   0.1625   -22.7237     3.8129
+HAC(6)   TimeAfterJuly2024       4.3330     0.5872   0.0000     3.1822     5.4838
+HAC(12)  PostJuly2024           -9.4554     6.4564   0.1431   -22.1100     3.1991
+HAC(12)  TimeAfterJuly2024       4.3330     0.5419   0.0000     3.2709     5.3951
+--------------------------------------------------------------------------------
+
+Prais-Winsten AR(1) robustness
+Estimated rho: -0.159
+------------------------------------------------------------------------------
+ fractional_count    | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]
+---------------------+--------------------------------------------------------
+Time                 |      2.0913     0.0825   25.35   0.0000      1.9295      2.2531
+PostJuly2024         |    -10.1956     7.1903   -1.42   0.1562    -24.2886      3.8975
+TimeAfterJuly2024    |      4.3547     0.5989    7.27   0.0000      3.1809      5.5284
+------------------------------------------------------------------------------
+
+Poisson QMLE count robustness
+Outcome: monthly unique publication IDs
+Inference: Poisson QMLE with HAC standard errors
+----------------------------------------------------------------------------------------
+ unique_pub_ids      | Coefficient  Std. err.       z    P>|z|      [95% conf. interval]       IRR
+---------------------+------------------------------------------------------------------
+Time                 |      0.0241     0.0012   20.08   0.0000      0.0217      0.0266     1.024
+PostJuly2024         |     -0.1566     0.0497   -3.15   0.0016     -0.2539     -0.0592     0.855
+TimeAfterJuly2024    |      0.0083     0.0029    2.86   0.0040      0.0027      0.0140     1.008
+----------------------------------------------------------------------------------------
+
+Notes:
+1. This is Stata-style formatting of the repository's generated Python estimates, not a separate Stata execution log.
+2. The primary publication outcome is system-level total fractional output, not publication output per incumbent project.
+3. Coefficients are descriptive calendar-time changes and should not be interpreted as causal RAP treatment effects.
+```
+
 ## 8. Autocorrelation And HAC Inference
 
 After trend, July terms, and month fixed effects, Durbin-Watson is 2.3022. Ljung-Box p-values are 0.1389 at lag 1, 0.2625 at lag 3, 0.2887 at lag 6, and 0.0827 at lag 12. These diagnostics are reported descriptively, not as pass/fail tests.
@@ -97,6 +170,7 @@ The evidence cannot establish that RAP caused publications to increase or decrea
 ## Main Outputs
 
 - Main ITS table: `data/publication_its_results_table.csv`
+- Stata-style regression output: `reports/publication_stata_style_results.txt`
 - Outcome hierarchy: `data/publication_outcome_summary.csv`
 - System monthly series: `data/publication_system_total_monthly.csv`
 - Project cohort summary: `data/publication_project_cohort_summary.csv`

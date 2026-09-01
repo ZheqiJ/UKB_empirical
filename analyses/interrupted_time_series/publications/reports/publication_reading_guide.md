@@ -10,6 +10,7 @@ The publication analysis separates total system-level publication output, projec
 4. `figures/publication_project_age_profile.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
 6. `data/publication_its_results_table.csv`
+7. `reports/publication_stata_style_results.txt`
 
 ## Main Numbers
 
@@ -34,6 +35,7 @@ The publication analysis separates total system-level publication output, projec
 ## Main Tables
 
 - `data/publication_its_results_table.csv`
+- `reports/publication_stata_style_results.txt`
 - `data/publication_outcome_summary.csv`
 - `data/publication_project_cohort_summary.csv`
 
