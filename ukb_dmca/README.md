@@ -173,8 +173,8 @@ uploads as proof of conduct by a UKB application team.
 - Deduplicated repository lineages: 193
 - Confirmed: 2
 - Probable: 0
-- Ambiguous: 18
-- Unresolved: 173
+- Ambiguous: 17
+- Unresolved: 174
 - Unique-application match ratio: 0.0104
 - Unique applications linked: 2
 - Application input used: `data/applications.tsv`
