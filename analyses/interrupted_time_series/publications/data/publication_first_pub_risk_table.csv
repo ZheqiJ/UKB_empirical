@@ -1,0 +1,17 @@
+project_cohort,project_age_months,number_at_risk,events_observed_by_age,censored_by_age
+pre_rap_project_start,0,4332,0,0
+pre_rap_project_start,6,4275,58,0
+pre_rap_project_start,12,4081,252,0
+pre_rap_project_start,18,3733,598,3
+pre_rap_project_start,24,3121,966,248
+pre_rap_project_start,36,2070,1535,727
+pre_rap_project_start,48,1365,1836,1131
+pre_rap_project_start,60,923,1972,1438
+post_rap_project_start,0,2133,0,0
+post_rap_project_start,6,1237,30,868
+post_rap_project_start,12,420,83,1630
+post_rap_project_start,18,0,98,2035
+post_rap_project_start,24,0,98,2035
+post_rap_project_start,36,0,98,2035
+post_rap_project_start,48,0,98,2035
+post_rap_project_start,60,0,98,2035

@@ -1,0 +1,7 @@
+model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-06,78,66,12,PostJuly2024,7.9712,7.8159,0.3078,-7.3481,23.2904,primary endpoint set to 2025-06-01 because recent months may be incomplete
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-06,78,66,12,TimeAfterJuly2024,1.3087,1.0445,0.2102,-0.7385,3.3558,primary endpoint set to 2025-06-01 because recent months may be incomplete
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-09,81,66,15,PostJuly2024,-3.5072,8.3260,0.6736,-19.8261,12.8118,primary endpoint set to 2025-09-01 because recent months may be incomplete
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-09,81,66,15,TimeAfterJuly2024,3.9971,1.0123,0.0001,2.0130,5.9812,primary endpoint set to 2025-09-01 because recent months may be incomplete
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-12,84,66,18,PostJuly2024,-5.1224,7.6605,0.5037,-20.1369,9.8921,primary endpoint set to 2025-12-01 because recent months may be incomplete
+Right-edge endpoint sensitivity HAC(3),unique_publication_ids,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.7125,0.0000,2.9366,5.7294,primary endpoint set to 2025-12-01 because recent months may be incomplete

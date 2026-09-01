@@ -1,0 +1,5 @@
+horizon_months_after_july_2024,target_month,pretrend_benchmark_fitted_unique_publications,segmented_model_fitted_unique_publications,absolute_difference_per_month,std_error,p_value,ci_low,ci_high,percent_difference_vs_pretrend_benchmark,percent_ci_low,percent_ci_high,interpretation
+3,2024-09,151.4823,155.0259,3.5436,6.5757,0.5900,-9.3448,16.4320,2.34,-6.17,10.85,"descriptive pre-trend benchmark difference, not a causal counterfactual effect"
+6,2024-12,159.0540,175.5966,16.5426,5.2622,0.0017,6.2287,26.8564,10.40,3.92,16.89,"descriptive pre-trend benchmark difference, not a causal counterfactual effect"
+12,2025-06,182.1641,224.7046,42.5406,4.8991,0.0000,32.9384,52.1428,23.35,18.08,28.62,"descriptive pre-trend benchmark difference, not a causal counterfactual effect"
+18,2025-12,184.0868,252.6254,68.5386,7.5404,0.0000,53.7594,83.3178,37.23,29.20,45.26,"descriptive pre-trend benchmark difference, not a causal counterfactual effect"

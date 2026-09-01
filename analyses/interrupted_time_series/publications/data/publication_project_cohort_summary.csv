@@ -1,7 +1,7 @@
-project_cohort,followup_horizon_months,eligible_projects,total_projects_in_cohort,mean_fractional_publications,any_publication_rate_percent,followup_limitation
-pre_rap_project_start,12,4332,4332,0.093433,6.648,feasible
-pre_rap_project_start,18,4329,4332,0.255660,14.761,feasible
-pre_rap_project_start,24,4005,4332,0.475123,22.747,feasible
-post_rap_project_start,12,471,2603,0.152229,11.465,feasible
-post_rap_project_start,18,0,2603,,,not feasible for this cohort under 2025-12 reliable censor date
-post_rap_project_start,24,0,2603,,,not feasible for this cohort under 2025-12 reliable censor date
+project_cohort,followup_horizon_months,eligible_projects,total_projects_in_cohort,eligible_share_percent,mean_fractional_publications,mean_fractional_publications_se,mean_fractional_publications_ci_low,mean_fractional_publications_ci_high,median_fractional_publications,zero_publication_share_percent,any_publication_rate_percent,any_publication_rate_ci_low,any_publication_rate_ci_high,followup_limitation
+pre_rap_project_start,12,4332,4332,100.000,0.082352,0.006375,0.069858,0.094847,0.000000,94.160,5.840,5.142,6.539,feasible
+pre_rap_project_start,18,4329,4332,99.931,0.237449,0.013120,0.211733,0.263165,0.000000,86.209,13.791,12.764,14.818,feasible
+pre_rap_project_start,24,4005,4332,92.452,0.456346,0.022810,0.411639,0.501053,0.000000,77.828,22.172,20.886,23.459,feasible
+post_rap_project_start,12,471,2603,18.095,0.136306,0.021548,0.094071,0.178541,0.000000,89.172,10.828,8.022,13.634,feasible
+post_rap_project_start,18,0,2603,0.000,,,,,,,,,,not yet estimable for this cohort under 2025-12 reliable censor date
+post_rap_project_start,24,0,2603,0.000,,,,,,,,,,not yet estimable for this cohort under 2025-12 reliable censor date

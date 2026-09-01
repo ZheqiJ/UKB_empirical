@@ -1,0 +1,9 @@
+start_cohort,cohort_start,cohort_end,project_start_cohort_post_transition,projects,eligible_projects,eligible_share_percent,pub12_mean_fractional,pub12_ci_low,pub12_ci_high,anypub12_rate_percent,anypub12_ci_low,anypub12_ci_high,interpretation
+2021H1,2021-01-01,2021-06-30,0,345,345,100.000,0.068116,0.036109,0.100123,5.507,3.100,7.914,descriptive comparable early-age project-start cohort profile
+2021H2,2021-07-01,2021-12-31,0,201,201,100.000,0.174129,0.054841,0.293418,6.965,3.446,10.484,descriptive comparable early-age project-start cohort profile
+2022H1,2022-01-01,2022-06-30,0,350,350,100.000,0.131429,0.077070,0.185787,9.429,6.367,12.490,descriptive comparable early-age project-start cohort profile
+2022H2,2022-07-01,2022-12-31,0,401,401,100.000,0.066085,0.028654,0.103515,4.988,2.857,7.118,descriptive comparable early-age project-start cohort profile
+2023H1,2023-01-01,2023-06-30,0,377,377,100.000,0.108753,0.066769,0.150737,7.958,5.226,10.689,descriptive comparable early-age project-start cohort profile
+2023H2,2023-07-01,2023-12-31,0,365,365,100.000,0.124658,0.063094,0.186221,6.849,4.258,9.441,descriptive comparable early-age project-start cohort profile
+2024H1,2024-01-01,2024-06-30,0,324,324,100.000,0.112654,0.061913,0.163395,7.716,4.810,10.622,descriptive comparable early-age project-start cohort profile
+2024H2,2024-07-01,2024-12-31,1,474,474,100.000,0.135443,0.093465,0.177422,10.759,7.970,13.549,descriptive comparable early-age project-start cohort profile
