@@ -1,0 +1,6 @@
+project_age_bin,min_age_months,max_age_months,pre_transition_project_months,pre_transition_fractional_publications,monthly_fractional_publications_per_project,estimated_using_calendar_months_before
+0_6_months,0,6,23818,67.000,0.00281300,2024-07-01
+7_12_months,7,12,19073,230.250,0.01207204,2024-07-01
+13_24_months,13,24,32321,935.167,0.02893372,2024-07-01
+25_48_months,25,48,48536,2191.417,0.04515034,2024-07-01
+49_plus_months,49,,43205,2493.167,0.05770551,2024-07-01

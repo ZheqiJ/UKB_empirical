@@ -1,14 +1,14 @@
-grain,period,period_start,period_end,publication_app_links,unique_publication_ids,fractional_publication_count,apps_with_any_publication,note
-summary,latest_schema19_exact_publication,2026-07-16,2026-07-16,,,,,Latest exact publication date in the local public UKB Schema 19 snapshot.
-summary,latest_clean_incumbent_publication_link,2026-07-16,2026-07-16,,,,,Latest exact publication date after matching to the incumbent project-start universe and removing pre-start links.
-month,2025-08,2025-08-01,2025-08-31,257,251,251.000,212,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2025-09,2025-09-01,2025-09-30,215,209,209.000,187,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2025-10,2025-10-01,2025-10-31,253,246,246.000,200,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2025-11,2025-11-01,2025-11-30,209,200,200.000,178,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2025-12,2025-12-01,2025-12-31,247,243,243.000,206,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-01,2026-01-01,2026-01-31,276,270,270.000,236,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-02,2026-02-01,2026-02-28,218,212,212.000,193,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-03,2026-03-01,2026-03-31,239,232,232.000,195,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-04,2026-04-01,2026-04-30,255,243,243.000,212,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-05,2026-05-01,2026-05-31,210,207,207.000,179,Right edge may be incomplete until external bibliographic completeness is validated.
-month,2026-06,2026-06-01,2026-06-30,123,119,119.000,110,Right edge may be incomplete until external bibliographic completeness is validated.
+grain,period,period_start,period_end,publication_app_links,unique_publication_ids,fractional_publication_count,note
+summary,latest_schema19_exact_publication,2026-07-16,2026-07-16,,,,Latest exact publication date in the local public UKB Schema19 snapshot.
+summary,reliable_censor_date_used_for_project_followup,2025-12-31,2025-12-31,,,,Conservative reliable end date used for primary calendar-time analyses and fixed follow-up eligibility.
+month,2025-08,2025-08-01,2025-08-31,270,261,261.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2025-09,2025-09-01,2025-09-30,224,213,213.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2025-10,2025-10-01,2025-10-31,281,272,272.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2025-11,2025-11-01,2025-11-30,239,227,227.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2025-12,2025-12-01,2025-12-31,270,265,265.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-01,2026-01-01,2026-01-31,311,304,304.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-02,2026-02-01,2026-02-28,256,245,245.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-03,2026-03-01,2026-03-31,287,280,280.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-04,2026-04-01,2026-04-30,301,287,287.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-05,2026-05-01,2026-05-31,267,262,262.000,Right edge may be incomplete until external bibliographic completeness is validated.
+month,2026-06,2026-06-01,2026-06-30,167,158,158.000,Right edge may be incomplete until external bibliographic completeness is validated.

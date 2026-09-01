@@ -1,19 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="520" viewBox="0 0 1060 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="78" y="28" font-family="Arial" font-size="20" font-weight="700">Primary ITS Residual PACF</text>
-<text x="18" y="260.0" transform="rotate(-90 18 260.0)" font-family="Arial" font-size="13" fill="#444">PACF</text>
-<line x1="78" x2="1032" y1="46.0" y2="46.0" stroke="#e5e7eb"/>
-<text x="68" y="50.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">0.2</text>
-<line x1="78" x2="1032" y1="149.0" y2="149.0" stroke="#e5e7eb"/>
-<text x="68" y="153.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">0.1</text>
-<line x1="78" x2="1032" y1="252.0" y2="252.0" stroke="#e5e7eb"/>
-<text x="68" y="256.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.0</text>
-<line x1="78" x2="1032" y1="355.0" y2="355.0" stroke="#e5e7eb"/>
-<text x="68" y="359.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.1</text>
-<line x1="78" x2="1032" y1="458.0" y2="458.0" stroke="#e5e7eb"/>
-<text x="68" y="462.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.3</text>
-<line x1="5802.0" x2="5802.0" y1="46" y2="458" stroke="#111827" stroke-dasharray="5 5"/>
-<text x="5809.0" y="62" font-family="Arial" font-size="12" fill="#111827">Jul 2024 transition marker</text>
-<path d="M78.0,131.7 L164.7,206.5 L251.5,176.4 L338.2,305.2 L424.9,279.8 L511.6,193.8 L598.4,207.7 L685.1,182.3 L771.8,85.9 L858.5,418.1 L945.3,317.0 L1032.0,411.0" fill="none" stroke="#1f6feb" stroke-width="2.4"/>
-<text x="78.0" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2019</text>
+<text x="78" y="28" font-family="Arial" font-size="20" font-weight="700">Primary Total-Output ITS Residual PACF</text>
+<text x="450.0" y="442" text-anchor="middle" font-family="Arial" font-size="13" fill="#444">Lag</text>
+<text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-family="Arial" font-size="13" fill="#444">PACF</text>
+<line x1="78" x2="870" y1="46.0" y2="46.0" stroke="#e5e7eb"/>
+<text x="68" y="50.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">0.22</text>
+<line x1="78" x2="870" y1="134.0" y2="134.0" stroke="#e5e7eb"/>
+<text x="68" y="138.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">0.06</text>
+<line x1="78" x2="870" y1="222.0" y2="222.0" stroke="#e5e7eb"/>
+<text x="68" y="226.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.09</text>
+<line x1="78" x2="870" y1="310.0" y2="310.0" stroke="#e5e7eb"/>
+<text x="68" y="314.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.25</text>
+<line x1="78" x2="870" y1="398.0" y2="398.0" stroke="#e5e7eb"/>
+<text x="68" y="402.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.40</text>
+<path d="M78.0,260.2 L150.0,158.4 L222.0,80.1 L294.0,239.1 L366.0,272.5 L438.0,165.9 L510.0,171.2 L582.0,277.1 L654.0,83.9 L726.0,363.9 L798.0,285.1 L870.0,195.3" fill="none" stroke="#8250df" stroke-width="2.4"/>
 </svg>

@@ -1,101 +1,103 @@
 # Publication ITS Results
 
-## 1. Outcome And Sample Definition
+## 1. Research Question
 
-The primary outcome is monthly `fractional_publications_per_100_post_start_incumbents` among projects with public start date before 2024-07-05. The sample excludes post-transition entrants from the publication-output composition.
+The publication analysis now separates three empirical objects: system-level scientific output, project-level productivity and timing, and pipeline-adjusted output.
 
-## 2. Why Incumbents Are Used
+## 2. Why Publications Require A Pipeline Framework
 
-Incumbents are used so that post-transition project starts do not mechanically change the publication mix. The denominator is not active projects; it is pre-transition incumbent projects whose public start date has occurred by the end of month `t`.
+Total scientific output equals project entry multiplied by project-level productivity and publication timing. Project entry is dynamic, and publication output has a long project-start-to-publication lag.
 
-## 3. Publication Lag
+## 3. Publication Data And Linkage Construction
 
-The median project-start-to-publication lag is 41.000 months. Only 1.15% of linked publication events occur within 0-6 months of project start, while 79.08% occur after 24 months. This is not RAP-to-publication lag. It means an immediate July 2024 publication response should not be mechanically expected.
+The analysis starts from 14,633 Schema19 publications and 12,598 Schema24 app-publication links. After matching to the project universe and excluding publication-before-start links, it uses 12,568 cleaned links and 11,959 unique publications.
 
-## 4. Publication-Measure Construction
+## 4. Candidate Outcome Hierarchy
 
-The primary intensity outcome is fractional publications per 100 post-start incumbents. The secondary extensive-margin outcome is any-publication rate percent. App-link and unique-publication rates are measurement sensitivities.
+Y1 total monthly fractional publication output is primary. Y2 incumbent-pool intensity is supplementary. Y3 fixed cohorts, Y4 project-age profiles, Y5/Y6 fixed follow-up, Y7 time to first publication, Y8 project-month panel, and Y9 pipeline gaps diagnose mechanisms and limitations.
 
-## 5. Raw Monthly Trajectory
+## 5. Primary Outcome: Total Monthly Publication Flow
 
-In the 2019-01 to 2025-12 primary window, the pre-transition mean is 3.47 fractional publications per 100 post-start incumbents, and the post-transition mean is 4.64. The raw trajectory does not show a sharp immediate publication collapse around July 2024; 2025 is generally above the preceding fitted trajectory.
+The primary outcome is monthly total `fractional_publication_count`, with no incumbent denominator. This is closest to the theoretical question about the total number of scientific outcomes and allows project entry to be part of the system-level mechanism.
 
-## 6. Primary ITS Design
+## 6. Raw Calendar-Time Pattern
 
-The primary model is a linear segmented ITS with month-of-year fixed effects and Newey-West HAC lag 3. There are 84 monthly observations: 66 pre-transition months and 18 post-transition months.
+In the 2019-01 to 2025-12 primary window, mean monthly total fractional output is 89.65 before July 2024 and 208.06 after July 2024. July-September 2024 averages 170.33, while calendar 2025 averages 229.17. The raw total-output series does not show a sharp immediate collapse around July 2024; 2025 is higher.
 
-## 7. Autocorrelation Diagnostics
+## 7. Primary Segmented ITS
 
-After controlling for trend, July terms, and calendar-month seasonality, the Durbin-Watson statistic is 1.7624. Ljung-Box at lag 12 is Q = 10.7364 with p = 0.5523. These diagnostics do not show strong remaining residual serial correlation, but HAC and AR(1) robustness are still reported because monthly publication output can be temporally persistent.
+The primary model is a monthly linear segmented ITS with month-of-year fixed effects and Newey-West HAC lag 3. There are 84 months: 66 pre-transition and 18 post-transition.
 
-## 8. Newey-West Inference
-
-Primary HAC lag is 3, prespecified for monthly data before inspecting significance. HAC lag sensitivity is saved in `publication_its_hac_lag_sensitivity.csv`; point estimates are invariant across HAC lags, while standard errors vary.
-
-## 9. AR(1) Robustness
-
-Prais-Winsten AR(1) robustness reports estimated rho = 0.103. The AR(1) level estimate is -0.2183 (SE 0.2775, 95% CI [-0.7621, 0.3255]); the slope estimate is 0.1041 (SE 0.0231, 95% CI [0.0588, 0.1494]). The direction is consistent with the primary gradual-increase reading.
-
-## 10. Observed-Versus-Expected Historical Benchmark
-
-Using only pre-July-2024 observations, the fitted pre-transition historical benchmark implies a July 2024-March 2025 cumulative gap of 2.33 and a calendar-2025 gap of 13.44 publication-intensity points. These are descriptive gaps, not causal untreated potential outcomes.
-
-## 11. Publication Lifecycle / Age Composition
-
-Age-band outputs show publication intensity is highest among older projects. The aggregate post-2024 rise is therefore plausibly partly related to aging/composition of the incumbent project pool, not only an institutional transition pattern.
-
-## 12. Fixed-Cohort Robustness
-
-The fixed cohort keeps projects started before 2022-07-01. Its ITS slope estimate is 0.0274 with SE 0.0141. This preserves a positive post-July trajectory within a stable membership cohort, while still remaining descriptive.
-
-## 13. Measure Sensitivity
-
-The positive post-July slope pattern is compared across fractional publication intensity, app-link intensity, unique-publication intensity, and any-publication rate in `publication_its_results_table.csv`. The conclusion does not rely only on multi-application link counting.
-
-## 14. Right-Edge Completeness
-
-The main analysis ends at 2025-12. The local snapshot contains 2026 publication dates through 2026-07-16, but 2026 is retained only as a right-edge completeness diagnostic.
-
-## 15. Additional Robustness
-
-Additional outputs include HAC lag sensitivity, Poisson QMLE count robustness, pre-transition placebo July breakpoints, residual ACF/PACF, and right-edge completeness diagnostics.
-
-## 16. What The Evidence Supports
-
-The evidence supports a descriptive pattern of no sharp immediate publication disruption around July 2024, followed by a gradual higher 2025 incumbent publication trajectory relative to the fitted pre-transition historical benchmark.
-
-## 17. What It Cannot Establish
-
-This analysis cannot establish that RAP caused publications to rise or fall. July 2024 is not the verified individual RAP-exposure date for every incumbent, and project-start-to-publication lag is long.
-
-## 18. Recommended Paper-Ready Stylized Fact
-
-Classification: C. Gradual post-transition increase.
-
-Candidate conservative statements:
-
-> Among pre-transition UKB incumbent projects, publication output shows no sharp immediate disruption at the July 2024 institutional transition marker.
-
-> Publication output rises gradually through 2025 relative to the fitted pre-transition historical benchmark, but long project-start-to-publication lags mean this should not be interpreted as an immediate RAP effect.
-
-> Lifecycle composition is an important alternative explanation: older incumbent projects publish at higher rates, so aggregate post-transition increases may partly reflect project aging.
-
-## Main Results
-
-| Term | Estimate | SE | p-value | 95% CI | Interpretation |
+| Term | Estimate | SE | p-value | 95% CI | Economic reading |
 | --- | ---: | ---: | ---: | ---: | --- |
-| PostJuly2024 | -0.2439 | 0.1969 | 0.2155 | [-0.6299, 0.1421] | descriptive immediate level change |
-| TimeAfterJuly2024 | 0.1051 | 0.0169 | 0.0000 | [0.0719, 0.1383] | descriptive monthly post-transition slope change |
+| Time | 2.0861 | 0.0753 | 0.0000 | [1.9384, 2.2337] | pre-transition monthly trend in total fractional publication output |
+| PostJuly2024 | -9.4554 | 8.2418 | 0.2513 | [-25.6092, 6.6984] | immediate descriptive level change at the institutional marker |
+| TimeAfterJuly2024 | 4.3330 | 0.7125 | 0.0000 | [2.9366, 5.7294] | post-July monthly slope change in total output |
 
-## Output Files
+Because publication response is lagged, `PostJuly2024` should not be interpreted as an immediate RAP productivity response.
 
-- Main figure: `figures/publication_figure_main_three_panel.svg`
-- Main table: `data/publication_its_results_table.csv`
-- Measurement note: `reports/publication_measurement_note.md`
-- Autocorrelation diagnostics: `data/publication_its_autocorrelation_diagnostics.csv`
-- HAC sensitivity: `data/publication_its_hac_lag_sensitivity.csv`
-- AR(1) robustness: `data/publication_its_ar1_robustness.csv`
-- Historical benchmark: `data/publication_observed_vs_expected.csv`
-- Age/lifecycle: `data/publication_age_band_monthly.csv`
-- Fixed cohort: `data/publication_fixed_cohort_monthly.csv`
-- Right-edge completeness: `data/its_recent_publication_completeness.csv`
+## 8. Autocorrelation And HAC Inference
+
+After trend, July terms, and month fixed effects, Durbin-Watson is 2.3022. Ljung-Box p-values are 0.1389 at lag 1, 0.2625 at lag 3, 0.2887 at lag 6, and 0.0827 at lag 12. These diagnostics are reported descriptively, not as pass/fail tests.
+
+HAC(1), HAC(3), HAC(6), and HAC(12) keep identical OLS point estimates; only uncertainty changes. AR(1) robustness estimates rho = -0.159; the slope-change estimate is 4.3547 with SE 0.5989.
+
+## 9. Publication Measurement Sensitivity
+
+541 publications are linked to multiple valid applications. Measurement sensitivity compares app links, unique publications, and fractional counts. The broad total-output trajectory is not driven only by multi-application linking.
+
+## 10. Project-Start-To-Publication Lag
+
+Median project-start-to-publication lag is 41.000 months, and 79.08% of links occur after 24 months. This is not RAP-to-publication lag. It is why immediate post-July publications mostly reflect work initiated earlier.
+
+## 11. Project-Age Publication Profile
+
+Project-age profiles show publication productivity varies strongly over the project lifecycle. The age profile is therefore central to interpreting total-output growth.
+
+## 12. Fixed-Cohort Analysis
+
+Fixed cohorts are constructed using prespecified cutoffs 2021-07-01, 2022-01-01, and 2022-07-01. For the 2022-07-01 cohort, the post-July slope estimate is 0.0265 with SE 0.0139. This is a stable-membership diagnostic, not the primary system-level outcome.
+
+## 13. Fixed-Follow-Up Project Productivity
+
+At 12 months, eligible pre-RAP projects number 4332 and eligible post-RAP projects number 471. Mean Pub12 is 0.093433 for pre-RAP starts and 0.152229 for post-RAP starts; AnyPub12 is 6.648% versus 11.465%. Post-RAP 18- and 24-month outcomes are not feasible for this cohort under 2025-12 reliable censor date and not feasible for this cohort under 2025-12 reliable censor date under the 2025-12-31 censor date.
+
+## 14. Time To First Publication
+
+Time-to-first-publication outputs use age-specific complete-follow-up denominators. They support only early post-RAP comparisons; mature publication timing for RAP-era projects is not yet observable.
+
+## 15. Pipeline-Adjusted Expected Publication Output
+
+The pipeline benchmark estimates the historical project-age publication profile using only calendar months before July 2024, then applies that profile to the evolving project pipeline. Calendar 2025 actual output is 117.68 fractional publications above the pipeline benchmark, with mean actual/expected ratio 1.043; however, the cumulative July 2024-December 2025 pipeline gap is -13.74, because late 2024 is below the pipeline benchmark. This is a historical benchmark, not a causal counterfactual.
+
+## 16. Right-Edge Completeness
+
+Primary calendar-time analyses end at 2025-12. The local snapshot contains publications through 2026-07-16, but 2026 is retained only as a right-edge diagnostic.
+
+## 17. Robustness
+
+Robustness outputs include aggregate measurement sensitivity, HAC lag sensitivity, AR(1), Poisson QMLE for raw counts, fixed cohorts, project-follow-up outcomes, first-publication timing, and pre-transition placebo July breakpoints.
+
+## 18. What The Evidence Supports
+
+System output: C. gradual increase. Project productivity: D. higher early productivity at the feasible 12-month horizon; 18/24-month post-RAP follow-up is insufficient. Publication timing: D. faster at the feasible 12-month horizon; mature timing remains insufficiently observed. Pipeline-adjusted output: D. mixed.
+
+## 19. What The Evidence Cannot Establish
+
+The evidence cannot establish that RAP caused publications to increase or decrease. July 5, 2024 is not the verified individual RAP-exposure date for every incumbent project. Total publication growth is not the same object as project-level productivity growth, and the fitted historical pipeline expected output is not a causal untreated potential outcome.
+
+## 20. Paper-Ready Stylized Fact
+
+> UKB-linked total publication output shows no sharp immediate collapse around the July 2024 institutional transition marker and rises through 2025 in the public publication series.
+
+> Because project-start-to-publication lags are long, post-July 2024 publications largely reflect projects and research pipelines that began before the transition.
+
+> Relative to a historical project-age pipeline benchmark, 2025 publication output is above expected after a below-benchmark late-2024 period; this should be interpreted as a descriptive pipeline-adjusted pattern rather than a causal RAP effect.
+
+## Main Outputs
+
+- Main ITS table: `data/publication_its_results_table.csv`
+- Outcome hierarchy: `data/publication_outcome_summary.csv`
+- System monthly series: `data/publication_system_total_monthly.csv`
+- Project cohort summary: `data/publication_project_cohort_summary.csv`
+- Main figures: `figures/publication_total_monthly.svg`, `figures/publication_measure_comparison.svg`, `figures/publication_project_age_profile.svg`, `figures/publication_observed_vs_pipeline_expected.svg`, `figures/publication_cohort_followup.svg`

@@ -1,29 +1,17 @@
 # Publication ITS Design
 
-## Question
+The publication analysis separates system-level output, project-level productivity/timing, and pipeline-adjusted output. Total scientific output is interpreted as the product of project entry, project-level productivity, and publication timing.
 
-How did publication output among pre-transition UKB incumbent projects evolve around and after the July 2024 RAP-based access transition?
+| Candidate Y | Definition | Research Question | Main Limitations | How Limitations Are Addressed |
+| --- | --- | --- | --- | --- |
+| Y1 Total monthly publications | Monthly total `fractional_publication_count` | Did system-level UKB-linked publication flow change around July 2024? | Publication response is lagged; total output mixes entry and productivity. | Treat as descriptive calendar-time ITS; report lag and pipeline diagnostics. |
+| Y2 Publications per dynamic incumbent pool | 100 x fractional publications linked to pre-transition incumbents / post-start incumbents | How does incumbent-pool intensity evolve? | Denominator grows before July 2024 and age composition changes. | Demoted to supplementary decomposition. |
+| Y3 Fixed-cohort publication intensity | 100 x cohort publications / fixed cohort size | Does a stable pre-transition cohort show similar movement? | Older cohorts are not representative of all system output. | Prespecified cutoffs, no selection by significance. |
+| Y4 Project-age-standardized publication rate | Publication output by project age month or age band | How strongly does output vary over the project lifecycle? | Right-censoring at long ages for recent cohorts. | Age-specific risk sets with complete follow-up. |
+| Y5 Publications within fixed follow-up window | Project-level fractional publications within H months | Are RAP-era projects similarly productive at comparable early ages? | Post-RAP cohorts currently have limited follow-up. | Only eligible projects with complete follow-up are included. |
+| Y6 Any publication within fixed follow-up window | Project-level any-publication indicator within H months | Do RAP-era projects reach first output at similar early rates? | Same short follow-up problem. | Report feasible 12-month horizon and mark 18/24 months infeasible for post cohorts. |
+| Y7 Time to first publication | Cumulative first-publication probability by project age | Does timing differ across project-start cohorts? | Mature post-RAP timing is not observed. | Transparent cumulative-incidence tables, no causal survival claim. |
+| Y8 Project-month publication count | Project x calendar month fractional output | How do calendar time and project age jointly describe output? | High-dimensional descriptive panel; July is not individual treatment for incumbents. | Calendar post and project age are separate variables. |
+| Y9 Pipeline-adjusted publication gap | Actual total output minus expected output from pre-transition age profile and project pipeline | Is post-July total output unusual relative to the evolving project pipeline? | Historical benchmark, not causal counterfactual. | Estimate age profile only from pre-transition information. |
 
-## Design Status
-
-This is a descriptive interrupted-time-series / stylized-fact design. July 2024 is an institutional transition marker, not a verified treatment date for every incumbent project.
-
-## Incumbent Sample
-
-The analysis keeps projects with public project start date before 2024-07-05. This avoids mechanically mixing post-transition entrants into the publication-output composition.
-
-The monthly denominator is `post_start_incumbent_projects`: the number of pre-transition incumbent projects whose public start date has occurred by the end of month `t`. It grows before July 2024 as future incumbents enter their project period, then becomes fixed at 4332 after the transition.
-
-## Primary Outcome And Window
-
-Primary intensity outcome: `fractional_publications_per_100_post_start_incumbents`.
-
-This is selected before inspecting significance because it normalizes for the post-start incumbent pool and avoids full double counting of publications linked to multiple applications.
-
-Primary window: 2019-01 through 2025-12. The raw exact publication-event data support consistent construction before 2022-07, the window gives 66 pre-transition and 18 post-transition monthly observations, and 2026 is excluded because of right-edge completeness risk.
-
-## Model
-
-`Y_t = beta_0 + beta_1 Time_t + beta_2 PostJuly2024_t + beta_3 TimeAfterJuly2024_t + month-of-year FE + epsilon_t`.
-
-Primary inference is OLS with Newey-West HAC lag 3. HAC(1), HAC(6), and HAC(12), AR(1) errors, fixed cohort, publication-measure sensitivity, Poisson count robustness, and pre-transition placebos are reported as diagnostics or robustness checks.
+Alternative outcomes are Y1 measurement variants and Y2/Y3 rate definitions. Y4-Y9 diagnose limitations in total-output interpretation.

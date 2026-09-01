@@ -1,31 +1,31 @@
-quarter,quarter_start,quarter_end,post_start_incumbent_projects,publication_app_links,unique_publication_ids,fractional_publication_count,apps_with_any_publication,app_links_per_100_post_start_incumbents,unique_publications_per_100_post_start_incumbents,fractional_publications_per_100_post_start_incumbents,any_publication_rate_percent,post_transition
-2019Q1,2019-01-01,2019-03-31,1037,122,108,108.000,108,11.76,10.41,10.41,10.41,0
-2019Q2,2019-04-01,2019-06-30,1165,123,109,109.000,111,10.56,9.36,9.36,9.53,0
-2019Q3,2019-07-01,2019-09-30,1273,110,100,100.000,99,8.64,7.86,7.86,7.78,0
-2019Q4,2019-10-01,2019-12-31,1397,145,134,134.000,125,10.38,9.59,9.59,8.95,0
-2020Q1,2020-01-01,2020-03-31,1588,138,128,128.000,128,8.69,8.06,8.06,8.06,0
-2020Q2,2020-04-01,2020-06-30,1744,157,147,147.000,132,9.00,8.43,8.43,7.57,0
-2020Q3,2020-07-01,2020-09-30,1892,194,186,186.000,167,10.25,9.83,9.83,8.83,0
-2020Q4,2020-10-01,2020-12-31,1966,203,192,192.000,179,10.33,9.77,9.77,9.10,0
-2021Q1,2021-01-01,2021-03-31,2187,261,247,247.000,229,11.93,11.29,11.29,10.47,0
-2021Q2,2021-04-01,2021-06-30,2311,276,262,262.000,246,11.94,11.34,11.34,10.64,0
-2021Q3,2021-07-01,2021-09-30,2389,245,233,233.000,215,10.26,9.75,9.75,9.00,0
-2021Q4,2021-10-01,2021-12-31,2512,275,260,260.000,251,10.95,10.35,10.35,9.99,0
-2022Q1,2022-01-01,2022-03-31,2691,297,284,284.000,261,11.04,10.55,10.55,9.70,0
-2022Q2,2022-04-01,2022-06-30,2862,305,287,287.000,271,10.66,10.03,10.03,9.47,0
-2022Q3,2022-07-01,2022-09-30,3082,358,334,334.000,305,11.62,10.84,10.84,9.90,0
-2022Q4,2022-10-01,2022-12-31,3263,365,349,349.000,309,11.19,10.70,10.70,9.47,0
-2023Q1,2023-01-01,2023-03-31,3443,435,412,412.000,371,12.63,11.97,11.97,10.78,0
-2023Q2,2023-04-01,2023-06-30,3640,416,396,396.000,340,11.43,10.88,10.88,9.34,0
-2023Q3,2023-07-01,2023-09-30,3817,419,401,401.000,357,10.98,10.51,10.51,9.35,0
-2023Q4,2023-10-01,2023-12-31,4005,431,395,395.000,366,10.76,9.86,9.86,9.14,0
-2024Q1,2024-01-01,2024-03-31,4214,464,447,447.000,394,11.01,10.61,10.61,9.35,0
-2024Q2,2024-04-01,2024-06-30,4329,519,506,506.000,445,11.99,11.69,11.69,10.28,0
-2024Q3,2024-07-01,2024-09-30,4332,539,511,511.000,445,12.44,11.80,11.80,10.27,1
-2024Q4,2024-10-01,2024-12-31,4332,507,484,484.000,434,11.70,11.17,11.17,10.02,1
-2025Q1,2025-01-01,2025-03-31,4332,629,602,602.000,521,14.52,13.90,13.90,12.03,1
-2025Q2,2025-04-01,2025-06-30,4332,623,603,603.000,543,14.38,13.92,13.92,12.53,1
-2025Q3,2025-07-01,2025-09-30,4332,749,728,728.000,627,17.29,16.81,16.81,14.47,1
-2025Q4,2025-10-01,2025-12-31,4332,709,689,689.000,584,16.37,15.90,15.90,13.48,1
-2026Q1,2026-01-01,2026-03-31,4332,733,714,714.000,624,16.92,16.48,16.48,14.40,1
-2026Q2,2026-04-01,2026-06-30,4332,588,569,569.000,501,13.57,13.13,13.13,11.57,1
+quarter,quarter_start,quarter_end,post_start_incumbent_projects,publication_app_links,unique_publication_ids,fractional_publication_count,apps_with_any_publication,app_links_per_100_post_start_incumbents,unique_publications_per_100_post_start_incumbents,fractional_publications_per_100_post_start_incumbents,any_publication_rate_percent,calendar_post_july_2024,interpretation_role
+2019Q1,2019-01-01,2019-03-31,1037,122,108,108.000,108,11.76,10.41,10.41,10.41,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019Q2,2019-04-01,2019-06-30,1165,123,109,109.000,111,10.56,9.36,9.36,9.53,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019Q3,2019-07-01,2019-09-30,1273,110,100,100.000,99,8.64,7.86,7.86,7.78,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019Q4,2019-10-01,2019-12-31,1397,145,134,134.000,125,10.38,9.59,9.59,8.95,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020Q1,2020-01-01,2020-03-31,1588,138,128,128.000,128,8.69,8.06,8.06,8.06,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020Q2,2020-04-01,2020-06-30,1744,157,147,147.000,132,9.00,8.43,8.43,7.57,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020Q3,2020-07-01,2020-09-30,1892,194,186,186.000,167,10.25,9.83,9.83,8.83,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020Q4,2020-10-01,2020-12-31,1966,203,192,192.000,179,10.33,9.77,9.77,9.10,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021Q1,2021-01-01,2021-03-31,2187,261,247,247.000,229,11.93,11.29,11.29,10.47,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021Q2,2021-04-01,2021-06-30,2311,276,262,262.000,246,11.94,11.34,11.34,10.64,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021Q3,2021-07-01,2021-09-30,2389,245,233,233.000,215,10.26,9.75,9.75,9.00,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021Q4,2021-10-01,2021-12-31,2512,275,260,260.000,251,10.95,10.35,10.35,9.99,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022Q1,2022-01-01,2022-03-31,2691,297,284,284.000,261,11.04,10.55,10.55,9.70,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022Q2,2022-04-01,2022-06-30,2862,305,287,287.000,271,10.66,10.03,10.03,9.47,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022Q3,2022-07-01,2022-09-30,3082,358,334,334.000,305,11.62,10.84,10.84,9.90,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022Q4,2022-10-01,2022-12-31,3263,365,349,349.000,309,11.19,10.70,10.70,9.47,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023Q1,2023-01-01,2023-03-31,3443,435,412,412.000,371,12.63,11.97,11.97,10.78,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023Q2,2023-04-01,2023-06-30,3640,416,396,396.000,340,11.43,10.88,10.88,9.34,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023Q3,2023-07-01,2023-09-30,3817,419,401,401.000,357,10.98,10.51,10.51,9.35,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023Q4,2023-10-01,2023-12-31,4005,431,395,395.000,366,10.76,9.86,9.86,9.14,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024Q1,2024-01-01,2024-03-31,4214,464,447,447.000,394,11.01,10.61,10.61,9.35,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024Q2,2024-04-01,2024-06-30,4329,519,506,506.000,445,11.99,11.69,11.69,10.28,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024Q3,2024-07-01,2024-09-30,4332,539,511,511.000,445,12.44,11.80,11.80,10.27,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024Q4,2024-10-01,2024-12-31,4332,507,484,484.000,434,11.70,11.17,11.17,10.02,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025Q1,2025-01-01,2025-03-31,4332,629,602,601.500,521,14.52,13.90,13.89,12.03,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025Q2,2025-04-01,2025-06-30,4332,623,603,601.500,543,14.38,13.92,13.89,12.53,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025Q3,2025-07-01,2025-09-30,4332,749,728,724.300,627,17.29,16.81,16.72,14.47,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025Q4,2025-10-01,2025-12-31,4332,709,689,686.500,584,16.37,15.90,15.85,13.48,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026Q1,2026-01-01,2026-03-31,4332,733,714,711.000,624,16.92,16.48,16.41,14.40,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026Q2,2026-04-01,2026-06-30,4332,588,569,566.667,501,13.57,13.13,13.08,11.57,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"

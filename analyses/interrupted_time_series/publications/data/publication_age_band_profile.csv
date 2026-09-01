@@ -1,0 +1,6 @@
+project_age_bin,min_age_months,max_age_months,project_months_with_complete_followup,publication_app_links,unique_publication_ids,fractional_publication_count,fractional_publications_per_100_project_months
+0_6_months,0,6,42354,124,124,116.500,0.2751
+7_12_months,7,12,30576,419,419,400.950,1.3113
+13_24_months,13,24,51599,1721,1719,1667.949,3.2325
+25_48_months,25,48,77319,4183,4173,3992.231,5.1633
+49_plus_months,49,,82459,4364,4353,4080.366,4.9484

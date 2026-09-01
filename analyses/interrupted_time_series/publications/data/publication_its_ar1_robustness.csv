@@ -1,3 +1,4 @@
-model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
-Prais-Winsten AR(1) robustness,2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2183,0.2775,0.4314,-0.7621,0.3255,estimated rho = 0.103
-Prais-Winsten AR(1) robustness,2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1041,0.0231,0.0000,0.0588,0.1494,estimated rho = 0.103
+model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+"Primary total-output ITS, Prais-Winsten AR(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0913,0.0825,0.0000,1.9295,2.2531,estimated rho = -0.159
+"Primary total-output ITS, Prais-Winsten AR(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-10.1956,7.1903,0.1562,-24.2886,3.8975,estimated rho = -0.159
+"Primary total-output ITS, Prais-Winsten AR(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3547,0.5989,0.0000,3.1809,5.5284,estimated rho = -0.159

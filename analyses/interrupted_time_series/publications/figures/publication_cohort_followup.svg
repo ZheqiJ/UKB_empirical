@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="78" y="28" font-family="Arial" font-size="20" font-weight="700">First Publication Timing By Project Cohort</text>
+<text x="450.0" y="442" text-anchor="middle" font-family="Arial" font-size="13" fill="#444">Project age in months</text>
+<text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-family="Arial" font-size="13" fill="#444">Cumulative probability of first publication (%)</text>
+<line x1="78" x2="870" y1="46.0" y2="46.0" stroke="#e5e7eb"/>
+<text x="68" y="50.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">12.83</text>
+<line x1="78" x2="870" y1="134.0" y2="134.0" stroke="#e5e7eb"/>
+<text x="68" y="138.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">9.30</text>
+<line x1="78" x2="870" y1="222.0" y2="222.0" stroke="#e5e7eb"/>
+<text x="68" y="226.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">5.77</text>
+<line x1="78" x2="870" y1="310.0" y2="310.0" stroke="#e5e7eb"/>
+<text x="68" y="314.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">2.23</text>
+<line x1="78" x2="870" y1="398.0" y2="398.0" stroke="#e5e7eb"/>
+<text x="68" y="402.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-1.30</text>
+<path d="M78.0,363.9 L144.0,362.2 L210.0,358.8 L276.0,355.9 L342.0,347.8 L408.0,338.1 L474.0,326.0 L540.0,313.3 L606.0,297.2 L672.0,282.9 L738.0,261.6 L804.0,236.8 L870.0,200.1" fill="none" stroke="#1f6feb" stroke-width="2.4"/>
+<path d="M78.0,363.3 L144.0,360.7 L210.0,356.3 L276.0,351.3 L342.0,341.8 L408.0,327.8 L474.0,306.2 L540.0,295.3 L606.0,270.8 L672.0,230.2 L738.0,193.7 L804.0,165.0 L870.0,80.1" fill="none" stroke="#b42318" stroke-width="2.4"/>
+</svg>

@@ -18,7 +18,8 @@ For the publication-output stylized fact, start here:
 1. `publications/reports/publication_reading_guide.md`
 2. `publications/reports/publication_measurement_note.md`
 3. `publications/reports/publication_its_results.md`
-4. `publications/figures/publication_figure_main_three_panel.svg`
+4. `publications/figures/publication_total_monthly.svg`
+5. `publications/figures/publication_observed_vs_pipeline_expected.svg`
 
 ## Folder Map
 
@@ -26,8 +27,8 @@ For the publication-output stylized fact, start here:
   cross-module data-audit outputs.
 - `project_entry/`: completed project-entry stylized fact using recorded public
   UKB project Start dates.
-- `publications/`: incumbent publication trajectories and publication-lag
-  diagnostics, now organized as a reproducible publication-output ITS module.
+- `publications/`: total publication-output, project-age/productivity, and
+  pipeline-adjusted publication diagnostics.
 - `comparative_exposure/`: C03/C05/C06 descriptive comparison-group and
   exposure-proxy diagnostics.
 - `returned_data/`: returned-dataset feasibility material for a possible future

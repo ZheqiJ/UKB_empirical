@@ -1,0 +1,7 @@
+project_cohort,followup_horizon_months,eligible_projects,total_projects_in_cohort,mean_fractional_publications,any_publication_rate_percent,followup_limitation
+pre_rap_project_start,12,4332,4332,0.093433,6.648,feasible
+pre_rap_project_start,18,4329,4332,0.255660,14.761,feasible
+pre_rap_project_start,24,4005,4332,0.475123,22.747,feasible
+post_rap_project_start,12,471,2603,0.152229,11.465,feasible
+post_rap_project_start,18,0,2603,,,not feasible for this cohort under 2025-12 reliable censor date
+post_rap_project_start,24,0,2603,,,not feasible for this cohort under 2025-12 reliable censor date
