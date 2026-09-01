@@ -1,20 +1,22 @@
 metric,value
 total_schema19_publications,14633
 total_schema24_app_publication_links,12598
-publication_ids_linked_to_multiple_applications,549
+publication_ids_linked_to_multiple_applications_raw,549
+publication_ids_linked_to_multiple_valid_applications,541
 unmatched_app_links,6
 unmatched_publication_links,0
 publication_before_project_start_exclusions,24
-all_cleaned_publication_app_events,12568
-cleaned_incumbent_publication_app_events,12110
-cleaned_unique_publication_ids,11535
-cleaned_apps_with_any_publication,2229
-latest_exact_publication_date,2026-07-16
-latest_clean_incumbent_publication_date,2026-07-16
-pre_transition_incumbent_projects_total,4332
-primary_window_start,2019-01-01
-primary_window_end,2025-12-01
-primary_window_months,84
+cleaned_publication_app_events,12568
+cleaned_unique_publication_ids,11959
+cleaned_apps_with_any_publication,2491
+latest_exact_schema19_publication_date,2026-07-16
+latest_cleaned_publication_date,2026-07-16
+pre_rap_project_count,4332
+post_rap_project_count,2603
+reliable_censor_date_used_for_project_followup,2025-12-31
+primary_system_output_start,2019-01-01
+primary_system_output_end,2025-12-01
+primary_system_output_months,84
 primary_pre_transition_months,66
 primary_post_transition_months,18
-right_edge_decision,main analysis excludes 2026; 2026 retained only as right-edge diagnostic
+right_edge_decision,calendar-time primary analyses end at 2025-12; 2026 retained only as right-edge completeness diagnostic

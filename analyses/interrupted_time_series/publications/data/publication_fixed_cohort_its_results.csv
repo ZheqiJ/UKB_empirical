@@ -1,3 +1,7 @@
-model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
-Fixed cohort HAC(3),2022-07-2025,fractional_publications_per_100_fixed_cohort,42,24,18,PostJuly2024,-0.4015,0.1858,0.0307,-0.7656,-0.0374,membership fixed to projects started before 2022-07-01
-Fixed cohort HAC(3),2022-07-2025,fractional_publications_per_100_fixed_cohort,42,24,18,TimeAfterJuly2024,0.0274,0.0141,0.0516,-0.0002,0.0550,membership fixed to projects started before 2022-07-01
+model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2021-07-01,2019-01_to_2025-12,54,36,18,PostJuly2024,-0.8294,0.2725,0.0023,-1.3634,-0.2954,denominator and membership fixed by prespecified cutoff
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2021-07-01,2019-01_to_2025-12,54,36,18,TimeAfterJuly2024,-0.0288,0.0167,0.0841,-0.0614,0.0039,denominator and membership fixed by prespecified cutoff
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2022-01-01,2019-01_to_2025-12,48,30,18,PostJuly2024,-0.8711,0.2270,0.0001,-1.3160,-0.4263,denominator and membership fixed by prespecified cutoff
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2022-01-01,2019-01_to_2025-12,48,30,18,TimeAfterJuly2024,-0.0128,0.0135,0.3436,-0.0392,0.0136,denominator and membership fixed by prespecified cutoff
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2022-07-01,2019-01_to_2025-12,42,24,18,PostJuly2024,-0.3914,0.1836,0.0330,-0.7512,-0.0315,denominator and membership fixed by prespecified cutoff
+Fixed-cohort publication intensity HAC(3),fractional_publications_per_100_fixed_cohort_cutoff_2022-07-01,2019-01_to_2025-12,42,24,18,TimeAfterJuly2024,0.0265,0.0139,0.0574,-0.0008,0.0538,denominator and membership fixed by prespecified cutoff

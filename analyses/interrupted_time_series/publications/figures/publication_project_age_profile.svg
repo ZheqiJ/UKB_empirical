@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="78" y="28" font-family="Arial" font-size="20" font-weight="700">Publication Output By Project Age</text>
+<text x="450.0" y="442" text-anchor="middle" font-family="Arial" font-size="13" fill="#444">Project age in months</text>
+<text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-family="Arial" font-size="13" fill="#444">Fractional publications per 100 at-risk projects</text>
+<line x1="78" x2="870" y1="46.0" y2="46.0" stroke="#e5e7eb"/>
+<text x="68" y="50.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">8.37</text>
+<line x1="78" x2="870" y1="134.0" y2="134.0" stroke="#e5e7eb"/>
+<text x="68" y="138.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">6.07</text>
+<line x1="78" x2="870" y1="222.0" y2="222.0" stroke="#e5e7eb"/>
+<text x="68" y="226.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">3.77</text>
+<line x1="78" x2="870" y1="310.0" y2="310.0" stroke="#e5e7eb"/>
+<text x="68" y="314.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">1.48</text>
+<line x1="78" x2="870" y1="398.0" y2="398.0" stroke="#e5e7eb"/>
+<text x="68" y="402.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-0.82</text>
+<path d="M78.0,363.9 L86.2,363.6 L94.5,360.7 L102.8,359.7 L111.0,353.0 L119.2,345.7 L127.5,343.3 L135.8,340.5 L144.0,328.3 L152.2,326.6 L160.5,311.4 L168.8,305.0 L177.0,281.6 L185.2,272.8 L193.5,283.9 L201.8,267.2 L210.0,263.2 L218.2,245.0 L226.5,237.5 L234.8,259.8 L243.0,227.9 L251.2,221.4 L259.5,214.9 L267.8,208.2 L276.0,199.0 L284.2,211.1 L292.5,169.5 L300.8,156.8 L309.0,185.3 L317.2,172.2 L325.5,169.1 L333.8,188.4 L342.0,171.9 L350.2,149.7 L358.5,174.2 L366.8,161.2 L375.0,163.7 L383.2,155.6 L391.5,146.8 L399.8,162.0 L408.0,127.8 L416.2,149.2 L424.5,175.1 L432.8,170.2 L441.0,176.3 L449.2,178.9 L457.5,174.6 L465.8,185.6 L474.0,163.2 L482.2,202.1 L490.5,170.9 L498.8,183.6 L507.0,203.8 L515.2,175.9 L523.5,184.2 L531.8,191.9 L540.0,181.3 L548.2,214.1 L556.5,170.0 L564.8,192.9 L573.0,187.3 L581.2,193.3 L589.5,176.6 L597.8,174.8 L606.0,207.8 L614.2,182.8 L622.5,161.4 L630.8,170.9 L639.0,187.7 L647.2,195.6 L655.5,152.2 L663.8,158.7 L672.0,175.4 L680.2,157.0 L688.5,187.5 L696.8,164.9 L705.0,147.5 L713.2,105.3 L721.5,131.4 L729.8,193.1 L738.0,177.1 L746.2,181.8 L754.5,168.2 L762.8,194.2 L771.0,174.6 L779.2,117.8 L787.5,136.2 L795.8,142.4 L804.0,174.0 L812.2,199.2 L820.5,118.6 L828.8,135.8 L837.0,80.1 L845.2,145.1 L853.5,91.2 L861.8,190.9 L870.0,129.1" fill="none" stroke="#1f6feb" stroke-width="2.4"/>
+</svg>

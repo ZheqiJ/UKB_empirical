@@ -1,9 +1,13 @@
-model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
-Linear segmented ITS HAC(1),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1956,0.2123,-0.6273,0.1394,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(1),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0180,0.0000,0.0698,0.1404,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(3),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1969,0.2155,-0.6299,0.1421,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(3),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0169,0.0000,0.0719,0.1383,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(6),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1741,0.1611,-0.5851,0.0973,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(6),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0134,0.0000,0.0789,0.1313,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(12),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,PostJuly2024,-0.2439,0.1744,0.1618,-0.5857,0.0978,HAC lag sensitivity; point estimates should be invariant
-Linear segmented ITS HAC(12),2019-2025,fractional_publications_per_100_post_start_incumbents,84,66,18,TimeAfterJuly2024,0.1051,0.0122,0.0000,0.0812,0.1290,HAC lag sensitivity; point estimates should be invariant
+model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+"Primary total-output ITS, linear HAC(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0771,0.0000,1.9349,2.2372,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-9.4554,8.6308,0.2733,-26.3717,7.4609,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(1)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.7328,0.0000,2.8967,5.7693,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0753,0.0000,1.9384,2.2337,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-9.4554,8.2418,0.2513,-25.6092,6.6984,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(3)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.7125,0.0000,2.9366,5.7294,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(6)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0723,0.0000,1.9444,2.2278,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(6)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-9.4554,6.7695,0.1625,-22.7237,3.8129,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(6)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.5872,0.0000,3.1822,5.4838,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(12)",fractional_publication_count,2019-01_to_2025-12,84,66,18,Time,2.0861,0.0658,0.0000,1.9571,2.2151,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(12)",fractional_publication_count,2019-01_to_2025-12,84,66,18,PostJuly2024,-9.4554,6.4564,0.1431,-22.1100,3.1991,HAC lag sensitivity; OLS point estimates should be invariant
+"Primary total-output ITS, linear HAC(12)",fractional_publication_count,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,4.3330,0.5419,0.0000,3.2709,5.3951,HAC lag sensitivity; OLS point estimates should be invariant

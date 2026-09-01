@@ -1,3 +1,4 @@
-model,window,outcome,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
-Poisson QMLE count robustness HAC(3),2019-2025,monthly_unique_publication_ids,84,66,18,PostJuly2024,-0.1284,0.0464,0.0057,-0.2194,-0.0375,Pearson dispersion = 1.74; IRR = 0.879
-Poisson QMLE count robustness HAC(3),2019-2025,monthly_unique_publication_ids,84,66,18,TimeAfterJuly2024,0.0023,0.0029,0.4142,-0.0033,0.0079,Pearson dispersion = 1.74; IRR = 1.002
+model,outcome,window,n_months,pre_months,post_months,term,estimate,std_error,p_value,ci_low,ci_high,notes
+Poisson QMLE count robustness HAC(3),unique_publication_ids,2019-01_to_2025-12,84,66,18,Time,0.0241,0.0012,0.0000,0.0217,0.0266,Pearson dispersion = 1.75; IRR = 1.024
+Poisson QMLE count robustness HAC(3),unique_publication_ids,2019-01_to_2025-12,84,66,18,PostJuly2024,-0.1566,0.0497,0.0016,-0.2539,-0.0592,Pearson dispersion = 1.75; IRR = 0.855
+Poisson QMLE count robustness HAC(3),unique_publication_ids,2019-01_to_2025-12,84,66,18,TimeAfterJuly2024,0.0083,0.0029,0.0040,0.0027,0.0140,Pearson dispersion = 1.75; IRR = 1.008

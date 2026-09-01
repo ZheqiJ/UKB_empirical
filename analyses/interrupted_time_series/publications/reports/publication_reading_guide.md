@@ -1,68 +1,64 @@
 # Publication Results Reading Guide
 
-Read this file first. Short paths are relative to `analyses/interrupted_time_series/publications/`.
+The publication analysis separates total system-level publication output, project-level productivity/timing, and pipeline-adjusted output. Do not collapse these into one regression or interpret total publication growth as project-level RAP productivity.
 
-## One-Sentence Result
-
-Among pre-transition UKB incumbent projects, publication output shows no sharp immediate disruption around the July 2024 institutional transition marker and instead exhibits a gradual higher 2025 trajectory, with important publication-lag and lifecycle-composition caveats.
-
-## Read These 4 Files First
+## Read In This Order
 
 1. `reports/publication_measurement_note.md`
 2. `reports/publication_its_results.md`
-3. `figures/publication_figure_main_three_panel.svg`
-4. `data/publication_its_results_table.csv`
+3. `figures/publication_total_monthly.svg`
+4. `figures/publication_project_age_profile.svg`
+5. `figures/publication_observed_vs_pipeline_expected.svg`
+6. `data/publication_its_results_table.csv`
 
 ## Main Numbers
 
-- Primary outcome: fractional publications per 100 post-start incumbents.
-- Primary window: 2019-01 through 2025-12.
-- Monthly observations: 84 total, 66 pre-transition, 18 post-transition.
-- Raw pre-transition mean: 3.47.
-- Raw post-transition mean: 4.64.
-- Primary level change: -0.2439 (SE 0.1969, 95% CI [-0.6299, 0.1421]).
-- Primary slope change: 0.1051 (SE 0.0169, 95% CI [0.0719, 0.1383]).
-- Durbin-Watson: 1.7624; Ljung-Box lag 12 p-value: 0.5523.
-- AR(1): estimated rho = 0.103.
+- Primary Y: total monthly `fractional_publication_count`.
+- Window: 2019-01 to 2025-12.
+- Observations: 84 total, 66 pre-July-2024, 18 post-July-2024.
+- Raw mean monthly output: 89.65 pre, 208.06 post.
+- Primary pre-trend: 2.0861 (SE 0.0753).
+- Primary level change: -9.4554 (SE 8.2418, 95% CI [-25.6092, 6.6984]).
+- Primary slope change: 4.3330 (SE 0.7125, 95% CI [2.9366, 5.7294]).
+- Pipeline 2025 gap: 117.68; cumulative July 2024-December 2025 gap: -13.74; mean 2025 actual/expected ratio: 1.043.
 - Publication lag: median 41.000 months from project start to publication.
 
-## Main Figure
+## Main Figures
 
-`figures/publication_figure_main_three_panel.svg`
+- `figures/publication_total_monthly.svg`
+- `figures/publication_measure_comparison.svg`
+- `figures/publication_project_age_profile.svg`
+- `figures/publication_observed_vs_pipeline_expected.svg`
+- `figures/publication_cohort_followup.svg`
 
-Panel A shows raw monthly intensity. Panel B shows observed versus fitted pre-transition historical benchmark. Panel C shows publication intensity by project-age band.
+## Main Tables
 
-Standalone panels:
+- `data/publication_its_results_table.csv`
+- `data/publication_outcome_summary.csv`
+- `data/publication_project_cohort_summary.csv`
 
-- `figures/publication_panel_a_raw_monthly.svg`
-- `figures/publication_panel_b_observed_expected.svg`
-- `figures/publication_panel_c_age_lifecycle.svg`
+## Supplementary And Appendix Outputs
 
-## Main Table
-
-`data/publication_its_results_table.csv`
-
-Contains primary linear HAC(3), alternative windows, and measurement-sensitivity rows.
-
-## Appendix Diagnostics
-
+- `data/its_incumbent_publications_monthly.csv`
+- `figures/publication_incumbent_pool_monthly.svg`
+- `data/publication_fixed_cohort_monthly.csv`
+- `figures/publication_fixed_cohort_monthly.svg`
+- `data/publication_by_project_age.csv`
+- `data/publication_age_band_profile.csv`
+- `data/publication_project_followup_outcomes.csv`
+- `data/publication_first_pub_timing.csv`
+- `data/publication_project_month_panel.csv`
+- `data/publication_pipeline_expected.csv`
+- `data/publication_pipeline_gap.csv`
 - `data/publication_its_autocorrelation_diagnostics.csv`
-- `figures/publication_its_residual_acf.svg`
-- `figures/publication_its_residual_pacf.svg`
 - `data/publication_its_hac_lag_sensitivity.csv`
 - `data/publication_its_ar1_robustness.csv`
-- `data/publication_observed_vs_expected.csv`
-- `data/publication_fixed_cohort_monthly.csv`
-- `data/publication_fixed_cohort_its_results.csv`
 - `data/publication_poisson_count_robustness.csv`
 - `data/publication_placebo_results.csv`
-- `data/its_publication_lag.csv`
-- `figures/publication_lag_distribution.svg`
 - `data/its_recent_publication_completeness.csv`
-- `data/publication_outcome_universe_audit.csv`
 
-## Interpretation To Use
+## Interpretation
 
-Use: gradual post-transition increase with publication-lag and lifecycle-composition caveats.
+System output: C. gradual increase. Project productivity: D. higher early productivity at the feasible 12-month horizon; 18/24-month post-RAP follow-up is insufficient. Publication timing: D. faster at the feasible 12-month horizon; mature timing remains insufficiently observed. Pipeline-adjusted output: D. mixed.
 
-Do not write: RAP caused publications to rise.
+Use descriptive language: post-transition publication trajectory, system-level publication output, RAP-era project cohort, historical project-age publication profile, and pipeline-adjusted historical benchmark.

@@ -1,91 +1,91 @@
-month,month_start,post_start_incumbent_projects,publication_app_links,unique_publication_ids,fractional_publication_count,apps_with_any_publication,app_links_per_100_post_start_incumbents,unique_publications_per_100_post_start_incumbents,fractional_publications_per_100_post_start_incumbents,any_publication_rate_percent,post_transition,transition_context_jul_2024_mar_2025,right_edge_2026
-2019-01,2019-01-01,945,45,40,40.000,42,4.76,4.23,4.23,4.44,0,0,0
-2019-02,2019-02-01,985,41,39,39.000,34,4.16,3.96,3.96,3.45,0,0,0
-2019-03,2019-03-01,1037,36,29,29.000,32,3.47,2.80,2.80,3.09,0,0,0
-2019-04,2019-04-01,1072,33,32,32.000,30,3.08,2.99,2.99,2.80,0,0,0
-2019-05,2019-05-01,1132,45,40,40.000,42,3.98,3.53,3.53,3.71,0,0,0
-2019-06,2019-06-01,1165,45,37,37.000,39,3.86,3.18,3.18,3.35,0,0,0
-2019-07,2019-07-01,1215,41,36,36.000,39,3.37,2.96,2.96,3.21,0,0,0
-2019-08,2019-08-01,1242,36,33,33.000,32,2.90,2.66,2.66,2.58,0,0,0
-2019-09,2019-09-01,1273,33,31,31.000,28,2.59,2.44,2.44,2.20,0,0,0
-2019-10,2019-10-01,1316,48,45,45.000,40,3.65,3.42,3.42,3.04,0,0,0
-2019-11,2019-11-01,1368,49,45,45.000,43,3.58,3.29,3.29,3.14,0,0,0
-2019-12,2019-12-01,1397,48,44,44.000,42,3.44,3.15,3.15,3.01,0,0,0
-2020-01,2020-01-01,1450,43,42,42.000,41,2.97,2.90,2.90,2.83,0,0,0
-2020-02,2020-02-01,1497,38,34,34.000,37,2.54,2.27,2.27,2.47,0,0,0
-2020-03,2020-03-01,1588,57,52,52.000,50,3.59,3.27,3.27,3.15,0,0,0
-2020-04,2020-04-01,1639,42,36,36.000,35,2.56,2.20,2.20,2.14,0,0,0
-2020-05,2020-05-01,1675,49,49,49.000,44,2.93,2.93,2.93,2.63,0,0,0
-2020-06,2020-06-01,1744,66,62,62.000,53,3.78,3.56,3.56,3.04,0,0,0
-2020-07,2020-07-01,1797,70,70,70.000,61,3.90,3.90,3.90,3.39,0,0,0
-2020-08,2020-08-01,1846,66,63,63.000,53,3.58,3.41,3.41,2.87,0,0,0
-2020-09,2020-09-01,1892,58,53,53.000,53,3.07,2.80,2.80,2.80,0,0,0
-2020-10,2020-10-01,1921,68,64,64.000,62,3.54,3.33,3.33,3.23,0,0,0
-2020-11,2020-11-01,1961,71,67,67.000,58,3.62,3.42,3.42,2.96,0,0,0
-2020-12,2020-12-01,1966,64,61,61.000,59,3.26,3.10,3.10,3.00,0,0,0
-2021-01,2021-01-01,2053,82,78,78.000,70,3.99,3.80,3.80,3.41,0,0,0
-2021-02,2021-02-01,2109,81,78,78.000,74,3.84,3.70,3.70,3.51,0,0,0
-2021-03,2021-03-01,2187,98,91,91.000,85,4.48,4.16,4.16,3.89,0,0,0
-2021-04,2021-04-01,2227,82,77,77.000,72,3.68,3.46,3.46,3.23,0,0,0
-2021-05,2021-05-01,2267,106,99,99.000,95,4.68,4.37,4.37,4.19,0,0,0
-2021-06,2021-06-01,2311,88,86,86.000,79,3.81,3.72,3.72,3.42,0,0,0
-2021-07,2021-07-01,2336,89,83,83.000,76,3.81,3.55,3.55,3.25,0,0,0
-2021-08,2021-08-01,2356,70,67,67.000,60,2.97,2.84,2.84,2.55,0,0,0
-2021-09,2021-09-01,2389,86,83,83.000,79,3.60,3.47,3.47,3.31,0,0,0
-2021-10,2021-10-01,2435,74,72,72.000,72,3.04,2.96,2.96,2.96,0,0,0
-2021-11,2021-11-01,2477,101,94,94.000,87,4.08,3.79,3.79,3.51,0,0,0
-2021-12,2021-12-01,2512,100,94,94.000,92,3.98,3.74,3.74,3.66,0,0,0
-2022-01,2022-01-01,2548,106,101,101.000,86,4.16,3.96,3.96,3.38,0,0,0
-2022-02,2022-02-01,2610,100,94,94.000,90,3.83,3.60,3.60,3.45,0,0,0
-2022-03,2022-03-01,2691,91,89,89.000,85,3.38,3.31,3.31,3.16,0,0,0
-2022-04,2022-04-01,2750,85,80,80.000,73,3.09,2.91,2.91,2.65,0,0,0
-2022-05,2022-05-01,2816,97,91,91.000,89,3.44,3.23,3.23,3.16,0,0,0
-2022-06,2022-06-01,2862,123,116,116.000,109,4.30,4.05,4.05,3.81,0,0,0
-2022-07,2022-07-01,2915,115,106,106.000,100,3.95,3.64,3.64,3.43,0,0,0
-2022-08,2022-08-01,2988,129,120,120.000,108,4.32,4.02,4.02,3.61,0,0,0
-2022-09,2022-09-01,3082,114,108,108.000,97,3.70,3.50,3.50,3.15,0,0,0
-2022-10,2022-10-01,3117,128,120,120.000,110,4.11,3.85,3.85,3.53,0,0,0
-2022-11,2022-11-01,3191,123,118,118.000,100,3.85,3.70,3.70,3.13,0,0,0
-2022-12,2022-12-01,3263,114,111,111.000,99,3.49,3.40,3.40,3.03,0,0,0
-2023-01,2023-01-01,3321,143,137,137.000,120,4.31,4.13,4.13,3.61,0,0,0
-2023-02,2023-02-01,3370,143,137,137.000,118,4.24,4.07,4.07,3.50,0,0,0
-2023-03,2023-03-01,3443,149,138,138.000,133,4.33,4.01,4.01,3.86,0,0,0
-2023-04,2023-04-01,3501,128,122,122.000,103,3.66,3.48,3.48,2.94,0,0,0
-2023-05,2023-05-01,3564,130,128,128.000,107,3.65,3.59,3.59,3.00,0,0,0
-2023-06,2023-06-01,3640,158,146,146.000,130,4.34,4.01,4.01,3.57,0,0,0
-2023-07,2023-07-01,3702,137,131,131.000,118,3.70,3.54,3.54,3.19,0,0,0
-2023-08,2023-08-01,3760,142,133,133.000,124,3.78,3.54,3.54,3.30,0,0,0
-2023-09,2023-09-01,3817,140,137,137.000,115,3.67,3.59,3.59,3.01,0,0,0
-2023-10,2023-10-01,3888,136,118,118.000,111,3.50,3.03,3.03,2.85,0,0,0
-2023-11,2023-11-01,3968,164,155,155.000,133,4.13,3.91,3.91,3.35,0,0,0
-2023-12,2023-12-01,4005,131,122,122.000,122,3.27,3.05,3.05,3.05,0,0,0
-2024-01,2024-01-01,4080,173,165,165.000,143,4.24,4.04,4.04,3.50,0,0,0
-2024-02,2024-02-01,4131,128,125,125.000,112,3.10,3.03,3.03,2.71,0,0,0
-2024-03,2024-03-01,4214,163,157,157.000,139,3.87,3.73,3.73,3.30,0,0,0
-2024-04,2024-04-01,4286,184,177,177.000,153,4.29,4.13,4.13,3.57,0,0,0
-2024-05,2024-05-01,4319,179,177,177.000,157,4.14,4.10,4.10,3.64,0,0,0
-2024-06,2024-06-01,4329,156,152,152.000,135,3.60,3.51,3.51,3.12,0,0,0
-2024-07,2024-07-01,4332,201,187,187.000,157,4.64,4.32,4.32,3.62,1,1,0
-2024-08,2024-08-01,4332,190,180,180.000,157,4.39,4.16,4.16,3.62,1,1,0
-2024-09,2024-09-01,4332,148,144,144.000,131,3.42,3.32,3.32,3.02,1,1,0
-2024-10,2024-10-01,4332,176,169,169.000,153,4.06,3.90,3.90,3.53,1,1,0
-2024-11,2024-11-01,4332,175,164,164.000,145,4.04,3.79,3.79,3.35,1,1,0
-2024-12,2024-12-01,4332,156,151,151.000,136,3.60,3.49,3.49,3.14,1,1,0
-2025-01,2025-01-01,4332,230,226,226.000,190,5.31,5.22,5.22,4.39,1,1,0
-2025-02,2025-02-01,4332,178,173,173.000,153,4.11,3.99,3.99,3.53,1,1,0
-2025-03,2025-03-01,4332,221,203,203.000,178,5.10,4.69,4.69,4.11,1,1,0
-2025-04,2025-04-01,4332,214,206,206.000,190,4.94,4.76,4.76,4.39,1,0,0
-2025-05,2025-05-01,4332,217,209,209.000,188,5.01,4.82,4.82,4.34,1,0,0
-2025-06,2025-06-01,4332,192,188,188.000,165,4.43,4.34,4.34,3.81,1,0,0
-2025-07,2025-07-01,4332,277,268,268.000,228,6.39,6.19,6.19,5.26,1,0,0
-2025-08,2025-08-01,4332,257,251,251.000,212,5.93,5.79,5.79,4.89,1,0,0
-2025-09,2025-09-01,4332,215,209,209.000,187,4.96,4.82,4.82,4.32,1,0,0
-2025-10,2025-10-01,4332,253,246,246.000,200,5.84,5.68,5.68,4.62,1,0,0
-2025-11,2025-11-01,4332,209,200,200.000,178,4.82,4.62,4.62,4.11,1,0,0
-2025-12,2025-12-01,4332,247,243,243.000,206,5.70,5.61,5.61,4.76,1,0,0
-2026-01,2026-01-01,4332,276,270,270.000,236,6.37,6.23,6.23,5.45,1,0,1
-2026-02,2026-02-01,4332,218,212,212.000,193,5.03,4.89,4.89,4.46,1,0,1
-2026-03,2026-03-01,4332,239,232,232.000,195,5.52,5.36,5.36,4.50,1,0,1
-2026-04,2026-04-01,4332,255,243,243.000,212,5.89,5.61,5.61,4.89,1,0,1
-2026-05,2026-05-01,4332,210,207,207.000,179,4.85,4.78,4.78,4.13,1,0,1
-2026-06,2026-06-01,4332,123,119,119.000,110,2.84,2.75,2.75,2.54,1,0,1
+month,month_start,post_start_incumbent_projects,publication_app_links,unique_publication_ids,fractional_publication_count,apps_with_any_publication,app_links_per_100_post_start_incumbents,unique_publications_per_100_post_start_incumbents,fractional_publications_per_100_post_start_incumbents,any_publication_rate_percent,calendar_post_july_2024,jul_sep_2024_window,right_edge_2026,interpretation_role
+2019-01,2019-01-01,945,45,40,40.000,42,4.76,4.23,4.23,4.44,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-02,2019-02-01,985,41,39,39.000,34,4.16,3.96,3.96,3.45,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-03,2019-03-01,1037,36,29,29.000,32,3.47,2.80,2.80,3.09,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-04,2019-04-01,1072,33,32,32.000,30,3.08,2.99,2.99,2.80,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-05,2019-05-01,1132,45,40,40.000,42,3.98,3.53,3.53,3.71,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-06,2019-06-01,1165,45,37,37.000,39,3.86,3.18,3.18,3.35,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-07,2019-07-01,1215,41,36,36.000,39,3.37,2.96,2.96,3.21,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-08,2019-08-01,1242,36,33,33.000,32,2.90,2.66,2.66,2.58,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-09,2019-09-01,1273,33,31,31.000,28,2.59,2.44,2.44,2.20,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-10,2019-10-01,1316,48,45,45.000,40,3.65,3.42,3.42,3.04,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-11,2019-11-01,1368,49,45,45.000,43,3.58,3.29,3.29,3.14,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2019-12,2019-12-01,1397,48,44,44.000,42,3.44,3.15,3.15,3.01,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-01,2020-01-01,1450,43,42,42.000,41,2.97,2.90,2.90,2.83,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-02,2020-02-01,1497,38,34,34.000,37,2.54,2.27,2.27,2.47,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-03,2020-03-01,1588,57,52,52.000,50,3.59,3.27,3.27,3.15,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-04,2020-04-01,1639,42,36,36.000,35,2.56,2.20,2.20,2.14,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-05,2020-05-01,1675,49,49,49.000,44,2.93,2.93,2.93,2.63,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-06,2020-06-01,1744,66,62,62.000,53,3.78,3.56,3.56,3.04,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-07,2020-07-01,1797,70,70,70.000,61,3.90,3.90,3.90,3.39,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-08,2020-08-01,1846,66,63,63.000,53,3.58,3.41,3.41,2.87,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-09,2020-09-01,1892,58,53,53.000,53,3.07,2.80,2.80,2.80,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-10,2020-10-01,1921,68,64,64.000,62,3.54,3.33,3.33,3.23,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-11,2020-11-01,1961,71,67,67.000,58,3.62,3.42,3.42,2.96,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2020-12,2020-12-01,1966,64,61,61.000,59,3.26,3.10,3.10,3.00,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-01,2021-01-01,2053,82,78,78.000,70,3.99,3.80,3.80,3.41,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-02,2021-02-01,2109,81,78,78.000,74,3.84,3.70,3.70,3.51,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-03,2021-03-01,2187,98,91,91.000,85,4.48,4.16,4.16,3.89,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-04,2021-04-01,2227,82,77,77.000,72,3.68,3.46,3.46,3.23,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-05,2021-05-01,2267,106,99,99.000,95,4.68,4.37,4.37,4.19,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-06,2021-06-01,2311,88,86,86.000,79,3.81,3.72,3.72,3.42,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-07,2021-07-01,2336,89,83,83.000,76,3.81,3.55,3.55,3.25,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-08,2021-08-01,2356,70,67,67.000,60,2.97,2.84,2.84,2.55,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-09,2021-09-01,2389,86,83,83.000,79,3.60,3.47,3.47,3.31,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-10,2021-10-01,2435,74,72,72.000,72,3.04,2.96,2.96,2.96,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-11,2021-11-01,2477,101,94,94.000,87,4.08,3.79,3.79,3.51,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2021-12,2021-12-01,2512,100,94,94.000,92,3.98,3.74,3.74,3.66,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-01,2022-01-01,2548,106,101,101.000,86,4.16,3.96,3.96,3.38,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-02,2022-02-01,2610,100,94,94.000,90,3.83,3.60,3.60,3.45,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-03,2022-03-01,2691,91,89,89.000,85,3.38,3.31,3.31,3.16,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-04,2022-04-01,2750,85,80,80.000,73,3.09,2.91,2.91,2.65,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-05,2022-05-01,2816,97,91,91.000,89,3.44,3.23,3.23,3.16,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-06,2022-06-01,2862,123,116,116.000,109,4.30,4.05,4.05,3.81,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-07,2022-07-01,2915,115,106,106.000,100,3.95,3.64,3.64,3.43,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-08,2022-08-01,2988,129,120,120.000,108,4.32,4.02,4.02,3.61,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-09,2022-09-01,3082,114,108,108.000,97,3.70,3.50,3.50,3.15,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-10,2022-10-01,3117,128,120,120.000,110,4.11,3.85,3.85,3.53,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-11,2022-11-01,3191,123,118,118.000,100,3.85,3.70,3.70,3.13,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2022-12,2022-12-01,3263,114,111,111.000,99,3.49,3.40,3.40,3.03,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-01,2023-01-01,3321,143,137,137.000,120,4.31,4.13,4.13,3.61,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-02,2023-02-01,3370,143,137,137.000,118,4.24,4.07,4.07,3.50,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-03,2023-03-01,3443,149,138,138.000,133,4.33,4.01,4.01,3.86,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-04,2023-04-01,3501,128,122,122.000,103,3.66,3.48,3.48,2.94,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-05,2023-05-01,3564,130,128,128.000,107,3.65,3.59,3.59,3.00,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-06,2023-06-01,3640,158,146,146.000,130,4.34,4.01,4.01,3.57,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-07,2023-07-01,3702,137,131,131.000,118,3.70,3.54,3.54,3.19,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-08,2023-08-01,3760,142,133,133.000,124,3.78,3.54,3.54,3.30,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-09,2023-09-01,3817,140,137,137.000,115,3.67,3.59,3.59,3.01,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-10,2023-10-01,3888,136,118,118.000,111,3.50,3.03,3.03,2.85,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-11,2023-11-01,3968,164,155,155.000,133,4.13,3.91,3.91,3.35,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2023-12,2023-12-01,4005,131,122,122.000,122,3.27,3.05,3.05,3.05,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-01,2024-01-01,4080,173,165,165.000,143,4.24,4.04,4.04,3.50,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-02,2024-02-01,4131,128,125,125.000,112,3.10,3.03,3.03,2.71,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-03,2024-03-01,4214,163,157,157.000,139,3.87,3.73,3.73,3.30,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-04,2024-04-01,4286,184,177,177.000,153,4.29,4.13,4.13,3.57,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-05,2024-05-01,4319,179,177,177.000,157,4.14,4.10,4.10,3.64,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-06,2024-06-01,4329,156,152,152.000,135,3.60,3.51,3.51,3.12,0,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-07,2024-07-01,4332,201,187,187.000,157,4.64,4.32,4.32,3.62,1,1,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-08,2024-08-01,4332,190,180,180.000,157,4.39,4.16,4.16,3.62,1,1,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-09,2024-09-01,4332,148,144,144.000,131,3.42,3.32,3.32,3.02,1,1,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-10,2024-10-01,4332,176,169,169.000,153,4.06,3.90,3.90,3.53,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-11,2024-11-01,4332,175,164,164.000,145,4.04,3.79,3.79,3.35,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2024-12,2024-12-01,4332,156,151,151.000,136,3.60,3.49,3.49,3.14,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-01,2025-01-01,4332,230,226,226.000,190,5.31,5.22,5.22,4.39,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-02,2025-02-01,4332,178,173,173.000,153,4.11,3.99,3.99,3.53,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-03,2025-03-01,4332,221,203,202.500,178,5.10,4.69,4.67,4.11,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-04,2025-04-01,4332,214,206,206.000,190,4.94,4.76,4.76,4.39,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-05,2025-05-01,4332,217,209,208.500,188,5.01,4.82,4.81,4.34,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-06,2025-06-01,4332,192,188,187.000,165,4.43,4.34,4.32,3.81,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-07,2025-07-01,4332,277,268,268.000,228,6.39,6.19,6.19,5.26,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-08,2025-08-01,4332,257,251,249.500,212,5.93,5.79,5.76,4.89,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-09,2025-09-01,4332,215,209,206.800,187,4.96,4.82,4.77,4.32,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-10,2025-10-01,4332,253,246,245.000,200,5.84,5.68,5.66,4.62,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-11,2025-11-01,4332,209,200,199.000,178,4.82,4.62,4.59,4.11,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2025-12,2025-12-01,4332,247,243,242.500,206,5.70,5.61,5.60,4.76,1,0,0,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-01,2026-01-01,4332,276,270,269.500,236,6.37,6.23,6.22,5.45,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-02,2026-02-01,4332,218,212,209.500,193,5.03,4.89,4.84,4.46,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-03,2026-03-01,4332,239,232,232.000,195,5.52,5.36,5.36,4.50,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-04,2026-04-01,4332,255,243,242.500,212,5.89,5.61,5.60,4.89,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-05,2026-05-01,4332,210,207,206.500,179,4.85,4.78,4.77,4.13,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"
+2026-06,2026-06-01,4332,123,119,117.667,110,2.84,2.75,2.72,2.54,1,0,1,"supplementary incumbent-pool diagnostic, not primary system-level Y"

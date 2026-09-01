@@ -1,5 +1,0 @@
-window,start_month,end_month,n_months,pre_months,post_months,selected_role,selection_basis
-2019-2025,2019-01,2025-12,84,66,18,PRIMARY,Chosen before inspecting significance because cleaned exact publication-event data support consistent construction back to 2019 and provide 66 pre-transition months with month-of-year FE.
-2020-2025,2020-01,2025-12,72,54,18,ROBUSTNESS,Prespecified shorter-window robustness.
-2021-2025,2021-01,2025-12,60,42,18,ROBUSTNESS,Prespecified shorter-window robustness.
-2022-07-2025,2022-07,2025-12,42,24,18,ROBUSTNESS,Prespecified shorter-window robustness.

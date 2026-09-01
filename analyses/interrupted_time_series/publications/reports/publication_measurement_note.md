@@ -1,35 +1,30 @@
 # Publication Measurement Note
 
-## Source Tables
+## Core Definitions
+
+Publication date is the exact `date_pub` in public Schema19. An application-publication link is one row in Schema24 joining `app_id` to `pub_id`. A unique publication is a distinct `pub_id`.
+
+Fractional publication credit gives each cleaned application-publication link weight `1 / number of cleaned valid application links for that publication`. The fractional weights for one publication sum to one, so total fractional monthly output avoids full multi-application double counting.
+
+Project start date is the public UKB project `Start date`. Project age is the exact month difference between publication date and project start date. Incumbent means project start date before 2024-07-05. Fixed cohort means a prespecified set of projects started before a cutoff such as 2022-07-01.
+
+Calendar-time post means publication month >= 2024-07. Project-cohort post means project start date >= 2024-07-05. These are different indicators.
+
+Censoring date for project-level follow-up is 2025-12-31. A project is eligible for an H-month outcome only if its project start date plus H months is on or before that censoring date.
+
+## Audit
 
 - Schema19 publications: 14,633
 - Schema24 app-publication links: 12,598
-- All cleaned publication-app events after matching and pre-start exclusions: 12,568
-- Cleaned incumbent publication-app events used: 12,110
-- Cleaned unique publication IDs used: 11,535
-- Cleaned apps with any publication: 2,229
-
-## Linkage Audit
-
-- Publication IDs linked to multiple applications in Schema24: 549
+- Cleaned publication-app events: 12,568
+- Cleaned unique publication IDs: 11,959
+- Publication IDs linked to multiple valid applications: 541 (4.52%)
 - Publication-before-project-start exclusions: 24
 - Unmatched app links: 6
-- Unmatched publication links: 0
 - Latest exact Schema19 publication date: 2026-07-16
-- Latest cleaned incumbent publication date: 2026-07-16
 
-## Measures Must Not Be Interchanged
-
-`publication_app_links` counts app-publication links and can double count a publication linked to multiple applications.
-
-`unique_publication_ids` counts distinct publication IDs in a period.
-
-`fractional_publication_count` is operationally equivalent to distinct publication IDs in this public linked dataset after period-level de-duplication; it is retained as the primary intensity numerator to avoid full multi-application double counting.
-
-`apps_with_any_publication` counts applications with at least one linked publication in the period and supports the extensive-margin rate.
+A publication observed in March 2025 does not imply that the associated project began in March 2025. Publications may be produced years after project initiation.
 
 ## Publication Lag
 
-The lag distribution is project-start-to-publication lag, not RAP-to-publication lag. Median lag is 41.000 months. Shares by lag bin are: 0-6 months 1.15%, 7-12 months 4.04%, 13-24 months 15.73%, 25-48 months 38.78%, and 49+ months 40.30%.
-
-Because publication lags are long, publications appearing shortly after July 2024 generally reflect substantial work initiated before the transition.
+This is project-start-to-publication lag, not RAP-to-publication lag. The median is 41.000 months. Shares are 0-6 months 1.15%, 7-12 months 4.04%, 13-24 months 15.73%, 25-48 months 38.78%, and 49+ months 40.30%.
