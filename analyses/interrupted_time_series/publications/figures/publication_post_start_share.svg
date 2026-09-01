@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="520" viewBox="0 0 1060 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="78" y="28" font-family="Arial" font-size="20" font-weight="700">Post-Transition-Start Share Of Monthly Publications</text>
+<text x="18" y="260.0" transform="rotate(-90 18 260.0)" font-family="Arial" font-size="13" fill="#444">Post-transition-start share (%)</text>
+<line x1="78" x2="1030" y1="46.0" y2="46.0" stroke="#e5e7eb"/>
+<text x="68" y="50.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">13.8</text>
+<line x1="78" x2="1030" y1="149.0" y2="149.0" stroke="#e5e7eb"/>
+<text x="68" y="153.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">10.0</text>
+<line x1="78" x2="1030" y1="252.0" y2="252.0" stroke="#e5e7eb"/>
+<text x="68" y="256.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">6.2</text>
+<line x1="78" x2="1030" y1="355.0" y2="355.0" stroke="#e5e7eb"/>
+<text x="68" y="359.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">2.3</text>
+<line x1="78" x2="1030" y1="458.0" y2="458.0" stroke="#e5e7eb"/>
+<text x="68" y="462.0" text-anchor="end" font-family="Arial" font-size="11" fill="#555">-1.5</text>
+<line x1="835.0" x2="835.0" y1="46" y2="458" stroke="#111827" stroke-dasharray="5 5"/>
+<text x="842.0" y="62" font-family="Arial" font-size="12" fill="#111827">Jul 2024 transition marker</text>
+<path d="M78.0,418.1 L89.5,418.1 L100.9,418.1 L112.4,418.1 L123.9,418.1 L135.3,418.1 L146.8,418.1 L158.3,418.1 L169.8,418.1 L181.2,418.1 L192.7,418.1 L204.2,418.1 L215.6,418.1 L227.1,418.1 L238.6,418.1 L250.0,418.1 L261.5,418.1 L273.0,418.1 L284.5,418.1 L295.9,418.1 L307.4,418.1 L318.9,418.1 L330.3,418.1 L341.8,418.1 L353.3,418.1 L364.7,418.1 L376.2,418.1 L387.7,418.1 L399.2,418.1 L410.6,418.1 L422.1,418.1 L433.6,418.1 L445.0,418.1 L456.5,418.1 L468.0,418.1 L479.4,418.1 L490.9,418.1 L502.4,418.1 L513.9,418.1 L525.3,418.1 L536.8,418.1 L548.3,418.1 L559.7,418.1 L571.2,418.1 L582.7,418.1 L594.1,418.1 L605.6,418.1 L617.1,418.1 L628.6,418.1 L640.0,418.1 L651.5,418.1 L663.0,418.1 L674.4,418.1 L685.9,418.1 L697.4,418.1 L708.8,418.1 L720.3,418.1 L731.8,418.1 L743.3,418.1 L754.7,418.1 L766.2,418.1 L777.7,418.1 L789.1,418.1 L800.6,418.1 L812.1,418.1 L823.5,418.1 L835.0,418.1 L846.5,418.1 L858.0,418.1 L869.4,418.1 L880.9,418.1 L892.4,418.1 L903.8,382.8 L915.3,402.6 L926.8,334.4 L938.2,379.5 L949.7,312.6 L961.2,334.4 L972.7,293.5 L984.1,299.4 L995.6,339.7 L1007.1,150.8 L1018.5,85.9 L1030.0,189.4" fill="none" stroke="#b42318" stroke-width="2.4"/>
+<text x="922.0" y="193.4" font-family="Arial" font-size="11" fill="#b42318">post start share</text>
+<text x="78.0" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2019</text>
+<text x="215.6" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2020</text>
+<text x="353.3" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2021</text>
+<text x="490.9" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2022</text>
+<text x="628.6" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2023</text>
+<text x="766.2" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2024</text>
+<text x="903.8" y="496" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">2025</text>
+</svg>

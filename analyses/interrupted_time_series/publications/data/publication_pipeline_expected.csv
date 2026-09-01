@@ -1,85 +1,85 @@
-month,month_start,actual_fractional_publication_count,pipeline_expected_fractional_publication_count,pipeline_gap_actual_minus_expected,pipeline_ratio_actual_over_expected,calendar_post_july_2024,cumulative_pipeline_gap_since_july_2024,benchmark_source
-2019-01,2019-01-01,40.000,26.954,13.046,1.4840,0,,pre-transition project-age-bin profile only
-2019-02,2019-02-01,39.000,27.888,11.112,1.3984,0,,pre-transition project-age-bin profile only
-2019-03,2019-03-01,29.000,28.817,0.183,1.0064,0,,pre-transition project-age-bin profile only
-2019-04,2019-04-01,32.000,29.964,2.036,1.0679,0,,pre-transition project-age-bin profile only
-2019-05,2019-05-01,40.000,31.446,8.554,1.2720,0,,pre-transition project-age-bin profile only
-2019-06,2019-06-01,37.000,32.567,4.433,1.1361,0,,pre-transition project-age-bin profile only
-2019-07,2019-07-01,36.000,33.811,2.189,1.0648,0,,pre-transition project-age-bin profile only
-2019-08,2019-08-01,33.000,35.427,-2.427,0.9315,0,,pre-transition project-age-bin profile only
-2019-09,2019-09-01,31.000,36.574,-5.574,0.8476,0,,pre-transition project-age-bin profile only
-2019-10,2019-10-01,45.000,38.352,6.648,1.1733,0,,pre-transition project-age-bin profile only
-2019-11,2019-11-01,45.000,39.976,5.024,1.1257,0,,pre-transition project-age-bin profile only
-2019-12,2019-12-01,44.000,41.520,2.480,1.0597,0,,pre-transition project-age-bin profile only
-2020-01,2020-01-01,42.000,42.653,-0.653,0.9847,0,,pre-transition project-age-bin profile only
-2020-02,2020-02-01,34.000,44.173,-10.173,0.7697,0,,pre-transition project-age-bin profile only
-2020-03,2020-03-01,52.000,45.719,6.281,1.1374,0,,pre-transition project-age-bin profile only
-2020-04,2020-04-01,36.000,47.539,-11.539,0.7573,0,,pre-transition project-age-bin profile only
-2020-05,2020-05-01,49.000,49.213,-0.213,0.9957,0,,pre-transition project-age-bin profile only
-2020-06,2020-06-01,62.000,51.366,10.634,1.2070,0,,pre-transition project-age-bin profile only
-2020-07,2020-07-01,70.000,53.029,16.971,1.3200,0,,pre-transition project-age-bin profile only
-2020-08,2020-08-01,63.000,55.317,7.683,1.1389,0,,pre-transition project-age-bin profile only
-2020-09,2020-09-01,53.000,56.918,-3.918,0.9312,0,,pre-transition project-age-bin profile only
-2020-10,2020-10-01,64.000,59.188,4.812,1.0813,0,,pre-transition project-age-bin profile only
-2020-11,2020-11-01,67.000,61.322,5.678,1.0926,0,,pre-transition project-age-bin profile only
-2020-12,2020-12-01,61.000,63.524,-2.524,0.9603,0,,pre-transition project-age-bin profile only
-2021-01,2021-01-01,78.000,65.553,12.447,1.1899,0,,pre-transition project-age-bin profile only
-2021-02,2021-02-01,78.000,68.020,9.980,1.1467,0,,pre-transition project-age-bin profile only
-2021-03,2021-03-01,91.000,70.310,20.690,1.2943,0,,pre-transition project-age-bin profile only
-2021-04,2021-04-01,77.000,73.440,3.560,1.0485,0,,pre-transition project-age-bin profile only
-2021-05,2021-05-01,99.000,75.575,23.425,1.3100,0,,pre-transition project-age-bin profile only
-2021-06,2021-06-01,86.000,77.850,8.150,1.1047,0,,pre-transition project-age-bin profile only
-2021-07,2021-07-01,83.000,79.878,3.122,1.0391,0,,pre-transition project-age-bin profile only
-2021-08,2021-08-01,67.000,82.708,-15.708,0.8101,0,,pre-transition project-age-bin profile only
-2021-09,2021-09-01,83.000,84.684,-1.684,0.9801,0,,pre-transition project-age-bin profile only
-2021-10,2021-10-01,72.000,86.940,-14.940,0.8282,0,,pre-transition project-age-bin profile only
-2021-11,2021-11-01,94.000,88.665,5.335,1.0602,0,,pre-transition project-age-bin profile only
-2021-12,2021-12-01,94.000,90.702,3.298,1.0364,0,,pre-transition project-age-bin profile only
-2022-01,2022-01-01,101.000,91.765,9.235,1.1006,0,,pre-transition project-age-bin profile only
-2022-02,2022-02-01,94.000,94.497,-0.497,0.9947,0,,pre-transition project-age-bin profile only
-2022-03,2022-03-01,89.000,96.792,-7.792,0.9195,0,,pre-transition project-age-bin profile only
-2022-04,2022-04-01,80.000,100.306,-20.306,0.7976,0,,pre-transition project-age-bin profile only
-2022-05,2022-05-01,91.000,102.658,-11.658,0.8864,0,,pre-transition project-age-bin profile only
-2022-06,2022-06-01,116.000,104.610,11.390,1.1089,0,,pre-transition project-age-bin profile only
-2022-07,2022-07-01,106.000,107.283,-1.283,0.9880,0,,pre-transition project-age-bin profile only
-2022-08,2022-08-01,120.000,109.580,10.420,1.0951,0,,pre-transition project-age-bin profile only
-2022-09,2022-09-01,108.000,111.864,-3.864,0.9655,0,,pre-transition project-age-bin profile only
-2022-10,2022-10-01,120.000,114.555,5.445,1.0475,0,,pre-transition project-age-bin profile only
-2022-11,2022-11-01,118.000,117.057,0.943,1.0081,0,,pre-transition project-age-bin profile only
-2022-12,2022-12-01,111.000,119.780,-8.780,0.9267,0,,pre-transition project-age-bin profile only
-2023-01,2023-01-01,137.000,121.442,15.558,1.1281,0,,pre-transition project-age-bin profile only
-2023-02,2023-02-01,137.000,124.591,12.409,1.0996,0,,pre-transition project-age-bin profile only
-2023-03,2023-03-01,138.000,127.928,10.072,1.0787,0,,pre-transition project-age-bin profile only
-2023-04,2023-04-01,122.000,132.245,-10.245,0.9225,0,,pre-transition project-age-bin profile only
-2023-05,2023-05-01,128.000,134.829,-6.829,0.9493,0,,pre-transition project-age-bin profile only
-2023-06,2023-06-01,146.000,138.243,7.757,1.0561,0,,pre-transition project-age-bin profile only
-2023-07,2023-07-01,131.000,140.987,-9.987,0.9292,0,,pre-transition project-age-bin profile only
-2023-08,2023-08-01,133.000,143.614,-10.614,0.9261,0,,pre-transition project-age-bin profile only
-2023-09,2023-09-01,137.000,146.123,-9.123,0.9376,0,,pre-transition project-age-bin profile only
-2023-10,2023-10-01,118.000,149.508,-31.508,0.7893,0,,pre-transition project-age-bin profile only
-2023-11,2023-11-01,155.000,152.146,2.854,1.0188,0,,pre-transition project-age-bin profile only
-2023-12,2023-12-01,122.000,155.415,-33.415,0.7850,0,,pre-transition project-age-bin profile only
-2024-01,2024-01-01,165.000,158.475,6.525,1.0412,0,,pre-transition project-age-bin profile only
-2024-02,2024-02-01,125.000,161.420,-36.420,0.7744,0,,pre-transition project-age-bin profile only
-2024-03,2024-03-01,157.000,164.612,-7.612,0.9538,0,,pre-transition project-age-bin profile only
-2024-04,2024-04-01,177.000,169.030,7.970,1.0472,0,,pre-transition project-age-bin profile only
-2024-05,2024-05-01,177.000,172.355,4.645,1.0270,0,,pre-transition project-age-bin profile only
-2024-06,2024-06-01,152.000,175.708,-23.708,0.8651,0,,pre-transition project-age-bin profile only
-2024-07,2024-07-01,187.000,178.953,8.047,1.0450,1,8.047,pre-transition project-age-bin profile only
-2024-08,2024-08-01,180.000,182.218,-2.218,0.9878,1,5.829,pre-transition project-age-bin profile only
-2024-09,2024-09-01,144.000,185.470,-41.470,0.7764,1,-35.641,pre-transition project-age-bin profile only
-2024-10,2024-10-01,169.000,189.886,-20.886,0.8900,1,-56.527,pre-transition project-age-bin profile only
-2024-11,2024-11-01,164.000,193.121,-29.121,0.8492,1,-85.648,pre-transition project-age-bin profile only
-2024-12,2024-12-01,151.000,196.776,-45.776,0.7674,1,-131.424,pre-transition project-age-bin profile only
-2025-01,2025-01-01,229.000,199.004,29.996,1.1507,1,-101.428,pre-transition project-age-bin profile only
-2025-02,2025-02-01,174.000,202.639,-28.639,0.8587,1,-130.066,pre-transition project-age-bin profile only
-2025-03,2025-03-01,209.000,205.306,3.694,1.0180,1,-126.372,pre-transition project-age-bin profile only
-2025-04,2025-04-01,209.000,209.387,-0.387,0.9982,1,-126.758,pre-transition project-age-bin profile only
-2025-05,2025-05-01,217.000,214.324,2.676,1.0125,1,-124.082,pre-transition project-age-bin profile only
-2025-06,2025-06-01,193.000,218.299,-25.299,0.8841,1,-149.381,pre-transition project-age-bin profile only
-2025-07,2025-07-01,281.000,221.771,59.229,1.2671,1,-90.152,pre-transition project-age-bin profile only
-2025-08,2025-08-01,261.000,224.396,36.604,1.1631,1,-53.547,pre-transition project-age-bin profile only
-2025-09,2025-09-01,213.000,227.070,-14.070,0.9380,1,-67.617,pre-transition project-age-bin profile only
-2025-10,2025-10-01,272.000,229.813,42.187,1.1836,1,-25.430,pre-transition project-age-bin profile only
-2025-11,2025-11-01,227.000,237.200,-10.200,0.9570,1,-35.630,pre-transition project-age-bin profile only
-2025-12,2025-12-01,265.000,243.109,21.891,1.0900,1,-13.739,pre-transition project-age-bin profile only
+month,month_start,actual_fractional_publication_count,pipeline_expected_fractional_publication_count,pipeline_expected_ci_low,pipeline_expected_ci_high,pipeline_gap_actual_minus_expected,pipeline_gap_ci_low,pipeline_gap_ci_high,pipeline_ratio_actual_over_expected,trend_adjusted_expected_fractional_publication_count,trend_adjusted_pipeline_gap,trend_adjusted_ratio_actual_over_expected,calendar_post_july_2024,cumulative_pipeline_gap_since_july_2024,cumulative_trend_adjusted_gap_since_july_2024,benchmark_source
+2019-01,2019-01-01,40.000,27.199,,,12.801,,,1.4706,31.014,8.986,1.2897,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-02,2019-02-01,39.000,28.047,,,10.953,,,1.3905,31.886,7.114,1.2231,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-03,2019-03-01,29.000,29.024,,,-0.024,,,0.9992,32.899,-3.899,0.8815,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-04,2019-04-01,32.000,30.039,,,1.961,,,1.0653,33.948,-1.948,0.9426,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-05,2019-05-01,40.000,31.076,,,8.924,,,1.2872,35.016,4.984,1.1423,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-06,2019-06-01,37.000,32.266,,,4.734,,,1.1467,36.248,0.752,1.0207,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-07,2019-07-01,36.000,33.562,,,2.438,,,1.0726,37.591,-1.591,0.9577,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-08,2019-08-01,33.000,34.882,,,-1.882,,,0.9461,38.952,-5.952,0.8472,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-09,2019-09-01,31.000,36.279,,,-5.279,,,0.8545,40.390,-9.390,0.7675,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-10,2019-10-01,45.000,37.747,,,7.253,,,1.1921,41.897,3.103,1.0741,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-11,2019-11-01,45.000,39.155,,,5.845,,,1.1493,43.328,1.672,1.0386,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2019-12,2019-12-01,44.000,40.579,,,3.421,,,1.0843,44.767,-0.767,0.9829,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-01,2020-01-01,42.000,42.113,,,-0.113,,,0.9973,46.318,-4.318,0.9068,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-02,2020-02-01,34.000,43.653,,,-9.653,,,0.7789,47.865,-13.865,0.7103,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-03,2020-03-01,52.000,45.336,,,6.664,,,1.1470,49.557,2.443,1.0493,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-04,2020-04-01,36.000,47.150,,,-11.150,,,0.7635,51.382,-15.382,0.7006,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-05,2020-05-01,49.000,48.953,,,0.047,,,1.0010,53.182,-4.182,0.9214,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-06,2020-06-01,62.000,50.864,,,11.136,,,1.2189,55.086,6.914,1.1255,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-07,2020-07-01,70.000,52.862,,,17.138,,,1.3242,57.072,12.928,1.2265,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-08,2020-08-01,63.000,54.688,,,8.312,,,1.1520,58.859,4.141,1.0704,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-09,2020-09-01,53.000,56.675,,,-3.675,,,0.9352,60.807,-7.807,0.8716,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-10,2020-10-01,64.000,58.827,,,5.173,,,1.0879,62.918,1.082,1.0172,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-11,2020-11-01,67.000,60.941,,,6.059,,,1.0994,64.974,2.026,1.0312,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2020-12,2020-12-01,61.000,63.094,,,-2.094,,,0.9668,67.057,-6.057,0.9097,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-01,2021-01-01,78.000,65.550,,,12.450,,,1.1899,69.446,8.554,1.1232,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-02,2021-02-01,78.000,67.814,,,10.186,,,1.1502,71.616,6.384,1.0891,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-03,2021-03-01,91.000,70.110,,,20.890,,,1.2980,73.805,17.195,1.2330,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-04,2021-04-01,77.000,72.503,,,4.497,,,1.0620,76.080,0.920,1.0121,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-05,2021-05-01,99.000,75.031,,,23.969,,,1.3195,78.480,20.520,1.2615,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-06,2021-06-01,86.000,77.491,,,8.509,,,1.1098,80.792,5.208,1.0645,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-07,2021-07-01,83.000,80.134,,,2.866,,,1.0358,83.277,-0.277,0.9967,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-08,2021-08-01,67.000,82.564,,,-15.564,,,0.8115,85.525,-18.525,0.7834,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-09,2021-09-01,83.000,84.959,,,-1.959,,,0.9769,87.720,-4.720,0.9462,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-10,2021-10-01,72.000,87.329,,,-15.329,,,0.8245,89.873,-17.873,0.8011,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-11,2021-11-01,94.000,89.750,,,4.250,,,1.0474,92.062,1.938,1.0210,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2021-12,2021-12-01,94.000,92.091,,,1.909,,,1.0207,94.153,-0.153,0.9984,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-01,2022-01-01,101.000,94.601,,,6.399,,,1.0676,96.401,4.599,1.0477,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-02,2022-02-01,94.000,97.010,,,-3.010,,,0.9690,98.530,-4.530,0.9540,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-03,2022-03-01,89.000,99.380,,,-10.380,,,0.8956,100.601,-11.601,0.8847,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-04,2022-04-01,80.000,101.724,,,-21.724,,,0.7864,102.632,-22.632,0.7795,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-05,2022-05-01,91.000,104.109,,,-13.109,,,0.8741,104.688,-13.688,0.8693,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-06,2022-06-01,116.000,106.287,,,9.713,,,1.0914,106.520,9.480,1.0890,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-07,2022-07-01,106.000,108.716,,,-2.716,,,0.9750,108.588,-2.588,0.9762,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-08,2022-08-01,120.000,111.174,,,8.826,,,1.0794,110.669,9.331,1.0843,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-09,2022-09-01,108.000,113.620,,,-5.620,,,0.9505,112.721,-4.721,0.9581,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-10,2022-10-01,120.000,115.982,,,4.018,,,1.0346,114.674,5.326,1.0464,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-11,2022-11-01,118.000,118.412,,,-0.412,,,0.9965,116.678,1.322,1.0113,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2022-12,2022-12-01,111.000,120.574,,,-9.574,,,0.9206,118.402,-7.402,0.9375,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-01,2023-01-01,137.000,122.940,,,14.060,,,1.1144,120.312,16.688,1.1387,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-02,2023-02-01,137.000,125.364,,,11.636,,,1.0928,122.262,14.738,1.1205,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-03,2023-03-01,138.000,127.946,,,10.054,,,1.0786,124.349,13.651,1.1098,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-04,2023-04-01,122.000,130.818,,,-8.818,,,0.9326,126.700,-4.700,0.9629,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-05,2023-05-01,128.000,134.039,,,-6.039,,,0.9549,129.368,-1.368,0.9894,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-06,2023-06-01,146.000,137.058,,,8.942,,,1.0652,131.820,14.180,1.1076,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-07,2023-07-01,131.000,139.911,,,-8.911,,,0.9363,134.093,-3.093,0.9769,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-08,2023-08-01,133.000,142.705,,,-9.705,,,0.9320,136.291,-3.291,0.9759,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-09,2023-09-01,137.000,145.552,,,-8.552,,,0.9412,138.519,-1.519,0.9890,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-10,2023-10-01,118.000,148.368,,,-30.368,,,0.7953,140.699,-22.699,0.8387,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-11,2023-11-01,155.000,151.351,,,3.649,,,1.0241,143.019,11.981,1.0838,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2023-12,2023-12-01,122.000,154.221,,,-32.221,,,0.7911,145.211,-23.211,0.8402,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-01,2024-01-01,165.000,157.440,,,7.560,,,1.0480,147.712,17.288,1.1170,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-02,2024-02-01,125.000,160.471,,,-35.471,,,0.7790,150.015,-25.015,0.8333,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-03,2024-03-01,157.000,163.587,,,-6.587,,,0.9597,152.378,4.622,1.0303,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-04,2024-04-01,177.000,166.878,,,10.122,,,1.0607,154.881,22.119,1.1428,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-05,2024-05-01,177.000,170.727,,,6.273,,,1.0367,157.878,19.122,1.1211,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-06,2024-06-01,152.000,173.990,,,-21.990,,,0.8736,160.310,-8.310,0.9482,0,,,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-07,2024-07-01,187.000,177.494,160.717,197.154,9.506,-10.154,26.283,1.0536,162.941,24.059,1.1477,1,9.506,24.059,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-08,2024-08-01,180.000,180.858,163.789,200.999,-0.858,-20.999,16.211,0.9953,165.419,14.581,1.0881,1,8.648,38.639,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-09,2024-09-01,144.000,184.259,166.585,204.806,-40.259,-60.806,-22.585,0.7815,167.910,-23.910,0.8576,1,-31.612,14.729,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-10,2024-10-01,169.000,187.306,169.211,207.972,-18.306,-38.972,-0.211,0.9023,170.056,-1.056,0.9938,1,-49.918,13.673,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-11,2024-11-01,164.000,190.738,172.304,211.732,-26.738,-47.732,-8.304,0.8598,172.529,-8.529,0.9506,1,-76.656,5.144,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2024-12,2024-12-01,151.000,193.810,174.797,215.197,-42.810,-64.197,-23.797,0.7791,174.655,-23.655,0.8646,1,-119.465,-18.512,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-01,2025-01-01,229.000,197.110,177.421,219.084,31.890,9.916,51.579,1.1618,176.966,52.034,1.2940,1,-87.575,33.522,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-02,2025-02-01,174.000,200.386,180.484,222.864,-26.386,-48.864,-6.484,0.8683,179.232,-5.232,0.9708,1,-113.961,28.290,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-03,2025-03-01,209.000,203.621,183.245,226.596,5.379,-17.596,25.755,1.0264,181.440,27.560,1.1519,1,-108.582,55.851,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-04,2025-04-01,209.000,206.556,185.657,229.990,2.444,-20.990,23.343,1.0118,183.360,25.640,1.1398,1,-106.138,81.491,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-05,2025-05-01,217.000,210.260,188.831,234.370,6.740,-17.370,28.169,1.0321,185.940,31.060,1.1670,1,-99.398,112.551,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-06,2025-06-01,193.000,213.737,191.831,238.328,-20.737,-45.328,1.169,0.9030,188.295,4.705,1.0250,1,-120.136,117.255,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-07,2025-07-01,281.000,217.486,194.675,242.605,63.514,38.395,86.325,1.2920,190.865,90.135,1.4722,1,-56.622,207.390,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-08,2025-08-01,261.000,221.183,198.234,247.270,39.817,13.730,62.766,1.1800,193.365,67.635,1.3498,1,-16.805,275.025,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-09,2025-09-01,213.000,225.003,201.652,251.891,-12.003,-38.891,11.348,0.9467,195.947,17.053,1.0870,1,-28.808,292.078,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-10,2025-10-01,272.000,229.128,205.209,257.415,42.872,14.585,66.791,1.1871,198.768,73.232,1.3684,1,14.063,365.310,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-11,2025-11-01,227.000,233.791,209.298,263.128,-6.791,-36.128,17.702,0.9710,202.025,24.975,1.1236,1,7.273,390.285,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor
+2025-12,2025-12-01,265.000,237.932,212.980,268.706,27.068,-3.706,52.020,1.1138,204.803,60.197,1.2939,1,34.340,450.482,pre-transition smoothed monthly project-age profile; trend-adjusted sensitivity uses pre-transition smooth calendar productivity factor

@@ -1,0 +1,4 @@
+period,period_start,period_end,months,actual_fractional_publication_count,age_profile_expected,age_profile_gap,trend_adjusted_expected,trend_adjusted_gap,interpretation
+July_2024_to_June_2025,2024-07-01,2025-06-30,12,2226.000,2346.135,-120.135,2108.743,117.257,descriptive pipeline benchmark sensitivity; not a causal untreated potential outcome
+July_2024_to_December_2025,2024-07-01,2025-12-31,18,3745.000,3710.658,34.342,3294.516,450.484,descriptive pipeline benchmark sensitivity; not a causal untreated potential outcome
+Calendar_2025,2025-01-01,2025-12-31,12,2750.000,2596.193,153.807,2281.006,468.994,descriptive pipeline benchmark sensitivity; not a causal untreated potential outcome
