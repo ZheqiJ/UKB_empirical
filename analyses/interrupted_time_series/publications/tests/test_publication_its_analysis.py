@@ -122,6 +122,7 @@ class PublicationITSAnalysisTests(unittest.TestCase):
             self.assertAlmostEqual(cumulative, float(row["cumulative_pipeline_gap_since_july_2024"]), places=2)
         sensitivity = self.analysis.read_csv(self.analysis.Outputs().pipeline_benchmark_sensitivity)
         self.assertIn("trend_adjusted_gap", sensitivity[0])
+        self.assertTrue(self.analysis.Outputs().pipeline_benchmark_comparison_figure.exists())
 
     def test_hac_lag_changes_only_uncertainty(self):
         rows = self.analysis.read_csv(self.analysis.Outputs().hac_sensitivity)
@@ -144,6 +145,7 @@ class PublicationITSAnalysisTests(unittest.TestCase):
         self.assertIn("cannot establish that RAP caused publications", report)
         self.assertIn("Total publication growth is not the same object as project-level productivity growth", report)
         self.assertIn("does not separately identify unrestricted age, period, and cohort effects", report)
+        self.assertIn("magnitude of the pipeline-adjusted gap is specification-sensitive", report)
         self.assertIn("Completion Checklist", report)
 
     def test_y8_lifecycle_adjusted_project_month_regressions_exist(self):

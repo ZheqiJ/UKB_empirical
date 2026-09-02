@@ -109,6 +109,7 @@ class Outputs:
     measure_comparison_figure: Path = FIGURE_DIR / "publication_measure_comparison.svg"
     project_age_figure: Path = FIGURE_DIR / "publication_project_age_profile.svg"
     pipeline_expected_figure: Path = FIGURE_DIR / "publication_observed_vs_pipeline_expected.svg"
+    pipeline_benchmark_comparison_figure: Path = FIGURE_DIR / "publication_pipeline_benchmark_comparison.svg"
     pipeline_gap_figure: Path = FIGURE_DIR / "publication_pipeline_gap.svg"
     cohort_followup_figure: Path = FIGURE_DIR / "publication_cohort_followup.svg"
     first_pub_km_figure: Path = FIGURE_DIR / "publication_first_pub_km.svg"
@@ -1720,7 +1721,7 @@ def svg_time_chart(path: Path, title: str, series: list[tuple[date, float, str]]
     def y(val: float) -> float:
         return top + (ymax - val) / (ymax - ymin) * (height - top - bottom)
 
-    colors = {"observed": "#1f6feb", "rolling3": "#0f766e", "segmented_fit": "#111827", "pretrend_continuation": "#b42318", "expected": "#b42318", "app_links": "#8250df", "unique": "#1f6feb", "fractional": "#2da44e", "gap": "#b42318", "post_start_share": "#b42318", "2021-07-01": "#1f6feb", "2022-01-01": "#2da44e", "2022-07-01": "#8250df", "incumbent": "#6b7280"}
+    colors = {"observed": "#1f6feb", "Actual": "#1f6feb", "rolling3": "#0f766e", "segmented_fit": "#111827", "pretrend_continuation": "#b42318", "expected": "#b42318", "AgeProfileExpected": "#b42318", "TrendAdjustedExpected": "#8250df", "app_links": "#8250df", "unique": "#1f6feb", "fractional": "#2da44e", "gap": "#b42318", "post_start_share": "#b42318", "2021-07-01": "#1f6feb", "2022-01-01": "#2da44e", "2022-07-01": "#8250df", "incumbent": "#6b7280"}
     groups = defaultdict(list)
     for mo, val, label in series:
         groups[label].append((mo, val))
@@ -1737,7 +1738,7 @@ def svg_time_chart(path: Path, title: str, series: list[tuple[date, float, str]]
     for label, pts in groups.items():
         pts = sorted(pts)
         path_d = " ".join(("M" if i == 0 else "L") + f"{x(mo):.1f},{y(val):.1f}" for i, (mo, val) in enumerate(pts))
-        dash = ' stroke-dasharray="7 5"' if label in {"pretrend_continuation", "expected"} else ""
+        dash = ' stroke-dasharray="7 5"' if label in {"pretrend_continuation", "expected", "AgeProfileExpected", "TrendAdjustedExpected"} else ""
         parts.append(f'<path d="{path_d}" fill="none" stroke="{colors.get(label, "#374151")}" stroke-width="2.4"{dash}/>')
         for mo, val in pts:
             if label == "observed":
@@ -1899,6 +1900,7 @@ def make_figures(system_rows: list[dict[str, object]], measure_rows: list[dict[s
     age_plot = [r for r in age_rows if int(r["project_age_months"]) <= 96]
     svg_xy_chart(out.project_age_figure, "Publication Output By Project Age", [(float(r["project_age_months"]), float(r["publications_per_100_projects_at_risk"]), "profile") for r in age_plot], "Project age in months", "Fractional publications per 100 at-risk projects")
     svg_time_chart(out.pipeline_expected_figure, "Observed Versus Pipeline-Expected Publication Output", [(parse_date(str(r["month_start"])), float(r["actual_fractional_publication_count"]), "observed") for r in pipeline_rows] + [(parse_date(str(r["month_start"])), float(r["pipeline_expected_fractional_publication_count"]), "expected") for r in pipeline_rows], "Fractional publication count", PRIMARY_START, PRIMARY_END)
+    svg_time_chart(out.pipeline_benchmark_comparison_figure, "Pipeline Benchmark Sensitivity Comparison", [(parse_date(str(r["month_start"])), float(r["actual_fractional_publication_count"]), "Actual") for r in pipeline_rows] + [(parse_date(str(r["month_start"])), float(r["pipeline_expected_fractional_publication_count"]), "AgeProfileExpected") for r in pipeline_rows] + [(parse_date(str(r["month_start"])), float(r["trend_adjusted_expected_fractional_publication_count"]), "TrendAdjustedExpected") for r in pipeline_rows], "Monthly publication count", PRIMARY_START, PRIMARY_END)
     svg_time_chart(out.pipeline_gap_figure, "Pipeline Gap: Actual Minus Historical Pipeline Expected", [(parse_date(str(r["month_start"])), float(r["pipeline_gap_actual_minus_expected"]), "gap") for r in pipeline_rows], "Actual minus expected", PRIMARY_START, PRIMARY_END)
     timing_plot = [r for r in timing_rows if int(r["project_age_months"]) <= 12 and r["share_with_first_publication_by_age_among_projects_observable_to_age_percent"]]
     svg_xy_chart(out.cohort_followup_figure, "First Publication Share By Project Cohort", [(float(r["project_age_months"]), float(r["share_with_first_publication_by_age_among_projects_observable_to_age_percent"]), str(r["project_cohort"])) for r in timing_plot], "Project age in months", "Share with first publication by age (%)")
@@ -2312,8 +2314,9 @@ The publication analysis separates total system-level publication output, projec
 3. `figures/publication_total_monthly.svg`
 4. `figures/publication_project_age_profile.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
-6. `data/publication_its_results_table.csv`
-7. `reports/publication_stata_style_results.txt`
+6. `figures/publication_pipeline_benchmark_comparison.svg`
+7. `data/publication_its_results_table.csv`
+8. `reports/publication_stata_style_results.txt`
 
 ## Main Numbers
 
@@ -2333,6 +2336,7 @@ The publication analysis separates total system-level publication output, projec
 - `figures/publication_measure_comparison.svg`
 - `figures/publication_project_age_profile.svg`
 - `figures/publication_observed_vs_pipeline_expected.svg`
+- `figures/publication_pipeline_benchmark_comparison.svg`
 - `figures/publication_cohort_followup.svg`
 
 ## Main Tables
@@ -2381,7 +2385,8 @@ Start with:
 4. `figures/publication_total_monthly.svg`
 5. `figures/publication_project_start_contribution_stacked.svg`
 6. `figures/publication_observed_vs_pipeline_expected.svg`
-7. `figures/publication_first_pub_km.svg`
+7. `figures/publication_pipeline_benchmark_comparison.svg`
+8. `figures/publication_first_pub_km.svg`
 
 The primary publication outcome is the monthly number of unique UKB-linked publications, `unique_publication_ids`, not publications per incumbent project.
 """)
@@ -2489,7 +2494,7 @@ Y4 project-age profiles show that publication intensity varies strongly over the
 
 Y8 now estimates project-month lifecycle-adjusted descriptive models instead of leaving `publication_project_month_panel.csv` as only a construction output. The PPML model for fractional output uses fine project-age bins, a common calendar trend, July 2024 segmented terms, and month-of-year effects; project-clustered inference is primary and institution-clustered inference is reported when sufficiently populated. The PPML post-transition slope estimate is {ppml_slope['estimate']} with project-clustered SE {ppml_slope['project_cluster_se']}; the immediate level estimate is {ppml_level['estimate']} with SE {ppml_level['project_cluster_se']}. The LPM for `any_publication` gives a slope estimate of {lpm_slope['estimate']} with SE {lpm_slope['project_cluster_se']}. This is a lifecycle-adjusted descriptive calendar-transition analysis and does not separately identify unrestricted age, period, and cohort effects.
 
-Y9 estimates expected output from pre-July publication behavior by project age and applies that profile to the realized project pipeline. The benchmark now uses smoothed monthly project-age rates, with {int(pipeline_metrics['bootstrap_reps'])} project-level bootstrap replications for monthly expected-output and gap intervals. July 2024-June 2025 actual output is {pipe12['age_profile_gap']} publications relative to the age-profile benchmark; July 2024-December 2025 is {pipe18['age_profile_gap']}. A trend-adjusted sensitivity that allows a smooth pre-transition calendar productivity factor gives {pipe12['trend_adjusted_gap']} and {pipe18['trend_adjusted_gap']} for the same windows. This is a descriptive pipeline benchmark, not a causal untreated potential outcome.
+Y9 estimates expected output from pre-July publication behavior by project age and applies that profile to the realized project pipeline. The benchmark now uses smoothed monthly project-age rates, with {int(pipeline_metrics['bootstrap_reps'])} project-level bootstrap replications for monthly expected-output and gap intervals. July 2024-June 2025 actual output is {pipe12['age_profile_gap']} publications relative to the age-profile benchmark; July 2024-December 2025 is {pipe18['age_profile_gap']}. A trend-adjusted sensitivity that allows a smooth pre-transition calendar productivity factor gives {pipe12['trend_adjusted_gap']} and {pipe18['trend_adjusted_gap']} for the same windows. Because the age-profile and trend-adjusted benchmarks imply materially different post-transition gaps, the magnitude of the pipeline-adjusted gap is specification-sensitive. This is a descriptive pipeline benchmark, not a causal untreated potential outcome.
 
 The pipeline benchmark adjusts for realized project entry and project age. Because it conditions on the realized post-transition project-entry channel, it does not capture any total effect operating through project entry, and it does not fully settle secular calendar-time productivity growth.
 
@@ -2540,7 +2545,7 @@ The evidence cannot establish that RAP caused publications to increase or decrea
 - Pipeline benchmark sensitivity: `data/publication_pipeline_benchmark_sensitivity.csv`
 - Transition/lag sensitivity: `data/publication_transition_lag_sensitivity.csv`
 - Endpoint sensitivity: `data/publication_right_edge_endpoint_sensitivity.csv`
-- Main figures: `figures/publication_total_monthly.svg`, `figures/publication_project_start_contribution_stacked.svg`, `figures/publication_post_start_share.svg`, `figures/publication_observed_vs_pipeline_expected.svg`, `figures/publication_pub12_by_start_cohort.svg`, `figures/publication_anypub12_by_start_cohort.svg`, `figures/publication_first_pub_km.svg`
+- Main figures: `figures/publication_total_monthly.svg`, `figures/publication_project_start_contribution_stacked.svg`, `figures/publication_post_start_share.svg`, `figures/publication_observed_vs_pipeline_expected.svg`, `figures/publication_pipeline_benchmark_comparison.svg`, `figures/publication_pub12_by_start_cohort.svg`, `figures/publication_anypub12_by_start_cohort.svg`, `figures/publication_first_pub_km.svg`
 """)
 
     write_text(out.reading_guide, f"""# Publication Results Reading Guide
@@ -2554,8 +2559,9 @@ Read this module as a descriptive analysis of what changed in UKB-linked publica
 3. `figures/publication_total_monthly.svg`
 4. `figures/publication_project_start_contribution_stacked.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
-6. `figures/publication_first_pub_km.svg`
-7. `reports/publication_stata_style_results.txt`
+6. `figures/publication_pipeline_benchmark_comparison.svg`
+7. `figures/publication_first_pub_km.svg`
+8. `reports/publication_stata_style_results.txt`
 
 ## Four Questions
 
@@ -2586,6 +2592,7 @@ Read this module as a descriptive analysis of what changed in UKB-linked publica
 - `figures/publication_project_start_contribution_stacked.svg`
 - `figures/publication_post_start_share.svg`
 - `figures/publication_observed_vs_pipeline_expected.svg`
+- `figures/publication_pipeline_benchmark_comparison.svg`
 - `figures/publication_pub12_by_start_cohort.svg`
 - `figures/publication_anypub12_by_start_cohort.svg`
 - `figures/publication_first_pub_km.svg`

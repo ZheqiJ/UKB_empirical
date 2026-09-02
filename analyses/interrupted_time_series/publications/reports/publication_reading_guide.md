@@ -9,8 +9,9 @@ Read this module as a descriptive analysis of what changed in UKB-linked publica
 3. `figures/publication_total_monthly.svg`
 4. `figures/publication_project_start_contribution_stacked.svg`
 5. `figures/publication_observed_vs_pipeline_expected.svg`
-6. `figures/publication_first_pub_km.svg`
-7. `reports/publication_stata_style_results.txt`
+6. `figures/publication_pipeline_benchmark_comparison.svg`
+7. `figures/publication_first_pub_km.svg`
+8. `reports/publication_stata_style_results.txt`
 
 ## Four Questions
 
@@ -41,6 +42,7 @@ Read this module as a descriptive analysis of what changed in UKB-linked publica
 - `figures/publication_project_start_contribution_stacked.svg`
 - `figures/publication_post_start_share.svg`
 - `figures/publication_observed_vs_pipeline_expected.svg`
+- `figures/publication_pipeline_benchmark_comparison.svg`
 - `figures/publication_pub12_by_start_cohort.svg`
 - `figures/publication_anypub12_by_start_cohort.svg`
 - `figures/publication_first_pub_km.svg`
