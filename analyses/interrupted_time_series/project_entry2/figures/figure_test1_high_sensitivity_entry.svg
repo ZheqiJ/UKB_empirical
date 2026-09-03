@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="540" viewBox="0 0 1080 540">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="540.0" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">Test 1: High-Sensitivity Project Entry</text>
+<line x1="88" y1="474.0" x2="870" y2="474.0" stroke="#dedede"/>
+<text x="78" y="478.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">0</text>
+<line x1="88" y1="368.5" x2="870" y2="368.5" stroke="#dedede"/>
+<text x="78" y="372.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">3</text>
+<line x1="88" y1="263.0" x2="870" y2="263.0" stroke="#dedede"/>
+<text x="78" y="267.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">6</text>
+<line x1="88" y1="157.5" x2="870" y2="157.5" stroke="#dedede"/>
+<text x="78" y="161.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">9</text>
+<line x1="88" y1="52.0" x2="870" y2="52.0" stroke="#dedede"/>
+<text x="78" y="56.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">12</text>
+<line x1="88.0" y1="52" x2="88.0" y2="474" stroke="#eeeeee"/>
+<text x="88.0" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2019</text>
+<line x1="201.1" y1="52" x2="201.1" y2="474" stroke="#eeeeee"/>
+<text x="201.1" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2020</text>
+<line x1="314.1" y1="52" x2="314.1" y2="474" stroke="#eeeeee"/>
+<text x="314.1" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2021</text>
+<line x1="427.2" y1="52" x2="427.2" y2="474" stroke="#eeeeee"/>
+<text x="427.2" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2022</text>
+<line x1="540.2" y1="52" x2="540.2" y2="474" stroke="#eeeeee"/>
+<text x="540.2" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2023</text>
+<line x1="653.3" y1="52" x2="653.3" y2="474" stroke="#eeeeee"/>
+<text x="653.3" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2024</text>
+<line x1="766.4" y1="52" x2="766.4" y2="474" stroke="#eeeeee"/>
+<text x="766.4" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2025</text>
+<line x1="709.8" y1="52" x2="709.8" y2="474" stroke="#111" stroke-width="2.2"/>
+<text x="716.8" y="68" font-family="Arial, sans-serif" font-size="11" fill="#111">Jul 2024</text>
+<polyline fill="none" stroke="#24536b" stroke-width="2.4" points="88.0,331.9 97.4,296.4 106.8,331.9 116.3,331.9 125.7,331.9 135.1,403.0 144.5,296.4 154.0,296.4 163.4,403.0 172.8,296.4 182.2,225.3 191.6,367.4 201.1,403.0 210.5,296.4 219.9,367.4 229.3,367.4 248.2,367.4 257.6,296.4 267.0,225.3 276.4,403.0 285.9,367.4 295.3,403.0 314.1,154.3 323.5,331.9 333.0,331.9 342.4,367.4 351.8,403.0 361.2,296.4 370.7,403.0 380.1,438.5 389.5,438.5 398.9,367.4 408.3,296.4 417.8,403.0 427.2,367.4 436.6,367.4 446.0,260.9 455.4,154.3 464.9,367.4 474.3,225.3 483.7,367.4 493.1,189.8 502.6,296.4 521.4,367.4 530.8,367.4 540.2,367.4 549.7,438.5 559.1,438.5 568.5,403.0 577.9,296.4 587.3,189.8 596.8,296.4 606.2,438.5 615.6,296.4 625.0,403.0 634.5,296.4 662.7,403.0 672.1,403.0 681.6,331.9 691.0,367.4 700.4,438.5 738.1,260.9 747.5,83.3 756.9,189.8 766.4,260.9 775.8,154.3 785.2,260.9 794.6,225.3 804.0,331.9 813.5,118.8 822.9,225.3 832.3,154.3 841.7,83.3 851.2,154.3 860.6,83.3 870.0,403.0"/>
+<circle cx="88.0" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="97.4" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="106.8" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="116.3" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="125.7" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="135.1" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="144.5" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="154.0" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="163.4" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="172.8" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="182.2" cy="225.3" r="2.7" fill="#24536b"/>
+<circle cx="191.6" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="201.1" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="210.5" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="219.9" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="229.3" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="248.2" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="257.6" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="267.0" cy="225.3" r="2.7" fill="#24536b"/>
+<circle cx="276.4" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="285.9" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="295.3" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="314.1" cy="154.3" r="2.7" fill="#24536b"/>
+<circle cx="323.5" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="333.0" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="342.4" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="351.8" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="361.2" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="370.7" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="380.1" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="389.5" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="398.9" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="408.3" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="417.8" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="427.2" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="436.6" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="446.0" cy="260.9" r="2.7" fill="#24536b"/>
+<circle cx="455.4" cy="154.3" r="2.7" fill="#24536b"/>
+<circle cx="464.9" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="474.3" cy="225.3" r="2.7" fill="#24536b"/>
+<circle cx="483.7" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="493.1" cy="189.8" r="2.7" fill="#24536b"/>
+<circle cx="502.6" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="521.4" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="530.8" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="540.2" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="549.7" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="559.1" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="568.5" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="577.9" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="587.3" cy="189.8" r="2.7" fill="#24536b"/>
+<circle cx="596.8" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="606.2" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="615.6" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="625.0" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="634.5" cy="296.4" r="2.7" fill="#24536b"/>
+<circle cx="662.7" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="672.1" cy="403.0" r="2.7" fill="#24536b"/>
+<circle cx="681.6" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="691.0" cy="367.4" r="2.7" fill="#24536b"/>
+<circle cx="700.4" cy="438.5" r="2.7" fill="#24536b"/>
+<circle cx="738.1" cy="260.9" r="2.7" fill="#24536b"/>
+<circle cx="747.5" cy="83.3" r="2.7" fill="#24536b"/>
+<circle cx="756.9" cy="189.8" r="2.7" fill="#24536b"/>
+<circle cx="766.4" cy="260.9" r="2.7" fill="#24536b"/>
+<circle cx="775.8" cy="154.3" r="2.7" fill="#24536b"/>
+<circle cx="785.2" cy="260.9" r="2.7" fill="#24536b"/>
+<circle cx="794.6" cy="225.3" r="2.7" fill="#24536b"/>
+<circle cx="804.0" cy="331.9" r="2.7" fill="#24536b"/>
+<circle cx="813.5" cy="118.8" r="2.7" fill="#24536b"/>
+<circle cx="822.9" cy="225.3" r="2.7" fill="#24536b"/>
+<circle cx="832.3" cy="154.3" r="2.7" fill="#24536b"/>
+<circle cx="841.7" cy="83.3" r="2.7" fill="#24536b"/>
+<circle cx="851.2" cy="154.3" r="2.7" fill="#24536b"/>
+<circle cx="860.6" cy="83.3" r="2.7" fill="#24536b"/>
+<circle cx="870.0" cy="403.0" r="2.7" fill="#24536b"/>
+<line x1="898" y1="60" x2="928" y2="60" stroke="#24536b" stroke-width="2.4"/>
+<text x="936" y="64" font-family="Arial, sans-serif" font-size="12" fill="#333">Observed high</text>
+<polyline fill="none" stroke="#24536b" stroke-width="2.4" stroke-dasharray="6 4" points="88.0,326.5 97.4,333.5 106.8,348.8 116.3,318.5 125.7,358.8 135.1,298.4 144.5,327.1 154.0,303.5 163.4,333.2 172.8,346.7 182.2,281.5 191.6,395.0 201.1,332.5 210.5,339.5 219.9,354.8 229.3,324.5 248.2,303.9 257.6,332.6 267.0,309.0 276.4,338.7 285.9,352.2 295.3,287.0 314.1,337.5 323.5,344.5 333.0,359.8 342.4,329.5 351.8,369.8 361.2,309.4 370.7,338.1 380.1,314.5 389.5,344.2 398.9,357.7 408.3,292.5 417.8,406.0 427.2,343.5 436.6,350.5 446.0,365.8 455.4,335.5 464.9,375.8 474.3,315.4 483.7,344.1 493.1,320.5 502.6,350.2 521.4,298.0 530.8,411.5 540.2,349.0 549.7,356.0 559.1,371.3 568.5,341.0 577.9,381.2 587.3,320.9 596.8,349.6 606.2,326.0 615.6,355.7 625.0,369.2 634.5,304.0 662.7,361.0 672.1,376.3 681.6,346.0 691.0,386.2 700.4,325.9 738.1,212.0 747.5,146.2 756.9,259.2 766.4,196.1 775.8,202.7 785.2,217.4 794.6,186.5 804.0,226.3 813.5,165.4 822.9,193.5 832.3,169.4 841.7,198.6 851.2,211.6 860.6,145.8 870.0,258.8"/>
+<line x1="898" y1="82" x2="928" y2="82" stroke="#24536b" stroke-width="2.4" stroke-dasharray="6 4"/>
+<text x="936" y="86" font-family="Arial, sans-serif" font-size="12" fill="#333">Fitted high</text>
+<text x="20" y="263.0" transform="rotate(-90 20 263.0)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Monthly high-sensitivity starts</text>
+<text x="88" y="532" font-family="Arial, sans-serif" font-size="11" fill="#333">Vertical line marks the July 2024 breakpoint. Fitted paths are segmented ITS fits with month-of-year fixed effects.</text>
+</svg>

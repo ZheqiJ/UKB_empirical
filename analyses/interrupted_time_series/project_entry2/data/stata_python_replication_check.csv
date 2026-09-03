@@ -1,0 +1,2 @@
+model_id,term,python_estimate,stata_estimate,absolute_difference,tolerance,status
+all,,,,,,STATA_NOT_AVAILABLE_ON_RUNNER
