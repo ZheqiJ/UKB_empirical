@@ -118,16 +118,7 @@ class ProjectEntry2Tests(unittest.TestCase):
         terms = {
             row["term"]
             for row in rows
-            if row["model_id"] == "test1a_sequence_only_count"
-        }
-        self.assertIn("Time", terms)
-        self.assertIn("PostJuly2024", terms)
-        self.assertIn("TimeAfterJuly2024", terms)
-        self.assertIn("month_12", terms)
-        terms = {
-            row["term"]
-            for row in rows
-            if row["model_id"] == "test1b_expanded_high_sensitivity_count"
+            if row["model_id"] == "test1_high_sensitivity_count"
         }
         self.assertIn("Time", terms)
         self.assertIn("PostJuly2024", terms)
@@ -139,7 +130,6 @@ class ProjectEntry2Tests(unittest.TestCase):
         by_month = {row["month"]: row for row in monthly}
         self.assertEqual(by_month["2024-07"]["time_after_july2024"], "0")
         self.assertEqual(by_month["2024-08"]["time_after_july2024"], "1")
-        self.assertTrue(any(int(row["hs_wes_wgs_sequence_count"]) == 0 for row in monthly))
         self.assertTrue(any(int(row["high_sensitivity_count"]) == 0 for row in monthly))
 
         regressions = self.analysis.read_csv(self.analysis.Outputs().regression_results)
@@ -148,8 +138,7 @@ class ProjectEntry2Tests(unittest.TestCase):
             for row in regressions
             if row["term"] == "Intercept"
         }
-        self.assertEqual(n_by_model["test1a_sequence_only_count"], 84)
-        self.assertEqual(n_by_model["test1b_expanded_high_sensitivity_count"], 84)
+        self.assertEqual(n_by_model["test1_high_sensitivity_count"], 84)
         self.assertEqual(n_by_model["test3_high_sensitivity_count"], 84)
         self.assertEqual(n_by_model["test3_lower_sensitivity_count"], 84)
 
@@ -200,7 +189,6 @@ class ProjectEntry2Tests(unittest.TestCase):
     def test_stata_do_file_uses_official_newey(self):
         do_text = self.analysis.Outputs().stata_do.read_text(encoding="utf-8")
         self.assertIn("version 18.0", do_text)
-        self.assertIn("newey hs_wes_wgs_sequence_count", do_text)
         self.assertIn("newey high_sensitivity_count", do_text)
         self.assertIn("newey index_diff_pre_mean", do_text)
         self.assertIn("lag(3)", do_text)
@@ -209,26 +197,22 @@ class ProjectEntry2Tests(unittest.TestCase):
         text = self.analysis.Outputs().stata_style_python_table.read_text(encoding="utf-8")
         self.assertIn("Regression with Newey-West standard errors", text)
         for model_id in [
-            "test1a_sequence_only_count",
-            "test1b_expanded_high_sensitivity_count",
+            "test1_high_sensitivity_count",
             "test2_high_share_all",
             "test3_difference_index_pre_mean",
             "test3_high_sensitivity_count",
             "test3_lower_sensitivity_count",
         ]:
             self.assertIn(model_id, text)
-        self.assertIn("hs_wes_wgs_sequence_count", text)
         self.assertIn("high_sensitivity_count", text)
-        self.assertIn("12.month_of_year", text)
+        self.assertIn("monthFE = Yes", text)
+        self.assertNotIn("12.month_of_year", text)
         self.assertIn("time_after_july2024", text)
 
-    def test_test1a_and_test1b_figures_exist(self):
-        for path in [
-            self.analysis.Outputs().test1a_figure,
-            self.analysis.Outputs().test1b_figure,
-        ]:
-            self.assertTrue(path.exists(), path)
-            self.assertIn("<svg", path.read_text(encoding="utf-8")[:100])
+    def test_test1_figure_exists(self):
+        path = self.analysis.Outputs().test1_figure
+        self.assertTrue(path.exists(), path)
+        self.assertIn("<svg", path.read_text(encoding="utf-8")[:100])
 
 
 if __name__ == "__main__":

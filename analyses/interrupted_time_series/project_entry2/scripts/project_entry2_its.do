@@ -17,7 +17,7 @@ global PROJECT_ENTRY2_POST_HANDLE "`handle'"
 
 program define _post_newey_rows
     args model_id outcome
-    local terms "_cons time post_july2024 time_after_july2024 2.month_of_year_stata 3.month_of_year_stata 4.month_of_year_stata 5.month_of_year_stata 6.month_of_year_stata 7.month_of_year_stata 8.month_of_year_stata 9.month_of_year_stata 10.month_of_year_stata 11.month_of_year_stata 12.month_of_year_stata"
+    local terms "_cons time post_july2024 time_after_july2024"
     local r2 = .
     capture local r2 = e(r2)
     foreach term of local terms {
@@ -29,13 +29,11 @@ program define _post_newey_rows
         local hi = `b' + invttail(e(df_r), 0.025) * `se'
         post $PROJECT_ENTRY2_POST_HANDLE ("`model_id'") ("`outcome'") ("`term'") (`b') (`se') (`t') (`p') (`lo') (`hi') (e(N)) (`r2')
     }
+    post $PROJECT_ENTRY2_POST_HANDLE ("`model_id'") ("`outcome'") ("monthFE") (.) (.) (.) (.) (.) (.) (e(N)) (`r2')
 end
 
-newey hs_wes_wgs_sequence_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1a_sequence_only_count hs_wes_wgs_sequence_count
-
 newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1b_expanded_high_sensitivity_count high_sensitivity_count
+_post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 
 newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 _post_newey_rows test2_high_share_all high_sensitivity_share_all

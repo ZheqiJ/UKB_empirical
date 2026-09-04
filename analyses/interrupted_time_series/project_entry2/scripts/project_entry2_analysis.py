@@ -41,8 +41,7 @@ class Outputs:
     reading_guide: Path = REPORT_DIR / "project_entry2_reading_guide.md"
     measurement_note: Path = REPORT_DIR / "project_entry2_measurement_note.md"
     results_report: Path = REPORT_DIR / "project_entry2_results.md"
-    test1a_figure: Path = FIGURE_DIR / "figure_test1a_sequence_only_entry.svg"
-    test1b_figure: Path = FIGURE_DIR / "figure_test1b_expanded_high_sensitivity_entry.svg"
+    test1_figure: Path = FIGURE_DIR / "figure_test1_high_sensitivity_entry.svg"
     test2_figure: Path = FIGURE_DIR / "figure_test2_high_sensitivity_share.svg"
     test3_raw_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_raw.svg"
     test3_indexed_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_indexed.svg"
@@ -367,15 +366,8 @@ def run_model(
 def run_all_models(monthly_rows: list[dict[str, object]]) -> tuple[list[dict[str, object]], dict[str, dict[str, object]]]:
     specs = [
         (
-            "test1a_sequence_only_count",
-            "Test 1A",
-            "hs_wes_wgs_sequence_count",
-            "WES/WGS + sequence products only",
-            "",
-        ),
-        (
-            "test1b_expanded_high_sensitivity_count",
-            "Test 1B",
+            "test1_high_sensitivity_count",
+            "Test 1",
             "high_sensitivity_count",
             "HIGH_SENSITIVITY",
             "",
@@ -474,8 +466,6 @@ def make_svg_time_series(
     style = {
         "Observed high": ("#24536b", "", 2.4),
         "Fitted high": ("#24536b", "6 4", 2.4),
-        "Observed sequence-only": ("#24536b", "", 2.4),
-        "Fitted sequence-only": ("#24536b", "6 4", 2.4),
         "Observed high/all share": ("#24536b", "", 2.4),
         "Fitted high/all share": ("#24536b", "6 4", 2.4),
         "High": ("#24536b", "", 2.4),
@@ -534,39 +524,19 @@ def make_figures(
     fits: dict[str, dict[str, object]],
     out: Outputs,
 ) -> None:
-    test1a_series = figure_rows_from_fit(
+    test1_series = figure_rows_from_fit(
         monthly_rows,
-        fits["test1a_sequence_only_count"],
-        "hs_wes_wgs_sequence_count",
-        "Observed sequence-only",
-        "Fitted sequence-only",
-    )
-    test1b_series = figure_rows_from_fit(
-        monthly_rows,
-        fits["test1b_expanded_high_sensitivity_count"],
+        fits["test1_high_sensitivity_count"],
         "high_sensitivity_count",
         "Observed high",
         "Fitted high",
     )
-    test1_y_max = max(
-        [float(row["value"]) for row in test1a_series + test1b_series if clean(row.get("value"))] + [1.0]
-    )
-    test1_y_max = math.ceil(test1_y_max * 1.08)
     make_svg_time_series(
-        out.test1a_figure,
-        "Test 1A: Sequence-Only High-Sensitivity Project Entry",
-        test1a_series,
-        "Monthly sequence-only high-sensitivity starts",
+        out.test1_figure,
+        "Test 1: High-Sensitivity Project Entry",
+        test1_series,
+        "Monthly high-sensitivity starts",
         y_min=0,
-        y_max=test1_y_max,
-    )
-    make_svg_time_series(
-        out.test1b_figure,
-        "Test 1B: Expanded High-Sensitivity Project Entry",
-        test1b_series,
-        "Monthly expanded high-sensitivity starts",
-        y_min=0,
-        y_max=test1_y_max,
     )
 
     test2_series = figure_rows_from_fit(
@@ -652,40 +622,6 @@ def report_key_line(rows: list[dict[str, object]], model_id: str) -> str:
     return "; ".join(values)
 
 
-def coef_value(rows: list[dict[str, object]], model_id: str, term: str, column: str = "estimate") -> float:
-    return float(term_row(rows, model_id, term)[column])
-
-
-def test1_comparison_line(
-    rows: list[dict[str, object]],
-    model_id: str,
-    label: str,
-    definition: str,
-    total_n: int,
-) -> str:
-    return (
-        f"| {label} | {definition} | {total_n:,} | "
-        f"{coef_value(rows, model_id, 'Time'):.4f} | "
-        f"{coef_value(rows, model_id, 'PostJuly2024'):.4f} | "
-        f"{coef_value(rows, model_id, 'TimeAfterJuly2024'):.4f} | "
-        f"{coef_value(rows, model_id, 'TimeAfterJuly2024', 'p_value'):.4f} |"
-    )
-
-
-def test1_slope_change_statement(rows: list[dict[str, object]]) -> str:
-    seq_present = coef_value(rows, "test1a_sequence_only_count", "TimeAfterJuly2024", "p_value") < 0.05
-    expanded_present = (
-        coef_value(rows, "test1b_expanded_high_sensitivity_count", "TimeAfterJuly2024", "p_value") < 0.05
-    )
-    if seq_present and expanded_present:
-        return "The post-transition slope-change result is present in both definitions."
-    if expanded_present and not seq_present:
-        return "The post-transition slope-change result is present only after adding s3/imaging evidence."
-    if seq_present and not expanded_present:
-        return "The post-transition slope-change result is present only in the sequence-intensive definition."
-    return "The post-transition slope-change result is absent in both definitions."
-
-
 def model_n(regression_rows: list[dict[str, object]], model_id: str) -> int:
     row = next(row for row in regression_rows if row["model_id"] == model_id and row["term"] == "Intercept")
     return int(row["n_obs"])
@@ -697,8 +633,7 @@ def zero_month_preservation_check(
 ) -> bool:
     by_month = {str(row["month"]): row for row in monthly_rows}
     required_n = {
-        "test1a_sequence_only_count": 84,
-        "test1b_expanded_high_sensitivity_count": 84,
+        "test1_high_sensitivity_count": 84,
         "test3_high_sensitivity_count": 84,
         "test3_lower_sensitivity_count": 84,
     }
@@ -729,7 +664,7 @@ global PROJECT_ENTRY2_POST_HANDLE "`handle'"
 
 program define _post_newey_rows
     args model_id outcome
-    local terms "_cons time post_july2024 time_after_july2024 2.month_of_year_stata 3.month_of_year_stata 4.month_of_year_stata 5.month_of_year_stata 6.month_of_year_stata 7.month_of_year_stata 8.month_of_year_stata 9.month_of_year_stata 10.month_of_year_stata 11.month_of_year_stata 12.month_of_year_stata"
+    local terms "_cons time post_july2024 time_after_july2024"
     local r2 = .
     capture local r2 = e(r2)
     foreach term of local terms {
@@ -741,13 +676,11 @@ program define _post_newey_rows
         local hi = `b' + invttail(e(df_r), 0.025) * `se'
         post $PROJECT_ENTRY2_POST_HANDLE ("`model_id'") ("`outcome'") ("`term'") (`b') (`se') (`t') (`p') (`lo') (`hi') (e(N)) (`r2')
     }
+    post $PROJECT_ENTRY2_POST_HANDLE ("`model_id'") ("`outcome'") ("monthFE") (.) (.) (.) (.) (.) (.) (e(N)) (`r2')
 end
 
-newey hs_wes_wgs_sequence_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1a_sequence_only_count hs_wes_wgs_sequence_count
-
 newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1b_expanded_high_sensitivity_count high_sensitivity_count
+_post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 
 newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 _post_newey_rows test2_high_share_all high_sensitivity_share_all
@@ -985,11 +918,7 @@ def stata_pvalue(value: object) -> str:
 
 def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str, object]]) -> None:
     commands = {
-        "test1a_sequence_only_count": (
-            "newey hs_wes_wgs_sequence_count time post_july2024 "
-            "time_after_july2024 i.month_of_year_stata, lag(3)"
-        ),
-        "test1b_expanded_high_sensitivity_count": (
+        "test1_high_sensitivity_count": (
             "newey high_sensitivity_count time post_july2024 "
             "time_after_july2024 i.month_of_year_stata, lag(3)"
         ),
@@ -1028,6 +957,11 @@ def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str
     ]
     for model_id in order:
         model_rows = rows_by_model[model_id]
+        display_rows = [
+            row
+            for row in model_rows
+            if clean(row["term"]) in {"Intercept", "Time", "PostJuly2024", "TimeAfterJuly2024"}
+        ]
         header = model_rows[0]
         n_obs = int(header["n_obs"])
         k_params = len(model_rows)
@@ -1055,7 +989,7 @@ def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str
                 separator,
             ]
         )
-        for row in model_rows:
+        for row in display_rows:
             term = stata_term_name(row["term"])
             coef = stata_num(row["estimate"])
             se = stata_num(row["std_error"])
@@ -1067,7 +1001,7 @@ def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str
                 f"{term[:variable_width]:>{variable_width}} | "
                 f"{coef:>11} {se:>10} {z_stat:>7} {p_value:>8} {lo:>12} {hi:>12}"
             )
-        lines.extend([separator, ""])
+        lines.extend([separator, "monthFE = Yes", ""])
 
     write_text(out.stata_style_python_table, "\n".join(lines))
 
@@ -1096,33 +1030,11 @@ def write_reports(
     post_lower = post_counts["LOWER_SENSITIVITY_COMPARISON"]["count"]
     zero_check = "PASS" if zero_month_preservation_check(monthly_rows, regression_rows) else "FAIL"
 
-    t1a = report_key_line(regression_rows, "test1a_sequence_only_count")
-    t1b = report_key_line(regression_rows, "test1b_expanded_high_sensitivity_count")
+    t1 = report_key_line(regression_rows, "test1_high_sensitivity_count")
     t2 = report_key_line(regression_rows, "test2_high_share_all")
     t3_diff = report_key_line(regression_rows, "test3_difference_index_pre_mean")
     t3_high = report_key_line(regression_rows, "test3_high_sensitivity_count")
     t3_lower = report_key_line(regression_rows, "test3_lower_sensitivity_count")
-    test1_comparison = "\n".join(
-        [
-            "| Test | High definition | Total project N | beta1 | beta2 | beta3 | p(beta3) |",
-            "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
-            test1_comparison_line(
-                regression_rows,
-                "test1a_sequence_only_count",
-                "Test 1A",
-                "WES/WGS + sequence products only",
-                wes_n,
-            ),
-            test1_comparison_line(
-                regression_rows,
-                "test1b_expanded_high_sensitivity_count",
-                "Test 1B",
-                "Expanded HIGH_SENSITIVITY",
-                high_n,
-            ),
-        ]
-    )
-    test1_statement = test1_slope_change_statement(regression_rows)
 
     channel_lines = []
     for label in ["WES/WGS_SEQUENCE", "DIRECT_S3_FIELD_LINK", "S3_DERIVED_APPLICATION_TEXT"]:
@@ -1216,33 +1128,17 @@ The lower comparison is the exhaustive complement, meaning no identified high ev
 
 The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `s3_field_dictionary.csv`, `s3_application_keyword_dictionary.csv`, `s3_text_audit_examples.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
 
-## B. Test 1A - Sequence-Only High-Sensitivity Entry
+## B. Test 1 - High-Sensitivity Entry Count
 
-Question: did the absolute number of sequence-intensive project starts change around/after July 2024?
+Question: did the absolute number of high-sensitivity project starts change around/after July 2024?
 
-Definition: WES/WGS or sequence-product evidence only.
+Primary HIGH_SENSITIVITY:
 
-{compact_coef(regression_rows, "test1a_sequence_only_count")}
+{compact_coef(regression_rows, "test1_high_sensitivity_count")}
 
-Key terms: {t1a}.
+Key terms: {t1}.
 
-## C. Test 1B - Expanded High-Sensitivity Entry
-
-Question: did the absolute number of broader high-sensitivity/high-granularity project starts change around/after July 2024?
-
-Definition: current `HIGH_SENSITIVITY` union: WES/WGS or sequence-product evidence, direct s3 field links, or s3-derived application text.
-
-{compact_coef(regression_rows, "test1b_expanded_high_sensitivity_count")}
-
-Key terms: {t1b}.
-
-## D. Test 1A Vs Test 1B Comparison
-
-{test1_comparison}
-
-{test1_statement} These are two substantively different high-sensitivity samples: sequence-intensive projects and broader high-sensitivity/high-granularity projects.
-
-## E. Test 2 - High-Sensitivity Share
+## C. Test 2 - High-Sensitivity Share
 
 Question: did the composition of project entry shift toward high-sensitivity projects?
 
@@ -1252,7 +1148,7 @@ Primary denominator is all recorded project starts because HIGH and LOWER are ex
 
 Key terms: {t2}.
 
-## F. Test 3 - Indexed High Vs Lower Difference
+## D. Test 3 - Indexed High Vs Lower Difference
 
 Question: was the post-transition trajectory stronger for high-sensitivity than for low-sensitivity project types?
 
@@ -1268,9 +1164,9 @@ Raw Lower component: {t3_lower}.
 
 The indexed figure uses the full pre-transition mean. `index_high_2023_mean` and `index_lower_2023_mean` remain in the monthly CSV as a visual check.
 
-Zero-month preservation check: {zero_check}. Test 1A, Test 1B, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
+Zero-month preservation check: {zero_check}. Test 1, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
 
-## G. Measurement Limitations
+## E. Measurement Limitations
 
 Start date is not application submission, approval, or first RAP access. Current Application x Field links may reflect later amendments. Field tier is a sensitivity/granularity proxy, not observed leakage risk. The design is descriptive ITS/comparative ITS, not causal DID.
 
@@ -1284,8 +1180,7 @@ Start date is not application submission, approval, or first RAP access. Current
 - `data/project_entry2_monthly.csv`
 - `data/project_entry2_regression_results.csv`
 - `data/stata_python_replication_check.csv`
-- `figures/figure_test1a_sequence_only_entry.svg`
-- `figures/figure_test1b_expanded_high_sensitivity_entry.svg`
+- `figures/figure_test1_high_sensitivity_entry.svg`
 - `figures/figure_test2_high_sensitivity_share.svg`
 - `figures/figure_test3_high_vs_low_raw.svg`
 - `figures/figure_test3_high_vs_low_indexed.svg`
@@ -1323,8 +1218,7 @@ def validate_outputs(out: Outputs | None = None) -> None:
     regressions = read_csv(out.regression_results)
     terms = {(row["model_id"], row["term"]) for row in regressions}
     for model_id in [
-        "test1a_sequence_only_count",
-        "test1b_expanded_high_sensitivity_count",
+        "test1_high_sensitivity_count",
         "test2_high_share_all",
         "test3_difference_index_pre_mean",
         "test3_high_sensitivity_count",
@@ -1336,8 +1230,7 @@ def validate_outputs(out: Outputs | None = None) -> None:
     if not zero_month_preservation_check(monthly, regressions):
         raise AssertionError("zero-month/calendar-time preservation check failed")
     for path in [
-        out.test1a_figure,
-        out.test1b_figure,
+        out.test1_figure,
         out.test2_figure,
         out.test3_raw_figure,
         out.test3_indexed_figure,
@@ -1351,6 +1244,10 @@ def validate_outputs(out: Outputs | None = None) -> None:
     table_text = out.stata_style_python_table.read_text(encoding="utf-8")
     if "Regression with Newey-West standard errors" not in table_text:
         raise AssertionError("Stata-style table missing Newey-West header")
+    if "monthFE = Yes" not in table_text:
+        raise AssertionError("Stata-style table missing compressed monthFE indicator")
+    if "2.month_of_year" in table_text or "12.month_of_year" in table_text:
+        raise AssertionError("Stata-style table should not print month fixed-effect coefficients")
     if "test3_difference_index_pre_mean" not in table_text:
         raise AssertionError("Stata-style table missing Test 3 difference model")
 

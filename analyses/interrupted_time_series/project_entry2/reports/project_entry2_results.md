@@ -29,26 +29,11 @@ The lower comparison is the exhaustive complement, meaning no identified high ev
 
 The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `s3_field_dictionary.csv`, `s3_application_keyword_dictionary.csv`, `s3_text_audit_examples.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
 
-## B. Test 1A - Sequence-Only High-Sensitivity Entry
+## B. Test 1 - High-Sensitivity Entry Count
 
-Question: did the absolute number of sequence-intensive project starts change around/after July 2024?
+Question: did the absolute number of high-sensitivity project starts change around/after July 2024?
 
-Definition: WES/WGS or sequence-product evidence only.
-
-| Term | Estimate | SE | p-value | 95% CI |
-| --- | ---: | ---: | ---: | ---: |
-| Intercept | 4.8803 | 0.9495 | 0.0000 | [3.0192, 6.7414] |
-| Time | -0.0292 | 0.0118 | 0.0131 | [-0.0523, -0.0061] |
-| PostJuly2024 | 1.5052 | 2.1488 | 0.4836 | [-2.7065, 5.7168] |
-| TimeAfterJuly2024 | 0.3165 | 0.1886 | 0.0932 | [-0.0530, 0.6861] |
-
-Key terms: Time=-0.0292 (SE 0.0118); PostJuly2024=1.5052 (SE 2.1488); TimeAfterJuly2024=0.3165 (SE 0.1886).
-
-## C. Test 1B - Expanded High-Sensitivity Entry
-
-Question: did the absolute number of broader high-sensitivity/high-granularity project starts change around/after July 2024?
-
-Definition: current `HIGH_SENSITIVITY` union: WES/WGS or sequence-product evidence, direct s3 field links, or s3-derived application text.
+Primary HIGH_SENSITIVITY:
 
 | Term | Estimate | SE | p-value | 95% CI |
 | --- | ---: | ---: | ---: | ---: |
@@ -59,16 +44,7 @@ Definition: current `HIGH_SENSITIVITY` union: WES/WGS or sequence-product eviden
 
 Key terms: Time=-0.0134 (SE 0.0181); PostJuly2024=0.8439 (SE 3.6627); TimeAfterJuly2024=0.8615 (SE 0.3673).
 
-## D. Test 1A Vs Test 1B Comparison
-
-| Test | High definition | Total project N | beta1 | beta2 | beta3 | p(beta3) |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Test 1A | WES/WGS + sequence products only | 459 | -0.0292 | 1.5052 | 0.3165 | 0.0932 |
-| Test 1B | Expanded HIGH_SENSITIVITY | 1,048 | -0.0134 | 0.8439 | 0.8615 | 0.0190 |
-
-The post-transition slope-change result is present only after adding s3/imaging evidence. These are two substantively different high-sensitivity samples: sequence-intensive projects and broader high-sensitivity/high-granularity projects.
-
-## E. Test 2 - High-Sensitivity Share
+## C. Test 2 - High-Sensitivity Share
 
 Question: did the composition of project entry shift toward high-sensitivity projects?
 
@@ -83,7 +59,7 @@ Primary denominator is all recorded project starts because HIGH and LOWER are ex
 
 Key terms: Time=-0.0011 (SE 0.0004); PostJuly2024=-0.0372 (SE 0.0336); TimeAfterJuly2024=0.0054 (SE 0.0025).
 
-## F. Test 3 - Indexed High Vs Lower Difference
+## D. Test 3 - Indexed High Vs Lower Difference
 
 Question: was the post-transition trajectory stronger for high-sensitivity than for low-sensitivity project types?
 
@@ -104,9 +80,9 @@ Raw Lower component: Time=0.3298 (SE 0.1122); PostJuly2024=4.0421 (SE 23.6294); 
 
 The indexed figure uses the full pre-transition mean. `index_high_2023_mean` and `index_lower_2023_mean` remain in the monthly CSV as a visual check.
 
-Zero-month preservation check: PASS. Test 1A, Test 1B, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
+Zero-month preservation check: PASS. Test 1, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
 
-## G. Measurement Limitations
+## E. Measurement Limitations
 
 Start date is not application submission, approval, or first RAP access. Current Application x Field links may reflect later amendments. Field tier is a sensitivity/granularity proxy, not observed leakage risk. The design is descriptive ITS/comparative ITS, not causal DID.
 
@@ -120,8 +96,7 @@ Start date is not application submission, approval, or first RAP access. Current
 - `data/project_entry2_monthly.csv`
 - `data/project_entry2_regression_results.csv`
 - `data/stata_python_replication_check.csv`
-- `figures/figure_test1a_sequence_only_entry.svg`
-- `figures/figure_test1b_expanded_high_sensitivity_entry.svg`
+- `figures/figure_test1_high_sensitivity_entry.svg`
 - `figures/figure_test2_high_sensitivity_share.svg`
 - `figures/figure_test3_high_vs_low_raw.svg`
 - `figures/figure_test3_high_vs_low_indexed.svg`
