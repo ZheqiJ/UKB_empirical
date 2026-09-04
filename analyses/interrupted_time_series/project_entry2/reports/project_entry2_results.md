@@ -2,70 +2,85 @@
 
 ## A. What Is High Sensitivity?
 
-Primary high sensitivity is `HIGH_C05_S3`: existing C05 RAP-intensive comparison evidence, explicit WES/WGS evidence, or at least one current UKB field-page link to an `s3` field. It is a proxy for higher-granularity or more sensitive data use, not observed leakage risk.
+Primary high sensitivity is `HIGH_SENSITIVITY`: explicit WES/WGS or sequence-product evidence, direct application-field links to `s3` fields, or high-precision application text derived from the 199 Schema 1 `s3` fields. It is a proxy for higher-granularity or more sensitive data use, not observed leakage risk.
 
 Project counts:
 
 | Definition | N |
 | --- | ---: |
-| HIGH_C05_S3 | 463 |
-| HIGH_C03_S3 | 462 |
-| HIGH_C05_S3_TIMING_CONSERVATIVE | 463 |
+| HIGH_SENSITIVITY | 1,048 |
+| LOWER_SENSITIVITY_COMPARISON | 5,887 |
+| hs_wes_wgs_sequence | 459 |
+| hs_s3_direct | 2 |
+| hs_s3_text | 621 |
 | LOW_STRICT | 1,147 |
-| hs_c05 | 269 |
-| hs_s3_field | 2 |
-| S3_ONLY | 2 |
-| C05_ONLY | 2 |
 
-Pre/post counts use the exact policy date 2024-07-05 at the project level: HIGH_C05_S3 is 317 pre-July-2024 and 146 post-July-2024; LOW_STRICT is 806 pre-July-2024 and 341 post-July-2024.
+Evidence-channel overlap and net additions:
 
-The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
+| Channel | N | Overlap with previous channels | Net additions | Pre N | Post N |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| WES/WGS_SEQUENCE | 459 | 0 | 459 | 313 | 146 |
+| DIRECT_S3_FIELD_LINK | 2 | 0 | 2 | 2 | 0 |
+| S3_DERIVED_APPLICATION_TEXT | 621 | 34 | 587 | 382 | 239 |
+
+Pre/post counts use the exact policy date 2024-07-05 at the project level: HIGH_SENSITIVITY is 679 pre-July-2024 and 369 post-July-2024; LOWER_SENSITIVITY_COMPARISON is 3653 pre-July-2024 and 2234 post-July-2024.
+
+The lower comparison is the exhaustive complement, meaning no identified high evidence under the observable proxy, not proof that every complement project is low-risk.
+
+The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `s3_field_dictionary.csv`, `s3_application_keyword_dictionary.csv`, `s3_text_audit_examples.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
 
 ## B. Test 1 - High-Sensitivity Entry Count
 
 Question: did the absolute number of high-sensitivity project starts change around/after July 2024?
 
-Primary HIGH_C05_S3:
+Primary HIGH_SENSITIVITY:
 
 | Term | Estimate | SE | p-value | 95% CI |
 | --- | ---: | ---: | ---: | ---: |
-| Intercept | 4.1672 | 0.9793 | 0.0000 | [2.2479, 6.0866] |
-| Time | -0.0141 | 0.0102 | 0.1681 | [-0.0341, 0.0059] |
-| PostJuly2024 | 4.4655 | 1.1692 | 0.0001 | [2.1738, 6.7571] |
-| TimeAfterJuly2024 | 0.0149 | 0.1082 | 0.8901 | [-0.1971, 0.2270] |
+| Intercept | 8.4939 | 1.5108 | 0.0000 | [5.5327, 11.4552] |
+| Time | -0.0134 | 0.0181 | 0.4590 | [-0.0489, 0.0221] |
+| PostJuly2024 | 0.8439 | 3.6627 | 0.8178 | [-6.3350, 8.0228] |
+| TimeAfterJuly2024 | 0.8615 | 0.3673 | 0.0190 | [0.1417, 1.5814] |
 
-Key terms: Time=-0.0141 (SE 0.0102); PostJuly2024=4.4655 (SE 1.1692); TimeAfterJuly2024=0.0149 (SE 0.1082).
-
-C03+S3 robustness: Time=-0.0141 (SE 0.0102); PostJuly2024=4.4973 (SE 1.1517); TimeAfterJuly2024=0.0056 (SE 0.1054).
+Key terms: Time=-0.0134 (SE 0.0181); PostJuly2024=0.8439 (SE 3.6627); TimeAfterJuly2024=0.8615 (SE 0.3673).
 
 ## C. Test 2 - High-Sensitivity Share
 
 Question: did the composition of project entry shift toward high-sensitivity projects?
 
-Primary denominator is `HIGH_C05_S3 + LOW_STRICT`; the all-start denominator is reported separately.
+Primary denominator is all recorded project starts because HIGH and LOWER are exhaustive. If `N_All,t=0`, the share is missing but calendar time is preserved.
 
 | Term | Estimate | SE | p-value | 95% CI |
 | --- | ---: | ---: | ---: | ---: |
-| Intercept | 0.3488 | 0.0475 | 0.0000 | [0.2557, 0.4418] |
-| Time | -0.0028 | 0.0012 | 0.0227 | [-0.0051, -0.0004] |
-| PostJuly2024 | 0.0205 | 0.1048 | 0.8450 | [-0.1849, 0.2258] |
-| TimeAfterJuly2024 | 0.0083 | 0.0059 | 0.1582 | [-0.0032, 0.0198] |
+| Intercept | 0.1848 | 0.0177 | 0.0000 | [0.1502, 0.2195] |
+| Time | -0.0011 | 0.0004 | 0.0022 | [-0.0019, -0.0004] |
+| PostJuly2024 | -0.0372 | 0.0336 | 0.2682 | [-0.1031, 0.0287] |
+| TimeAfterJuly2024 | 0.0054 | 0.0025 | 0.0335 | [0.0004, 0.0104] |
 
-Key terms: Time=-0.0028 (SE 0.0012); PostJuly2024=0.0205 (SE 0.1048); TimeAfterJuly2024=0.0083 (SE 0.0059).
+Key terms: Time=-0.0011 (SE 0.0004); PostJuly2024=-0.0372 (SE 0.0336); TimeAfterJuly2024=0.0054 (SE 0.0025).
 
-High/all robustness: Time=-0.0008 (SE 0.0002); PostJuly2024=-0.0085 (SE 0.0232); TimeAfterJuly2024=0.0022 (SE 0.0014).
-
-## D. Test 3 - High Vs Low Partition
+## D. Test 3 - Indexed High Vs Lower Difference
 
 Question: was the post-transition trajectory stronger for high-sensitivity than for low-sensitivity project types?
 
-High sensitivity: Time=-0.0141 (SE 0.0102); PostJuly2024=4.4655 (SE 1.1692); TimeAfterJuly2024=0.0149 (SE 0.1082).
+Primary formal test: `D_t = Index_H,t - Index_L,t`, where both indexes use the full pre-transition monthly mean as 100.
 
-Strict low sensitivity: Time=0.0718 (SE 0.0364); PostJuly2024=5.3995 (SE 3.6837); TimeAfterJuly2024=0.0872 (SE 0.3378).
+| Term | Estimate | SE | p-value | 95% CI |
+| --- | ---: | ---: | ---: | ---: |
+| Intercept | 20.6950 | 15.2614 | 0.1751 | [-9.2174, 50.6073] |
+| Time | -0.9195 | 0.2437 | 0.0002 | [-1.3972, -0.4418] |
+| PostJuly2024 | 1.4773 | 17.3884 | 0.9323 | [-32.6039, 35.5585] |
+| TimeAfterJuly2024 | -0.7412 | 1.6153 | 0.6463 | [-3.9071, 2.4247] |
 
-Inclusive NOT_HIGH robustness: Time=0.3330 (SE 0.1172); PostJuly2024=12.7555 (SE 25.3081); TimeAfterJuly2024=4.5438 (SE 2.3670).
+Difference key terms: Time=-0.9195 (SE 0.2437); PostJuly2024=1.4773 (SE 17.3884); TimeAfterJuly2024=-0.7412 (SE 1.6153).
 
-The post-July slope change is 0.0149 for high-sensitivity starts and 0.0872 for strict low-sensitivity starts, so the descriptive post-transition trajectory grows faster for the strict low-sensitivity series in this specification. Test 2 remains the formal composition test.
+Raw High component: Time=-0.0134 (SE 0.0181); PostJuly2024=0.8439 (SE 3.6627); TimeAfterJuly2024=0.8615 (SE 0.3673).
+
+Raw Lower component: Time=0.3298 (SE 0.1122); PostJuly2024=4.0421 (SE 23.6294); TimeAfterJuly2024=5.1155 (SE 2.3323).
+
+The indexed figure uses the full pre-transition mean. `index_high_2023_mean` and `index_lower_2023_mean` remain in the monthly CSV as a visual check.
+
+Zero-month preservation check: PASS. Test 1, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
 
 ## E. Measurement Limitations
 

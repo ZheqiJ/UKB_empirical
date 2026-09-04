@@ -47,7 +47,18 @@ class Outputs:
 
 
 def clean(value: object) -> str:
-    return str(value or "").strip()
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def is_missing_outcome(value: object) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, float) and math.isnan(value):
+        return True
+    text = str(value).strip()
+    return text == "" or text.lower() in {"nan", "na", "n/a", "none"}
 
 
 def read_csv(path: Path, delimiter: str = ",") -> list[dict[str, str]]:
@@ -176,23 +187,21 @@ def sandwich_from_scores(bread: list[list[float]], scores: list[list[float]], la
     return mat_mul(mat_mul(bread, meat), bread)
 
 
-def build_design(months: list[date]) -> tuple[list[list[float]], list[str]]:
+def design_row_from_monthly_row(row: dict[str, object]) -> list[float]:
+    month_of_year = int(row["month_of_year"])
+    return [
+        1.0,
+        float(row["time"]),
+        float(row["post_july2024"]),
+        float(row["time_after_july2024"]),
+    ] + [1.0 if month_of_year == fixed_month else 0.0 for fixed_month in range(2, 13)]
+
+
+def build_design(monthly_rows: list[dict[str, object]]) -> tuple[list[list[float]], list[str]]:
     names = ["Intercept", "Time", "PostJuly2024", "TimeAfterJuly2024"] + [
         f"month_{month:02d}" for month in range(2, 13)
     ]
-    X = []
-    for idx, month in enumerate(months, start=1):
-        post = 1.0 if month >= BREAK_MONTH else 0.0
-        time_after = (
-            float((month.year - BREAK_MONTH.year) * 12 + month.month - BREAK_MONTH.month + 1)
-            if post
-            else 0.0
-        )
-        X.append(
-            [1.0, float(idx), post, time_after]
-            + [1.0 if month.month == fixed_month else 0.0 for fixed_month in range(2, 13)]
-        )
-    return X, names
+    return [design_row_from_monthly_row(row) for row in monthly_rows], names
 
 
 def ols_hac(X: list[list[float]], y: list[float], lag: int = HAC_LAG) -> dict[str, object]:
@@ -238,45 +247,58 @@ def monthly_panel(classification_rows: list[dict[str, str]]) -> list[dict[str, o
             return sum(int(row[flag]) for row in rows)
 
         all_count = len(rows)
-        high_c05 = count("HIGH_C05_S3")
-        high_c03 = count("HIGH_C03_S3")
-        high_c05_cons = count("HIGH_C05_S3_TIMING_CONSERVATIVE")
+        high = count("HIGH_SENSITIVITY")
+        lower = count("LOWER_SENSITIVITY_COMPARISON")
         low = count("LOW_STRICT")
-        not_high = count("NOT_HIGH")
-        classified_denom = high_c05 + low
-        c03_classified_denom = high_c03 + low
+        time_after = (
+            (month.year - BREAK_MONTH.year) * 12 + month.month - BREAK_MONTH.month
+            if month >= BREAK_MONTH
+            else 0
+        )
         output.append(
             {
                 "month": month_label(month),
                 "month_start": month.isoformat(),
                 "time": idx,
                 "post_july2024": 1 if month >= BREAK_MONTH else 0,
-                "time_after_july2024": (
-                    (month.year - BREAK_MONTH.year) * 12 + month.month - BREAK_MONTH.month + 1
-                    if month >= BREAK_MONTH
-                    else 0
-                ),
+                "time_after_july2024": time_after,
                 "month_of_year": month.month,
                 "all_count": all_count,
-                "high_c05_s3_count": high_c05,
-                "high_c03_s3_count": high_c03,
-                "high_c05_s3_timing_cons_count": high_c05_cons,
+                "high_sensitivity_count": high,
+                "lower_sensitivity_count": lower,
                 "low_strict_count": low,
-                "not_high_count": not_high,
-                "s3_only_count": count("S3_ONLY"),
-                "c05_only_count": count("C05_ONLY"),
-                "c05_or_s3_or_o2_count": count("C05_OR_S3_OR_O2"),
-                "hs_s3_field_count": count("hs_s3_field"),
+                "hs_wes_wgs_sequence_count": count("hs_wes_wgs_sequence"),
+                "hs_s3_direct_count": count("hs_s3_direct"),
+                "hs_s3_text_count": count("hs_s3_text"),
                 "hs_o2_field_count": count("hs_o2_field"),
-                "classified_denom_c05_s3": classified_denom,
-                "high_share_classified_c05_s3": fmt(high_c05 / classified_denom if classified_denom else math.nan, 8),
-                "high_share_all_c05_s3": fmt(high_c05 / all_count if all_count else math.nan, 8),
-                "high_share_classified_c03_s3": fmt(
-                    high_c03 / c03_classified_denom if c03_classified_denom else math.nan, 8
-                ),
+                "classified_denom_high_lower": high + lower,
+                "high_sensitivity_share_all": fmt(high / all_count if all_count else None, 8),
                 "low_share_all": fmt(low / all_count if all_count else math.nan, 8),
             }
         )
+
+    pre_rows = [row for row in output if parse_date(str(row["month_start"])) < BREAK_MONTH]
+    rows_2023 = [row for row in output if parse_date(str(row["month_start"])).year == 2023]
+
+    def mean(rows: list[dict[str, object]], column: str) -> float:
+        values = [float(row[column]) for row in rows]
+        return sum(values) / len(values) if values else math.nan
+
+    high_pre_mean = mean(pre_rows, "high_sensitivity_count")
+    lower_pre_mean = mean(pre_rows, "lower_sensitivity_count")
+    high_2023_mean = mean(rows_2023, "high_sensitivity_count")
+    lower_2023_mean = mean(rows_2023, "lower_sensitivity_count")
+    for row in output:
+        high_index = 100.0 * float(row["high_sensitivity_count"]) / high_pre_mean if high_pre_mean else math.nan
+        lower_index = 100.0 * float(row["lower_sensitivity_count"]) / lower_pre_mean if lower_pre_mean else math.nan
+        high_2023_index = 100.0 * float(row["high_sensitivity_count"]) / high_2023_mean if high_2023_mean else math.nan
+        lower_2023_index = 100.0 * float(row["lower_sensitivity_count"]) / lower_2023_mean if lower_2023_mean else math.nan
+        row["index_high_pre_mean"] = fmt(high_index, 8)
+        row["index_lower_pre_mean"] = fmt(lower_index, 8)
+        row["index_diff_pre_mean"] = fmt(high_index - lower_index, 8)
+        row["index_high_2023_mean"] = fmt(high_2023_index, 8)
+        row["index_lower_2023_mean"] = fmt(lower_2023_index, 8)
+        row["index_diff_2023_mean"] = fmt(high_2023_index - lower_2023_index, 8)
     return output
 
 
@@ -288,11 +310,12 @@ def run_model(
     classification_definition: str,
     denominator: str = "",
 ) -> tuple[list[dict[str, object]], dict[str, object]]:
+    included_rows: list[dict[str, object]] = []
     months: list[date] = []
     y: list[float] = []
     for row in monthly_rows:
-        raw = clean(row.get(outcome))
-        if not raw:
+        raw = row.get(outcome)
+        if is_missing_outcome(raw):
             continue
         try:
             value = float(raw)
@@ -300,9 +323,10 @@ def run_model(
             continue
         if math.isnan(value) or math.isinf(value):
             continue
+        included_rows.append(row)
         months.append(parse_date(str(row["month_start"])))
         y.append(value)
-    X, names = build_design(months)
+    X, names = build_design(included_rows)
     fit = ols_hac(X, y, HAC_LAG)
     rows = []
     for term, beta, se in zip(names, fit["beta"], fit["se"]):
@@ -331,6 +355,8 @@ def run_model(
         )
     fit["names"] = names
     fit["months"] = months
+    fit["included_rows"] = included_rows
+    fit["X"] = X
     fit["y"] = y
     fit["model_id"] = model_id
     return rows, fit
@@ -339,66 +365,38 @@ def run_model(
 def run_all_models(monthly_rows: list[dict[str, object]]) -> tuple[list[dict[str, object]], dict[str, dict[str, object]]]:
     specs = [
         (
-            "test1_primary_high_c05_s3",
+            "test1_high_sensitivity_count",
             "Test 1",
-            "high_c05_s3_count",
-            "HIGH_C05_S3",
+            "high_sensitivity_count",
+            "HIGH_SENSITIVITY",
             "",
         ),
         (
-            "test1_robust_high_c03_s3",
-            "Test 1 robustness",
-            "high_c03_s3_count",
-            "HIGH_C03_S3",
-            "",
-        ),
-        (
-            "test1_timing_conservative_high_c05_s3",
-            "Test 1 timing conservative",
-            "high_c05_s3_timing_cons_count",
-            "HIGH_C05_S3_TIMING_CONSERVATIVE",
-            "",
-        ),
-        (
-            "test2_primary_high_share_classified",
+            "test2_high_share_all",
             "Test 2",
-            "high_share_classified_c05_s3",
-            "HIGH_C05_S3",
-            "HIGH_C05_S3 + LOW_STRICT",
-        ),
-        (
-            "test2_robust_high_share_all",
-            "Test 2 robustness",
-            "high_share_all_c05_s3",
-            "HIGH_C05_S3",
+            "high_sensitivity_share_all",
+            "HIGH_SENSITIVITY",
             "all recorded project starts",
         ),
         (
-            "test2_robust_c03_high_share_classified",
-            "Test 2 C03 robustness",
-            "high_share_classified_c03_s3",
-            "HIGH_C03_S3",
-            "HIGH_C03_S3 + LOW_STRICT",
+            "test3_difference_index_pre_mean",
+            "Test 3 indexed difference",
+            "index_diff_pre_mean",
+            "Index_H - Index_L",
+            "full pre-transition monthly mean",
         ),
         (
-            "test3_high_c05_s3",
-            "Test 3",
-            "high_c05_s3_count",
-            "HIGH_C05_S3",
+            "test3_high_sensitivity_count",
+            "Test 3 component",
+            "high_sensitivity_count",
+            "HIGH_SENSITIVITY",
             "",
         ),
         (
-            "test3_low_strict",
-            "Test 3",
-            "low_strict_count",
-            "LOW_STRICT",
-            "",
-        ),
-        (
-            "test3_not_high",
-            "Test 3 robustness",
-            "not_high_count",
-            "NOT_HIGH",
+            "test3_lower_sensitivity_count",
+            "Test 3 component",
+            "lower_sensitivity_count",
+            "LOWER_SENSITIVITY_COMPARISON",
             "",
         ),
     ]
@@ -467,13 +465,10 @@ def make_svg_time_series(
     style = {
         "Observed high": ("#24536b", "", 2.4),
         "Fitted high": ("#24536b", "6 4", 2.4),
-        "Observed primary share": ("#24536b", "", 2.4),
-        "Fitted primary share": ("#24536b", "6 4", 2.4),
-        "Observed high/all share": ("#8a5a22", "", 2.0),
-        "Fitted high/all share": ("#8a5a22", "6 4", 2.0),
+        "Observed high/all share": ("#24536b", "", 2.4),
+        "Fitted high/all share": ("#24536b", "6 4", 2.4),
         "High": ("#24536b", "", 2.4),
-        "Low strict": ("#b24a38", "", 2.4),
-        "Not high": ("#777777", "5 5", 1.8),
+        "Lower": ("#b24a38", "", 2.4),
     }
     by_label = defaultdict(list)
     for row in series:
@@ -485,7 +480,7 @@ def make_svg_time_series(
         color, dash, line_width = style.get(label, ("#24536b", "", 2.2))
         points = [(x(month), y(value)) for month, value in sorted(values_for_label)]
         svg.append(svg_polyline(points, color, line_width, dash))
-        if "Observed" in label or label in {"High", "Low strict", "Not high"}:
+        if "Observed" in label or label in {"High", "Lower"}:
             for px, py in points:
                 svg.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="2.7" fill="{color}"/>')
         ly = legend_y + i * 22
@@ -530,8 +525,8 @@ def make_figures(
 ) -> None:
     test1_series = figure_rows_from_fit(
         monthly_rows,
-        fits["test1_primary_high_c05_s3"],
-        "high_c05_s3_count",
+        fits["test1_high_sensitivity_count"],
+        "high_sensitivity_count",
         "Observed high",
         "Fitted high",
     )
@@ -545,25 +540,16 @@ def make_figures(
 
     test2_series = figure_rows_from_fit(
         monthly_rows,
-        fits["test2_primary_high_share_classified"],
-        "high_share_classified_c05_s3",
-        "Observed primary share",
-        "Fitted primary share",
-    )
-    test2_series.extend(
-        figure_rows_from_fit(
-            monthly_rows,
-            fits["test2_robust_high_share_all"],
-            "high_share_all_c05_s3",
-            "Observed high/all share",
-            "Fitted high/all share",
-        )
+        fits["test2_high_share_all"],
+        "high_sensitivity_share_all",
+        "Observed high/all share",
+        "Fitted high/all share",
     )
     make_svg_time_series(
         out.test2_figure,
         "Test 2: High-Sensitivity Share",
         test2_series,
-        "Share of classified project starts that are high sensitivity",
+        "Share of all project starts that are high sensitivity",
         y_min=0,
         y_max=1,
         percent_axis=True,
@@ -571,45 +557,37 @@ def make_figures(
 
     raw_series = []
     for row in monthly_rows:
-        raw_series.append({"month_start": row["month_start"], "value": row["high_c05_s3_count"], "label": "High"})
-        raw_series.append({"month_start": row["month_start"], "value": row["low_strict_count"], "label": "Low strict"})
+        raw_series.append({"month_start": row["month_start"], "value": row["high_sensitivity_count"], "label": "High"})
+        raw_series.append({"month_start": row["month_start"], "value": row["lower_sensitivity_count"], "label": "Lower"})
     make_svg_time_series(
         out.test3_raw_figure,
-        "Test 3: High Versus Low Project Starts",
+        "Test 3: High Versus Lower Project Starts",
         raw_series,
         "Monthly starts",
         y_min=0,
     )
 
-    baseline = defaultdict(list)
-    for row in monthly_rows:
-        month = parse_date(str(row["month_start"]))
-        if month.year == 2023:
-            baseline["High"].append(float(row["high_c05_s3_count"]))
-            baseline["Low strict"].append(float(row["low_strict_count"]))
-    high_base = sum(baseline["High"]) / len(baseline["High"])
-    low_base = sum(baseline["Low strict"]) / len(baseline["Low strict"])
     index_series = []
     for row in monthly_rows:
         index_series.append(
             {
                 "month_start": row["month_start"],
-                "value": 100 * float(row["high_c05_s3_count"]) / high_base if high_base else "",
+                "value": row["index_high_pre_mean"],
                 "label": "High",
             }
         )
         index_series.append(
             {
                 "month_start": row["month_start"],
-                "value": 100 * float(row["low_strict_count"]) / low_base if low_base else "",
-                "label": "Low strict",
+                "value": row["index_lower_pre_mean"],
+                "label": "Lower",
             }
         )
     make_svg_time_series(
         out.test3_indexed_figure,
-        "Test 3: High Versus Low Indexed To 2023 Mean",
+        "Test 3: High Versus Lower Indexed To Full Pre-Transition Mean",
         index_series,
-        "Index, 2023 monthly mean = 100",
+        "Index, pre-transition monthly mean = 100",
         y_min=0,
     )
 
@@ -641,6 +619,28 @@ def report_key_line(rows: list[dict[str, object]], model_id: str) -> str:
         row = term_row(rows, model_id, term)
         values.append(f"{term}={float(row['estimate']):.4f} (SE {float(row['std_error']):.4f})")
     return "; ".join(values)
+
+
+def model_n(regression_rows: list[dict[str, object]], model_id: str) -> int:
+    row = next(row for row in regression_rows if row["model_id"] == model_id and row["term"] == "Intercept")
+    return int(row["n_obs"])
+
+
+def zero_month_preservation_check(
+    monthly_rows: list[dict[str, object]],
+    regression_rows: list[dict[str, object]],
+) -> bool:
+    by_month = {str(row["month"]): row for row in monthly_rows}
+    required_n = {
+        "test1_high_sensitivity_count": 84,
+        "test3_high_sensitivity_count": 84,
+        "test3_lower_sensitivity_count": 84,
+    }
+    return (
+        by_month.get("2024-07", {}).get("time_after_july2024") in {0, "0"}
+        and by_month.get("2024-08", {}).get("time_after_july2024") in {1, "1"}
+        and all(model_n(regression_rows, model_id) == expected for model_id, expected in required_n.items())
+    )
 
 
 def write_stata_do(out: Outputs) -> None:
@@ -677,32 +677,20 @@ program define _post_newey_rows
     }
 end
 
-newey high_c05_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_primary_high_c05_s3 high_c05_s3_count
+newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 
-newey high_c03_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_robust_high_c03_s3 high_c03_s3_count
+newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test2_high_share_all high_sensitivity_share_all
 
-newey high_c05_s3_timing_cons_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_timing_conservative_high_c05_s3 high_c05_s3_timing_cons_count
+newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_difference_index_pre_mean index_diff_pre_mean
 
-newey high_share_classified_c05_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_primary_high_share_classified high_share_classified_c05_s3
+newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_sensitivity_count high_sensitivity_count
 
-newey high_share_all_c05_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_robust_high_share_all high_share_all_c05_s3
-
-newey high_share_classified_c03_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_robust_c03_high_share_classified high_share_classified_c03_s3
-
-newey high_c05_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_high_c05_s3 high_c05_s3_count
-
-newey low_strict_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_low_strict low_strict_count
-
-newey not_high_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_not_high not_high_count
+newey lower_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_lower_sensitivity_count lower_sensitivity_count
 
 postclose `handle'
 macro drop PROJECT_ENTRY2_POST_HANDLE
@@ -886,26 +874,33 @@ def write_reports(
     counts = {row["definition"]: row for row in read_csv(classification_builder.Outputs().classification_counts) if row["period"] == "all"}
     pre_counts = {row["definition"]: row for row in read_csv(classification_builder.Outputs().classification_counts) if row["period"] == "pre_july_2024"}
     post_counts = {row["definition"]: row for row in read_csv(classification_builder.Outputs().classification_counts) if row["period"] == "post_july_2024"}
-    high_n = int(counts["HIGH_C05_S3"]["count"])
-    high_c03_n = int(counts["HIGH_C03_S3"]["count"])
+    overlap_rows = read_csv(classification_builder.Outputs().classification_overlap)
+    overlap_by_channel = {row["channel"]: row for row in overlap_rows}
+    high_n = int(counts["HIGH_SENSITIVITY"]["count"])
+    lower_n = int(counts["LOWER_SENSITIVITY_COMPARISON"]["count"])
     low_n = int(counts["LOW_STRICT"]["count"])
-    s3_apps = int(counts["hs_s3_field"]["count"])
-    c05_n = int(counts["hs_c05"]["count"])
-    s3_only = int(counts["S3_ONLY"]["count"])
-    c05_only = int(counts["C05_ONLY"]["count"])
-    timing_high = int(counts["HIGH_C05_S3_TIMING_CONSERVATIVE"]["count"])
+    wes_n = int(counts["hs_wes_wgs_sequence"]["count"])
+    direct_s3_n = int(counts["hs_s3_direct"]["count"])
+    text_s3_n = int(counts["hs_s3_text"]["count"])
+    pre_high = pre_counts["HIGH_SENSITIVITY"]["count"]
+    post_high = post_counts["HIGH_SENSITIVITY"]["count"]
+    pre_lower = pre_counts["LOWER_SENSITIVITY_COMPARISON"]["count"]
+    post_lower = post_counts["LOWER_SENSITIVITY_COMPARISON"]["count"]
+    zero_check = "PASS" if zero_month_preservation_check(monthly_rows, regression_rows) else "FAIL"
 
-    t1 = report_key_line(regression_rows, "test1_primary_high_c05_s3")
-    t1_c03 = report_key_line(regression_rows, "test1_robust_high_c03_s3")
-    t2 = report_key_line(regression_rows, "test2_primary_high_share_classified")
-    t2_all = report_key_line(regression_rows, "test2_robust_high_share_all")
-    t3_high = report_key_line(regression_rows, "test3_high_c05_s3")
-    t3_low = report_key_line(regression_rows, "test3_low_strict")
-    t3_not_high = report_key_line(regression_rows, "test3_not_high")
+    t1 = report_key_line(regression_rows, "test1_high_sensitivity_count")
+    t2 = report_key_line(regression_rows, "test2_high_share_all")
+    t3_diff = report_key_line(regression_rows, "test3_difference_index_pre_mean")
+    t3_high = report_key_line(regression_rows, "test3_high_sensitivity_count")
+    t3_lower = report_key_line(regression_rows, "test3_lower_sensitivity_count")
 
-    high_slope = float(term_row(regression_rows, "test3_high_c05_s3", "TimeAfterJuly2024")["estimate"])
-    low_slope = float(term_row(regression_rows, "test3_low_strict", "TimeAfterJuly2024")["estimate"])
-    faster = "high-sensitivity" if high_slope > low_slope else "strict low-sensitivity"
+    channel_lines = []
+    for label in ["WES/WGS_SEQUENCE", "DIRECT_S3_FIELD_LINK", "S3_DERIVED_APPLICATION_TEXT"]:
+        row = overlap_by_channel[label]
+        channel_lines.append(
+            f"| {label} | {int(row['N']):,} | {int(row['overlap'] or 0):,} | "
+            f"{int(row['net_additions']):,} | {int(row['pre_N']):,} | {int(row['post_N']):,} |"
+        )
 
     write_text(
         out.measurement_note,
@@ -915,7 +910,7 @@ def write_reports(
 
 The project universe is `data/intermediate/timing_feasibility/timing_working_research_project_universe.csv`, which contains 6,935 projects with exact public Start dates.
 
-Existing C03/C05 evidence comes from `data/intermediate/control_expansion/stage3_control_expansion_project_review.csv` and its evidence dictionary. C03 is layers C0-C3. C05 is layers C0-C5.
+Existing control-expansion evidence comes from `data/intermediate/control_expansion/stage3_control_expansion_project_review.csv` and its evidence dictionary. Expansion layer is retained as audit metadata only; it is not itself a high-sensitivity definition.
 
 Field-tier evidence comes from UKB Schema 1 (`{classification_builder.SCHEMA1_URL}`) and cached public field pages under `data/source_snapshots/field_pages/`.
 
@@ -923,15 +918,15 @@ Field-tier evidence comes from UKB Schema 1 (`{classification_builder.SCHEMA1_UR
 
 Current Schema 1 exposes `cost_do`, `cost_on`, and `cost_sc` columns rather than one literal `tier` column. This pipeline reconstructs tier tokens from those columns: positive `cost_do` becomes `d#`, positive `cost_on` becomes `o#`, and positive `cost_sc` becomes `s#`. The parser validation case is field 25749, which reconstructs as `o2 s3` and links to applications 17689 and 22783.
 
-`s3` is treated as the primary field-tier high-sensitivity proxy. `o2` is retained for broader robustness and audit; o2 alone is not part of the primary high-sensitivity definition.
+`s3` enters high sensitivity in two ways: direct application-field links and high-precision application-text terms derived from the 199 s3 Schema 1 fields. `o2` is retained for audit; o2 alone is not part of the primary high-sensitivity definition.
 
-## Historical Measurement Limitation
+## High And Lower Groups
 
-The Application x Field crosswalk is current public Showcase information. It may include later amendments and may not equal the field basket approved at the project Start date. For this reason the output includes `field_debut_after_project_start` and timing-conservative high definitions that exclude `s3` links where the field debut date is after the project's public Start date.
+`HIGH_SENSITIVITY` is the union of explicit WES/WGS or sequence-product evidence, direct s3 field links, and s3-derived application text. `LOWER_SENSITIVITY_COMPARISON` is the exhaustive complement. Complement status means no identified high evidence under the observable proxy, not proof that every project is low-risk.
 
 ## Interpretation Limits
 
-The public Start date is not observed application submission, approval, first RAP access, or first data-use timing. Field tier is a sensitivity/granularity proxy, not observed leakage risk. The ITS outputs are descriptive and comparative; they should not be described as causal RAP treatment effects.
+The public Start date is not observed application submission, approval, first RAP access, or first data-use timing. Field tier and text evidence are sensitivity/granularity proxies, not observed leakage risk. The ITS outputs are descriptive and comparative; they should not be described as causal RAP treatment effects.
 """,
     )
 
@@ -958,73 +953,76 @@ python3 analyses/interrupted_time_series/project_entry2/scripts/build_high_sensi
 python3 analyses/interrupted_time_series/project_entry2/scripts/project_entry2_analysis.py --skip-classification
 ```
 
-Primary window: 2019-01 through 2025-12. Breakpoint: July 2024.
+Primary window: 2019-01 through 2025-12. Breakpoint: July 2024, with `time_after_july2024 = 0` in July 2024, 1 in August 2024, and so on.
 """,
     )
-
-    pre_high = pre_counts["HIGH_C05_S3"]["count"]
-    post_high = post_counts["HIGH_C05_S3"]["count"]
-    pre_low = pre_counts["LOW_STRICT"]["count"]
-    post_low = post_counts["LOW_STRICT"]["count"]
 
     results = f"""# Project Entry2 Results
 
 ## A. What Is High Sensitivity?
 
-Primary high sensitivity is `HIGH_C05_S3`: existing C05 RAP-intensive comparison evidence, explicit WES/WGS evidence, or at least one current UKB field-page link to an `s3` field. It is a proxy for higher-granularity or more sensitive data use, not observed leakage risk.
+Primary high sensitivity is `HIGH_SENSITIVITY`: explicit WES/WGS or sequence-product evidence, direct application-field links to `s3` fields, or high-precision application text derived from the 199 Schema 1 `s3` fields. It is a proxy for higher-granularity or more sensitive data use, not observed leakage risk.
 
 Project counts:
 
 | Definition | N |
 | --- | ---: |
-| HIGH_C05_S3 | {high_n:,} |
-| HIGH_C03_S3 | {high_c03_n:,} |
-| HIGH_C05_S3_TIMING_CONSERVATIVE | {timing_high:,} |
+| HIGH_SENSITIVITY | {high_n:,} |
+| LOWER_SENSITIVITY_COMPARISON | {lower_n:,} |
+| hs_wes_wgs_sequence | {wes_n:,} |
+| hs_s3_direct | {direct_s3_n:,} |
+| hs_s3_text | {text_s3_n:,} |
 | LOW_STRICT | {low_n:,} |
-| hs_c05 | {c05_n:,} |
-| hs_s3_field | {s3_apps:,} |
-| S3_ONLY | {s3_only:,} |
-| C05_ONLY | {c05_only:,} |
 
-Pre/post counts use the exact policy date 2024-07-05 at the project level: HIGH_C05_S3 is {pre_high} pre-July-2024 and {post_high} post-July-2024; LOW_STRICT is {pre_low} pre-July-2024 and {post_low} post-July-2024.
+Evidence-channel overlap and net additions:
 
-The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
+| Channel | N | Overlap with previous channels | Net additions | Pre N | Post N |
+| --- | ---: | ---: | ---: | ---: | ---: |
+{chr(10).join(channel_lines)}
+
+Pre/post counts use the exact policy date 2024-07-05 at the project level: HIGH_SENSITIVITY is {pre_high} pre-July-2024 and {post_high} post-July-2024; LOWER_SENSITIVITY_COMPARISON is {pre_lower} pre-July-2024 and {post_lower} post-July-2024.
+
+The lower comparison is the exhaustive complement, meaning no identified high evidence under the observable proxy, not proof that every complement project is low-risk.
+
+The full audit files are `classification_counts.csv`, `classification_overlap.csv`, `s3_field_dictionary.csv`, `s3_application_keyword_dictionary.csv`, `s3_text_audit_examples.csv`, `field_tier_distribution.csv`, and `application_field_tier_links.csv`.
 
 ## B. Test 1 - High-Sensitivity Entry Count
 
 Question: did the absolute number of high-sensitivity project starts change around/after July 2024?
 
-Primary HIGH_C05_S3:
+Primary HIGH_SENSITIVITY:
 
-{compact_coef(regression_rows, "test1_primary_high_c05_s3")}
+{compact_coef(regression_rows, "test1_high_sensitivity_count")}
 
 Key terms: {t1}.
-
-C03+S3 robustness: {t1_c03}.
 
 ## C. Test 2 - High-Sensitivity Share
 
 Question: did the composition of project entry shift toward high-sensitivity projects?
 
-Primary denominator is `HIGH_C05_S3 + LOW_STRICT`; the all-start denominator is reported separately.
+Primary denominator is all recorded project starts because HIGH and LOWER are exhaustive. If `N_All,t=0`, the share is missing but calendar time is preserved.
 
-{compact_coef(regression_rows, "test2_primary_high_share_classified")}
+{compact_coef(regression_rows, "test2_high_share_all")}
 
 Key terms: {t2}.
 
-High/all robustness: {t2_all}.
-
-## D. Test 3 - High Vs Low Partition
+## D. Test 3 - Indexed High Vs Lower Difference
 
 Question: was the post-transition trajectory stronger for high-sensitivity than for low-sensitivity project types?
 
-High sensitivity: {t3_high}.
+Primary formal test: `D_t = Index_H,t - Index_L,t`, where both indexes use the full pre-transition monthly mean as 100.
 
-Strict low sensitivity: {t3_low}.
+{compact_coef(regression_rows, "test3_difference_index_pre_mean")}
 
-Inclusive NOT_HIGH robustness: {t3_not_high}.
+Difference key terms: {t3_diff}.
 
-The post-July slope change is {high_slope:.4f} for high-sensitivity starts and {low_slope:.4f} for strict low-sensitivity starts, so the descriptive post-transition trajectory grows faster for the {faster} series in this specification. Test 2 remains the formal composition test.
+Raw High component: {t3_high}.
+
+Raw Lower component: {t3_lower}.
+
+The indexed figure uses the full pre-transition mean. `index_high_2023_mean` and `index_lower_2023_mean` remain in the monthly CSV as a visual check.
+
+Zero-month preservation check: {zero_check}. Test 1, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
 
 ## E. Measurement Limitations
 
@@ -1059,18 +1057,31 @@ def validate_outputs(out: Outputs | None = None) -> None:
         raise AssertionError(f"expected 84 monthly rows; found {len(monthly)}")
     if monthly[0]["month"] != "2019-01" or monthly[-1]["month"] != "2025-12":
         raise AssertionError("primary window month range changed")
+    if monthly[66]["month"] != "2024-07" or int(monthly[66]["time_after_july2024"]) != 0:
+        raise AssertionError("July 2024 must have time_after_july2024 = 0")
+    if monthly[67]["month"] != "2024-08" or int(monthly[67]["time_after_july2024"]) != 1:
+        raise AssertionError("August 2024 must have time_after_july2024 = 1")
     for row in monthly:
-        high = int(row["high_c05_s3_count"])
-        low = int(row["low_strict_count"])
-        denom = int(row["classified_denom_c05_s3"])
-        if denom != high + low:
-            raise AssertionError(f"classified denominator mismatch in {row['month']}")
+        high = int(row["high_sensitivity_count"])
+        lower = int(row["lower_sensitivity_count"])
+        all_count = int(row["all_count"])
+        denom = int(row["classified_denom_high_lower"])
+        if denom != all_count or high + lower != all_count:
+            raise AssertionError(f"HIGH/LOWER monthly complement mismatch in {row['month']}")
     regressions = read_csv(out.regression_results)
     terms = {(row["model_id"], row["term"]) for row in regressions}
-    for model_id in ["test1_primary_high_c05_s3", "test2_primary_high_share_classified", "test3_low_strict"]:
+    for model_id in [
+        "test1_high_sensitivity_count",
+        "test2_high_share_all",
+        "test3_difference_index_pre_mean",
+        "test3_high_sensitivity_count",
+        "test3_lower_sensitivity_count",
+    ]:
         for term in ["Intercept", "Time", "PostJuly2024", "TimeAfterJuly2024", "month_12"]:
             if (model_id, term) not in terms:
                 raise AssertionError(f"missing {model_id} {term}")
+    if not zero_month_preservation_check(monthly, regressions):
+        raise AssertionError("zero-month/calendar-time preservation check failed")
     for path in [out.test1_figure, out.test2_figure, out.test3_raw_figure, out.test3_indexed_figure]:
         if not path.exists() or "<svg" not in path.read_text(encoding="utf-8")[:100]:
             raise AssertionError(f"missing or invalid figure {path}")
@@ -1108,21 +1119,22 @@ def build_project_entry2_outputs(
             "time_after_july2024",
             "month_of_year",
             "all_count",
-            "high_c05_s3_count",
-            "high_c03_s3_count",
-            "high_c05_s3_timing_cons_count",
+            "high_sensitivity_count",
+            "lower_sensitivity_count",
             "low_strict_count",
-            "not_high_count",
-            "s3_only_count",
-            "c05_only_count",
-            "c05_or_s3_or_o2_count",
-            "hs_s3_field_count",
+            "hs_wes_wgs_sequence_count",
+            "hs_s3_direct_count",
+            "hs_s3_text_count",
             "hs_o2_field_count",
-            "classified_denom_c05_s3",
-            "high_share_classified_c05_s3",
-            "high_share_all_c05_s3",
-            "high_share_classified_c03_s3",
+            "classified_denom_high_lower",
+            "high_sensitivity_share_all",
             "low_share_all",
+            "index_high_pre_mean",
+            "index_lower_pre_mean",
+            "index_diff_pre_mean",
+            "index_high_2023_mean",
+            "index_lower_2023_mean",
+            "index_diff_2023_mean",
         ],
     )
     regression_rows, fits = run_all_models(monthly_rows)
@@ -1155,11 +1167,12 @@ def build_project_entry2_outputs(
     write_reports(classification_rows, monthly_rows, regression_rows, stata_status, out)
     validate_outputs(out)
     return {
-        "high_c05_s3": period_count(classification_rows, "HIGH_C05_S3"),
-        "high_c03_s3": period_count(classification_rows, "HIGH_C03_S3"),
+        "high_sensitivity": period_count(classification_rows, "HIGH_SENSITIVITY"),
+        "lower_sensitivity": period_count(classification_rows, "LOWER_SENSITIVITY_COMPARISON"),
+        "hs_wes_wgs_sequence": period_count(classification_rows, "hs_wes_wgs_sequence"),
+        "hs_s3_direct": period_count(classification_rows, "hs_s3_direct"),
+        "hs_s3_text": period_count(classification_rows, "hs_s3_text"),
         "low_strict": period_count(classification_rows, "LOW_STRICT"),
-        "s3_apps": period_count(classification_rows, "hs_s3_field"),
-        "s3_only": period_count(classification_rows, "S3_ONLY"),
         "stata_status": stata_status,
     }
 
@@ -1181,8 +1194,8 @@ def main() -> None:
     )
     print(
         "project-entry2 analysis built: "
-        f"{summary['high_c05_s3']} HIGH_C05_S3, "
-        f"{summary['low_strict']} LOW_STRICT, "
+        f"{summary['high_sensitivity']} HIGH_SENSITIVITY, "
+        f"{summary['lower_sensitivity']} LOWER_SENSITIVITY_COMPARISON, "
         f"Stata status {summary['stata_status']}"
     )
 

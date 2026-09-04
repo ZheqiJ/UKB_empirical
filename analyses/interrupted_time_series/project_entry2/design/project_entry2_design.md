@@ -16,12 +16,10 @@ Breakpoint: July 2024, anchored to the 2024-07-05 UKB RAP transition.
 
 ## High-Sensitivity Proxy
 
-The primary high-sensitivity proxy is `HIGH_C05_S3`, equal to one if a project has existing C05 RAP-intensive comparison evidence, explicit WES/WGS evidence, or at least one current public UKB field-page link to an `s3` cost-tier field.
+The primary proxy is `HIGH_SENSITIVITY`, equal to one if any observable evidence channel is present: explicit WES/WGS or sequence-product evidence, a direct current public UKB field-page link to an `s3` field, or high-precision application text derived from the 199 Schema 1 `s3` fields.
 
-The C03 counterpart, `HIGH_C03_S3`, is retained as robustness.
-
-Field-tier evidence is a current Showcase crosswalk. The timing-conservative variant excludes linked fields whose public field debut date is after the project's public Start date.
+Existing control-expansion layers are retained only as audit metadata. They are not competing high-sensitivity definitions.
 
 ## Low-Sensitivity Proxy
 
-`LOW_STRICT` is limited to projects whose existing Stage 3 modality evidence is a nonempty subset of questionnaire/assessment, physical-measure, or environmental/geospatial modalities and that have no high-sensitivity evidence. `NOT_HIGH` is the inclusive complement of `HIGH_C05_S3`.
+The primary lower-sensitivity comparison is the exhaustive complement, `LOWER_SENSITIVITY_COMPARISON = 1 - HIGH_SENSITIVITY`. This means no identified high evidence under the observable proxy, not proof that every complement project is low-risk. `LOW_STRICT` is retained only as an audit flag.

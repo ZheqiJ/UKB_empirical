@@ -43,10 +43,11 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertEqual([row["app_id"] for row in parsed], ["17689", "22783"])
         self.assertEqual(parsed[1]["application_title_from_field_page"], "Imaging and genetics")
 
-    def test_project_classification_keeps_low_strict_out_of_high(self):
+    def test_project_classification_uses_single_high_and_complement(self):
         projects = [
             {"app_id": "1", "start_date": "2024-08-01", "schema27_title": "Questionnaire project"},
             {"app_id": "2", "start_date": "2024-08-01", "schema27_title": "Field linked project"},
+            {"app_id": "3", "start_date": "2024-08-01", "schema27_title": "Whole exome sequencing project"},
         ]
         stage3 = [
             {
@@ -66,6 +67,16 @@ class ProjectEntry2Tests(unittest.TestCase):
                 "already_rap_modalities": "",
                 "matched_terms": "",
                 "source_text_evidence": "",
+            },
+            {
+                "app_id": "3",
+                "classification": "UNCLEAR",
+                "confidence": "LOW",
+                "legacy_route_modalities": "",
+                "already_rap_modalities": "",
+                "matched_terms": "",
+                "source_text_evidence": "",
+                "schema27_title": "Whole exome sequencing project",
             },
         ]
         review = []
@@ -90,9 +101,13 @@ class ProjectEntry2Tests(unittest.TestCase):
             for row in self.classifier.build_project_classification_rows(projects, stage3, review, field_links)
         }
         self.assertEqual(rows["1"]["LOW_STRICT"], 1)
-        self.assertEqual(rows["1"]["HIGH_C05_S3"], 0)
-        self.assertEqual(rows["2"]["HIGH_C05_S3"], 1)
+        self.assertEqual(rows["1"]["HIGH_SENSITIVITY"], 0)
+        self.assertEqual(rows["1"]["LOWER_SENSITIVITY_COMPARISON"], 1)
+        self.assertEqual(rows["2"]["HIGH_SENSITIVITY"], 1)
+        self.assertEqual(rows["2"]["hs_s3_direct"], 1)
         self.assertEqual(rows["2"]["LOW_STRICT"], 0)
+        self.assertEqual(rows["3"]["HIGH_SENSITIVITY"], 1)
+        self.assertEqual(rows["3"]["hs_wes_wgs_sequence"], 1)
 
     def test_generated_outputs_validate(self):
         self.classifier.validate_outputs()
@@ -103,17 +118,78 @@ class ProjectEntry2Tests(unittest.TestCase):
         terms = {
             row["term"]
             for row in rows
-            if row["model_id"] == "test1_primary_high_c05_s3"
+            if row["model_id"] == "test1_high_sensitivity_count"
         }
         self.assertIn("Time", terms)
         self.assertIn("PostJuly2024", terms)
         self.assertIn("TimeAfterJuly2024", terms)
         self.assertIn("month_12", terms)
 
+    def test_generated_regression_n_and_july_segment_convention(self):
+        monthly = self.analysis.read_csv(self.analysis.Outputs().monthly)
+        by_month = {row["month"]: row for row in monthly}
+        self.assertEqual(by_month["2024-07"]["time_after_july2024"], "0")
+        self.assertEqual(by_month["2024-08"]["time_after_july2024"], "1")
+
+        regressions = self.analysis.read_csv(self.analysis.Outputs().regression_results)
+        n_by_model = {
+            row["model_id"]: int(row["n_obs"])
+            for row in regressions
+            if row["term"] == "Intercept"
+        }
+        self.assertEqual(n_by_model["test1_high_sensitivity_count"], 84)
+        self.assertEqual(n_by_model["test3_high_sensitivity_count"], 84)
+        self.assertEqual(n_by_model["test3_lower_sensitivity_count"], 84)
+
+    def test_run_model_keeps_zero_and_calendar_time_after_missing_share(self):
+        rows = []
+        for idx, month in enumerate(
+            self.analysis.month_range(self.analysis.PRIMARY_START, self.analysis.PRIMARY_END),
+            start=1,
+        ):
+            time_after = (
+                (month.year - self.analysis.BREAK_MONTH.year) * 12
+                + month.month
+                - self.analysis.BREAK_MONTH.month
+                if month >= self.analysis.BREAK_MONTH
+                else 0
+            )
+            rows.append(
+                {
+                    "month": self.analysis.month_label(month),
+                    "month_start": month.isoformat(),
+                    "time": idx,
+                    "post_july2024": 1 if month >= self.analysis.BREAK_MONTH else 0,
+                    "time_after_july2024": time_after,
+                    "month_of_year": month.month,
+                    "synthetic_share": "0.25",
+                }
+            )
+        for row in rows:
+            if row["month"] == "2024-07":
+                row["synthetic_share"] = ""
+            if row["month"] == "2024-08":
+                row["synthetic_share"] = 0
+
+        _, fit = self.analysis.run_model(
+            rows,
+            "synthetic_share",
+            "synthetic_share_model",
+            "Synthetic",
+            "Synthetic",
+            "all",
+        )
+        included = {row["month"]: i for i, row in enumerate(fit["included_rows"])}
+        time_index = fit["names"].index("Time")
+        self.assertEqual(fit["n_obs"], 83)
+        self.assertIn("2024-08", included)
+        self.assertEqual(fit["X"][included["2024-08"]][time_index], 68.0)
+
     def test_stata_do_file_uses_official_newey(self):
         do_text = self.analysis.Outputs().stata_do.read_text(encoding="utf-8")
         self.assertIn("version 18.0", do_text)
-        self.assertIn("newey high_c05_s3_count", do_text)
+        self.assertIn("newey high_sensitivity_count", do_text)
+        self.assertIn("newey index_diff_pre_mean", do_text)
         self.assertIn("lag(3)", do_text)
 
 

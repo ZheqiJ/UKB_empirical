@@ -31,32 +31,20 @@ program define _post_newey_rows
     }
 end
 
-newey high_c05_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_primary_high_c05_s3 high_c05_s3_count
+newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 
-newey high_c03_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_robust_high_c03_s3 high_c03_s3_count
+newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test2_high_share_all high_sensitivity_share_all
 
-newey high_c05_s3_timing_cons_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_timing_conservative_high_c05_s3 high_c05_s3_timing_cons_count
+newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_difference_index_pre_mean index_diff_pre_mean
 
-newey high_share_classified_c05_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_primary_high_share_classified high_share_classified_c05_s3
+newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_sensitivity_count high_sensitivity_count
 
-newey high_share_all_c05_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_robust_high_share_all high_share_all_c05_s3
-
-newey high_share_classified_c03_s3 time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test2_robust_c03_high_share_classified high_share_classified_c03_s3
-
-newey high_c05_s3_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_high_c05_s3 high_c05_s3_count
-
-newey low_strict_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_low_strict low_strict_count
-
-newey not_high_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_not_high not_high_count
+newey lower_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test3_lower_sensitivity_count lower_sensitivity_count
 
 postclose `handle'
 macro drop PROJECT_ENTRY2_POST_HANDLE
