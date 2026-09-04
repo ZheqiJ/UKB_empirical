@@ -192,6 +192,20 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertIn("newey index_diff_pre_mean", do_text)
         self.assertIn("lag(3)", do_text)
 
+    def test_stata_style_regression_output_is_complete(self):
+        text = self.analysis.Outputs().stata_style_python_table.read_text(encoding="utf-8")
+        self.assertIn("Regression with Newey-West standard errors", text)
+        for model_id in [
+            "test1_high_sensitivity_count",
+            "test2_high_share_all",
+            "test3_difference_index_pre_mean",
+            "test3_high_sensitivity_count",
+            "test3_lower_sensitivity_count",
+        ]:
+            self.assertIn(model_id, text)
+        self.assertIn("12.month_of_year", text)
+        self.assertIn("time_after_july2024", text)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -37,6 +37,7 @@ class Outputs:
     stata_do: Path = SCRIPT_DIR / "project_entry2_its.do"
     stata_log: Path = REPORT_DIR / "project_entry2_stata_full.log"
     stata_table: Path = REPORT_DIR / "project_entry2_stata_regression_table.csv"
+    stata_style_python_table: Path = REPORT_DIR / "project_entry2_stata_style_regression_results.txt"
     reading_guide: Path = REPORT_DIR / "project_entry2_reading_guide.md"
     measurement_note: Path = REPORT_DIR / "project_entry2_measurement_note.md"
     results_report: Path = REPORT_DIR / "project_entry2_results.md"
@@ -864,6 +865,141 @@ def write_replication_check(out: Outputs, regression_rows: list[dict[str, object
     return status
 
 
+def stata_term_name(term: object) -> str:
+    text = clean(term)
+    if text == "Intercept":
+        return "_cons"
+    if text == "Time":
+        return "time"
+    if text == "PostJuly2024":
+        return "post_july2024"
+    if text == "TimeAfterJuly2024":
+        return "time_after_july2024"
+    match = re_match_month_fe(text)
+    return f"{int(match):d}.month_of_year" if match else text
+
+
+def re_match_month_fe(term: str) -> str:
+    if len(term) == 8 and term.startswith("month_") and term[-2:].isdigit():
+        return term[-2:]
+    return ""
+
+
+def stata_num(value: object, digits: int = 7) -> str:
+    text = clean(value)
+    if not text:
+        return "."
+    try:
+        number = float(text)
+    except ValueError:
+        return text
+    if math.isnan(number) or math.isinf(number):
+        return "."
+    if abs(number) < 1 and number != 0:
+        rendered = f"{number:.{digits}f}"
+        rendered = rendered.replace("-0.", "-.", 1).replace("0.", ".", 1)
+        return rendered.rstrip("0").rstrip(".")
+    return f"{number:.{digits}f}".rstrip("0").rstrip(".")
+
+
+def stata_pvalue(value: object) -> str:
+    text = clean(value)
+    if not text:
+        return "."
+    try:
+        number = float(text)
+    except ValueError:
+        return text
+    if math.isnan(number) or math.isinf(number):
+        return "."
+    return "0.000" if number < 0.0005 else f"{number:.3f}"
+
+
+def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str, object]]) -> None:
+    commands = {
+        "test1_high_sensitivity_count": (
+            "newey high_sensitivity_count time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test2_high_share_all": (
+            "newey high_sensitivity_share_all time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test3_difference_index_pre_mean": (
+            "newey index_diff_pre_mean time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test3_high_sensitivity_count": (
+            "newey high_sensitivity_count time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test3_lower_sensitivity_count": (
+            "newey lower_sensitivity_count time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+    }
+    order = list(dict.fromkeys(str(row["model_id"]) for row in regression_rows))
+    rows_by_model: dict[str, list[dict[str, object]]] = defaultdict(list)
+    for row in regression_rows:
+        rows_by_model[str(row["model_id"])].append(row)
+    variable_width = 32
+    separator = "-" * variable_width + "-+----------------------------------------------------------------"
+
+    lines = [
+        "Project Entry2 Stata-Style Regression Results",
+        "",
+        "Source estimates: data/project_entry2_regression_results.csv",
+        "Estimator: OLS with Newey-West HAC standard errors, lag(3).",
+        "Note: no licensed Stata executable was available locally; this is a Stata-style rendering of the Python HAC estimates.",
+        "P-values and confidence intervals use the normal approximation used by the Python pipeline.",
+        "",
+    ]
+    for model_id in order:
+        model_rows = rows_by_model[model_id]
+        header = model_rows[0]
+        n_obs = int(header["n_obs"])
+        k_params = len(model_rows)
+        df_resid = n_obs - k_params
+        f_stat = stata_num(header.get("model_f_statistic_classical"), 4)
+        r2 = stata_num(header.get("r_squared"), 4)
+        outcome = clean(header.get("outcome"))
+        sample_dates = clean(header.get("sample_dates"))
+        title = f"{model_id}: {clean(header.get('test'))}"
+        lines.extend(
+            [
+                title,
+                f". {commands.get(model_id, 'newey ' + outcome + ' ... , lag(3)')}",
+                "",
+                "Regression with Newey-West standard errors".ljust(52)
+                + f"Number of obs     = {n_obs:>10d}",
+                f"Maximum lag = {HAC_LAG}".ljust(52)
+                + f"F({k_params - 1:>2d}, {df_resid:>3d})        = {f_stat:>10}",
+                "HAC kernel: Bartlett".ljust(52) + "Prob > F          =          .",
+                f"Sample dates: {sample_dates}".ljust(52) + f"R-squared         = {r2:>10}",
+                "",
+                separator,
+                f"{outcome[:variable_width]:>{variable_width}} |             Newey-West",
+                f"{'':>{variable_width}} | Coefficient  std. err.      z    P>|z|     [95% conf. interval]",
+                separator,
+            ]
+        )
+        for row in model_rows:
+            term = stata_term_name(row["term"])
+            coef = stata_num(row["estimate"])
+            se = stata_num(row["std_error"])
+            z_stat = stata_num(row["statistic"], 2)
+            p_value = stata_pvalue(row["p_value"])
+            lo = stata_num(row["ci_low"])
+            hi = stata_num(row["ci_high"])
+            lines.append(
+                f"{term[:variable_width]:>{variable_width}} | "
+                f"{coef:>11} {se:>10} {z_stat:>7} {p_value:>8} {lo:>12} {hi:>12}"
+            )
+        lines.extend([separator, ""])
+
+    write_text(out.stata_style_python_table, "\n".join(lines))
+
+
 def write_reports(
     classification_rows: list[dict[str, str]],
     monthly_rows: list[dict[str, object]],
@@ -934,9 +1070,9 @@ The public Start date is not observed application submission, approval, first RA
         out.reading_guide,
         """# Project Entry2 Reading Guide
 
-Start with `reports/project_entry2_results.md`, then inspect `data/project_high_sensitivity_classification.csv`, `data/project_entry2_monthly.csv`, and `data/project_entry2_regression_results.csv`.
+Start with `reports/project_entry2_results.md`, then inspect `reports/project_entry2_stata_style_regression_results.txt`, `data/project_high_sensitivity_classification.csv`, `data/project_entry2_monthly.csv`, and `data/project_entry2_regression_results.csv`.
 
-The real Stata runner file is `scripts/project_entry2_its.do`. If no licensed Stata executable was available locally, `reports/project_entry2_stata_full.log` explicitly says `STATA_NOT_AVAILABLE_ON_RUNNER` and no Stata-like estimates are fabricated.
+The real Stata runner file is `scripts/project_entry2_its.do`. If no licensed Stata executable was available locally, `reports/project_entry2_stata_full.log` explicitly says `STATA_NOT_AVAILABLE_ON_RUNNER`. The text file `reports/project_entry2_stata_style_regression_results.txt` is a Stata-style rendering of the Python Newey-West estimates, not fabricated Stata execution.
 """,
     )
 
@@ -1042,6 +1178,7 @@ Start date is not application submission, approval, or first RAP access. Current
 - `figures/figure_test2_high_sensitivity_share.svg`
 - `figures/figure_test3_high_vs_low_raw.svg`
 - `figures/figure_test3_high_vs_low_indexed.svg`
+- `reports/project_entry2_stata_style_regression_results.txt`
 - `reports/project_entry2_stata_full.log`
 - `reports/project_entry2_stata_regression_table.csv`
 
@@ -1087,6 +1224,13 @@ def validate_outputs(out: Outputs | None = None) -> None:
             raise AssertionError(f"missing or invalid figure {path}")
     if not out.stata_do.exists() or "newey" not in out.stata_do.read_text(encoding="utf-8"):
         raise AssertionError("Stata do-file missing newey regressions")
+    if not out.stata_style_python_table.exists():
+        raise AssertionError("Stata-style Python regression table missing")
+    table_text = out.stata_style_python_table.read_text(encoding="utf-8")
+    if "Regression with Newey-West standard errors" not in table_text:
+        raise AssertionError("Stata-style table missing Newey-West header")
+    if "test3_difference_index_pre_mean" not in table_text:
+        raise AssertionError("Stata-style table missing Test 3 difference model")
 
 
 def build_project_entry2_outputs(
@@ -1162,6 +1306,7 @@ def build_project_entry2_outputs(
             "sample_dates",
         ],
     )
+    write_stata_style_python_output(out, regression_rows)
     make_figures(monthly_rows, fits, out)
     stata_status = run_stata_if_available(out, regression_rows)
     write_reports(classification_rows, monthly_rows, regression_rows, stata_status, out)
