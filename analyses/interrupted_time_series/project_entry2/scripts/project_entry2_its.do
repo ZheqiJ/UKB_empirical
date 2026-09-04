@@ -31,8 +31,11 @@ program define _post_newey_rows
     }
 end
 
+newey hs_wes_wgs_sequence_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+_post_newey_rows test1a_sequence_only_count hs_wes_wgs_sequence_count
+
 newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test1_high_sensitivity_count high_sensitivity_count
+_post_newey_rows test1b_expanded_high_sensitivity_count high_sensitivity_count
 
 newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 _post_newey_rows test2_high_share_all high_sensitivity_share_all

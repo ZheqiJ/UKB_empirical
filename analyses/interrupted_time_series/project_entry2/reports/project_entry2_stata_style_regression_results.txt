@@ -5,7 +5,36 @@ Estimator: OLS with Newey-West HAC standard errors, lag(3).
 Note: no licensed Stata executable was available locally; this is a Stata-style rendering of the Python HAC estimates.
 P-values and confidence intervals use the normal approximation used by the Python pipeline.
 
-test1_high_sensitivity_count: Test 1
+test1a_sequence_only_count: Test 1A
+. newey hs_wes_wgs_sequence_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         84
+Maximum lag = 3                                     F(14,  69)        =     2.8988
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2025-12               R-squared         =      .3703
+
+---------------------------------+----------------------------------------------------------------
+       hs_wes_wgs_sequence_count |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |     4.88029   .9495292    5.14    0.000    3.0192128    6.7413672
+                            time |    -.029214   .0117715   -2.48    0.013    -.0522862    -.0061418
+                   post_july2024 |   1.5051603  2.1488055      .7    0.484   -2.7064985     5.716819
+             time_after_july2024 |    .3165385   .1885506    1.68    0.093    -.0530207     .6860976
+                 2.month_of_year |   -.0160058   1.049871    -.02    0.988   -2.0737529    2.0417413
+                 3.month_of_year |   -.3177259  1.1342303    -.28    0.779   -2.5408172    1.9053655
+                 4.month_of_year |    .2376969   1.340401     .18    0.859   -2.3894891    2.8648828
+                 5.month_of_year |  -1.6354518  1.1591036   -1.41    0.158   -3.9072948     .6363912
+                 6.month_of_year |    .7771139  1.4341376     .54    0.588   -2.0337958    3.5880235
+                 7.month_of_year |   -.7396291   1.160576    -.64    0.524    -3.014358    1.5350998
+                 8.month_of_year |   -.9437118  1.3386069     -.7    0.481   -3.5673814    1.6799577
+                 9.month_of_year |  -1.0049374  1.4778664    -.68    0.497   -3.9015555    1.8916806
+                10.month_of_year |   -.9233059  1.1983878    -.77    0.441    -3.272146    1.4255342
+                11.month_of_year |     1.44404  1.5618131     .92    0.355   -1.6171137    4.5051936
+                12.month_of_year |  -2.1886142  1.5942322   -1.37    0.170   -5.3133093      .936081
+---------------------------------+----------------------------------------------------------------
+
+test1b_expanded_high_sensitivity_count: Test 1B
 . newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 
 Regression with Newey-West standard errors          Number of obs     =         84
