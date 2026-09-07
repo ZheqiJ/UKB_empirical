@@ -1,0 +1,5 @@
+channel_order,channel,flag,N,overlap,net_additions,pre_N,post_N,overlap_with_wes_wgs,previous_channels
+1,WES/WGS_SEQUENCE,hs_wes_wgs_sequence,459,0,459,313,146,459,
+2,DIRECT_S3_FIELD_LINK,hs_s3_direct,2,0,2,2,0,0,WES/WGS_SEQUENCE
+3,S3_DERIVED_APPLICATION_TEXT,hs_s3_text,621,34,587,382,239,32,WES/WGS_SEQUENCE; DIRECT_S3_FIELD_LINK
+99,HIGH_SENSITIVITY_TOTAL,HIGH_SENSITIVITY,1048,,1048,679,369,459,all evidence channels

@@ -1,0 +1,4 @@
+STATA_NOT_AVAILABLE_ON_RUNNER
+
+Checked executables: stata-mp, stata-se, stata.
+The committed project_entry2_its.do file and ../data2/project_entry2_monthly_2026h1.csv are Stata-ready. Python estimates are saved separately in ../data2/project_entry2_regression_results_2026h1.csv. Requested Stata end month: 2026-06.

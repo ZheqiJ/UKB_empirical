@@ -10,6 +10,7 @@ Start with:
 4. `figures/publication_total_monthly.svg`
 5. `figures/publication_project_start_contribution_stacked.svg`
 6. `figures/publication_observed_vs_pipeline_expected.svg`
-7. `figures/publication_first_pub_km.svg`
+7. `figures/publication_pipeline_benchmark_comparison.svg`
+8. `figures/publication_first_pub_km.svg`
 
 The primary publication outcome is the monthly number of unique UKB-linked publications, `unique_publication_ids`, not publications per incumbent project.

@@ -1,0 +1,101 @@
+Project Entry2 Stata-Style Regression Results
+
+Source estimates: ../data2/project_entry2_regression_results_2026h1.csv
+Estimator: OLS with Newey-West HAC standard errors, lag(3).
+Note: no licensed Stata executable was available locally; this is a Stata-style rendering of the Python HAC estimates.
+P-values and confidence intervals use the normal approximation used by the Python pipeline.
+
+test1_high_sensitivity_count: Test 1
+. newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         90
+Maximum lag = 3                                     F(14,  75)        =     3.0261
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2026-06               R-squared         =       .361
+
+---------------------------------+----------------------------------------------------------------
+          high_sensitivity_count |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |  10.4153481  2.1729178    4.79    0.000    6.1564292   14.6742671
+                            time |   -.0103076   .0193805    -.53    0.595    -.0482933     .0276782
+                   post_july2024 |   4.7240107  4.3758447    1.08    0.280   -3.8526449   13.3006663
+             time_after_july2024 |    .2822914   .3910127     .72    0.470    -.4840934    1.0486762
+---------------------------------+----------------------------------------------------------------
+monthFE = Yes
+
+test2_high_share_all: Test 2
+. newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         87
+Maximum lag = 3                                     F(14,  72)        =     2.0305
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2026-04               R-squared         =      .2831
+
+---------------------------------+----------------------------------------------------------------
+      high_sensitivity_share_all |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |    .1932826   .0183511   10.53    0.000     .1573145     .2292507
+                            time |   -.0011277   .0003725   -3.03    0.002    -.0018577    -.0003976
+                   post_july2024 |   -.0466133   .0272892   -1.71    0.088    -.1001001     .0068734
+             time_after_july2024 |    .0068651   .0016139    4.25    0.000     .0037019     .0100283
+---------------------------------+----------------------------------------------------------------
+monthFE = Yes
+
+test3_lower_index: Test 3 lower partition
+. newey index_lower_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         90
+Maximum lag = 3                                     F(14,  75)        =     3.7979
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2026-06               R-squared         =      .4148
+
+---------------------------------+----------------------------------------------------------------
+            index_lower_pre_mean |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |  89.5245761 16.4292098    5.45    0.000   57.3233249  121.7258274
+                            time |    .7605814   .2533466       3    0.003     .2640222    1.2571407
+                   post_july2024 |  88.6777296 67.1184844    1.32    0.186  -42.8744999  220.2299591
+             time_after_july2024 |   -.9414116  5.5630828    -.17    0.866   -11.845054    9.9622308
+---------------------------------+----------------------------------------------------------------
+monthFE = Yes
+
+test3_high_index: Test 3 high partition
+. newey index_high_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         90
+Maximum lag = 3                                     F(14,  75)        =     3.0261
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2026-06               R-squared         =       .361
+
+---------------------------------+----------------------------------------------------------------
+             index_high_pre_mean |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |   131.68831 27.4736737    4.79    0.000   77.8399094  185.5367105
+                            time |   -.1303254   .2450408    -.53    0.595    -.6106054     .3499545
+                   post_july2024 |  59.7288708 55.3267717    1.08    0.280  -48.7116018  168.1693434
+             time_after_july2024 |   3.5692014  4.9438381     .72    0.470   -6.1207212    13.259124
+---------------------------------+----------------------------------------------------------------
+monthFE = Yes
+
+test3_high_minus_lower_difference: Test 3 High-minus-Lower partition difference
+. newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
+
+Regression with Newey-West standard errors          Number of obs     =         90
+Maximum lag = 3                                     F(14,  75)        =     1.4644
+HAC kernel: Bartlett                                Prob > F          =          .
+Sample dates: 2019-01 through 2026-06               R-squared         =      .2147
+
+---------------------------------+----------------------------------------------------------------
+             index_diff_pre_mean |             Newey-West
+                                 | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+---------------------------------+----------------------------------------------------------------
+                           _cons |  42.1637338 22.8184172    1.85    0.065   -2.5603639   86.8878315
+                            time |   -.8909069   .2583074   -3.45    0.001   -1.3971895    -.3846243
+                   post_july2024 | -28.9488588 20.3442109   -1.42    0.155  -68.8235121   10.9257946
+             time_after_july2024 |    4.510613  1.8634143    2.42    0.015      .858321     8.162905
+---------------------------------+----------------------------------------------------------------
+monthFE = Yes

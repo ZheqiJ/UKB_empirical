@@ -1,0 +1,2 @@
+stata_status,model_id,outcome,term,estimate,std_error,note
+STATA_NOT_AVAILABLE_ON_RUNNER,,,,,,No licensed Stata executable found on this runner; no Stata estimates fabricated.

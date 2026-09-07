@@ -1,0 +1,39 @@
+{
+  "built_at_utc": "2026-09-03T14:34:39+00:00",
+  "control_expansion_evidence_dictionary": "data/intermediate/control_expansion/stage3_control_expansion_evidence_dictionary.csv",
+  "control_expansion_project_review": "data/intermediate/control_expansion/stage3_control_expansion_project_review.csv",
+  "field_page_cache_dir": "analyses/interrupted_time_series/project_entry2/data/source_snapshots/field_pages",
+  "field_page_candidate_rule": "has s3 tier OR has o2 tier OR private=1",
+  "field_page_url_template": "https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id={field_id}",
+  "n_application_field_links": 73,
+  "n_distinct_applications_with_field_links": 24,
+  "n_field_page_candidates": 503,
+  "n_high_sensitivity": 1048,
+  "n_hs_s3_direct": 2,
+  "n_hs_s3_text": 621,
+  "n_hs_wes_wgs_sequence": 459,
+  "n_low_strict": 1147,
+  "n_lower_sensitivity_comparison": 5887,
+  "n_o2_field_applications": 23,
+  "n_projects": 6935,
+  "n_s3_fields": 199,
+  "n_s3_keyword_terms": 157,
+  "n_schema_fields": 11821,
+  "project_universe": "data/intermediate/timing_feasibility/timing_working_research_project_universe.csv",
+  "schema1_url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=1",
+  "schema_snapshot": "analyses/interrupted_time_series/project_entry2/data/source_snapshots/ukb_schema1_fields.tsv",
+  "schema_snapshot_refreshed_this_run": false,
+  "source_parser_validation": {
+    "expected_application_ids": [
+      "17689",
+      "22783"
+    ],
+    "expected_tier_tokens": [
+      "o2",
+      "s3"
+    ],
+    "field_id": "25749",
+    "status": "cache"
+  },
+  "stage3_classification": "data/intermediate/rap_classification/stage3_project_rap_exposure_classification.csv"
+}
