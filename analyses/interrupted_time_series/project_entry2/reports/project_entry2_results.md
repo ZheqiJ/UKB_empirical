@@ -173,7 +173,8 @@ Start date is not application submission, approval, or first RAP access. Current
 - `figures/figure_test1_high_sensitivity_entry.svg`
 - `figures/figure_test2_high_sensitivity_share.svg`
 - `figures/figure_test3_high_vs_low_raw.svg`
-- `figures/figure_test3_high_vs_low_indexed.svg`
+- `figures/figure_test3_high_vs_low_indexed_observed.svg`
+- `figures/figure_test3_high_vs_low_indexed_fitted.svg`
 - `reports/project_entry2_stata_style_regression_results.txt`
 - `reports/project_entry2_stata_full.log`
 - `reports/project_entry2_stata_regression_table.csv`

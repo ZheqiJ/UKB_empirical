@@ -81,7 +81,8 @@ class Outputs:
     test1_figure: Path = FIGURE_DIR / "figure_test1_high_sensitivity_entry.svg"
     test2_figure: Path = FIGURE_DIR / "figure_test2_high_sensitivity_share.svg"
     test3_raw_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_raw.svg"
-    test3_indexed_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_indexed.svg"
+    test3_indexed_observed_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_indexed_observed.svg"
+    test3_indexed_fitted_figure: Path = FIGURE_DIR / "figure_test3_high_vs_low_indexed_fitted.svg"
 
 
 @dataclass(frozen=True)
@@ -104,7 +105,8 @@ class ExtendedOutputs:
     test1_figure: Path = FIGURE2_DIR / "figure_test1_high_sensitivity_entry_2026janapr.svg"
     test2_figure: Path = FIGURE2_DIR / "figure_test2_high_sensitivity_share_2026janapr.svg"
     test3_raw_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_raw_2026janapr.svg"
-    test3_indexed_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_indexed_2026janapr.svg"
+    test3_indexed_observed_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_indexed_observed_2026janapr.svg"
+    test3_indexed_fitted_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_indexed_fitted_2026janapr.svg"
 
 
 def clean(value: object) -> str:
@@ -659,31 +661,44 @@ def make_figures(
         end_month=end_month,
     )
 
-    index_series = figure_rows_from_fit(
+    high_index_series = figure_rows_from_fit(
         monthly_rows,
         fits["test3_high_index"],
         "index_high_pre_mean",
         "Observed High",
         "Fitted High",
     )
-    index_series.extend(
-        figure_rows_from_fit(
-            monthly_rows,
-            fits["test3_lower_index"],
-            "index_lower_pre_mean",
-            "Observed Lower",
-            "Fitted Lower",
-        )
+    lower_index_series = figure_rows_from_fit(
+        monthly_rows,
+        fits["test3_lower_index"],
+        "index_lower_pre_mean",
+        "Observed Lower",
+        "Fitted Lower",
     )
-    delta3 = term_row(regression_rows, "test3_high_minus_lower_difference", "TimeAfterJuly2024")
     make_svg_time_series(
-        out.test3_indexed_figure,
-        f"Test 3: High vs Lower Sensitivity Entry Trajectories{title_suffix}",
-        index_series,
+        out.test3_indexed_observed_figure,
+        "Test 3: High vs Lower Observed Entry Index",
+        [
+            row
+            for row in high_index_series + lower_index_series
+            if str(row["label"]).startswith("Observed")
+        ],
         "Entry index (pre-transition monthly mean = 100)",
         y_min=0,
         reference_y=100,
-        annotation=f"delta3 = {float(delta3['estimate']):.3f}; p = {float(delta3['p_value']):.3f}",
+        end_month=end_month,
+    )
+    make_svg_time_series(
+        out.test3_indexed_fitted_figure,
+        "Test 3: High vs Lower Fitted Entry Index",
+        [
+            row
+            for row in high_index_series + lower_index_series
+            if str(row["label"]).startswith("Fitted")
+        ],
+        "Entry index (pre-transition monthly mean = 100)",
+        y_min=0,
+        reference_y=100,
         end_month=end_month,
     )
 
@@ -1837,7 +1852,8 @@ Start date is not application submission, approval, or first RAP access. Current
 - `figures/figure_test1_high_sensitivity_entry.svg`
 - `figures/figure_test2_high_sensitivity_share.svg`
 - `figures/figure_test3_high_vs_low_raw.svg`
-- `figures/figure_test3_high_vs_low_indexed.svg`
+- `figures/figure_test3_high_vs_low_indexed_observed.svg`
+- `figures/figure_test3_high_vs_low_indexed_fitted.svg`
 - `reports/project_entry2_stata_style_regression_results.txt`
 - `reports/project_entry2_stata_full.log`
 - `reports/project_entry2_stata_regression_table.csv`
@@ -2268,7 +2284,8 @@ def validate_outputs(out: Outputs | None = None) -> None:
         out.test1_figure,
         out.test2_figure,
         out.test3_raw_figure,
-        out.test3_indexed_figure,
+        out.test3_indexed_observed_figure,
+        out.test3_indexed_fitted_figure,
     ]:
         if not path.exists() or "<svg" not in path.read_text(encoding="utf-8")[:100]:
             raise AssertionError(f"missing or invalid figure {path}")
@@ -2364,7 +2381,8 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
         out.test1_figure,
         out.test2_figure,
         out.test3_raw_figure,
-        out.test3_indexed_figure,
+        out.test3_indexed_observed_figure,
+        out.test3_indexed_fitted_figure,
         out.results_report,
         out.window_comparison_report,
         out.stata_log,
@@ -2376,7 +2394,13 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
     ]:
         if not path.exists():
             raise AssertionError(f"missing extended output {path}")
-    for figure in [out.test1_figure, out.test2_figure, out.test3_raw_figure, out.test3_indexed_figure]:
+    for figure in [
+        out.test1_figure,
+        out.test2_figure,
+        out.test3_raw_figure,
+        out.test3_indexed_observed_figure,
+        out.test3_indexed_fitted_figure,
+    ]:
         if "<svg" not in figure.read_text(encoding="utf-8")[:100]:
             raise AssertionError(f"missing or invalid extended figure {figure}")
     validate_extended_test3_interaction_presentation(out, regressions)

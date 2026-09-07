@@ -1,6 +1,6 @@
 Project Entry2 Stata-Style Regression Results
 
-Source estimates: data/project_entry2_regression_results.csv
+Source estimates: ../data/project_entry2_regression_results.csv
 Estimator: OLS with Newey-West HAC standard errors, lag(3).
 Note: no licensed Stata executable was available locally; this is a Stata-style rendering of the Python HAC estimates.
 P-values and confidence intervals use the normal approximation used by the Python pipeline.
@@ -42,6 +42,46 @@ Sample dates: 2019-01 through 2025-12               R-squared         =      .27
              time_after_july2024 |    .0054002   .0025405    2.13    0.034     .0004208     .0103797
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes
+
+Test 3: High-vs-Lower Partition Interaction
+Lower is the omitted/reference group.
+Displayed model:
+Y_g,t = β0 + β1 Time_t + β2 Post_t + β3 TimeAfter_t
+      + δ0 High_g + δ1 High_g × Time_t + δ2 High_g × Post_t
+      + δ3 High_g × TimeAfter_t + MonthFE + High_g × MonthFE + ε_g,t
+
+-----------------------------+----------------------------------------------------------------
+                 entry_index |             Newey-West
+                             | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+-----------------------------+----------------------------------------------------------------
+                β0 Intercept |  86.6996914 15.3884569    5.63    0.000   56.5383158   116.861067
+                     β1 Time |    .7500212   .2551059    2.94    0.003     .2500137    1.2500287
+             β2 PostJuly2024 |   9.1928696 53.7401631     .17    0.864  -96.1378501  114.5235894
+        β3 TimeAfterJuly2024 |  11.6342363  5.3042836    2.19    0.028    1.2378405   22.0306322
+                     δ0 High |  20.6949622 15.2614176    1.36    0.175   -9.2174164   50.6073407
+              δ1 High × Time |   -.9194527   .2437234   -3.77    0.000   -1.3971505    -.4417548
+      δ2 High × PostJuly2024 |     1.47726  17.388367     .08    0.932  -32.6039393   35.5584594
+ δ3 High × TimeAfterJuly2024 |   -.7412213  1.6152609    -.46    0.646   -3.9071328    2.4246901
+-----------------------------+----------------------------------------------------------------
+Month FE              = Yes
+High × Month FE       = Yes
+Observations          = 168 group-month observations
+Calendar months       = 84
+HAC lag               = 3
+
+Linear combinations / interpretation:
+Lower pre slope = β1: estimate = .7500212, SE = .2551059, p = .0032817, 95% CI = [.2500137, 1.2500287]
+Lower post slope = β1 + β3: estimate = 12.3842575, SE = 5.2125806, p = .0175091, 95% CI = [2.1675995, 22.6009155]
+High pre slope = β1 + δ1: estimate = -.1694315, SE = .2288056, p = .4589941, 95% CI = [-.6178904, .2790274]
+High post slope = β1 + δ1 + β3 + δ3: estimate = 10.7235836, SE = 4.5880646, p = .0194247, 95% CI = [1.7309769, 19.7161903]
+Lower slope change = β3: estimate = 11.6342363, SE = 5.3042836, p = .028281, 95% CI = [1.2378405, 22.0306322]
+High slope change = β3 + δ3: estimate = 10.893015, SE = 4.6434334, p = .0189814, 95% CI = [1.7918856, 19.9941445]
+Differential slope change = δ3: estimate = -.7412213, SE = 1.6152609, p = .6463157, 95% CI = [-3.9071328, 2.4246901]
+
+Main hypothesis H0: δ3 = 0. δ3 = -0.7412213, SE = 1.6152609, p = 0.6463157, 95% CI = [-3.9071328, 2.4246901]
+The displayed interaction table is the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. β coefficients come from the Lower series and δ coefficients from the High-minus-Lower series.
+
+Component regressions / verification
 
 test3_lower_index: Test 3 lower partition
 . newey index_lower_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
