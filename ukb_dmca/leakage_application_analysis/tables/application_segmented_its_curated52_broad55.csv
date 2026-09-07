@@ -1,0 +1,7 @@
+outcome,outcome_file_label,model,coefficient,estimate,estimate_percentage_points,robust_se,robust_se_percentage_points,ci_low,ci_high,ci_low_percentage_points,ci_high_percentage_points,p_value,n_applications,r_squared,inference
+Leak52,curated52,Application-level segmented ITS with month-of-year fixed effects,Time,-0.00016175,-0.0162,0.00005275,0.0053,-0.00026514,-0.00005836,-0.0265,-0.0058,0.00216663,6935,0.007521,OLS HC1 robust SE
+Leak52,curated52,Application-level segmented ITS with month-of-year fixed effects,PostJuly2024,-0.00306999,-0.3070,0.00226935,0.2269,-0.00751791,0.00137793,-0.7518,0.1378,0.176117,6935,0.007521,OLS HC1 robust SE
+Leak52,curated52,Application-level segmented ITS with month-of-year fixed effects,TimeAfterJuly2024,0.00015540,0.0155,0.00012475,0.0125,-0.00008911,0.00039991,-0.0089,0.0400,0.212874,6935,0.007521,OLS HC1 robust SE
+Leak55,broad55,Application-level segmented ITS with month-of-year fixed effects,Time,-0.00015814,-0.0158,0.00005374,0.0054,-0.00026347,-0.00005281,-0.0263,-0.0053,0.00325308,6935,0.007563,OLS HC1 robust SE
+Leak55,broad55,Application-level segmented ITS with month-of-year fixed effects,PostJuly2024,-0.00362103,-0.3621,0.00234038,0.2340,-0.00820817,0.00096611,-0.8208,0.0966,0.121815,6935,0.007563,OLS HC1 robust SE
+Leak55,broad55,Application-level segmented ITS with month-of-year fixed effects,TimeAfterJuly2024,0.00012634,0.0126,0.00012620,0.0126,-0.00012101,0.00037369,-0.0121,0.0374,0.316759,6935,0.007563,OLS HC1 robust SE

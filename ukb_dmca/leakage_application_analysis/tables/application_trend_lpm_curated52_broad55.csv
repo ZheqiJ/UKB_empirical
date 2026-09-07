@@ -1,0 +1,5 @@
+outcome,outcome_file_label,model,coefficient,estimate,estimate_percentage_points,robust_se,robust_se_percentage_points,ci_low,ci_high,ci_low_percentage_points,ci_high_percentage_points,p_value,n_applications,r_squared,inference
+Leak52,curated52,Trend-adjusted application-level LPM,Time,-0.00015165,-0.0152,0.00005080,0.0051,-0.00025122,-0.00005208,-0.0251,-0.0052,0.00283478,6935,0.005482,OLS HC1 robust SE
+Leak52,curated52,Trend-adjusted application-level LPM,PostJuly2024,-0.00238911,-0.2389,0.00262718,0.2627,-0.00753838,0.00276016,-0.7538,0.2760,0.363148,6935,0.005482,OLS HC1 robust SE
+Leak55,broad55,Trend-adjusted application-level LPM,Time,-0.00014799,-0.0148,0.00005183,0.0052,-0.00024958,-0.00004640,-0.0250,-0.0046,0.0043025,6935,0.005562,OLS HC1 robust SE
+Leak55,broad55,Trend-adjusted application-level LPM,PostJuly2024,-0.00328389,-0.3284,0.00273455,0.2735,-0.00864360,0.00207581,-0.8644,0.2076,0.229793,6935,0.005562,OLS HC1 robust SE
