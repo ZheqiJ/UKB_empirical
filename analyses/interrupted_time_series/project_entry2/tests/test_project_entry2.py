@@ -249,23 +249,25 @@ class ProjectEntry2Tests(unittest.TestCase):
             actual = estimate("test3_high_minus_lower_difference", term)
             self.assertAlmostEqual(actual, expected, places=6)
 
-    def test_extended_monthly_panel_and_2026h1_audit(self):
+    def test_extended_monthly_panel_and_2026janapr_audit(self):
         monthly = self.analysis.read_csv(self.analysis.ExtendedOutputs().monthly)
-        self.assertEqual(len(monthly), 90)
+        self.assertEqual(len(monthly), 88)
         by_month = {row["month"]: row for row in monthly}
-        for month in ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"]:
+        for month in ["2026-01", "2026-02", "2026-03", "2026-04"]:
             self.assertIn(month, by_month)
+        self.assertNotIn("2026-05", by_month)
+        self.assertNotIn("2026-06", by_month)
         self.assertEqual(by_month["2024-07"]["time_after_july2024"], "0")
         self.assertEqual(by_month["2024-08"]["time_after_july2024"], "1")
-        self.assertEqual(by_month["2026-06"]["time_after_july2024"], "23")
+        self.assertEqual(by_month["2026-04"]["time_after_july2024"], "21")
         for row in monthly:
             high = int(row["high_sensitivity_count"])
             lower = int(row["lower_sensitivity_count"])
             all_count = int(row["all_count"])
             self.assertEqual(high + lower, all_count)
         self.assertTrue(any(int(row["high_sensitivity_count"]) == 0 for row in monthly))
-        audit = self.analysis.read_csv(self.analysis.ExtendedOutputs().audit_2026h1)
-        self.assertEqual([row["month"] for row in audit], ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"])
+        audit = self.analysis.read_csv(self.analysis.ExtendedOutputs().audit_2026)
+        self.assertEqual([row["month"] for row in audit], ["2026-01", "2026-02", "2026-03", "2026-04"])
         self.assertEqual(sum(int(row["all_count"]) for row in audit), 468)
         self.assertEqual(sum(int(row["high_sensitivity_count"]) for row in audit), 95)
         self.assertEqual(sum(int(row["lower_sensitivity_count"]) for row in audit), 373)
@@ -277,15 +279,15 @@ class ProjectEntry2Tests(unittest.TestCase):
             for row in regressions
             if row["term"] == "Intercept"
         }
-        self.assertEqual(n_by_model["test1_high_sensitivity_count"], 90)
-        self.assertEqual(n_by_model["test3_high_index"], 90)
-        self.assertEqual(n_by_model["test3_lower_index"], 90)
-        self.assertEqual(n_by_model["test3_high_minus_lower_difference"], 90)
+        self.assertEqual(n_by_model["test1_high_sensitivity_count"], 88)
+        self.assertEqual(n_by_model["test3_high_index"], 88)
+        self.assertEqual(n_by_model["test3_lower_index"], 88)
+        self.assertEqual(n_by_model["test3_high_minus_lower_difference"], 88)
         self.assertIn("test2_high_share_all", n_by_model)
         stacked = self.analysis.read_csv(self.analysis.ExtendedOutputs().test3_stacked)
-        self.assertEqual(len(stacked), 180)
-        self.assertEqual(sum(row["group"] == "High" for row in stacked), 90)
-        self.assertEqual(sum(row["group"] == "Lower" for row in stacked), 90)
+        self.assertEqual(len(stacked), 176)
+        self.assertEqual(sum(row["group"] == "High" for row in stacked), 88)
+        self.assertEqual(sum(row["group"] == "Lower" for row in stacked), 88)
 
     def test_extended_test3_difference_coefficients_match_high_minus_lower(self):
         rows = self.analysis.read_csv(self.analysis.ExtendedOutputs().regression_results)
@@ -307,9 +309,9 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertEqual(len(monthly), 84)
         self.assertEqual(monthly[-1]["month"], "2025-12")
         baseline_report = self.analysis.Outputs().results_report.read_text(encoding="utf-8")
-        self.assertNotIn("Project Entry2 Results Through 2026 H1", baseline_report)
+        self.assertNotIn("Project Entry2 Results Through 2026 Jan-Apr", baseline_report)
         baseline_figure = self.analysis.Outputs().test1_figure.read_text(encoding="utf-8")
-        self.assertNotIn("Through Jun 2026", baseline_figure)
+        self.assertNotIn("Through Apr 2026", baseline_figure)
 
     def test_test1_figure_exists(self):
         path = self.analysis.Outputs().test1_figure

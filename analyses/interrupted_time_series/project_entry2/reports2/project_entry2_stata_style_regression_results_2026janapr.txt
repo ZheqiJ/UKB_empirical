@@ -1,6 +1,6 @@
 Project Entry2 Stata-Style Regression Results
 
-Source estimates: ../data2/project_entry2_regression_results_2026h1.csv
+Source estimates: ../data2/project_entry2_regression_results_2026janapr.csv
 Estimator: OLS with Newey-West HAC standard errors, lag(3).
 Note: no licensed Stata executable was available locally; this is a Stata-style rendering of the Python HAC estimates.
 P-values and confidence intervals use the normal approximation used by the Python pipeline.
@@ -8,19 +8,19 @@ P-values and confidence intervals use the normal approximation used by the Pytho
 test1_high_sensitivity_count: Test 1
 . newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 
-Regression with Newey-West standard errors          Number of obs     =         90
-Maximum lag = 3                                     F(14,  75)        =     3.0261
+Regression with Newey-West standard errors          Number of obs     =         88
+Maximum lag = 3                                     F(14,  73)        =     6.4314
 HAC kernel: Bartlett                                Prob > F          =          .
-Sample dates: 2019-01 through 2026-06               R-squared         =       .361
+Sample dates: 2019-01 through 2026-04               R-squared         =      .5523
 
 ---------------------------------+----------------------------------------------------------------
           high_sensitivity_count |             Newey-West
                                  | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
 ---------------------------------+----------------------------------------------------------------
-                           _cons |  10.4153481  2.1729178    4.79    0.000    6.1564292   14.6742671
-                            time |   -.0103076   .0193805    -.53    0.595    -.0482933     .0276782
-                   post_july2024 |   4.7240107  4.3758447    1.08    0.280   -3.8526449   13.3006663
-             time_after_july2024 |    .2822914   .3910127     .72    0.470    -.4840934    1.0486762
+                           _cons |   9.8825522  1.8563637    5.32    0.000    6.2440795    13.521025
+                            time |   -.0126293   .0179048    -.71    0.481    -.0477227     .0224642
+                   post_july2024 |   1.5664461  3.1765564     .49    0.622   -4.6596045    7.7924966
+             time_after_july2024 |    .7562981   .2447816    3.09    0.002     .2765262      1.23607
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes
 
@@ -46,56 +46,56 @@ monthFE = Yes
 test3_lower_index: Test 3 lower partition
 . newey index_lower_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 
-Regression with Newey-West standard errors          Number of obs     =         90
-Maximum lag = 3                                     F(14,  75)        =     3.7979
+Regression with Newey-West standard errors          Number of obs     =         88
+Maximum lag = 3                                     F(14,  73)        =     6.2733
 HAC kernel: Bartlett                                Prob > F          =          .
-Sample dates: 2019-01 through 2026-06               R-squared         =      .4148
+Sample dates: 2019-01 through 2026-04               R-squared         =      .5461
 
 ---------------------------------+----------------------------------------------------------------
             index_lower_pre_mean |             Newey-West
                                  | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
 ---------------------------------+----------------------------------------------------------------
-                           _cons |  89.5245761 16.4292098    5.45    0.000   57.3233249  121.7258274
-                            time |    .7605814   .2533466       3    0.003     .2640222    1.2571407
-                   post_july2024 |  88.6777296 67.1184844    1.32    0.186  -42.8744999  220.2299591
-             time_after_july2024 |   -.9414116  5.5630828    -.17    0.866   -11.845054    9.9622308
+                           _cons |  83.5582094 14.8620323    5.62    0.000   54.4286261  112.6877927
+                            time |    .7352144   .2512569    2.93    0.003     .2427507     1.227678
+                   post_july2024 |  53.5474961 56.0741161     .95    0.340  -56.3577715  163.4527636
+             time_after_july2024 |   4.3384919  4.7926135     .91    0.365   -5.0550306   13.7320144
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes
 
 test3_high_index: Test 3 high partition
 . newey index_high_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 
-Regression with Newey-West standard errors          Number of obs     =         90
-Maximum lag = 3                                     F(14,  75)        =     3.0261
+Regression with Newey-West standard errors          Number of obs     =         88
+Maximum lag = 3                                     F(14,  73)        =     6.4314
 HAC kernel: Bartlett                                Prob > F          =          .
-Sample dates: 2019-01 through 2026-06               R-squared         =       .361
+Sample dates: 2019-01 through 2026-04               R-squared         =      .5523
 
 ---------------------------------+----------------------------------------------------------------
              index_high_pre_mean |             Newey-West
                                  | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
 ---------------------------------+----------------------------------------------------------------
-                           _cons |   131.68831 27.4736737    4.79    0.000   77.8399094  185.5367105
-                            time |   -.1303254   .2450408    -.53    0.595    -.6106054     .3499545
-                   post_july2024 |  59.7288708 55.3267717    1.08    0.280  -48.7116018  168.1693434
-             time_after_july2024 |   3.5692014  4.9438381     .72    0.470   -6.1207212    13.259124
+                           _cons |   124.95181 23.4712645    5.32    0.000   78.9481315  170.9554884
+                            time |   -.1596802   .2263828    -.71    0.481    -.6033905       .28403
+                   post_july2024 |  19.8056401 40.1633569     .49    0.622  -58.9145393   98.5258196
+             time_after_july2024 |   9.5623896  3.0949395    3.09    0.002    3.4963082    15.628471
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes
 
 test3_high_minus_lower_difference: Test 3 High-minus-Lower partition difference
 . newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 
-Regression with Newey-West standard errors          Number of obs     =         90
-Maximum lag = 3                                     F(14,  75)        =     1.4644
+Regression with Newey-West standard errors          Number of obs     =         88
+Maximum lag = 3                                     F(14,  73)        =     1.5164
 HAC kernel: Bartlett                                Prob > F          =          .
-Sample dates: 2019-01 through 2026-06               R-squared         =      .2147
+Sample dates: 2019-01 through 2026-04               R-squared         =      .2253
 
 ---------------------------------+----------------------------------------------------------------
              index_diff_pre_mean |             Newey-West
                                  | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
 ---------------------------------+----------------------------------------------------------------
-                           _cons |  42.1637338 22.8184172    1.85    0.065   -2.5603639   86.8878315
-                            time |   -.8909069   .2583074   -3.45    0.001   -1.3971895    -.3846243
-                   post_july2024 | -28.9488588 20.3442109   -1.42    0.155  -68.8235121   10.9257946
-             time_after_july2024 |    4.510613  1.8634143    2.42    0.015      .858321     8.162905
+                           _cons |  41.3936006 22.2423066    1.86    0.063   -2.2013204   84.9885215
+                            time |   -.8948946   .2569338   -3.48    0.000   -1.3984849    -.3913043
+                   post_july2024 |  -33.741856 23.1930791   -1.45    0.146   -79.200291   11.7165791
+             time_after_july2024 |   5.2238977   2.357244    2.22    0.027     .6036994     9.844096
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes

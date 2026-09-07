@@ -29,7 +29,12 @@ SCRIPT_DIR = PACKAGE / "scripts"
 
 PRIMARY_START = date(2019, 1, 1)
 PRIMARY_END = date(2025, 12, 1)
-EXTENDED_END = date(2026, 6, 1)
+EXTENDED_END = date(2026, 4, 1)
+EXTENDED_LABEL = "2026janapr"
+EXTENDED_REPORT_LABEL = "2026 Jan-Apr"
+EXTENDED_REPORT_LABEL_LOWER = "January-April 2026"
+EXTENDED_SHORT_LABEL = "Through Apr 2026"
+EXTENDED_COMPARISON_PREFIX = "through_2026_04"
 BREAK_MONTH = date(2024, 7, 1)
 HAC_LAG = 3
 
@@ -57,25 +62,25 @@ class Outputs:
 
 @dataclass(frozen=True)
 class ExtendedOutputs:
-    monthly: Path = DATA2_DIR / "project_entry2_monthly_2026h1.csv"
-    audit_2026h1: Path = DATA2_DIR / "project_entry2_2026h1_audit.csv"
-    regression_results: Path = DATA2_DIR / "project_entry2_regression_results_2026h1.csv"
-    test3_stacked: Path = DATA2_DIR / "project_entry2_test3_stacked_2026h1.csv"
-    test3_partition_results: Path = DATA2_DIR / "project_entry2_test3_partition_results_2026h1.csv"
+    monthly: Path = DATA2_DIR / "project_entry2_monthly_2026janapr.csv"
+    audit_2026: Path = DATA2_DIR / "project_entry2_2026janapr_audit.csv"
+    regression_results: Path = DATA2_DIR / "project_entry2_regression_results_2026janapr.csv"
+    test3_stacked: Path = DATA2_DIR / "project_entry2_test3_stacked_2026janapr.csv"
+    test3_partition_results: Path = DATA2_DIR / "project_entry2_test3_partition_results_2026janapr.csv"
     test3_raw_partition_results: Path = DATA2_DIR / "project_entry2_test3_raw_partition_results.csv"
     window_comparison: Path = DATA2_DIR / "project_entry2_window_comparison.csv"
-    replication_check: Path = DATA2_DIR / "stata_python_replication_check_2026h1.csv"
-    stata_tmp: Path = DATA2_DIR / "project_entry2_stata_results_2026h1_tmp.dta"
+    replication_check: Path = DATA2_DIR / "stata_python_replication_check_2026janapr.csv"
+    stata_tmp: Path = DATA2_DIR / "project_entry2_stata_results_2026janapr_tmp.dta"
     stata_do: Path = SCRIPT_DIR / "project_entry2_its.do"
-    stata_log: Path = REPORT2_DIR / "project_entry2_stata_full_2026h1.log"
-    stata_table: Path = REPORT2_DIR / "project_entry2_stata_regression_table_2026h1.csv"
-    stata_style_python_table: Path = REPORT2_DIR / "project_entry2_stata_style_regression_results_2026h1.txt"
-    results_report: Path = REPORT2_DIR / "project_entry2_results_2026h1.md"
+    stata_log: Path = REPORT2_DIR / "project_entry2_stata_full_2026janapr.log"
+    stata_table: Path = REPORT2_DIR / "project_entry2_stata_regression_table_2026janapr.csv"
+    stata_style_python_table: Path = REPORT2_DIR / "project_entry2_stata_style_regression_results_2026janapr.txt"
+    results_report: Path = REPORT2_DIR / "project_entry2_results_2026janapr.md"
     window_comparison_report: Path = REPORT2_DIR / "project_entry2_window_comparison.md"
-    test1_figure: Path = FIGURE2_DIR / "figure_test1_high_sensitivity_entry_2026h1.svg"
-    test2_figure: Path = FIGURE2_DIR / "figure_test2_high_sensitivity_share_2026h1.svg"
-    test3_raw_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_raw_2026h1.svg"
-    test3_indexed_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_indexed_2026h1.svg"
+    test1_figure: Path = FIGURE2_DIR / "figure_test1_high_sensitivity_entry_2026janapr.svg"
+    test2_figure: Path = FIGURE2_DIR / "figure_test2_high_sensitivity_share_2026janapr.svg"
+    test3_raw_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_raw_2026janapr.svg"
+    test3_indexed_figure: Path = FIGURE2_DIR / "figure_test3_high_vs_low_indexed_2026janapr.svg"
 
 
 def clean(value: object) -> str:
@@ -900,11 +905,11 @@ def comparison_row(
         "through_2025_12_p_value": old["p_value"],
         "through_2025_12_ci_low": old["ci_low"],
         "through_2025_12_ci_high": old["ci_high"],
-        "through_2026_06_estimate": new["estimate"],
-        "through_2026_06_std_error": new["std_error"],
-        "through_2026_06_p_value": new["p_value"],
-        "through_2026_06_ci_low": new["ci_low"],
-        "through_2026_06_ci_high": new["ci_high"],
+        f"{EXTENDED_COMPARISON_PREFIX}_estimate": new["estimate"],
+        f"{EXTENDED_COMPARISON_PREFIX}_std_error": new["std_error"],
+        f"{EXTENDED_COMPARISON_PREFIX}_p_value": new["p_value"],
+        f"{EXTENDED_COMPARISON_PREFIX}_ci_low": new["ci_low"],
+        f"{EXTENDED_COMPARISON_PREFIX}_ci_high": new["ci_high"],
         "change_estimate": fmt(float(new["estimate"]) - float(old["estimate"]), 8),
     }
 
@@ -955,7 +960,7 @@ def window_comparison_rows(
     return rows
 
 
-def audit_2026h1_rows(monthly_rows: list[dict[str, object]]) -> list[dict[str, object]]:
+def audit_extended_rows(monthly_rows: list[dict[str, object]]) -> list[dict[str, object]]:
     wanted = {month_label(month) for month in month_range(date(2026, 1, 1), EXTENDED_END)}
     rows = []
     for row in monthly_rows:
@@ -975,8 +980,8 @@ def audit_2026h1_rows(monthly_rows: list[dict[str, object]]) -> list[dict[str, o
                 "high_sensitivity_share_all": row["high_sensitivity_share_all"],
             }
         )
-    if len(rows) != 6:
-        raise AssertionError(f"expected six 2026 H1 audit rows; found {len(rows)}")
+    if len(rows) != len(wanted):
+        raise AssertionError(f"expected four {EXTENDED_REPORT_LABEL} audit rows; found {len(rows)}")
     return rows
 
 
@@ -1001,16 +1006,19 @@ def comparison_lookup(rows: list[dict[str, object]], test: str, quantity: str) -
 
 def comparison_markdown_table(rows: list[dict[str, object]], test: str) -> str:
     selected = [row for row in rows if row["test"] == test]
+    new_estimate = f"{EXTENDED_COMPARISON_PREFIX}_estimate"
+    new_std_error = f"{EXTENDED_COMPARISON_PREFIX}_std_error"
+    new_p_value = f"{EXTENDED_COMPARISON_PREFIX}_p_value"
     lines = [
-        "| Quantity | Through 2025-12 | Through 2026-06 | Change |",
+        f"| Quantity | Through 2025-12 | Through {month_label(EXTENDED_END)} | Change |",
         "| --- | ---: | ---: | ---: |",
     ]
     for row in selected:
         lines.append(
             f"| {row['quantity']} | {report_number(row['through_2025_12_estimate'])} "
             f"(SE {report_number(row['through_2025_12_std_error'])}, p {report_number(row['through_2025_12_p_value'])}) | "
-            f"{report_number(row['through_2026_06_estimate'])} "
-            f"(SE {report_number(row['through_2026_06_std_error'])}, p {report_number(row['through_2026_06_p_value'])}) | "
+            f"{report_number(row[new_estimate])} "
+            f"(SE {report_number(row[new_std_error])}, p {report_number(row[new_p_value])}) | "
             f"{report_number(row['change_estimate'])} |"
         )
     return "\n".join(lines)
@@ -1741,11 +1749,12 @@ def write_extended_results_report(
     audit_total = sum_column(audit_rows, "all_count")
     audit_high = sum_column(audit_rows, "high_sensitivity_count")
     audit_lower = sum_column(audit_rows, "lower_sensitivity_count")
+    month_count = len(month_range(PRIMARY_START, EXTENDED_END))
     zero_start_months = [str(row["month"]) for row in audit_rows if int(row["all_count"]) == 0]
     zero_start_note = (
-        f"Zero-start months in 2026 H1: {', '.join(zero_start_months)}. They are retained."
+        f"Zero-start months in {EXTENDED_REPORT_LABEL}: {', '.join(zero_start_months)}. They are retained."
         if zero_start_months
-        else "No 2026 H1 month has zero recorded starts."
+        else f"No {EXTENDED_REPORT_LABEL} month has zero recorded starts."
     )
     t1_post = linear_combination(fits["test1_high_sensitivity_count"], {"Time": 1.0, "TimeAfterJuly2024": 1.0})
     t2_post = linear_combination(fits["test2_high_share_all"], {"Time": 1.0, "TimeAfterJuly2024": 1.0})
@@ -1768,15 +1777,15 @@ def write_extended_results_report(
         if float(delta3["estimate"]) > 0 and float(delta3["p_value"]) < 0.05
         else "No statistically detectable differential strengthening of High relative to Lower."
     )
-    results = f"""# Project Entry2 Results Through 2026 H1
+    results = f"""# Project Entry2 Results Through {EXTENDED_REPORT_LABEL}
 
-Extended estimation window: 2019-01 through 2026-06. Breakpoint remains July 2024, with July 2024 `time_after_july2024 = 0` and June 2026 `time_after_july2024 = 23`.
+Extended estimation window: 2019-01 through {month_label(EXTENDED_END)}. Breakpoint remains July 2024, with July 2024 `time_after_july2024 = 0` and April 2026 `time_after_july2024 = 21`.
 
-## A. 2026 H1 Data Audit
+## A. {EXTENDED_REPORT_LABEL} Data Audit
 
 {audit_markdown_table(audit_rows)}
 
-2026 Jan-Jun total recorded starts = {audit_total:,}. 2026 Jan-Jun High = {audit_high:,}. 2026 Jan-Jun Lower = {audit_lower:,}. For every 2026 H1 month, `High + Lower = All`.
+2026 Jan-Apr total recorded starts = {audit_total:,}. 2026 Jan-Apr High = {audit_high:,}. 2026 Jan-Apr Lower = {audit_lower:,}. For every {EXTENDED_REPORT_LABEL} month, `High + Lower = All`.
 
 {zero_start_note}
 
@@ -1823,7 +1832,7 @@ Each group outcome is normalized as `100 * N_g,t / pre-transition monthly mean`.
 
 {test3_bottom_line}
 
-The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same 90 calendar months.
+The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same {month_count} calendar months.
 
 ## E. Raw-Count Test 3 Robustness
 
@@ -1855,48 +1864,51 @@ def write_window_comparison_report(
     t2_beta3 = comparison_lookup(comparison_rows, "Test 2", "beta3")
     t2_post = comparison_lookup(comparison_rows, "Test 2", "post slope")
     t3_delta3 = comparison_lookup(comparison_rows, "Test 3", "delta3")
+    new_estimate = f"{EXTENDED_COMPARISON_PREFIX}_estimate"
+    new_std_error = f"{EXTENDED_COMPARISON_PREFIX}_std_error"
+    new_p_value = f"{EXTENDED_COMPARISON_PREFIX}_p_value"
+    new_ci_low = f"{EXTENDED_COMPARISON_PREFIX}_ci_low"
+    new_ci_high = f"{EXTENDED_COMPARISON_PREFIX}_ci_high"
     raw_map = partition_result_map([{key: str(value) for key, value in row.items()} for row in raw_partition_rows])
     raw_delta3 = raw_map["differential_slope_change_delta3"]
-    se_shrank = float(t3_delta3["through_2026_06_std_error"]) < float(t3_delta3["through_2025_12_std_error"])
+    se_shrank = float(t3_delta3[new_std_error]) < float(t3_delta3["through_2025_12_std_error"])
     ci_old_width = float(t3_delta3["through_2025_12_ci_high"]) - float(t3_delta3["through_2025_12_ci_low"])
-    ci_new_width = float(t3_delta3["through_2026_06_ci_high"]) - float(t3_delta3["through_2026_06_ci_low"])
-    sign_changed = (float(t3_delta3["through_2025_12_estimate"]) > 0) != (
-        float(t3_delta3["through_2026_06_estimate"]) > 0
-    )
+    ci_new_width = float(t3_delta3[new_ci_high]) - float(t3_delta3[new_ci_low])
+    sign_changed = (float(t3_delta3["through_2025_12_estimate"]) > 0) != (float(t3_delta3[new_estimate]) > 0)
     main_conclusion = "UNCHANGED"
-    if float(t1_beta3["through_2026_06_p_value"]) < float(t1_beta3["through_2025_12_p_value"]) and float(
-        t2_beta3["through_2026_06_p_value"]
-    ) < float(t2_beta3["through_2025_12_p_value"]):
+    if float(t1_beta3[new_p_value]) < float(t1_beta3["through_2025_12_p_value"]) and float(t2_beta3[new_p_value]) < float(
+        t2_beta3["through_2025_12_p_value"]
+    ):
         main_conclusion = "STRENGTHENED"
-    if sign_changed and float(t3_delta3["through_2026_06_p_value"]) < 0.05:
+    if sign_changed and float(t3_delta3[new_p_value]) < 0.05:
         main_conclusion = "REVERSED"
     results = f"""# Project Entry2 Window Comparison
 
-Question: after adding January-June 2026, did the substantive conclusions change?
+Question: after adding {EXTENDED_REPORT_LABEL_LOWER}, did the substantive conclusions change?
 
 ## Test 1
 
-Did the High post-transition slope remain positive? {bool_word(float(t1_post["through_2026_06_estimate"]) > 0)}.
+Did the High post-transition slope remain positive? {bool_word(float(t1_post[new_estimate]) > 0)}.
 
-Did significance strengthen/weaken/disappear? The beta3 result {significance_change(t1_beta3["through_2025_12_p_value"], t1_beta3["through_2026_06_p_value"])}.
+Did significance strengthen/weaken/disappear? The beta3 result {significance_change(t1_beta3["through_2025_12_p_value"], t1_beta3[new_p_value])}.
 
 {comparison_markdown_table(comparison_rows, "Test 1")}
 
 ## Test 2
 
-Did the High share still switch from declining pretrend to increasing posttrend? {bool_word(float(comparison_lookup(comparison_rows, "Test 2", "beta1")["through_2026_06_estimate"]) < 0 and float(t2_post["through_2026_06_estimate"]) > 0)}.
+Did the High share still switch from declining pretrend to increasing posttrend? {bool_word(float(comparison_lookup(comparison_rows, "Test 2", "beta1")[new_estimate]) < 0 and float(t2_post[new_estimate]) > 0)}.
 
-Did beta3 remain positive/significant? Positive: {bool_word(float(t2_beta3["through_2026_06_estimate"]) > 0)}. Significant: {bool_word(float(t2_beta3["through_2026_06_p_value"]) < 0.05)}.
+Did beta3 remain positive/significant? Positive: {bool_word(float(t2_beta3[new_estimate]) > 0)}. Significant: {bool_word(float(t2_beta3[new_p_value]) < 0.05)}.
 
-Did the post slope remain positive? {bool_word(float(t2_post["through_2026_06_estimate"]) > 0)}. H0 post slope = 0 p-value: {report_number(t2_post["through_2026_06_p_value"])}.
+Did the post slope remain positive? {bool_word(float(t2_post[new_estimate]) > 0)}. H0 post slope = 0 p-value: {report_number(t2_post[new_p_value])}.
 
 {comparison_markdown_table(comparison_rows, "Test 2")}
 
 ## Test 3
 
-Did High begin to strengthen more than Lower? {bool_word(float(t3_delta3["through_2026_06_estimate"]) > 0 and float(t3_delta3["through_2026_06_p_value"]) < 0.05)}.
+Did High begin to strengthen more than Lower? {bool_word(float(t3_delta3[new_estimate]) > 0 and float(t3_delta3[new_p_value]) < 0.05)}.
 
-What happened to delta3? It changed from {report_number(t3_delta3["through_2025_12_estimate"])} to {report_number(t3_delta3["through_2026_06_estimate"])}.
+What happened to delta3? It changed from {report_number(t3_delta3["through_2025_12_estimate"])} to {report_number(t3_delta3[new_estimate])}.
 
 Did its SE shrink? {bool_word(se_shrank)}.
 
@@ -2015,20 +2027,23 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
     if len(baseline_monthly) != 84 or baseline_monthly[-1]["month"] != "2025-12":
         raise AssertionError("baseline data/ monthly output was overwritten")
     monthly = read_csv(out.monthly)
-    if len(monthly) != 90:
-        raise AssertionError(f"expected 90 extended monthly rows; found {len(monthly)}")
-    if monthly[0]["month"] != "2019-01" or monthly[-1]["month"] != "2026-06":
+    if len(monthly) != 88:
+        raise AssertionError(f"expected 88 extended monthly rows; found {len(monthly)}")
+    if monthly[0]["month"] != "2019-01" or monthly[-1]["month"] != "2026-04":
         raise AssertionError("extended window month range changed")
     by_month = {row["month"]: row for row in monthly}
-    for label in ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"]:
+    for label in ["2026-01", "2026-02", "2026-03", "2026-04"]:
         if label not in by_month:
             raise AssertionError(f"missing extended month {label}")
+    for label in ["2026-05", "2026-06"]:
+        if label in by_month:
+            raise AssertionError(f"{label} should not enter the Jan-Apr extended window")
     if by_month["2024-07"]["time_after_july2024"] != "0":
         raise AssertionError("July 2024 must have time_after_july2024 = 0 in extended output")
     if by_month["2024-08"]["time_after_july2024"] != "1":
         raise AssertionError("August 2024 must have time_after_july2024 = 1 in extended output")
-    if by_month["2026-06"]["time_after_july2024"] != "23":
-        raise AssertionError("June 2026 must have time_after_july2024 = 23")
+    if by_month["2026-04"]["time_after_july2024"] != "21":
+        raise AssertionError("April 2026 must have time_after_july2024 = 21")
     for row in monthly:
         high = int(row["high_sensitivity_count"])
         lower = int(row["lower_sensitivity_count"])
@@ -2047,8 +2062,8 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
         "test3_high_index",
         "test3_high_minus_lower_difference",
     ]:
-        if n_by_model.get(model_id) != 90:
-            raise AssertionError(f"expected N=90 for {model_id}; found {n_by_model.get(model_id)}")
+        if n_by_model.get(model_id) != 88:
+            raise AssertionError(f"expected N=88 for {model_id}; found {n_by_model.get(model_id)}")
     terms = {(row["model_id"], row["term"]) for row in regressions}
     for model_id in [
         "test1_high_sensitivity_count",
@@ -2067,18 +2082,18 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
         if abs(diff - (high - lower)) > 1e-6:
             raise AssertionError(f"extended Test 3 difference coefficient mismatch for {term}")
     stacked = read_csv(out.test3_stacked)
-    if len(stacked) != 180:
-        raise AssertionError(f"expected 180 extended Test 3 stacked rows; found {len(stacked)}")
+    if len(stacked) != 176:
+        raise AssertionError(f"expected 176 extended Test 3 stacked rows; found {len(stacked)}")
     groups = Counter(row["group"] for row in stacked)
-    if groups["High"] != 90 or groups["Lower"] != 90:
-        raise AssertionError(f"expected 90 High and 90 Lower stacked rows; found {groups}")
+    if groups["High"] != 88 or groups["Lower"] != 88:
+        raise AssertionError(f"expected 88 High and 88 Lower stacked rows; found {groups}")
     if not any(row["group"] == "High" and int(row["raw_count"]) == 0 for row in stacked):
         raise AssertionError("extended Test 3 stacked file lost High zero-count months")
     if not any(row["group"] == "Lower" and int(row["raw_count"]) == 0 for row in stacked):
         raise AssertionError("extended Test 3 stacked file lost Lower zero-count months")
-    audit_rows = read_csv(out.audit_2026h1)
-    if [row["month"] for row in audit_rows] != ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"]:
-        raise AssertionError("2026 H1 audit months are incomplete")
+    audit_rows = read_csv(out.audit_2026)
+    if [row["month"] for row in audit_rows] != ["2026-01", "2026-02", "2026-03", "2026-04"]:
+        raise AssertionError(f"{EXTENDED_REPORT_LABEL} audit months are incomplete")
     for path in [
         out.test1_figure,
         out.test2_figure,
@@ -2251,9 +2266,9 @@ def build_project_entry2_extended_outputs() -> dict[str, object]:
     ]
     write_csv(out.monthly, monthly_rows, monthly_fieldnames)
 
-    audit_rows = audit_2026h1_rows(monthly_rows)
+    audit_rows = audit_extended_rows(monthly_rows)
     write_csv(
-        out.audit_2026h1,
+        out.audit_2026,
         audit_rows,
         [
             "month",
@@ -2338,11 +2353,11 @@ def build_project_entry2_extended_outputs() -> dict[str, object]:
         "through_2025_12_p_value",
         "through_2025_12_ci_low",
         "through_2025_12_ci_high",
-        "through_2026_06_estimate",
-        "through_2026_06_std_error",
-        "through_2026_06_p_value",
-        "through_2026_06_ci_low",
-        "through_2026_06_ci_high",
+        f"{EXTENDED_COMPARISON_PREFIX}_estimate",
+        f"{EXTENDED_COMPARISON_PREFIX}_std_error",
+        f"{EXTENDED_COMPARISON_PREFIX}_p_value",
+        f"{EXTENDED_COMPARISON_PREFIX}_ci_low",
+        f"{EXTENDED_COMPARISON_PREFIX}_ci_high",
         "change_estimate",
     ]
     write_csv(out.window_comparison, comparison_rows, comparison_fieldnames)
@@ -2354,16 +2369,16 @@ def build_project_entry2_extended_outputs() -> dict[str, object]:
         regression_rows,
         out,
         end_month=EXTENDED_END,
-        title_suffix=" Through Jun 2026",
+        title_suffix=f" {EXTENDED_SHORT_LABEL}",
     )
     stata_status = run_stata_if_available(out, regression_rows, end_month=EXTENDED_END)
     write_extended_results_report(audit_rows, regression_rows, partition_rows, raw_partition_rows, fits, stata_status, out)
     write_window_comparison_report(comparison_rows, raw_partition_rows, stata_status, out)
     validate_extended_outputs(out)
     return {
-        "h1_all": sum_column(audit_rows, "all_count"),
-        "h1_high": sum_column(audit_rows, "high_sensitivity_count"),
-        "h1_lower": sum_column(audit_rows, "lower_sensitivity_count"),
+        "extended_all": sum_column(audit_rows, "all_count"),
+        "extended_high": sum_column(audit_rows, "high_sensitivity_count"),
+        "extended_lower": sum_column(audit_rows, "lower_sensitivity_count"),
         "stata_status": stata_status,
     }
 
@@ -2371,19 +2386,19 @@ def build_project_entry2_extended_outputs() -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-classification", action="store_true")
-    parser.add_argument("--extended-2026h1", action="store_true")
+    parser.add_argument("--extended-2026janapr", action="store_true")
     parser.add_argument("--refresh-schema", action="store_true")
     parser.add_argument("--refresh-field-pages", action="store_true")
     parser.add_argument("--no-fetch-field-pages", action="store_true")
     parser.add_argument("--sleep-seconds", type=float, default=0.05)
     args = parser.parse_args()
-    if args.extended_2026h1:
+    if args.extended_2026janapr:
         summary = build_project_entry2_extended_outputs()
         print(
             "project-entry2 extended analysis built: "
-            f"{summary['h1_all']} 2026H1 starts, "
-            f"{summary['h1_high']} HIGH_SENSITIVITY, "
-            f"{summary['h1_lower']} LOWER_SENSITIVITY_COMPARISON, "
+            f"{summary['extended_all']} {EXTENDED_REPORT_LABEL} starts, "
+            f"{summary['extended_high']} HIGH_SENSITIVITY, "
+            f"{summary['extended_lower']} LOWER_SENSITIVITY_COMPARISON, "
             f"Stata status {summary['stata_status']}"
         )
     else:
