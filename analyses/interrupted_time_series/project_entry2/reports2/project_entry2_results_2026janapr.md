@@ -71,20 +71,40 @@ $$
 
 Each group outcome is normalized as `100 * N_g,t / pre-transition monthly mean`. The pre-transition denominator is the same full pre-July-2024 mean used in the 2025-12 baseline.
 
-| Quantity | Estimate | SE / p-value |
-| --- | ---: | ---: |
-| Lower pre slope | 0.7352 | 0.2513 / 0.0034 |
-| Lower post slope | 5.0737 | 4.6943 / 0.2798 |
-| Lower slope change | 4.3385 | 4.7926 / 0.3653 |
-| High pre slope | -0.1597 | 0.2264 / 0.4806 |
-| High post slope | 9.4027 | 3.0274 / 0.0019 |
-| High slope change | 9.5624 | 3.0949 / 0.0020 |
-| Differential immediate change \(\delta_2\) | -33.7419 | 23.1931 / 0.1457 |
-| **Differential slope change \(\delta_3\)** | 5.2239 | 2.3572 / 0.0267 |
+Primary displayed Test 3 interaction coefficient table:
+
+| Parameter | Term | HAC inference source | Estimate | SE | p-value | 95% CI |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| β0 | Intercept | Lower-series regression | 83.5582 | 14.8620 | 0.0000 | [54.4286, 112.6878] |
+| β1 | Time | Lower-series regression | 0.7352 | 0.2513 | 0.0034 | [0.2428, 1.2277] |
+| β2 | PostJuly2024 | Lower-series regression | 53.5475 | 56.0741 | 0.3396 | [-56.3578, 163.4528] |
+| β3 | TimeAfterJuly2024 | Lower-series regression | 4.3385 | 4.7926 | 0.3653 | [-5.0550, 13.7320] |
+| δ0 | High | High-minus-Lower difference regression | 41.3936 | 22.2423 | 0.0627 | [-2.2013, 84.9885] |
+| δ1 | High × Time | High-minus-Lower difference regression | -0.8949 | 0.2569 | 0.0005 | [-1.3985, -0.3913] |
+| δ2 | High × PostJuly2024 | High-minus-Lower difference regression | -33.7419 | 23.1931 | 0.1457 | [-79.2003, 11.7166] |
+| δ3 | High × TimeAfterJuly2024 | High-minus-Lower difference regression | 5.2239 | 2.3572 | 0.0267 | [0.6037, 9.8441] |
+
+Month FE = Yes. High × Month FE = Yes. Observations = 176 group-month observations. Calendar months = 88. HAC lag = 3.
+
+Linear combinations / interpretation:
+
+| Linear combination / interpretation | Estimate | SE | p-value | 95% CI |
+| --- | ---: | ---: | ---: | ---: |
+| Lower pre slope = β1 | 0.7352 | 0.2513 | 0.0034 | [0.2428, 1.2277] |
+| Lower post slope = β1 + β3 | 5.0737 | 4.6943 | 0.2798 | [-4.1270, 14.2744] |
+| High pre slope = β1 + δ1 | -0.1597 | 0.2264 | 0.4806 | [-0.6034, 0.2840] |
+| High post slope = β1 + δ1 + β3 + δ3 | 9.4027 | 3.0274 | 0.0019 | [3.4691, 15.3364] |
+| Lower slope change = β3 | 4.3385 | 4.7926 | 0.3653 | [-5.0550, 13.7320] |
+| High slope change = β3 + δ3 | 9.5624 | 3.0949 | 0.0020 | [3.4963, 15.6285] |
+| Differential slope change = δ3 | 5.2239 | 2.3572 | 0.0267 | [0.6037, 9.8441] |
+
+Main hypothesis: \(H_0: \delta_3 = 0\). Current result: \(\delta_3 = 5.2238977\), SE = 2.3572440, p = 0.0266844, 95% CI [0.6036994, 9.8440960].
 
 High trajectory strengthened significantly more than Lower.
 
-The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same 88 calendar months.
+The displayed interaction table is the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. β coefficients come from the Lower series and δ coefficients from the High-minus-Lower series.
+
+The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same 88 calendar months. Built-in Stata `newey` is not presented as if it were run on the 176-row stacked dataset with duplicate month values.
 
 ## E. Raw-Count Test 3 Robustness
 

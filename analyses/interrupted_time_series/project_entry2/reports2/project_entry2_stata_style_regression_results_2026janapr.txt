@@ -43,6 +43,46 @@ Sample dates: 2019-01 through 2026-04               R-squared         =      .28
 ---------------------------------+----------------------------------------------------------------
 monthFE = Yes
 
+Test 3: High-vs-Lower Partition Interaction
+Lower is the omitted/reference group.
+Displayed model:
+Y_g,t = β0 + β1 Time_t + β2 Post_t + β3 TimeAfter_t
+      + δ0 High_g + δ1 High_g × Time_t + δ2 High_g × Post_t
+      + δ3 High_g × TimeAfter_t + MonthFE + High_g × MonthFE + ε_g,t
+
+-----------------------------+----------------------------------------------------------------
+                 entry_index |             Newey-West
+                             | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+-----------------------------+----------------------------------------------------------------
+                β0 Intercept |  83.5582094 14.8620323    5.62    0.000   54.4286261  112.6877927
+                     β1 Time |    .7352144   .2512569    2.93    0.003     .2427507     1.227678
+             β2 PostJuly2024 |  53.5474961 56.0741161     .95    0.340  -56.3577715  163.4527636
+        β3 TimeAfterJuly2024 |   4.3384919  4.7926135     .91    0.365   -5.0550306   13.7320144
+                     δ0 High |  41.3936006 22.2423066    1.86    0.063   -2.2013204   84.9885215
+              δ1 High × Time |   -.8948946   .2569338   -3.48    0.000   -1.3984849    -.3913043
+      δ2 High × PostJuly2024 |  -33.741856 23.1930791   -1.45    0.146   -79.200291   11.7165791
+ δ3 High × TimeAfterJuly2024 |   5.2238977   2.357244    2.22    0.027     .6036994     9.844096
+-----------------------------+----------------------------------------------------------------
+Month FE              = Yes
+High × Month FE       = Yes
+Observations          = 176 group-month observations
+Calendar months       = 88
+HAC lag               = 3
+
+Linear combinations / interpretation:
+Lower pre slope = β1: estimate = .7352144, SE = .2512569, p = .0034319, 95% CI = [.2427507, 1.227678]
+Lower post slope = β1 + β3: estimate = 5.0737062, SE = 4.6942542, p = .2797713, 95% CI = [-4.127032, 14.2744445]
+High pre slope = β1 + δ1: estimate = -.1596802, SE = .2263828, p = .4805893, 95% CI = [-.6033905, .28403]
+High post slope = β1 + δ1 + β3 + δ3: estimate = 9.4027094, SE = 3.0273769, p = .001897, 95% CI = [3.4690506, 15.3363681]
+Lower slope change = β3: estimate = 4.3384919, SE = 4.7926135, p = .3653353, 95% CI = [-5.0550306, 13.7320144]
+High slope change = β3 + δ3: estimate = 9.5623896, SE = 3.0949395, p = .0020037, 95% CI = [3.4963082, 15.628471]
+Differential slope change = δ3: estimate = 5.2238977, SE = 2.357244, p = .0266844, 95% CI = [.6036994, 9.844096]
+
+Main hypothesis H0: δ3 = 0. δ3 = 5.2238977, SE = 2.3572440, p = 0.0266844, 95% CI = [0.6036994, 9.8440960]
+The displayed interaction table is the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. β coefficients come from the Lower series and δ coefficients from the High-minus-Lower series.
+
+Component regressions / verification
+
 test3_lower_index: Test 3 lower partition
 . newey index_lower_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 

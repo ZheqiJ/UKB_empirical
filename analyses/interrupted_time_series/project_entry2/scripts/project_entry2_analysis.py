@@ -37,6 +37,30 @@ EXTENDED_SHORT_LABEL = "Through Apr 2026"
 EXTENDED_COMPARISON_PREFIX = "through_2026_04"
 BREAK_MONTH = date(2024, 7, 1)
 HAC_LAG = 3
+TEST3_INTERACTION_COEFFICIENTS = [
+    ("β0", "Intercept", "_cons", "test3_lower_index", "Intercept", "Lower-series regression"),
+    ("β1", "Time", "Time", "test3_lower_index", "Time", "Lower-series regression"),
+    ("β2", "PostJuly2024", "PostJuly2024", "test3_lower_index", "PostJuly2024", "Lower-series regression"),
+    ("β3", "TimeAfterJuly2024", "TimeAfterJuly2024", "test3_lower_index", "TimeAfterJuly2024", "Lower-series regression"),
+    ("δ0", "High", "High", "test3_high_minus_lower_difference", "Intercept", "High-minus-Lower difference regression"),
+    ("δ1", "High × Time", "High × Time", "test3_high_minus_lower_difference", "Time", "High-minus-Lower difference regression"),
+    ("δ2", "High × PostJuly2024", "High × PostJuly2024", "test3_high_minus_lower_difference", "PostJuly2024", "High-minus-Lower difference regression"),
+    ("δ3", "High × TimeAfterJuly2024", "High × TimeAfterJuly2024", "test3_high_minus_lower_difference", "TimeAfterJuly2024", "High-minus-Lower difference regression"),
+]
+TEST3_LINEAR_COMBINATIONS = [
+    ("Lower pre slope = β1", "lower_pre_slope"),
+    ("Lower post slope = β1 + β3", "lower_post_slope"),
+    ("High pre slope = β1 + δ1", "high_pre_slope"),
+    ("High post slope = β1 + δ1 + β3 + δ3", "high_post_slope"),
+    ("Lower slope change = β3", "lower_slope_change"),
+    ("High slope change = β3 + δ3", "high_slope_change"),
+    ("Differential slope change = δ3", "differential_slope_change_delta3"),
+]
+TEST3_INTERACTION_NOTE = (
+    "The displayed interaction table is the stacked-model parameterization of the existing "
+    "algebraically equivalent three-series Newey-West implementation. β coefficients come "
+    "from the Lower series and δ coefficients from the High-minus-Lower series."
+)
 
 
 @dataclass(frozen=True)
@@ -873,6 +897,51 @@ def partition_report_table(rows: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
+def test3_interaction_coefficient_rows(regression_rows: list[dict[str, object]]) -> list[dict[str, object]]:
+    rows = []
+    for parameter, term_label, stata_label, model_id, regression_term, source in TEST3_INTERACTION_COEFFICIENTS:
+        row = dict(term_row(regression_rows, model_id, regression_term))
+        row.update(
+            {
+                "parameter": parameter,
+                "term_label": term_label,
+                "stata_label": stata_label,
+                "source": source,
+            }
+        )
+        rows.append(row)
+    return rows
+
+
+def test3_interaction_markdown_table(regression_rows: list[dict[str, object]]) -> str:
+    lines = [
+        "| Parameter | Term | HAC inference source | Estimate | SE | p-value | 95% CI |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+    ]
+    for row in test3_interaction_coefficient_rows(regression_rows):
+        lines.append(
+            f"| {row['parameter']} | {row['term_label']} | {row['source']} | "
+            f"{report_number(row['estimate'])} | {report_number(row['std_error'])} | "
+            f"{report_number(row['p_value'])} | {report_ci(row)} |"
+        )
+    return "\n".join(lines)
+
+
+def test3_linear_combinations_markdown_table(partition_rows: list[dict[str, object]]) -> str:
+    by_quantity = partition_result_map([{key: str(value) for key, value in row.items()} for row in partition_rows])
+    lines = [
+        "| Linear combination / interpretation | Estimate | SE | p-value | 95% CI |",
+        "| --- | ---: | ---: | ---: | ---: |",
+    ]
+    for label, quantity in TEST3_LINEAR_COMBINATIONS:
+        row = by_quantity[quantity]
+        lines.append(
+            f"| {label} | {report_number(row['estimate'])} | {report_number(row['std_error'])} | "
+            f"{report_number(row['p_value'])} | {report_ci(row)} |"
+        )
+    return "\n".join(lines)
+
+
 def result_values(row: dict[str, object]) -> dict[str, str]:
     return {
         "estimate": clean(row.get("estimate")),
@@ -1356,7 +1425,90 @@ def stata_pvalue(value: object) -> str:
     return "0.000" if number < 0.0005 else f"{number:.3f}"
 
 
-def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str, object]]) -> None:
+def stata_precise_result(row: dict[str, object]) -> str:
+    return (
+        f"estimate = {stata_num(row['estimate'])}, SE = {stata_num(row['std_error'])}, "
+        f"p = {stata_num(row['p_value'])}, 95% CI = "
+        f"[{stata_num(row['ci_low'])}, {stata_num(row['ci_high'])}]"
+    )
+
+
+def fixed_precision_result(row: dict[str, object], digits: int = 7) -> str:
+    return (
+        f"δ3 = {report_number(row['estimate'], digits)}, SE = {report_number(row['std_error'], digits)}, "
+        f"p = {report_number(row['p_value'], digits)}, 95% CI = {report_ci(row, digits)}"
+    )
+
+
+def test3_linear_combinations_stata_block(partition_rows: list[dict[str, object]]) -> list[str]:
+    by_quantity = partition_result_map([{key: str(value) for key, value in row.items()} for row in partition_rows])
+    lines = ["Linear combinations / interpretation:"]
+    for label, quantity in TEST3_LINEAR_COMBINATIONS:
+        lines.append(f"{label}: {stata_precise_result(by_quantity[quantity])}")
+    return lines
+
+
+def test3_interaction_stata_block(
+    regression_rows: list[dict[str, object]],
+    partition_rows: list[dict[str, object]],
+) -> list[str]:
+    lower_n = model_n(regression_rows, "test3_lower_index")
+    high_n = model_n(regression_rows, "test3_high_index")
+    calendar_months = min(lower_n, high_n, model_n(regression_rows, "test3_high_minus_lower_difference"))
+    observations = lower_n + high_n
+    variable_width = 28
+    separator = "-" * variable_width + "-+----------------------------------------------------------------"
+    delta3 = term_row(regression_rows, "test3_high_minus_lower_difference", "TimeAfterJuly2024")
+    lines = [
+        "Test 3: High-vs-Lower Partition Interaction",
+        "Lower is the omitted/reference group.",
+        "Displayed model:",
+        "Y_g,t = β0 + β1 Time_t + β2 Post_t + β3 TimeAfter_t",
+        "      + δ0 High_g + δ1 High_g × Time_t + δ2 High_g × Post_t",
+        "      + δ3 High_g × TimeAfter_t + MonthFE + High_g × MonthFE + ε_g,t",
+        "",
+        separator,
+        f"{'entry_index':>{variable_width}} |             Newey-West",
+        f"{'':>{variable_width}} | Coefficient  std. err.      z    P>|z|     [95% conf. interval]",
+        separator,
+    ]
+    for row in test3_interaction_coefficient_rows(regression_rows):
+        label = f"{row['parameter']} {row['term_label']}"
+        coef = stata_num(row["estimate"])
+        se = stata_num(row["std_error"])
+        z_stat = stata_num(row["statistic"], 2)
+        p_value = stata_pvalue(row["p_value"])
+        lo = stata_num(row["ci_low"])
+        hi = stata_num(row["ci_high"])
+        lines.append(
+            f"{label[:variable_width]:>{variable_width}} | "
+            f"{coef:>11} {se:>10} {z_stat:>7} {p_value:>8} {lo:>12} {hi:>12}"
+        )
+    lines.extend(
+        [
+            separator,
+            "Month FE              = Yes",
+            "High × Month FE       = Yes",
+            f"Observations          = {observations} group-month observations",
+            f"Calendar months       = {calendar_months}",
+            f"HAC lag               = {HAC_LAG}",
+            "",
+            *test3_linear_combinations_stata_block(partition_rows),
+            "",
+            f"Main hypothesis H0: δ3 = 0. {fixed_precision_result(delta3)}",
+            TEST3_INTERACTION_NOTE,
+            "",
+        ]
+    )
+    return lines
+
+
+def write_stata_style_python_output(
+    out: Outputs,
+    regression_rows: list[dict[str, object]],
+    partition_rows: list[dict[str, object]] | None = None,
+) -> None:
+    partition_rows = partition_rows or read_csv(out.test3_partition_results)
     commands = {
         "test1_high_sensitivity_count": (
             "newey high_sensitivity_count time post_july2024 "
@@ -1396,6 +1548,9 @@ def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str
         "",
     ]
     for model_id in order:
+        if model_id == "test3_lower_index":
+            lines.extend(test3_interaction_stata_block(regression_rows, partition_rows))
+            lines.extend(["Component regressions / verification", ""])
         model_rows = rows_by_model[model_id]
         display_rows = [
             row
@@ -1828,11 +1983,23 @@ $$
 
 Each group outcome is normalized as `100 * N_g,t / pre-transition monthly mean`. The pre-transition denominator is the same full pre-July-2024 mean used in the 2025-12 baseline.
 
-{partition_report_table([{key: str(value) for key, value in row.items()} for row in partition_rows])}
+Primary displayed Test 3 interaction coefficient table:
+
+{test3_interaction_markdown_table(regression_rows)}
+
+Month FE = Yes. High × Month FE = Yes. Observations = {month_count * 2} group-month observations. Calendar months = {month_count}. HAC lag = {HAC_LAG}.
+
+Linear combinations / interpretation:
+
+{test3_linear_combinations_markdown_table(partition_rows)}
+
+Main hypothesis: \\(H_0: \\delta_3 = 0\\). Current result: \\(\\delta_3 = {report_number(delta3['estimate'], 7)}\\), SE = {report_number(delta3['std_error'], 7)}, p = {report_number(delta3['p_value'], 7)}, 95% CI {report_ci(delta3, 7)}.
 
 {test3_bottom_line}
 
-The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same {month_count} calendar months.
+{TEST3_INTERACTION_NOTE}
+
+The Newey-West implementation remains the three-series equivalent: Lower index, High index, and High-minus-Lower index difference, all over the same {month_count} calendar months. Built-in Stata `newey` is not presented as if it were run on the 176-row stacked dataset with duplicate month values.
 
 ## E. Raw-Count Test 3 Robustness
 
@@ -1927,6 +2094,105 @@ Raw-count Test 3 robustness delta3: {report_number(raw_delta3["estimate"])} (SE 
 Stata status: `{stata_status}`.
 """
     write_text(out.window_comparison_report, results)
+
+
+def assert_close(label: str, actual: float, expected: float, tolerance: float = 1e-6) -> None:
+    if abs(actual - expected) > tolerance:
+        raise AssertionError(f"{label} mismatch: expected {expected}; found {actual}")
+
+
+def validate_extended_test3_interaction_presentation(
+    out: ExtendedOutputs,
+    regression_rows: list[dict[str, str]],
+) -> None:
+    table_text = out.stata_style_python_table.read_text(encoding="utf-8")
+    for required in [
+        "Test 3: High-vs-Lower Partition Interaction",
+        "Lower is the omitted/reference group.",
+        "High × Time",
+        "High × PostJuly2024",
+        "High × TimeAfterJuly2024",
+        "Month FE              = Yes",
+        "High × Month FE       = Yes",
+        "Observations          = 176 group-month observations",
+        "Calendar months       = 88",
+        "HAC lag               = 3",
+        "Linear combinations / interpretation:",
+        "Main hypothesis H0: δ3 = 0.",
+        TEST3_INTERACTION_NOTE,
+        "Component regressions / verification",
+        "test3_high_minus_lower_difference",
+    ]:
+        if required not in table_text:
+            raise AssertionError(f"extended Test 3 Stata-style table missing {required}")
+
+    report_text = out.results_report.read_text(encoding="utf-8")
+    for required in [
+        "Primary displayed Test 3 interaction coefficient table",
+        "| β0 | Intercept | Lower-series regression | 83.5582 |",
+        "| δ3 | High × TimeAfterJuly2024 | High-minus-Lower difference regression | 5.2239 |",
+        "Main hypothesis: \\(H_0: \\delta_3 = 0\\).",
+        "Built-in Stata `newey` is not presented as if it were run on the 176-row stacked dataset",
+    ]:
+        if required not in report_text:
+            raise AssertionError(f"extended Test 3 markdown report missing {required}")
+
+    beta_delta = {
+        "β0": float(term_row(regression_rows, "test3_lower_index", "Intercept")["estimate"]),
+        "β1": float(term_row(regression_rows, "test3_lower_index", "Time")["estimate"]),
+        "β2": float(term_row(regression_rows, "test3_lower_index", "PostJuly2024")["estimate"]),
+        "β3": float(term_row(regression_rows, "test3_lower_index", "TimeAfterJuly2024")["estimate"]),
+        "δ0": float(term_row(regression_rows, "test3_high_minus_lower_difference", "Intercept")["estimate"]),
+        "δ1": float(term_row(regression_rows, "test3_high_minus_lower_difference", "Time")["estimate"]),
+        "δ2": float(term_row(regression_rows, "test3_high_minus_lower_difference", "PostJuly2024")["estimate"]),
+        "δ3": float(term_row(regression_rows, "test3_high_minus_lower_difference", "TimeAfterJuly2024")["estimate"]),
+    }
+    for label, expected in {
+        "β0": 83.5582094,
+        "β1": 0.7352144,
+        "β2": 53.5474961,
+        "β3": 4.3384919,
+        "δ0": 41.3936006,
+        "δ1": -0.8948946,
+        "δ2": -33.7418560,
+        "δ3": 5.2238977,
+    }.items():
+        assert_close(label, beta_delta[label], expected, 5e-6)
+
+    partition = partition_result_map(read_csv(out.test3_partition_results))
+    assert_close(
+        "High intercept",
+        beta_delta["β0"] + beta_delta["δ0"],
+        float(term_row(regression_rows, "test3_high_index", "Intercept")["estimate"]),
+    )
+    assert_close("High intercept value", beta_delta["β0"] + beta_delta["δ0"], 124.95181, 5e-6)
+    assert_close("Lower pre slope", beta_delta["β1"], float(partition["lower_pre_slope"]["estimate"]))
+    assert_close(
+        "Lower post slope",
+        beta_delta["β1"] + beta_delta["β3"],
+        float(partition["lower_post_slope"]["estimate"]),
+    )
+    assert_close(
+        "High pre slope",
+        beta_delta["β1"] + beta_delta["δ1"],
+        float(partition["high_pre_slope"]["estimate"]),
+    )
+    assert_close(
+        "High post slope",
+        beta_delta["β1"] + beta_delta["δ1"] + beta_delta["β3"] + beta_delta["δ3"],
+        float(partition["high_post_slope"]["estimate"]),
+    )
+    assert_close("Lower slope change", beta_delta["β3"], float(partition["lower_slope_change"]["estimate"]))
+    assert_close(
+        "High slope change",
+        beta_delta["β3"] + beta_delta["δ3"],
+        float(partition["high_slope_change"]["estimate"]),
+    )
+    assert_close(
+        "Differential slope change",
+        beta_delta["δ3"],
+        float(partition["differential_slope_change_delta3"]["estimate"]),
+    )
 
 
 def validate_outputs(out: Outputs | None = None) -> None:
@@ -2113,6 +2379,7 @@ def validate_extended_outputs(out: ExtendedOutputs | None = None) -> None:
     for figure in [out.test1_figure, out.test2_figure, out.test3_raw_figure, out.test3_indexed_figure]:
         if "<svg" not in figure.read_text(encoding="utf-8")[:100]:
             raise AssertionError(f"missing or invalid extended figure {figure}")
+    validate_extended_test3_interaction_presentation(out, regressions)
 
 
 def build_project_entry2_outputs(
@@ -2204,12 +2471,13 @@ def build_project_entry2_outputs(
             "entry_index_pre_mean",
         ],
     )
+    partition_rows = test3_partition_result_rows(fits)
     write_csv(
         out.test3_partition_results,
-        test3_partition_result_rows(fits),
+        partition_rows,
         ["quantity", "estimate", "std_error", "p_value", "ci_low", "ci_high"],
     )
-    write_stata_style_python_output(out, regression_rows)
+    write_stata_style_python_output(out, regression_rows, partition_rows)
     make_figures(monthly_rows, fits, regression_rows, out)
     stata_status = run_stata_if_available(out, regression_rows)
     write_reports(classification_rows, monthly_rows, regression_rows, stata_status, out)
@@ -2362,7 +2630,7 @@ def build_project_entry2_extended_outputs() -> dict[str, object]:
     ]
     write_csv(out.window_comparison, comparison_rows, comparison_fieldnames)
 
-    write_stata_style_python_output(out, regression_rows)
+    write_stata_style_python_output(out, regression_rows, partition_rows)
     make_figures(
         monthly_rows,
         fits,
