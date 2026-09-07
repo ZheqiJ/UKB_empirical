@@ -131,6 +131,7 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertEqual(by_month["2024-07"]["time_after_july2024"], "0")
         self.assertEqual(by_month["2024-08"]["time_after_july2024"], "1")
         self.assertTrue(any(int(row["high_sensitivity_count"]) == 0 for row in monthly))
+        self.assertTrue(any(int(row["lower_sensitivity_count"]) == 0 for row in monthly))
 
         regressions = self.analysis.read_csv(self.analysis.Outputs().regression_results)
         n_by_model = {
@@ -139,8 +140,9 @@ class ProjectEntry2Tests(unittest.TestCase):
             if row["term"] == "Intercept"
         }
         self.assertEqual(n_by_model["test1_high_sensitivity_count"], 84)
-        self.assertEqual(n_by_model["test3_high_sensitivity_count"], 84)
-        self.assertEqual(n_by_model["test3_lower_sensitivity_count"], 84)
+        self.assertEqual(n_by_model["test3_high_index"], 84)
+        self.assertEqual(n_by_model["test3_lower_index"], 84)
+        self.assertEqual(n_by_model["test3_high_minus_lower_difference"], 84)
 
     def test_run_model_keeps_zero_and_calendar_time_after_missing_share(self):
         rows = []
@@ -190,8 +192,13 @@ class ProjectEntry2Tests(unittest.TestCase):
         do_text = self.analysis.Outputs().stata_do.read_text(encoding="utf-8")
         self.assertIn("version 18.0", do_text)
         self.assertIn("newey high_sensitivity_count", do_text)
+        self.assertIn("newey index_lower_pre_mean", do_text)
+        self.assertIn("newey index_high_pre_mean", do_text)
         self.assertIn("newey index_diff_pre_mean", do_text)
+        self.assertIn("lincom time + time_after_july2024", do_text)
+        self.assertIn("test time_after_july2024 = 0", do_text)
         self.assertIn("lag(3)", do_text)
+        self.assertNotIn("test3_difference_index_pre_mean", do_text)
 
     def test_stata_style_regression_output_is_complete(self):
         text = self.analysis.Outputs().stata_style_python_table.read_text(encoding="utf-8")
@@ -199,15 +206,44 @@ class ProjectEntry2Tests(unittest.TestCase):
         for model_id in [
             "test1_high_sensitivity_count",
             "test2_high_share_all",
-            "test3_difference_index_pre_mean",
-            "test3_high_sensitivity_count",
-            "test3_lower_sensitivity_count",
+            "test3_lower_index",
+            "test3_high_index",
+            "test3_high_minus_lower_difference",
         ]:
             self.assertIn(model_id, text)
         self.assertIn("high_sensitivity_count", text)
         self.assertIn("monthFE = Yes", text)
         self.assertNotIn("12.month_of_year", text)
         self.assertIn("time_after_july2024", text)
+
+    def test_test3_stacked_partition_outputs(self):
+        rows = self.analysis.read_csv(self.analysis.Outputs().test3_stacked)
+        self.assertEqual(len(rows), 168)
+        groups = {}
+        for row in rows:
+            groups[row["group"]] = groups.get(row["group"], 0) + 1
+        self.assertEqual(groups["High"], 84)
+        self.assertEqual(groups["Lower"], 84)
+        july = [row for row in rows if row["month"] == "2024-07"]
+        self.assertEqual(len(july), 2)
+        self.assertTrue(all(row["time_after_july2024"] == "0" for row in july))
+        self.assertTrue(any(row["group"] == "High" and int(row["raw_count"]) == 0 for row in rows))
+        self.assertTrue(any(row["group"] == "Lower" and int(row["raw_count"]) == 0 for row in rows))
+
+    def test_test3_difference_coefficients_match_high_minus_lower(self):
+        rows = self.analysis.read_csv(self.analysis.Outputs().regression_results)
+
+        def estimate(model_id, term):
+            return float(
+                next(row for row in rows if row["model_id"] == model_id and row["term"] == term)[
+                    "estimate"
+                ]
+            )
+
+        for term in ["Time", "PostJuly2024", "TimeAfterJuly2024"]:
+            expected = estimate("test3_high_index", term) - estimate("test3_lower_index", term)
+            actual = estimate("test3_high_minus_lower_difference", term)
+            self.assertAlmostEqual(actual, expected, places=6)
 
     def test_test1_figure_exists(self):
         path = self.analysis.Outputs().test1_figure

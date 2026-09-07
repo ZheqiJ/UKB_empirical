@@ -33,6 +33,8 @@ HAC_LAG = 3
 class Outputs:
     monthly: Path = DATA_DIR / "project_entry2_monthly.csv"
     regression_results: Path = DATA_DIR / "project_entry2_regression_results.csv"
+    test3_stacked: Path = DATA_DIR / "project_entry2_test3_stacked.csv"
+    test3_partition_results: Path = DATA_DIR / "project_entry2_test3_partition_results.csv"
     replication_check: Path = DATA_DIR / "stata_python_replication_check.csv"
     stata_do: Path = SCRIPT_DIR / "project_entry2_its.do"
     stata_log: Path = REPORT_DIR / "project_entry2_stata_full.log"
@@ -380,25 +382,25 @@ def run_all_models(monthly_rows: list[dict[str, object]]) -> tuple[list[dict[str
             "all recorded project starts",
         ),
         (
-            "test3_difference_index_pre_mean",
-            "Test 3 indexed difference",
+            "test3_lower_index",
+            "Test 3 lower partition",
+            "index_lower_pre_mean",
+            "LOWER_SENSITIVITY_COMPARISON",
+            "own pre-transition monthly mean",
+        ),
+        (
+            "test3_high_index",
+            "Test 3 high partition",
+            "index_high_pre_mean",
+            "HIGH_SENSITIVITY",
+            "own pre-transition monthly mean",
+        ),
+        (
+            "test3_high_minus_lower_difference",
+            "Test 3 High-minus-Lower partition difference",
             "index_diff_pre_mean",
             "Index_H - Index_L",
-            "full pre-transition monthly mean",
-        ),
-        (
-            "test3_high_sensitivity_count",
-            "Test 3 component",
-            "high_sensitivity_count",
-            "HIGH_SENSITIVITY",
-            "",
-        ),
-        (
-            "test3_lower_sensitivity_count",
-            "Test 3 component",
-            "lower_sensitivity_count",
-            "LOWER_SENSITIVITY_COMPARISON",
-            "",
+            "own pre-transition monthly means",
         ),
     ]
     rows: list[dict[str, object]] = []
@@ -426,6 +428,8 @@ def make_svg_time_series(
     y_min: float | None = None,
     y_max: float | None = None,
     percent_axis: bool = False,
+    reference_y: float | None = None,
+    annotation: str = "",
 ) -> None:
     width, height = 1080, 540
     ml, mr, mt, mb = 88, 210, 52, 66
@@ -459,6 +463,16 @@ def make_svg_time_series(
         xx = x(date(year, 1, 1))
         svg.append(f'<line x1="{xx:.1f}" y1="{mt}" x2="{xx:.1f}" y2="{height-mb}" stroke="#eeeeee"/>')
         svg.append(f'<text x="{xx:.1f}" y="{height-28}" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">{year}</text>')
+    if reference_y is not None and lo <= reference_y <= hi:
+        ref_y = y(reference_y)
+        svg.append(
+            f'<line x1="{ml}" y1="{ref_y:.1f}" x2="{width-mr}" y2="{ref_y:.1f}" '
+            'stroke="#777" stroke-width="1.2" stroke-dasharray="2 5"/>'
+        )
+        svg.append(
+            f'<text x="{width-mr-8}" y="{ref_y-5:.1f}" text-anchor="end" '
+            'font-family="Arial, sans-serif" font-size="10" fill="#555">100</text>'
+        )
     break_x = x(BREAK_MONTH)
     svg.append(f'<line x1="{break_x:.1f}" y1="{mt}" x2="{break_x:.1f}" y2="{height-mb}" stroke="#111" stroke-width="2.2"/>')
     svg.append(f'<text x="{break_x+7:.1f}" y="{mt+16}" font-family="Arial, sans-serif" font-size="11" fill="#111">Jul 2024</text>')
@@ -468,6 +482,10 @@ def make_svg_time_series(
         "Fitted high": ("#24536b", "6 4", 2.4),
         "Observed high/all share": ("#24536b", "", 2.4),
         "Fitted high/all share": ("#24536b", "6 4", 2.4),
+        "Observed High": ("#24536b", "", 2.4),
+        "Fitted High": ("#24536b", "6 4", 2.4),
+        "Observed Lower": ("#b24a38", "", 2.4),
+        "Fitted Lower": ("#b24a38", "6 4", 2.4),
         "High": ("#24536b", "", 2.4),
         "Lower": ("#b24a38", "", 2.4),
     }
@@ -489,6 +507,11 @@ def make_svg_time_series(
         svg.append(f'<text x="{width-mr+66}" y="{ly+4}" font-family="Arial, sans-serif" font-size="12" fill="#333">{label}</text>')
 
     svg.append(f'<text x="20" y="{mt+ph/2}" transform="rotate(-90 20 {mt+ph/2})" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">{y_label}</text>')
+    if annotation:
+        svg.append(
+            f'<text x="{ml+12}" y="{mt+18}" font-family="Arial, sans-serif" '
+            f'font-size="12" fill="#222">{annotation}</text>'
+        )
     svg.append(f'<text x="{ml}" y="{height-8}" font-family="Arial, sans-serif" font-size="11" fill="#333">Vertical line marks the July 2024 breakpoint. Fitted paths are segmented ITS fits with month-of-year fixed effects.</text>')
     svg.append("</svg>")
     write_text(path, "\n".join(svg))
@@ -522,6 +545,7 @@ def figure_rows_from_fit(
 def make_figures(
     monthly_rows: list[dict[str, object]],
     fits: dict[str, dict[str, object]],
+    regression_rows: list[dict[str, object]],
     out: Outputs,
 ) -> None:
     test1_series = figure_rows_from_fit(
@@ -562,34 +586,37 @@ def make_figures(
         raw_series.append({"month_start": row["month_start"], "value": row["lower_sensitivity_count"], "label": "Lower"})
     make_svg_time_series(
         out.test3_raw_figure,
-        "Test 3: High Versus Lower Project Starts",
+        "Test 3A: Monthly Project Starts by Sensitivity Group",
         raw_series,
         "Monthly starts",
         y_min=0,
     )
 
-    index_series = []
-    for row in monthly_rows:
-        index_series.append(
-            {
-                "month_start": row["month_start"],
-                "value": row["index_high_pre_mean"],
-                "label": "High",
-            }
+    index_series = figure_rows_from_fit(
+        monthly_rows,
+        fits["test3_high_index"],
+        "index_high_pre_mean",
+        "Observed High",
+        "Fitted High",
+    )
+    index_series.extend(
+        figure_rows_from_fit(
+            monthly_rows,
+            fits["test3_lower_index"],
+            "index_lower_pre_mean",
+            "Observed Lower",
+            "Fitted Lower",
         )
-        index_series.append(
-            {
-                "month_start": row["month_start"],
-                "value": row["index_lower_pre_mean"],
-                "label": "Lower",
-            }
-        )
+    )
+    delta3 = term_row(regression_rows, "test3_high_minus_lower_difference", "TimeAfterJuly2024")
     make_svg_time_series(
         out.test3_indexed_figure,
-        "Test 3: High Versus Lower Indexed To Full Pre-Transition Mean",
+        "Test 3: High vs Lower Sensitivity Entry Trajectories",
         index_series,
-        "Index, pre-transition monthly mean = 100",
+        "Entry index (pre-transition monthly mean = 100)",
         y_min=0,
+        reference_y=100,
+        annotation=f"delta3 = {float(delta3['estimate']):.3f}; p = {float(delta3['p_value']):.3f}",
     )
 
 
@@ -627,6 +654,107 @@ def model_n(regression_rows: list[dict[str, object]], model_id: str) -> int:
     return int(row["n_obs"])
 
 
+def linear_combination(fit: dict[str, object], weights: dict[str, float]) -> dict[str, str]:
+    names = list(fit["names"])  # type: ignore[arg-type]
+    beta = [float(value) for value in fit["beta"]]  # type: ignore[arg-type]
+    vcov = fit["vcov"]  # type: ignore[assignment]
+    vector = [float(weights.get(str(name), 0.0)) for name in names]
+    estimate = sum(weight * value for weight, value in zip(vector, beta))
+    variance = 0.0
+    for i, wi in enumerate(vector):
+        for j, wj in enumerate(vector):
+            variance += wi * wj * float(vcov[i][j])  # type: ignore[index]
+    std_error = math.sqrt(max(variance, 0.0))
+    p_value = two_sided_normal_pvalue(estimate, std_error)
+    return {
+        "estimate": fmt(estimate, 8),
+        "std_error": fmt(std_error, 8),
+        "p_value": fmt(p_value, 8),
+        "ci_low": fmt(estimate - 1.96 * std_error, 8),
+        "ci_high": fmt(estimate + 1.96 * std_error, 8),
+    }
+
+
+def test3_partition_result_rows(fits: dict[str, dict[str, object]]) -> list[dict[str, object]]:
+    specs = [
+        ("lower_pre_slope", "test3_lower_index", {"Time": 1.0}),
+        ("lower_post_slope", "test3_lower_index", {"Time": 1.0, "TimeAfterJuly2024": 1.0}),
+        ("lower_slope_change", "test3_lower_index", {"TimeAfterJuly2024": 1.0}),
+        ("high_pre_slope", "test3_high_index", {"Time": 1.0}),
+        ("high_post_slope", "test3_high_index", {"Time": 1.0, "TimeAfterJuly2024": 1.0}),
+        ("high_slope_change", "test3_high_index", {"TimeAfterJuly2024": 1.0}),
+        ("differential_level_change_delta2", "test3_high_minus_lower_difference", {"PostJuly2024": 1.0}),
+        ("differential_slope_change_delta3", "test3_high_minus_lower_difference", {"TimeAfterJuly2024": 1.0}),
+    ]
+    rows = []
+    for quantity, model_id, weights in specs:
+        row = {"quantity": quantity}
+        row.update(linear_combination(fits[model_id], weights))
+        rows.append(row)
+    return rows
+
+
+def build_test3_stacked_rows(monthly_rows: list[dict[str, object]]) -> list[dict[str, object]]:
+    rows = []
+    for row in monthly_rows:
+        common = {
+            "month": row["month"],
+            "month_start": row["month_start"],
+            "time": row["time"],
+            "post_july2024": row["post_july2024"],
+            "time_after_july2024": row["time_after_july2024"],
+            "month_of_year": row["month_of_year"],
+        }
+        rows.append(
+            {
+                **common,
+                "group": "High",
+                "high_group": 1,
+                "raw_count": row["high_sensitivity_count"],
+                "entry_index_pre_mean": row["index_high_pre_mean"],
+            }
+        )
+        rows.append(
+            {
+                **common,
+                "group": "Lower",
+                "high_group": 0,
+                "raw_count": row["lower_sensitivity_count"],
+                "entry_index_pre_mean": row["index_lower_pre_mean"],
+            }
+        )
+    return rows
+
+
+def partition_result_map(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    return {row["quantity"]: row for row in rows}
+
+
+def partition_report_table(rows: list[dict[str, str]]) -> str:
+    by_quantity = partition_result_map(rows)
+    labels = [
+        ("Lower pre slope", "lower_pre_slope"),
+        ("Lower post slope", "lower_post_slope"),
+        ("Lower slope change", "lower_slope_change"),
+        ("High pre slope", "high_pre_slope"),
+        ("High post slope", "high_post_slope"),
+        ("High slope change", "high_slope_change"),
+        ("Differential immediate change \\(\\delta_2\\)", "differential_level_change_delta2"),
+        ("**Differential slope change \\(\\delta_3\\)**", "differential_slope_change_delta3"),
+    ]
+    lines = [
+        "| Quantity | Estimate | SE / p-value |",
+        "| --- | ---: | ---: |",
+    ]
+    for label, quantity in labels:
+        row = by_quantity[quantity]
+        lines.append(
+            f"| {label} | {float(row['estimate']):.4f} | "
+            f"{float(row['std_error']):.4f} / {float(row['p_value']):.4f} |"
+        )
+    return "\n".join(lines)
+
+
 def zero_month_preservation_check(
     monthly_rows: list[dict[str, object]],
     regression_rows: list[dict[str, object]],
@@ -634,8 +762,9 @@ def zero_month_preservation_check(
     by_month = {str(row["month"]): row for row in monthly_rows}
     required_n = {
         "test1_high_sensitivity_count": 84,
-        "test3_high_sensitivity_count": 84,
-        "test3_lower_sensitivity_count": 84,
+        "test3_lower_index": 84,
+        "test3_high_index": 84,
+        "test3_high_minus_lower_difference": 84,
     }
     return (
         by_month.get("2024-07", {}).get("time_after_july2024") in {0, "0"}
@@ -685,14 +814,26 @@ _post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 _post_newey_rows test2_high_share_all high_sensitivity_share_all
 
-newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_difference_index_pre_mean index_diff_pre_mean
+* Test 3A: Lower group
+newey index_lower_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_lower_index index_lower_pre_mean
+lincom time + time_after_july2024
 
-newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_high_sensitivity_count high_sensitivity_count
+* Test 3B: High group
+newey index_high_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_index index_high_pre_mean
+lincom time + time_after_july2024
 
-newey lower_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_lower_sensitivity_count lower_sensitivity_count
+* Test 3C: High minus Lower
+newey index_diff_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_minus_lower_difference index_diff_pre_mean
+test time_after_july2024 = 0
 
 postclose `handle'
 macro drop PROJECT_ENTRY2_POST_HANDLE
@@ -926,16 +1067,16 @@ def write_stata_style_python_output(out: Outputs, regression_rows: list[dict[str
             "newey high_sensitivity_share_all time post_july2024 "
             "time_after_july2024 i.month_of_year_stata, lag(3)"
         ),
-        "test3_difference_index_pre_mean": (
+        "test3_lower_index": (
+            "newey index_lower_pre_mean time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test3_high_index": (
+            "newey index_high_pre_mean time post_july2024 "
+            "time_after_july2024 i.month_of_year_stata, lag(3)"
+        ),
+        "test3_high_minus_lower_difference": (
             "newey index_diff_pre_mean time post_july2024 "
-            "time_after_july2024 i.month_of_year_stata, lag(3)"
-        ),
-        "test3_high_sensitivity_count": (
-            "newey high_sensitivity_count time post_july2024 "
-            "time_after_july2024 i.month_of_year_stata, lag(3)"
-        ),
-        "test3_lower_sensitivity_count": (
-            "newey lower_sensitivity_count time post_july2024 "
             "time_after_july2024 i.month_of_year_stata, lag(3)"
         ),
     }
@@ -1029,12 +1170,16 @@ def write_reports(
     pre_lower = pre_counts["LOWER_SENSITIVITY_COMPARISON"]["count"]
     post_lower = post_counts["LOWER_SENSITIVITY_COMPARISON"]["count"]
     zero_check = "PASS" if zero_month_preservation_check(monthly_rows, regression_rows) else "FAIL"
+    test3_partition_rows = read_csv(out.test3_partition_results)
+    test3_partition = partition_result_map(test3_partition_rows)
+    delta3_partition = test3_partition["differential_slope_change_delta3"]
+    if float(delta3_partition["estimate"]) > 0 and float(delta3_partition["p_value"]) < 0.05:
+        test3_bottom_line = "High trajectory strengthened significantly more than Lower."
+    else:
+        test3_bottom_line = "No statistically detectable differential strengthening of High relative to Lower."
 
     t1 = report_key_line(regression_rows, "test1_high_sensitivity_count")
     t2 = report_key_line(regression_rows, "test2_high_share_all")
-    t3_diff = report_key_line(regression_rows, "test3_difference_index_pre_mean")
-    t3_high = report_key_line(regression_rows, "test3_high_sensitivity_count")
-    t3_lower = report_key_line(regression_rows, "test3_lower_sensitivity_count")
 
     channel_lines = []
     for label in ["WES/WGS_SEQUENCE", "DIRECT_S3_FIELD_LINK", "S3_DERIVED_APPLICATION_TEXT"]:
@@ -1148,23 +1293,76 @@ Primary denominator is all recorded project starts because HIGH and LOWER are ex
 
 Key terms: {t2}.
 
-## D. Test 3 - Indexed High Vs Lower Difference
+## D. Test 3 - High Vs Lower Partition Interaction
 
-Question: was the post-transition trajectory stronger for high-sensitivity than for low-sensitivity project types?
+**Test 3 asks whether the post-transition change in entry trajectory differs between the high-sensitivity and lower-sensitivity partitions.**
 
-Primary formal test: `D_t = Index_H,t - Index_L,t`, where both indexes use the full pre-transition monthly mean as 100.
+The 6,935 projects are partitioned into `HIGH_SENSITIVITY` and the exhaustive `LOWER_SENSITIVITY_COMPARISON`. For each group, monthly entry is normalized to that group's own pre-transition monthly mean:
 
-{compact_coef(regression_rows, "test3_difference_index_pre_mean")}
+$$
+Y_{{H,t}} = 100 N_{{H,t}} / \\overline{{N}}_{{H,pre}},
+\\quad
+Y_{{L,t}} = 100 N_{{L,t}} / \\overline{{N}}_{{L,pre}}.
+$$
 
-Difference key terms: {t3_diff}.
+The conceptual model is the stacked partition interaction model, with Lower as the omitted group:
 
-Raw High component: {t3_high}.
+$$
+\\begin{{aligned}}
+Y_{{g,t}} ={{}}& \\beta_0 + \\beta_1 Time_t + \\beta_2 Post_t + \\beta_3 TimeAfter_t \\\\
+&+ \\delta_0 High_g
++ \\delta_1 High_g \\times Time_t
++ \\delta_2 High_g \\times Post_t \\\\
+&+ \\delta_3 High_g \\times TimeAfter_t
++ MonthFE
++ High_g \\times MonthFE
++ \\epsilon_{{g,t}}.
+\\end{{aligned}}
+$$
 
-Raw Lower component: {t3_lower}.
+Coefficient translation:
 
-The indexed figure uses the full pre-transition mean. `index_high_2023_mean` and `index_lower_2023_mean` remain in the monthly CSV as a visual check.
+Lower-sensitivity group:
 
-Zero-month preservation check: {zero_check}. Test 1, Test 3 High count, and Test 3 Lower count each retain 84 monthly observations.
+$$
+PreSlope_L = \\beta_1, \\quad
+PostSlope_L = \\beta_1 + \\beta_3, \\quad
+SlopeChange_L = \\beta_3.
+$$
+
+High-sensitivity group:
+
+$$
+PreSlope_H = \\beta_1 + \\delta_1, \\quad
+PostSlope_H = \\beta_1 + \\delta_1 + \\beta_3 + \\delta_3, \\quad
+SlopeChange_H = \\beta_3 + \\delta_3.
+$$
+
+Therefore, the primary Test 3 coefficient is:
+
+$$
+\\delta_3 = SlopeChange_H - SlopeChange_L.
+$$
+
+\\(\\delta_3 > 0\\) means that the post-transition trajectory strengthened more for high-sensitivity projects than for lower-sensitivity projects, relative to each group's own pre-transition trajectory. \\(\\delta_2\\) is the High-vs-Lower differential immediate level change at July 2024. The main hypothesis is \\(H_0: \\delta_3 = 0\\); the secondary hypothesis is \\(H_0: \\delta_2 = 0\\).
+
+For Newey-West inference, the pipeline does not run built-in Stata `newey` on the 168-row stacked transparency file because that file has two observations per calendar month. Instead it runs three monthly ITS regressions on the same 84 months and design matrix: Lower index, High index, and \\(D_t = Y_{{H,t}} - Y_{{L,t}}\\). Because the High and Lower regressions use the same design matrix, the difference-series coefficients equal the High-minus-Lower interaction coefficients: \\(\\delta_j = \\beta_{{jH}} - \\beta_{{jL}}\\). The difference regression is therefore the Newey-West implementation of the interaction comparison, and it supplies the formal standard error for \\(\\delta_3\\) while incorporating contemporaneous covariance between the High and Lower series.
+
+{partition_report_table(test3_partition_rows)}
+
+{test3_bottom_line}
+
+Test 3 model outputs:
+
+{compact_coef(regression_rows, "test3_lower_index")}
+
+{compact_coef(regression_rows, "test3_high_index")}
+
+{compact_coef(regression_rows, "test3_high_minus_lower_difference")}
+
+The stacked transparency dataset is `data/project_entry2_test3_stacked.csv`. It has 168 group-month rows and is not used for the built-in Stata `newey` call.
+
+Zero-month preservation check: {zero_check}. Test 3 Lower index, Test 3 High index, and Test 3 High-minus-Lower difference each retain 84 monthly observations.
 
 ## E. Measurement Limitations
 
@@ -1179,6 +1377,8 @@ Start date is not application submission, approval, or first RAP access. Current
 - `data/classification_overlap.csv`
 - `data/project_entry2_monthly.csv`
 - `data/project_entry2_regression_results.csv`
+- `data/project_entry2_test3_stacked.csv`
+- `data/project_entry2_test3_partition_results.csv`
 - `data/stata_python_replication_check.csv`
 - `figures/figure_test1_high_sensitivity_entry.svg`
 - `figures/figure_test2_high_sensitivity_share.svg`
@@ -1220,13 +1420,46 @@ def validate_outputs(out: Outputs | None = None) -> None:
     for model_id in [
         "test1_high_sensitivity_count",
         "test2_high_share_all",
-        "test3_difference_index_pre_mean",
-        "test3_high_sensitivity_count",
-        "test3_lower_sensitivity_count",
+        "test3_lower_index",
+        "test3_high_index",
+        "test3_high_minus_lower_difference",
     ]:
         for term in ["Intercept", "Time", "PostJuly2024", "TimeAfterJuly2024", "month_12"]:
             if (model_id, term) not in terms:
                 raise AssertionError(f"missing {model_id} {term}")
+    for term in ["Time", "PostJuly2024", "TimeAfterJuly2024"]:
+        lower = float(term_row(regressions, "test3_lower_index", term)["estimate"])
+        high = float(term_row(regressions, "test3_high_index", term)["estimate"])
+        diff = float(term_row(regressions, "test3_high_minus_lower_difference", term)["estimate"])
+        if abs(diff - (high - lower)) > 1e-6:
+            raise AssertionError(f"Test 3 difference coefficient mismatch for {term}")
+    stacked = read_csv(out.test3_stacked)
+    if len(stacked) != 168:
+        raise AssertionError(f"expected 168 Test 3 stacked rows; found {len(stacked)}")
+    groups = Counter(row["group"] for row in stacked)
+    if groups["High"] != 84 or groups["Lower"] != 84:
+        raise AssertionError(f"expected 84 High and 84 Lower stacked rows; found {groups}")
+    july_stacked = [row for row in stacked if row["month"] == "2024-07"]
+    if len(july_stacked) != 2 or any(int(row["time_after_july2024"]) != 0 for row in july_stacked):
+        raise AssertionError("Test 3 stacked July 2024 rows must have time_after_july2024 = 0")
+    if not any(row["group"] == "High" and int(row["raw_count"]) == 0 for row in stacked):
+        raise AssertionError("Test 3 stacked file lost High zero-count months")
+    if not any(row["group"] == "Lower" and int(row["raw_count"]) == 0 for row in stacked):
+        raise AssertionError("Test 3 stacked file lost Lower zero-count months")
+    partition_rows = read_csv(out.test3_partition_results)
+    partition_quantities = {row["quantity"] for row in partition_rows}
+    for quantity in [
+        "lower_pre_slope",
+        "lower_post_slope",
+        "lower_slope_change",
+        "high_pre_slope",
+        "high_post_slope",
+        "high_slope_change",
+        "differential_level_change_delta2",
+        "differential_slope_change_delta3",
+    ]:
+        if quantity not in partition_quantities:
+            raise AssertionError(f"missing Test 3 partition result {quantity}")
     if not zero_month_preservation_check(monthly, regressions):
         raise AssertionError("zero-month/calendar-time preservation check failed")
     for path in [
@@ -1248,7 +1481,7 @@ def validate_outputs(out: Outputs | None = None) -> None:
         raise AssertionError("Stata-style table missing compressed monthFE indicator")
     if "2.month_of_year" in table_text or "12.month_of_year" in table_text:
         raise AssertionError("Stata-style table should not print month fixed-effect coefficients")
-    if "test3_difference_index_pre_mean" not in table_text:
+    if "test3_high_minus_lower_difference" not in table_text:
         raise AssertionError("Stata-style table missing Test 3 difference model")
 
 
@@ -1325,8 +1558,29 @@ def build_project_entry2_outputs(
             "sample_dates",
         ],
     )
+    write_csv(
+        out.test3_stacked,
+        build_test3_stacked_rows(monthly_rows),
+        [
+            "month",
+            "month_start",
+            "time",
+            "post_july2024",
+            "time_after_july2024",
+            "month_of_year",
+            "group",
+            "high_group",
+            "raw_count",
+            "entry_index_pre_mean",
+        ],
+    )
+    write_csv(
+        out.test3_partition_results,
+        test3_partition_result_rows(fits),
+        ["quantity", "estimate", "std_error", "p_value", "ci_low", "ci_high"],
+    )
     write_stata_style_python_output(out, regression_rows)
-    make_figures(monthly_rows, fits, out)
+    make_figures(monthly_rows, fits, regression_rows, out)
     stata_status = run_stata_if_available(out, regression_rows)
     write_reports(classification_rows, monthly_rows, regression_rows, stata_status, out)
     validate_outputs(out)

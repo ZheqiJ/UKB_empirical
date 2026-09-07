@@ -38,14 +38,26 @@ _post_newey_rows test1_high_sensitivity_count high_sensitivity_count
 newey high_sensitivity_share_all time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
 _post_newey_rows test2_high_share_all high_sensitivity_share_all
 
-newey index_diff_pre_mean time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_difference_index_pre_mean index_diff_pre_mean
+* Test 3A: Lower group
+newey index_lower_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_lower_index index_lower_pre_mean
+lincom time + time_after_july2024
 
-newey high_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_high_sensitivity_count high_sensitivity_count
+* Test 3B: High group
+newey index_high_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_index index_high_pre_mean
+lincom time + time_after_july2024
 
-newey lower_sensitivity_count time post_july2024 time_after_july2024 i.month_of_year_stata, lag(3)
-_post_newey_rows test3_lower_sensitivity_count lower_sensitivity_count
+* Test 3C: High minus Lower
+newey index_diff_pre_mean ///
+    time post_july2024 time_after_july2024 ///
+    i.month_of_year_stata, lag(3)
+_post_newey_rows test3_high_minus_lower_difference index_diff_pre_mean
+test time_after_july2024 = 0
 
 postclose `handle'
 macro drop PROJECT_ENTRY2_POST_HANDLE
