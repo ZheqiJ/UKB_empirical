@@ -1,0 +1,38 @@
+{
+  "ambiguous_multi_application_families": 13,
+  "attribution_row_count": 3899,
+  "candidate_links": 281,
+  "confirmed_links": 74,
+  "current_curated_application_baseline": 52,
+  "excluded_false_positive_rows": 3,
+  "families_linked_to_at_least_one_application_supported_or_ambiguous": 32,
+  "families_with_any_retained_candidate_including_weak": 130,
+  "family_status_counts": {
+    "ambiguous": 3,
+    "ambiguous_multi_application": 13,
+    "confirmed": 12,
+    "probable": 4,
+    "weak_candidate_only": 98
+  },
+  "new_unique_applications_beyond_current_52_including_weak": 1106,
+  "new_unique_applications_beyond_current_52_supported_or_ambiguous": 222,
+  "probable_links": 4,
+  "row_status_counts": {
+    "ambiguous": 9,
+    "candidate": 281,
+    "confirmed": 74,
+    "excluded_false_positive": 3,
+    "probable": 4,
+    "weak_candidate": 3528
+  },
+  "total_dmca_lineages": 193,
+  "total_dmca_repository_rows": 1826,
+  "total_dmca_unique_repo_urls": 194,
+  "total_families_reviewed": 130,
+  "total_repository_families": 130,
+  "total_unique_applications_identified_including_weak": 1158,
+  "total_unique_applications_identified_supported_or_ambiguous": 274,
+  "unresolved_families_no_candidate": 0,
+  "unresolved_families_without_supported_or_ambiguous_link": 98,
+  "weak_candidate_only_families": 98
+}

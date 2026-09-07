@@ -126,6 +126,15 @@ committed back to the triggering branch.
 - `ukb_dmca/remaining_23_repo_review.csv`: completed review of the 23
   repository/family units that remained after the historical manual matching
   rounds.
+- `ukb_dmca/exhaustive_dmca_application_attribution.csv`: broad attribution
+  table across the full current DMCA repository universe. It preserves
+  confirmed, probable, ambiguous, B-level candidate, weak-candidate, and
+  manually excluded false-positive rows.
+- `ukb_dmca/exhaustive_dmca_family_attribution_summary.csv`: one row per
+  repository family summarizing supported, ambiguous, weak, and unresolved
+  attribution coverage.
+- `ukb_dmca/exhaustive_dmca_application_attribution_report.md`: concise report
+  for the exhaustive attribution layer.
 - `ukb_dmca/leakage_application_analysis/`: application-level leakage analysis
   using UKB project/application start dates as the time variable.
 - `ukb_dmca/evidence/`: public notice text, lineage summaries, Wayback summaries, and
@@ -224,3 +233,36 @@ The final application-level leakage outcome is stored in
 `leakage_application_analysis/data/application_level_leakage.csv` and equals
 one when an application belongs to the final curated leakage-risk set. The time
 variable remains UKB project/application start date, not DMCA notice timing.
+
+### Exhaustive Attribution Expansion
+
+The exhaustive attribution layer extends coverage across all 130 current
+repository families and all 193 current lineages without rerunning notice
+discovery or overwriting the 52-link empirical baseline. It starts from the
+current curated matches, then retains every existing application candidate from
+the already harvested README, repository metadata, archived-page, publication,
+crosswalk, fork/source, and public evidence files.
+
+Current exhaustive attribution summary:
+
+- DMCA repository rows: 1,826
+- Unique DMCA repository URLs: 194
+- Repository lineages: 193
+- Repository families reviewed: 130
+- Families with supported or ambiguous attribution: 32
+- Families with only weak retained candidates: 98
+- Confirmed attribution rows: 74
+- Probable attribution rows: 4
+- Ambiguous attribution rows: 9
+- B-level candidate rows: 281
+- Weak candidate rows: 3,528
+- Manual false-positive rows retained but excluded: 3
+- Unique applications identified at supported/ambiguous tier: 274
+- New unique applications beyond the current 52 at supported/ambiguous tier: 222
+- Unique applications identified including weak candidates: 1,158
+- New unique applications beyond the current 52 including weak candidates: 1,106
+
+Rows marked `weak_candidate` are kept for transparency and coverage, but are not
+promoted into the application-level leakage outcome. Application `29256` remains
+an audit-retained manual false positive and is not counted as supported
+attribution.
