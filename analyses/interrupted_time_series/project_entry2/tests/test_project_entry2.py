@@ -325,8 +325,29 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertEqual(monthly[-1]["month"], "2025-12")
         baseline_report = self.analysis.Outputs().results_report.read_text(encoding="utf-8")
         self.assertNotIn("Project Entry2 Results Through 2026 Jan-Apr", baseline_report)
-        baseline_figure = self.analysis.Outputs().test1_figure.read_text(encoding="utf-8")
-        self.assertNotIn("Through Apr 2026", baseline_figure)
+        for path in [
+            self.analysis.Outputs().test3_indexed_observed_figure,
+            self.analysis.Outputs().test3_indexed_fitted_figure,
+        ]:
+            self.assertTrue(path.exists(), path)
+            self.assertNotIn("Through Apr 2026", path.read_text(encoding="utf-8"))
+
+    def test_extended_test3_indexed_figure_is_split(self):
+        observed = self.analysis.ExtendedOutputs().test3_indexed_observed_figure.read_text(encoding="utf-8")
+        fitted = self.analysis.ExtendedOutputs().test3_indexed_fitted_figure.read_text(encoding="utf-8")
+        self.assertIn("Test 3: High vs Lower Observed Entry Index", observed)
+        self.assertIn("Observed High", observed)
+        self.assertIn("Observed Lower", observed)
+        self.assertNotIn("Fitted High", observed)
+        self.assertNotIn("Fitted Lower", observed)
+        self.assertIn("Test 3: High vs Lower Fitted Entry Index", fitted)
+        self.assertIn("Fitted High", fitted)
+        self.assertIn("Fitted Lower", fitted)
+        self.assertNotIn("Observed High", fitted)
+        self.assertNotIn("Observed Lower", fitted)
+        for text in [observed, fitted]:
+            self.assertNotIn("Through Apr 2026", text)
+            self.assertNotIn("delta3 =", text)
 
     def test_test1_figure_exists(self):
         path = self.analysis.Outputs().test1_figure

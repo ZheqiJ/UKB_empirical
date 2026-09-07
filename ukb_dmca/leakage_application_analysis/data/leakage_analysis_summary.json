@@ -1,0 +1,50 @@
+{
+  "application_only_manual_rows": 30,
+  "automated_current_only_applications_not_added": [
+    "29256"
+  ],
+  "canonical_curated_application_rows": 52,
+  "curated_repository_families": 130,
+  "current_confirmed_probable_applications": 16,
+  "current_confirmed_probable_lineages": 40,
+  "current_dmca_notice_count": 110,
+  "current_dmca_repository_lineages": 193,
+  "drop_recent_12m_cutoff": "2025-08-17",
+  "family_status_counts": {
+    "ambiguous": 3,
+    "confirmed": 25,
+    "excluded_false_positive": 1,
+    "probable": 2,
+    "unresolved": 99
+  },
+  "final_named_linked_lineages": 47,
+  "final_unique_linked_applications_expanded": 52,
+  "manual_archived_linked_applications_before_task": 48,
+  "manual_archived_named_lineages_before_task": 41,
+  "manual_confirmation_status_counts": {
+    "confirmed_after_remaining_23_review": 2,
+    "confirmed_by_researcher": 48,
+    "probable_after_remaining_23_review": 2
+  },
+  "max_project_start_date": "2026-08-17",
+  "new_applications_from_remaining_23": [
+    "17984",
+    "72911",
+    "84709",
+    "89197"
+  ],
+  "new_unique_applications_from_remaining_23": 4,
+  "remaining_23_linked_existing_baseline_families": 2,
+  "remaining_23_new_application_families": 4,
+  "remaining_23_review_rows": 23,
+  "remaining_23_status_counts": {
+    "ambiguous": 3,
+    "excluded_false_positive": 1,
+    "linked_to_existing_baseline": 2,
+    "new_application_linked": 4,
+    "unresolved": 13
+  },
+  "remaining_23_successfully_linked_families": 6,
+  "remaining_23_unresolved_or_ambiguous_families": 17,
+  "remaining_unmatched_repository_families": 103
+}

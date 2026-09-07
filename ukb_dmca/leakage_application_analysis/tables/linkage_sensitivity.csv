@@ -1,0 +1,21 @@
+comparison,linkage_sample,estimate_type,estimate,p_value,n,note
+pre_post_descriptive,strict_21,post_minus_pre_percentage_points,-0.4233,0.00189456,6935,Application-level pre/post comparison using exact 2024-07-05 start-date cutoff.
+pre_post_descriptive,main_27,post_minus_pre_percentage_points,-0.5618,0.00027530,6935,Application-level pre/post comparison using exact 2024-07-05 start-date cutoff.
+pre_post_descriptive,archived_broad_48,post_minus_pre_percentage_points,-0.9850,0.00000166,6935,Application-level pre/post comparison using exact 2024-07-05 start-date cutoff.
+pre_post_descriptive,final_expanded,post_minus_pre_percentage_points,-1.0774,0.00000048,6935,Application-level pre/post comparison using exact 2024-07-05 start-date cutoff.
+monthly_its,strict_21,PostJuly2024_percentage_points,-0.0894,0.698102,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,strict_21,TimeAfterJuly2024_percentage_points,0.0296,0.146790,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,main_27,PostJuly2024_percentage_points,-0.0683,0.781634,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,main_27,TimeAfterJuly2024_percentage_points,0.0308,0.103194,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,archived_broad_48,PostJuly2024_percentage_points,0.0247,0.934525,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,archived_broad_48,TimeAfterJuly2024_percentage_points,0.0536,0.018023,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,final_expanded,PostJuly2024_percentage_points,-0.0483,0.872589,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+monthly_its,final_expanded,TimeAfterJuly2024_percentage_points,0.0514,0.027781,83,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,strict_21,PostJuly2024_percentage_points,-0.0306,0.878760,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,strict_21,TimeAfterJuly2024_percentage_points,0.0919,0.025873,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,main_27,PostJuly2024_percentage_points,0.0086,0.968576,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,main_27,TimeAfterJuly2024_percentage_points,0.0894,0.000632,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,archived_broad_48,PostJuly2024_percentage_points,0.1038,0.708309,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,archived_broad_48,TimeAfterJuly2024_percentage_points,0.1598,0.000016,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,final_expanded,PostJuly2024_percentage_points,0.0187,0.942406,28,OLS cohort leakage-rate ITS; time axis is application start cohort.
+quarterly_its,final_expanded,TimeAfterJuly2024_percentage_points,0.1539,0.000194,28,OLS cohort leakage-rate ITS; time axis is application start cohort.

@@ -8,6 +8,34 @@ A match means: a UK Biobank approved application is linked by public evidence to
 
 It does not mean that the application, PI, institution, or original research team violated UKB policy or uploaded participant-level data. DMCA notices are takedown allegations/requests, not legal findings.
 
+## Three Result Layers
+
+The module keeps three related but distinct layers separate.
+
+1. Automated DMCA lineage matcher. This is the reproducible audit-first
+   pipeline that discovers notices/repositories, enriches public metadata, and
+   labels lineages as `confirmed`, `probable`, `ambiguous`, `unresolved`, or
+   `not_application_attributable`. Its conservative current output is retained
+   in `ukb_dmca_application_candidates.csv`,
+   `ukb_dmca_application_match_evidence.csv`, `ukb_dmca_application_matches.csv`,
+   and `ukb_dmca_unresolved.csv`.
+
+2. Researcher-confirmed curated empirical application crosswalk. This layer
+   preserves the completed manual research work. The original 48 broad
+   applications are researcher-confirmed manual matches and are not dependent
+   on the current automated matcher reproducing them. They are retained in
+   `curated_dmca_application_links.csv` with
+   `manual_confirmation_status=confirmed_by_researcher`, including application
+   rows that lack a current automated lineage ID.
+
+3. Application-level leakage-risk empirical outcome. This layer defines
+   `Leak_i = 1` when UKB application `i` belongs to the final curated
+   leakage-risk application set. The final set is the fixed broad-48 baseline
+   plus new unique credible applications identified during the completed
+   remaining-23 repository/family review. The outcome is analyzed by UKB
+   application/project start date in `leakage_application_analysis/`; DMCA
+   notice dates and repository commit dates are not empirical event dates.
+
 ## Evidence Sources
 
 The pipeline uses public metadata only:
@@ -137,6 +165,10 @@ Generic words such as `cancer`, `genetic`, `imaging`, `risk`, `disease`, `UKB`, 
 - `ukb_dmca/ukb_dmca_application_match_evidence.csv` stores one row per lineage x candidate application x evidence component.
 - `ukb_dmca/evidence/lineages/*.md` records public repository metadata, README/CITATION/package/Wayback sources, public metadata seed rows when present, target commit metadata, publication IDs, crosswalk details, and candidate reasons.
 - `ukb_dmca/evidence/logs/result_summary.json` reports method contribution counts, including direct app ID, DOI crosswalk, PMID crosswalk, public metadata seed usage, B2/B3 propagation usage, probable, ambiguous, unresolved, and unique applications linked.
+- `ukb_dmca/curated_dmca_application_links.csv` is the canonical manually curated application-level crosswalk used for the empirical leakage outcome.
+- `ukb_dmca/curated_dmca_repository_family_links.csv` stores the repository/family evidence layer used to construct and audit the curated crosswalk.
+- `ukb_dmca/remaining_23_repo_review.csv` records the completed 23-family public-evidence review, including unresolved and false-positive cases.
+- `ukb_dmca/leakage_application_analysis/` contains the application-level leakage outcome, descriptive tables, regression tables, ITS tables, figures, and reports.
 
 ## Current Limitations
 
