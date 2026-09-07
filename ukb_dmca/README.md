@@ -118,6 +118,16 @@ committed back to the triggering branch.
 - `ukb_dmca/ukb_dmca_unresolved.csv`: `ambiguous`, `unresolved`, and
   `not_application_attributable` cases.
 - `ukb_dmca/ukb_dmca_manual_review.csv`: compact reviewer table.
+- `ukb_dmca/curated_dmca_application_links.csv`: canonical manually curated
+  empirical crosswalk, one row per final leakage-risk application.
+- `ukb_dmca/curated_dmca_repository_family_links.csv`: repository/family-level
+  evidence layer used to preserve lineage provenance separately from the
+  application-level outcome.
+- `ukb_dmca/remaining_23_repo_review.csv`: completed review of the 23
+  repository/family units that remained after the historical manual matching
+  rounds.
+- `ukb_dmca/leakage_application_analysis/`: application-level leakage analysis
+  using UKB project/application start dates as the time variable.
 - `ukb_dmca/evidence/`: public notice text, lineage summaries, Wayback summaries, and
   fetch logs.
 - `ukb_dmca/MATCHING_METHODOLOGY.md`: evidence hierarchy, label rules, limitations, and
@@ -159,13 +169,16 @@ the original UKB project cannot be determined.
 
 The code and workflow are ready, parser tests pass, and the GitHub Actions
 workflow has generated the current CSV/evidence outputs using
-`data/applications.tsv`. The current output is an audit-first automated pass:
-notice and repository discovery are now close to the external tracker counts.
-Application matching now enriches each lineage with public README, DOI, PubMed,
-and Crossref evidence where available, but still avoids treating third-party
-uploads as proof of conduct by a UKB application team.
+`data/applications.tsv`. There are now two distinct result layers in this
+module.
 
-## Current Result Summary
+### Automated Audit-First Matcher
+
+The automated matcher is the reproducible discovery and evidence-audit layer.
+It intentionally labels matches conservatively and keeps weak public evidence
+out of the final automated confirmed/probable set.
+
+Current automated output:
 
 - UKB DMCA notices: 110
 - Unique repository URLs: 193
@@ -176,7 +189,38 @@ uploads as proof of conduct by a UKB application team.
 - Ambiguous: 18
 - Unresolved: 173
 - Unique-application match ratio: 0.0104
-- Unique applications linked: 2
+- Unique applications linked by the automated matcher: 2
 - Application input used: `data/applications.tsv`
 
-See `evidence/logs/result_summary.json` for remaining cases and role counts.
+See `evidence/logs/result_summary.json` for automated role counts and fetch
+metadata.
+
+### Manually Curated Empirical Crosswalk
+
+The manually curated empirical crosswalk is separate from the automated matcher.
+Before the present integration task, the researcher had already manually
+confirmed 48 unique UKB applications linked to DMCA-targeted repository/project
+lineages. Those 48 are the fixed broad baseline for empirical leakage analysis
+and are preserved with
+`manual_confirmation_status=confirmed_by_researcher` in
+`curated_dmca_application_links.csv`.
+
+Automated matching is used as supporting evidence and discovery. It is not used
+to overturn, downgrade, or replace the 48 researcher-confirmed baseline
+applications when the current automated matcher is more conservative.
+
+The remaining historical 23 repository/family units were reviewed as an
+expansion layer:
+
+- Previously confirmed baseline applications: 48
+- Remaining repository/family units reviewed: 23
+- Remaining units linked to any UKB application: 6
+- Remaining units linked to existing baseline applications: 2
+- New unique applications added from the remaining review: 4
+- Remaining units unresolved, ambiguous, or excluded: 17
+- Final unique leakage-risk applications: 52
+
+The final application-level leakage outcome is stored in
+`leakage_application_analysis/data/application_level_leakage.csv` and equals
+one when an application belongs to the final curated leakage-risk set. The time
+variable remains UKB project/application start date, not DMCA notice timing.

@@ -1,0 +1,26 @@
+Leakage-Risk Application ITS: Stata-Style Summary
+
+Outcome language: applications subsequently linked to observed leakage exposure.
+Timing variable: UKB application/project start date.
+Policy cutoff: 2024-07-05.
+
+Pre/Post Descriptive, Final Expanded Sample
+    Pre applications              4332
+    Pre leakage-risk apps          50
+    Pre leakage rate (%)           1.1542
+    Post applications             2603
+    Post leakage-risk apps         2
+    Post leakage rate (%)          0.0768
+    Difference, post-pre (pp)      -1.0774
+    Ratio, post/pre                0.066569
+    Two-proportion p-value         0.00000048
+
+Application-Level LPM, Final Expanded Sample
+    PostJuly2024, raw (pp)         -1.0774   SE 0.1712   p 0.000000
+    PostJuly2024, trend (pp)       -0.2389   SE 0.2627   p 0.363148
+
+Application-Start-Cohort ITS, Final Expanded Sample
+    Monthly level break (pp)       -0.0483   SE 0.3010   p 0.872589
+    Monthly slope break (pp/mo)    0.0514   SE 0.0234   p 0.027781
+    Quarterly level break (pp)     0.0187   SE 0.2588   p 0.942406
+    Quarterly slope break (pp/qtr) 0.1539   SE 0.0413   p 0.000194

@@ -1,0 +1,13 @@
+linkage_sample,application_sample,model,coefficient,n_applications,estimate_log_odds,odds_ratio,std_error,p_value,ci_low_log_odds,ci_high_log_odds,converged,warning
+strict_21,full_start_date_universe,Logit: Leak_i on PostJuly2024_i,PostJuly2024,6935,-2.49061082,0.082859,1.02499572,0.015104,-4.49960244,-0.48161920,1,
+main_27,full_start_date_universe,Logit: Leak_i on PostJuly2024_i,PostJuly2024,6935,-2.75436752,0.063649,1.01935180,0.006891,-4.75229705,-0.75643799,1,
+archived_broad_48,full_start_date_universe,Logit: Leak_i on PostJuly2024_i,PostJuly2024,6935,-2.63603631,0.071645,0.72274263,0.000265,-4.05261187,-1.21946074,1,
+final_expanded,full_start_date_universe,Logit: Leak_i on PostJuly2024_i,PostJuly2024,6935,-2.72035162,0.065852,0.72153864,0.000163,-4.13456735,-1.30613589,1,
+strict_21,drop_recent_12m,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5839,-22.10559758,0.000000,2575.98527103,0.993153,-5071.03672881,5026.82553365,0,did_not_meet_strict_convergence_tolerance
+main_27,drop_recent_12m,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5839,-22.36645005,0.000000,2575.98526880,0.993072,-5071.29757689,5026.56467679,0,did_not_meet_strict_convergence_tolerance
+archived_broad_48,drop_recent_12m,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5839,-2.78274463,0.061868,1.01125489,0.005927,-4.76480422,-0.80068504,1,
+final_expanded,drop_recent_12m,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5839,-2.86705994,0.056866,1.01039475,0.004546,-4.84743365,-0.88668624,1,
+strict_21,its_primary_2019_2025,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5560,-2.30264373,0.099994,1.03114607,0.025543,-4.32369002,-0.28159743,1,
+main_27,its_primary_2019_2025,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5560,-2.52696064,0.079902,1.02506710,0.013695,-4.53609215,-0.51782913,1,
+archived_broad_48,its_primary_2019_2025,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5560,-2.30687631,0.099572,0.72939277,0.001563,-3.73648615,-0.87726648,1,
+final_expanded,its_primary_2019_2025,Logit: Leak_i on PostJuly2024_i,PostJuly2024,5560,-2.39737252,0.090957,0.72755447,0.000984,-3.82337927,-0.97136576,1,

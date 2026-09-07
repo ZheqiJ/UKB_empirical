@@ -1,0 +1,49 @@
+frequency,linkage_sample,application_sample,model,coefficient,n_periods,estimate,estimate_percentage_points,std_error,std_error_percentage_points,p_value,ci_low,ci_high,irr,inference,warning
+monthly,strict_21,primary_2019_2025,OLS rate segmented ITS,Time,83,-0.00013235,-0.0132,0.00003689,0.0037,0.000334,-0.00020465,-0.00006005,,OLS Newey-West HAC lag 3,
+monthly,strict_21,primary_2019_2025,OLS rate segmented ITS,PostJuly2024,83,-0.00089433,-0.0894,0.00230567,0.2306,0.698102,-0.00541346,0.00362479,,OLS Newey-West HAC lag 3,
+monthly,strict_21,primary_2019_2025,OLS rate segmented ITS,TimeAfterJuly2024,83,0.00029618,0.0296,0.00020412,0.0204,0.146790,-0.00010391,0.00069626,,OLS Newey-West HAC lag 3,
+monthly,strict_21,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,Time,83,,,,,,,,,,singular regression matrix
+monthly,strict_21,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,strict_21,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,main_27,primary_2019_2025,OLS rate segmented ITS,Time,83,-0.00017311,-0.0173,0.00004484,0.0045,0.000113,-0.00026100,-0.00008523,,OLS Newey-West HAC lag 3,
+monthly,main_27,primary_2019_2025,OLS rate segmented ITS,PostJuly2024,83,-0.00068328,-0.0683,0.00246501,0.2465,0.781634,-0.00551470,0.00414815,,OLS Newey-West HAC lag 3,
+monthly,main_27,primary_2019_2025,OLS rate segmented ITS,TimeAfterJuly2024,83,0.00030825,0.0308,0.00018916,0.0189,0.103194,-0.00006251,0.00067901,,OLS Newey-West HAC lag 3,
+monthly,main_27,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,Time,83,,,,,,,,,,singular regression matrix
+monthly,main_27,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,main_27,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,primary_2019_2025,OLS rate segmented ITS,Time,83,-0.00030918,-0.0309,0.00005913,0.0059,0.000000,-0.00042506,-0.00019329,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,primary_2019_2025,OLS rate segmented ITS,PostJuly2024,83,0.00024733,0.0247,0.00301059,0.3011,0.934525,-0.00565343,0.00614808,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,primary_2019_2025,OLS rate segmented ITS,TimeAfterJuly2024,83,0.00053645,0.0536,0.00022682,0.0227,0.018023,0.00009189,0.00098101,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,Time,83,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,final_expanded,primary_2019_2025,OLS rate segmented ITS,Time,83,-0.00030053,-0.0301,0.00005883,0.0059,0.000000,-0.00041583,-0.00018524,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,primary_2019_2025,OLS rate segmented ITS,PostJuly2024,83,-0.00048266,-0.0483,0.00300967,0.3010,0.872589,-0.00638163,0.00541630,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,primary_2019_2025,OLS rate segmented ITS,TimeAfterJuly2024,83,0.00051381,0.0514,0.00023351,0.0234,0.027781,0.00005613,0.00097148,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,Time,83,,,,,,,,,,singular regression matrix
+monthly,final_expanded,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,final_expanded,primary_2019_2025,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,83,,,,,,,,,,singular regression matrix
+monthly,strict_21,drop_recent_12m,OLS rate segmented ITS,Time,79,-0.00013144,-0.0131,0.00003710,0.0037,0.000395,-0.00020415,-0.00005873,,OLS Newey-West HAC lag 3,
+monthly,strict_21,drop_recent_12m,OLS rate segmented ITS,PostJuly2024,79,0.00083650,0.0837,0.00273583,0.2736,0.759788,-0.00452571,0.00619872,,OLS Newey-West HAC lag 3,
+monthly,strict_21,drop_recent_12m,OLS rate segmented ITS,TimeAfterJuly2024,79,0.00000350,0.0004,0.00029071,0.0291,0.990381,-0.00056629,0.00057330,,OLS Newey-West HAC lag 3,
+monthly,strict_21,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,Time,79,,,,,,,,,,singular regression matrix
+monthly,strict_21,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,strict_21,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,main_27,drop_recent_12m,OLS rate segmented ITS,Time,79,-0.00017234,-0.0172,0.00004493,0.0045,0.000125,-0.00026041,-0.00008428,,OLS Newey-West HAC lag 3,
+monthly,main_27,drop_recent_12m,OLS rate segmented ITS,PostJuly2024,79,0.00011230,0.0112,0.00291279,0.2913,0.969246,-0.00559677,0.00582137,,OLS Newey-West HAC lag 3,
+monthly,main_27,drop_recent_12m,OLS rate segmented ITS,TimeAfterJuly2024,79,0.00018619,0.0186,0.00028122,0.0281,0.507918,-0.00036500,0.00073738,,OLS Newey-West HAC lag 3,
+monthly,main_27,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,Time,79,,,,,,,,,,singular regression matrix
+monthly,main_27,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,main_27,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,drop_recent_12m,OLS rate segmented ITS,Time,79,-0.00030835,-0.0308,0.00005874,0.0059,0.000000,-0.00042347,-0.00019323,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,drop_recent_12m,OLS rate segmented ITS,PostJuly2024,79,0.00035261,0.0353,0.00372938,0.3729,0.924673,-0.00695699,0.00766220,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,drop_recent_12m,OLS rate segmented ITS,TimeAfterJuly2024,79,0.00054569,0.0546,0.00044859,0.0449,0.223811,-0.00033355,0.00142492,,OLS Newey-West HAC lag 3,
+monthly,archived_broad_48,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,Time,79,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,archived_broad_48,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,final_expanded,drop_recent_12m,OLS rate segmented ITS,Time,79,-0.00029964,-0.0300,0.00005857,0.0059,0.000000,-0.00041444,-0.00018484,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,drop_recent_12m,OLS rate segmented ITS,PostJuly2024,79,0.00019306,0.0193,0.00382302,0.3823,0.959725,-0.00730007,0.00768619,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,drop_recent_12m,OLS rate segmented ITS,TimeAfterJuly2024,79,0.00041846,0.0418,0.00047298,0.0473,0.376300,-0.00050858,0.00134551,,OLS Newey-West HAC lag 3,
+monthly,final_expanded,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,Time,79,,,,,,,,,,singular regression matrix
+monthly,final_expanded,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,PostJuly2024,79,,,,,,,,,,singular regression matrix
+monthly,final_expanded,drop_recent_12m,Poisson QMLE count/rate ITS with log(N_t) offset,TimeAfterJuly2024,79,,,,,,,,,,singular regression matrix

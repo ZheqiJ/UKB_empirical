@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="520" viewBox="0 0 1060 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="530.0" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700">Monthly Final Expanded Leakage Rate By Application-Start Cohort</text>
+<line x1="825.3" y1="52" x2="825.3" y2="456" stroke="#111" stroke-width="2"/>
+<text x="832.3" y="68" font-family="Arial, sans-serif" font-size="11" fill="#111">Jul 2024</text>
+<line x1="86" y1="456.0" x2="1016" y2="456.0" stroke="#dedede"/>
+<text x="76" y="460.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">0.00</text>
+<line x1="86" y1="355.0" x2="1016" y2="355.0" stroke="#dedede"/>
+<text x="76" y="359.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">1.81</text>
+<line x1="86" y1="254.0" x2="1016" y2="254.0" stroke="#dedede"/>
+<text x="76" y="258.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">3.61</text>
+<line x1="86" y1="153.0" x2="1016" y2="153.0" stroke="#dedede"/>
+<text x="76" y="157.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">5.42</text>
+<line x1="86" y1="52.0" x2="1016" y2="52.0" stroke="#dedede"/>
+<text x="76" y="56.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">7.23</text>
+<line x1="86.0" y1="52" x2="86.0" y2="456" stroke="#eeeeee"/>
+<text x="86.0" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2019</text>
+<line x1="220.4" y1="52" x2="220.4" y2="456" stroke="#eeeeee"/>
+<text x="220.4" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2020</text>
+<line x1="355.1" y1="52" x2="355.1" y2="456" stroke="#eeeeee"/>
+<text x="355.1" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2021</text>
+<line x1="489.5" y1="52" x2="489.5" y2="456" stroke="#eeeeee"/>
+<text x="489.5" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2022</text>
+<line x1="623.9" y1="52" x2="623.9" y2="456" stroke="#eeeeee"/>
+<text x="623.9" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2023</text>
+<line x1="758.3" y1="52" x2="758.3" y2="456" stroke="#eeeeee"/>
+<text x="758.3" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2024</text>
+<line x1="893.0" y1="52" x2="893.0" y2="456" stroke="#eeeeee"/>
+<text x="893.0" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">2025</text>
+<polyline fill="none" stroke="#24536b" stroke-width="2.4" points="86.0,456.0 97.4,456.0 107.7,348.5 119.1,296.3 130.2,269.6 141.6,456.0 152.6,344.2 164.1,456.0 175.5,95.3 186.5,456.0 197.9,241.0 209.0,456.0 220.4,456.0 231.8,337.0 242.5,333.1 253.9,236.7 264.9,300.7 276.3,375.0 287.4,456.0 298.8,341.9 310.2,456.0 321.3,456.0 332.7,176.4 343.7,456.0 355.1,456.0 366.5,356.2 376.9,312.6 388.3,456.0 399.3,316.2 410.7,201.9 421.8,456.0 433.2,456.0 444.6,456.0 455.6,456.0 467.1,456.0 478.1,456.0 489.5,456.0 500.9,365.8 511.2,387.0 522.7,456.0 533.7,456.0 545.1,456.0 556.2,350.5 567.6,302.8 579.0,337.0 590.0,456.0 601.4,456.0 612.5,456.0 623.9,456.0 635.3,456.0 645.6,456.0 657.0,456.0 668.1,456.0 679.5,382.4 690.5,456.0 702.0,456.0 713.4,357.9 724.4,456.0 735.8,456.0 746.9,456.0 758.3,456.0 769.7,456.0 780.4,388.6 791.8,456.0 802.8,456.0 814.2,456.0 825.3,456.0 836.7,456.0 848.1,456.0 859.2,456.0 870.6,456.0 881.6,456.0 893.0,456.0 904.4,456.0 914.8,456.0 926.2,456.0 937.2,456.0 948.6,456.0 959.7,456.0 971.1,408.2 982.5,456.0 993.5,456.0 1005.0,456.0 1016.0,401.2"/>
+<circle cx="86.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="97.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="107.7" cy="348.5" r="2.6" fill="#24536b"/>
+<circle cx="119.1" cy="296.3" r="2.6" fill="#24536b"/>
+<circle cx="130.2" cy="269.6" r="2.6" fill="#24536b"/>
+<circle cx="141.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="152.6" cy="344.2" r="2.6" fill="#24536b"/>
+<circle cx="164.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="175.5" cy="95.3" r="2.6" fill="#24536b"/>
+<circle cx="186.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="197.9" cy="241.0" r="2.6" fill="#24536b"/>
+<circle cx="209.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="220.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="231.8" cy="337.0" r="2.6" fill="#24536b"/>
+<circle cx="242.5" cy="333.1" r="2.6" fill="#24536b"/>
+<circle cx="253.9" cy="236.7" r="2.6" fill="#24536b"/>
+<circle cx="264.9" cy="300.7" r="2.6" fill="#24536b"/>
+<circle cx="276.3" cy="375.0" r="2.6" fill="#24536b"/>
+<circle cx="287.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="298.8" cy="341.9" r="2.6" fill="#24536b"/>
+<circle cx="310.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="321.3" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="332.7" cy="176.4" r="2.6" fill="#24536b"/>
+<circle cx="343.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="355.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="366.5" cy="356.2" r="2.6" fill="#24536b"/>
+<circle cx="376.9" cy="312.6" r="2.6" fill="#24536b"/>
+<circle cx="388.3" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="399.3" cy="316.2" r="2.6" fill="#24536b"/>
+<circle cx="410.7" cy="201.9" r="2.6" fill="#24536b"/>
+<circle cx="421.8" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="433.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="444.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="455.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="467.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="478.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="489.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="500.9" cy="365.8" r="2.6" fill="#24536b"/>
+<circle cx="511.2" cy="387.0" r="2.6" fill="#24536b"/>
+<circle cx="522.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="533.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="545.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="556.2" cy="350.5" r="2.6" fill="#24536b"/>
+<circle cx="567.6" cy="302.8" r="2.6" fill="#24536b"/>
+<circle cx="579.0" cy="337.0" r="2.6" fill="#24536b"/>
+<circle cx="590.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="601.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="612.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="623.9" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="635.3" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="645.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="657.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="668.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="679.5" cy="382.4" r="2.6" fill="#24536b"/>
+<circle cx="690.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="702.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="713.4" cy="357.9" r="2.6" fill="#24536b"/>
+<circle cx="724.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="735.8" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="746.9" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="758.3" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="769.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="780.4" cy="388.6" r="2.6" fill="#24536b"/>
+<circle cx="791.8" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="802.8" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="814.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="825.3" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="836.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="848.1" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="859.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="870.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="881.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="893.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="904.4" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="914.8" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="926.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="937.2" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="948.6" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="959.7" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="971.1" cy="408.2" r="2.6" fill="#24536b"/>
+<circle cx="982.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="993.5" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="1005.0" cy="456.0" r="2.6" fill="#24536b"/>
+<circle cx="1016.0" cy="401.2" r="2.6" fill="#24536b"/>
+<line x1="786" y1="64" x2="812" y2="64" stroke="#24536b" stroke-width="3"/>
+<text x="820" y="68" font-family="Arial, sans-serif" font-size="12" fill="#333">final_expanded</text>
+<text x="18" y="254.0" transform="rotate(-90 18 254.0)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Leakage rate (%)</text>
+<text x="86" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333">Time axis is application/project start cohort; DMCA notice date is not used as the outcome date.</text>
+</svg>
