@@ -220,6 +220,21 @@ class ProjectEntry2Tests(unittest.TestCase):
         self.assertNotIn("12.month_of_year", text)
         self.assertIn("time_after_july2024", text)
 
+    def test_extended_test3_stata_style_uses_interaction_presentation_first(self):
+        text = self.analysis.ExtendedOutputs().stata_style_python_table.read_text(encoding="utf-8")
+        primary_pos = text.index("Test 3: High-vs-Lower Partition Interaction")
+        component_pos = text.index("Component regressions / verification")
+        lower_pos = text.index("test3_lower_index")
+        self.assertLess(primary_pos, component_pos)
+        self.assertLess(component_pos, lower_pos)
+        self.assertIn("High × TimeAfterJuly2024", text)
+        self.assertIn("Observations          = 176 group-month observations", text)
+        self.assertIn("Main hypothesis H0: δ3 = 0. δ3 = 5.2238977", text)
+        self.assertIn(
+            "The displayed interaction table is the stacked-model parameterization",
+            text,
+        )
+
     def test_test3_stacked_partition_outputs(self):
         rows = self.analysis.read_csv(self.analysis.Outputs().test3_stacked)
         self.assertEqual(len(rows), 168)
