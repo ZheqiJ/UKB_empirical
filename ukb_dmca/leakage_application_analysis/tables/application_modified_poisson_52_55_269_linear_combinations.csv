@@ -1,0 +1,4 @@
+outcome,outcome_label,linear_combination,estimate_beta,clustered_se,z,p_value,ci_low,ci_high,risk_ratio_exp_beta,rr_ci_low,rr_ci_high,n_applications,analytic_universe_applications,start_month_clusters
+Leak52,Curated 52 attribution outcome,Time + TimeAfterJuly2024,0.11808759,0.08084948,1.460586,0.144129,-0.04037740,0.27655258,1.12534267,0.96042691,1.31857628,6284,6935,149
+Leak55,Broad 55 attribution outcome,Time + TimeAfterJuly2024,0.11479982,0.07990058,1.436783,0.15078,-0.04180532,0.27140495,1.12164888,0.95905648,1.31180618,6284,6935,149
+Leak269,Candidate-inclusive upper-bound attribution outcome,Time + TimeAfterJuly2024,0.02992910,0.01849576,1.618160,0.105628,-0.00632259,0.06618079,1.03038148,0.99369735,1.06841986,6935,6935,162

@@ -1,0 +1,4 @@
+outcome,outcome_label,source_membership_applications,analytic_positive_applications,pre_applications,pre_events,pre_rate,post_applications,post_events,post_rate,post_minus_pre_percentage_points,policy_date,note
+Leak52,Curated 52 attribution outcome,52,52,4332,50,0.01154201,2603,2,0.00076834,-1.0774,2024-07-05,Raw descriptive rates; not a causal estimate.
+Leak55,Broad 55 attribution outcome,55,55,4332,53,0.01223453,2603,2,0.00076834,-1.1466,2024-07-05,Raw descriptive rates; not a causal estimate.
+Leak269,Candidate-inclusive upper-bound attribution outcome,269,266,4332,191,0.04409049,2603,75,0.02881291,-1.5278,2024-07-05,Raw descriptive rates; not a causal estimate.
