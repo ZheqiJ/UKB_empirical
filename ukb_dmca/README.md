@@ -266,3 +266,19 @@ Rows marked `weak_candidate` are kept for transparency and coverage, but are not
 promoted into the application-level leakage outcome. Application `29256` remains
 an audit-retained manual false positive and is not counted as supported
 attribution.
+
+## Current Result Summary
+
+- UKB DMCA notices: 110
+- Unique repository URLs: 193
+- Unique repository owners: 170
+- Deduplicated repository lineages: 193
+- Confirmed: 2
+- Probable: 0
+- Ambiguous: 18
+- Unresolved: 173
+- Unique-application match ratio: 0.0104
+- Unique applications linked: 2
+- Application input used: `data/applications.tsv`
+
+See `evidence/logs/result_summary.json` for remaining cases and role counts.
