@@ -1,0 +1,10 @@
+outcome,outcome_label,coefficient,risk_ratio_exp_beta,clustered_se_log_scale,rr_ci_low,rr_ci_high,p_value_log_scale
+Leak52,Curated 52 attribution outcome,Time,0.98721374,0.00302005,0.98138739,0.99307469,2.03436e-05
+Leak52,Curated 52 attribution outcome,PostJuly2024,0.02739219,1.27399148,0.00225519,0.33271334,0.0047458
+Leak52,Curated 52 attribution outcome,TimeAfterJuly2024,1.13991796,0.08079367,0.97297267,1.33550818,0.105045
+Leak55,Broad 55 attribution outcome,Time,0.98808021,0.00293324,0.98241589,0.99377718,4.34896e-05
+Leak55,Broad 55 attribution outcome,PostJuly2024,0.02552967,1.26982965,0.00211907,0.30757148,0.00387073
+Leak55,Broad 55 attribution outcome,TimeAfterJuly2024,1.13518000,0.07985524,0.97071241,1.32751329,0.11234
+Leak269,Candidate-inclusive upper-bound attribution outcome,Time,0.99355032,0.00194956,0.98976108,0.99735407,0.00090343
+Leak269,Candidate-inclusive upper-bound attribution outcome,PostJuly2024,0.61694156,0.27471183,0.36008464,1.05702061,0.0787242
+Leak269,Candidate-inclusive upper-bound attribution outcome,TimeAfterJuly2024,1.03707024,0.01858740,0.99996837,1.07554871,0.050195

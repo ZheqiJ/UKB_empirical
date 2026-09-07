@@ -1,0 +1,4 @@
+outcome,outcome_label,n_applications,analytic_universe_applications,start_month_clusters,month_of_year_fixed_effects,zero_event_months_omitted,source_membership_applications,analytic_positive_applications,Time_beta,Time_clustered_se,Time_p_value,PostJuly2024_beta,PostJuly2024_clustered_se,PostJuly2024_p_value,TimeAfterJuly2024_beta,TimeAfterJuly2024_clustered_se,TimeAfterJuly2024_p_value
+Leak52,Curated 52 attribution outcome,6284,6935,149,yes,1,52,52,-0.01286870,0.00302005,2.03436e-05,-3.59749730,1.27399148,0.0047458,0.13095629,0.08079367,0.105045
+Leak55,Broad 55 attribution outcome,6284,6935,149,yes,1,55,55,-0.01199141,0.00293324,4.34896e-05,-3.66791388,1.26982965,0.00387073,0.12679122,0.07985524,0.11234
+Leak269,Candidate-inclusive upper-bound attribution outcome,6935,6935,162,yes,,269,266,-0.00647057,0.00194956,0.00090343,-0.48298098,0.27471183,0.0787242,0.03639967,0.01858740,0.050195
