@@ -28,7 +28,18 @@ The module keeps three related but distinct layers separate.
    `manual_confirmation_status=confirmed_by_researcher`, including application
    rows that lack a current automated lineage ID.
 
-3. Application-level leakage-risk empirical outcome. This layer defines
+3. Exhaustive attribution expansion. This broader coverage layer starts from
+   the current curated state and the existing automated candidate/evidence
+   files, then retains confirmed, probable, ambiguous, B-level candidate, weak
+   candidate, and manually excluded false-positive rows for all current DMCA
+   repository families. It is written to
+   `exhaustive_dmca_application_attribution.csv` and summarized in
+   `exhaustive_dmca_family_attribution_summary.csv`. This layer is designed to
+   maximize application-attribution coverage while preserving uncertainty; it
+   does not restart notice discovery and does not overwrite the 52-link
+   empirical leakage baseline.
+
+4. Application-level leakage-risk empirical outcome. This layer defines
    `Leak_i = 1` when UKB application `i` belongs to the final curated
    leakage-risk application set. The final set is the fixed broad-48 baseline
    plus new unique credible applications identified during the completed
@@ -168,6 +179,9 @@ Generic words such as `cancer`, `genetic`, `imaging`, `risk`, `disease`, `UKB`, 
 - `ukb_dmca/curated_dmca_application_links.csv` is the canonical manually curated application-level crosswalk used for the empirical leakage outcome.
 - `ukb_dmca/curated_dmca_repository_family_links.csv` stores the repository/family evidence layer used to construct and audit the curated crosswalk.
 - `ukb_dmca/remaining_23_repo_review.csv` records the completed 23-family public-evidence review, including unresolved and false-positive cases.
+- `ukb_dmca/exhaustive_dmca_application_attribution.csv` records the expanded full-universe attribution table, including supported, ambiguous, weak, and manually excluded candidates.
+- `ukb_dmca/exhaustive_dmca_family_attribution_summary.csv` summarizes attribution coverage at the repository-family level.
+- `ukb_dmca/exhaustive_dmca_application_attribution_report.md` reports full-universe attribution counts and interpretation guidance.
 - `ukb_dmca/leakage_application_analysis/` contains the application-level leakage outcome, descriptive tables, regression tables, ITS tables, figures, and reports.
 
 ## Current Limitations
