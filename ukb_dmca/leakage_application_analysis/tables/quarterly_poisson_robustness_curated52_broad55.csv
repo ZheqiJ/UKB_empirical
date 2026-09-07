@@ -1,0 +1,7 @@
+outcome,outcome_file_label,frequency,coefficient,log_irr,irr,robust_se_log_irr,ci_low_log_irr,ci_high_log_irr,ci_low_irr,ci_high_irr,p_value,n_periods,pearson_dispersion,inference,estimability,warning
+Leak52,curated52,quarterly,Time,-0.03565487,0.964973,0.01097043,-0.05715691,-0.01415282,0.944446,0.985947,0.00115369,58,1.032599,Poisson QMLE Newey-West HAC lag 1,estimable,
+Leak52,curated52,quarterly,PostJuly2024,-3.37483453,0.034224,1.12479214,-5.57942712,-1.17024194,0.003775,0.310292,0.00269619,58,1.032599,Poisson QMLE Newey-West HAC lag 1,estimable,
+Leak52,curated52,quarterly,TimeAfterJuly2024,0.35809485,1.430601,0.23344486,-0.09945708,0.81564677,0.905329,2.260637,0.12504,58,1.032599,Poisson QMLE Newey-West HAC lag 1,estimable,
+Leak55,broad55,quarterly,Time,-0.03325004,0.967297,0.01042674,-0.05368646,-0.01281362,0.947729,0.987268,0.00142806,58,1.078463,Poisson QMLE Newey-West HAC lag 1,estimable,
+Leak55,broad55,quarterly,PostJuly2024,-3.43406550,0.032256,1.13535104,-5.65935353,-1.20877747,0.003485,0.298562,0.00248902,58,1.078463,Poisson QMLE Newey-West HAC lag 1,estimable,
+Leak55,broad55,quarterly,TimeAfterJuly2024,0.34437068,1.411102,0.23689714,-0.11994770,0.80868907,0.886967,2.244963,0.146037,58,1.078463,Poisson QMLE Newey-West HAC lag 1,estimable,

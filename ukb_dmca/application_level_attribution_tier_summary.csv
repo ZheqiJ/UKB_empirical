@@ -1,0 +1,7 @@
+Tier,Definition,Additional unique apps,Cumulative unique apps
+1,Current curated baseline,52,52
+2,Additional confirmed,0,52
+3,Additional probable,0,52
+4,Additional single-app ambiguous,3,55
+5,Additional B-level candidate,214,269
+6,Weak candidate only,884,1153

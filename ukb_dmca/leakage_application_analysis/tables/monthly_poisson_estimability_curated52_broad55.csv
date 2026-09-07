@@ -1,0 +1,7 @@
+outcome,outcome_file_label,frequency,coefficient,log_irr,irr,robust_se_log_irr,ci_low_log_irr,ci_high_log_irr,ci_low_irr,ci_high_irr,p_value,n_periods,pearson_dispersion,inference,estimability,warning
+Leak52,curated52,monthly,Time,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance
+Leak52,curated52,monthly,PostJuly2024,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance
+Leak52,curated52,monthly,TimeAfterJuly2024,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance
+Leak55,broad55,monthly,Time,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance
+Leak55,broad55,monthly,PostJuly2024,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance
+Leak55,broad55,monthly,TimeAfterJuly2024,,,,,,,,,162,,,not_estimable,did_not_meet_strict_convergence_tolerance

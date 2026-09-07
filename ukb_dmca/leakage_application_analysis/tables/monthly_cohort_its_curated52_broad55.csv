@@ -1,0 +1,7 @@
+outcome,outcome_file_label,frequency,model,coefficient,estimate,estimate_percentage_points,robust_se,robust_se_percentage_points,ci_low,ci_high,ci_low_percentage_points,ci_high_percentage_points,p_value,n_periods,r_squared,inference
+Leak52,curated52,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,Time,-0.00005549,-0.0055,0.00007623,0.0076,-0.00020489,0.00009392,-0.0205,0.0094,0.466661,162,0.095376,OLS Newey-West HAC lag 3
+Leak52,curated52,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,PostJuly2024,-0.00849569,-0.8496,0.00547483,0.5475,-0.01922636,0.00223499,-1.9226,0.2235,0.120717,162,0.095376,OLS Newey-West HAC lag 3
+Leak52,curated52,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,TimeAfterJuly2024,-0.00005358,-0.0054,0.00024382,0.0244,-0.00053147,0.00042430,-0.0531,0.0424,0.826052,162,0.095376,OLS Newey-West HAC lag 3
+Leak55,broad55,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,Time,-0.00004680,-0.0047,0.00007630,0.0076,-0.00019635,0.00010275,-0.0196,0.0103,0.539651,162,0.090441,OLS Newey-West HAC lag 3
+Leak55,broad55,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,PostJuly2024,-0.00982826,-0.9828,0.00564074,0.5641,-0.02088411,0.00122759,-2.0884,0.1228,0.0814437,162,0.090441,OLS Newey-West HAC lag 3
+Leak55,broad55,monthly,Monthly cohort linear segmented ITS with seasonal fixed effects,TimeAfterJuly2024,-0.00004969,-0.0050,0.00024545,0.0245,-0.00053078,0.00043140,-0.0531,0.0431,0.839559,162,0.090441,OLS Newey-West HAC lag 3
