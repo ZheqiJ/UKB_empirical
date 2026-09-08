@@ -10,6 +10,7 @@ from __future__ import annotations
 import csv
 import html
 import math
+import re
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -30,9 +31,14 @@ TIER4_ADDITIONS = DATA_DIR / "tier4_added_applications_broad55.csv"
 APPLICATION_LINKS = UKB / "curated_dmca_application_links.csv"
 FAMILY_LINKS = UKB / "curated_dmca_repository_family_links.csv"
 NOTICES = UKB / "ukb_dmca_notices.csv"
+REPOSITORIES = UKB / "ukb_dmca_repositories.csv"
+LINEAGES = UKB / "ukb_dmca_lineages.csv"
+APPLICATION_EVIDENCE = UKB / "ukb_dmca_application_match_evidence.csv"
+HISTORICAL_RECOVERY = DATA_DIR / "broad55_notice_mapping_historical_recovery.csv"
 
 FROZEN_OUT = DATA_DIR / "broad55_frozen_application_ids.csv"
 AUDIT_OUT = DATA_DIR / "broad55_dmca_notice_timing_audit.csv"
+RECOVERY_LEDGER_OUT = DATA_DIR / "broad55_dmca_notice_mapping_recovery_ledger.csv"
 COUNTS_OUT = TABLE_DIR / "broad55_notice_window_counts.csv"
 REPORT_OUT = REPORT_DIR / "broad55_dmca_notice_window_diagnostic.md"
 
@@ -89,12 +95,83 @@ def family_matches_app(family: dict[str, str], application_id: str, include_cand
     return include_candidate and application_id in split_values(family.get("candidate_application_ids", ""))
 
 
-def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
+def contains_application_id(value: str, application_id: str) -> bool:
+    """Match a literal application ID, avoiding partial numeric-string matches."""
+    return bool(re.search(rf"(?<!\\d){re.escape(application_id)}(?!\\d)", value))
+
+
+def recovered_notice_evidence(
+    broad_ids: set[str],
+    notice_by_id: dict[str, date],
+) -> tuple[dict[str, list[dict[str, str]]], dict[str, list[dict[str, str]]]]:
+    """Read retained notice-level evidence without changing any DMCA attribution."""
+    repositories = read_csv(REPOSITORIES)
+    lineages = {row["lineage_id"]: row for row in read_csv(LINEAGES)}
+    evidence = read_csv(APPLICATION_EVIDENCE)
+
+    literal: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in repositories:
+        notice_id = clean(row.get("notice_id", ""))
+        path = clean(row.get("offending_file_path", ""))
+        if not notice_id or notice_id not in notice_by_id or not path:
+            continue
+        for application_id in broad_ids:
+            if contains_application_id(path, application_id):
+                literal[application_id].append(
+                    {
+                        "notice_id": notice_id,
+                        "notice_date": notice_by_id[notice_id].isoformat(),
+                        "lineage_id": clean(row.get("lineage_id", "")),
+                        "repo_url": clean(row.get("repo_url", "")),
+                        "evidence_type": "literal_application_id_in_offending_notice_path",
+                        "evidence_class": "A1_literal_application_id",
+                        "source": "ukb_dmca_repositories.csv; ukb_dmca_notices.csv",
+                    }
+                )
+
+    candidates: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in evidence:
+        application_id = clean(row.get("candidate_app_id", ""))
+        lineage_id = clean(row.get("lineage_id", ""))
+        lineage = lineages.get(lineage_id, {})
+        if application_id not in broad_ids or not lineage:
+            continue
+        for notice_id in split_values(lineage.get("notice_ids", "")):
+            if notice_id in notice_by_id:
+                candidates[application_id].append(
+                    {
+                        "notice_id": notice_id,
+                        "notice_date": notice_by_id[notice_id].isoformat(),
+                        "lineage_id": lineage_id,
+                        "repo_url": "; ".join(split_values(lineage.get("repo_urls", ""))),
+                        "evidence_type": clean(row.get("evidence_type", "")),
+                        "evidence_class": clean(row.get("evidence_class", "")),
+                        "source": "ukb_dmca_application_match_evidence.csv; ukb_dmca_lineages.csv; ukb_dmca_notices.csv",
+                    }
+                )
+    return literal, candidates
+
+
+def unique_evidence(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    grouped: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        grouped[(row["notice_id"], row["lineage_id"], row["repo_url"])].append(row)
+    result: list[dict[str, str]] = []
+    for items in grouped.values():
+        row = dict(items[0])
+        row["evidence_type"] = "; ".join(sorted_unique([item["evidence_type"] for item in items]))
+        row["evidence_class"] = "; ".join(sorted_unique([item["evidence_class"] for item in items]))
+        result.append(row)
+    return sorted(result, key=lambda row: (row["notice_date"], row["notice_id"], row["lineage_id"]))
+
+
+def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
     universe = read_csv(APPLICATION_UNIVERSE)
     application_links = read_csv(APPLICATION_LINKS)
     family_links = read_csv(FAMILY_LINKS)
     notices = read_csv(NOTICES)
     tier4 = read_csv(TIER4_ADDITIONS)
+    historical_recovery = read_csv(HISTORICAL_RECOVERY)
 
     broad_rows = [row for row in universe if row.get("Leak55") == "1"]
     curated_rows = [row for row in universe if row.get("Leak52") == "1"]
@@ -116,6 +193,16 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
         notice_date = parse_date(clean(row.get("notice_date", "")))
         if notice_id and notice_date:
             notice_by_id[notice_id] = notice_date
+    historical_by_app: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in historical_recovery:
+        application_id = clean(row.get("application_id", ""))
+        notice_id = clean(row.get("notice_id", ""))
+        if application_id not in broad_ids:
+            raise ValueError(f"Historical recovery references non-Broad55 application {application_id}.")
+        if notice_id not in notice_by_id:
+            raise ValueError(f"Historical recovery notice {notice_id} is absent from the notice index.")
+        historical_by_app[application_id].append(row)
+    literal_evidence, candidate_evidence = recovered_notice_evidence(broad_ids, notice_by_id)
     app_by_id = {row["application_id"]: row for row in application_links}
     tier4_by_id = {row["application_id"]: row for row in tier4}
     frozen_rows = [
@@ -130,6 +217,7 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
     ]
 
     audit: list[dict[str, str]] = []
+    ledger: list[dict[str, str]] = []
     for row in sorted(broad_rows, key=lambda item: int(item["application_id"])):
         application_id = row["application_id"]
         application_link = app_by_id.get(application_id, {})
@@ -157,6 +245,22 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
                 "curated_dmca_repository_family_links_tier4_candidate" if is_tier4 and application_id not in split_values(family.get("application_id", "")) else "curated_dmca_repository_family_links"
             )
         notice_ids = sorted_unique(notice_ids)
+        direct_notice_ids = set(notice_ids)
+        historical_rows = historical_by_app.get(application_id, [])
+        historical_by_notice = {clean(item["notice_id"]): item for item in historical_rows}
+        for historical in historical_rows:
+            notice_ids.append(clean(historical["notice_id"]))
+            evidence_repos.extend(split_values(historical.get("repo_url", "")))
+            source_parts.append(clean(historical.get("mapping_status", "historical_pptx_notice_link")))
+        literal_rows = unique_evidence(literal_evidence.get(application_id, []))
+        # Literal application IDs in notice-listed paths are direct, notice-level evidence.
+        for literal in literal_rows:
+            if literal["notice_id"] not in notice_ids:
+                notice_ids.append(literal["notice_id"])
+            evidence_families.append(literal["lineage_id"])
+            evidence_repos.extend(split_values(literal["repo_url"]))
+            source_parts.append("literal_application_id_in_notice_path")
+        notice_ids = sorted_unique(notice_ids)
         valid_pairs = sorted((notice_by_id[notice_id], notice_id) for notice_id in notice_ids if notice_id in notice_by_id)
         invalid_notice_ids = sorted(notice_id for notice_id in notice_ids if notice_id not in notice_by_id)
         earliest_date, earliest_id = valid_pairs[0] if valid_pairs else (None, "")
@@ -167,11 +271,23 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
         if earliest_date is None:
             status = "missing_or_unresolved_notice_date"
             mapping_note = "No reproducibly linked valid notice ID/date in current curated application/family evidence."
+            mapping_confidence = "none"
+        elif earliest_id in historical_by_notice:
+            historical = historical_by_notice[earliest_id]
+            status = historical["mapping_status"]
+            mapping_confidence = historical["confidence"]
+            mapping_note = historical["reviewer_note"]
+        elif earliest_id not in direct_notice_ids:
+            status = "recovered_exact_literal_notice_link"
+            mapping_confidence = "exact"
+            mapping_note = "Earliest date is recovered from a literal application ID in a notice-listed offending file path."
         elif not after_start:
             status = "notice_before_project_start"
+            mapping_confidence = "curated"
             mapping_note = "Earliest reproducibly linked notice predates project initiation and is not used for a post-initiation timing window."
         else:
             status = "reconstructed_valid_post_start_notice"
+            mapping_confidence = "curated"
             mapping_note = "Earliest date is the minimum valid date among reconstructed linked notice IDs."
         if invalid_notice_ids:
             mapping_note += " Notice IDs lacking a valid notice-index date: " + "; ".join(invalid_notice_ids) + "."
@@ -183,8 +299,14 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
         within_1y = earliest_date is not None and after_start and earliest_date <= add_years(start, 1)
         within_18m = earliest_date is not None and after_start and earliest_date <= add_months(start, 18)
         within_2y = earliest_date is not None and after_start and earliest_date <= add_years(start, 2)
-        audit.append(
-            {
+        candidate_rows = unique_evidence(candidate_evidence.get(application_id, []))
+        candidate_rows = [item for item in candidate_rows if item["notice_id"] not in {notice_id for _, notice_id in valid_pairs}]
+        if valid_pairs:
+            candidate_rows = []
+        candidate_note = ""
+        if candidate_rows:
+            candidate_note = "Retained automated candidate evidence is C-level/contextual and is reported for review only; it is not used as the primary timing date."
+        audit_row = {
                 "application_id": application_id,
                 "application_title": row["application_title"],
                 "project_start_date": start.isoformat(),
@@ -200,6 +322,7 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
                 "stored_first_dmca_notice_date": stored,
                 "notice_date_source": "; ".join(sorted_unique([*source_parts, *(["ukb_dmca_notices.csv"] if valid_pairs else [])])),
                 "timing_mapping_status": status,
+                "timing_mapping_confidence": mapping_confidence,
                 "timing_mapping_note": mapping_note,
                 "lag_days": str(lag_days) if lag_days is not None else "",
                 "lag_months": f"{lag_days / 30.4375:.4f}" if lag_days is not None else "",
@@ -210,12 +333,54 @@ def reconstruct() -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict
                 "within_18m": bool_text(within_18m),
                 "within_2y": bool_text(within_2y),
                 "post_july2024_start": bool_text(start >= POLICY_DATE),
+                "candidate_notice_ids_for_review": "; ".join(item["notice_id"] for item in candidate_rows),
+                "candidate_notice_dates_for_review": "; ".join(item["notice_date"] for item in candidate_rows),
+                "candidate_lineage_ids_for_review": "; ".join(sorted_unique([item["lineage_id"] for item in candidate_rows])),
+                "candidate_evidence_classes_for_review": "; ".join(sorted_unique([item["evidence_class"] for item in candidate_rows])),
+                "candidate_evidence_types_for_review": "; ".join(sorted_unique([item["evidence_type"] for item in candidate_rows])),
+                "candidate_notice_review_note": candidate_note,
             }
-        )
+        audit.append(audit_row)
+        for notice_date, notice_id in valid_pairs:
+            historical = historical_by_notice.get(notice_id)
+            mapping_status = historical["mapping_status"] if historical else ("recovered_exact_literal_notice_link" if notice_id not in direct_notice_ids else "preserved_curated_link")
+            ledger.append(
+                {
+                    "application_id": application_id,
+                    "application_title": row["application_title"],
+                    "notice_id": notice_id,
+                    "notice_date": notice_date.isoformat(),
+                    "mapping_status": mapping_status,
+                    "eligible_for_primary_timing": "yes",
+                    "lineage_id": "; ".join(sorted_unique(evidence_families)),
+                    "repo_url": "; ".join(sorted_unique(evidence_repos)),
+                    "evidence_class": historical["confidence"] if historical else ("preserved_curated" if mapping_status == "preserved_curated_link" else "A1_literal_application_id"),
+                    "evidence_type": historical["evidence_type"] if historical else ("curated_application_or_family_link" if mapping_status == "preserved_curated_link" else "literal_application_id_in_offending_notice_path"),
+                    "source": historical["source_record"] if historical else audit_row["notice_date_source"],
+                    "reviewer_note": historical["reviewer_note"] if historical else ("Earliest valid date is used for the primary timing audit." if notice_id == earliest_id else "Additional valid notice linked to the same application."),
+                }
+            )
+        for candidate in candidate_rows:
+            ledger.append(
+                {
+                    "application_id": application_id,
+                    "application_title": row["application_title"],
+                    "notice_id": candidate["notice_id"],
+                    "notice_date": candidate["notice_date"],
+                    "mapping_status": "candidate_notice_link_for_review",
+                    "eligible_for_primary_timing": "no",
+                    "lineage_id": candidate["lineage_id"],
+                    "repo_url": candidate["repo_url"],
+                    "evidence_class": candidate["evidence_class"],
+                    "evidence_type": candidate["evidence_type"],
+                    "source": candidate["source"],
+                    "reviewer_note": "C-level/contextual candidate retained for manual review; not treated as a confirmed notice-to-application link.",
+                }
+            )
     if len({row["application_id"] for row in audit}) != 55 or len(audit) != 55:
         raise ValueError("Duplicate or missing Broad55 rows in final timing audit.")
     validate(audit, curated_ids)
-    return frozen_rows, audit, window_counts(audit)
+    return frozen_rows, audit, window_counts(audit), ledger
 
 
 def validate(audit: list[dict[str, str]], curated_ids: set[str]) -> None:
@@ -362,6 +527,10 @@ def report(audit: list[dict[str, str]], counts: list[dict[str, str]], zoom_start
         current = count_by[(definition, window)]
         return f"| {window} | {current['retained_cases']} | {current['pre_july2024_cases']} | {current['post_july2024_cases']} |"
     unresolved = [item for item in audit if item["timing_mapping_status"] == "missing_or_unresolved_notice_date"]
+    literal_recovered = [item for item in audit if item["timing_mapping_status"] == "recovered_exact_literal_notice_link"]
+    historical_recovered = [item for item in audit if item["timing_mapping_status"] == "historical_pptx_notice_link"]
+    tier4_recovered = [item for item in audit if item["timing_mapping_status"] == "current_tier4_notice_link"]
+    candidate_recovered = [item for item in audit if item["candidate_notice_ids_for_review"]]
     predates = [item for item in audit if item["timing_mapping_status"] == "notice_before_project_start"]
     discrepancies = [item for item in audit if item["stored_first_dmca_notice_date"] and item["stored_first_dmca_notice_date"] != item["earliest_dmca_notice_date"]]
     broad_all = count_by[("Broad55", "all valid post-start notices")]
@@ -381,9 +550,9 @@ Broad 55 membership is frozen from the existing application-level file: 52 curat
 
 ## Notice-Date Reconstruction
 
-Notice IDs were reconstructed from `curated_dmca_application_links.csv` and matching rows in `curated_dmca_repository_family_links.csv`, then dated using `ukb_dmca_notices.csv`. For the three frozen additions, a family notice was used only where the current family record explicitly listed that exact application as its candidate/application link. If multiple valid notice IDs were linked, the minimum notice date was retained. Missing mappings were left missing.
+Notice IDs were reconstructed from `curated_dmca_application_links.csv` and matching rows in `curated_dmca_repository_family_links.csv`, then dated using `ukb_dmca_notices.csv`. This audit also restores 29 historical application-notice links transcribed from `empirical 2.pptx` slides 17-19 into `broad55_notice_mapping_historical_recovery.csv`; the source deck identifies the notice, repository, paper or application evidence. A literal application ID in a notice-listed offending file path is direct notice evidence. The existing Tier-4 record for application 54520 supplies its retained ambiguous family notice. If multiple valid notice IDs were linked, the minimum notice date was retained.
 
-Broad 55 has {broad_all['total_positive_cases']} applications: {broad_all['dated_cases']} have a reproducibly identified earliest notice date, {broad_all['missing_notice_date']} are unresolved/missing, and {broad_all['notice_before_start']} have an earliest notice before project initiation. Curated 52 has {curated_all['dated_cases']} dated, {curated_all['missing_notice_date']} unresolved/missing, and {curated_all['notice_before_start']} notice-before-start cases.
+Broad 55 has {broad_all['total_positive_cases']} applications: {broad_all['dated_cases']} have a reproducibly identified earliest notice date, {broad_all['missing_notice_date']} are unresolved/missing, and {broad_all['notice_before_start']} have an earliest notice before project initiation. Curated 52 has {curated_all['dated_cases']} dated, {curated_all['missing_notice_date']} unresolved/missing, and {curated_all['notice_before_start']} notice-before-start cases. Evidence source counts: {len(historical_recovered)} historical-PPTX recoveries, {len(literal_recovered)} exact literal-path recovery, and {len(tier4_recovered)} retained Tier-4 ambiguous-family recovery. Retained C-level candidate notice links are reported separately for {len(candidate_recovered)} application(s) and are not used in the primary timing date.
 
 Stored `first_dmca_notice_date` disagreements with the reconstructed minimum: {len(discrepancies)}. {discrepancy_text}
 
@@ -405,6 +574,14 @@ The three zoom figures display project initiation on the x-axis and lag months o
 
 Missing/unresolved notice dates ({len(unresolved)}): {format_apps(unresolved)}
 
+Exact literal-path recovery ({len(literal_recovered)}): {format_apps(literal_recovered)}
+
+Historical-PPTX recovery ({len(historical_recovered)}): {format_apps(historical_recovered)}
+
+Retained Tier-4 ambiguous-family recovery ({len(tier4_recovered)}): {format_apps(tier4_recovered)}
+
+C-level candidate notice links retained for manual review ({len(candidate_recovered)}): {format_apps(candidate_recovered)}
+
 Earliest notice before project initiation ({len(predates)}): {format_apps(predates)}
 
 ## Feasibility Recommendation
@@ -422,9 +599,10 @@ No RAP causal effect is estimated or claimed here.
 def main() -> None:
     for directory in (DATA_DIR, TABLE_DIR, FIGURE_DIR, REPORT_DIR):
         directory.mkdir(parents=True, exist_ok=True)
-    frozen, audit, counts = reconstruct()
+    frozen, audit, counts, ledger = reconstruct()
     write_csv(FROZEN_OUT, frozen, list(frozen[0]))
     write_csv(AUDIT_OUT, audit, list(audit[0]))
+    write_csv(RECOVERY_LEDGER_OUT, ledger, list(ledger[0]))
     write_csv(COUNTS_OUT, counts, list(counts[0]))
     dated_post = [row for row in audit if row["notice_after_project_start"] == "yes"]
     if not dated_post:
