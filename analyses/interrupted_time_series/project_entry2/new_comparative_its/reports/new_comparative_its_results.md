@@ -13,53 +13,41 @@ The treatment proxy is the higher incremental July-2024 RAP-exposure proxy: `HIG
 
 The broad control includes 32 sequence projects excluded from the strict control. Their exclusion reason is s3-type high-sensitivity evidence: `hs_s3_text=1` for all 32; `hs_s3_direct=1` for 0.
 
-## Primary Normalized Comparative ITS
+## Raw Monthly-Count Comparative ITS
 
-Each outcome is an entry index normalized to its own full pre-July-2024 monthly mean (`2021-10` through `2024-06` = 100). The model uses 55 complete calendar months from October 2021 through April 2026, month fixed effects, and Newey-West HAC lag 3. September 2021 is excluded. July 2024 has `TimeAfterJuly2024=0`.
+The outcome is the absolute number of project starts per calendar month. The model uses 55 complete calendar months from October 2021 through April 2026, month fixed effects, and Newey-West HAC lag 3. September 2021 is excluded because the sequence control starts on 2021-09-28 and that month is incomplete. July 2024 has `TimeAfterJuly2024=0`.
 
 | Quantity | STRICT | BROAD |
 | --- | ---: | ---: |
-| Control pre slope | -3.4814 | -3.3837 |
-| Control post slope | 4.4833 | 6.0767 |
-| Control slope change | 7.9646 | 9.4603 |
-| Treatment pre slope | 1.4061 | 1.4061 |
-| Treatment post slope | 11.3923 | 11.3923 |
-| Treatment slope change | 9.9862 | 9.9862 |
-| delta1 | 4.8875 | 4.7898 |
-| delta2 | -137.2598 | -125.6085 |
-| delta3 | 2.0215 | 0.5258 |
-| SE(delta3) | 3.2093 | 2.8891 |
-| 95% CI(delta3) | [-4.2687, 8.3117] | [-5.1369, 6.1885] |
-| p(delta3) | 0.5288 | 0.8556 |
-| H0 delta3=0 rejected? | No | No |
+| Control pre slope | -0.1066 | -0.1118 |
+| Control post slope | 0.1372 | 0.2007 |
+| Control slope change | 0.2438 | 0.3125 |
+| Treatment pre slope | 0.0669 | 0.0669 |
+| Treatment post slope | 0.5420 | 0.5420 |
+| Treatment slope change | 0.4751 | 0.4751 |
+| delta1 | 0.1734 | 0.1787 |
+| delta2 | -4.6637 | -4.5455 |
+| delta3 | 0.2313 | 0.1626 |
+| SE(delta3) | 0.1000 | 0.0963 |
+| 95% CI(delta3) | [0.0353, 0.4274] | [-0.0261, 0.3513] |
+| p(delta3) | 0.0208 | 0.0912 |
+| H0 delta3=0 rejected? | Yes | No |
 
-The displayed interaction parameterization has Control as the reference group. The `beta` coefficients use the Control-series HAC inference; the `delta` coefficients use the Treatment-minus-Control normalized difference-series HAC inference. This is the algebraically equivalent three-series Newey-West implementation, rather than a built-in Stata `newey` regression on a stacked data set with duplicated monthly time values.
+The displayed interaction parameterization has Control as the reference group. The `beta` coefficients use the Control-series HAC inference; the `delta` coefficients use the Treatment-minus-Control raw-count difference-series HAC inference. This is the algebraically equivalent three-series Newey-West implementation, rather than a built-in Stata `newey` regression on a stacked data set with duplicated monthly time values.
 
 ## Comparative Reading
 
-1. Strict design: `delta3` is **positive** (2.0215); it is **not statistically significant** at 5% (p=0.5288).
-2. Broad design: `delta3` is **positive** (0.5258); it is **not statistically significant** at 5% (p=0.8556).
-3. The `delta3` sign is stable across the 427-vs-589 and 459-vs-589 comparisons. Including the 32 mixed sequence+s3 projects changes `delta3` by -1.4957 index points per month.
-4. Differential pre-trends (`delta1`) are 4.8875 in STRICT (p=0.0000) and 4.7898 in BROAD (p=0.0000).
-5. Differential immediate level changes (`delta2`) are -137.2598 in STRICT (p=0.0065) and -125.6085 in BROAD (p=0.0094); `delta3` captures the gradual differential post-transition slope change.
+1. Strict design: `delta3` is **positive** (0.2313); it is **statistically significant** at 5% (p=0.0208).
+2. Broad design: `delta3` is **positive** (0.1626); it is **not statistically significant** at 5% (p=0.0912).
+3. The `delta3` sign is stable across the 427-vs-589 and 459-vs-589 comparisons. Including the 32 mixed sequence+s3 projects changes `delta3` by -0.0687 monthly starts per month.
+4. Differential pre-trends (`delta1`) are 0.1734 in STRICT (p=0.0000) and 0.1787 in BROAD (p=0.0000).
+5. Differential immediate level changes (`delta2`) are -4.6637 in STRICT (p=0.0030) and -4.5455 in BROAD (p=0.0050); `delta3` captures the gradual differential post-transition slope change.
 
 When `delta3>0`, the descriptive reading is: the post-transition entry trajectory strengthened more for high-sensitivity project types with higher incremental exposure to the July 2024 RAP transition than for sequence-based projects whose relevant data were already RAP-only before the transition. This is not a causal DID estimate and does not show that treatment projects moved from local access to RAP.
 
-## Raw-Count Robustness
-
-Raw counts retain the same comparative ITS construction but measure absolute monthly starts, not relative trajectories from each group's historical baseline. They are a robustness output because the group sizes differ.
-
-| Raw-count result | STRICT | BROAD |
-| --- | ---: | ---: |
-| delta3 | 0.2313 | 0.1626 |
-| HAC SE(delta3) | 0.1000 | 0.0963 |
-| p(delta3) | 0.0208 | 0.0912 |
-
 ## Figures
 
-- [Strict observed entry index](../figures/figure_strict_observed_entry_index.svg)
-- [Strict fitted entry index](../figures/figure_strict_fitted_entry_index.svg)
-- [Broad observed entry index](../figures/figure_broad_observed_entry_index.svg)
-- [Broad fitted entry index](../figures/figure_broad_fitted_entry_index.svg)
-- [Strict segmented trends, month FE netted out](../figures/figure_strict_segmented_trends.svg)
-- [Broad segmented trends, month FE netted out](../figures/figure_broad_segmented_trends.svg)
+- [Strict observed monthly counts](../figures/figure_strict_observed_monthly_counts.svg)
+- [Strict fitted monthly counts](../figures/figure_strict_fitted_monthly_counts.svg)
+- [Broad observed monthly counts](../figures/figure_broad_observed_monthly_counts.svg)
+- [Broad fitted monthly counts](../figures/figure_broad_fitted_monthly_counts.svg)

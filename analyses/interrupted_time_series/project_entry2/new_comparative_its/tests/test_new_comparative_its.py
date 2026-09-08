@@ -57,13 +57,27 @@ class NewComparativeITSTest(unittest.TestCase):
             self.assertEqual(august["time_after_july2024"], "1")
             self.assertTrue(any(row["treatment_count"] == "0" for row in rows))
             self.assertTrue(any(row["control_count"] == "0" for row in rows))
+            self.assertNotIn("treatment_index_pre_mean", rows[0])
             self.assertEqual(len(read_csv(DATA / f"stacked_{specification}.csv")), 110)
             regression_rows = read_csv(DATA / f"regression_results_{specification}.csv")
             self.assertTrue(all(row["sample_dates"] == "2021-10 through 2026-04" for row in regression_rows))
+            self.assertTrue(all(row["outcome_scale"] == "raw" for row in regression_rows))
+            self.assertTrue(all("index" not in row["outcome"] for row in regression_rows))
 
     def test_required_reports_and_figures(self) -> None:
         for name in ["new_comparative_its_results.md", "new_comparative_its_stata_style_results.txt", "group_definition_audit.md"]:
             self.assertTrue((REPORTS / name).exists())
+        for name in [
+            "figure_strict_observed_monthly_counts.svg",
+            "figure_strict_fitted_monthly_counts.svg",
+            "figure_broad_observed_monthly_counts.svg",
+            "figure_broad_fitted_monthly_counts.svg",
+        ]:
+            content = (FIGURES / name).read_text(encoding="utf-8")
+            self.assertIn("Jul 2024", content)
+            self.assertNotIn("Through Apr 2026", content)
+            self.assertNotIn("delta3 =", content)
+            self.assertIn("Monthly Counts", content)
         for name in [
             "figure_strict_observed_entry_index.svg",
             "figure_strict_fitted_entry_index.svg",
@@ -72,10 +86,9 @@ class NewComparativeITSTest(unittest.TestCase):
             "figure_strict_segmented_trends.svg",
             "figure_broad_segmented_trends.svg",
         ]:
-            content = (FIGURES / name).read_text(encoding="utf-8")
-            self.assertIn("Jul 2024", content)
-            self.assertNotIn("Through Apr 2026", content)
-            self.assertNotIn("delta3 =", content)
+            self.assertFalse((FIGURES / name).exists())
+        self.assertFalse((DATA / "raw_partition_results_strict.csv").exists())
+        self.assertFalse((DATA / "raw_partition_results_broad.csv").exists())
 
 
 if __name__ == "__main__":
