@@ -1,0 +1,56 @@
+application_id,application_title,curated52,broad55,broad55_addition
+10035,Risk factors and associated causal pathways linked to blood pressure,yes,yes,no
+10279,The relationship of cognitive function and negative emotions with morbidity and mortality: an aetiological investigation,yes,yes,no
+12184,"Type 2 diabetes, physical activity, sedentary behaviour and sleep.",yes,yes,no
+17984,Genotype-environment interactions and sub-classification of disease,yes,yes,no
+19136,Lung Health: Genes and environment,yes,yes,no
+19526,Phenomewide scan of gene level associations,yes,yes,no
+19542,Identifying multi-level biomarkers and disease mechanisms for major mental disorders,yes,yes,no
+22224,Prospective studies of ageing and age-related diseases,yes,yes,no
+23668,Genetic and environmental factors including nutritional and lifestyle influences on neurodevelopmental disorders/traits (including impulsivity/compulsivity) and their brain correlates,yes,yes,no
+24247,Searching Identity-by-descent segments in biobank-scale cohorts,yes,yes,no
+27837,Statistical Methods for Large Scale Genetic Studies,yes,yes,no
+28784,A statistical framework for personalized nutrition recommendations based on genetic and anthropometric data.,yes,yes,no
+30418,Biomarker profiling by NMR metabolomics for the study of chronic disease risk and underlying risk factors,yes,yes,no
+31063,Methodological extensions to estimate genetic heritability and shared risk factors for phenotypes of the UK Biobank,yes,yes,no
+33923,Genetic risk prediction and variance in diverse populations,yes,yes,no
+40161,Application of deep learning for the characterisation of motion patterns in the heart,yes,yes,no
+45761,Genetics of cancer risk and therapy response,yes,yes,no
+46122,Characterizing the contribution of short tandem repeats to human phenotypes.,yes,yes,no
+47267,Cross-diagnostic and cross-platform multimodal analysis of UK Biobank imaging data,yes,yes,no
+48388,Precision Retinal Biomarkers for Cognitive Impairment,yes,yes,no
+49777,Identification of genetic and lifestyle risk factors of unhealthy brain ageing to direct mechanistic studies using post-mortem brain tissue,yes,yes,no
+51064,"Understanding the relationship between genomics, eye imaging, and neurodegeneration",yes,yes,no
+51157,Stratification and modelling of competing risks in cardiovascular disease events based on multi-level patient characteristics and genetics,yes,yes,no
+51830,Identifying genetic factors for brain ageing,no,yes,yes
+52293,"Large-scale whole genome sequencing of the UK Biobank cohort to generate and evaluate therapeutic hypotheses regarding targets, biomarkers and pathways implicated in disease",yes,yes,no
+52887,Leveraging medical images and deep learning to characterize biological age,yes,yes,no
+54520,"Constructing risk scores of longevity, dementia, and related disorders",no,yes,yes
+55288,"Early life, adulthood, and genomic risk factors for early-onset cancers",yes,yes,no
+55955,Advancing personalised medicine for psychiatric diseases through integrative GPCR pharmacogenomics,yes,yes,no
+56757,Developing chronic disease models to inform health policy and guide treatment decisions,yes,yes,no
+57232,Estimating the overall impact of genetic variation on morbidity and mortality and assessing differential risk conditional on environmental and genetic factors.,yes,yes,no
+59070,Statistical machine learning of wearable sensor data to predict disease outcomes,yes,yes,no
+61054,Social and Environmental Adversity in Relation to All-Cause Mortality,yes,yes,no
+61666,Sexually antagonistic selection in humans,yes,yes,no
+61785,Physiological and Bioinformatics Analyses of Genetic Variants in the Glucagon Receptor,yes,yes,no
+62254,Optimisation of time use for health and wellbeing,yes,yes,no
+64823,A Genomic Data Science Framework for the 1000 Arab genome project,yes,yes,no
+65805,Genetic factors on Type 2 diabetes and hypertension,yes,yes,no
+66995,"Prediction of haplotypes, genotypes, parental-of-origin and applications in biobanks.",yes,yes,no
+69610,Genetic stratification of immunosuppressive drugs on neurodegenerative disorders incidence,yes,yes,no
+72911,Stratification of complex phenotypes focusing on Inflammatory Bowel Disease and co-morbidities: trialling novel methods,yes,yes,no
+74395,Interpretion of health data with artificial intelligence for study of cardiovascular risk factors and their relation to diseases,yes,yes,no
+79957,Deep learning based causal inference methods for variant interpretation,yes,yes,no
+84103,Genomic approaches to relating cardiovascular structure and function to heart failure for the purposes of drug discovery.,yes,yes,no
+84709,Risk and prognosis factors of cardiovascular disease on different genetic background,yes,yes,no
+87802,Assessment of frailty and biological age using multi-modal deep learning,yes,yes,no
+88159,"Fine-mapping, genetic correlation and genetic risk prediction for complex traits in different populations",yes,yes,no
+88878,The cardiovascular digital twin of the adult population: defining the population ranges.,yes,yes,no
+89197,Effects of copy number variants on the morphological structure of the brain across several neurodevelopmental disorders.,yes,yes,no
+92005,"Integrative analysis of genomic, molecular, cellular, and biochemical measures to inform cancer etiology",yes,yes,no
+103356,Understanding the role of rare and common genetic variation in human phenotypes,yes,yes,no
+146079,Epidemiological and Genetic Risk Factors for keloid and hypertrophic scar,no,yes,yes
+177030,Impacts of rapid environmental/societal changes on the genetic architecture of and selection on human traits,yes,yes,no
+822932,Inherent and non-inherent factors for chronic diseases and multimorbidity,yes,yes,no
+867484,Identifying predictors for persistent pain after joint replacement in osteoarthritis patients by integrative analysis of multimodal data,yes,yes,no
