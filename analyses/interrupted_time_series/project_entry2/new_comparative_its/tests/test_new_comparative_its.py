@@ -48,8 +48,8 @@ class NewComparativeITSTest(unittest.TestCase):
     def test_month_window_and_indexing(self) -> None:
         for specification in ["strict", "broad"]:
             rows = read_csv(DATA / f"monthly_{specification}.csv")
-            self.assertEqual(len(rows), 56)
-            self.assertEqual(rows[0]["month"], "2021-09")
+            self.assertEqual(len(rows), 55)
+            self.assertEqual(rows[0]["month"], "2021-10")
             self.assertEqual(rows[-1]["month"], "2026-04")
             july = next(row for row in rows if row["month"] == "2024-07")
             august = next(row for row in rows if row["month"] == "2024-08")
@@ -57,9 +57,9 @@ class NewComparativeITSTest(unittest.TestCase):
             self.assertEqual(august["time_after_july2024"], "1")
             self.assertTrue(any(row["treatment_count"] == "0" for row in rows))
             self.assertTrue(any(row["control_count"] == "0" for row in rows))
-            self.assertEqual(len(read_csv(DATA / f"stacked_{specification}.csv")), 112)
+            self.assertEqual(len(read_csv(DATA / f"stacked_{specification}.csv")), 110)
             regression_rows = read_csv(DATA / f"regression_results_{specification}.csv")
-            self.assertTrue(all(row["sample_dates"] == "2021-09-28 through 2026-04" for row in regression_rows))
+            self.assertTrue(all(row["sample_dates"] == "2021-10 through 2026-04" for row in regression_rows))
 
     def test_required_reports_and_figures(self) -> None:
         for name in ["new_comparative_its_results.md", "new_comparative_its_stata_style_results.txt", "group_definition_audit.md"]:

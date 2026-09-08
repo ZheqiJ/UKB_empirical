@@ -32,14 +32,14 @@ FIGURE_DIR = PACKAGE / "figures"
 CLASSIFICATION_PATH = PROJECT_ENTRY2 / "data" / "project_high_sensitivity_classification.csv"
 STAGE3_MATRIX_PATH = ROOT / "data" / "intermediate" / "rap_classification" / "stage3_modality_access_matrix.csv"
 
-WINDOW_START_DATE = date(2021, 9, 28)
-START_MONTH = date(2021, 9, 1)
+WINDOW_START_DATE = date(2021, 10, 1)
+START_MONTH = date(2021, 10, 1)
 END_MONTH = date(2026, 4, 1)
 WINDOW_END_DATE = date(2026, 4, 30)
 BREAK_MONTH = date(2024, 7, 1)
 HAC_LAG = 3
-CALENDAR_MONTHS = 56
-SAMPLE_DATES_LABEL = "2021-09-28 through 2026-04"
+CALENDAR_MONTHS = 55
+SAMPLE_DATES_LABEL = "2021-10 through 2026-04"
 
 SPECS = {
     "strict": {
@@ -715,7 +715,7 @@ The broad control includes {len(excluded)} sequence projects excluded from the s
 
 ## Primary Normalized Comparative ITS
 
-Each outcome is an entry index normalized to its own full pre-July-2024 monthly mean (`2021-09-28` through `2024-06` = 100). The model uses 56 calendar months from September 2021 through April 2026, month fixed effects, and Newey-West HAC lag 3. The September 2021 bin begins on September 28, so it is a deliberately truncated first month. July 2024 has `TimeAfterJuly2024=0`.
+Each outcome is an entry index normalized to its own full pre-July-2024 monthly mean (`2021-10` through `2024-06` = 100). The model uses 55 complete calendar months from October 2021 through April 2026, month fixed effects, and Newey-West HAC lag 3. September 2021 is excluded. July 2024 has `TimeAfterJuly2024=0`.
 
 {report_comparison_table(strict, broad)}
 
@@ -753,9 +753,9 @@ Raw counts retain the same comparative ITS construction but measure absolute mon
     write_text(REPORT_DIR / "new_comparative_its_results.md", report)
 
     stata_text = f"""New Comparative ITS: Within-High RAP-Exposure Comparative ITS
-Sample: 2021-09-28 through 2026-04; breakpoint: July 2024; normalized outcome: own pre-July-2024 monthly mean = 100. The 2021-09 monthly bin begins on 2021-09-28.
+Sample: 2021-10 through 2026-04; breakpoint: July 2024; normalized outcome: own pre-July-2024 monthly mean = 100. September 2021 is excluded.
 
-The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 112-row stacked data set with duplicate monthly time values.
+The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 110-row stacked data set with duplicate monthly time values.
 
 {stata_table('strict', strict, group_n, in_window_n)}
 
@@ -789,8 +789,8 @@ Stata executed: No. HAC estimates were produced by the repository's Python imple
 - Treatment intersect BroadControl: empty.
 - StrictControl is a subset of BroadControl.
 - BroadControl minus StrictControl contains the {excluded_comp['n']} sequence projects carrying s3-type evidence. In the current classification these are `hs_s3_text=1`; none has `hs_s3_direct=1`.
-- Each specification retains 56 calendar months from 2021-09 through 2026-04, including monthly zeros. The first monthly bin begins on 2021-09-28.
-- The treatment and control indices use the same pre-July-2024 calendar period, 2021-09-28 through 2024-06, while retaining each group's own mean as the denominator.
+- Each specification retains 55 complete calendar months from 2021-10 through 2026-04, including monthly zeros. September 2021 is excluded.
+- The treatment and control indices use the same pre-July-2024 calendar period, 2021-10 through 2024-06, while retaining each group's own mean as the denominator.
 
 ## Source Scope
 
