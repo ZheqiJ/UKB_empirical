@@ -6,7 +6,7 @@
   "cache_dir": ".cache/ukb_dmca",
   "dmca_repo": "github/dmca",
   "dmca_ref": "master",
-  "notice_dir": "/tmp/ukb-fixed-notices-2dyd1zfd",
+  "notice_dir": "/tmp/ukb-fixed-notices-wxnywnu2",
   "fixed_notices_csv": "",
   "scan_all_markdown": false,
   "refresh_cache": false,
