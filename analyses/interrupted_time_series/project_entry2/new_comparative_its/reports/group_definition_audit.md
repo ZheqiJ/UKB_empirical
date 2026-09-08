@@ -16,8 +16,8 @@
 - Treatment intersect BroadControl: empty.
 - StrictControl is a subset of BroadControl.
 - BroadControl minus StrictControl contains the 32 sequence projects carrying s3-type evidence. In the current classification these are `hs_s3_text=1`; none has `hs_s3_direct=1`.
-- Each specification retains 88 calendar months from 2019-01 through 2026-04, including monthly zeros.
-- The treatment and control indices use the same pre-July-2024 calendar period, 2019-01 through 2024-06, while retaining each group's own mean as the denominator.
+- Each specification retains 56 calendar months from 2021-09 through 2026-04, including monthly zeros. The first monthly bin begins on 2021-09-28.
+- The treatment and control indices use the same pre-July-2024 calendar period, 2021-09-28 through 2024-06, while retaining each group's own mean as the denominator.
 
 ## Source Scope
 

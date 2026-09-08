@@ -1,18 +1,18 @@
 role,quantity,parameter,stata_term,inference_source,estimate,std_error,p_value,ci_low,ci_high
-interaction_coefficient,Intercept,beta0,_cons,Control-series regression,149.15632575,25.25247492,0.00000000,99.66147490,198.65117661
-interaction_coefficient,Time,beta1,Time,Control-series regression,-0.95242255,0.36116241,0.00836174,-1.66030087,-0.24454422
-interaction_coefficient,PostJuly2024,beta2,PostJuly2024,Control-series regression,71.40260417,56.38235072,0.20536994,-39.10680323,181.91201157
-interaction_coefficient,TimeAfterJuly2024,beta3,TimeAfterJuly2024,Control-series regression,4.87179850,4.12263035,0.23731646,-3.20855699,12.95215398
-interaction_coefficient,Treated,delta0,Treated,Treatment-minus-Control difference regression,-42.82177147,22.53979612,0.05745549,-86.99977187,1.35622892
-interaction_coefficient,Treated x Time,delta1,Treated x Time,Treatment-minus-Control difference regression,1.32647406,0.44946641,0.00316522,0.44551990,2.20742822
-interaction_coefficient,Treated x PostJuly2024,delta2,Treated x PostJuly2024,Treatment-minus-Control difference regression,-82.37411021,38.91113882,0.03426153,-158.63994230,-6.10827811
-interaction_coefficient,Treated x TimeAfterJuly2024,delta3,Treated x TimeAfterJuly2024,Treatment-minus-Control difference regression,7.03418246,2.65766972,0.00812699,1.82514980,12.24321511
-linear_combination,Control pre slope,control_pre_slope,,Newey-West HAC from the named component series,-0.95242255,0.36116241,0.00836174,-1.66030087,-0.24454422
-linear_combination,Control post slope,control_post_slope,,Newey-West HAC from the named component series,3.91937595,4.07309051,0.33591854,-4.06388145,11.90263335
-linear_combination,Control slope change,control_slope_change,,Newey-West HAC from the named component series,4.87179850,4.12263035,0.23731646,-3.20855699,12.95215398
-linear_combination,Treatment pre slope,treatment_pre_slope,,Newey-West HAC from the named component series,0.37405151,0.29104687,0.19872472,-0.19640035,0.94450338
-linear_combination,Treatment post slope,treatment_post_slope,,Newey-West HAC from the named component series,12.28003246,2.70042272,0.00000543,6.98720393,17.57286100
-linear_combination,Treatment slope change,treatment_slope_change,,Newey-West HAC from the named component series,11.90598095,2.78569270,0.00001920,6.44602326,17.36593864
-linear_combination,Differential pre slope (delta1),delta1,,Newey-West HAC from the named component series,1.32647406,0.44946641,0.00316522,0.44551990,2.20742822
-linear_combination,Differential immediate change (delta2),delta2,,Newey-West HAC from the named component series,-82.37411021,38.91113882,0.03426153,-158.63994230,-6.10827811
-linear_combination,Differential slope change (delta3),delta3,,Newey-West HAC from the named component series,7.03418246,2.65766972,0.00812699,1.82514980,12.24321511
+interaction_coefficient,Intercept,beta0,_cons,Control-series regression,139.25372657,37.06699531,0.00017209,66.60241578,211.90503737
+interaction_coefficient,Time,beta1,Time,Control-series regression,-2.84220083,1.30001908,0.02879540,-5.39023822,-0.29416344
+interaction_coefficient,PostJuly2024,beta2,PostJuly2024,Control-series regression,107.18629304,59.36444832,0.07098652,-9.16802567,223.54061175
+interaction_coefficient,TimeAfterJuly2024,beta3,TimeAfterJuly2024,Control-series regression,7.28105116,4.68535802,0.12018417,-1.90225055,16.46435288
+interaction_coefficient,Treated,delta0,Treated,Treatment-minus-Control difference regression,-51.31317931,25.29041574,0.04246262,-100.88239416,-1.74396447
+interaction_coefficient,Treated x Time,delta1,Treated x Time,Treatment-minus-Control difference regression,4.55158073,1.07583071,0.00002329,2.44295254,6.66020891
+interaction_coefficient,Treated x PostJuly2024,delta2,Treated x PostJuly2024,Treatment-minus-Control difference regression,-137.42702645,51.03730451,0.00708807,-237.46014329,-37.39390961
+interaction_coefficient,Treated x TimeAfterJuly2024,delta3,Treated x TimeAfterJuly2024,Treatment-minus-Control difference regression,2.68397731,3.26181233,0.41059417,-3.70917486,9.07712948
+linear_combination,Control pre slope,control_pre_slope,,Newey-West HAC from the named component series,-2.84220083,1.30001908,0.02879540,-5.39023822,-0.29416344
+linear_combination,Control post slope,control_post_slope,,Newey-West HAC from the named component series,4.43885034,4.34974618,0.30749854,-4.08665217,12.96435284
+linear_combination,Control slope change,control_slope_change,,Newey-West HAC from the named component series,7.28105116,4.68535802,0.12018417,-1.90225055,16.46435288
+linear_combination,Treatment pre slope,treatment_pre_slope,,Newey-West HAC from the named component series,1.70937990,0.88150860,0.05248273,-0.01837695,3.43713675
+linear_combination,Treatment post slope,treatment_post_slope,,Newey-West HAC from the named component series,11.67440837,2.34879582,0.00000067,7.07076856,16.27804818
+linear_combination,Treatment slope change,treatment_slope_change,,Newey-West HAC from the named component series,9.96502847,2.75741230,0.00030162,4.56050036,15.36955659
+linear_combination,Differential pre slope (delta1),delta1,,Newey-West HAC from the named component series,4.55158073,1.07583071,0.00002329,2.44295254,6.66020891
+linear_combination,Differential immediate change (delta2),delta2,,Newey-West HAC from the named component series,-137.42702645,51.03730451,0.00708807,-237.46014329,-37.39390961
+linear_combination,Differential slope change (delta3),delta3,,Newey-West HAC from the named component series,2.68397731,3.26181233,0.41059417,-3.70917486,9.07712948

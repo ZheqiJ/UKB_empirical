@@ -32,10 +32,14 @@ FIGURE_DIR = PACKAGE / "figures"
 CLASSIFICATION_PATH = PROJECT_ENTRY2 / "data" / "project_high_sensitivity_classification.csv"
 STAGE3_MATRIX_PATH = ROOT / "data" / "intermediate" / "rap_classification" / "stage3_modality_access_matrix.csv"
 
-START_MONTH = date(2019, 1, 1)
+WINDOW_START_DATE = date(2021, 9, 28)
+START_MONTH = date(2021, 9, 1)
 END_MONTH = date(2026, 4, 1)
+WINDOW_END_DATE = date(2026, 4, 30)
 BREAK_MONTH = date(2024, 7, 1)
 HAC_LAG = 3
+CALENDAR_MONTHS = 56
+SAMPLE_DATES_LABEL = "2021-09-28 through 2026-04"
 
 SPECS = {
     "strict": {
@@ -143,6 +147,7 @@ def add_groups(rows: list[dict[str, str]]) -> list[dict[str, object]]:
                 "group_broad": "Treatment" if treatment else "Broad control",
                 "start_date": row["start_date"],
                 "pre_post": "pre_july_2024" if start < BREAK_MONTH else "post_july_2024",
+                "in_analysis_window": int(WINDOW_START_DATE <= start <= WINDOW_END_DATE),
             }
         )
     audit_rows.sort(key=lambda row: (str(row["start_date"]), int(row["app_id"])))
@@ -155,6 +160,14 @@ def group_counts(audit_rows: list[dict[str, object]]) -> dict[str, int]:
         "treatment": sum(int(row["treatment"]) for row in audit_rows),
         "strict_control": sum(int(row["control_strict"]) for row in audit_rows),
         "broad_control": sum(int(row["control_broad"]) for row in audit_rows),
+    }
+
+
+def in_window_group_counts(audit_rows: list[dict[str, object]]) -> dict[str, int]:
+    return {
+        "treatment": sum(int(row["treatment"]) for row in audit_rows if int(row["in_analysis_window"]) == 1),
+        "strict_control": sum(int(row["control_strict"]) for row in audit_rows if int(row["in_analysis_window"]) == 1),
+        "broad_control": sum(int(row["control_broad"]) for row in audit_rows if int(row["in_analysis_window"]) == 1),
     }
 
 
@@ -189,7 +202,7 @@ def monthly_rows_for_spec(audit_rows: list[dict[str, object]], specification: st
         for row in rows:
             started = core.parse_date(str(row["start_date"]))
             month = date(started.year, started.month, 1)
-            if START_MONTH <= month <= END_MONTH:
+            if WINDOW_START_DATE <= started <= WINDOW_END_DATE:
                 counts[group][month] += 1
 
     months = core.month_range(START_MONTH, END_MONTH)
@@ -224,8 +237,8 @@ def monthly_rows_for_spec(audit_rows: list[dict[str, object]], specification: st
                 "raw_diff_treatment_minus_control": treatment_count - control_count,
             }
         )
-    if len(output) != 88:
-        raise AssertionError(f"{specification} should have 88 calendar months; found {len(output)}")
+    if len(output) != CALENDAR_MONTHS:
+        raise AssertionError(f"{specification} should have {CALENDAR_MONTHS} calendar months; found {len(output)}")
     return output
 
 
@@ -292,6 +305,7 @@ def model_rows(
         for row in rows:
             row["specification"] = specification
             row["outcome_scale"] = scale
+            row["sample_dates"] = SAMPLE_DATES_LABEL
         output.extend(rows)
         fits[model_id] = fit
     return output, fits
@@ -420,7 +434,8 @@ def make_svg(
         svg.append(f'<line x1="{ml}" y1="{yy:.1f}" x2="{width - mr}" y2="{yy:.1f}" stroke="#dedede"/>')
         svg.append(f'<text x="{ml - 10}" y="{yy + 4:.1f}" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#444">{value:.0f}</text>')
     for year in range(START_MONTH.year, END_MONTH.year + 1):
-        xx = x(date(year, 1, 1))
+        tick_month = START_MONTH if year == START_MONTH.year else date(year, 1, 1)
+        xx = x(tick_month)
         svg.append(f'<line x1="{xx:.1f}" y1="{mt}" x2="{xx:.1f}" y2="{height - mb}" stroke="#eeeeee"/>')
         svg.append(f'<text x="{xx:.1f}" y="{height - 28}" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444">{year}</text>')
     if reference_y is not None and low <= reference_y <= high:
@@ -543,7 +558,12 @@ def interaction_markdown_table(rows: list[dict[str, object]]) -> str:
     return "\n".join(lines)
 
 
-def stata_table(specification: str, rows: list[dict[str, object]], group_n: dict[str, int]) -> str:
+def stata_table(
+    specification: str,
+    rows: list[dict[str, object]],
+    group_n: dict[str, int],
+    in_window_n: dict[str, int],
+) -> str:
     title = "Strict" if specification == "strict" else "Broad"
     labels = [
         ("beta0", "_cons"),
@@ -576,10 +596,12 @@ def stata_table(specification: str, rows: list[dict[str, object]], group_n: dict
             "------------------------------------------------------------------------------",
             "Month FE                       = Yes",
             "Treated x Month FE             = Yes",
-            f"Observations                   = {2 * 88} group-month observations",
-            "Calendar months                = 88",
-            f"Treatment projects             = {group_n['treatment']}",
-            f"Control projects               = {group_n[f'{specification}_control']}",
+            f"Observations                   = {2 * CALENDAR_MONTHS} group-month observations",
+            f"Calendar months                = {CALENDAR_MONTHS}",
+            f"Treatment projects (definition) = {group_n['treatment']}",
+            f"Treatment starts in window     = {in_window_n['treatment']}",
+            f"Control projects (definition)  = {group_n[f'{specification}_control']}",
+            f"Control starts in window       = {in_window_n[f'{specification}_control']}",
             f"HAC lag                        = {HAC_LAG}",
             "",
             "Linear combinations / interpretation",
@@ -650,6 +672,7 @@ def report_comparison_table(strict: list[dict[str, object]], broad: list[dict[st
 def write_reports(
     audit_rows: list[dict[str, object]],
     group_n: dict[str, int],
+    in_window_n: dict[str, int],
     partitions: dict[str, list[dict[str, object]]],
     raw_partitions: dict[str, list[dict[str, object]]],
 ) -> None:
@@ -683,16 +706,16 @@ This is a descriptive comparative ITS within the existing `HIGH_SENSITIVITY` uni
 
 The treatment proxy is the higher incremental July-2024 RAP-exposure proxy: `HIGH_SENSITIVITY=1` and `hs_wes_wgs_sequence=0`. The control proxy is sequence-based because the Stage 3 access-route matrix classifies WES and WGS as `already_rap_only` before July 2024.
 
-| Specification | Treatment: higher-incremental-exposure proxy | Control: already-RAP-bound sequence proxy |
-| --- | ---: | ---: |
-| STRICT (`NEW_CITS_STRICT`) | {group_n['treatment']} | {group_n['strict_control']} |
-| BROAD (`NEW_CITS_BROAD`) | {group_n['treatment']} | {group_n['broad_control']} |
+| Specification | Treatment definition N | Control definition N | Treatment starts in window | Control starts in window |
+| --- | ---: | ---: | ---: | ---: |
+| STRICT (`NEW_CITS_STRICT`) | {group_n['treatment']} | {group_n['strict_control']} | {in_window_n['treatment']} | {in_window_n['strict_control']} |
+| BROAD (`NEW_CITS_BROAD`) | {group_n['treatment']} | {group_n['broad_control']} | {in_window_n['treatment']} | {in_window_n['broad_control']} |
 
 The broad control includes {len(excluded)} sequence projects excluded from the strict control. Their exclusion reason is s3-type high-sensitivity evidence: `hs_s3_text=1` for all {len(excluded)}; `hs_s3_direct=1` for {excluded_comp['hs_s3_direct']}.
 
 ## Primary Normalized Comparative ITS
 
-Each outcome is an entry index normalized to its own full pre-July-2024 monthly mean (`2019-01` through `2024-06` = 100). The model uses all 88 calendar months through April 2026, month fixed effects, and Newey-West HAC lag 3. July 2024 has `TimeAfterJuly2024=0`.
+Each outcome is an entry index normalized to its own full pre-July-2024 monthly mean (`2021-09-28` through `2024-06` = 100). The model uses 56 calendar months from September 2021 through April 2026, month fixed effects, and Newey-West HAC lag 3. The September 2021 bin begins on September 28, so it is a deliberately truncated first month. July 2024 has `TimeAfterJuly2024=0`.
 
 {report_comparison_table(strict, broad)}
 
@@ -730,13 +753,13 @@ Raw counts retain the same comparative ITS construction but measure absolute mon
     write_text(REPORT_DIR / "new_comparative_its_results.md", report)
 
     stata_text = f"""New Comparative ITS: Within-High RAP-Exposure Comparative ITS
-Sample: 2019-01 through 2026-04; breakpoint: July 2024; normalized outcome: own pre-July-2024 monthly mean = 100
+Sample: 2021-09-28 through 2026-04; breakpoint: July 2024; normalized outcome: own pre-July-2024 monthly mean = 100. The 2021-09 monthly bin begins on 2021-09-28.
 
-The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 176-row stacked data set with duplicate monthly time values.
+The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 112-row stacked data set with duplicate monthly time values.
 
-{stata_table('strict', strict, group_n)}
+{stata_table('strict', strict, group_n, in_window_n)}
 
-{stata_table('broad', broad, group_n)}
+{stata_table('broad', broad, group_n, in_window_n)}
 
 Raw-count robustness (absolute monthly project-count trajectory)
 ------------------------------------------------------------------------------
@@ -766,8 +789,8 @@ Stata executed: No. HAC estimates were produced by the repository's Python imple
 - Treatment intersect BroadControl: empty.
 - StrictControl is a subset of BroadControl.
 - BroadControl minus StrictControl contains the {excluded_comp['n']} sequence projects carrying s3-type evidence. In the current classification these are `hs_s3_text=1`; none has `hs_s3_direct=1`.
-- Each specification retains 88 calendar months from 2019-01 through 2026-04, including monthly zeros.
-- The treatment and control indices use the same pre-July-2024 calendar period, 2019-01 through 2024-06, while retaining each group's own mean as the denominator.
+- Each specification retains 56 calendar months from 2021-09 through 2026-04, including monthly zeros. The first monthly bin begins on 2021-09-28.
+- The treatment and control indices use the same pre-July-2024 calendar period, 2021-09-28 through 2024-06, while retaining each group's own mean as the denominator.
 
 ## Source Scope
 
@@ -779,6 +802,7 @@ The source is the existing project-level classification, not observed RAP usage.
 def validate(
     audit_rows: list[dict[str, object]],
     group_n: dict[str, int],
+    in_window_n: dict[str, int],
     monthly: dict[str, list[dict[str, object]]],
     partitions: dict[str, list[dict[str, object]]],
 ) -> None:
@@ -791,11 +815,13 @@ def validate(
         raise AssertionError("strict control must be a proper subset of broad control")
     if group_n != {"high_total": 1048, "treatment": 589, "strict_control": 427, "broad_control": 459}:
         raise AssertionError(f"unexpected project-level group counts: {group_n}")
+    if in_window_n != {"treatment": 380, "strict_control": 231, "broad_control": 255}:
+        raise AssertionError(f"unexpected in-window group counts: {in_window_n}")
     mixed = [row for row in audit_rows if str(row["app_id"]) in broad - strict]
     if len(mixed) != 32 or any(int(row["hs_s3_direct"]) or not int(row["hs_s3_text"]) for row in mixed):
         raise AssertionError("broad-minus-strict must be the 32 sequence plus s3-text overlap projects")
     for specification, rows in monthly.items():
-        if len(rows) != 88 or len({row["month"] for row in rows}) != 88:
+        if len(rows) != CALENDAR_MONTHS or len({row["month"] for row in rows}) != CALENDAR_MONTHS:
             raise AssertionError(f"{specification} lost a calendar month")
         july = next(row for row in rows if row["month"] == "2024-07")
         august = next(row for row in rows if row["month"] == "2024-08")
@@ -841,6 +867,7 @@ def main() -> None:
     classification_rows = read_classification()
     audit_rows = add_groups(classification_rows)
     group_n = group_counts(audit_rows)
+    in_window_n = in_window_group_counts(audit_rows)
     audit_fields = [
         "app_id",
         "HIGH_SENSITIVITY",
@@ -854,6 +881,7 @@ def main() -> None:
         "group_broad",
         "start_date",
         "pre_post",
+        "in_analysis_window",
     ]
     write_csv(DATA_DIR / "group_definition_audit.csv", audit_rows, audit_fields)
 
@@ -917,8 +945,8 @@ def main() -> None:
             "broad_estimate", "broad_std_error", "broad_p_value", "broad_ci_low", "broad_ci_high", "broad_minus_strict_estimate",
         ],
     )
-    write_reports(audit_rows, group_n, partitions, raw_partitions)
-    validate(audit_rows, group_n, monthly, partitions)
+    write_reports(audit_rows, group_n, in_window_n, partitions, raw_partitions)
+    validate(audit_rows, group_n, in_window_n, monthly, partitions)
     print(
         "new comparative ITS built: "
         f"treatment={group_n['treatment']}, strict_control={group_n['strict_control']}, broad_control={group_n['broad_control']}"
