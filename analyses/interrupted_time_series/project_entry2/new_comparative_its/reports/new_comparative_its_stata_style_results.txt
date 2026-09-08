@@ -1,84 +1,82 @@
 New Comparative ITS: Within-High RAP-Exposure Comparative ITS
-Sample: 2019-01 through 2026-04; breakpoint: July 2024; normalized outcome: own pre-July-2024 monthly mean = 100
+Sample: 2021-10 through 2026-04; breakpoint: July 2024; outcome: raw monthly project starts. September 2021 is excluded because the sequence control starts on 2021-09-28.
 
-The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 176-row stacked data set with duplicate monthly time values.
+The displayed interaction tables are the stacked-model parameterization of the existing algebraically equivalent three-series Newey-West implementation. Beta coefficients come from the Control series and delta coefficients from the Treatment-minus-Control difference series. Built-in Stata newey was not run on a 110-row stacked data set with duplicate monthly time values.
 
 Strict specification: Treatment vs Strict control
 
 ------------------------------------------------------------------------------
- entry_index | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
+monthly_count | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
 -------------+----------------------------------------------------------------
-               _cons | 149.1563258  25.2524749    5.91   0.0000 [99.6614749, 198.6511766]
-                Time |  -0.9524225   0.3611624   -2.64   0.0084 [-1.6603009, -0.2445442]
-        PostJuly2024 |  71.4026042  56.3823507    1.27   0.2054 [-39.1068032, 181.9120116]
-   TimeAfterJuly2024 |   4.8717985   4.1226303    1.18   0.2373 [-3.2085570, 12.9521540]
-             Treated | -42.8217715  22.5397961   -1.90   0.0575 [-86.9997719,  1.3562289]
-      Treated x Time |   1.3264741   0.4494664    2.95   0.0032 [ 0.4455199,  2.2074282]
-Treated x PostJuly2024 | -82.3741102  38.9111388   -2.12   0.0343 [-158.6399423, -6.1082781]
-Treated x TimeAfterJuly2024 |   7.0341825   2.6576697    2.65   0.0081 [ 1.8251498, 12.2432151]
+               _cons |   4.4667266   1.0465957    4.27   0.0000 [ 2.4153990,  6.5180542]
+                Time |  -0.1065505   0.0324462   -3.28   0.0010 [-0.1701449, -0.0429560]
+        PostJuly2024 |   3.3665187   1.7987891    1.87   0.0613 [-0.1591079,  6.8921453]
+   TimeAfterJuly2024 |   0.2437665   0.1389968    1.75   0.0795 [-0.0286673,  0.5162003]
+             Treated |  -0.1014818   1.2306685   -0.08   0.9343 [-2.5135921,  2.3106284]
+      Treated x Time |   0.1734480   0.0390830    4.44   0.0000 [ 0.0968454,  0.2500507]
+Treated x PostJuly2024 |  -4.6636564   1.5728626   -2.97   0.0030 [-7.7464671, -1.5808457]
+Treated x TimeAfterJuly2024 |   0.2313331   0.1000370    2.31   0.0208 [ 0.0352606,  0.4274056]
 ------------------------------------------------------------------------------
 Month FE                       = Yes
 Treated x Month FE             = Yes
-Observations                   = 176 group-month observations
-Calendar months                = 88
-Treatment projects             = 589
-Control projects               = 427
+Observations                   = 110 group-month observations
+Calendar months                = 55
+Treatment projects (definition) = 589
+Treatment starts in window     = 380
+Control projects (definition)  = 427
+Control starts in window       = 231
 HAC lag                        = 3
 
 Linear combinations / interpretation
 ------------------------------------------------------------------------------
  Quantity                         Estimate     SE    P>|z|    [95% conf. interval]
- Control pre slope = beta1                      -0.9524   0.3612   0.0084 [  -1.6603,   -0.2445]
- Control post slope = beta1 + beta3              3.9194   4.0731   0.3359 [  -4.0639,   11.9026]
- Control slope change = beta3                    4.8718   4.1226   0.2373 [  -3.2086,   12.9522]
- Treatment pre slope = beta1 + delta1            0.3741   0.2910   0.1987 [  -0.1964,    0.9445]
- Treatment post slope = beta1 + delta1 + beta3 + delta3    12.2800   2.7004   0.0000 [   6.9872,   17.5729]
- Treatment slope change = beta3 + delta3        11.9060   2.7857   0.0000 [   6.4460,   17.3659]
- Differential slope change = delta3              7.0342   2.6577   0.0081 [   1.8251,   12.2432]
+ Control pre slope = beta1                      -0.1066   0.0324   0.0010 [  -0.1701,   -0.0430]
+ Control post slope = beta1 + beta3              0.1372   0.1309   0.2946 [  -0.1194,    0.3938]
+ Control slope change = beta3                    0.2438   0.1390   0.0795 [  -0.0287,    0.5162]
+ Treatment pre slope = beta1 + delta1            0.0669   0.0398   0.0932 [  -0.0112,    0.1450]
+ Treatment post slope = beta1 + delta1 + beta3 + delta3     0.5420   0.1092   0.0000 [   0.3280,    0.7560]
+ Treatment slope change = beta3 + delta3         0.4751   0.1267   0.0002 [   0.2268,    0.7234]
+ Differential slope change = delta3              0.2313   0.1000   0.0208 [   0.0353,    0.4274]
 
 Main hypothesis: H0: delta3 = 0
-delta3 = 7.0341825; SE = 2.6576697; p = 0.0081270; 95% CI = [1.8251498, 12.2432151]
+delta3 = 0.2313331; SE = 0.1000370; p = 0.0207515; 95% CI = [0.0352606, 0.4274056]
 
 Broad specification: Treatment vs Broad control
 
 ------------------------------------------------------------------------------
- entry_index | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
+monthly_count | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
 -------------+----------------------------------------------------------------
-               _cons | 148.5876302  25.3848971    5.85   0.0000 [98.8332319, 198.3420286]
-                Time |  -0.8372875   0.3360959   -2.49   0.0127 [-1.4960355, -0.1785396]
-        PostJuly2024 |  58.8792344  55.0797077    1.07   0.2851 [-49.0769926, 166.8354614]
-   TimeAfterJuly2024 |   6.5870476   3.8697993    1.70   0.0887 [-0.9977591, 14.1718542]
-             Treated | -42.2530760  24.3431294   -1.74   0.0826 [-89.9656095,  5.4594575]
-      Treated x Time |   1.2113391   0.4315752    2.81   0.0050 [ 0.3654517,  2.0572264]
-Treated x PostJuly2024 | -69.8507404  38.0980938   -1.83   0.0667 [-144.5230043,  4.8215235]
-Treated x TimeAfterJuly2024 |   5.3189334   2.3495027    2.26   0.0236 [ 0.7139080,  9.9239588]
+               _cons |   4.9301450   1.0716025    4.60   0.0000 [ 2.8298040,  7.0304860]
+                Time |  -0.1117632   0.0340719   -3.28   0.0010 [-0.1785441, -0.0449824]
+        PostJuly2024 |   3.2483249   1.8727440    1.73   0.0828 [-0.4222533,  6.9189030]
+   TimeAfterJuly2024 |   0.3124781   0.1409607    2.22   0.0266 [ 0.0361951,  0.5887612]
+             Treated |  -0.5649002   1.2423311   -0.45   0.6493 [-2.9998692,  1.8700687]
+      Treated x Time |   0.1786608   0.0394627    4.53   0.0000 [ 0.1013139,  0.2560077]
+Treated x PostJuly2024 |  -4.5454626   1.6177588   -2.81   0.0050 [-7.7162698, -1.3746553]
+Treated x TimeAfterJuly2024 |   0.1626215   0.0962896    1.69   0.0912 [-0.0261062,  0.3513491]
 ------------------------------------------------------------------------------
 Month FE                       = Yes
 Treated x Month FE             = Yes
-Observations                   = 176 group-month observations
-Calendar months                = 88
-Treatment projects             = 589
-Control projects               = 459
+Observations                   = 110 group-month observations
+Calendar months                = 55
+Treatment projects (definition) = 589
+Treatment starts in window     = 380
+Control projects (definition)  = 459
+Control starts in window       = 255
 HAC lag                        = 3
 
 Linear combinations / interpretation
 ------------------------------------------------------------------------------
  Quantity                         Estimate     SE    P>|z|    [95% conf. interval]
- Control pre slope = beta1                      -0.8373   0.3361   0.0127 [  -1.4960,   -0.1785]
- Control post slope = beta1 + beta3              5.7498   3.8180   0.1321 [  -1.7336,   13.2331]
- Control slope change = beta3                    6.5870   3.8698   0.0887 [  -0.9978,   14.1719]
- Treatment pre slope = beta1 + delta1            0.3741   0.2910   0.1987 [  -0.1964,    0.9445]
- Treatment post slope = beta1 + delta1 + beta3 + delta3    12.2800   2.7004   0.0000 [   6.9872,   17.5729]
- Treatment slope change = beta3 + delta3        11.9060   2.7857   0.0000 [   6.4460,   17.3659]
- Differential slope change = delta3              5.3189   2.3495   0.0236 [   0.7139,    9.9240]
+ Control pre slope = beta1                      -0.1118   0.0341   0.0010 [  -0.1785,   -0.0450]
+ Control post slope = beta1 + beta3              0.2007   0.1323   0.1294 [  -0.0587,    0.4601]
+ Control slope change = beta3                    0.3125   0.1410   0.0266 [   0.0362,    0.5888]
+ Treatment pre slope = beta1 + delta1            0.0669   0.0398   0.0932 [  -0.0112,    0.1450]
+ Treatment post slope = beta1 + delta1 + beta3 + delta3     0.5420   0.1092   0.0000 [   0.3280,    0.7560]
+ Treatment slope change = beta3 + delta3         0.4751   0.1267   0.0002 [   0.2268,    0.7234]
+ Differential slope change = delta3              0.1626   0.0963   0.0912 [  -0.0261,    0.3513]
 
 Main hypothesis: H0: delta3 = 0
-delta3 = 5.3189334; SE = 2.3495027; p = 0.0235830; 95% CI = [0.7139080, 9.9239588]
-
-Raw-count robustness (absolute monthly project-count trajectory)
-------------------------------------------------------------------------------
-Specification       delta3      std. err.      z    P>|z|    [95% conf. interval]
-STRICT            0.3665706   0.0884630    4.14   0.0000 [ 0.1931831,  0.5399582]
-BROAD             0.2972008   0.0826660    3.60   0.0003 [ 0.1351756,  0.4592261]
+delta3 = 0.1626215; SE = 0.0962896; p = 0.0912428; 95% CI = [-0.0261062, 0.3513491]
 
 Stata executed: No. HAC estimates were produced by the repository's Python implementation used for the existing Project Entry2 Test 3 three-series analysis.
