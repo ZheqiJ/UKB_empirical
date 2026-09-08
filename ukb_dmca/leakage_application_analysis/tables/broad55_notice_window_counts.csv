@@ -1,0 +1,9 @@
+definition,window,total_positive_cases,dated_cases,retained_cases,pre_july2024_cases,post_july2024_cases,missing_notice_date,notice_before_start
+Broad55,all valid post-start notices,55,55,55,53,2,0,0
+Broad55,1 year,55,55,2,0,2,0,0
+Broad55,18 months,55,55,2,0,2,0,0
+Broad55,2 years,55,55,3,1,2,0,0
+Curated52,all valid post-start notices,52,52,52,50,2,0,0
+Curated52,1 year,52,52,2,0,2,0,0
+Curated52,18 months,52,52,2,0,2,0,0
+Curated52,2 years,52,52,3,1,2,0,0
