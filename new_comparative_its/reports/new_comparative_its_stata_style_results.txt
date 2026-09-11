@@ -79,4 +79,40 @@ Linear combinations / interpretation
 Main hypothesis: H0: delta3 = 0
 delta3 = 0.1626215; SE = 0.0962896; p = 0.0912428; 95% CI = [-0.0261062, 0.3513491]
 
-Stata executed: No. HAC estimates were produced by the repository's Python implementation used for the existing Project Entry2 Test 3 three-series analysis.
+Pre-shock diagnostic: Strict specification (2021-10 through 2024-06)
+------------------------------------------------------------------------------
+monthly_count | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
+-------------+----------------------------------------------------------------
+      Treated |  -0.7896613   0.8639237   -0.91   0.3607 [-2.4829517,  0.9036291]
+ Treated x Time |   0.1554144   0.0476249    3.26   0.0011 [ 0.0620695,  0.2487593]
+------------------------------------------------------------------------------
+Month FE                       = Yes
+Treated x Month FE             = No
+Observations                   = 66 group-month observations
+Calendar months                = 33
+HAC lag                        = 3
+
+Primary pretrend hypothesis: H0: Treated x Time = 0
+Treated x Time = 0.1554144; SE = 0.0476249; p = 0.0011012; 95% CI = [0.0620695, 0.2487593]
+Supplementary joint Wald test: H0: Treated = 0 and Treated x Time = 0
+chi2(2) = 19.7804930; p = 0.0000507
+
+Pre-shock diagnostic: Broad specification (2021-10 through 2024-06)
+------------------------------------------------------------------------------
+monthly_count | Coefficient   std. err.      z    P>|z|    [95% conf. interval]
+-------------+----------------------------------------------------------------
+      Treated |  -1.0534759   0.9236014   -1.14   0.2540 [-2.8637346,  0.7567827]
+ Treated x Time |   0.1567513   0.0500832    3.13   0.0017 [ 0.0585883,  0.2549144]
+------------------------------------------------------------------------------
+Month FE                       = Yes
+Treated x Month FE             = No
+Observations                   = 66 group-month observations
+Calendar months                = 33
+HAC lag                        = 3
+
+Primary pretrend hypothesis: H0: Treated x Time = 0
+Treated x Time = 0.1567513; SE = 0.0500832; p = 0.0017491; 95% CI = [0.0585883, 0.2549144]
+Supplementary joint Wald test: H0: Treated = 0 and Treated x Time = 0
+chi2(2) = 16.9730203; p = 0.0002062
+
+Stata executed: No. Main ITS HAC estimates use the repository's existing three-series implementation. The independent pretrend diagnostic uses the displayed stacked model with scores aggregated by calendar month before Newey-West HAC lag 3.

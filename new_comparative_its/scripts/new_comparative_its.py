@@ -17,8 +17,8 @@ from pathlib import Path
 
 
 PACKAGE = Path(__file__).resolve().parents[1]
-PROJECT_ENTRY2 = PACKAGE.parent
-ROOT = PROJECT_ENTRY2.parents[2]
+ROOT = PACKAGE.parent
+PROJECT_ENTRY2 = ROOT / "archive" / "03_project_entry_high_vs_lower"
 PROJECT_ENTRY2_SCRIPT_DIR = PROJECT_ENTRY2 / "scripts"
 if str(PROJECT_ENTRY2_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_ENTRY2_SCRIPT_DIR))
@@ -37,9 +37,12 @@ START_MONTH = date(2021, 10, 1)
 END_MONTH = date(2026, 4, 1)
 WINDOW_END_DATE = date(2026, 4, 30)
 BREAK_MONTH = date(2024, 7, 1)
+PRE_SHOCK_END_MONTH = date(2024, 6, 1)
 HAC_LAG = 3
 CALENDAR_MONTHS = 55
 SAMPLE_DATES_LABEL = "2021-10 through 2026-04"
+PRETREND_DATES_LABEL = "2021-10 through 2024-06"
+PRETREND_CALENDAR_MONTHS = 33
 
 SPECS = {
     "strict": {
@@ -354,6 +357,156 @@ def interaction_lookup(rows: list[dict[str, object]], parameter: str) -> dict[st
     return next(row for row in rows if row["role"] == "interaction_coefficient" and row["parameter"] == parameter)
 
 
+def pretrend_stacked_model(
+    monthly_rows: list[dict[str, object]], specification: str
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Estimate the pre-shock stacked model with common seasonality.
+
+    The covariance aggregates the two group-level score vectors within each
+    calendar month before applying Newey-West HAC across months.
+    """
+    pre_rows = [row for row in monthly_rows if core.parse_date(str(row["month_start"])) <= PRE_SHOCK_END_MONTH]
+    if len(pre_rows) != PRETREND_CALENDAR_MONTHS:
+        raise AssertionError(f"{specification} pretrend model should have {PRETREND_CALENDAR_MONTHS} months")
+
+    names = ["Intercept", "Time", "Treated", "Treated x Time"] + [
+        f"month_{month:02d}" for month in range(2, 13)
+    ]
+    X: list[list[float]] = []
+    y: list[float] = []
+    month_positions: list[int] = []
+    for month_position, row in enumerate(pre_rows):
+        time = float(row["time"]) - 1.0
+        month_fe = [1.0 if int(row["month_of_year"]) == fixed_month else 0.0 for fixed_month in range(2, 13)]
+        for treated, outcome in [(0.0, "control_count"), (1.0, "treatment_count")]:
+            X.append([1.0, time, treated, treated * time] + month_fe)
+            y.append(float(row[outcome]))
+            month_positions.append(month_position)
+
+    bread = core.invert(core.xtx(X))
+    beta = core.mat_vec_mul(bread, core.xty(X, y))
+    fitted = [sum(row[j] * beta[j] for j in range(len(beta))) for row in X]
+    residuals = [actual - predicted for actual, predicted in zip(y, fitted)]
+    score_by_month = [[0.0 for _ in names] for _ in range(PRETREND_CALENDAR_MONTHS)]
+    for row, residual, month_position in zip(X, residuals, month_positions):
+        for column, value in enumerate(row):
+            score_by_month[month_position][column] += value * residual
+    vcov = core.sandwich_from_scores(bread, score_by_month, HAC_LAG)
+    standard_errors = [math.sqrt(max(float(vcov[index][index]), 0.0)) for index in range(len(names))]
+    mean_y = sum(y) / len(y)
+    rss = sum(residual**2 for residual in residuals)
+    tss = sum((value - mean_y) ** 2 for value in y)
+    fit = {
+        "names": names,
+        "beta": beta,
+        "fitted": fitted,
+        "resid": residuals,
+        "vcov": vcov,
+        "se": standard_errors,
+        "n_obs": len(y),
+        "k_params": len(names),
+        "df_resid": len(y) - len(names),
+        "r_squared": 1.0 - rss / tss if tss else math.nan,
+        "model_f_statistic_classical": math.nan,
+        "nw_lag": HAC_LAG,
+    }
+    output = []
+    for term, estimate, std_error in zip(names, beta, standard_errors):
+        p_value = core.two_sided_normal_pvalue(float(estimate), float(std_error))
+        output.append(
+            {
+                "model_id": f"new_cits_{specification}_pretrend_stacked",
+                "test": "Independent pre-shock stacked comparative ITS",
+                "outcome": "raw_count",
+                "classification_definition": "Treatment vs sequence control proxy",
+                "denominator": "raw monthly project counts",
+                "term": term,
+                "estimate": core.fmt(float(estimate), 8),
+                "std_error": core.fmt(float(std_error), 8),
+                "statistic": core.fmt(float(estimate) / float(std_error) if float(std_error) else math.nan, 8),
+                "p_value": core.fmt(p_value, 8),
+                "ci_low": core.fmt(float(estimate) - 1.96 * float(std_error), 8),
+                "ci_high": core.fmt(float(estimate) + 1.96 * float(std_error), 8),
+                "n_obs": len(y),
+                "r_squared": core.fmt(float(fit["r_squared"]), 8),
+                "model_f_statistic_classical": "",
+                "nw_lag": HAC_LAG,
+                "inference": "Calendar-month clustered Newey-West HAC (lag 3)",
+                "sample_dates": PRETREND_DATES_LABEL,
+                "outcome_scale": "raw",
+            }
+        )
+    return output, fit
+
+
+def pretrend_results(monthly_rows: list[dict[str, object]], specification: str) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """Estimate the independent pre-shock comparative ITS diagnostic."""
+    regression_rows, fit = pretrend_stacked_model(monthly_rows, specification)
+    model_id = f"new_cits_{specification}_pretrend_stacked"
+    intercept = coefficient_row(regression_rows, model_id, "Treated")
+    slope = coefficient_row(regression_rows, model_id, "Treated x Time")
+    names = list(fit["names"])
+    selected = [names.index("Treated"), names.index("Treated x Time")]
+    beta = [float(fit["beta"][index]) for index in selected]
+    vcov = fit["vcov"]
+    sub_vcov = [[float(vcov[i][j]) for j in selected] for i in selected]
+    inv_vcov = core.invert(sub_vcov)
+    wald = sum(beta[i] * sum(inv_vcov[i][j] * beta[j] for j in range(2)) for i in range(2))
+    # For chi-square with two restrictions, the upper-tail probability is exp(-W/2).
+    joint_p = math.exp(-wald / 2.0)
+    summary = [
+        {
+            "specification": specification,
+            "test": "Pre-shock level difference: H0 Treated = 0",
+            "parameter": "gamma_pre",
+            "estimate": intercept["estimate"],
+            "std_error": intercept["std_error"],
+            "statistic": intercept["statistic"],
+            "p_value": intercept["p_value"],
+            "ci_low": intercept["ci_low"],
+            "ci_high": intercept["ci_high"],
+            "restrictions": 1,
+            "distribution": "z",
+            "sample_dates": PRETREND_DATES_LABEL,
+            "calendar_months": PRETREND_CALENDAR_MONTHS,
+            "nw_lag": HAC_LAG,
+        },
+        {
+            "specification": specification,
+            "test": "Pre-shock differential slope: H0 Treated x Time = 0",
+            "parameter": "delta1_pre",
+            "estimate": slope["estimate"],
+            "std_error": slope["std_error"],
+            "statistic": slope["statistic"],
+            "p_value": slope["p_value"],
+            "ci_low": slope["ci_low"],
+            "ci_high": slope["ci_high"],
+            "restrictions": 1,
+            "distribution": "z",
+            "sample_dates": PRETREND_DATES_LABEL,
+            "calendar_months": PRETREND_CALENDAR_MONTHS,
+            "nw_lag": HAC_LAG,
+        },
+        {
+            "specification": specification,
+            "test": "Joint pre-shock test: H0 Treated = 0 and Treated x Time = 0",
+            "parameter": "joint_treated_and_time",
+            "estimate": "",
+            "std_error": "",
+            "statistic": core.fmt(wald, 8),
+            "p_value": core.fmt(joint_p, 8),
+            "ci_low": "",
+            "ci_high": "",
+            "restrictions": 2,
+            "distribution": "chi2(2)",
+            "sample_dates": PRETREND_DATES_LABEL,
+            "calendar_months": PRETREND_CALENDAR_MONTHS,
+            "nw_lag": HAC_LAG,
+        },
+    ]
+    return regression_rows, summary
+
+
 def number(value: object, digits: int = 4) -> str:
     return f"{float(value):.{digits}f}"
 
@@ -612,11 +765,71 @@ def report_comparison_table(strict: list[dict[str, object]], broad: list[dict[st
     return "\n".join(lines)
 
 
+def pretrend_lookup(rows: list[dict[str, object]], parameter: str) -> dict[str, object]:
+    return next(row for row in rows if row["parameter"] == parameter)
+
+
+def pretrend_report_table(strict: list[dict[str, object]], broad: list[dict[str, object]]) -> str:
+    lines = [
+        "| Diagnostic | STRICT | BROAD |",
+        "| --- | ---: | ---: |",
+    ]
+    for label, parameter, field in [
+        ("Treated", "gamma_pre", "estimate"),
+        ("p(Treated)", "gamma_pre", "p_value"),
+        ("Treated x Time", "delta1_pre", "estimate"),
+        ("HAC SE(Treated x Time)", "delta1_pre", "std_error"),
+        ("p(Treated x Time)", "delta1_pre", "p_value"),
+        ("95% CI(Treated x Time)", "delta1_pre", "ci"),
+        ("Joint Wald chi-square(2)", "joint_treated_and_time", "statistic"),
+        ("Joint Wald p-value", "joint_treated_and_time", "p_value"),
+    ]:
+        values = []
+        for result in [strict, broad]:
+            row = pretrend_lookup(result, parameter)
+            values.append(ci(row) if field == "ci" else number(row[field]))
+        lines.append(f"| {label} | {values[0]} | {values[1]} |")
+    return "\n".join(lines)
+
+
+def pretrend_stata_block(specification: str, results: list[dict[str, object]]) -> str:
+    title = "Strict" if specification == "strict" else "Broad"
+    treated = pretrend_lookup(results, "gamma_pre")
+    slope = pretrend_lookup(results, "delta1_pre")
+    joint = pretrend_lookup(results, "joint_treated_and_time")
+    return "\n".join(
+        [
+            f"Pre-shock diagnostic: {title} specification (2021-10 through 2024-06)",
+            "------------------------------------------------------------------------------",
+            "monthly_count | Coefficient   std. err.      z    P>|z|    [95% conf. interval]",
+            "-------------+----------------------------------------------------------------",
+            f"      Treated | {float(treated['estimate']):11.7f} {float(treated['std_error']):11.7f} "
+            f"{float(treated['statistic']):7.2f} {float(treated['p_value']):8.4f} "
+            f"[{float(treated['ci_low']):10.7f}, {float(treated['ci_high']):10.7f}]",
+            f" Treated x Time | {float(slope['estimate']):11.7f} {float(slope['std_error']):11.7f} {float(slope['statistic']):7.2f} {float(slope['p_value']):8.4f} "
+            f"[{float(slope['ci_low']):10.7f}, {float(slope['ci_high']):10.7f}]",
+            "------------------------------------------------------------------------------",
+            "Month FE                       = Yes",
+            "Treated x Month FE             = No",
+            f"Observations                   = {2 * PRETREND_CALENDAR_MONTHS} group-month observations",
+            f"Calendar months                = {PRETREND_CALENDAR_MONTHS}",
+            f"HAC lag                        = {HAC_LAG}",
+            "",
+            "Primary pretrend hypothesis: H0: Treated x Time = 0",
+            f"Treated x Time = {float(slope['estimate']):.7f}; SE = {float(slope['std_error']):.7f}; p = {float(slope['p_value']):.7f}; "
+            f"95% CI = [{float(slope['ci_low']):.7f}, {float(slope['ci_high']):.7f}]",
+            "Supplementary joint Wald test: H0: Treated = 0 and Treated x Time = 0",
+            f"chi2(2) = {float(joint['statistic']):.7f}; p = {float(joint['p_value']):.7f}",
+        ]
+    )
+
+
 def write_reports(
     audit_rows: list[dict[str, object]],
     group_n: dict[str, int],
     in_window_n: dict[str, int],
     partitions: dict[str, list[dict[str, object]]],
+    pretrends: dict[str, list[dict[str, object]]],
 ) -> None:
     strict, broad = partitions["strict"], partitions["broad"]
     treatment_comp = composition(sample_rows(audit_rows, "strict", "treatment"))
@@ -660,6 +873,16 @@ The outcome is the absolute number of project starts per calendar month. The mod
 
 The displayed interaction parameterization has Control as the reference group. The `beta` coefficients use the Control-series HAC inference; the `delta` coefficients use the Treatment-minus-Control raw-count difference-series HAC inference. This is the algebraically equivalent three-series Newey-West implementation, rather than a built-in Stata `newey` regression on a stacked data set with duplicated monthly time values.
 
+## Independent Pre-Shock Pretrend Diagnostic
+
+This diagnostic re-estimates a separate 66-row stacked comparative ITS using only October 2021 through June 2024 (33 calendar months), before the July 2024 transition. It includes common calendar-month fixed effects but no Treatment x calendar-month fixed effects. Time is zero in October 2021. For HAC inference, the two group-level score vectors are aggregated within each calendar month before applying Newey-West lag 3 across the 33 months.
+
+The primary pretrend test is `H0: Treated x Time = 0`: no differential linear pre-shock trajectory. The supplementary joint Wald test, `H0: Treated = 0` and `Treated x Time = 0`, also tests the October-2021 group-level difference; it is therefore broader than a pure parallel-trend test. Omitting Treatment x month fixed effects assumes that both groups share the same month-of-year seasonality.
+
+{pretrend_report_table(pretrends['strict'], pretrends['broad'])}
+
+Both specifications reject the no-differential-pretrend hypothesis. The treatment proxy had a faster pre-shock raw-count trajectory than its sequence control proxy, so the post-transition `delta3` comparisons should not be read as causal DID effects or as evidence conditional on parallel pretrends.
+
 ## Comparative Reading
 
 1. Strict design: `delta3` is **{'positive' if strict_positive else 'not positive'}** ({number(strict_delta3['estimate'])}); it is **{'statistically significant' if strict_sig else 'not statistically significant'}** at 5% (p={number(strict_delta3['p_value'])}).
@@ -688,7 +911,11 @@ The displayed interaction tables are the stacked-model parameterization of the e
 
 {stata_table('broad', broad, group_n, in_window_n)}
 
-Stata executed: No. HAC estimates were produced by the repository's Python implementation used for the existing Project Entry2 Test 3 three-series analysis.
+{pretrend_stata_block('strict', pretrends['strict'])}
+
+{pretrend_stata_block('broad', pretrends['broad'])}
+
+Stata executed: No. Main ITS HAC estimates use the repository's existing three-series implementation. The independent pretrend diagnostic uses the displayed stacked model with scores aggregated by calendar month before Newey-West HAC lag 3.
 """
     write_text(REPORT_DIR / "new_comparative_its_stata_style_results.txt", stata_text)
 
@@ -726,6 +953,7 @@ def validate(
     in_window_n: dict[str, int],
     monthly: dict[str, list[dict[str, object]]],
     partitions: dict[str, list[dict[str, object]]],
+    pretrends: dict[str, list[dict[str, object]]],
 ) -> None:
     treatment = {str(row["app_id"]) for row in audit_rows if int(row["treatment"]) == 1}
     strict = {str(row["app_id"]) for row in audit_rows if int(row["control_strict"]) == 1}
@@ -756,6 +984,15 @@ def validate(
             row = interaction_lookup(partitions[specification], key)
             if not all(math.isfinite(float(row[field])) for field in ["estimate", "std_error", "p_value", "ci_low", "ci_high"]):
                 raise AssertionError(f"{specification} {key} lacks finite HAC inference")
+        for key in ["gamma_pre", "delta1_pre"]:
+            row = pretrend_lookup(pretrends[specification], key)
+            for field in ["estimate", "std_error", "statistic", "p_value"]:
+                if not math.isfinite(float(row[field])):
+                    raise AssertionError(f"{specification} {key} lacks finite pretrend inference")
+        joint = pretrend_lookup(pretrends[specification], "joint_treated_and_time")
+        for field in ["statistic", "p_value"]:
+            if not math.isfinite(float(joint[field])):
+                raise AssertionError(f"{specification} joint pretrend test lacks finite inference")
     for path in [
         DATA_DIR / "group_definition_audit.csv",
         DATA_DIR / "monthly_strict.csv",
@@ -767,6 +1004,10 @@ def validate(
         DATA_DIR / "partition_results_strict.csv",
         DATA_DIR / "partition_results_broad.csv",
         DATA_DIR / "strict_vs_broad_comparison.csv",
+        DATA_DIR / "pretrend_regression_results_strict.csv",
+        DATA_DIR / "pretrend_regression_results_broad.csv",
+        DATA_DIR / "pretrend_results_strict.csv",
+        DATA_DIR / "pretrend_results_broad.csv",
         REPORT_DIR / "new_comparative_its_results.md",
         REPORT_DIR / "new_comparative_its_stata_style_results.txt",
         REPORT_DIR / "group_definition_audit.md",
@@ -816,6 +1057,7 @@ def main() -> None:
 
     monthly: dict[str, list[dict[str, object]]] = {}
     partitions: dict[str, list[dict[str, object]]] = {}
+    pretrends: dict[str, list[dict[str, object]]] = {}
     comparison_rows = []
     for specification in SPECS:
         monthly_rows = monthly_rows_for_spec(audit_rows, specification)
@@ -839,6 +1081,17 @@ def main() -> None:
         partitions[specification] = partition_rows
         partition_fields = ["role", "quantity", "parameter", "stata_term", "inference_source", "estimate", "std_error", "p_value", "ci_low", "ci_high"]
         write_csv(DATA_DIR / f"partition_results_{specification}.csv", partition_rows, partition_fields)
+        pretrend_regression_rows, pretrend_rows = pretrend_results(monthly_rows, specification)
+        write_csv(DATA_DIR / f"pretrend_regression_results_{specification}.csv", pretrend_regression_rows, REGRESSION_FIELDS)
+        write_csv(
+            DATA_DIR / f"pretrend_results_{specification}.csv",
+            pretrend_rows,
+            [
+                "specification", "test", "parameter", "estimate", "std_error", "statistic", "p_value", "ci_low", "ci_high",
+                "restrictions", "distribution", "sample_dates", "calendar_months", "nw_lag",
+            ],
+        )
+        pretrends[specification] = pretrend_rows
         make_figures(monthly_rows, fits, specification)
 
     for parameter in ["delta1", "delta2", "delta3"]:
@@ -868,8 +1121,8 @@ def main() -> None:
             "broad_estimate", "broad_std_error", "broad_p_value", "broad_ci_low", "broad_ci_high", "broad_minus_strict_estimate",
         ],
     )
-    write_reports(audit_rows, group_n, in_window_n, partitions)
-    validate(audit_rows, group_n, in_window_n, monthly, partitions)
+    write_reports(audit_rows, group_n, in_window_n, partitions, pretrends)
+    validate(audit_rows, group_n, in_window_n, monthly, partitions, pretrends)
     print(
         "new comparative ITS built: "
         f"treatment={group_n['treatment']}, strict_control={group_n['strict_control']}, broad_control={group_n['broad_control']}"

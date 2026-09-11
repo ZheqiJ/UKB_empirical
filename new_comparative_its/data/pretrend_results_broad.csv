@@ -1,0 +1,4 @@
+specification,test,parameter,estimate,std_error,statistic,p_value,ci_low,ci_high,restrictions,distribution,sample_dates,calendar_months,nw_lag
+broad,Pre-shock level difference: H0 Treated = 0,gamma_pre,-1.05347594,0.92360136,-1.14061756,0.25402911,-2.86373461,0.75678274,1,z,2021-10 through 2024-06,33,3
+broad,Pre-shock differential slope: H0 Treated x Time = 0,delta1_pre,0.15675134,0.05008317,3.12982075,0.00174913,0.05858833,0.25491435,1,z,2021-10 through 2024-06,33,3
+broad,Joint pre-shock test: H0 Treated = 0 and Treated x Time = 0,joint_treated_and_time,,,16.97302034,0.00020623,,,2,chi2(2),2021-10 through 2024-06,33,3

@@ -5,8 +5,8 @@ from collections import defaultdict
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
-SCRIPT = ROOT / "analyses" / "interrupted_time_series" / "publications" / "scripts" / "publication_its_analysis.py"
+ROOT = Path(__file__).resolve().parents[3]
+SCRIPT = ROOT / "archive" / "04_publication_its" / "scripts" / "publication_its_analysis.py"
 
 
 def load_module():
