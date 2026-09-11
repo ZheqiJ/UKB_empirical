@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
-SCRIPT_DIR = ROOT / "analyses" / "interrupted_time_series" / "project_entry2" / "scripts"
+ROOT = Path(__file__).resolve().parents[3]
+SCRIPT_DIR = ROOT / "archive" / "03_project_entry_high_vs_lower" / "scripts"
 CLASSIFIER = SCRIPT_DIR / "build_high_sensitivity_classification.py"
 ANALYSIS = SCRIPT_DIR / "project_entry2_analysis.py"
 

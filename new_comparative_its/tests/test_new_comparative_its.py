@@ -10,6 +10,7 @@ from pathlib import Path
 
 
 PACKAGE = Path(__file__).resolve().parents[1]
+ROOT = PACKAGE.parent
 SCRIPT = PACKAGE / "scripts" / "new_comparative_its.py"
 DATA = PACKAGE / "data"
 FIGURES = PACKAGE / "figures"
@@ -24,7 +25,7 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 class NewComparativeITSTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        subprocess.run(["python3", str(SCRIPT)], check=True, cwd=PACKAGE.parents[3])
+        subprocess.run(["python3", str(SCRIPT)], check=True, cwd=ROOT)
 
     def test_group_definition_and_set_relations(self) -> None:
         rows = read_csv(DATA / "group_definition_audit.csv")
@@ -89,6 +90,32 @@ class NewComparativeITSTest(unittest.TestCase):
             self.assertFalse((FIGURES / name).exists())
         self.assertFalse((DATA / "raw_partition_results_strict.csv").exists())
         self.assertFalse((DATA / "raw_partition_results_broad.csv").exists())
+
+    def test_independent_pre_shock_pretrend_diagnostic(self) -> None:
+        for specification in ["strict", "broad"]:
+            component_rows = read_csv(DATA / f"pretrend_regression_results_{specification}.csv")
+            self.assertTrue(all(row["sample_dates"] == "2021-10 through 2024-06" for row in component_rows))
+            self.assertTrue(all(row["n_obs"] == "66" for row in component_rows))
+            self.assertEqual(len(component_rows), 15)
+            self.assertTrue(all(row["inference"] == "Calendar-month clustered Newey-West HAC (lag 3)" for row in component_rows))
+            self.assertIn("Treated", {row["term"] for row in component_rows})
+            self.assertIn("Treated x Time", {row["term"] for row in component_rows})
+            self.assertNotIn("Treated x month_02", {row["term"] for row in component_rows})
+            results = {row["parameter"]: row for row in read_csv(DATA / f"pretrend_results_{specification}.csv")}
+            self.assertEqual(set(results), {"gamma_pre", "delta1_pre", "joint_treated_and_time"})
+            self.assertEqual(results["gamma_pre"]["restrictions"], "1")
+            self.assertEqual(results["delta1_pre"]["restrictions"], "1")
+            self.assertEqual(results["joint_treated_and_time"]["restrictions"], "2")
+            self.assertEqual(results["joint_treated_and_time"]["distribution"], "chi2(2)")
+            self.assertEqual(results["joint_treated_and_time"]["estimate"], "")
+            self.assertGreater(float(results["delta1_pre"]["estimate"]), 0.0)
+            self.assertLess(float(results["delta1_pre"]["p_value"]), 0.05)
+        report = (REPORTS / "new_comparative_its_results.md").read_text(encoding="utf-8")
+        stata = (REPORTS / "new_comparative_its_stata_style_results.txt").read_text(encoding="utf-8")
+        self.assertIn("Independent Pre-Shock Pretrend Diagnostic", report)
+        self.assertIn("Joint Wald", report)
+        self.assertIn("Pre-shock diagnostic", stata)
+        self.assertIn("Treated x Month FE             = No", stata)
 
 
 if __name__ == "__main__":

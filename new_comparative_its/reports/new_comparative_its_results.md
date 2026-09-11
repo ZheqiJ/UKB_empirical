@@ -35,6 +35,25 @@ The outcome is the absolute number of project starts per calendar month. The mod
 
 The displayed interaction parameterization has Control as the reference group. The `beta` coefficients use the Control-series HAC inference; the `delta` coefficients use the Treatment-minus-Control raw-count difference-series HAC inference. This is the algebraically equivalent three-series Newey-West implementation, rather than a built-in Stata `newey` regression on a stacked data set with duplicated monthly time values.
 
+## Independent Pre-Shock Pretrend Diagnostic
+
+This diagnostic re-estimates a separate 66-row stacked comparative ITS using only October 2021 through June 2024 (33 calendar months), before the July 2024 transition. It includes common calendar-month fixed effects but no Treatment x calendar-month fixed effects. Time is zero in October 2021. For HAC inference, the two group-level score vectors are aggregated within each calendar month before applying Newey-West lag 3 across the 33 months.
+
+The primary pretrend test is `H0: Treated x Time = 0`: no differential linear pre-shock trajectory. The supplementary joint Wald test, `H0: Treated = 0` and `Treated x Time = 0`, also tests the October-2021 group-level difference; it is therefore broader than a pure parallel-trend test. Omitting Treatment x month fixed effects assumes that both groups share the same month-of-year seasonality.
+
+| Diagnostic | STRICT | BROAD |
+| --- | ---: | ---: |
+| Treated | -0.7897 | -1.0535 |
+| p(Treated) | 0.3607 | 0.2540 |
+| Treated x Time | 0.1554 | 0.1568 |
+| HAC SE(Treated x Time) | 0.0476 | 0.0501 |
+| p(Treated x Time) | 0.0011 | 0.0017 |
+| 95% CI(Treated x Time) | [0.0621, 0.2488] | [0.0586, 0.2549] |
+| Joint Wald chi-square(2) | 19.7805 | 16.9730 |
+| Joint Wald p-value | 0.0001 | 0.0002 |
+
+Both specifications reject the no-differential-pretrend hypothesis. The treatment proxy had a faster pre-shock raw-count trajectory than its sequence control proxy, so the post-transition `delta3` comparisons should not be read as causal DID effects or as evidence conditional on parallel pretrends.
+
 ## Comparative Reading
 
 1. Strict design: `delta3` is **positive** (0.2313); it is **statistically significant** at 5% (p=0.0208).

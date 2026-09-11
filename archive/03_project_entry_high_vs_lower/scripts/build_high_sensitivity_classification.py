@@ -23,7 +23,7 @@ from datetime import UTC, date, datetime
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
 PACKAGE = Path(__file__).resolve().parents[1]
 DATA_DIR = PACKAGE / "data"
 REPORT_DIR = PACKAGE / "reports"

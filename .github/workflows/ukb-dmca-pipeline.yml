@@ -66,6 +66,8 @@ on:
       - scripts/**
       - tests/**
       - analyses/**
+      - new_comparative_its/**
+      - archive/**
       - data/raw/**
       - data/analysis/**
       - data/intermediate/**
@@ -174,9 +176,9 @@ jobs:
         if: env.RUN_SCOPE == 'stage3_control_expansion'
         run: python3 scripts/stage3_control_expansion.py --source-commit "${GITHUB_SHA}"
 
-      - name: Build interrupted time-series feasibility package
+      - name: Build current comparative interrupted time-series package
         if: env.RUN_SCOPE == 'interrupted_time_series'
-        run: python3 analyses/interrupted_time_series/shared/build_its_feasibility.py
+        run: python3 new_comparative_its/scripts/new_comparative_its.py
 
       - name: Build Stage 4/5 fast design and regression outputs
         if: env.RUN_SCOPE == 'fast_design_regression'
@@ -321,6 +323,8 @@ jobs:
           path: |
             ukb_dmca/**
             analyses/**
+            new_comparative_its/**
+            archive/**
             data/analysis/**
             data/intermediate/**
             data/raw/stage2_source_manifest.json
@@ -336,7 +340,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for path in README.md ukb_dmca analyses data/analysis data/intermediate figures reports data/raw/stage2_source_manifest.json; do
+          for path in README.md new_comparative_its archive ukb_dmca analyses data/analysis data/intermediate figures reports data/raw/stage2_source_manifest.json; do
             if [ -e "${path}" ]; then
               git add -A -- "${path}"
             fi

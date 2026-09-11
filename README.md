@@ -1,108 +1,53 @@
-# UKB_empirical
+# UKB Empirical: New Comparative ITS
 
-This repository contains public-metadata empirical work on the July 2024 UK
-Biobank Research Analysis Platform (RAP) transition. The active main logic is now
-descriptive interrupted time-series and stylized-facts work, not a causal DID
-claim.
+This branch has one current empirical result: the within-High RAP-exposure
+comparative interrupted time-series analysis in [`new_comparative_its/`](new_comparative_its/).
+Earlier specifications are retained under [`archive/`](archive/) for provenance
+and are not current results.
 
-The repository is audit-first: source snapshots, intermediate construction
-tables, analysis outputs, reports, and figures are kept in git so remote runs can
-be reproduced without relying on local memory.
+## Read First
 
-## Start Here
+1. [Main results](new_comparative_its/reports/new_comparative_its_results.md)
+2. [Stata-style output](new_comparative_its/reports/new_comparative_its_stata_style_results.txt)
+3. [Strict fitted monthly counts](new_comparative_its/figures/figure_strict_fitted_monthly_counts.svg)
+4. [Broad fitted monthly counts](new_comparative_its/figures/figure_broad_fitted_monthly_counts.svg)
 
-If you only want the current paper-ready result, read the project-entry package
-in this order:
+## Current Design
 
-1. `analyses/interrupted_time_series/project_entry/reports/project_entry_reading_guide.md`
-2. `analyses/interrupted_time_series/project_entry/reports/project_entry_its_results.md`
-3. `analyses/interrupted_time_series/project_entry/figures/project_entry_figure1_three_panel.svg`
-4. `analyses/interrupted_time_series/project_entry/data/project_entry_its_results_table.csv`
+The analysis compares two proxies within the existing `HIGH_SENSITIVITY`
+classification:
 
-The short version: recorded UK Biobank project starts show a sharp
-July-September 2024 interruption around the July 2024 RAP-based access
-transition, followed by recovery in November 2024 and a 2025 trajectory above
-the fitted pre-transition path. This is descriptive; it should not be written as
-"RAP reduced applications."
+- Treatment proxy: higher incremental July-2024 RAP exposure.
+- Control proxy: sequence-based projects whose relevant data were already
+  RAP-only before the transition.
 
-## Current Empirical Status
+The control proxy first appears on 28 September 2021. September is therefore a
+partial month and is excluded. The raw monthly-count comparative ITS uses 55
+complete calendar months from October 2021 through April 2026, with July 2024
+as the breakpoint and Newey-West HAC lag 3.
 
-The active package is **interrupted time-series and stylized facts**:
+The separate pretrend diagnostic uses October 2021 through June 2024. It
+includes common month fixed effects, excludes Treatment-by-month fixed effects,
+and aggregates the stacked-model score vectors by calendar month before HAC
+inference.
 
-- `analyses/interrupted_time_series/`: active descriptive feasibility package.
-- `analyses/interrupted_time_series/project_entry/reports/project_entry_reading_guide.md`:
-  read-first guide for the current project-entry results.
-- `analyses/interrupted_time_series/project_entry/reports/project_entry_its_results.md`:
-  paper-ready project-entry results and interpretation.
-- `analyses/interrupted_time_series/shared/build_its_feasibility.py`:
-  reproducible builder for the ITS data, reports, and figures.
-- `analyses/interrupted_time_series/shared/`: common design, institutional
-  chronology, and data-audit material.
+This is a descriptive comparative ITS. Public data do not contain actual
+project-level RAP migration dates or usage logs, so estimates are not causal
+DID effects.
 
-The old quarterly DID work is preserved as an archive:
+## Repository Map
 
-- `analyses/did_archive/`: historical DID-style exploratory outputs and scripts.
-- `analyses/did_archive/manifest.csv`: old-to-new path mapping.
-- `scripts/stage4_5_fast_design_regression.py`,
-  `scripts/stage6_panel_regression.py`, and `scripts/design1_stata_table.py`:
-  compatibility wrappers that call the archived implementations.
-
-The archived DID estimates should be treated as diagnostics only. The public
-data do not observe actual project-level RAP migration, active/expired project
-status, refresh requests, or actual RAP use, so the main causal interpretation
-has been set aside.
-
-## Repository Layout
-
-- `scripts/`: repository-wide public-metadata pipeline scripts plus
-  compatibility wrappers for archived DID scripts.
-- `tests/`: unit tests for the pipeline components.
-- `data/raw/`: public input snapshots used by the remote workflow.
-- `data/intermediate/`: shared construction, audit, timing, and classification
-  outputs retained for reproducibility.
-- `analyses/interrupted_time_series/`: current main descriptive ITS package.
-- `analyses/did_archive/`: archived DID-era files kept for provenance.
-- `reports/supervisor/`: frozen supervisor-facing memos retained unchanged.
-- `ukb_dmca/`: frozen DMCA-specific notices, lineage evidence, matching outputs,
-  and methodology notes.
+- `new_comparative_its/`: current reports, figures, data, script, and tests.
+- `archive/`: prior empirical specifications grouped by major analysis stage.
+- `data/`: shared public inputs and intermediate classification sources.
+- `scripts/` and `tests/`: repository-level public-metadata pipeline support.
+- `ukb_dmca/`: separate DMCA evidence and matching module.
 
 Participant-level UK Biobank data must never be stored in this repository.
 
-## Remote Execution
+## Run
 
-Open the `UKB Remote Pipeline` workflow in GitHub Actions and choose a
-`run_scope`:
-
-- `timing`: timing-feasibility counts around the policy date.
-- `stage3_classification`: provisional RAP exposure classification.
-- `stage3_control_expansion`: control-candidate expansion frontier.
-- `interrupted_time_series`: active descriptive ITS feasibility package.
-- `fast_design_regression`: archived fast publication/DMCA checkpoint.
-- `design1_quarterly_publication`: archived Design 1 quarterly publication DID.
-- `dmca`: UKB-DMCA repository lineage and application matching.
-- `all`: public project universe, start-date matching, and DMCA pipeline.
-
-The remote workflow commits generated outputs back to the triggering branch when
-`commit_outputs=true`.
-
-## DMCA Module
-
-The UKB-DMCA matching pipeline is now contained under `ukb_dmca/`. See
-`ukb_dmca/README.md` and `ukb_dmca/MATCHING_METHODOLOGY.md` for the notice
-matching, lineage construction, and application-linkage methodology.
-
-Important interpretation note: a DMCA notice means UK Biobank made a takedown
-claim. It does not mean GitHub, a court, or this project has found that any
-application, PI, institution, or repository owner acted unlawfully.
-
-## Suggested Next Empirical Step
-
-Proceed sequentially:
-
-1. Start with the project-entry interruption/rebound plot and monthly segmented
-   count ITS.
-2. Add aggregate incumbent publication trajectories with delayed post-transition
-   windows.
-3. Use C05/C03/C06 only as descriptive exposure-proxy sensitivity checks.
-4. Keep DMCA as a separate auxiliary module rather than folding it into the
-   publication ITS package.
+```bash
+python3 new_comparative_its/scripts/new_comparative_its.py
+make test
+```

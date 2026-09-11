@@ -12,7 +12,7 @@ def load_archived_script(filename: str, module_name: str) -> ModuleType:
     if module_name in sys.modules:
         return sys.modules[module_name]
 
-    path = Path(__file__).resolve().parents[1] / "analyses" / "did_archive" / "scripts" / filename
+    path = Path(__file__).resolve().parents[1] / "archive" / "01_did_designs" / "scripts" / filename
     spec = importlib.util.spec_from_file_location(module_name, path)
     if spec is None or spec.loader is None:
         raise ImportError(f"Cannot load archived script: {path}")
