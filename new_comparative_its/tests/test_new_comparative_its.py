@@ -117,6 +117,34 @@ class NewComparativeITSTest(unittest.TestCase):
         self.assertIn("Pre-shock diagnostic", stata)
         self.assertIn("Treated x Month FE             = No", stata)
 
+    def test_placebo_date_checks(self) -> None:
+        placebo_script = PACKAGE / "scripts" / "placebo_date_checks.py"
+        subprocess.run(["python3", str(placebo_script)], check=True, cwd=ROOT)
+        rows = read_csv(DATA / "placebo_results.csv")
+        self.assertEqual(len(rows), 32)
+        self.assertEqual(len(read_csv(DATA / "placebo_regression_coefficients.csv")), 480)
+        for specification in ["strict", "broad"]:
+            all_pre = [row for row in rows if row["specification"] == specification and row["design"] == "placebo_all_pre"]
+            matched = [row for row in rows if row["specification"] == specification and row["design"] == "placebo_18_12"]
+            actual_full = next(row for row in rows if row["specification"] == specification and row["design"] == "actual_full")
+            actual_short = next(row for row in rows if row["specification"] == specification and row["design"] == "actual_18_12")
+            self.assertEqual(len(all_pre), 10)
+            self.assertEqual(len(matched), 4)
+            self.assertEqual((all_pre[0]["intervention_date"], all_pre[-1]["intervention_date"]), ("2022-10", "2023-07"))
+            self.assertEqual((actual_full["pre_n"], actual_full["post_n"]), ("33", "22"))
+            self.assertEqual((actual_short["pre_n"], actual_short["post_n"]), ("18", "12"))
+            self.assertTrue(all(float(row["slope_change"]) < 0 for row in all_pre))
+            self.assertTrue(all(float(row["joint_p"]) < 0.05 for row in all_pre))
+            self.assertTrue(all(float(row["joint_p_holm"]) < 0.05 for row in all_pre))
+        strict_actual = next(row for row in rows if row["specification"] == "strict" and row["design"] == "actual_full")
+        broad_actual = next(row for row in rows if row["specification"] == "broad" and row["design"] == "actual_full")
+        self.assertAlmostEqual(float(strict_actual["slope_change"]), 0.2313331, places=6)
+        self.assertAlmostEqual(float(broad_actual["slope_change"]), 0.1626215, places=6)
+        report = (REPORTS / "placebo_date_checks.md").read_text(encoding="utf-8")
+        stata = (REPORTS / "placebo_date_checks_stata_style_results.txt").read_text(encoding="utf-8")
+        self.assertIn("not a randomization test", report)
+        self.assertIn("Stata executed: No", stata)
+
 
 if __name__ == "__main__":
     unittest.main()

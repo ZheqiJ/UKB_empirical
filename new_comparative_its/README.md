@@ -21,8 +21,13 @@ September 2021, leaving September as an incomplete month. The endpoint is April
   main comparative ITS coefficients and derived slopes.
 - `data/pretrend_results_strict.csv` and `data/pretrend_results_broad.csv`:
   independent pre-shock slope and joint Wald tests.
+- `reports/placebo_date_checks.md` and `reports/placebo_date_checks_stata_style_results.txt`:
+  prespecified artificial-date placebo diagnostics for the raw-count difference series.
+- `data/placebo_results.csv`: all artificial-date and matched-window placebo estimates,
+  HAC uncertainty, joint tests, and within-panel Holm adjustments.
 - `data/group_definition_audit.csv`: project-level group audit.
 - `scripts/new_comparative_its.py`: reproducible analysis builder.
+- `scripts/placebo_date_checks.py`: reproducible placebo-date builder.
 - `tests/test_new_comparative_its.py`: focused regression checks.
 
 ## Interpretation
